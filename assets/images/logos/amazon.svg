@@ -1,0 +1,9 @@
+<svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="80" fill="#232F3E"/>
+  <!-- Simple "a" arrow shape (Amazon brand element) -->
+  <path d="M60,15 L80,15 L100,55 L80,55 Z" fill="white" opacity="0.9"/>
+  <path d="M100,15 L120,15 L140,55 L120,55 Z" fill="white" opacity="0.7"/>
+  <!-- Orange smile arrow -->
+  <path d="M28,68 Q120,88 212,68" stroke="#FF9900" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <polygon points="202,62 217,68 202,74" fill="#FF9900"/>
+</svg>

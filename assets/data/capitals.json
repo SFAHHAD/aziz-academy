@@ -1,0 +1,3902 @@
+[
+  {
+    "id": "ir",
+    "country": "Iran",
+    "country_ar": "إيران",
+    "capital": "Tehran",
+    "capital_ar": "طهران",
+    "continent": "Asia",
+    "flag_emoji": "🇮🇷",
+    "options": [
+      "Luxembourg",
+      "Singapore",
+      "Sana'a",
+      "Tehran"
+    ],
+    "options_ar": [
+      "لوكسمبورغ",
+      "سنغافورة",
+      "صنعاء",
+      "طهران"
+    ],
+    "fun_fact": "The capital of Iran is located at latitude 32.00.",
+    "difficulty": 1,
+    "lat": 32.0,
+    "lng": 53.0,
+    "flag_asset": "assets/images/flags/ir.png"
+  },
+  {
+    "id": "kz",
+    "country": "Kazakhstan",
+    "country_ar": "كازاخستان",
+    "capital": "Astana",
+    "capital_ar": "أستانا",
+    "continent": "Asia",
+    "flag_emoji": "🇰🇿",
+    "options": [
+      "Basse-Terre",
+      "Riga",
+      "Ottawa",
+      "Astana"
+    ],
+    "options_ar": [
+      "باس تير",
+      "ريغا",
+      "أوتاوا",
+      "أستانا"
+    ],
+    "fun_fact": "The capital of Kazakhstan is located at latitude 48.02.",
+    "difficulty": 1,
+    "lat": 48.0196,
+    "lng": 66.9237,
+    "flag_asset": "assets/images/flags/kz.png"
+  },
+  {
+    "id": "rs",
+    "country": "Serbia",
+    "country_ar": "صيربيا",
+    "capital": "Belgrade",
+    "capital_ar": "بلغراد",
+    "continent": "Europe",
+    "flag_emoji": "🇷🇸",
+    "options": [
+      "New Delhi",
+      "Monaco",
+      "Libreville",
+      "Belgrade"
+    ],
+    "options_ar": [
+      "نيودلهي",
+      "موناكو",
+      "ليبرفيل",
+      "بلغراد"
+    ],
+    "fun_fact": "The capital of Serbia is located at latitude 44.00.",
+    "difficulty": 1,
+    "lat": 44.0,
+    "lng": 21.0,
+    "flag_asset": "assets/images/flags/rs.png"
+  },
+  {
+    "id": "mw",
+    "country": "Malawi",
+    "country_ar": "مالاوي",
+    "capital": "Lilongwe",
+    "capital_ar": "ليلونجوي",
+    "continent": "Africa",
+    "flag_emoji": "🇲🇼",
+    "options": [
+      "Chișinău",
+      "Podgorica",
+      "Lilongwe",
+      "Bishkek"
+    ],
+    "options_ar": [
+      "كيشيناو",
+      "بودغوريتشا",
+      "ليلونجوي",
+      "بيشكيك"
+    ],
+    "fun_fact": "The capital of Malawi is located at latitude -13.50.",
+    "difficulty": 1,
+    "lat": -13.5,
+    "lng": 34.0,
+    "flag_asset": "assets/images/flags/mw.png"
+  },
+  {
+    "id": "ke",
+    "country": "Kenya",
+    "country_ar": "كينيا",
+    "capital": "Nairobi",
+    "capital_ar": "نيروبي",
+    "continent": "Africa",
+    "flag_emoji": "🇰🇪",
+    "options": [
+      "London",
+      "Pristina",
+      "Nairobi",
+      "Lilongwe"
+    ],
+    "options_ar": [
+      "لندن",
+      "بريشتينا",
+      "نيروبي",
+      "ليلونجوي"
+    ],
+    "fun_fact": "The capital of Kenya is located at latitude 1.00.",
+    "difficulty": 1,
+    "lat": 1.0,
+    "lng": 38.0,
+    "flag_asset": "assets/images/flags/ke.png"
+  },
+  {
+    "id": "ne",
+    "country": "Niger",
+    "country_ar": "النيجر",
+    "capital": "Niamey",
+    "capital_ar": "نيامي",
+    "continent": "Africa",
+    "flag_emoji": "🇳🇪",
+    "options": [
+      "Kabul",
+      "Moscow",
+      "Niamey",
+      "Lilongwe"
+    ],
+    "options_ar": [
+      "كابول",
+      "موسكو",
+      "نيامي",
+      "ليلونجوي"
+    ],
+    "fun_fact": "The capital of Niger is located at latitude 16.00.",
+    "difficulty": 1,
+    "lat": 16.0,
+    "lng": 8.0,
+    "flag_asset": "assets/images/flags/ne.png"
+  },
+  {
+    "id": "tc",
+    "country": "Turks and Caicos Islands",
+    "country_ar": "جزر توركس وكايكوس",
+    "capital": "Cockburn Town",
+    "capital_ar": "مدينة كوكبيرن",
+    "continent": "Americas",
+    "flag_emoji": "🇹🇨",
+    "options": [
+      "Cockburn Town",
+      "Mogadishu",
+      "Harare",
+      "Kabul"
+    ],
+    "options_ar": [
+      "مدينة كوكبيرن",
+      "مقديشو",
+      "هراري",
+      "كابول"
+    ],
+    "fun_fact": "The capital of Turks and Caicos Islands is located at latitude 21.75.",
+    "difficulty": 1,
+    "lat": 21.75,
+    "lng": -71.58333333,
+    "flag_asset": "assets/images/flags/tc.png"
+  },
+  {
+    "id": "ni",
+    "country": "Nicaragua",
+    "country_ar": "نيكاراغوا",
+    "capital": "Managua",
+    "capital_ar": "ماناغوا",
+    "continent": "Americas",
+    "flag_emoji": "🇳🇮",
+    "options": [
+      "Charlotte Amalie",
+      "Saint Helier",
+      "Addis Ababa",
+      "Managua"
+    ],
+    "options_ar": [
+      "شارلوت أمالي",
+      "سانت هيلير",
+      "أديس أبابا",
+      "ماناغوا"
+    ],
+    "fun_fact": "The capital of Nicaragua is located at latitude 13.00.",
+    "difficulty": 1,
+    "lat": 13.0,
+    "lng": -85.0,
+    "flag_asset": "assets/images/flags/ni.png"
+  },
+  {
+    "id": "ky",
+    "country": "Cayman Islands",
+    "country_ar": "جزر كايمان",
+    "capital": "George Town",
+    "capital_ar": "جورج تاون",
+    "continent": "Americas",
+    "flag_emoji": "🇰🇾",
+    "options": [
+      "George Town",
+      "St. George's",
+      "Bangkok",
+      "Santiago"
+    ],
+    "options_ar": [
+      "جورج تاون",
+      "سانت جورج",
+      "بانكوك",
+      "سانتياغو"
+    ],
+    "fun_fact": "The capital of Cayman Islands is located at latitude 19.31.",
+    "difficulty": 1,
+    "lat": 19.3133,
+    "lng": -81.2546,
+    "flag_asset": "assets/images/flags/ky.png"
+  },
+  {
+    "id": "et",
+    "country": "Ethiopia",
+    "country_ar": "إثيوبيا",
+    "capital": "Addis Ababa",
+    "capital_ar": "أديس أبابا",
+    "continent": "Africa",
+    "flag_emoji": "🇪🇹",
+    "options": [
+      "Plymouth",
+      "Addis Ababa",
+      "São Tomé",
+      "Harare"
+    ],
+    "options_ar": [
+      "بليموث",
+      "أديس أبابا",
+      "ساو تومي",
+      "هراري"
+    ],
+    "fun_fact": "The capital of Ethiopia is located at latitude 8.00.",
+    "difficulty": 1,
+    "lat": 8.0,
+    "lng": 38.0,
+    "flag_asset": "assets/images/flags/et.png"
+  },
+  {
+    "id": "gh",
+    "country": "Ghana",
+    "country_ar": "غانا",
+    "capital": "Accra",
+    "capital_ar": "أكرا",
+    "continent": "Africa",
+    "flag_emoji": "🇬🇭",
+    "options": [
+      "Accra",
+      "Belmopan",
+      "Mexico City",
+      "Pyongyang"
+    ],
+    "options_ar": [
+      "أكرا",
+      "بلموبان",
+      "مدينة مكسيكو",
+      "بيونغ يانغ"
+    ],
+    "fun_fact": "The capital of Ghana is located at latitude 8.00.",
+    "difficulty": 1,
+    "lat": 8.0,
+    "lng": -2.0,
+    "flag_asset": "assets/images/flags/gh.png"
+  },
+  {
+    "id": "eg",
+    "country": "Egypt",
+    "country_ar": "مصر",
+    "capital": "Cairo",
+    "capital_ar": "القاهرة",
+    "continent": "Africa",
+    "flag_emoji": "🇪🇬",
+    "options": [
+      "Marigot",
+      "Cairo",
+      "Yaren",
+      "Paris"
+    ],
+    "options_ar": [
+      "ماريجوت",
+      "القاهرة",
+      "يارين",
+      "باريس"
+    ],
+    "fun_fact": "The capital of Egypt is located at latitude 27.00.",
+    "difficulty": 1,
+    "lat": 27.0,
+    "lng": 30.0,
+    "flag_asset": "assets/images/flags/eg.png"
+  },
+  {
+    "id": "bg",
+    "country": "Bulgaria",
+    "country_ar": "بلغاريا",
+    "capital": "Sofia",
+    "capital_ar": "صوفيا",
+    "continent": "Europe",
+    "flag_emoji": "🇧🇬",
+    "options": [
+      "Ashgabat",
+      "Muscat",
+      "Sofia",
+      "Accra"
+    ],
+    "options_ar": [
+      "عشق أباد",
+      "المسكات عنب طيب الشذا",
+      "صوفيا",
+      "أكرا"
+    ],
+    "fun_fact": "The capital of Bulgaria is located at latitude 43.00.",
+    "difficulty": 1,
+    "lat": 43.0,
+    "lng": 25.0,
+    "flag_asset": "assets/images/flags/bg.png"
+  },
+  {
+    "id": "rw",
+    "country": "Rwanda",
+    "country_ar": "رواندا",
+    "capital": "Kigali",
+    "capital_ar": "كيغالي",
+    "continent": "Africa",
+    "flag_emoji": "🇷🇼",
+    "options": [
+      "Willemstad",
+      "Diego Garcia",
+      "Apia",
+      "Kigali"
+    ],
+    "options_ar": [
+      "ويلمستاد",
+      "دييغو جارسيا",
+      "آبيا",
+      "كيغالي"
+    ],
+    "fun_fact": "The capital of Rwanda is located at latitude -2.00.",
+    "difficulty": 1,
+    "lat": -2.0,
+    "lng": 30.0,
+    "flag_asset": "assets/images/flags/rw.png"
+  },
+  {
+    "id": "ga",
+    "country": "Gabon",
+    "country_ar": "الغابون",
+    "capital": "Libreville",
+    "capital_ar": "ليبرفيل",
+    "continent": "Africa",
+    "flag_emoji": "🇬🇦",
+    "options": [
+      "Libreville",
+      "Panama City",
+      "New Delhi",
+      "Budapest"
+    ],
+    "options_ar": [
+      "ليبرفيل",
+      "مدينة بنما",
+      "نيودلهي",
+      "بودابست"
+    ],
+    "fun_fact": "The capital of Gabon is located at latitude -1.00.",
+    "difficulty": 1,
+    "lat": -1.0,
+    "lng": 11.75,
+    "flag_asset": "assets/images/flags/ga.png"
+  },
+  {
+    "id": "dm",
+    "country": "Dominica",
+    "country_ar": "دومينيكا",
+    "capital": "Roseau",
+    "capital_ar": "روسو",
+    "continent": "Americas",
+    "flag_emoji": "🇩🇲",
+    "options": [
+      "Nouakchott",
+      "Panama City",
+      "Mbabane",
+      "Roseau"
+    ],
+    "options_ar": [
+      "نواكشوط",
+      "مدينة بنما",
+      "مبابان",
+      "روسو"
+    ],
+    "fun_fact": "The capital of Dominica is located at latitude 15.42.",
+    "difficulty": 1,
+    "lat": 15.41666666,
+    "lng": -61.33333333,
+    "flag_asset": "assets/images/flags/dm.png"
+  },
+  {
+    "id": "qa",
+    "country": "Qatar",
+    "country_ar": "قطر",
+    "capital": "Doha",
+    "capital_ar": "الدوحة",
+    "continent": "Asia",
+    "flag_emoji": "🇶🇦",
+    "options": [
+      "George Town",
+      "New Delhi",
+      "Doha",
+      "Havana"
+    ],
+    "options_ar": [
+      "جورج تاون",
+      "نيودلهي",
+      "الدوحة",
+      "هافانا"
+    ],
+    "fun_fact": "The capital of Qatar is located at latitude 25.50.",
+    "difficulty": 1,
+    "lat": 25.5,
+    "lng": 51.25,
+    "flag_asset": "assets/images/flags/qa.png"
+  },
+  {
+    "id": "gq",
+    "country": "Equatorial Guinea",
+    "country_ar": "غينيا الاستوائية",
+    "capital": "Ciudad de la Paz",
+    "capital_ar": "مدينة لاباز",
+    "continent": "Africa",
+    "flag_emoji": "🇬🇶",
+    "options": [
+      "Ciudad de la Paz",
+      "Tirana",
+      "Saipan",
+      "Malé"
+    ],
+    "options_ar": [
+      "مدينة لاباز",
+      "تيرانا",
+      "سايبان",
+      "ذكر"
+    ],
+    "fun_fact": "The capital of Equatorial Guinea is located at latitude 2.00.",
+    "difficulty": 1,
+    "lat": 2.0,
+    "lng": 10.0,
+    "flag_asset": "assets/images/flags/gq.png"
+  },
+  {
+    "id": "de",
+    "country": "Germany",
+    "country_ar": "ألمانيا",
+    "capital": "Berlin",
+    "capital_ar": "برلين",
+    "continent": "Europe",
+    "flag_emoji": "🇩🇪",
+    "options": [
+      "Managua",
+      "George Town",
+      "Suva",
+      "Berlin"
+    ],
+    "options_ar": [
+      "ماناغوا",
+      "جورج تاون",
+      "سوفا",
+      "برلين"
+    ],
+    "fun_fact": "The capital of Germany is located at latitude 51.00.",
+    "difficulty": 1,
+    "lat": 51.0,
+    "lng": 9.0,
+    "flag_asset": "assets/images/flags/de.png"
+  },
+  {
+    "id": "al",
+    "country": "Albania",
+    "country_ar": "ألبانيا",
+    "capital": "Tirana",
+    "capital_ar": "تيرانا",
+    "continent": "Europe",
+    "flag_emoji": "🇦🇱",
+    "options": [
+      "Tirana",
+      "Philipsburg",
+      "Willemstad",
+      "Djibouti"
+    ],
+    "options_ar": [
+      "تيرانا",
+      "فيليبسبرج",
+      "ويلمستاد",
+      "جيبوتي"
+    ],
+    "fun_fact": "The capital of Albania is located at latitude 41.00.",
+    "difficulty": 1,
+    "lat": 41.0,
+    "lng": 20.0,
+    "flag_asset": "assets/images/flags/al.png"
+  },
+  {
+    "id": "no",
+    "country": "Norway",
+    "country_ar": "النرويج",
+    "capital": "Oslo",
+    "capital_ar": "أوسلو",
+    "continent": "Europe",
+    "flag_emoji": "🇳🇴",
+    "options": [
+      "Longyearbyen",
+      "Naypyidaw",
+      "Oslo",
+      "Canberra"
+    ],
+    "options_ar": [
+      "لونجييربين",
+      "نايبيداو",
+      "أوسلو",
+      "كانبيرا"
+    ],
+    "fun_fact": "The capital of Norway is located at latitude 62.00.",
+    "difficulty": 1,
+    "lat": 62.0,
+    "lng": 10.0,
+    "flag_asset": "assets/images/flags/no.png"
+  },
+  {
+    "id": "tm",
+    "country": "Turkmenistan",
+    "country_ar": "تركمانستان",
+    "capital": "Ashgabat",
+    "capital_ar": "عشق أباد",
+    "continent": "Asia",
+    "flag_emoji": "🇹🇲",
+    "options": [
+      "Malé",
+      "Tbilisi",
+      "Podgorica",
+      "Ashgabat"
+    ],
+    "options_ar": [
+      "ذكر",
+      "تبليسي",
+      "بودغوريتشا",
+      "عشق أباد"
+    ],
+    "fun_fact": "The capital of Turkmenistan is located at latitude 40.00.",
+    "difficulty": 1,
+    "lat": 40.0,
+    "lng": 60.0,
+    "flag_asset": "assets/images/flags/tm.png"
+  },
+  {
+    "id": "is",
+    "country": "Iceland",
+    "country_ar": "آيسلندا",
+    "capital": "Reykjavik",
+    "capital_ar": "ريكيافيك",
+    "continent": "Europe",
+    "flag_emoji": "🇮🇸",
+    "options": [
+      "Doha",
+      "Victoria",
+      "Reykjavik",
+      "Port-au-Prince"
+    ],
+    "options_ar": [
+      "الدوحة",
+      "فيكتوريا",
+      "ريكيافيك",
+      "بورت أو برنس"
+    ],
+    "fun_fact": "The capital of Iceland is located at latitude 65.00.",
+    "difficulty": 1,
+    "lat": 65.0,
+    "lng": -18.0,
+    "flag_asset": "assets/images/flags/is.png"
+  },
+  {
+    "id": "hn",
+    "country": "Honduras",
+    "country_ar": "هندوراس",
+    "capital": "Tegucigalpa",
+    "capital_ar": "تيغوسيغالبا",
+    "continent": "Americas",
+    "flag_emoji": "🇭🇳",
+    "options": [
+      "Dhaka",
+      "Amman",
+      "Tegucigalpa",
+      "Hagåtña"
+    ],
+    "options_ar": [
+      "دكا",
+      "عمان",
+      "تيغوسيغالبا",
+      "هاجاتنيا"
+    ],
+    "fun_fact": "The capital of Honduras is located at latitude 15.00.",
+    "difficulty": 1,
+    "lat": 15.0,
+    "lng": -86.5,
+    "flag_asset": "assets/images/flags/hn.png"
+  },
+  {
+    "id": "gu",
+    "country": "Guam",
+    "country_ar": "غوام",
+    "capital": "Hagåtña",
+    "capital_ar": "هاجاتنيا",
+    "continent": "Oceania",
+    "flag_emoji": "🇬🇺",
+    "options": [
+      "Montevideo",
+      "Mbabane",
+      "Hagåtña",
+      "Ciudad de la Paz"
+    ],
+    "options_ar": [
+      "مونتيفيديو",
+      "مبابان",
+      "هاجاتنيا",
+      "مدينة لاباز"
+    ],
+    "fun_fact": "The capital of Guam is located at latitude 13.47.",
+    "difficulty": 1,
+    "lat": 13.46666666,
+    "lng": 144.78333333,
+    "flag_asset": "assets/images/flags/gu.png"
+  },
+  {
+    "id": "gt",
+    "country": "Guatemala",
+    "country_ar": "غواتيمالا",
+    "capital": "Guatemala City",
+    "capital_ar": "مدينة غواتيمالا",
+    "continent": "Americas",
+    "flag_emoji": "🇬🇹",
+    "options": [
+      "Guatemala City",
+      "Budapest",
+      "Port-au-Prince",
+      "Kuwait City"
+    ],
+    "options_ar": [
+      "مدينة غواتيمالا",
+      "بودابست",
+      "بورت أو برنس",
+      "مدينة الكويت"
+    ],
+    "fun_fact": "The capital of Guatemala is located at latitude 15.50.",
+    "difficulty": 1,
+    "lat": 15.5,
+    "lng": -90.25,
+    "flag_asset": "assets/images/flags/gt.png"
+  },
+  {
+    "id": "hu",
+    "country": "Hungary",
+    "country_ar": "المجر",
+    "capital": "Budapest",
+    "capital_ar": "بودابست",
+    "continent": "Europe",
+    "flag_emoji": "🇭🇺",
+    "options": [
+      "Papeetē",
+      "Sri Jayawardenepura Kotte",
+      "Budapest",
+      "Charlotte Amalie"
+    ],
+    "options_ar": [
+      "بابيتي",
+      "سري جاياواردينبورا كوتي",
+      "بودابست",
+      "شارلوت أمالي"
+    ],
+    "fun_fact": "The capital of Hungary is located at latitude 47.00.",
+    "difficulty": 1,
+    "lat": 47.0,
+    "lng": 20.0,
+    "flag_asset": "assets/images/flags/hu.png"
+  },
+  {
+    "id": "gr",
+    "country": "Greece",
+    "country_ar": "اليونان",
+    "capital": "Athens",
+    "capital_ar": "أثينا",
+    "continent": "Europe",
+    "flag_emoji": "🇬🇷",
+    "options": [
+      "Ulan Bator",
+      "Basse-Terre",
+      "Tegucigalpa",
+      "Athens"
+    ],
+    "options_ar": [
+      "أولان باتور",
+      "باس تير",
+      "تيغوسيغالبا",
+      "أثينا"
+    ],
+    "fun_fact": "The capital of Greece is located at latitude 39.00.",
+    "difficulty": 1,
+    "lat": 39.0,
+    "lng": 22.0,
+    "flag_asset": "assets/images/flags/gr.png"
+  },
+  {
+    "id": "by",
+    "country": "Belarus",
+    "country_ar": "بيلاروسيا",
+    "capital": "Minsk",
+    "capital_ar": "مينسك",
+    "continent": "Europe",
+    "flag_emoji": "🇧🇾",
+    "options": [
+      "Minsk",
+      "Kralendijk",
+      "Port Moresby",
+      "Mbabane"
+    ],
+    "options_ar": [
+      "مينسك",
+      "كرالينديجك",
+      "بورت مورسبي",
+      "مبابان"
+    ],
+    "fun_fact": "The capital of Belarus is located at latitude 53.00.",
+    "difficulty": 1,
+    "lat": 53.0,
+    "lng": 28.0,
+    "flag_asset": "assets/images/flags/by.png"
+  },
+  {
+    "id": "na",
+    "country": "Namibia",
+    "country_ar": "ناميبيا",
+    "capital": "Windhoek",
+    "capital_ar": "ويندهوك",
+    "continent": "Africa",
+    "flag_emoji": "🇳🇦",
+    "options": [
+      "Windhoek",
+      "Sucre",
+      "Pretoria",
+      "Quito"
+    ],
+    "options_ar": [
+      "ويندهوك",
+      "سوكري",
+      "بريتوريا",
+      "كيتو"
+    ],
+    "fun_fact": "The capital of Namibia is located at latitude -22.00.",
+    "difficulty": 1,
+    "lat": -22.0,
+    "lng": 17.0,
+    "flag_asset": "assets/images/flags/na.png"
+  },
+  {
+    "id": "gg",
+    "country": "Guernsey",
+    "country_ar": "غيرنزي",
+    "capital": "St. Peter Port",
+    "capital_ar": "سانت بيتر بورت",
+    "continent": "Europe",
+    "flag_emoji": "🇬🇬",
+    "options": [
+      "Belmopan",
+      "Harare",
+      "Banjul",
+      "St. Peter Port"
+    ],
+    "options_ar": [
+      "بلموبان",
+      "هراري",
+      "بانجول",
+      "سانت بيتر بورت"
+    ],
+    "fun_fact": "The capital of Guernsey is located at latitude 49.47.",
+    "difficulty": 1,
+    "lat": 49.46666666,
+    "lng": -2.58333333,
+    "flag_asset": "assets/images/flags/gg.png"
+  },
+  {
+    "id": "pa",
+    "country": "Panama",
+    "country_ar": "بنما",
+    "capital": "Panama City",
+    "capital_ar": "مدينة بنما",
+    "continent": "Americas",
+    "flag_emoji": "🇵🇦",
+    "options": [
+      "Panama City",
+      "City of San Marino",
+      "Praia",
+      "Taipei"
+    ],
+    "options_ar": [
+      "مدينة بنما",
+      "مدينة سان مارينو",
+      "برايا",
+      "تايبيه"
+    ],
+    "fun_fact": "The capital of Panama is located at latitude 9.00.",
+    "difficulty": 1,
+    "lat": 9.0,
+    "lng": -80.0,
+    "flag_asset": "assets/images/flags/pa.png"
+  },
+  {
+    "id": "mh",
+    "country": "Marshall Islands",
+    "country_ar": "جزر مارشال",
+    "capital": "Majuro",
+    "capital_ar": "ماجورو",
+    "continent": "Oceania",
+    "flag_emoji": "🇲🇭",
+    "options": [
+      "Riga",
+      "Majuro",
+      "Belgrade",
+      "Charlotte Amalie"
+    ],
+    "options_ar": [
+      "ريغا",
+      "ماجورو",
+      "بلغراد",
+      "شارلوت أمالي"
+    ],
+    "fun_fact": "The capital of Marshall Islands is located at latitude 9.00.",
+    "difficulty": 1,
+    "lat": 9.0,
+    "lng": 168.0,
+    "flag_asset": "assets/images/flags/mh.png"
+  },
+  {
+    "id": "ss",
+    "country": "South Sudan",
+    "country_ar": "جنوب السودان",
+    "capital": "Juba",
+    "capital_ar": "جوبا",
+    "continent": "Africa",
+    "flag_emoji": "🇸🇸",
+    "options": [
+      "Buenos Aires",
+      "Juba",
+      "Moroni",
+      "Amsterdam"
+    ],
+    "options_ar": [
+      "بوينس آيرس",
+      "جوبا",
+      "موروني",
+      "أمستردام"
+    ],
+    "fun_fact": "The capital of South Sudan is located at latitude 7.00.",
+    "difficulty": 1,
+    "lat": 7.0,
+    "lng": 30.0,
+    "flag_asset": "assets/images/flags/ss.png"
+  },
+  {
+    "id": "gw",
+    "country": "Guinea-Bissau",
+    "country_ar": "غينيا بيساو",
+    "capital": "Bissau",
+    "capital_ar": "بيساو",
+    "continent": "Africa",
+    "flag_emoji": "🇬🇼",
+    "options": [
+      "St. Peter Port",
+      "Amman",
+      "Bissau",
+      "Vilnius"
+    ],
+    "options_ar": [
+      "سانت بيتر بورت",
+      "عمان",
+      "بيساو",
+      "فيلنيوس"
+    ],
+    "fun_fact": "The capital of Guinea-Bissau is located at latitude 12.00.",
+    "difficulty": 1,
+    "lat": 12.0,
+    "lng": -15.0,
+    "flag_asset": "assets/images/flags/gw.png"
+  },
+  {
+    "id": "kp",
+    "country": "North Korea",
+    "country_ar": "كوريا الشمالية",
+    "capital": "Pyongyang",
+    "capital_ar": "بيونغ يانغ",
+    "continent": "Asia",
+    "flag_emoji": "🇰🇵",
+    "options": [
+      "Luxembourg",
+      "London",
+      "Pyongyang",
+      "Hagåtña"
+    ],
+    "options_ar": [
+      "لوكسمبورغ",
+      "لندن",
+      "بيونغ يانغ",
+      "هاجاتنيا"
+    ],
+    "fun_fact": "The capital of North Korea is located at latitude 40.00.",
+    "difficulty": 1,
+    "lat": 40.0,
+    "lng": 127.0,
+    "flag_asset": "assets/images/flags/kp.png"
+  },
+  {
+    "id": "io",
+    "country": "British Indian Ocean Territory",
+    "country_ar": "إقليم المحيط الهندي البريطاني",
+    "capital": "Diego Garcia",
+    "capital_ar": "دييغو جارسيا",
+    "continent": "Africa",
+    "flag_emoji": "🇮🇴",
+    "options": [
+      "Basse-Terre",
+      "Diego Garcia",
+      "Georgetown",
+      "St. George's"
+    ],
+    "options_ar": [
+      "باس تير",
+      "دييغو جارسيا",
+      "جورج تاون",
+      "سانت جورج"
+    ],
+    "fun_fact": "The capital of British Indian Ocean Territory is located at latitude -6.00.",
+    "difficulty": 1,
+    "lat": -6.0,
+    "lng": 71.5,
+    "flag_asset": "assets/images/flags/io.png"
+  },
+  {
+    "id": "gm",
+    "country": "Gambia",
+    "country_ar": "غامبيا",
+    "capital": "Banjul",
+    "capital_ar": "بانجول",
+    "continent": "Africa",
+    "flag_emoji": "🇬🇲",
+    "options": [
+      "Tegucigalpa",
+      "City of Victoria",
+      "Ashgabat",
+      "Banjul"
+    ],
+    "options_ar": [
+      "تيغوسيغالبا",
+      "مدينة فيكتوريا",
+      "عشق أباد",
+      "بانجول"
+    ],
+    "fun_fact": "The capital of Gambia is located at latitude 13.47.",
+    "difficulty": 1,
+    "lat": 13.46666666,
+    "lng": -16.56666666,
+    "flag_asset": "assets/images/flags/gm.png"
+  },
+  {
+    "id": "vi",
+    "country": "United States Virgin Islands",
+    "country_ar": "جزر العذراء الامريكية",
+    "capital": "Charlotte Amalie",
+    "capital_ar": "شارلوت أمالي",
+    "continent": "Americas",
+    "flag_emoji": "🇻🇮",
+    "options": [
+      "Mata-Utu",
+      "Luanda",
+      "Podgorica",
+      "Charlotte Amalie"
+    ],
+    "options_ar": [
+      "ماتا أوتو",
+      "لواندا",
+      "بودغوريتشا",
+      "شارلوت أمالي"
+    ],
+    "fun_fact": "The capital of United States Virgin Islands is located at latitude 18.35.",
+    "difficulty": 1,
+    "lat": 18.35,
+    "lng": -64.933333,
+    "flag_asset": "assets/images/flags/vi.png"
+  },
+  {
+    "id": "za",
+    "country": "South Africa",
+    "country_ar": "جنوب أفريقيا",
+    "capital": "Pretoria",
+    "capital_ar": "بريتوريا",
+    "continent": "Africa",
+    "flag_emoji": "🇿🇦",
+    "options": [
+      "Sana'a",
+      "Georgetown",
+      "Sarajevo",
+      "Pretoria"
+    ],
+    "options_ar": [
+      "صنعاء",
+      "جورج تاون",
+      "سراييفو",
+      "بريتوريا"
+    ],
+    "fun_fact": "The capital of South Africa is located at latitude -29.00.",
+    "difficulty": 1,
+    "lat": -29.0,
+    "lng": 24.0,
+    "flag_asset": "assets/images/flags/za.png"
+  },
+  {
+    "id": "kw",
+    "country": "Kuwait",
+    "country_ar": "الكويت",
+    "capital": "Kuwait City",
+    "capital_ar": "مدينة الكويت",
+    "continent": "Asia",
+    "flag_emoji": "🇰🇼",
+    "options": [
+      "Kuwait City",
+      "Lilongwe",
+      "Charlotte Amalie",
+      "Accra"
+    ],
+    "options_ar": [
+      "مدينة الكويت",
+      "ليلونجوي",
+      "شارلوت أمالي",
+      "أكرا"
+    ],
+    "fun_fact": "The capital of Kuwait is located at latitude 29.50.",
+    "difficulty": 1,
+    "lat": 29.5,
+    "lng": 45.75,
+    "flag_asset": "assets/images/flags/kw.png"
+  },
+  {
+    "id": "cn",
+    "country": "China",
+    "country_ar": "الصين",
+    "capital": "Beijing",
+    "capital_ar": "بكين",
+    "continent": "Asia",
+    "flag_emoji": "🇨🇳",
+    "options": [
+      "Beijing",
+      "Fort-de-France",
+      "Hanoi",
+      "Vaduz"
+    ],
+    "options_ar": [
+      "بكين",
+      "فورت دو فرانس",
+      "هانوي",
+      "فادوز"
+    ],
+    "fun_fact": "The capital of China is located at latitude 35.00.",
+    "difficulty": 1,
+    "lat": 35.0,
+    "lng": 105.0,
+    "flag_asset": "assets/images/flags/cn.png"
+  },
+  {
+    "id": "ru",
+    "country": "Russia",
+    "country_ar": "روسيا",
+    "capital": "Moscow",
+    "capital_ar": "موسكو",
+    "continent": "Europe",
+    "flag_emoji": "🇷🇺",
+    "options": [
+      "Pyongyang",
+      "Luanda",
+      "Moscow",
+      "Bishkek"
+    ],
+    "options_ar": [
+      "بيونغ يانغ",
+      "لواندا",
+      "موسكو",
+      "بيشكيك"
+    ],
+    "fun_fact": "The capital of Russia is located at latitude 60.00.",
+    "difficulty": 1,
+    "lat": 60.0,
+    "lng": 100.0,
+    "flag_asset": "assets/images/flags/ru.png"
+  },
+  {
+    "id": "sx",
+    "country": "Sint Maarten",
+    "country_ar": "سينت مارتن",
+    "capital": "Philipsburg",
+    "capital_ar": "فيليبسبرج",
+    "continent": "Americas",
+    "flag_emoji": "🇸🇽",
+    "options": [
+      "Georgetown",
+      "Kampala",
+      "Philipsburg",
+      "Tunis"
+    ],
+    "options_ar": [
+      "جورج تاون",
+      "كمبالا",
+      "فيليبسبرج",
+      "تونس"
+    ],
+    "fun_fact": "The capital of Sint Maarten is located at latitude 18.03.",
+    "difficulty": 1,
+    "lat": 18.033333,
+    "lng": -63.05,
+    "flag_asset": "assets/images/flags/sx.png"
+  },
+  {
+    "id": "pf",
+    "country": "French Polynesia",
+    "country_ar": "بولينزيا الفرنسية",
+    "capital": "Papeetē",
+    "capital_ar": "بابيتي",
+    "continent": "Oceania",
+    "flag_emoji": "🇵🇫",
+    "options": [
+      "Papeetē",
+      "Mata-Utu",
+      "Podgorica",
+      "Kuwait City"
+    ],
+    "options_ar": [
+      "بابيتي",
+      "ماتا أوتو",
+      "بودغوريتشا",
+      "مدينة الكويت"
+    ],
+    "fun_fact": "The capital of French Polynesia is located at latitude -17.68.",
+    "difficulty": 1,
+    "lat": -17.6797,
+    "lng": -149.4068,
+    "flag_asset": "assets/images/flags/pf.png"
+  },
+  {
+    "id": "bj",
+    "country": "Benin",
+    "country_ar": "بنين",
+    "capital": "Porto-Novo",
+    "capital_ar": "بورتو نوفو",
+    "continent": "Africa",
+    "flag_emoji": "🇧🇯",
+    "options": [
+      "Bishkek",
+      "Porto-Novo",
+      "Lilongwe",
+      "Honiara"
+    ],
+    "options_ar": [
+      "بيشكيك",
+      "بورتو نوفو",
+      "ليلونجوي",
+      "هونيارا"
+    ],
+    "fun_fact": "The capital of Benin is located at latitude 9.50.",
+    "difficulty": 1,
+    "lat": 9.5,
+    "lng": 2.25,
+    "flag_asset": "assets/images/flags/bj.png"
+  },
+  {
+    "id": "nu",
+    "country": "Niue",
+    "country_ar": "نييوي",
+    "capital": "Alofi",
+    "capital_ar": "الوفي",
+    "continent": "Oceania",
+    "flag_emoji": "🇳🇺",
+    "options": [
+      "Tehran",
+      "Caracas",
+      "Tbilisi",
+      "Alofi"
+    ],
+    "options_ar": [
+      "طهران",
+      "كاراكاس",
+      "تبليسي",
+      "الوفي"
+    ],
+    "fun_fact": "The capital of Niue is located at latitude -19.03.",
+    "difficulty": 1,
+    "lat": -19.03333333,
+    "lng": -169.86666666,
+    "flag_asset": "assets/images/flags/nu.png"
+  },
+  {
+    "id": "gl",
+    "country": "Greenland",
+    "country_ar": "جرينلاند",
+    "capital": "Nuuk",
+    "capital_ar": "نوك",
+    "continent": "Americas",
+    "flag_emoji": "🇬🇱",
+    "options": [
+      "Tegucigalpa",
+      "Beijing",
+      "Nuuk",
+      "Kingstown"
+    ],
+    "options_ar": [
+      "تيغوسيغالبا",
+      "بكين",
+      "نوك",
+      "كينغستاون"
+    ],
+    "fun_fact": "The capital of Greenland is located at latitude 72.00.",
+    "difficulty": 1,
+    "lat": 72.0,
+    "lng": -40.0,
+    "flag_asset": "assets/images/flags/gl.png"
+  },
+  {
+    "id": "sj",
+    "country": "Svalbard and Jan Mayen",
+    "country_ar": "سفالبارد ويان ماين",
+    "capital": "Longyearbyen",
+    "capital_ar": "لونجييربين",
+    "continent": "Europe",
+    "flag_emoji": "🇸🇯",
+    "options": [
+      "Reykjavik",
+      "N'Djamena",
+      "Monaco",
+      "Longyearbyen"
+    ],
+    "options_ar": [
+      "ريكيافيك",
+      "نجامينا",
+      "موناكو",
+      "لونجييربين"
+    ],
+    "fun_fact": "The capital of Svalbard and Jan Mayen is located at latitude 78.00.",
+    "difficulty": 1,
+    "lat": 78.0,
+    "lng": 20.0,
+    "flag_asset": "assets/images/flags/sj.png"
+  },
+  {
+    "id": "ls",
+    "country": "Lesotho",
+    "country_ar": "ليسوتو",
+    "capital": "Maseru",
+    "capital_ar": "ماسيرو",
+    "continent": "Africa",
+    "flag_emoji": "🇱🇸",
+    "options": [
+      "Maseru",
+      "Kabul",
+      "Caracas",
+      "Minsk"
+    ],
+    "options_ar": [
+      "ماسيرو",
+      "كابول",
+      "كاراكاس",
+      "مينسك"
+    ],
+    "fun_fact": "The capital of Lesotho is located at latitude -29.50.",
+    "difficulty": 1,
+    "lat": -29.5,
+    "lng": 28.5,
+    "flag_asset": "assets/images/flags/ls.png"
+  },
+  {
+    "id": "mf",
+    "country": "Saint Martin",
+    "country_ar": "سانت مارتن",
+    "capital": "Marigot",
+    "capital_ar": "ماريجوت",
+    "continent": "Americas",
+    "flag_emoji": "🇲🇫",
+    "options": [
+      "Mexico City",
+      "Paris",
+      "Marigot",
+      "Beirut"
+    ],
+    "options_ar": [
+      "مدينة مكسيكو",
+      "باريس",
+      "ماريجوت",
+      "بيروت"
+    ],
+    "fun_fact": "The capital of Saint Martin is located at latitude 18.07.",
+    "difficulty": 2,
+    "lat": 18.0708,
+    "lng": -63.0501,
+    "flag_asset": "assets/images/flags/mf.png"
+  },
+  {
+    "id": "je",
+    "country": "Jersey",
+    "country_ar": "جيرزي",
+    "capital": "Saint Helier",
+    "capital_ar": "سانت هيلير",
+    "continent": "Europe",
+    "flag_emoji": "🇯🇪",
+    "options": [
+      "Saint Helier",
+      "Beijing",
+      "Canberra",
+      "Sofia"
+    ],
+    "options_ar": [
+      "سانت هيلير",
+      "بكين",
+      "كانبيرا",
+      "صوفيا"
+    ],
+    "fun_fact": "The capital of Jersey is located at latitude 49.25.",
+    "difficulty": 2,
+    "lat": 49.25,
+    "lng": -2.16666666,
+    "flag_asset": "assets/images/flags/je.png"
+  },
+  {
+    "id": "mn",
+    "country": "Mongolia",
+    "country_ar": "منغوليا",
+    "capital": "Ulan Bator",
+    "capital_ar": "أولان باتور",
+    "continent": "Asia",
+    "flag_emoji": "🇲🇳",
+    "options": [
+      "São Tomé",
+      "Sofia",
+      "Jerusalem",
+      "Ulan Bator"
+    ],
+    "options_ar": [
+      "ساو تومي",
+      "صوفيا",
+      "القدس",
+      "أولان باتور"
+    ],
+    "fun_fact": "The capital of Mongolia is located at latitude 46.00.",
+    "difficulty": 2,
+    "lat": 46.0,
+    "lng": 105.0,
+    "flag_asset": "assets/images/flags/mn.png"
+  },
+  {
+    "id": "tv",
+    "country": "Tuvalu",
+    "country_ar": "توفالو",
+    "capital": "Funafuti",
+    "capital_ar": "فونافوتي",
+    "continent": "Oceania",
+    "flag_emoji": "🇹🇻",
+    "options": [
+      "Tirana",
+      "Funafuti",
+      "South Tarawa",
+      "Vaduz"
+    ],
+    "options_ar": [
+      "تيرانا",
+      "فونافوتي",
+      "جنوب تاراوا",
+      "فادوز"
+    ],
+    "fun_fact": "The capital of Tuvalu is located at latitude -8.00.",
+    "difficulty": 2,
+    "lat": -8.0,
+    "lng": 178.0,
+    "flag_asset": "assets/images/flags/tv.png"
+  },
+  {
+    "id": "ao",
+    "country": "Angola",
+    "country_ar": "جمهورية أنغولا",
+    "capital": "Luanda",
+    "capital_ar": "لواندا",
+    "continent": "Africa",
+    "flag_emoji": "🇦🇴",
+    "options": [
+      "Lima",
+      "Luanda",
+      "Chișinău",
+      "Budapest"
+    ],
+    "options_ar": [
+      "ليما",
+      "لواندا",
+      "كيشيناو",
+      "بودابست"
+    ],
+    "fun_fact": "The capital of Angola is located at latitude -12.50.",
+    "difficulty": 2,
+    "lat": -12.5,
+    "lng": 18.5,
+    "flag_asset": "assets/images/flags/ao.png"
+  },
+  {
+    "id": "wf",
+    "country": "Wallis and Futuna",
+    "country_ar": "واليس وفوتونا",
+    "capital": "Mata-Utu",
+    "capital_ar": "ماتا أوتو",
+    "continent": "Oceania",
+    "flag_emoji": "🇼🇫",
+    "options": [
+      "Georgetown",
+      "Mata-Utu",
+      "Ramallah",
+      "Maseru"
+    ],
+    "options_ar": [
+      "جورج تاون",
+      "ماتا أوتو",
+      "رام الله",
+      "ماسيرو"
+    ],
+    "fun_fact": "The capital of Wallis and Futuna is located at latitude -13.30.",
+    "difficulty": 2,
+    "lat": -13.3,
+    "lng": -176.2,
+    "flag_asset": "assets/images/flags/wf.png"
+  },
+  {
+    "id": "jo",
+    "country": "Jordan",
+    "country_ar": "الأردن",
+    "capital": "Amman",
+    "capital_ar": "عمان",
+    "continent": "Asia",
+    "flag_emoji": "🇯🇴",
+    "options": [
+      "Amman",
+      "Chișinău",
+      "Amsterdam",
+      "Managua"
+    ],
+    "options_ar": [
+      "عمان",
+      "كيشيناو",
+      "أمستردام",
+      "ماناغوا"
+    ],
+    "fun_fact": "The capital of Jordan is located at latitude 31.00.",
+    "difficulty": 2,
+    "lat": 31.0,
+    "lng": 36.0,
+    "flag_asset": "assets/images/flags/jo.png"
+  },
+  {
+    "id": "cv",
+    "country": "Cape Verde",
+    "country_ar": "كابو فيردي",
+    "capital": "Praia",
+    "capital_ar": "برايا",
+    "continent": "Africa",
+    "flag_emoji": "🇨🇻",
+    "options": [
+      "Praia",
+      "Bangkok",
+      "City of San Marino",
+      "Banjul"
+    ],
+    "options_ar": [
+      "برايا",
+      "بانكوك",
+      "مدينة سان مارينو",
+      "بانجول"
+    ],
+    "fun_fact": "The capital of Cape Verde is located at latitude 16.54.",
+    "difficulty": 2,
+    "lat": 16.5388,
+    "lng": -23.0418,
+    "flag_asset": "assets/images/flags/cv.png"
+  },
+  {
+    "id": "lt",
+    "country": "Lithuania",
+    "country_ar": "ليتوانيا",
+    "capital": "Vilnius",
+    "capital_ar": "فيلنيوس",
+    "continent": "Europe",
+    "flag_emoji": "🇱🇹",
+    "options": [
+      "Ulan Bator",
+      "Sarajevo",
+      "Vilnius",
+      "Philipsburg"
+    ],
+    "options_ar": [
+      "أولان باتور",
+      "سراييفو",
+      "فيلنيوس",
+      "فيليبسبرج"
+    ],
+    "fun_fact": "The capital of Lithuania is located at latitude 56.00.",
+    "difficulty": 2,
+    "lat": 56.0,
+    "lng": 24.0,
+    "flag_asset": "assets/images/flags/lt.png"
+  },
+  {
+    "id": "hk",
+    "country": "Hong Kong",
+    "country_ar": "هونغ كونغ",
+    "capital": "City of Victoria",
+    "capital_ar": "مدينة فيكتوريا",
+    "continent": "Asia",
+    "flag_emoji": "🇭🇰",
+    "options": [
+      "Athens",
+      "Plymouth",
+      "City of Victoria",
+      "Berlin"
+    ],
+    "options_ar": [
+      "أثينا",
+      "بليموث",
+      "مدينة فيكتوريا",
+      "برلين"
+    ],
+    "fun_fact": "The capital of Hong Kong is located at latitude 22.27.",
+    "difficulty": 2,
+    "lat": 22.267,
+    "lng": 114.188,
+    "flag_asset": "assets/images/flags/hk.png"
+  },
+  {
+    "id": "st",
+    "country": "São Tomé and Príncipe",
+    "country_ar": "ساو تومي وبرينسيب",
+    "capital": "São Tomé",
+    "capital_ar": "ساو تومي",
+    "continent": "Africa",
+    "flag_emoji": "🇸🇹",
+    "options": [
+      "Luxembourg",
+      "Lilongwe",
+      "Kampala",
+      "São Tomé"
+    ],
+    "options_ar": [
+      "لوكسمبورغ",
+      "ليلونجوي",
+      "كمبالا",
+      "ساو تومي"
+    ],
+    "fun_fact": "The capital of São Tomé and Príncipe is located at latitude 1.00.",
+    "difficulty": 2,
+    "lat": 1.0,
+    "lng": 7.0,
+    "flag_asset": "assets/images/flags/st.png"
+  },
+  {
+    "id": "dj",
+    "country": "Djibouti",
+    "country_ar": "جيبوتي",
+    "capital": "Djibouti",
+    "capital_ar": "جيبوتي",
+    "continent": "Africa",
+    "flag_emoji": "🇩🇯",
+    "options": [
+      "Djibouti",
+      "Tunis",
+      "Cairo",
+      "Jerusalem"
+    ],
+    "options_ar": [
+      "جيبوتي",
+      "تونس",
+      "القاهرة",
+      "القدس"
+    ],
+    "fun_fact": "The capital of Djibouti is located at latitude 11.50.",
+    "difficulty": 2,
+    "lat": 11.5,
+    "lng": 43.0,
+    "flag_asset": "assets/images/flags/dj.png"
+  },
+  {
+    "id": "km",
+    "country": "Comoros",
+    "country_ar": "جزر القمر",
+    "capital": "Moroni",
+    "capital_ar": "موروني",
+    "continent": "Africa",
+    "flag_emoji": "🇰🇲",
+    "options": [
+      "Moroni",
+      "Tegucigalpa",
+      "Longyearbyen",
+      "Marigot"
+    ],
+    "options_ar": [
+      "موروني",
+      "تيغوسيغالبا",
+      "لونجييربين",
+      "ماريجوت"
+    ],
+    "fun_fact": "The capital of Comoros is located at latitude -12.17.",
+    "difficulty": 2,
+    "lat": -12.16666666,
+    "lng": 44.25,
+    "flag_asset": "assets/images/flags/km.png"
+  },
+  {
+    "id": "gb",
+    "country": "United Kingdom",
+    "country_ar": "المملكة المتحدة",
+    "capital": "London",
+    "capital_ar": "لندن",
+    "continent": "Europe",
+    "flag_emoji": "🇬🇧",
+    "options": [
+      "South Tarawa",
+      "Nuuk",
+      "London",
+      "Saint-Denis"
+    ],
+    "options_ar": [
+      "جنوب تاراوا",
+      "نوك",
+      "لندن",
+      "سان دوني"
+    ],
+    "fun_fact": "The capital of United Kingdom is located at latitude 54.00.",
+    "difficulty": 2,
+    "lat": 54.0,
+    "lng": -2.0,
+    "flag_asset": "assets/images/flags/gb.png"
+  },
+  {
+    "id": "vn",
+    "country": "Vietnam",
+    "country_ar": "فيتنام",
+    "capital": "Hanoi",
+    "capital_ar": "هانوي",
+    "continent": "Asia",
+    "flag_emoji": "🇻🇳",
+    "options": [
+      "Ulan Bator",
+      "Hanoi",
+      "Ottawa",
+      "Mbabane"
+    ],
+    "options_ar": [
+      "أولان باتور",
+      "هانوي",
+      "أوتاوا",
+      "مبابان"
+    ],
+    "fun_fact": "The capital of Vietnam is located at latitude 16.17.",
+    "difficulty": 2,
+    "lat": 16.16666666,
+    "lng": 107.83333333,
+    "flag_asset": "assets/images/flags/vn.png"
+  },
+  {
+    "id": "gd",
+    "country": "Grenada",
+    "country_ar": "غرينادا",
+    "capital": "St. George's",
+    "capital_ar": "سانت جورج",
+    "continent": "Americas",
+    "flag_emoji": "🇬🇩",
+    "options": [
+      "Moroni",
+      "Sarajevo",
+      "Porto-Novo",
+      "St. George's"
+    ],
+    "options_ar": [
+      "موروني",
+      "سراييفو",
+      "بورتو نوفو",
+      "سانت جورج"
+    ],
+    "fun_fact": "The capital of Grenada is located at latitude 12.12.",
+    "difficulty": 2,
+    "lat": 12.11666666,
+    "lng": -61.66666666,
+    "flag_asset": "assets/images/flags/gd.png"
+  },
+  {
+    "id": "fj",
+    "country": "Fiji",
+    "country_ar": "فيجي",
+    "capital": "Suva",
+    "capital_ar": "سوفا",
+    "continent": "Oceania",
+    "flag_emoji": "🇫🇯",
+    "options": [
+      "Panama City",
+      "Asunción",
+      "Suva",
+      "Taipei"
+    ],
+    "options_ar": [
+      "مدينة بنما",
+      "أسونسيون",
+      "سوفا",
+      "تايبيه"
+    ],
+    "fun_fact": "The capital of Fiji is located at latitude -17.71.",
+    "difficulty": 2,
+    "lat": -17.7134,
+    "lng": 178.065,
+    "flag_asset": "assets/images/flags/fj.png"
+  },
+  {
+    "id": "ar",
+    "country": "Argentina",
+    "country_ar": "الأرجنتين",
+    "capital": "Buenos Aires",
+    "capital_ar": "بوينس آيرس",
+    "continent": "Americas",
+    "flag_emoji": "🇦🇷",
+    "options": [
+      "Nuuk",
+      "Riga",
+      "Hanoi",
+      "Buenos Aires"
+    ],
+    "options_ar": [
+      "نوك",
+      "ريغا",
+      "هانوي",
+      "بوينس آيرس"
+    ],
+    "fun_fact": "The capital of Argentina is located at latitude -34.00.",
+    "difficulty": 2,
+    "lat": -34.0,
+    "lng": -64.0,
+    "flag_asset": "assets/images/flags/ar.png"
+  },
+  {
+    "id": "bq",
+    "country": "Caribbean Netherlands",
+    "country_ar": "الجزر الكاريبية الهولندية",
+    "capital": "Kralendijk",
+    "capital_ar": "كرالينديجك",
+    "continent": "Americas",
+    "flag_emoji": "🇧🇶",
+    "options": [
+      "Kralendijk",
+      "Amman",
+      "Mbabane",
+      "Avarua"
+    ],
+    "options_ar": [
+      "كرالينديجك",
+      "عمان",
+      "مبابان",
+      "أفاروا"
+    ],
+    "fun_fact": "The capital of Caribbean Netherlands is located at latitude 12.18.",
+    "difficulty": 2,
+    "lat": 12.18,
+    "lng": -68.25,
+    "flag_asset": "assets/images/flags/bq.png"
+  },
+  {
+    "id": "mx",
+    "country": "Mexico",
+    "country_ar": "المسكيك",
+    "capital": "Mexico City",
+    "capital_ar": "مدينة مكسيكو",
+    "continent": "Americas",
+    "flag_emoji": "🇲🇽",
+    "options": [
+      "Mexico City",
+      "Windhoek",
+      "N'Djamena",
+      "Tirana"
+    ],
+    "options_ar": [
+      "مدينة مكسيكو",
+      "ويندهوك",
+      "نجامينا",
+      "تيرانا"
+    ],
+    "fun_fact": "The capital of Mexico is located at latitude 23.00.",
+    "difficulty": 2,
+    "lat": 23.0,
+    "lng": -102.0,
+    "flag_asset": "assets/images/flags/mx.png"
+  },
+  {
+    "id": "pm",
+    "country": "Saint Pierre and Miquelon",
+    "country_ar": "سان بيير وميكلون",
+    "capital": "Saint-Pierre",
+    "capital_ar": "سان بيير",
+    "continent": "Americas",
+    "flag_emoji": "🇵🇲",
+    "options": [
+      "New Delhi",
+      "Ottawa",
+      "Port Moresby",
+      "Saint-Pierre"
+    ],
+    "options_ar": [
+      "نيودلهي",
+      "أوتاوا",
+      "بورت مورسبي",
+      "سان بيير"
+    ],
+    "fun_fact": "The capital of Saint Pierre and Miquelon is located at latitude 46.83.",
+    "difficulty": 2,
+    "lat": 46.83333333,
+    "lng": -56.33333333,
+    "flag_asset": "assets/images/flags/pm.png"
+  },
+  {
+    "id": "mm",
+    "country": "Myanmar",
+    "country_ar": "ميانمار",
+    "capital": "Naypyidaw",
+    "capital_ar": "نايبيداو",
+    "continent": "Asia",
+    "flag_emoji": "🇲🇲",
+    "options": [
+      "Moroni",
+      "Naypyidaw",
+      "Pristina",
+      "Kyiv"
+    ],
+    "options_ar": [
+      "موروني",
+      "نايبيداو",
+      "بريشتينا",
+      "كييف"
+    ],
+    "fun_fact": "The capital of Myanmar is located at latitude 22.00.",
+    "difficulty": 2,
+    "lat": 22.0,
+    "lng": 98.0,
+    "flag_asset": "assets/images/flags/mm.png"
+  },
+  {
+    "id": "fo",
+    "country": "Faroe Islands",
+    "country_ar": "جزر فارو",
+    "capital": "Tórshavn",
+    "capital_ar": "تورشافن",
+    "continent": "Europe",
+    "flag_emoji": "🇫🇴",
+    "options": [
+      "Warsaw",
+      "Tórshavn",
+      "Cayenne",
+      "City of San Marino"
+    ],
+    "options_ar": [
+      "وارسو",
+      "تورشافن",
+      "حريف",
+      "مدينة سان مارينو"
+    ],
+    "fun_fact": "The capital of Faroe Islands is located at latitude 62.00.",
+    "difficulty": 2,
+    "lat": 62.0,
+    "lng": -7.0,
+    "flag_asset": "assets/images/flags/fo.png"
+  },
+  {
+    "id": "cu",
+    "country": "Cuba",
+    "country_ar": "كوبا",
+    "capital": "Havana",
+    "capital_ar": "هافانا",
+    "continent": "Americas",
+    "flag_emoji": "🇨🇺",
+    "options": [
+      "Adamstown",
+      "Basse-Terre",
+      "Pyongyang",
+      "Havana"
+    ],
+    "options_ar": [
+      "ادامستاون",
+      "باس تير",
+      "بيونغ يانغ",
+      "هافانا"
+    ],
+    "fun_fact": "The capital of Cuba is located at latitude 21.50.",
+    "difficulty": 2,
+    "lat": 21.5,
+    "lng": -80.0,
+    "flag_asset": "assets/images/flags/cu.png"
+  },
+  {
+    "id": "li",
+    "country": "Liechtenstein",
+    "country_ar": "ليختنشتاين",
+    "capital": "Vaduz",
+    "capital_ar": "فادوز",
+    "continent": "Europe",
+    "flag_emoji": "🇱🇮",
+    "options": [
+      "Havana",
+      "Vaduz",
+      "Papeetē",
+      "St. Peter Port"
+    ],
+    "options_ar": [
+      "هافانا",
+      "فادوز",
+      "بابيتي",
+      "سانت بيتر بورت"
+    ],
+    "fun_fact": "The capital of Liechtenstein is located at latitude 47.27.",
+    "difficulty": 2,
+    "lat": 47.26666666,
+    "lng": 9.53333333,
+    "flag_asset": "assets/images/flags/li.png"
+  },
+  {
+    "id": "lb",
+    "country": "Lebanon",
+    "country_ar": "لبنان",
+    "capital": "Beirut",
+    "capital_ar": "بيروت",
+    "continent": "Asia",
+    "flag_emoji": "🇱🇧",
+    "options": [
+      "Roseau",
+      "Conakry",
+      "Beirut",
+      "Djibouti"
+    ],
+    "options_ar": [
+      "روسو",
+      "كوناكري",
+      "بيروت",
+      "جيبوتي"
+    ],
+    "fun_fact": "The capital of Lebanon is located at latitude 33.83.",
+    "difficulty": 2,
+    "lat": 33.83333333,
+    "lng": 35.83333333,
+    "flag_asset": "assets/images/flags/lb.png"
+  },
+  {
+    "id": "nl",
+    "country": "Netherlands",
+    "country_ar": "هولندا",
+    "capital": "Amsterdam",
+    "capital_ar": "أمستردام",
+    "continent": "Europe",
+    "flag_emoji": "🇳🇱",
+    "options": [
+      "Minsk",
+      "Yaren",
+      "Amsterdam",
+      "Muscat"
+    ],
+    "options_ar": [
+      "مينسك",
+      "يارين",
+      "أمستردام",
+      "المسكات عنب طيب الشذا"
+    ],
+    "fun_fact": "The capital of Netherlands is located at latitude 52.50.",
+    "difficulty": 2,
+    "lat": 52.5,
+    "lng": 5.75,
+    "flag_asset": "assets/images/flags/nl.png"
+  },
+  {
+    "id": "ps",
+    "country": "Palestine",
+    "country_ar": "فلسطين",
+    "capital": "Ramallah",
+    "capital_ar": "رام الله",
+    "continent": "Asia",
+    "flag_emoji": "🇵🇸",
+    "options": [
+      "Ramallah",
+      "Saint Helier",
+      "Andorra la Vella",
+      "Roseau"
+    ],
+    "options_ar": [
+      "رام الله",
+      "سانت هيلير",
+      "أندورا لا فيلا",
+      "روسو"
+    ],
+    "fun_fact": "The capital of Palestine is located at latitude 31.90.",
+    "difficulty": 2,
+    "lat": 31.9,
+    "lng": 35.2,
+    "flag_asset": "assets/images/flags/ps.png"
+  },
+  {
+    "id": "fr",
+    "country": "France",
+    "country_ar": "فرنسا",
+    "capital": "Paris",
+    "capital_ar": "باريس",
+    "continent": "Europe",
+    "flag_emoji": "🇫🇷",
+    "options": [
+      "Paris",
+      "Pretoria",
+      "Sucre",
+      "Brussels"
+    ],
+    "options_ar": [
+      "باريس",
+      "بريتوريا",
+      "سوكري",
+      "بروكسل"
+    ],
+    "fun_fact": "The capital of France is located at latitude 46.00.",
+    "difficulty": 2,
+    "lat": 46.0,
+    "lng": 2.0,
+    "flag_asset": "assets/images/flags/fr.png"
+  },
+  {
+    "id": "bz",
+    "country": "Belize",
+    "country_ar": "بليز",
+    "capital": "Belmopan",
+    "capital_ar": "بلموبان",
+    "continent": "Americas",
+    "flag_emoji": "🇧🇿",
+    "options": [
+      "Marigot",
+      "Guatemala City",
+      "Belmopan",
+      "Dhaka"
+    ],
+    "options_ar": [
+      "ماريجوت",
+      "مدينة غواتيمالا",
+      "بلموبان",
+      "دكا"
+    ],
+    "fun_fact": "The capital of Belize is located at latitude 17.25.",
+    "difficulty": 2,
+    "lat": 17.25,
+    "lng": -88.75,
+    "flag_asset": "assets/images/flags/bz.png"
+  },
+  {
+    "id": "py",
+    "country": "Paraguay",
+    "country_ar": "باراغواي",
+    "capital": "Asunción",
+    "capital_ar": "أسونسيون",
+    "continent": "Americas",
+    "flag_emoji": "🇵🇾",
+    "options": [
+      "Asunción",
+      "Berlin",
+      "New Delhi",
+      "Pyongyang"
+    ],
+    "options_ar": [
+      "أسونسيون",
+      "برلين",
+      "نيودلهي",
+      "بيونغ يانغ"
+    ],
+    "fun_fact": "The capital of Paraguay is located at latitude -23.00.",
+    "difficulty": 2,
+    "lat": -23.0,
+    "lng": -58.0,
+    "flag_asset": "assets/images/flags/py.png"
+  },
+  {
+    "id": "om",
+    "country": "Oman",
+    "country_ar": "عمان",
+    "capital": "Muscat",
+    "capital_ar": "المسكات عنب طيب الشذا",
+    "continent": "Asia",
+    "flag_emoji": "🇴🇲",
+    "options": [
+      "Saint-Denis",
+      "Ramallah",
+      "Cockburn Town",
+      "Muscat"
+    ],
+    "options_ar": [
+      "سان دوني",
+      "رام الله",
+      "مدينة كوكبيرن",
+      "المسكات عنب طيب الشذا"
+    ],
+    "fun_fact": "The capital of Oman is located at latitude 21.00.",
+    "difficulty": 2,
+    "lat": 21.0,
+    "lng": 57.0,
+    "flag_asset": "assets/images/flags/om.png"
+  },
+  {
+    "id": "sn",
+    "country": "Senegal",
+    "country_ar": "السنغال",
+    "capital": "Dakar",
+    "capital_ar": "داكار",
+    "continent": "Africa",
+    "flag_emoji": "🇸🇳",
+    "options": [
+      "Ciudad de la Paz",
+      "Ashgabat",
+      "Dakar",
+      "Brazzaville"
+    ],
+    "options_ar": [
+      "مدينة لاباز",
+      "عشق أباد",
+      "داكار",
+      "برازافيل"
+    ],
+    "fun_fact": "The capital of Senegal is located at latitude 14.00.",
+    "difficulty": 2,
+    "lat": 14.0,
+    "lng": -14.0,
+    "flag_asset": "assets/images/flags/sn.png"
+  },
+  {
+    "id": "ye",
+    "country": "Yemen",
+    "country_ar": "اليمن",
+    "capital": "Sana'a",
+    "capital_ar": "صنعاء",
+    "continent": "Asia",
+    "flag_emoji": "🇾🇪",
+    "options": [
+      "Sana'a",
+      "Montevideo",
+      "Oslo",
+      "Sarajevo"
+    ],
+    "options_ar": [
+      "صنعاء",
+      "مونتيفيديو",
+      "أوسلو",
+      "سراييفو"
+    ],
+    "fun_fact": "The capital of Yemen is located at latitude 15.00.",
+    "difficulty": 2,
+    "lat": 15.0,
+    "lng": 48.0,
+    "flag_asset": "assets/images/flags/ye.png"
+  },
+  {
+    "id": "lu",
+    "country": "Luxembourg",
+    "country_ar": "لوكسمبورغ",
+    "capital": "Luxembourg",
+    "capital_ar": "لوكسمبورغ",
+    "continent": "Europe",
+    "flag_emoji": "🇱🇺",
+    "options": [
+      "Luxembourg",
+      "George Town",
+      "Mbabane",
+      "Sarajevo"
+    ],
+    "options_ar": [
+      "لوكسمبورغ",
+      "جورج تاون",
+      "مبابان",
+      "سراييفو"
+    ],
+    "fun_fact": "The capital of Luxembourg is located at latitude 49.75.",
+    "difficulty": 2,
+    "lat": 49.75,
+    "lng": 6.16666666,
+    "flag_asset": "assets/images/flags/lu.png"
+  },
+  {
+    "id": "ht",
+    "country": "Haiti",
+    "country_ar": "هايتي",
+    "capital": "Port-au-Prince",
+    "capital_ar": "بورت أو برنس",
+    "continent": "Americas",
+    "flag_emoji": "🇭🇹",
+    "options": [
+      "Paris",
+      "Port-au-Prince",
+      "Oslo",
+      "Budapest"
+    ],
+    "options_ar": [
+      "باريس",
+      "بورت أو برنس",
+      "أوسلو",
+      "بودابست"
+    ],
+    "fun_fact": "The capital of Haiti is located at latitude 19.00.",
+    "difficulty": 2,
+    "lat": 19.0,
+    "lng": -72.41666666,
+    "flag_asset": "assets/images/flags/ht.png"
+  },
+  {
+    "id": "pn",
+    "country": "Pitcairn Islands",
+    "country_ar": "جزر بيتكيرن",
+    "capital": "Adamstown",
+    "capital_ar": "ادامستاون",
+    "continent": "Oceania",
+    "flag_emoji": "🇵🇳",
+    "options": [
+      "Saint-Pierre",
+      "Dakar",
+      "Adamstown",
+      "Moscow"
+    ],
+    "options_ar": [
+      "سان بيير",
+      "داكار",
+      "ادامستاون",
+      "موسكو"
+    ],
+    "fun_fact": "The capital of Pitcairn Islands is located at latitude -25.07.",
+    "difficulty": 2,
+    "lat": -25.06666666,
+    "lng": -130.1,
+    "flag_asset": "assets/images/flags/pn.png"
+  },
+  {
+    "id": "ws",
+    "country": "Samoa",
+    "country_ar": "ساموا",
+    "capital": "Apia",
+    "capital_ar": "آبيا",
+    "continent": "Oceania",
+    "flag_emoji": "🇼🇸",
+    "options": [
+      "Apia",
+      "Bern",
+      "Monaco",
+      "Funafuti"
+    ],
+    "options_ar": [
+      "آبيا",
+      "برن",
+      "موناكو",
+      "فونافوتي"
+    ],
+    "fun_fact": "The capital of Samoa is located at latitude -13.58.",
+    "difficulty": 2,
+    "lat": -13.58333333,
+    "lng": -172.33333333,
+    "flag_asset": "assets/images/flags/ws.png"
+  },
+  {
+    "id": "cy",
+    "country": "Cyprus",
+    "country_ar": "قبرص",
+    "capital": "Nicosia",
+    "capital_ar": "نيقوسيا",
+    "continent": "Europe",
+    "flag_emoji": "🇨🇾",
+    "options": [
+      "Plymouth",
+      "Nicosia",
+      "City of Victoria",
+      "Canberra"
+    ],
+    "options_ar": [
+      "بليموث",
+      "نيقوسيا",
+      "مدينة فيكتوريا",
+      "كانبيرا"
+    ],
+    "fun_fact": "The capital of Cyprus is located at latitude 35.00.",
+    "difficulty": 2,
+    "lat": 35.0,
+    "lng": 33.0,
+    "flag_asset": "assets/images/flags/cy.png"
+  },
+  {
+    "id": "ve",
+    "country": "Venezuela",
+    "country_ar": "فنزويلا",
+    "capital": "Caracas",
+    "capital_ar": "كاراكاس",
+    "continent": "Americas",
+    "flag_emoji": "🇻🇪",
+    "options": [
+      "Majuro",
+      "Brasília",
+      "George Town",
+      "Caracas"
+    ],
+    "options_ar": [
+      "ماجورو",
+      "برازيليا",
+      "جورج تاون",
+      "كاراكاس"
+    ],
+    "fun_fact": "The capital of Venezuela is located at latitude 8.00.",
+    "difficulty": 2,
+    "lat": 8.0,
+    "lng": -66.0,
+    "flag_asset": "assets/images/flags/ve.png"
+  },
+  {
+    "id": "zw",
+    "country": "Zimbabwe",
+    "country_ar": "زيمبابوي",
+    "capital": "Harare",
+    "capital_ar": "هراري",
+    "continent": "Africa",
+    "flag_emoji": "🇿🇼",
+    "options": [
+      "Harare",
+      "Praia",
+      "Oslo",
+      "Banjul"
+    ],
+    "options_ar": [
+      "هراري",
+      "برايا",
+      "أوسلو",
+      "بانجول"
+    ],
+    "fun_fact": "The capital of Zimbabwe is located at latitude -20.00.",
+    "difficulty": 2,
+    "lat": -20.0,
+    "lng": 30.0,
+    "flag_asset": "assets/images/flags/zw.png"
+  },
+  {
+    "id": "au",
+    "country": "Australia",
+    "country_ar": "أستراليا",
+    "capital": "Canberra",
+    "capital_ar": "كانبيرا",
+    "continent": "Oceania",
+    "flag_emoji": "🇦🇺",
+    "options": [
+      "Kingstown",
+      "Canberra",
+      "Bissau",
+      "Tirana"
+    ],
+    "options_ar": [
+      "كينغستاون",
+      "كانبيرا",
+      "بيساو",
+      "تيرانا"
+    ],
+    "fun_fact": "The capital of Australia is located at latitude -27.00.",
+    "difficulty": 2,
+    "lat": -27.0,
+    "lng": 133.0,
+    "flag_asset": "assets/images/flags/au.png"
+  },
+  {
+    "id": "ua",
+    "country": "Ukraine",
+    "country_ar": "أوكرانيا",
+    "capital": "Kyiv",
+    "capital_ar": "كييف",
+    "continent": "Europe",
+    "flag_emoji": "🇺🇦",
+    "options": [
+      "Banjul",
+      "Port-au-Prince",
+      "Praia",
+      "Kyiv"
+    ],
+    "options_ar": [
+      "بانجول",
+      "بورت أو برنس",
+      "برايا",
+      "كييف"
+    ],
+    "fun_fact": "The capital of Ukraine is located at latitude 49.00.",
+    "difficulty": 2,
+    "lat": 49.0,
+    "lng": 32.0,
+    "flag_asset": "assets/images/flags/ua.png"
+  },
+  {
+    "id": "td",
+    "country": "Chad",
+    "country_ar": "تشاد",
+    "capital": "N'Djamena",
+    "capital_ar": "نجامينا",
+    "continent": "Africa",
+    "flag_emoji": "🇹🇩",
+    "options": [
+      "Basse-Terre",
+      "N'Djamena",
+      "Kralendijk",
+      "Tórshavn"
+    ],
+    "options_ar": [
+      "باس تير",
+      "نجامينا",
+      "كرالينديجك",
+      "تورشافن"
+    ],
+    "fun_fact": "The capital of Chad is located at latitude 15.00.",
+    "difficulty": 2,
+    "lat": 15.0,
+    "lng": 19.0,
+    "flag_asset": "assets/images/flags/td.png"
+  },
+  {
+    "id": "nr",
+    "country": "Nauru",
+    "country_ar": "ناورو",
+    "capital": "Yaren",
+    "capital_ar": "يارين",
+    "continent": "Oceania",
+    "flag_emoji": "🇳🇷",
+    "options": [
+      "Stockholm",
+      "Tbilisi",
+      "Yaren",
+      "Nicosia"
+    ],
+    "options_ar": [
+      "ستوكهولم",
+      "تبليسي",
+      "يارين",
+      "نيقوسيا"
+    ],
+    "fun_fact": "The capital of Nauru is located at latitude -0.53.",
+    "difficulty": 2,
+    "lat": -0.53333333,
+    "lng": 166.91666666,
+    "flag_asset": "assets/images/flags/nr.png"
+  },
+  {
+    "id": "ug",
+    "country": "Uganda",
+    "country_ar": "أوغندا",
+    "capital": "Kampala",
+    "capital_ar": "كمبالا",
+    "continent": "Africa",
+    "flag_emoji": "🇺🇬",
+    "options": [
+      "Suva",
+      "Jerusalem",
+      "Mogadishu",
+      "Kampala"
+    ],
+    "options_ar": [
+      "سوفا",
+      "القدس",
+      "مقديشو",
+      "كمبالا"
+    ],
+    "fun_fact": "The capital of Uganda is located at latitude 1.00.",
+    "difficulty": 2,
+    "lat": 1.0,
+    "lng": 32.0,
+    "flag_asset": "assets/images/flags/ug.png"
+  },
+  {
+    "id": "mc",
+    "country": "Monaco",
+    "country_ar": "موناكو",
+    "capital": "Monaco",
+    "capital_ar": "موناكو",
+    "continent": "Europe",
+    "flag_emoji": "🇲🇨",
+    "options": [
+      "Apia",
+      "Monaco",
+      "Canberra",
+      "Moscow"
+    ],
+    "options_ar": [
+      "آبيا",
+      "موناكو",
+      "كانبيرا",
+      "موسكو"
+    ],
+    "fun_fact": "The capital of Monaco is located at latitude 43.73.",
+    "difficulty": 2,
+    "lat": 43.73333333,
+    "lng": 7.4,
+    "flag_asset": "assets/images/flags/mc.png"
+  },
+  {
+    "id": "cc",
+    "country": "Cocos (Keeling) Islands",
+    "country_ar": "جزر كوكوس",
+    "capital": "West Island",
+    "capital_ar": "الجزيرة الغربية",
+    "continent": "Oceania",
+    "flag_emoji": "🇨🇨",
+    "options": [
+      "Beirut",
+      "West Island",
+      "Tegucigalpa",
+      "Conakry"
+    ],
+    "options_ar": [
+      "بيروت",
+      "الجزيرة الغربية",
+      "تيغوسيغالبا",
+      "كوناكري"
+    ],
+    "fun_fact": "The capital of Cocos (Keeling) Islands is located at latitude -12.16.",
+    "difficulty": 2,
+    "lat": -12.1642,
+    "lng": 96.871,
+    "flag_asset": "assets/images/flags/cc.png"
+  },
+  {
+    "id": "gy",
+    "country": "Guyana",
+    "country_ar": "غيانا",
+    "capital": "Georgetown",
+    "capital_ar": "جورج تاون",
+    "continent": "Americas",
+    "flag_emoji": "🇬🇾",
+    "options": [
+      "Conakry",
+      "Caracas",
+      "Georgetown",
+      "Longyearbyen"
+    ],
+    "options_ar": [
+      "كوناكري",
+      "كاراكاس",
+      "جورج تاون",
+      "لونجييربين"
+    ],
+    "fun_fact": "The capital of Guyana is located at latitude 5.00.",
+    "difficulty": 2,
+    "lat": 5.0,
+    "lng": -59.0,
+    "flag_asset": "assets/images/flags/gy.png"
+  },
+  {
+    "id": "fk",
+    "country": "Falkland Islands",
+    "country_ar": "جزر فوكلاند",
+    "capital": "Stanley",
+    "capital_ar": "ستانلي",
+    "continent": "Americas",
+    "flag_emoji": "🇫🇰",
+    "options": [
+      "Sucre",
+      "Stanley",
+      "Havana",
+      "Adamstown"
+    ],
+    "options_ar": [
+      "سوكري",
+      "ستانلي",
+      "هافانا",
+      "ادامستاون"
+    ],
+    "fun_fact": "The capital of Falkland Islands is located at latitude -51.75.",
+    "difficulty": 2,
+    "lat": -51.75,
+    "lng": -59.0,
+    "flag_asset": "assets/images/flags/fk.png"
+  },
+  {
+    "id": "in",
+    "country": "India",
+    "country_ar": "الهند",
+    "capital": "New Delhi",
+    "capital_ar": "نيودلهي",
+    "continent": "Asia",
+    "flag_emoji": "🇮🇳",
+    "options": [
+      "Nicosia",
+      "Vilnius",
+      "Beijing",
+      "New Delhi"
+    ],
+    "options_ar": [
+      "نيقوسيا",
+      "فيلنيوس",
+      "بكين",
+      "نيودلهي"
+    ],
+    "fun_fact": "The capital of India is located at latitude 20.00.",
+    "difficulty": 3,
+    "lat": 20.0,
+    "lng": 77.0,
+    "flag_asset": "assets/images/flags/in.png"
+  },
+  {
+    "id": "sm",
+    "country": "San Marino",
+    "country_ar": "سان مارينو",
+    "capital": "City of San Marino",
+    "capital_ar": "مدينة سان مارينو",
+    "continent": "Europe",
+    "flag_emoji": "🇸🇲",
+    "options": [
+      "Plymouth",
+      "Harare",
+      "Praia",
+      "City of San Marino"
+    ],
+    "options_ar": [
+      "بليموث",
+      "هراري",
+      "برايا",
+      "مدينة سان مارينو"
+    ],
+    "fun_fact": "The capital of San Marino is located at latitude 43.77.",
+    "difficulty": 3,
+    "lat": 43.76666666,
+    "lng": 12.41666666,
+    "flag_asset": "assets/images/flags/sm.png"
+  },
+  {
+    "id": "pg",
+    "country": "Papua New Guinea",
+    "country_ar": "بابوا غينيا الجديدة",
+    "capital": "Port Moresby",
+    "capital_ar": "بورت مورسبي",
+    "continent": "Oceania",
+    "flag_emoji": "🇵🇬",
+    "options": [
+      "Georgetown",
+      "Port Moresby",
+      "Kuwait City",
+      "Pretoria"
+    ],
+    "options_ar": [
+      "جورج تاون",
+      "بورت مورسبي",
+      "مدينة الكويت",
+      "بريتوريا"
+    ],
+    "fun_fact": "The capital of Papua New Guinea is located at latitude -6.00.",
+    "difficulty": 3,
+    "lat": -6.0,
+    "lng": 147.0,
+    "flag_asset": "assets/images/flags/pg.png"
+  },
+  {
+    "id": "vc",
+    "country": "Saint Vincent and the Grenadines",
+    "country_ar": "سانت فينسنت والغرينادين",
+    "capital": "Kingstown",
+    "capital_ar": "كينغستاون",
+    "continent": "Americas",
+    "flag_emoji": "🇻🇨",
+    "options": [
+      "Kyiv",
+      "Jerusalem",
+      "Kingstown",
+      "Havana"
+    ],
+    "options_ar": [
+      "كييف",
+      "القدس",
+      "كينغستاون",
+      "هافانا"
+    ],
+    "fun_fact": "The capital of Saint Vincent and the Grenadines is located at latitude 13.25.",
+    "difficulty": 3,
+    "lat": 13.25,
+    "lng": -61.2,
+    "flag_asset": "assets/images/flags/vc.png"
+  },
+  {
+    "id": "tn",
+    "country": "Tunisia",
+    "country_ar": "تونس",
+    "capital": "Tunis",
+    "capital_ar": "تونس",
+    "continent": "Africa",
+    "flag_emoji": "🇹🇳",
+    "options": [
+      "Kyiv",
+      "Nairobi",
+      "Maseru",
+      "Tunis"
+    ],
+    "options_ar": [
+      "كييف",
+      "نيروبي",
+      "ماسيرو",
+      "تونس"
+    ],
+    "fun_fact": "The capital of Tunisia is located at latitude 34.00.",
+    "difficulty": 3,
+    "lat": 34.0,
+    "lng": 9.0,
+    "flag_asset": "assets/images/flags/tn.png"
+  },
+  {
+    "id": "ki",
+    "country": "Kiribati",
+    "country_ar": "كيريباتي",
+    "capital": "South Tarawa",
+    "capital_ar": "جنوب تاراوا",
+    "continent": "Oceania",
+    "flag_emoji": "🇰🇮",
+    "options": [
+      "Victoria",
+      "Sarajevo",
+      "South Tarawa",
+      "Charlotte Amalie"
+    ],
+    "options_ar": [
+      "فيكتوريا",
+      "سراييفو",
+      "جنوب تاراوا",
+      "شارلوت أمالي"
+    ],
+    "fun_fact": "The capital of Kiribati is located at latitude 1.42.",
+    "difficulty": 3,
+    "lat": 1.41666666,
+    "lng": 173.0,
+    "flag_asset": "assets/images/flags/ki.png"
+  },
+  {
+    "id": "lv",
+    "country": "Latvia",
+    "country_ar": "لاتفيا",
+    "capital": "Riga",
+    "capital_ar": "ريغا",
+    "continent": "Europe",
+    "flag_emoji": "🇱🇻",
+    "options": [
+      "Cayenne",
+      "Riga",
+      "Belmopan",
+      "Buenos Aires"
+    ],
+    "options_ar": [
+      "حريف",
+      "ريغا",
+      "بلموبان",
+      "بوينس آيرس"
+    ],
+    "fun_fact": "The capital of Latvia is located at latitude 57.00.",
+    "difficulty": 3,
+    "lat": 57.0,
+    "lng": 25.0,
+    "flag_asset": "assets/images/flags/lv.png"
+  },
+  {
+    "id": "th",
+    "country": "Thailand",
+    "country_ar": "تايلند",
+    "capital": "Bangkok",
+    "capital_ar": "بانكوك",
+    "continent": "Asia",
+    "flag_emoji": "🇹🇭",
+    "options": [
+      "Bangkok",
+      "Montevideo",
+      "Berlin",
+      "Philipsburg"
+    ],
+    "options_ar": [
+      "بانكوك",
+      "مونتيفيديو",
+      "برلين",
+      "فيليبسبرج"
+    ],
+    "fun_fact": "The capital of Thailand is located at latitude 15.00.",
+    "difficulty": 3,
+    "lat": 15.0,
+    "lng": 100.0,
+    "flag_asset": "assets/images/flags/th.png"
+  },
+  {
+    "id": "kg",
+    "country": "Kyrgyzstan",
+    "country_ar": "قيرغيزستان",
+    "capital": "Bishkek",
+    "capital_ar": "بيشكيك",
+    "continent": "Asia",
+    "flag_emoji": "🇰🇬",
+    "options": [
+      "Addis Ababa",
+      "Canberra",
+      "City of San Marino",
+      "Bishkek"
+    ],
+    "options_ar": [
+      "أديس أبابا",
+      "كانبيرا",
+      "مدينة سان مارينو",
+      "بيشكيك"
+    ],
+    "fun_fact": "The capital of Kyrgyzstan is located at latitude 41.00.",
+    "difficulty": 3,
+    "lat": 41.0,
+    "lng": 75.0,
+    "flag_asset": "assets/images/flags/kg.png"
+  },
+  {
+    "id": "br",
+    "country": "Brazil",
+    "country_ar": "البرازيل",
+    "capital": "Brasília",
+    "capital_ar": "برازيليا",
+    "continent": "Americas",
+    "flag_emoji": "🇧🇷",
+    "options": [
+      "Brasília",
+      "Minsk",
+      "Asunción",
+      "Marigot"
+    ],
+    "options_ar": [
+      "برازيليا",
+      "مينسك",
+      "أسونسيون",
+      "ماريجوت"
+    ],
+    "fun_fact": "The capital of Brazil is located at latitude -10.00.",
+    "difficulty": 3,
+    "lat": -10.0,
+    "lng": -55.0,
+    "flag_asset": "assets/images/flags/br.png"
+  },
+  {
+    "id": "bw",
+    "country": "Botswana",
+    "country_ar": "بوتسوانا",
+    "capital": "Gaborone",
+    "capital_ar": "جابورون",
+    "continent": "Africa",
+    "flag_emoji": "🇧🇼",
+    "options": [
+      "Gaborone",
+      "West Island",
+      "Luanda",
+      "Canberra"
+    ],
+    "options_ar": [
+      "جابورون",
+      "الجزيرة الغربية",
+      "لواندا",
+      "كانبيرا"
+    ],
+    "fun_fact": "The capital of Botswana is located at latitude -22.00.",
+    "difficulty": 3,
+    "lat": -22.0,
+    "lng": 24.0,
+    "flag_asset": "assets/images/flags/bw.png"
+  },
+  {
+    "id": "gf",
+    "country": "French Guiana",
+    "country_ar": "غويانا",
+    "capital": "Cayenne",
+    "capital_ar": "حريف",
+    "continent": "Americas",
+    "flag_emoji": "🇬🇫",
+    "options": [
+      "Papeetē",
+      "São Tomé",
+      "Luanda",
+      "Cayenne"
+    ],
+    "options_ar": [
+      "بابيتي",
+      "ساو تومي",
+      "لواندا",
+      "حريف"
+    ],
+    "fun_fact": "The capital of French Guiana is located at latitude 4.00.",
+    "difficulty": 3,
+    "lat": 4.0,
+    "lng": -53.0,
+    "flag_asset": "assets/images/flags/gf.png"
+  },
+  {
+    "id": "il",
+    "country": "Israel",
+    "country_ar": "إسرائيل",
+    "capital": "Jerusalem",
+    "capital_ar": "القدس",
+    "continent": "Asia",
+    "flag_emoji": "🇮🇱",
+    "options": [
+      "Gaborone",
+      "Kingstown",
+      "Jerusalem",
+      "Quito"
+    ],
+    "options_ar": [
+      "جابورون",
+      "كينغستاون",
+      "القدس",
+      "كيتو"
+    ],
+    "fun_fact": "The capital of Israel is located at latitude 31.47.",
+    "difficulty": 3,
+    "lat": 31.47,
+    "lng": 35.13,
+    "flag_asset": "assets/images/flags/il.png"
+  },
+  {
+    "id": "ca",
+    "country": "Canada",
+    "country_ar": "كندا",
+    "capital": "Ottawa",
+    "capital_ar": "أوتاوا",
+    "continent": "Americas",
+    "flag_emoji": "🇨🇦",
+    "options": [
+      "Doha",
+      "Moroni",
+      "Addis Ababa",
+      "Ottawa"
+    ],
+    "options_ar": [
+      "الدوحة",
+      "موروني",
+      "أديس أبابا",
+      "أوتاوا"
+    ],
+    "fun_fact": "The capital of Canada is located at latitude 60.00.",
+    "difficulty": 3,
+    "lat": 60.0,
+    "lng": -95.0,
+    "flag_asset": "assets/images/flags/ca.png"
+  },
+  {
+    "id": "se",
+    "country": "Sweden",
+    "country_ar": "السويد",
+    "capital": "Stockholm",
+    "capital_ar": "ستوكهولم",
+    "continent": "Europe",
+    "flag_emoji": "🇸🇪",
+    "options": [
+      "Stockholm",
+      "Dakar",
+      "Havana",
+      "São Tomé"
+    ],
+    "options_ar": [
+      "ستوكهولم",
+      "داكار",
+      "هافانا",
+      "ساو تومي"
+    ],
+    "fun_fact": "The capital of Sweden is located at latitude 62.00.",
+    "difficulty": 3,
+    "lat": 62.0,
+    "lng": 15.0,
+    "flag_asset": "assets/images/flags/se.png"
+  },
+  {
+    "id": "pe",
+    "country": "Peru",
+    "country_ar": "بيرو",
+    "capital": "Lima",
+    "capital_ar": "ليما",
+    "continent": "Americas",
+    "flag_emoji": "🇵🇪",
+    "options": [
+      "Ramallah",
+      "Lima",
+      "Ulan Bator",
+      "São Tomé"
+    ],
+    "options_ar": [
+      "رام الله",
+      "ليما",
+      "أولان باتور",
+      "ساو تومي"
+    ],
+    "fun_fact": "The capital of Peru is located at latitude -10.00.",
+    "difficulty": 3,
+    "lat": -10.0,
+    "lng": -76.0,
+    "flag_asset": "assets/images/flags/pe.png"
+  },
+  {
+    "id": "gn",
+    "country": "Guinea",
+    "country_ar": "غينيا",
+    "capital": "Conakry",
+    "capital_ar": "كوناكري",
+    "continent": "Africa",
+    "flag_emoji": "🇬🇳",
+    "options": [
+      "Conakry",
+      "Moscow",
+      "Nairobi",
+      "Kyiv"
+    ],
+    "options_ar": [
+      "كوناكري",
+      "موسكو",
+      "نيروبي",
+      "كييف"
+    ],
+    "fun_fact": "The capital of Guinea is located at latitude 11.00.",
+    "difficulty": 3,
+    "lat": 11.0,
+    "lng": -10.0,
+    "flag_asset": "assets/images/flags/gn.png"
+  },
+  {
+    "id": "sb",
+    "country": "Solomon Islands",
+    "country_ar": "جزر سليمان",
+    "capital": "Honiara",
+    "capital_ar": "هونيارا",
+    "continent": "Oceania",
+    "flag_emoji": "🇸🇧",
+    "options": [
+      "Majuro",
+      "Sri Jayawardenepura Kotte",
+      "Lima",
+      "Honiara"
+    ],
+    "options_ar": [
+      "ماجورو",
+      "سري جاياواردينبورا كوتي",
+      "ليما",
+      "هونيارا"
+    ],
+    "fun_fact": "The capital of Solomon Islands is located at latitude -8.00.",
+    "difficulty": 3,
+    "lat": -8.0,
+    "lng": 159.0,
+    "flag_asset": "assets/images/flags/sb.png"
+  },
+  {
+    "id": "cg",
+    "country": "Republic of the Congo",
+    "country_ar": "جمهورية الكونفو",
+    "capital": "Brazzaville",
+    "capital_ar": "برازافيل",
+    "continent": "Africa",
+    "flag_emoji": "🇨🇬",
+    "options": [
+      "Brazzaville",
+      "Cockburn Town",
+      "Honiara",
+      "Roseau"
+    ],
+    "options_ar": [
+      "برازافيل",
+      "مدينة كوكبيرن",
+      "هونيارا",
+      "روسو"
+    ],
+    "fun_fact": "The capital of Republic of the Congo is located at latitude -1.00.",
+    "difficulty": 3,
+    "lat": -1.0,
+    "lng": 15.0,
+    "flag_asset": "assets/images/flags/cg.png"
+  },
+  {
+    "id": "ad",
+    "country": "Andorra",
+    "country_ar": "أندورا",
+    "capital": "Andorra la Vella",
+    "capital_ar": "أندورا لا فيلا",
+    "continent": "Europe",
+    "flag_emoji": "🇦🇩",
+    "options": [
+      "Libreville",
+      "Canberra",
+      "Andorra la Vella",
+      "Plymouth"
+    ],
+    "options_ar": [
+      "ليبرفيل",
+      "كانبيرا",
+      "أندورا لا فيلا",
+      "بليموث"
+    ],
+    "fun_fact": "The capital of Andorra is located at latitude 42.50.",
+    "difficulty": 3,
+    "lat": 42.5,
+    "lng": 1.5,
+    "flag_asset": "assets/images/flags/ad.png"
+  },
+  {
+    "id": "md",
+    "country": "Moldova",
+    "country_ar": "مولدوڤا",
+    "capital": "Chișinău",
+    "capital_ar": "كيشيناو",
+    "continent": "Europe",
+    "flag_emoji": "🇲🇩",
+    "options": [
+      "Bangkok",
+      "Kingstown",
+      "Chișinău",
+      "Djibouti"
+    ],
+    "options_ar": [
+      "بانكوك",
+      "كينغستاون",
+      "كيشيناو",
+      "جيبوتي"
+    ],
+    "fun_fact": "The capital of Moldova is located at latitude 47.00.",
+    "difficulty": 3,
+    "lat": 47.0,
+    "lng": 29.0,
+    "flag_asset": "assets/images/flags/md.png"
+  },
+  {
+    "id": "sc",
+    "country": "Seychelles",
+    "country_ar": "سيشل",
+    "capital": "Victoria",
+    "capital_ar": "فيكتوريا",
+    "continent": "Africa",
+    "flag_emoji": "🇸🇨",
+    "options": [
+      "London",
+      "Victoria",
+      "Brasília",
+      "Kampala"
+    ],
+    "options_ar": [
+      "لندن",
+      "فيكتوريا",
+      "برازيليا",
+      "كمبالا"
+    ],
+    "fun_fact": "The capital of Seychelles is located at latitude -4.58.",
+    "difficulty": 3,
+    "lat": -4.58333333,
+    "lng": 55.66666666,
+    "flag_asset": "assets/images/flags/sc.png"
+  },
+  {
+    "id": "xk",
+    "country": "Kosovo",
+    "country_ar": "كوسوفو",
+    "capital": "Pristina",
+    "capital_ar": "بريشتينا",
+    "continent": "Europe",
+    "flag_emoji": "🇽🇰",
+    "options": [
+      "Pristina",
+      "Plymouth",
+      "Addis Ababa",
+      "Saint Helier"
+    ],
+    "options_ar": [
+      "بريشتينا",
+      "بليموث",
+      "أديس أبابا",
+      "سانت هيلير"
+    ],
+    "fun_fact": "The capital of Kosovo is located at latitude 42.67.",
+    "difficulty": 3,
+    "lat": 42.666667,
+    "lng": 21.166667,
+    "flag_asset": "assets/images/flags/xk.png"
+  },
+  {
+    "id": "ck",
+    "country": "Cook Islands",
+    "country_ar": "جزر كوك",
+    "capital": "Avarua",
+    "capital_ar": "أفاروا",
+    "continent": "Oceania",
+    "flag_emoji": "🇨🇰",
+    "options": [
+      "Canberra",
+      "Avarua",
+      "Addis Ababa",
+      "Tunis"
+    ],
+    "options_ar": [
+      "كانبيرا",
+      "أفاروا",
+      "أديس أبابا",
+      "تونس"
+    ],
+    "fun_fact": "The capital of Cook Islands is located at latitude -21.23.",
+    "difficulty": 3,
+    "lat": -21.23333333,
+    "lng": -159.76666666,
+    "flag_asset": "assets/images/flags/ck.png"
+  },
+  {
+    "id": "ec",
+    "country": "Ecuador",
+    "country_ar": "الإكوادور",
+    "capital": "Quito",
+    "capital_ar": "كيتو",
+    "continent": "Americas",
+    "flag_emoji": "🇪🇨",
+    "options": [
+      "New Delhi",
+      "Quito",
+      "Berlin",
+      "Saipan"
+    ],
+    "options_ar": [
+      "نيودلهي",
+      "كيتو",
+      "برلين",
+      "سايبان"
+    ],
+    "fun_fact": "The capital of Ecuador is located at latitude -2.00.",
+    "difficulty": 3,
+    "lat": -2.0,
+    "lng": -77.5,
+    "flag_asset": "assets/images/flags/ec.png"
+  },
+  {
+    "id": "ch",
+    "country": "Switzerland",
+    "country_ar": "سويسرا",
+    "capital": "Bern",
+    "capital_ar": "برن",
+    "continent": "Europe",
+    "flag_emoji": "🇨🇭",
+    "options": [
+      "Saipan",
+      "Panama City",
+      "Mbabane",
+      "Bern"
+    ],
+    "options_ar": [
+      "سايبان",
+      "مدينة بنما",
+      "مبابان",
+      "برن"
+    ],
+    "fun_fact": "The capital of Switzerland is located at latitude 47.00.",
+    "difficulty": 3,
+    "lat": 47.0,
+    "lng": 8.0,
+    "flag_asset": "assets/images/flags/ch.png"
+  },
+  {
+    "id": "cw",
+    "country": "Curaçao",
+    "country_ar": "كوراساو",
+    "capital": "Willemstad",
+    "capital_ar": "ويلمستاد",
+    "continent": "Americas",
+    "flag_emoji": "🇨🇼",
+    "options": [
+      "Montevideo",
+      "Bissau",
+      "Beirut",
+      "Willemstad"
+    ],
+    "options_ar": [
+      "مونتيفيديو",
+      "بيساو",
+      "بيروت",
+      "ويلمستاد"
+    ],
+    "fun_fact": "The capital of Curaçao is located at latitude 12.12.",
+    "difficulty": 3,
+    "lat": 12.116667,
+    "lng": -68.933333,
+    "flag_asset": "assets/images/flags/cw.png"
+  },
+  {
+    "id": "cl",
+    "country": "Chile",
+    "country_ar": "تشيلي",
+    "capital": "Santiago",
+    "capital_ar": "سانتياغو",
+    "continent": "Americas",
+    "flag_emoji": "🇨🇱",
+    "options": [
+      "Managua",
+      "Nouakchott",
+      "Saint-Pierre",
+      "Santiago"
+    ],
+    "options_ar": [
+      "ماناغوا",
+      "نواكشوط",
+      "سان بيير",
+      "سانتياغو"
+    ],
+    "fun_fact": "The capital of Chile is located at latitude -30.00.",
+    "difficulty": 3,
+    "lat": -30.0,
+    "lng": -71.0,
+    "flag_asset": "assets/images/flags/cl.png"
+  },
+  {
+    "id": "bd",
+    "country": "Bangladesh",
+    "country_ar": "بنغلاديش",
+    "capital": "Dhaka",
+    "capital_ar": "دكا",
+    "continent": "Asia",
+    "flag_emoji": "🇧🇩",
+    "options": [
+      "Dhaka",
+      "Libreville",
+      "Kyiv",
+      "Moroni"
+    ],
+    "options_ar": [
+      "دكا",
+      "ليبرفيل",
+      "كييف",
+      "موروني"
+    ],
+    "fun_fact": "The capital of Bangladesh is located at latitude 24.00.",
+    "difficulty": 3,
+    "lat": 24.0,
+    "lng": 90.0,
+    "flag_asset": "assets/images/flags/bd.png"
+  },
+  {
+    "id": "mv",
+    "country": "Maldives",
+    "country_ar": "المالديف",
+    "capital": "Malé",
+    "capital_ar": "ذكر",
+    "continent": "Asia",
+    "flag_emoji": "🇲🇻",
+    "options": [
+      "Maseru",
+      "Malé",
+      "Sri Jayawardenepura Kotte",
+      "Lilongwe"
+    ],
+    "options_ar": [
+      "ماسيرو",
+      "ذكر",
+      "سري جاياواردينبورا كوتي",
+      "ليلونجوي"
+    ],
+    "fun_fact": "The capital of Maldives is located at latitude 3.25.",
+    "difficulty": 3,
+    "lat": 3.25,
+    "lng": 73.0,
+    "flag_asset": "assets/images/flags/mv.png"
+  },
+  {
+    "id": "mq",
+    "country": "Martinique",
+    "country_ar": "مارتينيك",
+    "capital": "Fort-de-France",
+    "capital_ar": "فورت دو فرانس",
+    "continent": "Americas",
+    "flag_emoji": "🇲🇶",
+    "options": [
+      "Kingstown",
+      "Djibouti",
+      "Fort-de-France",
+      "Sarajevo"
+    ],
+    "options_ar": [
+      "كينغستاون",
+      "جيبوتي",
+      "فورت دو فرانس",
+      "سراييفو"
+    ],
+    "fun_fact": "The capital of Martinique is located at latitude 14.67.",
+    "difficulty": 3,
+    "lat": 14.666667,
+    "lng": -61.0,
+    "flag_asset": "assets/images/flags/mq.png"
+  },
+  {
+    "id": "sg",
+    "country": "Singapore",
+    "country_ar": "سنغافورة",
+    "capital": "Singapore",
+    "capital_ar": "سنغافورة",
+    "continent": "Asia",
+    "flag_emoji": "🇸🇬",
+    "options": [
+      "Philipsburg",
+      "Singapore",
+      "Kyiv",
+      "Lima"
+    ],
+    "options_ar": [
+      "فيليبسبرج",
+      "سنغافورة",
+      "كييف",
+      "ليما"
+    ],
+    "fun_fact": "The capital of Singapore is located at latitude 1.37.",
+    "difficulty": 3,
+    "lat": 1.36666666,
+    "lng": 103.8,
+    "flag_asset": "assets/images/flags/sg.png"
+  },
+  {
+    "id": "ms",
+    "country": "Montserrat",
+    "country_ar": "مونتسرات",
+    "capital": "Plymouth",
+    "capital_ar": "بليموث",
+    "continent": "Americas",
+    "flag_emoji": "🇲🇸",
+    "options": [
+      "Managua",
+      "Beirut",
+      "Kampala",
+      "Plymouth"
+    ],
+    "options_ar": [
+      "ماناغوا",
+      "بيروت",
+      "كمبالا",
+      "بليموث"
+    ],
+    "fun_fact": "The capital of Montserrat is located at latitude 16.75.",
+    "difficulty": 3,
+    "lat": 16.75,
+    "lng": -62.2,
+    "flag_asset": "assets/images/flags/ms.png"
+  },
+  {
+    "id": "pl",
+    "country": "Poland",
+    "country_ar": "بولندا",
+    "capital": "Warsaw",
+    "capital_ar": "وارسو",
+    "continent": "Europe",
+    "flag_emoji": "🇵🇱",
+    "options": [
+      "Kyiv",
+      "Brussels",
+      "St. Peter Port",
+      "Warsaw"
+    ],
+    "options_ar": [
+      "كييف",
+      "بروكسل",
+      "سانت بيتر بورت",
+      "وارسو"
+    ],
+    "fun_fact": "The capital of Poland is located at latitude 52.00.",
+    "difficulty": 3,
+    "lat": 52.0,
+    "lng": 20.0,
+    "flag_asset": "assets/images/flags/pl.png"
+  },
+  {
+    "id": "so",
+    "country": "Somalia",
+    "country_ar": "الصومال",
+    "capital": "Mogadishu",
+    "capital_ar": "مقديشو",
+    "continent": "Africa",
+    "flag_emoji": "🇸🇴",
+    "options": [
+      "Mogadishu",
+      "Havana",
+      "Moscow",
+      "Reykjavik"
+    ],
+    "options_ar": [
+      "مقديشو",
+      "هافانا",
+      "موسكو",
+      "ريكيافيك"
+    ],
+    "fun_fact": "The capital of Somalia is located at latitude 10.00.",
+    "difficulty": 3,
+    "lat": 10.0,
+    "lng": 49.0,
+    "flag_asset": "assets/images/flags/so.png"
+  },
+  {
+    "id": "sz",
+    "country": "Eswatini",
+    "country_ar": "إسواتيني",
+    "capital": "Mbabane",
+    "capital_ar": "مبابان",
+    "continent": "Africa",
+    "flag_emoji": "🇸🇿",
+    "options": [
+      "Kigali",
+      "New Delhi",
+      "Mbabane",
+      "Port-au-Prince"
+    ],
+    "options_ar": [
+      "كيغالي",
+      "نيودلهي",
+      "مبابان",
+      "بورت أو برنس"
+    ],
+    "fun_fact": "The capital of Eswatini is located at latitude -26.50.",
+    "difficulty": 3,
+    "lat": -26.5,
+    "lng": 31.5,
+    "flag_asset": "assets/images/flags/sz.png"
+  },
+  {
+    "id": "es",
+    "country": "Spain",
+    "country_ar": "إسبانيا",
+    "capital": "Madrid",
+    "capital_ar": "مدريد",
+    "continent": "Europe",
+    "flag_emoji": "🇪🇸",
+    "options": [
+      "Banjul",
+      "Madrid",
+      "Paris",
+      "West Island"
+    ],
+    "options_ar": [
+      "بانجول",
+      "مدريد",
+      "باريس",
+      "الجزيرة الغربية"
+    ],
+    "fun_fact": "The capital of Spain is located at latitude 40.00.",
+    "difficulty": 3,
+    "lat": 40.0,
+    "lng": -4.0,
+    "flag_asset": "assets/images/flags/es.png"
+  },
+  {
+    "id": "uy",
+    "country": "Uruguay",
+    "country_ar": "الأوروغواي",
+    "capital": "Montevideo",
+    "capital_ar": "مونتيفيديو",
+    "continent": "Americas",
+    "flag_emoji": "🇺🇾",
+    "options": [
+      "Athens",
+      "Nicosia",
+      "Charlotte Amalie",
+      "Montevideo"
+    ],
+    "options_ar": [
+      "أثينا",
+      "نيقوسيا",
+      "شارلوت أمالي",
+      "مونتيفيديو"
+    ],
+    "fun_fact": "The capital of Uruguay is located at latitude -33.00.",
+    "difficulty": 3,
+    "lat": -33.0,
+    "lng": -56.0,
+    "flag_asset": "assets/images/flags/uy.png"
+  },
+  {
+    "id": "lk",
+    "country": "Sri Lanka",
+    "country_ar": "سريلانكا",
+    "capital": "Sri Jayawardenepura Kotte",
+    "capital_ar": "سري جاياواردينبورا كوتي",
+    "continent": "Asia",
+    "flag_emoji": "🇱🇰",
+    "options": [
+      "Mexico City",
+      "Sri Jayawardenepura Kotte",
+      "Havana",
+      "Suva"
+    ],
+    "options_ar": [
+      "مدينة مكسيكو",
+      "سري جاياواردينبورا كوتي",
+      "هافانا",
+      "سوفا"
+    ],
+    "fun_fact": "The capital of Sri Lanka is located at latitude 7.00.",
+    "difficulty": 3,
+    "lat": 7.0,
+    "lng": 81.0,
+    "flag_asset": "assets/images/flags/lk.png"
+  },
+  {
+    "id": "af",
+    "country": "Afghanistan",
+    "country_ar": "أفغانستان",
+    "capital": "Kabul",
+    "capital_ar": "كابول",
+    "continent": "Asia",
+    "flag_emoji": "🇦🇫",
+    "options": [
+      "Kabul",
+      "St. Peter Port",
+      "Mbabane",
+      "Majuro"
+    ],
+    "options_ar": [
+      "كابول",
+      "سانت بيتر بورت",
+      "مبابان",
+      "ماجورو"
+    ],
+    "fun_fact": "The capital of Afghanistan is located at latitude 33.00.",
+    "difficulty": 3,
+    "lat": 33.0,
+    "lng": 65.0,
+    "flag_asset": "assets/images/flags/af.png"
+  },
+  {
+    "id": "tw",
+    "country": "Taiwan",
+    "country_ar": "تايوان",
+    "capital": "Taipei",
+    "capital_ar": "تايبيه",
+    "continent": "Asia",
+    "flag_emoji": "🇹🇼",
+    "options": [
+      "Taipei",
+      "Majuro",
+      "Basse-Terre",
+      "Muscat"
+    ],
+    "options_ar": [
+      "تايبيه",
+      "ماجورو",
+      "باس تير",
+      "المسكات عنب طيب الشذا"
+    ],
+    "fun_fact": "The capital of Taiwan is located at latitude 23.50.",
+    "difficulty": 3,
+    "lat": 23.5,
+    "lng": 121.0,
+    "flag_asset": "assets/images/flags/tw.png"
+  },
+  {
+    "id": "ge",
+    "country": "Georgia",
+    "country_ar": "جورجيا",
+    "capital": "Tbilisi",
+    "capital_ar": "تبليسي",
+    "continent": "Asia",
+    "flag_emoji": "🇬🇪",
+    "options": [
+      "Tunis",
+      "Majuro",
+      "Tbilisi",
+      "West Island"
+    ],
+    "options_ar": [
+      "تونس",
+      "ماجورو",
+      "تبليسي",
+      "الجزيرة الغربية"
+    ],
+    "fun_fact": "The capital of Georgia is located at latitude 42.00.",
+    "difficulty": 3,
+    "lat": 42.0,
+    "lng": 43.5,
+    "flag_asset": "assets/images/flags/ge.png"
+  },
+  {
+    "id": "gp",
+    "country": "Guadeloupe",
+    "country_ar": "غوادلوب",
+    "capital": "Basse-Terre",
+    "capital_ar": "باس تير",
+    "continent": "Americas",
+    "flag_emoji": "🇬🇵",
+    "options": [
+      "Basse-Terre",
+      "Niamey",
+      "Sofia",
+      "Hanoi"
+    ],
+    "options_ar": [
+      "باس تير",
+      "نيامي",
+      "صوفيا",
+      "هانوي"
+    ],
+    "fun_fact": "The capital of Guadeloupe is located at latitude 16.25.",
+    "difficulty": 3,
+    "lat": 16.25,
+    "lng": -61.583333,
+    "flag_asset": "assets/images/flags/gp.png"
+  },
+  {
+    "id": "mr",
+    "country": "Mauritania",
+    "country_ar": "موريتانيا",
+    "capital": "Nouakchott",
+    "capital_ar": "نواكشوط",
+    "continent": "Africa",
+    "flag_emoji": "🇲🇷",
+    "options": [
+      "Conakry",
+      "Reykjavik",
+      "Caracas",
+      "Nouakchott"
+    ],
+    "options_ar": [
+      "كوناكري",
+      "ريكيافيك",
+      "كاراكاس",
+      "نواكشوط"
+    ],
+    "fun_fact": "The capital of Mauritania is located at latitude 20.00.",
+    "difficulty": 3,
+    "lat": 20.0,
+    "lng": -12.0,
+    "flag_asset": "assets/images/flags/mr.png"
+  },
+  {
+    "id": "re",
+    "country": "Réunion",
+    "country_ar": "لا ريونيون",
+    "capital": "Saint-Denis",
+    "capital_ar": "سان دوني",
+    "continent": "Africa",
+    "flag_emoji": "🇷🇪",
+    "options": [
+      "Saint-Denis",
+      "Cockburn Town",
+      "Addis Ababa",
+      "Moscow"
+    ],
+    "options_ar": [
+      "سان دوني",
+      "مدينة كوكبيرن",
+      "أديس أبابا",
+      "موسكو"
+    ],
+    "fun_fact": "The capital of Réunion is located at latitude -21.15.",
+    "difficulty": 3,
+    "lat": -21.15,
+    "lng": 55.5,
+    "flag_asset": "assets/images/flags/re.png"
+  },
+  {
+    "id": "me",
+    "country": "Montenegro",
+    "country_ar": "الجبل الاسود",
+    "capital": "Podgorica",
+    "capital_ar": "بودغوريتشا",
+    "continent": "Europe",
+    "flag_emoji": "🇲🇪",
+    "options": [
+      "Podgorica",
+      "George Town",
+      "Tehran",
+      "Apia"
+    ],
+    "options_ar": [
+      "بودغوريتشا",
+      "جورج تاون",
+      "طهران",
+      "آبيا"
+    ],
+    "fun_fact": "The capital of Montenegro is located at latitude 42.50.",
+    "difficulty": 3,
+    "lat": 42.5,
+    "lng": 19.3,
+    "flag_asset": "assets/images/flags/me.png"
+  },
+  {
+    "id": "mp",
+    "country": "Northern Mariana Islands",
+    "country_ar": "جزر ماريانا الشمالية",
+    "capital": "Saipan",
+    "capital_ar": "سايبان",
+    "continent": "Oceania",
+    "flag_emoji": "🇲🇵",
+    "options": [
+      "Dhaka",
+      "Stanley",
+      "Beirut",
+      "Saipan"
+    ],
+    "options_ar": [
+      "دكا",
+      "ستانلي",
+      "بيروت",
+      "سايبان"
+    ],
+    "fun_fact": "The capital of Northern Mariana Islands is located at latitude 15.20.",
+    "difficulty": 3,
+    "lat": 15.2,
+    "lng": 145.75,
+    "flag_asset": "assets/images/flags/mp.png"
+  },
+  {
+    "id": "bo",
+    "country": "Bolivia",
+    "country_ar": "بوليفيا",
+    "capital": "Sucre",
+    "capital_ar": "سوكري",
+    "continent": "Americas",
+    "flag_emoji": "🇧🇴",
+    "options": [
+      "Sucre",
+      "Addis Ababa",
+      "Apia",
+      "Sarajevo"
+    ],
+    "options_ar": [
+      "سوكري",
+      "أديس أبابا",
+      "آبيا",
+      "سراييفو"
+    ],
+    "fun_fact": "The capital of Bolivia is located at latitude -17.00.",
+    "difficulty": 3,
+    "lat": -17.0,
+    "lng": -65.0,
+    "flag_asset": "assets/images/flags/bo.png"
+  },
+  {
+    "id": "be",
+    "country": "Belgium",
+    "country_ar": "بلجيكا",
+    "capital": "Brussels",
+    "capital_ar": "بروكسل",
+    "continent": "Europe",
+    "flag_emoji": "🇧🇪",
+    "options": [
+      "Victoria",
+      "Podgorica",
+      "Kyiv",
+      "Brussels"
+    ],
+    "options_ar": [
+      "فيكتوريا",
+      "بودغوريتشا",
+      "كييف",
+      "بروكسل"
+    ],
+    "fun_fact": "The capital of Belgium is located at latitude 50.83.",
+    "difficulty": 3,
+    "lat": 50.83333333,
+    "lng": 4.0,
+    "flag_asset": "assets/images/flags/be.png"
+  },
+  {
+    "id": "ba",
+    "country": "Bosnia and Herzegovina",
+    "country_ar": "البوسنة والهرسك",
+    "capital": "Sarajevo",
+    "capital_ar": "سراييفو",
+    "continent": "Europe",
+    "flag_emoji": "🇧🇦",
+    "options": [
+      "Warsaw",
+      "Sarajevo",
+      "Georgetown",
+      "Dhaka"
+    ],
+    "options_ar": [
+      "وارسو",
+      "سراييفو",
+      "جورج تاون",
+      "دكا"
+    ],
+    "fun_fact": "The capital of Bosnia and Herzegovina is located at latitude 44.00.",
+    "difficulty": 3,
+    "lat": 44.0,
+    "lng": 18.0,
+    "flag_asset": "assets/images/flags/ba.png"
+  }
+]

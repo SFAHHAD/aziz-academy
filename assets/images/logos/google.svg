@@ -1,0 +1,15 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="white"/>
+  <!-- Blue quarter (top-left) -->
+  <path d="M100,20 A80,80 0 0,0 20,100 L60,100 A40,40 0 0,1 100,60Z" fill="#4285F4"/>
+  <!-- Red quarter (top-right) -->
+  <path d="M100,20 A80,80 0 0,1 180,100 L140,100 A40,40 0 0,0 100,60Z" fill="#EA4335"/>
+  <!-- Yellow quarter (bottom-right) -->
+  <path d="M180,100 A80,80 0 0,1 100,180 L100,140 A40,40 0 0,0 140,100Z" fill="#FBBC05"/>
+  <!-- Green quarter (bottom-left) -->
+  <path d="M20,100 A80,80 0 0,0 100,180 L100,140 A40,40 0 0,1 60,100Z" fill="#34A853"/>
+  <!-- White center hole -->
+  <circle cx="100" cy="100" r="26" fill="white"/>
+  <!-- Blue horizontal G bar -->
+  <rect x="100" y="88" width="82" height="24" rx="4" fill="#4285F4"/>
+</svg>

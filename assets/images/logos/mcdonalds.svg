@@ -1,0 +1,8 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red background -->
+  <rect width="200" height="200" fill="#DA291C"/>
+  <!-- Left golden arch -->
+  <path d="M36,175 C36,138 36,78 54,60 C66,46 80,52 88,76 C91,87 90,125 90,175Z" fill="#FFC72C"/>
+  <!-- Right golden arch -->
+  <path d="M164,175 C164,138 164,78 146,60 C134,46 120,52 112,76 C109,87 110,125 110,175Z" fill="#FFC72C"/>
+</svg>

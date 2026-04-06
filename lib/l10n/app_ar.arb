@@ -1,0 +1,220 @@
+{
+  "@@locale": "ar",
+  "@@last_modified": "2026-04-01",
+
+  "appTitle": "أكاديمية عزيز",
+  "@appTitle": { "description": "اسم التطبيق." },
+
+  "score": "النتيجة",
+  "@score": { "description": "تسمية نتيجة اللاعب." },
+
+  "hearts": "الأرواح",
+  "@hearts": { "description": "تسمية الأرواح المتبقية." },
+
+  "playAgain": "العب مجدداً",
+  "@playAgain": { "description": "زر لإعادة الاختبار." },
+
+  "nextQuestion": "السؤال التالي",
+  "@nextQuestion": { "description": "زر للانتقال إلى السؤال التالي." },
+
+  "congratulations": "مبروك!",
+  "@congratulations": { "description": "رسالة تهنئة عامة." },
+
+  "masterOfCapitals": "بطل العواصم!",
+  "@masterOfCapitals": { "description": "عنوان شاشة الانتصار." },
+
+  "niceTry": "محاولة جيدة!",
+  "@niceTry": { "description": "عنوان شاشة انتهاء الأرواح." },
+
+  "backToMap": "العودة إلى الخريطة",
+  "@backToMap": { "description": "زر للعودة إلى خريطة الوحدات." },
+
+  "loadingQuiz": "جاري التحميل…",
+  "@loadingQuiz": { "description": "نص مؤشر التحميل." },
+
+  "quizComplete": "اكتمل الاختبار!",
+  "@quizComplete": { "description": "العنوان عند إكمال جميع الأسئلة." },
+
+  "correctAnswers": "إجابة صحيحة",
+  "@correctAnswers": { "description": "تسمية تحت النتيجة في شاشة النتائج." },
+
+  "encouragement": "لا تستسلم — كل خبير كان مبتدئاً يوماً ما! 💪",
+  "@encouragement": { "description": "رسالة تشجيعية على شاشة انتهاء الأرواح." },
+
+  "refillHearts": "جاري تعبئة الأرواح…",
+  "@refillHearts": { "description": "تسمية أثناء تشغيل رسوم تعبئة القلب." },
+
+  "heartsRefilled": "❤️ تمت تعبئة الأرواح!",
+  "@heartsRefilled": { "description": "تسمية عند اكتمال رسوم تعبئة القلب." },
+
+  "tryAgainNow": "حاول الآن ←",
+  "@tryAgainNow": { "description": "تسمية زر المحاولة قبل اكتمال التعبئة." },
+
+  "readyLetsGo": "جاهز! هيا بنا 🚀",
+  "@readyLetsGo": { "description": "تسمية زر المحاولة بعد اكتمال التعبئة." },
+
+  "questionProgress": "سؤال {current} من {total}",
+  "@questionProgress": {
+    "description": "تسمية توضيحية للتقدم في الاختبار.",
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "startQuiz": "ابدأ الاختبار",
+  "@startQuiz": { "description": "زر لبدء اختبار قارة." },
+
+  "tapContinentHint": "اضغط على قارة لاستكشافها!",
+  "@tapContinentHint": { "description": "تلميح على شاشة الخريطة." },
+
+  "questionsAvailable": "{count} دول للاستكشاف",
+  "@questionsAvailable": {
+    "description": "عدد أسئلة الاختبار لقارة.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "mapExplorer": "مستكشف الخريطة",
+  "@mapExplorer": { "description": "عنوان شاشة الخريطة." },
+
+  "continentAfrica": "أفريقيا",
+  "@continentAfrica": { "description": "اسم القارة." },
+  "continentAsia": "آسيا",
+  "@continentAsia": { "description": "اسم القارة." },
+  "continentEurope": "أوروبا",
+  "@continentEurope": { "description": "اسم القارة." },
+  "continentNorthAmerica": "أمريكا الشمالية",
+  "@continentNorthAmerica": { "description": "اسم القارة." },
+  "continentSouthAmerica": "أمريكا الجنوبية",
+  "@continentSouthAmerica": { "description": "اسم القارة." },
+  "continentOceania": "أوقيانوسيا",
+  "@continentOceania": { "description": "اسم القارة." },
+
+  "logoQuizTitle": "اختبار الشعارات",
+  "@logoQuizTitle": { "description": "عنوان شاشة اختبار الشعارات." },
+
+  "revealingLogo": "جاري كشف الشعار…",
+  "@revealingLogo": { "description": "تسمية أثناء إزالة ضبابية الشعار." },
+
+  "knowledgeCard": "هل تعلم؟",
+  "@knowledgeCard": { "description": "عنوان بطاقة المعلومة بعد الإجابة." },
+
+  "brand_youtube_desc": "أكبر منصة لمشاركة الفيديو في العالم",
+  "@brand_youtube_desc": { "description": "وصف شعار YouTube." },
+  "brand_youtube_fact": "تأسس YouTube عام 2005 من قبل ثلاثة موظفين سابقين في PayPal. أول فيديو رُفع كان بعنوان 'أنا في حديقة الحيوان'!",
+  "@brand_youtube_fact": { "description": "حقيقة ممتعة عن YouTube." },
+
+  "brand_apple_desc": "الشركة صانعة الآيفون والماك",
+  "@brand_apple_desc": { "description": "وصف شعار Apple." },
+  "brand_apple_fact": "شعار Apple به عضة حتى لا يُخطأ به أحد على أنه تفاحة صغيرة! تأسست الشركة على يد ستيف جوبز عام 1976.",
+  "@brand_apple_fact": { "description": "حقيقة ممتعة عن Apple." },
+
+  "brand_lego_desc": "أشهر شركة ألعاب مكعبات في العالم",
+  "@brand_lego_desc": { "description": "وصف شعار LEGO." },
+  "brand_lego_fact": "مكعبات LEGO دقيقة جدّاً. لو جمعت كل قطعة LEGO صُنعت على الإطلاق لوصلت إلى القمر وعدت عشر مرات!",
+  "@brand_lego_fact": { "description": "حقيقة ممتعة عن LEGO." },
+
+  "brand_nasa_desc": "وكالة الفضاء الأمريكية لاستكشاف الكون",
+  "@brand_nasa_desc": { "description": "وصف شعار NASA." },
+  "brand_nasa_fact": "NASA تعني 'الإدارة الوطنية للطيران والفضاء'. تأسست عام 1958 وبعد 11 سنة فقط أوصلت البشر إلى سطح القمر!",
+  "@brand_nasa_fact": { "description": "حقيقة ممتعة عن NASA." },
+
+  "brand_nike_desc": "أكبر علامة ملاب挺 رياضية في العالم",
+  "@brand_nike_desc": { "description": "وصف شعار Nike." },
+  "brand_nike_fact": "صُمّم شعار Nike الشهير من طالبة تصميم بمبلغ 35 دولار فقط عام 1971! اسم Nike من آلهة النصر اليونانية.",
+  "@brand_nike_fact": { "description": "حقيقة ممتعة عن Nike." },
+
+  "brand_mcdonalds_desc": "أكثر مطعم وجبات سريعة زيارةً في العالم",
+  "@brand_mcdonalds_desc": { "description": "وصف شعار McDonald's." },
+  "brand_mcdonalds_fact": "يخدم McDonald's نحو 69 مليون شخص يوميّاً! القوسين الذهبيان أكثر انتشاراً من أي رمز آخر في العالم.",
+  "@brand_mcdonalds_fact": { "description": "حقيقة ممتعة عن McDonald's." },
+
+  "brand_google_desc": "محرك البحث الذي يعرف تقريباً كل شيء",
+  "@brand_google_desc": { "description": "وصف شعار Google." },
+  "brand_google_fact": "كان اسم Google أصلاً 'BackRub'! مصدر الاسم من 'googol' وهو رقم 1 يتبعه 100 صفر — ليعبر عن ضخامة المعلومات التي يبحث فيها.",
+  "@brand_google_fact": { "description": "حقيقة ممتعة عن Google." },
+
+  "brand_amazon_desc": "أكبر متجر تسوّق إلكتروني في العالم",
+  "@brand_amazon_desc": { "description": "وصف شعار Amazon." },
+  "brand_amazon_fact": "سهم Amazon من A إلى Z يدل على أن المتجر يبيع كل شيء! بدأ Amazon كمتجر كتب أونلاين عام 1994.",
+  "@brand_amazon_fact": { "description": "حقيقة ممتعة عن Amazon." },
+
+  "trophyRoom": "غرفة الكؤوس",
+  "@trophyRoom": { "description": "عنوان شاشة غرفة الكؤوس." },
+
+  "badges": "الشارات",
+  "@badges": { "description": "عنوان قسم الشارات." },
+
+  "badgesUnlocked": "مفتوحة",
+  "@badgesUnlocked": { "description": "لاحقة لعدد الشارات." },
+
+  "totalProgress": "مجموع التقدم",
+  "@totalProgress": { "description": "تسمية شريط التقدم." },
+
+  "progressComplete": "مكتمل",
+  "@progressComplete": { "description": "لاحقة للنسبة المئوية." },
+
+  "quiz_capitals": "عواصم",
+  "@quiz_capitals": { "description": "تسمية وحدة العواصم." },
+
+  "badge_capitals_explorer_name": "مستكشف العواصم",
+  "@badge_capitals_explorer_name": { "description": "اسم الشارة." },
+  "badge_capitals_explorer_desc": "أكملت أول اختبار عواصم",
+  "@badge_capitals_explorer_desc": { "description": "وصف الشارة." },
+
+  "badge_capitals_expert_name": "خبير العواصم",
+  "@badge_capitals_expert_name": { "description": "اسم الشارة." },
+  "badge_capitals_expert_desc": "حصلت على 3 نجوم دون خسارة حياة",
+  "@badge_capitals_expert_desc": { "description": "وصف الشارة." },
+
+  "badge_map_master_name": "سيد الخريطة",
+  "@badge_map_master_name": { "description": "اسم الشارة." },
+  "badge_map_master_desc": "ضغطت على جميع القارات الست في الخريطة",
+  "@badge_map_master_desc": { "description": "وصف الشارة." },
+
+  "badge_logo_detective_name": "محقق الشعارات",
+  "@badge_logo_detective_name": { "description": "اسم الشارة." },
+  "badge_logo_detective_desc": "أكملت أول اختبار شعارات",
+  "@badge_logo_detective_desc": { "description": "وصف الشارة." },
+
+  "badge_logo_hunter_name": "صائد الشعارات",
+  "@badge_logo_hunter_name": { "description": "اسم الشارة." },
+  "badge_logo_hunter_desc": "حصلت على 3 نجوم في اختبار الشعارات",
+  "@badge_logo_hunter_desc": { "description": "وصف الشارة." },
+
+  "badge_trivia_titan_name": "بطل المعلومات",
+  "@badge_trivia_titan_name": { "description": "اسم الشارة." },
+  "badge_trivia_titan_desc": "أجبت على 25 سؤال بشكل صحيح",
+  "@badge_trivia_titan_desc": { "description": "وصف الشارة." },
+
+  "badge_perfect_scholar_name": "الطالب المتفوق",
+  "@badge_perfect_scholar_name": { "description": "اسم الشارة." },
+  "badge_perfect_scholar_desc": "ثلاثة نجوم في العواصم والشعارات معاً",
+  "@badge_perfect_scholar_desc": { "description": "وصف الشارة." },
+
+  "badge_academy_star_name": "نجمة الأكاديمية",
+  "@badge_academy_star_name": { "description": "اسم الشارة." },
+  "badge_academy_star_desc": "فتحت كل شارة في الأكاديمية",
+  "@badge_academy_star_desc": { "description": "وصف الشارة." },
+
+  "brand_twitter_desc": "منصة التواصل الاجتماعي المعروفة بـ X",
+  "@brand_twitter_desc": { "description": "وصف شعار تويتر/X." },
+  "brand_twitter_fact": "تأسس تويتر عام 2006، واسمه الأصلي كان 'twttr' بدون حروف متحركة! في 2023 أعاد إيلون ماسك تسميته إلى X. علامته التجارية كانت طيراً صغيراً اسمه Larry.",
+  "@brand_twitter_fact": { "description": "حقيقة ممتعة عن تويتر/X." },
+
+  "brand_facebook_desc": "أكثر شبكة اجتماعية شعبية في العالم",
+  "@brand_facebook_desc": { "description": "وصف شعار فيسبوك." },
+  "brand_facebook_fact": "أسّس مارك زوكربيرغ فيسبوك من غرفة في مسكنه الجامعي في هارفارد عام 2004. يمتلك الآن أكثر من 3 مليار مستخدم — أي ما يقارب نصف سكان الأرض!",
+  "@brand_facebook_fact": { "description": "حقيقة ممتعة عن فيسبوك." },
+
+  "brand_instagram_desc": "التطبيق الأشهر لمشاركة الصور",
+  "@brand_instagram_desc": { "description": "وصف شعار إنستغرام." },
+  "brand_instagram_fact": "أُطلق إنستغرام عام 2010 ووصل إلى مليون مستخدم في شهرين فقط! اشترته فيسبوك (ميتا) بمليار دولار وكان يعمل فيه 13 موظفاً فقط آنذاك.",
+  "@brand_instagram_fact": { "description": "حقيقة ممتعة عن إنستغرام." },
+
+  "brand_netflix_desc": "أكبر خدمة بث فيديو في العالم",
+  "@brand_netflix_desc": { "description": "وصف شعار نتفليكس." },
+  "brand_netflix_fact": "بدأت نتفليكس عام 1997 كخدمة لتأجير أقراص DVD بالبريد! اليوم لديها أكثر من 260 مليون مشترك في 190 دولة.",
+  "@brand_netflix_fact": { "description": "حقيقة ممتعة عن نتفليكس." }
+}
+

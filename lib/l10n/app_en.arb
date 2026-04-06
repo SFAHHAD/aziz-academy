@@ -1,0 +1,219 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2026-04-01",
+
+  "appTitle": "Aziz Academy",
+  "@appTitle": { "description": "The full application name." },
+
+  "score": "Score",
+  "@score": { "description": "Label for the player's score." },
+
+  "hearts": "Hearts",
+  "@hearts": { "description": "Label for the player's remaining lives (hearts)." },
+
+  "playAgain": "Play Again",
+  "@playAgain": { "description": "Button to restart the quiz." },
+
+  "nextQuestion": "Next Question",
+  "@nextQuestion": { "description": "Button to advance to the next question." },
+
+  "congratulations": "Congratulations!",
+  "@congratulations": { "description": "General congratulatory message." },
+
+  "masterOfCapitals": "Master of Capitals!",
+  "@masterOfCapitals": { "description": "Victory screen heading." },
+
+  "niceTry": "Nice Try!",
+  "@niceTry": { "description": "Game-over screen heading." },
+
+  "backToMap": "Back to Map",
+  "@backToMap": { "description": "Button to navigate back to the module map." },
+
+  "loadingQuiz": "Loading quiz…",
+  "@loadingQuiz": { "description": "Loading indicator text." },
+
+  "quizComplete": "Quiz Complete!",
+  "@quizComplete": { "description": "Heading shown when the player finishes all questions." },
+
+  "correctAnswers": "correct answers",
+  "@correctAnswers": { "description": "Sub-label beneath the score on the results screen." },
+
+  "encouragement": "Don't give up — every expert was once a beginner! 💪",
+  "@encouragement": { "description": "Encouraging message on the game-over screen." },
+
+  "refillHearts": "Refilling hearts…",
+  "@refillHearts": { "description": "Label while the heart-refill animation plays." },
+
+  "heartsRefilled": "❤️ Hearts Refilled!",
+  "@heartsRefilled": { "description": "Label when the heart-refill animation completes." },
+
+  "tryAgainNow": "Try Again Now →",
+  "@tryAgainNow": { "description": "Try-again button label before refill completes." },
+
+  "readyLetsGo": "Ready! Let's Go 🚀",
+  "@readyLetsGo": { "description": "Try-again button label after refill completes." },
+
+  "questionProgress": "Question {current} of {total}",
+  "@questionProgress": {
+    "description": "Accessibility label for quiz progress.",
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "startQuiz": "Start Quiz",
+  "@startQuiz": { "description": "Button to begin quiz for a continent." },
+
+  "tapContinentHint": "Tap a continent to explore!",
+  "@tapContinentHint": { "description": "Hint label on the map screen." },
+
+  "questionsAvailable": "{count} countries to explore",
+  "@questionsAvailable": {
+    "description": "Number of quiz questions for a continent.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "mapExplorer": "Map Explorer",
+  "@mapExplorer": { "description": "Title of the map screen." },
+
+  "continentAfrica": "Africa",
+  "@continentAfrica": { "description": "Continent name." },
+  "continentAsia": "Asia",
+  "@continentAsia": { "description": "Continent name." },
+  "continentEurope": "Europe",
+  "@continentEurope": { "description": "Continent name." },
+  "continentNorthAmerica": "North America",
+  "@continentNorthAmerica": { "description": "Continent name." },
+  "continentSouthAmerica": "South America",
+  "@continentSouthAmerica": { "description": "Continent name." },
+  "continentOceania": "Oceania",
+  "@continentOceania": { "description": "Continent name." },
+
+  "logoQuizTitle": "Logo Quiz",
+  "@logoQuizTitle": { "description": "Title of the logos quiz screen." },
+
+  "revealingLogo": "Revealing logo…",
+  "@revealingLogo": { "description": "Label while logo blur clears." },
+
+  "knowledgeCard": "Did You Know?",
+  "@knowledgeCard": { "description": "Heading of the fun-fact card after answering." },
+
+  "brand_youtube_desc": "The world's largest video-sharing platform",
+  "@brand_youtube_desc": { "description": "YouTube brand description." },
+  "brand_youtube_fact": "YouTube was founded in 2005 by three former PayPal employees. The very first video uploaded was called 'Me at the zoo'!",
+  "@brand_youtube_fact": { "description": "YouTube fun fact." },
+
+  "brand_apple_desc": "The company that makes iPhones and Macs",
+  "@brand_apple_desc": { "description": "Apple brand description." },
+  "brand_apple_fact": "Apple's logo has a bite taken out of it so people won't confuse it with a cherry! The company was co-founded by Steve Jobs in 1976.",
+  "@brand_apple_fact": { "description": "Apple fun fact." },
+
+  "brand_lego_desc": "The world's most famous toy brick company",
+  "@brand_lego_desc": { "description": "LEGO brand description." },
+  "brand_lego_fact": "LEGO bricks are so precise that only 18 out of every 1 million pieces made are rejected. If you stacked all LEGO bricks ever made, they'd reach the Moon and back — 10 times!",
+  "@brand_lego_fact": { "description": "LEGO fun fact." },
+
+  "brand_nasa_desc": "The US space agency exploring the universe",
+  "@brand_nasa_desc": { "description": "NASA brand description." },
+  "brand_nasa_fact": "NASA stands for National Aeronautics and Space Administration. It was founded in 1958 and landed humans on the Moon just 11 years later!",
+  "@brand_nasa_fact": { "description": "NASA fun fact." },
+
+  "brand_nike_desc": "The world's largest sportswear brand",
+  "@brand_nike_desc": { "description": "Nike brand description." },
+  "brand_nike_fact": "Nike's famous swoosh logo was designed by a graphic design student for just USD 35 in 1971! The word Nike comes from the Greek goddess of victory.",
+  "@brand_nike_fact": { "description": "Nike fun fact." },
+
+  "brand_mcdonalds_desc": "The world's most visited fast-food restaurant",
+  "@brand_mcdonalds_desc": { "description": "McDonald's brand description." },
+  "brand_mcdonalds_fact": "McDonald's serves about 69 million people every day — that's more than the entire population of the UK! The golden arches are recognised by more people than the Christian cross.",
+  "@brand_mcdonalds_fact": { "description": "McDonald's fun fact." },
+
+  "brand_google_desc": "The search engine that knows almost everything",
+  "@brand_google_desc": { "description": "Google brand description." },
+  "brand_google_fact": "Google was originally named 'BackRub'! The name Google comes from 'googol', the number 1 followed by 100 zeros — showing how much information it searches.",
+  "@brand_google_fact": { "description": "Google fun fact." },
+
+  "brand_amazon_desc": "The world's biggest online shopping store",
+  "@brand_amazon_desc": { "description": "Amazon brand description." },
+  "brand_amazon_fact": "Amazon's arrow logo goes from A to Z, showing that the store sells everything from A to Z. It also looks like a smile! Amazon started as an online bookstore in 1994.",
+  "@brand_amazon_fact": { "description": "Amazon fun fact." },
+
+  "trophyRoom": "Trophy Room",
+  "@trophyRoom": { "description": "Title of the trophy room screen." },
+
+  "badges": "Badges",
+  "@badges": { "description": "Section heading for badges." },
+
+  "badgesUnlocked": "unlocked",
+  "@badgesUnlocked": { "description": "Suffix after badge count, e.g. '3 / 8 unlocked'." },
+
+  "totalProgress": "Total Progress",
+  "@totalProgress": { "description": "Progress bar label." },
+
+  "progressComplete": "complete",
+  "@progressComplete": { "description": "Suffix for progress percentage, e.g. '45% complete'." },
+
+  "quiz_capitals": "Capitals",
+  "@quiz_capitals": { "description": "Module label for capitals module." },
+
+  "badge_capitals_explorer_name": "Capitals Explorer",
+  "@badge_capitals_explorer_name": { "description": "Badge name." },
+  "badge_capitals_explorer_desc": "Completed your first capitals quiz",
+  "@badge_capitals_explorer_desc": { "description": "Badge description." },
+
+  "badge_capitals_expert_name": "Capitals Expert",
+  "@badge_capitals_expert_name": { "description": "Badge name." },
+  "badge_capitals_expert_desc": "Scored 3 stars without losing a life",
+  "@badge_capitals_expert_desc": { "description": "Badge description." },
+
+  "badge_map_master_name": "Map Master",
+  "@badge_map_master_name": { "description": "Badge name." },
+  "badge_map_master_desc": "Tapped all 6 continents on the map",
+  "@badge_map_master_desc": { "description": "Badge description." },
+
+  "badge_logo_detective_name": "Logo Detective",
+  "@badge_logo_detective_name": { "description": "Badge name." },
+  "badge_logo_detective_desc": "Completed your first logo quiz",
+  "@badge_logo_detective_desc": { "description": "Badge description." },
+
+  "badge_logo_hunter_name": "Logo Hunter",
+  "@badge_logo_hunter_name": { "description": "Badge name." },
+  "badge_logo_hunter_desc": "Scored 3 stars in the logo quiz",
+  "@badge_logo_hunter_desc": { "description": "Badge description." },
+
+  "badge_trivia_titan_name": "Trivia Titan",
+  "@badge_trivia_titan_name": { "description": "Badge name." },
+  "badge_trivia_titan_desc": "Answered 25 questions correctly",
+  "@badge_trivia_titan_desc": { "description": "Badge description." },
+
+  "badge_perfect_scholar_name": "Perfect Scholar",
+  "@badge_perfect_scholar_name": { "description": "Badge name." },
+  "badge_perfect_scholar_desc": "3 stars in both Capitals and Logos",
+  "@badge_perfect_scholar_desc": { "description": "Badge description." },
+
+  "badge_academy_star_name": "Academy Star",
+  "@badge_academy_star_name": { "description": "Badge name." },
+  "badge_academy_star_desc": "Unlocked every single badge",
+  "@badge_academy_star_desc": { "description": "Badge description." },
+
+  "brand_twitter_desc": "The social media platform now called X",
+  "@brand_twitter_desc": { "description": "Twitter/X brand description." },
+  "brand_twitter_fact": "Twitter was founded in 2006. The original name idea was 'twttr' — no vowels! In 2023 Elon Musk rebranded it to X. Its bird mascot was named Larry after basketball legend Larry Bird.",
+  "@brand_twitter_fact": { "description": "Twitter/X fun fact." },
+
+  "brand_facebook_desc": "The world's most popular social network",
+  "@brand_facebook_desc": { "description": "Facebook brand description." },
+  "brand_facebook_fact": "Facebook was started in a Harvard dorm room in 2004 by Mark Zuckerberg. It now has over 3 billion users — that's almost half of all people on Earth!",
+  "@brand_facebook_fact": { "description": "Facebook fun fact." },
+
+  "brand_instagram_desc": "The world's favourite photo-sharing app",
+  "@brand_instagram_desc": { "description": "Instagram brand description." },
+  "brand_instagram_fact": "Instagram was launched in 2010 and grew to 1 million users in just 2 months! It was bought by Facebook (now Meta) for USD 1 billion — at the time Instagram had only 13 employees.",
+  "@brand_instagram_fact": { "description": "Instagram fun fact." },
+
+  "brand_netflix_desc": "The biggest video streaming service on Earth",
+  "@brand_netflix_desc": { "description": "Netflix brand description." },
+  "brand_netflix_fact": "Netflix started in 1997 as a DVD-by-mail service! Today it has over 260 million subscribers in 190 countries. Its recommendation algorithm saves it over USD 1 billion per year by helping people find shows they love.",
+  "@brand_netflix_fact": { "description": "Netflix fun fact." }
+}

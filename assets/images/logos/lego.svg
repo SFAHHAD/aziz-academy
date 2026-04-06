@@ -1,0 +1,14 @@
+<svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brick body -->
+  <rect x="8" y="70" width="184" height="90" rx="12" fill="#E3000B"/>
+  <!-- Stud cylinders (top) -->
+  <ellipse cx="52" cy="58" rx="24" ry="14" fill="#CC0000"/>
+  <ellipse cx="100" cy="58" rx="24" ry="14" fill="#CC0000"/>
+  <ellipse cx="148" cy="58" rx="24" ry="14" fill="#CC0000"/>
+  <!-- Stud tops (highlight) -->
+  <ellipse cx="52" cy="54" rx="24" ry="10" fill="#FF2222"/>
+  <ellipse cx="100" cy="54" rx="24" ry="10" fill="#FF2222"/>
+  <ellipse cx="148" cy="54" rx="24" ry="10" fill="#FF2222"/>
+  <!-- Brick shine -->
+  <rect x="8" y="70" width="184" height="18" rx="8" fill="#FF2222" opacity="0.4"/>
+</svg>

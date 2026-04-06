@@ -1,0 +1,43 @@
+# Flutter & Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+**/doc/api/
+
+# IDE
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+
+# OS & logs
+.DS_Store
+Thumbs.db
+*.log
+web_log.txt
+res.txt
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Coverage
+coverage/
+*.lcov
+
+# Android
+**/android/**/local.properties
+**/android/**/.gradle/
+
+# iOS
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/
+
+# Symbolication / obfuscation (if used)
+app.*.symbols
