@@ -18,7 +18,8 @@
 | **Logos** | `/logos` | Recognise brand logos |
 | **Sciences** | `/sciences` | Science & discovery questions |
 | **Math** | `/math` | Arithmetic challenges |
-| **Trophy room** | `/trophy` | Badges and progress |
+| **Trophy room** | `/trophy` | Badges and cups (قاعة الكؤوس) |
+| **Privacy** | `/privacy` | Summary for parents (Arabic) |
 
 ## Tech stack
 
@@ -44,12 +45,28 @@ flutter analyze --fatal-infos --fatal-warnings
 flutter test
 ```
 
+### Web deploy (Vercel)
+
+From PowerShell (preview build):
+
+```powershell
+.\scripts\deploy_web.ps1
+```
+
+Production:
+
+```powershell
+.\scripts\deploy_web.ps1 --prod
+```
+
+The repo is **git-initialized**; connect a remote (e.g. GitHub) and push to enable CI in `.github/workflows/flutter_ci.yml`.
+
 ## Project layout
 
 ```
 lib/
   core/           theme, router, providers, services, models
-  features/       home, maps, capitals, flags, logos, math, sciences, achievements
+  features/       home, maps, capitals, flags, logos, math, sciences, achievements, legal
   l10n/           generated localisations
 assets/
   data/           JSON quiz datasets
