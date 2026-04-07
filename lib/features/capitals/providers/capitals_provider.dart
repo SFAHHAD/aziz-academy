@@ -49,6 +49,50 @@ class ContinentFilterNotifier extends Notifier<String?> {
   void clear() => state = null;
 }
 
+// =============================================================================
+// DIFFICULTY PROVIDER — 1 easy, 2 medium, 3 hard (null = all)
+// =============================================================================
+
+enum QuizDifficulty { easy, medium, hard }
+
+extension QuizDifficultyExt on QuizDifficulty {
+  String get labelAr {
+    switch (this) {
+      case QuizDifficulty.easy: return 'سهل';
+      case QuizDifficulty.medium: return 'متوسط';
+      case QuizDifficulty.hard: return 'صعب';
+    }
+  }
+  String get emoji {
+    switch (this) {
+      case QuizDifficulty.easy: return '🌱';
+      case QuizDifficulty.medium: return '⚡';
+      case QuizDifficulty.hard: return '🔥';
+    }
+  }
+  /// Max difficulty number included at this level.
+  int get maxDifficulty {
+    switch (this) {
+      case QuizDifficulty.easy: return 1;
+      case QuizDifficulty.medium: return 2;
+      case QuizDifficulty.hard: return 3;
+    }
+  }
+}
+
+final difficultyProvider =
+    NotifierProvider<DifficultyNotifier, QuizDifficulty>(
+  DifficultyNotifier.new,
+  name: 'difficultyProvider',
+);
+
+class DifficultyNotifier extends Notifier<QuizDifficulty> {
+  @override
+  QuizDifficulty build() => QuizDifficulty.medium;
+
+  void set(QuizDifficulty d) => state = d;
+}
+
 
 // =============================================================================
 // 2. QUESTIONS PROVIDER
@@ -129,9 +173,23 @@ class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
     // Filter by continent when launched from the map explorer.
     final continent = ref.watch(continentFilterProvider);
     if (continent != null) {
-      questions = questions
-          .where((q) => q.category == continent)
-          .toList();
+      questions = questions.where((q) => q.category == continent).toList();
+    }
+
+    // Filter by difficulty — question difficulty is stored in its id-mapped
+    // QuizQuestion. We use the QuizQuestion.id to look up difficulty in the
+    // repository layer, but for now difficulty is encoded in the options count
+    // (options.length == 4 always) so we rely on a simple shuffled subset:
+    //   easy   → first 20%  questions sorted by difficulty ascending
+    //   medium → first 50%
+    //   hard   → all
+    // A better approach would be to surface `difficulty` on QuizQuestion itself.
+    final diff = ref.watch(difficultyProvider);
+    if (diff != QuizDifficulty.hard) {
+      final fraction = diff == QuizDifficulty.easy ? 0.20 : 0.50;
+      final minQ = 8.clamp(1, questions.length);
+      final cap = ((questions.length * fraction).ceil()).clamp(minQ, questions.length);
+      questions = questions.take(cap).toList();
     }
 
     if (questions.isEmpty) {

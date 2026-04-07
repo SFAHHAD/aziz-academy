@@ -19,7 +19,7 @@
       "صنعاء",
       "طهران"
     ],
-    "fun_fact": "The capital of Iran is located at latitude 32.00.",
+    "fun_fact": "طهران تحتضن قوس ميدان الحرية الشهير ويُحيط بها جبال البرز الشامخة.",
     "difficulty": 1,
     "lat": 32.0,
     "lng": 53.0,
@@ -45,7 +45,7 @@
       "أوتاوا",
       "أستانا"
     ],
-    "fun_fact": "The capital of Kazakhstan is located at latitude 48.02.",
+    "fun_fact": "نور سلطان كانت تُعرف بأستانة وأُعيد تسميتها تكريماً لأول رئيس للبلاد.",
     "difficulty": 1,
     "lat": 48.0196,
     "lng": 66.9237,
@@ -71,7 +71,7 @@
       "ليبرفيل",
       "بلغراد"
     ],
-    "fun_fact": "The capital of Serbia is located at latitude 44.00.",
+    "fun_fact": "بلغراد مدينة تلتقي فيها النهران وتاريخان، وكانت عاصمة يوغوسلافيا القوية سابقاً.",
     "difficulty": 1,
     "lat": 44.0,
     "lng": 21.0,
@@ -97,7 +97,7 @@
       "ليلونجوي",
       "بيشكيك"
     ],
-    "fun_fact": "The capital of Malawi is located at latitude -13.50.",
+    "fun_fact": "ليلونغوي عاصمة هادئة تحيط بها أراضٍ خضراء وتُعدّ من أصغر عواصم أفريقيا.",
     "difficulty": 1,
     "lat": -13.5,
     "lng": 34.0,
@@ -123,7 +123,7 @@
       "نيروبي",
       "ليلونجوي"
     ],
-    "fun_fact": "The capital of Kenya is located at latitude 1.00.",
+    "fun_fact": "نيروبي هي المدينة الوحيدة في العالم التي يقع داخلها منتزه وطني يمكنك رؤية الأسود من أسقف الناطحات.",
     "difficulty": 1,
     "lat": 1.0,
     "lng": 38.0,
@@ -149,7 +149,7 @@
       "نيامي",
       "ليلونجوي"
     ],
-    "fun_fact": "The capital of Niger is located at latitude 16.00.",
+    "fun_fact": "نيامي تقع على ضفاف نهر النيجر وتُعدّ ملتقى للثقافات الصحراوية والزراعية في غرب أفريقيا.",
     "difficulty": 1,
     "lat": 16.0,
     "lng": 8.0,
@@ -175,7 +175,7 @@
       "هراري",
       "كابول"
     ],
-    "fun_fact": "The capital of Turks and Caicos Islands is located at latitude 21.75.",
+    "fun_fact": "كوكبرن تاون عاصمة جزر توركس وكايكوس التي تشتهر بشعابها المرجانية الزرقاء الصافية.",
     "difficulty": 1,
     "lat": 21.75,
     "lng": -71.58333333,
@@ -201,7 +201,7 @@
       "أديس أبابا",
       "ماناغوا"
     ],
-    "fun_fact": "The capital of Nicaragua is located at latitude 13.00.",
+    "fun_fact": "ماناغوا تقع على شواطئ بحيرة ماناغوا وتُعرف بطرازها المعماري الجميل الذي يجمع بين التاريخ والحداثة.",
     "difficulty": 1,
     "lat": 13.0,
     "lng": -85.0,
@@ -227,7 +227,7 @@
       "بانكوك",
       "سانتياغو"
     ],
-    "fun_fact": "The capital of Cayman Islands is located at latitude 19.31.",
+    "fun_fact": "جورج تاون عاصمة جزر كايمان الشهيرة بالغوص ومركز مالي دولي مهم.",
     "difficulty": 1,
     "lat": 19.3133,
     "lng": -81.2546,
@@ -253,7 +253,7 @@
       "ساو تومي",
       "هراري"
     ],
-    "fun_fact": "The capital of Ethiopia is located at latitude 8.00.",
+    "fun_fact": "أديس أبابا بمعنى «الزهرة الجديدة» بالأمهرية وتُعدّ عاصمة أفريقيا إذ تحتضن مقرّ الاتحاد الأفريقي.",
     "difficulty": 1,
     "lat": 8.0,
     "lng": 38.0,
@@ -279,7 +279,7 @@
       "مدينة مكسيكو",
       "بيونغ يانغ"
     ],
-    "fun_fact": "The capital of Ghana is located at latitude 8.00.",
+    "fun_fact": "أكرا مدينة ساحلية نابضة تُعرف بأسواقها الملوّنة ومطبخها الشهير بالأكلات المحلية.",
     "difficulty": 1,
     "lat": 8.0,
     "lng": -2.0,
@@ -305,7 +305,7 @@
       "يارين",
       "باريس"
     ],
-    "fun_fact": "The capital of Egypt is located at latitude 27.00.",
+    "fun_fact": "القاهرة مدينة الألف مناذر وعاصمة أقدم حضارة في التاريخ، تسكنها أكثر من 20 مليون نسمة.",
     "difficulty": 1,
     "lat": 27.0,
     "lng": 30.0,
@@ -331,7 +331,7 @@
       "صوفيا",
       "أكرا"
     ],
-    "fun_fact": "The capital of Bulgaria is located at latitude 43.00.",
+    "fun_fact": "صوفيا واحدة من أقدم مدن أوروبا، أُسّست قبل أثينا وروما، وتقع في أحضان جبل فيتوشا.",
     "difficulty": 1,
     "lat": 43.0,
     "lng": 25.0,
@@ -357,7 +357,7 @@
       "آبيا",
       "كيغالي"
     ],
-    "fun_fact": "The capital of Rwanda is located at latitude -2.00.",
+    "fun_fact": "كيغالي تُعدّ من أنظف عواصم أفريقيا وتشتهر بتجربتها الإنمائية المذهلة.",
     "difficulty": 1,
     "lat": -2.0,
     "lng": 30.0,
@@ -383,7 +383,7 @@
       "نيودلهي",
       "بودابست"
     ],
-    "fun_fact": "The capital of Gabon is located at latitude -1.00.",
+    "fun_fact": "ليبرفيل تعني «المدينة الحرة» وكانت ملجأً للعبيد المُحرَّرين في القرن التاسع عشر.",
     "difficulty": 1,
     "lat": -1.0,
     "lng": 11.75,
@@ -409,7 +409,7 @@
       "مبابان",
       "روسو"
     ],
-    "fun_fact": "The capital of Dominica is located at latitude 15.42.",
+    "fun_fact": "روسو عاصمة دومينيكا الواقعة في قارة أمريكا.",
     "difficulty": 1,
     "lat": 15.41666666,
     "lng": -61.33333333,
@@ -435,7 +435,7 @@
       "الدوحة",
       "هافانا"
     ],
-    "fun_fact": "The capital of Qatar is located at latitude 25.50.",
+    "fun_fact": "الدوحة حوّلت نفسها من قرية صيد إلى مدينة عالمية في عقود قليلة.",
     "difficulty": 1,
     "lat": 25.5,
     "lng": 51.25,
@@ -461,7 +461,7 @@
       "سايبان",
       "ذكر"
     ],
-    "fun_fact": "The capital of Equatorial Guinea is located at latitude 2.00.",
+    "fun_fact": "مالابو عاصمة غينيا الاستوائية وتقع على جزيرة بيوكو البركانية.",
     "difficulty": 1,
     "lat": 2.0,
     "lng": 10.0,
@@ -487,7 +487,7 @@
       "سوفا",
       "برلين"
     ],
-    "fun_fact": "The capital of Germany is located at latitude 51.00.",
+    "fun_fact": "برلين أكبر مدينة في ألمانيا وتُعرف بجدارها التاريخي والروح الفنية والإبداعية.",
     "difficulty": 1,
     "lat": 51.0,
     "lng": 9.0,
@@ -513,7 +513,7 @@
       "ويلمستاد",
       "جيبوتي"
     ],
-    "fun_fact": "The capital of Albania is located at latitude 41.00.",
+    "fun_fact": "تيرانا تحوّلت في سنوات قليلة إلى مدينة ملوّنة بعد أن طلى رئيسها الواجهات بالألوان الزاهية.",
     "difficulty": 1,
     "lat": 41.0,
     "lng": 20.0,
@@ -539,7 +539,7 @@
       "أوسلو",
       "كانبيرا"
     ],
-    "fun_fact": "The capital of Norway is located at latitude 62.00.",
+    "fun_fact": "أوسلو محاطة بالمصبّات الجليدية وتُعرف بالشفق القطبي الذهبي في فصل الشتاء.",
     "difficulty": 1,
     "lat": 62.0,
     "lng": 10.0,
@@ -565,7 +565,7 @@
       "بودغوريتشا",
       "عشق أباد"
     ],
-    "fun_fact": "The capital of Turkmenistan is located at latitude 40.00.",
+    "fun_fact": "عشق آباد مدينة المرمر الأبيض تحتل المرتبة الأولى عالمياً في كثافة المباني المغطّاة بالرخام.",
     "difficulty": 1,
     "lat": 40.0,
     "lng": 60.0,
@@ -591,7 +591,7 @@
       "ريكيافيك",
       "بورت أو برنس"
     ],
-    "fun_fact": "The capital of Iceland is located at latitude 65.00.",
+    "fun_fact": "ريكيافيك أصغر وأبعد عواصم العالم شمالاً وتعمل بنسبة 100% من الطاقة المتجددة.",
     "difficulty": 1,
     "lat": 65.0,
     "lng": -18.0,
@@ -617,7 +617,7 @@
       "تيغوسيغالبا",
       "هاجاتنيا"
     ],
-    "fun_fact": "The capital of Honduras is located at latitude 15.00.",
+    "fun_fact": "تيغوسيغالبا عاصمة هندوراس ذات النطق الصعب التي بُنيت في وادٍ جبلي متعرّج.",
     "difficulty": 1,
     "lat": 15.0,
     "lng": -86.5,
@@ -643,7 +643,7 @@
       "هاجاتنيا",
       "مدينة لاباز"
     ],
-    "fun_fact": "The capital of Guam is located at latitude 13.47.",
+    "fun_fact": "هاجاتنيا عاصمة غوام الواقعة في قارة أوقيانوسيا.",
     "difficulty": 1,
     "lat": 13.46666666,
     "lng": 144.78333333,
@@ -669,7 +669,7 @@
       "بورت أو برنس",
       "مدينة الكويت"
     ],
-    "fun_fact": "The capital of Guatemala is located at latitude 15.50.",
+    "fun_fact": "غواتيمالا سيتي تحتضن مقابر الغزو الإسباني وتقع في قلب حضارة المايا.",
     "difficulty": 1,
     "lat": 15.5,
     "lng": -90.25,
@@ -695,7 +695,7 @@
       "بودابست",
       "شارلوت أمالي"
     ],
-    "fun_fact": "The capital of Hungary is located at latitude 47.00.",
+    "fun_fact": "بودابست مدينة على ضفتَي نهر الدانوب وتحتضن أقدم مترو أنفاق في القارة.",
     "difficulty": 1,
     "lat": 47.0,
     "lng": 20.0,
@@ -721,7 +721,7 @@
       "تيغوسيغالبا",
       "أثينا"
     ],
-    "fun_fact": "The capital of Greece is located at latitude 39.00.",
+    "fun_fact": "أثينا مهد الديمقراطية والفلسفة وتحتضن الأكروبوليس أحد أعظم المواقع الأثرية.",
     "difficulty": 1,
     "lat": 39.0,
     "lng": 22.0,
@@ -747,7 +747,7 @@
       "بورت مورسبي",
       "مبابان"
     ],
-    "fun_fact": "The capital of Belarus is located at latitude 53.00.",
+    "fun_fact": "مينسك أعيد بناؤها كلياً على الطراز السوفيتي بعد أن دُمّرت خلال الحرب العالمية الثانية.",
     "difficulty": 1,
     "lat": 53.0,
     "lng": 28.0,
@@ -773,7 +773,7 @@
       "بريتوريا",
       "كيتو"
     ],
-    "fun_fact": "The capital of Namibia is located at latitude -22.00.",
+    "fun_fact": "وينداهوك تشتهر بمزيج معماري ألماني أفريقي نادر وبمناخها الجاف المعتدل.",
     "difficulty": 1,
     "lat": -22.0,
     "lng": 17.0,
@@ -799,7 +799,7 @@
       "بانجول",
       "سانت بيتر بورت"
     ],
-    "fun_fact": "The capital of Guernsey is located at latitude 49.47.",
+    "fun_fact": "سانت بيتر بورت عاصمة غيرنزي الواقعة في قارة أوروبا.",
     "difficulty": 1,
     "lat": 49.46666666,
     "lng": -2.58333333,
@@ -825,7 +825,7 @@
       "برايا",
       "تايبيه"
     ],
-    "fun_fact": "The capital of Panama is located at latitude 9.00.",
+    "fun_fact": "مدينة بنما تقع عند مخرج قناة بنما الشهيرة التي تربط المحيطَين الأطلسي والهادئ.",
     "difficulty": 1,
     "lat": 9.0,
     "lng": -80.0,
@@ -851,7 +851,7 @@
       "بلغراد",
       "شارلوت أمالي"
     ],
-    "fun_fact": "The capital of Marshall Islands is located at latitude 9.00.",
+    "fun_fact": "ماجورو عاصمة جزر مارشال الواقعة في قارة أوقيانوسيا.",
     "difficulty": 1,
     "lat": 9.0,
     "lng": 168.0,
@@ -877,7 +877,7 @@
       "موروني",
       "أمستردام"
     ],
-    "fun_fact": "The capital of South Sudan is located at latitude 7.00.",
+    "fun_fact": "جوبا عاصمة جنوب السودان أصغر دول العالم المستقلة منذ 2011.",
     "difficulty": 1,
     "lat": 7.0,
     "lng": 30.0,
@@ -903,7 +903,7 @@
       "بيساو",
       "فيلنيوس"
     ],
-    "fun_fact": "The capital of Guinea-Bissau is located at latitude 12.00.",
+    "fun_fact": "بيساو عاصمة غينيا بيساو وتقع في دلتا نهر غيبا.",
     "difficulty": 1,
     "lat": 12.0,
     "lng": -15.0,
@@ -929,7 +929,7 @@
       "بيونغ يانغ",
       "هاجاتنيا"
     ],
-    "fun_fact": "The capital of North Korea is located at latitude 40.00.",
+    "fun_fact": "بيونغ يانغ عاصمة كوريا الشمالية ومدينة مخطّطة بدقة متناهية تُعرف بزهرة المغنولياتها.",
     "difficulty": 1,
     "lat": 40.0,
     "lng": 127.0,
@@ -955,7 +955,7 @@
       "جورج تاون",
       "سانت جورج"
     ],
-    "fun_fact": "The capital of British Indian Ocean Territory is located at latitude -6.00.",
+    "fun_fact": "دييغو جارسيا عاصمة إقليم المحيط الهندي البريطاني الواقعة في قارة أفريقيا.",
     "difficulty": 1,
     "lat": -6.0,
     "lng": 71.5,
@@ -981,7 +981,7 @@
       "عشق أباد",
       "بانجول"
     ],
-    "fun_fact": "The capital of Gambia is located at latitude 13.47.",
+    "fun_fact": "بانجول تقع على لسان أرضي يشقّ نهر غامبيا وهي من أصغر عواصم أفريقيا.",
     "difficulty": 1,
     "lat": 13.46666666,
     "lng": -16.56666666,
@@ -1007,7 +1007,7 @@
       "بودغوريتشا",
       "شارلوت أمالي"
     ],
-    "fun_fact": "The capital of United States Virgin Islands is located at latitude 18.35.",
+    "fun_fact": "شارلوت أمالي عاصمة جزر العذراء الامريكية الواقعة في قارة أمريكا.",
     "difficulty": 1,
     "lat": 18.35,
     "lng": -64.933333,
@@ -1033,7 +1033,7 @@
       "سراييفو",
       "بريتوريا"
     ],
-    "fun_fact": "The capital of South Africa is located at latitude -29.00.",
+    "fun_fact": "بريتوريا العاصمة الإدارية لجنوب أفريقيا تُعرف بمحاور الجاكاراندا الأرجوانية الجميلة.",
     "difficulty": 1,
     "lat": -29.0,
     "lng": 24.0,
@@ -1059,7 +1059,7 @@
       "شارلوت أمالي",
       "أكرا"
     ],
-    "fun_fact": "The capital of Kuwait is located at latitude 29.50.",
+    "fun_fact": "مدينة الكويت تطلّ على خليج الكويت وتحتضن أبراجاً استلهمت شكلها من زهور اللوتس.",
     "difficulty": 1,
     "lat": 29.5,
     "lng": 45.75,
@@ -1085,7 +1085,7 @@
       "هانوي",
       "فادوز"
     ],
-    "fun_fact": "The capital of China is located at latitude 35.00.",
+    "fun_fact": "بكين مدينة سيّدت العالم لآلاف السنين وتحتضن ما يزيد على 1000 موقع أثري.",
     "difficulty": 1,
     "lat": 35.0,
     "lng": 105.0,
@@ -1111,7 +1111,7 @@
       "موسكو",
       "بيشكيك"
     ],
-    "fun_fact": "The capital of Russia is located at latitude 60.00.",
+    "fun_fact": "موسكو تحتضن مترو الأنفاق الأكثر فخامة في العالم الذي يُعدّ متحفاً تحت الأرض.",
     "difficulty": 1,
     "lat": 60.0,
     "lng": 100.0,
@@ -1137,7 +1137,7 @@
       "فيليبسبرج",
       "تونس"
     ],
-    "fun_fact": "The capital of Sint Maarten is located at latitude 18.03.",
+    "fun_fact": "فيليبسبرج عاصمة سينت مارتن الواقعة في قارة أمريكا.",
     "difficulty": 1,
     "lat": 18.033333,
     "lng": -63.05,
@@ -1163,7 +1163,7 @@
       "بودغوريتشا",
       "مدينة الكويت"
     ],
-    "fun_fact": "The capital of French Polynesia is located at latitude -17.68.",
+    "fun_fact": "بابيتي عاصمة بولينزيا الفرنسية الواقعة في قارة أوقيانوسيا.",
     "difficulty": 1,
     "lat": -17.6797,
     "lng": -149.4068,
@@ -1189,7 +1189,7 @@
       "ليلونجوي",
       "هونيارا"
     ],
-    "fun_fact": "The capital of Benin is located at latitude 9.50.",
+    "fun_fact": "بورتو نوفو العاصمة الدستورية لبنين وتقع على البحيرة الكبيرة قرب الساحل.",
     "difficulty": 1,
     "lat": 9.5,
     "lng": 2.25,
@@ -1215,7 +1215,7 @@
       "تبليسي",
       "الوفي"
     ],
-    "fun_fact": "The capital of Niue is located at latitude -19.03.",
+    "fun_fact": "الوفي عاصمة نييوي الواقعة في قارة أوقيانوسيا.",
     "difficulty": 1,
     "lat": -19.03333333,
     "lng": -169.86666666,
@@ -1241,7 +1241,7 @@
       "نوك",
       "كينغستاون"
     ],
-    "fun_fact": "The capital of Greenland is located at latitude 72.00.",
+    "fun_fact": "نوك عاصمة جرينلاند الواقعة في قارة أمريكا.",
     "difficulty": 1,
     "lat": 72.0,
     "lng": -40.0,
@@ -1267,7 +1267,7 @@
       "موناكو",
       "لونجييربين"
     ],
-    "fun_fact": "The capital of Svalbard and Jan Mayen is located at latitude 78.00.",
+    "fun_fact": "لونجييربين عاصمة سفالبارد ويان ماين الواقعة في قارة أوروبا.",
     "difficulty": 1,
     "lat": 78.0,
     "lng": 20.0,
@@ -1293,7 +1293,7 @@
       "كاراكاس",
       "مينسك"
     ],
-    "fun_fact": "The capital of Lesotho is located at latitude -29.50.",
+    "fun_fact": "ماسيرو عاصمة ليسوتو «مملكة في السماء» وهي دولة محاطة بجنوب أفريقيا من كل الجهات.",
     "difficulty": 1,
     "lat": -29.5,
     "lng": 28.5,
@@ -1319,7 +1319,7 @@
       "ماريجوت",
       "بيروت"
     ],
-    "fun_fact": "The capital of Saint Martin is located at latitude 18.07.",
+    "fun_fact": "ماريجوت عاصمة سانت مارتن الواقعة في قارة أمريكا.",
     "difficulty": 2,
     "lat": 18.0708,
     "lng": -63.0501,
@@ -1345,7 +1345,7 @@
       "كانبيرا",
       "صوفيا"
     ],
-    "fun_fact": "The capital of Jersey is located at latitude 49.25.",
+    "fun_fact": "سانت هيلير عاصمة جيرزي الواقعة في قارة أوروبا.",
     "difficulty": 2,
     "lat": 49.25,
     "lng": -2.16666666,
@@ -1371,7 +1371,7 @@
       "القدس",
       "أولان باتور"
     ],
-    "fun_fact": "The capital of Mongolia is located at latitude 46.00.",
+    "fun_fact": "أولان باتور أبرد عاصمة في العالم درجةً للحرارة وتقع في قلب الصحراء الآسيوية.",
     "difficulty": 2,
     "lat": 46.0,
     "lng": 105.0,
@@ -1397,7 +1397,7 @@
       "جنوب تاراوا",
       "فادوز"
     ],
-    "fun_fact": "The capital of Tuvalu is located at latitude -8.00.",
+    "fun_fact": "فونافوتي عاصمة توفالو الواقعة في قارة أوقيانوسيا.",
     "difficulty": 2,
     "lat": -8.0,
     "lng": 178.0,
@@ -1423,7 +1423,7 @@
       "كيشيناو",
       "بودابست"
     ],
-    "fun_fact": "The capital of Angola is located at latitude -12.50.",
+    "fun_fact": "لواندا عاصمة أنغولا وميناء رئيسي يفتح على المحيط الأطلسي وغني بالنفط.",
     "difficulty": 2,
     "lat": -12.5,
     "lng": 18.5,
@@ -1449,7 +1449,7 @@
       "رام الله",
       "ماسيرو"
     ],
-    "fun_fact": "The capital of Wallis and Futuna is located at latitude -13.30.",
+    "fun_fact": "ماتا أوتو عاصمة واليس وفوتونا الواقعة في قارة أوقيانوسيا.",
     "difficulty": 2,
     "lat": -13.3,
     "lng": -176.2,
@@ -1475,7 +1475,7 @@
       "أمستردام",
       "ماناغوا"
     ],
-    "fun_fact": "The capital of Jordan is located at latitude 31.00.",
+    "fun_fact": "عمّان بُنيت على سبعة تلال مثل روما وتحتضن مسرح روماني يعود لألفَي سنة.",
     "difficulty": 2,
     "lat": 31.0,
     "lng": 36.0,
@@ -1501,7 +1501,7 @@
       "مدينة سان مارينو",
       "بانجول"
     ],
-    "fun_fact": "The capital of Cape Verde is located at latitude 16.54.",
+    "fun_fact": "براياتقع على جزيرة ساو تياغو وهي عاصمة الرأس الأخضر المشرفة على الأطلسي.",
     "difficulty": 2,
     "lat": 16.5388,
     "lng": -23.0418,
@@ -1527,7 +1527,7 @@
       "فيلنيوس",
       "فيليبسبرج"
     ],
-    "fun_fact": "The capital of Lithuania is located at latitude 56.00.",
+    "fun_fact": "فيلنيوس تُعدّ مدينة الفنون والبوهيميا في منطقة البلطيق.",
     "difficulty": 2,
     "lat": 56.0,
     "lng": 24.0,
@@ -1553,7 +1553,7 @@
       "مدينة فيكتوريا",
       "برلين"
     ],
-    "fun_fact": "The capital of Hong Kong is located at latitude 22.27.",
+    "fun_fact": "مدينة فيكتوريا عاصمة هونغ كونغ الواقعة في قارة آسيا.",
     "difficulty": 2,
     "lat": 22.267,
     "lng": 114.188,
@@ -1579,7 +1579,7 @@
       "كمبالا",
       "ساو تومي"
     ],
-    "fun_fact": "The capital of São Tomé and Príncipe is located at latitude 1.00.",
+    "fun_fact": "ساو تومي عاصمة ساو تومي وبرينسيب الواقعة في قارة أفريقيا.",
     "difficulty": 2,
     "lat": 1.0,
     "lng": 7.0,
@@ -1605,7 +1605,7 @@
       "القاهرة",
       "القدس"
     ],
-    "fun_fact": "The capital of Djibouti is located at latitude 11.50.",
+    "fun_fact": "جيبوتي عاصمة وأهمّ ميناء في أفريقيا للتجارة مع العالم العربي.",
     "difficulty": 2,
     "lat": 11.5,
     "lng": 43.0,
@@ -1631,7 +1631,7 @@
       "لونجييربين",
       "ماريجوت"
     ],
-    "fun_fact": "The capital of Comoros is located at latitude -12.17.",
+    "fun_fact": "موروني عاصمة جزر القمر وتقع عند سفح بركان كارثلا الخامد.",
     "difficulty": 2,
     "lat": -12.16666666,
     "lng": 44.25,
@@ -1657,7 +1657,7 @@
       "لندن",
       "سان دوني"
     ],
-    "fun_fact": "The capital of United Kingdom is located at latitude 54.00.",
+    "fun_fact": "لندن تأسّست على يد الرومان وتحتضن أقدم نظام مترو في العالم منذ 1863.",
     "difficulty": 2,
     "lat": 54.0,
     "lng": -2.0,
@@ -1683,7 +1683,7 @@
       "أوتاوا",
       "مبابان"
     ],
-    "fun_fact": "The capital of Vietnam is located at latitude 16.17.",
+    "fun_fact": "هانوي عاصمة فيتنام وتحتضن بحيرة هوان كيم ذات القصص الأسطورية الرائعة.",
     "difficulty": 2,
     "lat": 16.16666666,
     "lng": 107.83333333,
@@ -1709,7 +1709,7 @@
       "بورتو نوفو",
       "سانت جورج"
     ],
-    "fun_fact": "The capital of Grenada is located at latitude 12.12.",
+    "fun_fact": "سانت جورج عاصمة غرينادا الواقعة في قارة أمريكا.",
     "difficulty": 2,
     "lat": 12.11666666,
     "lng": -61.66666666,
@@ -1735,7 +1735,7 @@
       "سوفا",
       "تايبيه"
     ],
-    "fun_fact": "The capital of Fiji is located at latitude -17.71.",
+    "fun_fact": "سوفا عاصمة فيجي وتقع على جزيرة فيتي ليفو أكبر جزر الأرخبيل.",
     "difficulty": 2,
     "lat": -17.7134,
     "lng": 178.065,
@@ -1761,7 +1761,7 @@
       "هانوي",
       "بوينس آيرس"
     ],
-    "fun_fact": "The capital of Argentina is located at latitude -34.00.",
+    "fun_fact": "بوينس آيرس «باريس أمريكا الجنوبية» وطن التانغو وعاصمة الأدب والثقافة في القارة.",
     "difficulty": 2,
     "lat": -34.0,
     "lng": -64.0,
@@ -1787,7 +1787,7 @@
       "مبابان",
       "أفاروا"
     ],
-    "fun_fact": "The capital of Caribbean Netherlands is located at latitude 12.18.",
+    "fun_fact": "كرالينديجك عاصمة الجزر الكاريبية الهولندية الواقعة في قارة أمريكا.",
     "difficulty": 2,
     "lat": 12.18,
     "lng": -68.25,
@@ -1813,7 +1813,7 @@
       "نجامينا",
       "تيرانا"
     ],
-    "fun_fact": "The capital of Mexico is located at latitude 23.00.",
+    "fun_fact": "مكسيكو سيتي مدينة متربّعة على بحيرة مجفّفة وتغوص ببطء كل عام ببضعة سنتيمترات.",
     "difficulty": 2,
     "lat": 23.0,
     "lng": -102.0,
@@ -1839,7 +1839,7 @@
       "بورت مورسبي",
       "سان بيير"
     ],
-    "fun_fact": "The capital of Saint Pierre and Miquelon is located at latitude 46.83.",
+    "fun_fact": "سان بيير عاصمة سان بيير وميكلون الواقعة في قارة أمريكا.",
     "difficulty": 2,
     "lat": 46.83333333,
     "lng": -56.33333333,
@@ -1865,7 +1865,7 @@
       "بريشتينا",
       "كييف"
     ],
-    "fun_fact": "The capital of Myanmar is located at latitude 22.00.",
+    "fun_fact": "نيبيداو عاصمة ميانمار بُنيت فجأة في وسط الغابة عام 2005 وتمتاز بشوارع شاسعة.",
     "difficulty": 2,
     "lat": 22.0,
     "lng": 98.0,
@@ -1891,7 +1891,7 @@
       "حريف",
       "مدينة سان مارينو"
     ],
-    "fun_fact": "The capital of Faroe Islands is located at latitude 62.00.",
+    "fun_fact": "تورشافن عاصمة جزر فارو الواقعة في قارة أوروبا.",
     "difficulty": 2,
     "lat": 62.0,
     "lng": -7.0,
@@ -1917,7 +1917,7 @@
       "بيونغ يانغ",
       "هافانا"
     ],
-    "fun_fact": "The capital of Cuba is located at latitude 21.50.",
+    "fun_fact": "هافانا عاصمة كوبا تحتفظ بآلاف السيارات الكلاسيكية من خمسينيات القرن الماضي.",
     "difficulty": 2,
     "lat": 21.5,
     "lng": -80.0,
@@ -1943,7 +1943,7 @@
       "بابيتي",
       "سانت بيتر بورت"
     ],
-    "fun_fact": "The capital of Liechtenstein is located at latitude 47.27.",
+    "fun_fact": "فادوز عاصمة ليختنشتاين الواقعة في قارة أوروبا.",
     "difficulty": 2,
     "lat": 47.26666666,
     "lng": 9.53333333,
@@ -1969,7 +1969,7 @@
       "بيروت",
       "جيبوتي"
     ],
-    "fun_fact": "The capital of Lebanon is located at latitude 33.83.",
+    "fun_fact": "بيروت «باريس الشرق» تجمع بين شواطئ بحرية وجبال سيدرية وحياة ليلية فريدة.",
     "difficulty": 2,
     "lat": 33.83333333,
     "lng": 35.83333333,
@@ -1995,7 +1995,7 @@
       "أمستردام",
       "المسكات عنب طيب الشذا"
     ],
-    "fun_fact": "The capital of Netherlands is located at latitude 52.50.",
+    "fun_fact": "أمستردام تمتاز بقنواتها الشهيرة وأكثر من 1500 جسر يربط جزرها المائية.",
     "difficulty": 2,
     "lat": 52.5,
     "lng": 5.75,
@@ -2021,7 +2021,7 @@
       "أندورا لا فيلا",
       "روسو"
     ],
-    "fun_fact": "The capital of Palestine is located at latitude 31.90.",
+    "fun_fact": "رام الله عاصمة السلطة الفلسطينية في الضفة الغربية وتحتضن مراكز ثقافية حيّة.",
     "difficulty": 2,
     "lat": 31.9,
     "lng": 35.2,
@@ -2047,7 +2047,7 @@
       "سوكري",
       "بروكسل"
     ],
-    "fun_fact": "The capital of France is located at latitude 46.00.",
+    "fun_fact": "باريس تحتضن برج إيفل ومتحف اللوفر وتُزار من أكثر من 30 مليون سائح سنوياً.",
     "difficulty": 2,
     "lat": 46.0,
     "lng": 2.0,
@@ -2073,7 +2073,7 @@
       "بلموبان",
       "دكا"
     ],
-    "fun_fact": "The capital of Belize is located at latitude 17.25.",
+    "fun_fact": "بلموبان عاصمة بليز الواقعة في قارة أمريكا.",
     "difficulty": 2,
     "lat": 17.25,
     "lng": -88.75,
@@ -2099,7 +2099,7 @@
       "نيودلهي",
       "بيونغ يانغ"
     ],
-    "fun_fact": "The capital of Paraguay is located at latitude -23.00.",
+    "fun_fact": "أسونسيون عاصمة باراغواي المطلّة على نهر باراغواي وهي من أقدم مدن القارة الأمريكية.",
     "difficulty": 2,
     "lat": -23.0,
     "lng": -58.0,
@@ -2125,7 +2125,7 @@
       "مدينة كوكبيرن",
       "المسكات عنب طيب الشذا"
     ],
-    "fun_fact": "The capital of Oman is located at latitude 21.00.",
+    "fun_fact": "مسقط عاصمة سلطنة عُمان تحتضن قصر العلم والجامع الأكبر وأسواقاً عطرية شهيرة.",
     "difficulty": 2,
     "lat": 21.0,
     "lng": 57.0,
@@ -2151,7 +2151,7 @@
       "داكار",
       "برازافيل"
     ],
-    "fun_fact": "The capital of Senegal is located at latitude 14.00.",
+    "fun_fact": "داكار أقصى غرب أفريقيا وتقع على شبه جزيرة الرأس الأخضر المشرفة على الأطلسي.",
     "difficulty": 2,
     "lat": 14.0,
     "lng": -14.0,
@@ -2177,7 +2177,7 @@
       "أوسلو",
       "سراييفو"
     ],
-    "fun_fact": "The capital of Yemen is located at latitude 15.00.",
+    "fun_fact": "صنعاء من أقدم المدن المأهولة في العالم وتحتضن مدينة أثرية مسوّرة تعود لآلاف السنين.",
     "difficulty": 2,
     "lat": 15.0,
     "lng": 48.0,
@@ -2203,7 +2203,7 @@
       "مبابان",
       "سراييفو"
     ],
-    "fun_fact": "The capital of Luxembourg is located at latitude 49.75.",
+    "fun_fact": "لوكسمبورغ عاصمة لوكسمبورغ الواقعة في قارة أوروبا.",
     "difficulty": 2,
     "lat": 49.75,
     "lng": 6.16666666,
@@ -2229,7 +2229,7 @@
       "أوسلو",
       "بودابست"
     ],
-    "fun_fact": "The capital of Haiti is located at latitude 19.00.",
+    "fun_fact": "بورتو برينس عاصمة هايتي التي كانت أول دولة تحقق استقلالها في الكاريبي عام 1804.",
     "difficulty": 2,
     "lat": 19.0,
     "lng": -72.41666666,
@@ -2255,7 +2255,7 @@
       "ادامستاون",
       "موسكو"
     ],
-    "fun_fact": "The capital of Pitcairn Islands is located at latitude -25.07.",
+    "fun_fact": "ادامستاون عاصمة جزر بيتكيرن الواقعة في قارة أوقيانوسيا.",
     "difficulty": 2,
     "lat": -25.06666666,
     "lng": -130.1,
@@ -2281,7 +2281,7 @@
       "موناكو",
       "فونافوتي"
     ],
-    "fun_fact": "The capital of Samoa is located at latitude -13.58.",
+    "fun_fact": "آبيا عاصمة ساموا الواقعة في قارة أوقيانوسيا.",
     "difficulty": 2,
     "lat": -13.58333333,
     "lng": -172.33333333,
@@ -2307,7 +2307,7 @@
       "مدينة فيكتوريا",
       "كانبيرا"
     ],
-    "fun_fact": "The capital of Cyprus is located at latitude 35.00.",
+    "fun_fact": "نيقوسيا عاصمة قبرص الواقعة في قارة أوروبا.",
     "difficulty": 2,
     "lat": 35.0,
     "lng": 33.0,
@@ -2333,7 +2333,7 @@
       "جورج تاون",
       "كاراكاس"
     ],
-    "fun_fact": "The capital of Venezuela is located at latitude 8.00.",
+    "fun_fact": "كراكاس محاط بجبال ذات ارتفاع يتجاوز 2700 متر مما يمنحها مناخاً معتدلاً.",
     "difficulty": 2,
     "lat": 8.0,
     "lng": -66.0,
@@ -2359,7 +2359,7 @@
       "أوسلو",
       "بانجول"
     ],
-    "fun_fact": "The capital of Zimbabwe is located at latitude -20.00.",
+    "fun_fact": "هراري كانت تُعرف بسالزبري وغُيِّر اسمها بعد الاستقلال عام 1980.",
     "difficulty": 2,
     "lat": -20.0,
     "lng": 30.0,
@@ -2385,7 +2385,7 @@
       "بيساو",
       "تيرانا"
     ],
-    "fun_fact": "The capital of Australia is located at latitude -27.00.",
+    "fun_fact": "كانبيرا بُنيت خصيصاً لتكون عاصمة أستراليا كحلّ وسط بين سيدني وملبورن.",
     "difficulty": 2,
     "lat": -27.0,
     "lng": 133.0,
@@ -2411,7 +2411,7 @@
       "برايا",
       "كييف"
     ],
-    "fun_fact": "The capital of Ukraine is located at latitude 49.00.",
+    "fun_fact": "كييف من أقدم مدن أوروبا وتحتضن كاتدرائية القديسة صوفيا التي بُنيت عام 1037.",
     "difficulty": 2,
     "lat": 49.0,
     "lng": 32.0,
@@ -2437,7 +2437,7 @@
       "كرالينديجك",
       "تورشافن"
     ],
-    "fun_fact": "The capital of Chad is located at latitude 15.00.",
+    "fun_fact": "نجامينا عاصمة تشاد الواقعة في قارة أفريقيا.",
     "difficulty": 2,
     "lat": 15.0,
     "lng": 19.0,
@@ -2463,7 +2463,7 @@
       "يارين",
       "نيقوسيا"
     ],
-    "fun_fact": "The capital of Nauru is located at latitude -0.53.",
+    "fun_fact": "يارين عاصمة ناورو الواقعة في قارة أوقيانوسيا.",
     "difficulty": 2,
     "lat": -0.53333333,
     "lng": 166.91666666,
@@ -2489,7 +2489,7 @@
       "مقديشو",
       "كمبالا"
     ],
-    "fun_fact": "The capital of Uganda is located at latitude 1.00.",
+    "fun_fact": "كامبالا تقع على سبعة تلال مثل روما وتُعرف بتنوّعها الثقافي الاستثنائي.",
     "difficulty": 2,
     "lat": 1.0,
     "lng": 32.0,
@@ -2515,7 +2515,7 @@
       "كانبيرا",
       "موسكو"
     ],
-    "fun_fact": "The capital of Monaco is located at latitude 43.73.",
+    "fun_fact": "موناكو عاصمة موناكو الواقعة في قارة أوروبا.",
     "difficulty": 2,
     "lat": 43.73333333,
     "lng": 7.4,
@@ -2541,7 +2541,7 @@
       "تيغوسيغالبا",
       "كوناكري"
     ],
-    "fun_fact": "The capital of Cocos (Keeling) Islands is located at latitude -12.16.",
+    "fun_fact": "الجزيرة الغربية عاصمة جزر كوكوس الواقعة في قارة أوقيانوسيا.",
     "difficulty": 2,
     "lat": -12.1642,
     "lng": 96.871,
@@ -2567,7 +2567,7 @@
       "جورج تاون",
       "لونجييربين"
     ],
-    "fun_fact": "The capital of Guyana is located at latitude 5.00.",
+    "fun_fact": "جورج تاون عاصمة غيانا الواقعة في قارة أمريكا.",
     "difficulty": 2,
     "lat": 5.0,
     "lng": -59.0,
@@ -2593,7 +2593,7 @@
       "هافانا",
       "ادامستاون"
     ],
-    "fun_fact": "The capital of Falkland Islands is located at latitude -51.75.",
+    "fun_fact": "ستانلي عاصمة جزر فوكلاند الواقعة في قارة أمريكا.",
     "difficulty": 2,
     "lat": -51.75,
     "lng": -59.0,
@@ -2619,7 +2619,7 @@
       "بكين",
       "نيودلهي"
     ],
-    "fun_fact": "The capital of India is located at latitude 20.00.",
+    "fun_fact": "نيودلهي تحتضن قرابة 20 مليون نسمة وتجمع بين الإرث المغولي والمعمار البريطاني.",
     "difficulty": 3,
     "lat": 20.0,
     "lng": 77.0,
@@ -2645,7 +2645,7 @@
       "برايا",
       "مدينة سان مارينو"
     ],
-    "fun_fact": "The capital of San Marino is located at latitude 43.77.",
+    "fun_fact": "مدينة سان مارينو عاصمة سان مارينو الواقعة في قارة أوروبا.",
     "difficulty": 3,
     "lat": 43.76666666,
     "lng": 12.41666666,
@@ -2671,7 +2671,7 @@
       "مدينة الكويت",
       "بريتوريا"
     ],
-    "fun_fact": "The capital of Papua New Guinea is located at latitude -6.00.",
+    "fun_fact": "بورت مورزبي عاصمة بابوا غينيا الجديدة وتحتضن تنوّعاً لغوياً مذهلاً بأكثر من 800 لغة.",
     "difficulty": 3,
     "lat": -6.0,
     "lng": 147.0,
@@ -2697,7 +2697,7 @@
       "كينغستاون",
       "هافانا"
     ],
-    "fun_fact": "The capital of Saint Vincent and the Grenadines is located at latitude 13.25.",
+    "fun_fact": "كينغستاون عاصمة سانت فينسنت والغرينادين الواقعة في قارة أمريكا.",
     "difficulty": 3,
     "lat": 13.25,
     "lng": -61.2,
@@ -2723,7 +2723,7 @@
       "ماسيرو",
       "تونس"
     ],
-    "fun_fact": "The capital of Tunisia is located at latitude 34.00.",
+    "fun_fact": "تونس مدينة الياسمين تحتضن مدينة قرطاج الأثرية العريقة.",
     "difficulty": 3,
     "lat": 34.0,
     "lng": 9.0,
@@ -2749,7 +2749,7 @@
       "جنوب تاراوا",
       "شارلوت أمالي"
     ],
-    "fun_fact": "The capital of Kiribati is located at latitude 1.42.",
+    "fun_fact": "جنوب تاراوا عاصمة كيريباتي الواقعة في قارة أوقيانوسيا.",
     "difficulty": 3,
     "lat": 1.41666666,
     "lng": 173.0,
@@ -2775,7 +2775,7 @@
       "بلموبان",
       "بوينس آيرس"
     ],
-    "fun_fact": "The capital of Latvia is located at latitude 57.00.",
+    "fun_fact": "ريغا عاصمة لاتفيا تحتضن أكبر تجمّع مبانٍ بطراز الفن الجديد (آر نوفو) في العالم.",
     "difficulty": 3,
     "lat": 57.0,
     "lng": 25.0,
@@ -2801,7 +2801,7 @@
       "برلين",
       "فيليبسبرج"
     ],
-    "fun_fact": "The capital of Thailand is located at latitude 15.00.",
+    "fun_fact": "بانكوك تعني باللغة التايلاندية «مدينة فرشاة الملائكة» وتحتضن معابد بوذية ذهبية رائعة.",
     "difficulty": 3,
     "lat": 15.0,
     "lng": 100.0,
@@ -2827,7 +2827,7 @@
       "مدينة سان مارينو",
       "بيشكيك"
     ],
-    "fun_fact": "The capital of Kyrgyzstan is located at latitude 41.00.",
+    "fun_fact": "بيشكيك عاصمة قيرغيزستان دولة الجبال والسهول وتحتضن مهرجانات الفروسية التقليدية.",
     "difficulty": 3,
     "lat": 41.0,
     "lng": 75.0,
@@ -2853,7 +2853,7 @@
       "أسونسيون",
       "ماريجوت"
     ],
-    "fun_fact": "The capital of Brazil is located at latitude -10.00.",
+    "fun_fact": "برازيليا مدينة بُنيت من الصفر عام 1960 ومن الجو تبدو على شكل طائرة.",
     "difficulty": 3,
     "lat": -10.0,
     "lng": -55.0,
@@ -2879,7 +2879,7 @@
       "لواندا",
       "كانبيرا"
     ],
-    "fun_fact": "The capital of Botswana is located at latitude -22.00.",
+    "fun_fact": "غابورون واحدة من أسرع عواصم أفريقيا نمواً ومقرّ ألماس الدنيا في بوتسوانا.",
     "difficulty": 3,
     "lat": -22.0,
     "lng": 24.0,
@@ -2905,7 +2905,7 @@
       "لواندا",
       "حريف"
     ],
-    "fun_fact": "The capital of French Guiana is located at latitude 4.00.",
+    "fun_fact": "حريف عاصمة غويانا الواقعة في قارة أمريكا.",
     "difficulty": 3,
     "lat": 4.0,
     "lng": -53.0,
@@ -2931,7 +2931,7 @@
       "القدس",
       "كيتو"
     ],
-    "fun_fact": "The capital of Israel is located at latitude 31.47.",
+    "fun_fact": "القدس إحدى أقدس مدن العالم وتحتضن مواقع دينية لليهود والمسيحيين والمسلمين.",
     "difficulty": 3,
     "lat": 31.47,
     "lng": 35.13,
@@ -2957,7 +2957,7 @@
       "أديس أبابا",
       "أوتاوا"
     ],
-    "fun_fact": "The capital of Canada is located at latitude 60.00.",
+    "fun_fact": "أوتاوا عاصمة كندا وتشتهر بمهرجان التيوليب الدولي الأجمل في أمريكا الشمالية.",
     "difficulty": 3,
     "lat": 60.0,
     "lng": -95.0,
@@ -2983,7 +2983,7 @@
       "هافانا",
       "ساو تومي"
     ],
-    "fun_fact": "The capital of Sweden is located at latitude 62.00.",
+    "fun_fact": "ستوكهولم بُنيت على 14 جزيرة وتُعرف بجوائز نوبل التي تُوزَّع فيها سنوياً.",
     "difficulty": 3,
     "lat": 62.0,
     "lng": 15.0,
@@ -3009,7 +3009,7 @@
       "أولان باتور",
       "ساو تومي"
     ],
-    "fun_fact": "The capital of Peru is located at latitude -10.00.",
+    "fun_fact": "ليما عاصمة بيرو تحتضن أكبر مدينة عشوائية في أمريكا اللاتينية وأعرق مطاعم العالم.",
     "difficulty": 3,
     "lat": -10.0,
     "lng": -76.0,
@@ -3035,7 +3035,7 @@
       "نيروبي",
       "كييف"
     ],
-    "fun_fact": "The capital of Guinea is located at latitude 11.00.",
+    "fun_fact": "كوناكري عاصمة غينيا وميناؤها الرئيسي، تشتهر بموسيقى الماندينغ.",
     "difficulty": 3,
     "lat": 11.0,
     "lng": -10.0,
@@ -3061,7 +3061,7 @@
       "ليما",
       "هونيارا"
     ],
-    "fun_fact": "The capital of Solomon Islands is located at latitude -8.00.",
+    "fun_fact": "هونيارا عاصمة جزر سليمان الواقعة في قارة أوقيانوسيا.",
     "difficulty": 3,
     "lat": -8.0,
     "lng": 159.0,
@@ -3087,7 +3087,7 @@
       "هونيارا",
       "روسو"
     ],
-    "fun_fact": "The capital of Republic of the Congo is located at latitude -1.00.",
+    "fun_fact": "برازافيل تقع مقابل كينشاسا وهما من أقرب عاصمتَين في العالم.",
     "difficulty": 3,
     "lat": -1.0,
     "lng": 15.0,
@@ -3113,7 +3113,7 @@
       "أندورا لا فيلا",
       "بليموث"
     ],
-    "fun_fact": "The capital of Andorra is located at latitude 42.50.",
+    "fun_fact": "أندورا لا فيلا عاصمة أندورا الواقعة في قارة أوروبا.",
     "difficulty": 3,
     "lat": 42.5,
     "lng": 1.5,
@@ -3139,7 +3139,7 @@
       "كيشيناو",
       "جيبوتي"
     ],
-    "fun_fact": "The capital of Moldova is located at latitude 47.00.",
+    "fun_fact": "كيشيناو عاصمة مولدوفا دولة خمورها الحمراء الشهيرة وسهولها الزراعية الخصبة.",
     "difficulty": 3,
     "lat": 47.0,
     "lng": 29.0,
@@ -3165,7 +3165,7 @@
       "برازيليا",
       "كمبالا"
     ],
-    "fun_fact": "The capital of Seychelles is located at latitude -4.58.",
+    "fun_fact": "فيكتوريا عاصمة سيشل الواقعة في قارة أفريقيا.",
     "difficulty": 3,
     "lat": -4.58333333,
     "lng": 55.66666666,
@@ -3191,7 +3191,7 @@
       "أديس أبابا",
       "سانت هيلير"
     ],
-    "fun_fact": "The capital of Kosovo is located at latitude 42.67.",
+    "fun_fact": "بريشتينا عاصمة كوسوفو الواقعة في قارة أوروبا.",
     "difficulty": 3,
     "lat": 42.666667,
     "lng": 21.166667,
@@ -3217,7 +3217,7 @@
       "أديس أبابا",
       "تونس"
     ],
-    "fun_fact": "The capital of Cook Islands is located at latitude -21.23.",
+    "fun_fact": "أفاروا عاصمة جزر كوك الواقعة في قارة أوقيانوسيا.",
     "difficulty": 3,
     "lat": -21.23333333,
     "lng": -159.76666666,
@@ -3243,7 +3243,7 @@
       "برلين",
       "سايبان"
     ],
-    "fun_fact": "The capital of Ecuador is located at latitude -2.00.",
+    "fun_fact": "كيتو أقرب عاصمة إلى خط الاستواء وتقع على ارتفاع 2850 متراً وسط سلسلة جبال الأنديز.",
     "difficulty": 3,
     "lat": -2.0,
     "lng": -77.5,
@@ -3269,7 +3269,7 @@
       "مبابان",
       "برن"
     ],
-    "fun_fact": "The capital of Switzerland is located at latitude 47.00.",
+    "fun_fact": "برن العاصمة الفيدرالية لسويسرا تشتهر بمعمارها التاريخي في القرون الوسطى.",
     "difficulty": 3,
     "lat": 47.0,
     "lng": 8.0,
@@ -3295,7 +3295,7 @@
       "بيروت",
       "ويلمستاد"
     ],
-    "fun_fact": "The capital of Curaçao is located at latitude 12.12.",
+    "fun_fact": "ويلمستاد عاصمة كوراساو الواقعة في قارة أمريكا.",
     "difficulty": 3,
     "lat": 12.116667,
     "lng": -68.933333,
@@ -3321,7 +3321,7 @@
       "سان بيير",
       "سانتياغو"
     ],
-    "fun_fact": "The capital of Chile is located at latitude -30.00.",
+    "fun_fact": "سانتياغو تتيح لك الاستمتاع بالثلوج وركوب التزلج في الصباح والاسترخاء في الساحل بعد الظهر.",
     "difficulty": 3,
     "lat": -30.0,
     "lng": -71.0,
@@ -3347,7 +3347,7 @@
       "كييف",
       "موروني"
     ],
-    "fun_fact": "The capital of Bangladesh is located at latitude 24.00.",
+    "fun_fact": "دكا مدينة الملايين والأقمشة، وتُعرف بصناعة القماش واللباس التي تُصدَّر حول العالم.",
     "difficulty": 3,
     "lat": 24.0,
     "lng": 90.0,
@@ -3373,7 +3373,7 @@
       "سري جاياواردينبورا كوتي",
       "ليلونجوي"
     ],
-    "fun_fact": "The capital of Maldives is located at latitude 3.25.",
+    "fun_fact": "ماليه إحدى أصغر وأكثف عواصم العالم، وتقع على مرتفع لا يتجاوز 1.5 متر فوق سطح البحر.",
     "difficulty": 3,
     "lat": 3.25,
     "lng": 73.0,
@@ -3399,7 +3399,7 @@
       "فورت دو فرانس",
       "سراييفو"
     ],
-    "fun_fact": "The capital of Martinique is located at latitude 14.67.",
+    "fun_fact": "فورت دو فرانس عاصمة مارتينيك الواقعة في قارة أمريكا.",
     "difficulty": 3,
     "lat": 14.666667,
     "lng": -61.0,
@@ -3425,7 +3425,7 @@
       "كييف",
       "ليما"
     ],
-    "fun_fact": "The capital of Singapore is located at latitude 1.37.",
+    "fun_fact": "سنغافورة دولة مدينة وتُعدّ من أنظف مدن العالم وأكثرها تقدّماً واتصالاً.",
     "difficulty": 3,
     "lat": 1.36666666,
     "lng": 103.8,
@@ -3451,7 +3451,7 @@
       "كمبالا",
       "بليموث"
     ],
-    "fun_fact": "The capital of Montserrat is located at latitude 16.75.",
+    "fun_fact": "بليموث عاصمة مونتسرات الواقعة في قارة أمريكا.",
     "difficulty": 3,
     "lat": 16.75,
     "lng": -62.2,
@@ -3477,7 +3477,7 @@
       "سانت بيتر بورت",
       "وارسو"
     ],
-    "fun_fact": "The capital of Poland is located at latitude 52.00.",
+    "fun_fact": "وارسو دُمّرت بالكامل في الحرب العالمية الثانية ثم أُعيد بناؤها بنفس تصميمها الأصلي.",
     "difficulty": 3,
     "lat": 52.0,
     "lng": 20.0,
@@ -3503,7 +3503,7 @@
       "موسكو",
       "ريكيافيك"
     ],
-    "fun_fact": "The capital of Somalia is located at latitude 10.00.",
+    "fun_fact": "مقديشو واحدة من أقدم مدن العالم العربي الساحلية، أُسّست قبل أكثر من ألف عام.",
     "difficulty": 3,
     "lat": 10.0,
     "lng": 49.0,
@@ -3529,7 +3529,7 @@
       "مبابان",
       "بورت أو برنس"
     ],
-    "fun_fact": "The capital of Eswatini is located at latitude -26.50.",
+    "fun_fact": "مباباني عاصمة سوازيلاند وتنافسها لوبامبا كعاصمة قضائية.",
     "difficulty": 3,
     "lat": -26.5,
     "lng": 31.5,
@@ -3555,7 +3555,7 @@
       "باريس",
       "الجزيرة الغربية"
     ],
-    "fun_fact": "The capital of Spain is located at latitude 40.00.",
+    "fun_fact": "مدريد أعلى عاصمة أوروبية ارتفاعاً فوق مستوى البحر وتتميّز بروح احتفالية لا مثيل لها.",
     "difficulty": 3,
     "lat": 40.0,
     "lng": -4.0,
@@ -3581,7 +3581,7 @@
       "شارلوت أمالي",
       "مونتيفيديو"
     ],
-    "fun_fact": "The capital of Uruguay is located at latitude -33.00.",
+    "fun_fact": "مونتيفيديو أجمل عواصم أمريكا الجنوبية وتُصنَّف باستمرار كأعلى مدينة في مؤشرات الجودة.",
     "difficulty": 3,
     "lat": -33.0,
     "lng": -56.0,
@@ -3607,7 +3607,7 @@
       "هافانا",
       "سوفا"
     ],
-    "fun_fact": "The capital of Sri Lanka is located at latitude 7.00.",
+    "fun_fact": "كولومبو الميناء الرئيسي لسيريلانكا وكانت مركزاً حيوياً لتجارة التوابل عبر القرون.",
     "difficulty": 3,
     "lat": 7.0,
     "lng": 81.0,
@@ -3633,7 +3633,7 @@
       "مبابان",
       "ماجورو"
     ],
-    "fun_fact": "The capital of Afghanistan is located at latitude 33.00.",
+    "fun_fact": "كابول تتربّع على ارتفاع 1800 متر وهي من أعلى عواصم العالم فوق مستوى البحر.",
     "difficulty": 3,
     "lat": 33.0,
     "lng": 65.0,
@@ -3659,7 +3659,7 @@
       "باس تير",
       "المسكات عنب طيب الشذا"
     ],
-    "fun_fact": "The capital of Taiwan is located at latitude 23.50.",
+    "fun_fact": "تايبيه عاصمة تايوان الواقعة في قارة آسيا.",
     "difficulty": 3,
     "lat": 23.5,
     "lng": 121.0,
@@ -3685,7 +3685,7 @@
       "تبليسي",
       "الجزيرة الغربية"
     ],
-    "fun_fact": "The capital of Georgia is located at latitude 42.00.",
+    "fun_fact": "تبليسي «المدينة الدافئة» ترتبط على قدم في عرش القفقاس وتشتهر بحماماتها الكبريتية.",
     "difficulty": 3,
     "lat": 42.0,
     "lng": 43.5,
@@ -3711,7 +3711,7 @@
       "صوفيا",
       "هانوي"
     ],
-    "fun_fact": "The capital of Guadeloupe is located at latitude 16.25.",
+    "fun_fact": "باس تير عاصمة غوادلوب الواقعة في قارة أمريكا.",
     "difficulty": 3,
     "lat": 16.25,
     "lng": -61.583333,
@@ -3737,7 +3737,7 @@
       "كاراكاس",
       "نواكشوط"
     ],
-    "fun_fact": "The capital of Mauritania is located at latitude 20.00.",
+    "fun_fact": "نواكشوط بُنيت عام 1957 في وسط الصحراء وأصبحت في سنوات قليلة عاصمة موريتانيا.",
     "difficulty": 3,
     "lat": 20.0,
     "lng": -12.0,
@@ -3763,7 +3763,7 @@
       "أديس أبابا",
       "موسكو"
     ],
-    "fun_fact": "The capital of Réunion is located at latitude -21.15.",
+    "fun_fact": "سان دوني عاصمة لا ريونيون الواقعة في قارة أفريقيا.",
     "difficulty": 3,
     "lat": -21.15,
     "lng": 55.5,
@@ -3789,7 +3789,7 @@
       "طهران",
       "آبيا"
     ],
-    "fun_fact": "The capital of Montenegro is located at latitude 42.50.",
+    "fun_fact": "بودغوريتسا أصغر عواصم أوروبا تقع في أحضان جبال شمال البلقان.",
     "difficulty": 3,
     "lat": 42.5,
     "lng": 19.3,
@@ -3815,7 +3815,7 @@
       "بيروت",
       "سايبان"
     ],
-    "fun_fact": "The capital of Northern Mariana Islands is located at latitude 15.20.",
+    "fun_fact": "سايبان عاصمة جزر ماريانا الشمالية الواقعة في قارة أوقيانوسيا.",
     "difficulty": 3,
     "lat": 15.2,
     "lng": 145.75,
@@ -3841,7 +3841,7 @@
       "آبيا",
       "سراييفو"
     ],
-    "fun_fact": "The capital of Bolivia is located at latitude -17.00.",
+    "fun_fact": "سوكري عاصمة بوليفيا الواقعة في قارة أمريكا.",
     "difficulty": 3,
     "lat": -17.0,
     "lng": -65.0,
@@ -3867,7 +3867,7 @@
       "كييف",
       "بروكسل"
     ],
-    "fun_fact": "The capital of Belgium is located at latitude 50.83.",
+    "fun_fact": "بروكسل عاصمة الاتحاد الأوروبي وتُعرف بشوكولاتتها الشهيرة وبراعم بروكسل.",
     "difficulty": 3,
     "lat": 50.83333333,
     "lng": 4.0,
@@ -3893,7 +3893,7 @@
       "جورج تاون",
       "دكا"
     ],
-    "fun_fact": "The capital of Bosnia and Herzegovina is located at latitude 44.00.",
+    "fun_fact": "سراييفو «القدس الأوروبية» لتعدّد دور عبادتها من مساجد وكنائس وكُنُس.",
     "difficulty": 3,
     "lat": 44.0,
     "lng": 18.0,
