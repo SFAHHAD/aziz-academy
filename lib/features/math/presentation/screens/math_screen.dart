@@ -42,51 +42,59 @@ class _MathIntroScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            _IntroHeader(),
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    _HeroCard(),
-                    const SizedBox(height: 28),
-                    Text(
-                      'أو اختر نوع العمليات',
-                      style: AppTextStyles.bodyMedium.copyWith(
-                        color: AppColors.textMedium,
-                        fontSize: 13,
-                      ),
-                      textAlign: TextAlign.center,
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _IntroHeader(),
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _HeroCard(),
+                        const SizedBox(height: 28),
+                        Text(
+                          'أو اختر نوع العمليات',
+                          style: AppTextStyles.bodyMedium.copyWith(
+                            color: AppColors.textMedium,
+                            fontSize: 13,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 16),
+                        GridView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate:
+                              const SliverGridDelegateWithMaxCrossAxisExtent(
+                            maxCrossAxisExtent: 280,
+                            mainAxisExtent: 140,
+                            mainAxisSpacing: 16,
+                            crossAxisSpacing: 16,
+                          ),
+                          itemCount: MathOperation.values.length,
+                          itemBuilder: (context, index) {
+                            final op = MathOperation.values[index];
+                            return _OperationCard(
+                              operation: op,
+                              title: _operations[op]!,
+                              color: _opColors[op]!,
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 24),
+                      ],
                     ),
-                    const SizedBox(height: 16),
-                    GridView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 16,
-                        mainAxisSpacing: 16,
-                        childAspectRatio: 1.2,
-                      ),
-                      itemCount: MathOperation.values.length,
-                      itemBuilder: (context, index) {
-                        final op = MathOperation.values[index];
-                        return _OperationCard(
-                          operation: op,
-                          title: _operations[op]!,
-                          color: _opColors[op]!,
-                        );
-                      },
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

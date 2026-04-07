@@ -75,10 +75,13 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
           ),
         ),
         SafeArea(
-          child: Column(
-            children: [
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 560),
+              child: Column(
+                children: [
               _buildTopBar(),
-              Spacer(),
+              const Spacer(),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 24),
                 padding: const EdgeInsets.all(32),
@@ -140,8 +143,10 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
                   ],
                 ),
               ),
-              Spacer(flex: 2),
-            ],
+              const Spacer(flex: 2),
+                ],
+              ),
+            ),
           ),
         ),
       ],
@@ -357,7 +362,9 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
     });
     
     return Center(
-      child: Container(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 480),
+        child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 24),
         padding: const EdgeInsets.all(32),
         decoration: BoxDecoration(
@@ -425,6 +432,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
             ),
           ],
         ),
+      ),
       ),
     );
   }

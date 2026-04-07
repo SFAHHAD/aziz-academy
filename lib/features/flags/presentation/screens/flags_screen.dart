@@ -50,40 +50,45 @@ class _FlagsIntroScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            _IntroHeader(),
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    _HeroCard(
-                      questionsAsync: questionsAsync,
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _IntroHeader(),
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _HeroCard(questionsAsync: questionsAsync),
+                        const SizedBox(height: 28),
+                        Text(
+                          'أو اختر قارة',
+                          style: AppTextStyles.bodyMedium.copyWith(
+                            color: AppColors.textMedium,
+                            fontSize: 13,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 16),
+                        _ContinentGrid(
+                          questionsAsync: questionsAsync,
+                          continentEmojis: _continentEmojis,
+                          continentColors: _continentColors,
+                          continentAr: _continentAr,
+                        ),
+                        const SizedBox(height: 24),
+                      ],
                     ),
-                    const SizedBox(height: 28),
-                    Text(
-                      'أو اختر قارة',
-                      style: AppTextStyles.bodyMedium.copyWith(
-                        color: AppColors.textMedium,
-                        fontSize: 13,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: 16),
-                    _ContinentGrid(
-                      questionsAsync: questionsAsync,
-                      continentEmojis: _continentEmojis,
-                      continentColors: _continentColors,
-                      continentAr: _continentAr,
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -224,11 +229,11 @@ class _ContinentGrid extends ConsumerWidget {
         return GridView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 16,
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 300,
+            mainAxisExtent: 140,
             mainAxisSpacing: 16,
-            childAspectRatio: 1.2,
+            crossAxisSpacing: 16,
           ),
           itemCount: continents.length,
           itemBuilder: (context, index) {

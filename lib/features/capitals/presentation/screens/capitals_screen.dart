@@ -66,9 +66,13 @@ class _CapitalsIntroScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
             _IntroHeader(),
             Expanded(
               child: SingleChildScrollView(
@@ -101,7 +105,9 @@ class _CapitalsIntroScreen extends ConsumerWidget {
                 ),
               ),
             ),
-          ],
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -420,11 +426,11 @@ class _ContinentGrid extends ConsumerWidget {
     return GridView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 12,
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 280,
+        mainAxisExtent: 130,
         mainAxisSpacing: 12,
-        childAspectRatio: 1.5,
+        crossAxisSpacing: 12,
       ),
       itemCount: continents.length,
       itemBuilder: (context, i) {

@@ -60,40 +60,47 @@ class _SciencesIntroScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            _IntroHeader(),
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    _HeroCard(
-                      questionsAsync: questionsAsync,
-                      bestStars: bestStars,
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _IntroHeader(),
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _HeroCard(
+                          questionsAsync: questionsAsync,
+                          bestStars: bestStars,
+                        ),
+                        const SizedBox(height: 28),
+                        Text(
+                          'أو اختر مجالاً علمياً',
+                          style: AppTextStyles.bodyMedium.copyWith(
+                            color: AppColors.textMedium,
+                            fontSize: 13,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 16),
+                        _CategoryGrid(
+                          questionsAsync: questionsAsync,
+                          categoryEmojis: _categoryEmojis,
+                          categoryColors: _categoryColors,
+                        ),
+                        const SizedBox(height: 24),
+                      ],
                     ),
-                    const SizedBox(height: 28),
-                    Text(
-                      'أو اختر مجالاً علمياً',
-                      style: AppTextStyles.bodyMedium.copyWith(
-                        color: AppColors.textMedium,
-                        fontSize: 13,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: 16),
-                    _CategoryGrid(
-                      questionsAsync: questionsAsync,
-                      categoryEmojis: _categoryEmojis,
-                      categoryColors: _categoryColors,
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -238,11 +245,11 @@ class _CategoryGrid extends ConsumerWidget {
         return GridView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 1.1,
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 260,
+            mainAxisExtent: 130,
+            mainAxisSpacing: 14,
+            crossAxisSpacing: 14,
           ),
           itemCount: categories.length,
           itemBuilder: (context, index) {

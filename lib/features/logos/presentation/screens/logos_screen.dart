@@ -208,8 +208,11 @@ class _QuizViewState extends ConsumerState<_QuizView>
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: Column(
-          children: [
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 540),
+            child: Column(
+              children: [
             // ── Header ─────────────────────────────────────────────────
             _LogosHeader(
               title: l10n.logoQuizTitle,
@@ -230,14 +233,11 @@ class _QuizViewState extends ConsumerState<_QuizView>
             ),
 
             // ── 2×2 Answer grid ─────────────────────────────────────────
-            Expanded(
-              flex: 4,
-              child: _OptionsGrid(
-                options: q.options,
-                correctAnswer: q.correctAnswer,
-                answered: _answered,
-                onAnswer: _handleAnswer,
-              ),
+            _OptionsGrid(
+              options: q.options,
+              correctAnswer: q.correctAnswer,
+              answered: _answered,
+              onAnswer: _handleAnswer,
             ),
 
             // ── Knowledge card (post-answer) / Next button ───────────────
@@ -253,7 +253,9 @@ class _QuizViewState extends ConsumerState<_QuizView>
                     )
                   : const SizedBox(key: ValueKey('empty'), height: 16),
             ),
-          ],
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -505,13 +507,14 @@ class _OptionsGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
       child: GridView.count(
         crossAxisCount: 2,
         physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
         crossAxisSpacing: 12,
         mainAxisSpacing: 12,
-        childAspectRatio: 2.6,
+        childAspectRatio: 3.0,
         children: options.map((opt) {
           Color bg = AppColors.surfaceContainerHigh;
           Color border = Colors.white12;
