@@ -159,8 +159,8 @@ class AchievementState {
   final Set<String> continentsTapped;   // continent IDs tapped in Map Explorer
   final Set<BadgeId> unlockedBadges;
 
-  /// Progress toward max engagement: capped at 200 total correct answers.
-  static const int maxCorrectForProgress = 200;
+  /// Progress bar target (lifetime correct answers) — kept modest for kids.
+  static const int maxCorrectForProgress = 30;
   double get progress =>
       (totalCorrect / maxCorrectForProgress).clamp(0.0, 1.0);
 

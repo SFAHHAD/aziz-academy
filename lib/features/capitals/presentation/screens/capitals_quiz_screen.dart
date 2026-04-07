@@ -201,44 +201,47 @@ class _QuizBody extends StatelessWidget {
     final question = session.currentQuestion!;
     final size = MediaQuery.sizeOf(context);
     final shortViewport = size.height < 760;
+    final maxContent = size.width >= 600 ? 520.0 : size.width;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        _QuizHeader(session: session, onBack: onBack),
+    return Align(
+      alignment: Alignment.topCenter,
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: maxContent),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            _QuizHeader(session: session, onBack: onBack),
 
-        // Scrollable middle: avoids clipped options on short browser windows / web.
-        Expanded(
-          child: SingleChildScrollView(
-            clipBehavior: Clip.hardEdge,
-            physics: const ClampingScrollPhysics(),
-            padding: const EdgeInsets.only(bottom: 8),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  _QuestionDisplay(
-                    question: question,
-                    compact: shortViewport,
+            Expanded(
+              child: SingleChildScrollView(
+                clipBehavior: Clip.hardEdge,
+                physics: const ClampingScrollPhysics(),
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      _QuestionDisplay(
+                        question: question,
+                        compact: shortViewport,
+                      ),
+                      const SizedBox(height: 12),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: _AnswerGrid(
+                          question: question,
+                          selectedOption: selectedOption,
+                          isRevealed: isRevealed,
+                          onTap: onAnswerTapped,
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 12),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: _AnswerGrid(
-                      question: question,
-                      selectedOption: selectedOption,
-                      isRevealed: isRevealed,
-                      onTap: onAnswerTapped,
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
-          ),
-        ),
 
-        // Only reserve space after an answer (opacity-only layouts still ate space before).
         AnimatedSize(
           duration: const Duration(milliseconds: 220),
           curve: Curves.easeOutCubic,
@@ -264,7 +267,9 @@ class _QuizBody extends StatelessWidget {
                 )
               : const SizedBox.shrink(),
         ),
-      ],
+          ],
+        ),
+      ),
     );
   }
 }
@@ -490,8 +495,8 @@ class _AnswerGrid extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final w = constraints.maxWidth;
-        // Taller aspect ratio => shorter cells => 2×2 grid fits in one scroll without clipping.
-        final ratio = w > 520 ? 3.4 : (w > 380 ? 2.9 : 2.55);
+        // Wider cards on desktop (narrow column) — taller aspect ratio = shorter buttons.
+        final ratio = w > 480 ? 3.6 : (w > 380 ? 2.9 : 2.55);
         return GridView.count(
           crossAxisCount: 2,
           crossAxisSpacing: 10,

@@ -177,10 +177,13 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
     final q = state.currentQuestion!;
     
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Column(
-          children: [
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 560),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Column(
+              children: [
             _buildQuizHeader(state),
             const SizedBox(height: 20),
             Expanded(
@@ -240,7 +243,9 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
               ),
             ),
             const SizedBox(height: 20),
-          ],
+              ],
+            ),
+          ),
         ),
       ),
     );

@@ -494,7 +494,7 @@ class _GlowProgressStrip extends StatelessWidget {
               const Text('📊', style: TextStyle(fontSize: 16)),
               const SizedBox(width: 8),
               Text(
-                'التقدم الكلي',
+                'إجابات صحيحة',
                 style: AppTextStyles.labelMedium.copyWith(
                   color: AppColors.textMedium,
                 ),

@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
@@ -170,7 +171,13 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
               color: AppColors.secondary,
               size: 20,
             ),
-            onPressed: () => context.pop(),
+            onPressed: () {
+              if (context.canPop()) {
+                context.pop();
+              } else {
+                context.go(AppRoutes.home);
+              }
+            },
           ),
         ),
       ),
@@ -291,23 +298,37 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                       color: isUnlocked ? badge.color : Colors.grey, width: 4),
                 ),
                 child: Center(
-                  child: Text(
-                    isUnlocked ? badge.emoji : '🔒',
-                    style: const TextStyle(fontSize: 56),
-                  ),
+                  child: isUnlocked
+                      ? Text(
+                          badge.emoji,
+                          style: const TextStyle(fontSize: 56),
+                        )
+                      : ColorFiltered(
+                          colorFilter:
+                              const ColorFilter.matrix(_kBadgeGrayscaleMatrix),
+                          child: Opacity(
+                            opacity: 0.55,
+                            child: Text(
+                              badge.emoji,
+                              style: const TextStyle(fontSize: 56),
+                            ),
+                          ),
+                        ),
                 ),
               ),
               const SizedBox(height: 24),
               Text(
-                isUnlocked ? badge.nameKey : 'شارة مقفلة',
+                badge.nameKey,
                 style: AppTextStyles.headingLarge.copyWith(
-                  color: isUnlocked ? AppColors.textDark : AppColors.textMedium,
+                  color: isUnlocked
+                      ? AppColors.textDark
+                      : AppColors.textMedium.withAlpha(200),
                 ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
               Text(
-                isUnlocked ? badge.descKey : 'استمر في اللعب لاكتشافها',
+                isUnlocked ? badge.descKey : 'استمر في اللعب لفتح هذه الشارة',
                 style: AppTextStyles.bodyMedium
                     .copyWith(color: AppColors.textMedium),
                 textAlign: TextAlign.center,
@@ -465,6 +486,14 @@ class _TrophyProgressStrip extends StatelessWidget {
 // Premium Animated Badge Card
 // =============================================================================
 
+/// Standard luminance weights → grayscale (locked badges look like earned, but faded).
+const List<double> _kBadgeGrayscaleMatrix = <double>[
+  0.2126, 0.7152, 0.0722, 0, 0,
+  0.2126, 0.7152, 0.0722, 0, 0,
+  0.2126, 0.7152, 0.0722, 0, 0,
+  0, 0, 0, 1, 0,
+];
+
 class _AnimatedBadgeCard extends StatelessWidget {
   const _AnimatedBadgeCard({
     required this.badge,
@@ -536,88 +565,109 @@ class _AnimatedBadgeCard extends StatelessWidget {
                       )
                     ],
             ),
-            child: Stack(
-              children: [
-                // Top-right locking icon if locked
-                if (!isUnlocked)
-                  Positioned(
-                    top: 16,
-                    right: 16,
-                    child: Icon(Icons.lock_rounded,
-                        color: AppColors.textMedium.withAlpha(100), size: 20),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 90,
+                    height: 90,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: isUnlocked
+                          ? RadialGradient(
+                              colors: [
+                                badge.color.withAlpha(100),
+                                badge.color.withAlpha(10),
+                              ],
+                            )
+                          : RadialGradient(
+                              colors: [
+                                AppColors.surfaceContainerHighest,
+                                AppColors.surfaceContainerLow,
+                              ],
+                            ),
+                      border: Border.all(
+                        color: isUnlocked
+                            ? badge.color
+                            : AppColors.divider.withAlpha(140),
+                        width: isUnlocked ? 4 : 3,
+                      ),
+                      boxShadow: isUnlocked
+                          ? [
+                              BoxShadow(
+                                color: badge.color.withAlpha(80),
+                                blurRadius: 20,
+                                spreadRadius: 5,
+                              )
+                            ]
+                          : [
+                              BoxShadow(
+                                color: Colors.black.withAlpha(20),
+                                blurRadius: 8,
+                                offset: const Offset(0, 4),
+                              ),
+                            ],
+                    ),
+                    child: Center(
+                      child: isUnlocked
+                          ? Text(
+                              badge.emoji,
+                              style: TextStyle(
+                                fontSize: 42,
+                                shadows: [
+                                  Shadow(
+                                    color: Colors.white.withAlpha(150),
+                                    blurRadius: 10,
+                                  ),
+                                ],
+                              ),
+                            )
+                          : ColorFiltered(
+                              colorFilter:
+                                  const ColorFilter.matrix(_kBadgeGrayscaleMatrix),
+                              child: Opacity(
+                                opacity: 0.5,
+                                child: Text(
+                                  badge.emoji,
+                                  style: const TextStyle(fontSize: 42),
+                                ),
+                              ),
+                            ),
+                    ),
                   ),
-
-                Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      // Floating Badge Graphic
-                      Container(
-                        width: 90,
-                        height: 90,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          gradient: isUnlocked
-                              ? RadialGradient(
-                                  colors: [
-                                    badge.color.withAlpha(100),
-                                    badge.color.withAlpha(10),
-                                  ],
-                                )
-                              : null,
-                          color: isUnlocked
-                              ? null
-                              : AppColors.surfaceContainerHighest,
-                          border: Border.all(
-                            color: isUnlocked
-                                ? badge.color
-                                : Colors.grey.withAlpha(50),
-                            width: 4,
-                          ),
-                          boxShadow: isUnlocked
-                              ? [
-                                  BoxShadow(
-                                      color: badge.color.withAlpha(80),
-                                      blurRadius: 20,
-                                      spreadRadius: 5)
-                                ]
-                              : null,
-                        ),
-                        child: Center(
-                          child: Text(
-                            isUnlocked ? badge.emoji : '❔',
-                            style: TextStyle(
-                              fontSize: 42,
-                              shadows: isUnlocked
-                                  ? [
-                                      Shadow(
-                                          color: Colors.white.withAlpha(150),
-                                          blurRadius: 10)
-                                    ]
-                                  : null,
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: isUnlocked
+                        ? Text(
+                            badge.nameKey,
+                            style: AppTextStyles.labelLarge.copyWith(
+                              color: AppColors.textDark,
+                              fontWeight: FontWeight.w800,
+                            ),
+                            textAlign: TextAlign.center,
+                            maxLines: 2,
+                          )
+                        : ColorFiltered(
+                            colorFilter:
+                                const ColorFilter.matrix(_kBadgeGrayscaleMatrix),
+                            child: Opacity(
+                              opacity: 0.5,
+                              child: Text(
+                                badge.nameKey,
+                                style: AppTextStyles.labelLarge.copyWith(
+                                  color: AppColors.textDark,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                                textAlign: TextAlign.center,
+                                maxLines: 2,
+                              ),
                             ),
                           ),
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12),
-                        child: Text(
-                          isUnlocked ? badge.nameKey : 'مخفية',
-                          style: AppTextStyles.labelLarge.copyWith(
-                            color: isUnlocked
-                                ? AppColors.textDark
-                                : AppColors.textMedium,
-                            fontWeight: FontWeight.w800,
-                          ),
-                          textAlign: TextAlign.center,
-                          maxLines: 2,
-                        ),
-                      ),
-                    ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
