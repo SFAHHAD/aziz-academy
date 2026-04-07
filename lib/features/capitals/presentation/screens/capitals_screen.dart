@@ -8,6 +8,7 @@ import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
 import 'package:aziz_academy/features/capitals/providers/capitals_provider.dart';
 import 'package:aziz_academy/features/capitals/presentation/screens/capitals_quiz_screen.dart';
+import 'package:aziz_academy/core/widgets/difficulty_row.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 /// Entry point for the Capitals module.
@@ -280,7 +281,11 @@ class _HeroCard extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(height: 18),
-                  _DifficultyRow(),
+                  DifficultyRow(
+                    value: ref.watch(difficultyProvider),
+                    onChanged: (d) => ref.read(difficultyProvider.notifier).set(d),
+                    accentColor: AppColors.capitalsColor,
+                  ),
                   const SizedBox(height: 18),
                   // Gold gradient CTA button
                   GestureDetector(
@@ -330,73 +335,6 @@ class _HeroCard extends ConsumerWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-// =============================================================================
-// Difficulty Row
-// =============================================================================
-
-class _DifficultyRow extends ConsumerWidget {
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final current = ref.watch(difficultyProvider);
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'مستوى الصعوبة',
-          style: AppTextStyles.caption.copyWith(color: AppColors.textMedium),
-        ),
-        const SizedBox(height: 8),
-        Row(
-          children: QuizDifficulty.values.map((d) {
-            final selected = current == d;
-            return Expanded(
-              child: Padding(
-                padding: EdgeInsets.only(
-                  left: d == QuizDifficulty.values.first ? 0 : 6,
-                ),
-                child: GestureDetector(
-                  onTap: () => ref.read(difficultyProvider.notifier).set(d),
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 200),
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    decoration: BoxDecoration(
-                      color: selected
-                          ? AppColors.capitalsColor.withAlpha(220)
-                          : AppColors.surfaceContainerHighest,
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(
-                        color: selected
-                            ? AppColors.capitalsColor
-                            : AppColors.divider.withAlpha(60),
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        Text(d.emoji,
-                            style: const TextStyle(fontSize: 16)),
-                        const SizedBox(height: 2),
-                        Text(
-                          d.labelAr,
-                          style: AppTextStyles.caption.copyWith(
-                            color: selected
-                                ? Colors.white
-                                : AppColors.textMedium,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            );
-          }).toList(),
-        ),
-      ],
     );
   }
 }

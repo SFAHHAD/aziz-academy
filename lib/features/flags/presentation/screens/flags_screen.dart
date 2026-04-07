@@ -6,6 +6,7 @@ import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/features/flags/providers/flags_quiz_provider.dart';
+import 'package:aziz_academy/core/widgets/difficulty_row.dart';
 import 'package:google_fonts/google_fonts.dart';
 class FlagsScreen extends ConsumerWidget {
   const FlagsScreen({super.key});
@@ -65,7 +66,15 @@ class _FlagsIntroScreen extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         _HeroCard(questionsAsync: questionsAsync),
-                        const SizedBox(height: 28),
+                        const SizedBox(height: 18),
+                        Consumer(builder: (context, ref, _) {
+                          return DifficultyRow(
+                            value: ref.watch(flagsDifficultyProvider),
+                            onChanged: (d) => ref.read(flagsDifficultyProvider.notifier).set(d),
+                            accentColor: AppColors.error,
+                          );
+                        }),
+                        const SizedBox(height: 18),
                         Text(
                           'أو اختر قارة',
                           style: AppTextStyles.bodyMedium.copyWith(

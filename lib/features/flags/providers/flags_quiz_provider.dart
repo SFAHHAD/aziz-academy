@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
+import 'package:aziz_academy/core/models/quiz_difficulty.dart';
 import 'package:aziz_academy/features/flags/data/flags_repository.dart';
 
 final flagsRepositoryProvider = Provider<FlagsRepository>(
@@ -29,6 +30,18 @@ class FlagsContinentFilterNotifier extends Notifier<String?> {
 }
 final flagsContinentFilterProvider = NotifierProvider<FlagsContinentFilterNotifier, String?>(FlagsContinentFilterNotifier.new);
 
+class FlagsDifficultyNotifier extends Notifier<QuizDifficulty> {
+  @override
+  QuizDifficulty build() => QuizDifficulty.medium;
+  void set(QuizDifficulty d) => state = d;
+}
+
+final flagsDifficultyProvider =
+    NotifierProvider<FlagsDifficultyNotifier, QuizDifficulty>(
+  FlagsDifficultyNotifier.new,
+  name: 'flagsDifficultyProvider',
+);
+
 final flagsQuizProvider =
     AsyncNotifierProvider<FlagsQuizNotifier, QuizSessionState>(
   FlagsQuizNotifier.new,
@@ -44,6 +57,14 @@ class FlagsQuizNotifier extends AsyncNotifier<QuizSessionState> {
     var filtered = questions;
     if (continent != null) {
       filtered = questions.where((q) => q.category == continent).toList();
+    }
+
+    final diff = ref.watch(flagsDifficultyProvider);
+    if (diff != QuizDifficulty.hard) {
+      final minQ = 8.clamp(1, filtered.length);
+      final cap = ((filtered.length * diff.poolFraction).ceil())
+          .clamp(minQ, filtered.length);
+      filtered = filtered.take(cap).toList();
     }
 
     if (filtered.isEmpty) {

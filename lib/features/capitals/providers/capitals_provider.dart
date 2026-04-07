@@ -1,7 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
+import 'package:aziz_academy/core/models/quiz_difficulty.dart';
 import 'package:aziz_academy/features/capitals/data/capitals_repository.dart';
+
+export 'package:aziz_academy/core/models/quiz_difficulty.dart';
 
 // =============================================================================
 // 1. REPOSITORY PROVIDER
@@ -50,35 +53,8 @@ class ContinentFilterNotifier extends Notifier<String?> {
 }
 
 // =============================================================================
-// DIFFICULTY PROVIDER — 1 easy, 2 medium, 3 hard (null = all)
+// DIFFICULTY PROVIDER (capitals)
 // =============================================================================
-
-enum QuizDifficulty { easy, medium, hard }
-
-extension QuizDifficultyExt on QuizDifficulty {
-  String get labelAr {
-    switch (this) {
-      case QuizDifficulty.easy: return 'سهل';
-      case QuizDifficulty.medium: return 'متوسط';
-      case QuizDifficulty.hard: return 'صعب';
-    }
-  }
-  String get emoji {
-    switch (this) {
-      case QuizDifficulty.easy: return '🌱';
-      case QuizDifficulty.medium: return '⚡';
-      case QuizDifficulty.hard: return '🔥';
-    }
-  }
-  /// Max difficulty number included at this level.
-  int get maxDifficulty {
-    switch (this) {
-      case QuizDifficulty.easy: return 1;
-      case QuizDifficulty.medium: return 2;
-      case QuizDifficulty.hard: return 3;
-    }
-  }
-}
 
 final difficultyProvider =
     NotifierProvider<DifficultyNotifier, QuizDifficulty>(

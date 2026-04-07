@@ -15,6 +15,7 @@ import 'package:aziz_academy/features/flags/presentation/screens/flags_quiz_scre
 import 'package:aziz_academy/features/math/presentation/screens/math_screen.dart';
 import 'package:aziz_academy/features/math/presentation/screens/math_quiz_screen.dart';
 import 'package:aziz_academy/features/legal/privacy_policy_screen.dart';
+import 'package:aziz_academy/features/legal/about_screen.dart';
 
 abstract final class AppRoutes {
   static const splash        = '/';
@@ -31,6 +32,7 @@ abstract final class AppRoutes {
   static const sciencesQuiz  = '/sciences/quiz';
   static const trophy        = '/trophy';
   static const privacy       = '/privacy';
+  static const about         = '/about';
 }
 
 final appRouter = GoRouter(
@@ -83,6 +85,10 @@ final appRouter = GoRouter(
     GoRoute(
       path: AppRoutes.privacy,
       builder: (context, state) => const PrivacyPolicyScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.about,
+      builder: (context, state) => const AboutScreen(),
     ),
     GoRoute(
       path: AppRoutes.sciences,

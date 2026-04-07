@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
+import 'package:aziz_academy/core/models/quiz_difficulty.dart';
 import 'package:aziz_academy/features/sciences/data/sciences_repository.dart';
 
 final sciencesRepositoryProvider = Provider<SciencesRepository>(
@@ -36,6 +37,18 @@ class SciencesCategoryFilterNotifier extends Notifier<String?> {
 }
 final categoryFilterProvider = NotifierProvider<SciencesCategoryFilterNotifier, String?>(SciencesCategoryFilterNotifier.new);
 
+class SciencesDifficultyNotifier extends Notifier<QuizDifficulty> {
+  @override
+  QuizDifficulty build() => QuizDifficulty.medium;
+  void set(QuizDifficulty d) => state = d;
+}
+
+final sciencesDifficultyProvider =
+    NotifierProvider<SciencesDifficultyNotifier, QuizDifficulty>(
+  SciencesDifficultyNotifier.new,
+  name: 'sciencesDifficultyProvider',
+);
+
 class SciencesQuizNotifier extends AsyncNotifier<QuizSessionState> {
   @override
   Future<QuizSessionState> build() async {
@@ -45,6 +58,14 @@ class SciencesQuizNotifier extends AsyncNotifier<QuizSessionState> {
     var filtered = questions;
     if (category != null) {
       filtered = questions.where((q) => q.category == category).toList();
+    }
+
+    final diff = ref.watch(sciencesDifficultyProvider);
+    if (diff != QuizDifficulty.hard) {
+      final minQ = 8.clamp(1, filtered.length);
+      final cap = ((filtered.length * diff.poolFraction).ceil())
+          .clamp(minQ, filtered.length);
+      filtered = filtered.take(cap).toList();
     }
 
     if (filtered.isEmpty) {

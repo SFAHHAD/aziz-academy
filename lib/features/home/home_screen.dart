@@ -60,6 +60,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     final progress = achievement?.progress ?? 0.0;
     final capitalsStars = achievement?.capitalsStars ?? 0;
     final logosStars = achievement?.logosStars ?? 0;
+    final mathStars = achievement?.mathStars ?? 0;
+    final sciencesStars = achievement?.sciencesStars ?? 0;
     final streakDays = achievement?.streakCount ?? 0;
 
     final localeAsync = ref.watch(localeProvider);
@@ -99,7 +101,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               progress: progress,
                               streakDays: streakDays,
                             ),
-                            const SizedBox(height: 28),
+                            const SizedBox(height: 16),
+                            _SubjectStarsStrip(
+                              capitalsStars: capitalsStars,
+                              logosStars: logosStars,
+                              mathStars: mathStars,
+                              sciencesStars: sciencesStars,
+                            ),
+                            const SizedBox(height: 20),
 
                             // ── Section label ───────────────────────────────
                             Text(
@@ -187,8 +196,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               emoji: '🔬',
                               accentColor: const Color(0xFFC47AC0), // Softer purple
                               route: AppRoutes.sciences,
-                              stars: 0,
-                              showStars: false,
+                              stars: sciencesStars,
+                              showStars: true,
                               delay: 160,
                             ),
                             _GlassModuleCard(
@@ -200,8 +209,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               emoji: '🔢',
                               accentColor: const Color(0xFF2C63B3), // Deep blue
                               route: AppRoutes.math,
-                              stars: 0,
-                              showStars: false,
+                              stars: mathStars,
+                              showStars: true,
                               delay: 200,
                             ),
                           ]),
@@ -307,6 +316,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             onTap: () => context.push(AppRoutes.privacy),
             child: Icon(
               Icons.privacy_tip_outlined,
+              size: 18,
+              color: AppColors.secondary.withAlpha(220),
+            ),
+          ),
+          const SizedBox(width: 8),
+
+          _GlassPill(
+            onTap: () => context.push(AppRoutes.about),
+            child: Icon(
+              Icons.info_outline_rounded,
               size: 18,
               color: AppColors.secondary.withAlpha(220),
             ),
@@ -460,6 +479,72 @@ class _StarfieldPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+
+// =============================================================================
+// Subject Stars Strip
+// =============================================================================
+
+class _SubjectStarsStrip extends StatelessWidget {
+  const _SubjectStarsStrip({
+    required this.capitalsStars,
+    required this.logosStars,
+    required this.mathStars,
+    required this.sciencesStars,
+  });
+
+  final int capitalsStars;
+  final int logosStars;
+  final int mathStars;
+  final int sciencesStars;
+
+  @override
+  Widget build(BuildContext context) {
+    final subjects = [
+      ('🏛️', 'العواصم', capitalsStars, AppColors.capitalsColor),
+      ('🚩', 'الأعلام',  0,            AppColors.error),
+      ('🏷️', 'الشعارات', logosStars,  AppColors.logosColor),
+      ('🔬', 'العلوم',   sciencesStars, const Color(0xFFC47AC0)),
+      ('🔢', 'الرياضيات', mathStars,   const Color(0xFF2C63B3)),
+    ];
+
+    return Row(
+      children: subjects.map((s) {
+        final emoji = s.$1;
+        final stars = s.$3;
+        final color = s.$4;
+        return Expanded(
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 3),
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+            decoration: BoxDecoration(
+              color: AppColors.surfaceContainerLow,
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(
+                color: stars > 0 ? color.withAlpha(100) : AppColors.glassBorder,
+              ),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(emoji, style: const TextStyle(fontSize: 16)),
+                const SizedBox(height: 3),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: List.generate(3, (i) => Icon(
+                    i < stars ? Icons.star_rounded : Icons.star_border_rounded,
+                    size: 10,
+                    color: i < stars ? AppColors.secondary : AppColors.divider,
+                  )),
+                ),
+              ],
+            ),
+          ),
+        );
+      }).toList(),
+    );
+  }
 }
 
 // =============================================================================

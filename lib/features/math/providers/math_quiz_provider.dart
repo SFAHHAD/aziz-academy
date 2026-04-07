@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
+import 'package:aziz_academy/core/models/quiz_difficulty.dart';
 
 enum MathOperation { addition, subtraction, multiplication, division }
 
@@ -11,6 +12,18 @@ class MathOperationFilterNotifier extends Notifier<MathOperation?> {
   void setFilter(MathOperation? op) => state = op;
 }
 final mathOperationProvider = NotifierProvider<MathOperationFilterNotifier, MathOperation?>(MathOperationFilterNotifier.new);
+
+class MathDifficultyNotifier extends Notifier<QuizDifficulty> {
+  @override
+  QuizDifficulty build() => QuizDifficulty.medium;
+  void set(QuizDifficulty d) => state = d;
+}
+
+final mathDifficultyProvider =
+    NotifierProvider<MathDifficultyNotifier, QuizDifficulty>(
+  MathDifficultyNotifier.new,
+  name: 'mathDifficultyProvider',
+);
 
 final mathQuizProvider =
     AsyncNotifierProvider<MathQuizNotifier, QuizSessionState>(
@@ -22,7 +35,10 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
   @override
   Future<QuizSessionState> build() async {
     final operation = ref.watch(mathOperationProvider);
-    final questions = _generateQuestions(operation, count: 10);
+    final diff = ref.watch(mathDifficultyProvider);
+    // Easy: small numbers / 5 questions, Medium: 10, Hard: 15 with larger range
+    final count = diff == QuizDifficulty.easy ? 5 : (diff == QuizDifficulty.medium ? 10 : 15);
+    final questions = _generateQuestions(operation, count: count, difficulty: diff);
 
     return QuizSessionState(
       questions: questions,
@@ -33,9 +49,13 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
     );
   }
 
-  List<QuizQuestion> _generateQuestions(MathOperation? opFilter, {required int count}) {
+  List<QuizQuestion> _generateQuestions(MathOperation? opFilter, {required int count, QuizDifficulty difficulty = QuizDifficulty.medium}) {
     final random = math.Random();
     List<QuizQuestion> generated = [];
+
+    // Number ranges per difficulty
+    final addMax  = difficulty == QuizDifficulty.easy ? 10 : (difficulty == QuizDifficulty.medium ? 40 : 99);
+    final mulMax  = difficulty == QuizDifficulty.easy ? 5  : (difficulty == QuizDifficulty.medium ? 10 : 15);
 
     for (var i = 0; i < count; i++) {
       final op = opFilter ?? MathOperation.values[random.nextInt(MathOperation.values.length)];
@@ -44,27 +64,27 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
 
       switch (op) {
         case MathOperation.addition:
-          a = random.nextInt(40) + 1; // 1 to 40
-          b = random.nextInt(40) + 1; // 1 to 40
+          a = random.nextInt(addMax) + 1;
+          b = random.nextInt(addMax) + 1;
           answer = a + b;
           operatorStr = '+';
           break;
         case MathOperation.subtraction:
-          a = random.nextInt(50) + 10; // 10 to 59
-          b = random.nextInt(a - 1) + 1; // 1 to a-1
+          a = random.nextInt(addMax) + addMax ~/ 2;
+          b = random.nextInt(a - 1).clamp(1, a - 1);
           answer = a - b;
           operatorStr = '-';
           break;
         case MathOperation.multiplication:
-          a = random.nextInt(10) + 2; // 2 to 11
-          b = random.nextInt(10) + 2; // 2 to 11
+          a = random.nextInt(mulMax) + 2;
+          b = random.nextInt(mulMax) + 2;
           answer = a * b;
           operatorStr = '×';
           break;
         case MathOperation.division:
-          b = random.nextInt(10) + 2; // 2 to 11
-          answer = random.nextInt(10) + 2; // 2 to 11 (the result)
-          a = b * answer; // a is always divisible by b
+          b = random.nextInt(mulMax) + 2;
+          answer = random.nextInt(mulMax) + 2;
+          a = b * answer;
           operatorStr = '÷';
           break;
       }
@@ -144,9 +164,10 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
   }
 
   void restart() {
-    // Math dynamically generates NEW questions on restart for endless replayability!
     final operation = ref.read(mathOperationProvider);
-    final newQuestions = _generateQuestions(operation, count: 10);
+    final diff = ref.read(mathDifficultyProvider);
+    final count = diff == QuizDifficulty.easy ? 5 : (diff == QuizDifficulty.medium ? 10 : 15);
+    final newQuestions = _generateQuestions(operation, count: count, difficulty: diff);
     
     state = AsyncData(QuizSessionState(
       questions: newQuestions,
