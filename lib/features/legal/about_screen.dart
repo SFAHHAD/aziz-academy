@@ -94,6 +94,13 @@ class AboutScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 _InfoCard(
+                  icon: '☁️',
+                  title: 'المزامنة',
+                  body:
+                      'لا توجد مزامنة سحابية حالياً — النقاط والشارات تبقى على هذا الجهاز فقط.',
+                ),
+                const SizedBox(height: 12),
+                _InfoCard(
                   icon: '🛠️',
                   title: 'التقنية',
                   body:

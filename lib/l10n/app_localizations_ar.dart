@@ -255,4 +255,349 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get brand_netflix_fact =>
       'بدأت نتفليكس عام 1997 كخدمة لتأجير أقراص DVD بالبريد! اليوم لديها أكثر من 260 مليون مشترك في 190 دولة.';
+
+  @override
+  String get homeBrandName => 'أكاديمية عزيز';
+
+  @override
+  String get homeSectionLearn => 'ماذا تريد أن تتعلم اليوم؟';
+
+  @override
+  String get homeHeroWelcome => 'أهلاً بك يا مستكشف! 🌟';
+
+  @override
+  String get homeHeroSubtitle => 'النجوم مصطفّة ليوم اكتشاف جديد.';
+
+  @override
+  String get homeCorrectTotalLabel => 'إجابات صحيحة';
+
+  @override
+  String homeStreakLabel(int days) {
+    return '$days يوم متتالي';
+  }
+
+  @override
+  String homeProgressPercent(int percent) {
+    return '$percent% مكتمل';
+  }
+
+  @override
+  String get homeRecapTitle => 'مراجعة سريعة';
+
+  @override
+  String homeRecapBody(int count) {
+    return '$count سؤال محفوظ بعد خطأ — راجعها الآن';
+  }
+
+  @override
+  String get homeRecapStart => 'ابدأ';
+
+  @override
+  String get dailyMissionTitle => 'المهمة اليومية';
+
+  @override
+  String get dailyMissionSubtitleMaps => 'استكشف الخرائط واكتشف قارة جديدة';
+
+  @override
+  String get dailyMissionSubtitleCapitals => 'جولة عواصم — طابق الدول بعواصمها';
+
+  @override
+  String get dailyMissionSubtitleFlags => 'تحدّى الأعلام وخمّن الدولة';
+
+  @override
+  String get dailyMissionSubtitleSciences => 'رحلة العلوم والاكتشافات';
+
+  @override
+  String get dailyMissionSubtitleMath => 'تمرين ذهني في الرياضيات';
+
+  @override
+  String get dailyMissionCtaToMaps => 'إلى الخرائط';
+
+  @override
+  String get dailyMissionCtaStart => 'ابدأ';
+
+  @override
+  String get seasonalWinter => 'أجواء شتوية مناسبة للتعلم ☃️';
+
+  @override
+  String get seasonalSpring => 'ربيع المعرفة يبدأ بسؤال واحد 🌸';
+
+  @override
+  String get seasonalSummer => 'صيف الاكتشاف — تعلّم بخطوة كل يوم ☀️';
+
+  @override
+  String get seasonalAutumn => 'وقت تركيز وعودة قوية للروتين 📚';
+
+  @override
+  String get langSwitchEn => '🌐 EN';
+
+  @override
+  String get langSwitchAr => '🌐 AR';
+
+  @override
+  String streakSnack(int days) {
+    return '🔥 سلسلة $days أيام متتالية! أحسنت!';
+  }
+
+  @override
+  String get quiz_flags => 'الأعلام';
+
+  @override
+  String get quiz_maps => 'الخرائط';
+
+  @override
+  String get quiz_logos => 'الشعارات';
+
+  @override
+  String get quiz_sciences => 'العلوم والاكتشافات';
+
+  @override
+  String get quiz_math => 'الرياضيات';
+
+  @override
+  String get moduleCapitalsSubtitle => 'طابق الدول بعواصمها';
+
+  @override
+  String get moduleFlagsSubtitle => 'خمن الدولة من علمها';
+
+  @override
+  String get moduleMapsSubtitle => 'استكشف القارات والمناطق';
+
+  @override
+  String get moduleLogosSubtitle => 'تعرف على العلامات التجارية';
+
+  @override
+  String get moduleSciencesSubtitle => 'رحلة المعرفة والاكتشاف';
+
+  @override
+  String get moduleMathSubtitle => 'اختبار الذكاء والعمليات الحسابية';
+
+  @override
+  String get subjectStripCapitals => 'العواصم';
+
+  @override
+  String get subjectStripFlags => 'الأعلام';
+
+  @override
+  String get subjectStripLogos => 'الشعارات';
+
+  @override
+  String get subjectStripSciences => 'العلوم';
+
+  @override
+  String get subjectStripMath => 'الرياضيات';
+
+  @override
+  String get settingsParentTitle => 'إعدادات للأهل';
+
+  @override
+  String get settingsSoundTitle => 'الصوت والنطق';
+
+  @override
+  String get settingsSoundSubtitle => 'المؤثرات والقراءة الصوتية';
+
+  @override
+  String get settingsReducedMotionTitle => 'تقليل الحركة';
+
+  @override
+  String get settingsReducedMotionSubtitle => 'أقل حركة في شاشات النجاح';
+
+  @override
+  String get settingsCoPlayTitle => 'لعب مع الأهل';
+
+  @override
+  String get settingsCoPlaySubtitle => 'إخفاء الخيارات حتى تظهرها أنت';
+
+  @override
+  String get settingsPracticeTitle => 'تمرين بدون خسارة قلوب';
+
+  @override
+  String get settingsPracticeSubtitle => 'لا تُحفَظ الشارات في هذا الوضع';
+
+  @override
+  String get settingsExportTitle => 'تصدير نسخة محلية (JSON)';
+
+  @override
+  String get settingsExportSubtitle =>
+      'مشاركة ملف نصي للنسخ الاحتياطي أو الدعم — بدون رفع تلقائي';
+
+  @override
+  String get settingsImportTitle => 'استيراد نسخة احتياطية (JSON)';
+
+  @override
+  String get settingsImportSubtitle =>
+      'استبدال التقدم على هذا الجهاز — للأهل فقط';
+
+  @override
+  String get backupImportTitle => 'استيراد نسخة احتياطية؟';
+
+  @override
+  String get backupImportBody =>
+      'سيتم استبدال الإنجازات وقائمة المراجعة على هذا الجهاز بالبيانات من الملف. لا يمكن التراجع تلقائياً.';
+
+  @override
+  String get backupCancel => 'إلغاء';
+
+  @override
+  String get backupConfirm => 'استيراد';
+
+  @override
+  String get backupReadFileError => 'تعذّر قراءة الملف.';
+
+  @override
+  String get backupInvalidJson => 'الملف ليس JSON صالحاً.';
+
+  @override
+  String get backupInvalidFile => 'الملف لا يخص هذا التطبيق.';
+
+  @override
+  String get backupUnsupportedVersion => 'إصدار النسخة غير مدعوم.';
+
+  @override
+  String get backupMissingAchievements => 'بيانات الإنجازات غير صالحة.';
+
+  @override
+  String get backupMissingRecap => 'بيانات المراجعة غير صالحة.';
+
+  @override
+  String get backupSnackSuccess => 'تم استيراد النسخة بنجاح.';
+
+  @override
+  String get backupShareSubject => 'نسخة تقدم أكاديمية عزيز';
+
+  @override
+  String get errorPageTitle => 'الصفحة غير موجودة';
+
+  @override
+  String get errorPageHome => 'العودة للرئيسية';
+
+  @override
+  String get badge_capitals_explorer_condition =>
+      'أكمل اختبار العواصم لمرة واحدة على الأقل بنجاح.';
+
+  @override
+  String get badge_capitals_expert_condition =>
+      'أكمل اختبار العواصم بشكل مثالي (3 نجوم / 0 أخطاء).';
+
+  @override
+  String get badge_map_master_condition =>
+      'قم بفتح وتجربة قسم الخرائط لجميع القارات الـ 6.';
+
+  @override
+  String get badge_logo_detective_condition =>
+      'أكمل اختبار الشعارات لمرة واحدة على الأقل بنجاح.';
+
+  @override
+  String get badge_logo_hunter_condition =>
+      'أكمل اختبار الشعارات بشكل مثالي (3 نجوم / 0 أخطاء).';
+
+  @override
+  String get badge_trivia_titan_condition =>
+      'أجب على ما مجموعه 25 سؤال بشكل صحيح عبر جميع أقسام الأكاديمية.';
+
+  @override
+  String get badge_science_genius_name => 'عبقري العلوم';
+
+  @override
+  String get badge_science_genius_desc => 'للتفوق في تحديات العلوم';
+
+  @override
+  String get badge_science_genius_condition =>
+      'أكمل تحدي العلوم بـ 3 نجوم (0 أخطاء).';
+
+  @override
+  String get badge_math_champion_name => 'بطل الرياضيات';
+
+  @override
+  String get badge_math_champion_desc => 'لإنهاء التحدي الحسابي بنجاح';
+
+  @override
+  String get badge_math_champion_condition =>
+      'أكمل تحدي الرياضيات بـ 3 نجوم (0 أخطاء).';
+
+  @override
+  String get badge_perfect_scholar_condition =>
+      'احصل على الأوسمة الذهبية في العواصم، الشعارات، العلوم، والرياضيات.';
+
+  @override
+  String get badge_academy_star_condition =>
+      'وسام الختام: احصل على جميع الشارات الـ 9 الأخرى أولاً!';
+
+  @override
+  String get trophyLoadError => 'تعذّر تحميل الكؤوس. أعد المحاولة لاحقاً.';
+
+  @override
+  String get trophyTapHint => 'اضغط أي شارة لمعرفة شرط الحصول عليها';
+
+  @override
+  String get trophyLockedHint => 'استمر في اللعب لفتح هذه الشارة';
+
+  @override
+  String get trophyOk => 'حسناً';
+
+  @override
+  String get difficultyLabel => 'مستوى الصعوبة';
+
+  @override
+  String get difficultyEasy => 'سهل';
+
+  @override
+  String get difficultyMedium => 'متوسط';
+
+  @override
+  String get difficultyHard => 'صعب';
+
+  @override
+  String get funFactCorrectPrefix => 'الإجابة الصحيحة:';
+
+  @override
+  String get networkRetry => 'إعادة المحاولة';
+
+  @override
+  String get networkImageError => 'تعذّر تحميل الصورة';
+
+  @override
+  String get splashTagline => 'تعلّم. العب. اكتشف.';
+
+  @override
+  String get splashStartButton => 'ابدأ التعلم الآن';
+
+  @override
+  String get mapsLoadError =>
+      'تعذّر تحميل الخرائط. تحقق من الاتصال ثم أعد المحاولة.';
+
+  @override
+  String get gameOverBack => 'العودة للقائمة';
+
+  @override
+  String get gameOverRoundScore => 'نتيجة الجولة';
+
+  @override
+  String get victoryShare => 'مشاركة';
+
+  @override
+  String get victoryPlayAgain => 'العب مجدداً';
+
+  @override
+  String get quizLoadingError => 'حدث خطأ ما';
+
+  @override
+  String get privacyTitle => 'الخصوصية';
+
+  @override
+  String get aboutTitle => 'حول التطبيق';
+
+  @override
+  String get trophyAchievementDone => 'إنجاز مكتمل!';
+
+  @override
+  String get trophyHowToEarnBadge => 'شروط الحصول على الشارة:';
+
+  @override
+  String get trophyHallTitle => 'قاعة الكؤوس';
+
+  @override
+  String trophyBadgeCount(int unlocked, int total) {
+    return '$unlocked / $total شارات';
+  }
 }

@@ -1,31 +1,34 @@
 import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
 
-/// Full-screen overlay shown when the player completes the quiz with lives remaining.
-///
-/// Shows:
-/// - Confetti cannon 🎊
-/// - "Master of Capitals!" heading
-/// - Final score (correct / total)
-/// - Star rating based on [QuizSessionState.livesRemaining]
-/// - "Play Again" and "Back to Map" buttons
+/// Full-screen overlay when the player completes the quiz with lives remaining.
 class VictoryOverlay extends StatefulWidget {
   const VictoryOverlay({
     super.key,
     required this.session,
     required this.onPlayAgain,
     required this.onBack,
+    this.title = 'أحسنت يا بطل!',
+    this.subtitle = 'أتممت الاختبار بتفوق! 🎉',
+    this.reducedMotion = false,
+    this.enableShare = true,
+    this.shareModuleLabel = 'أكاديمية عزيز',
   });
 
   final QuizSessionState session;
   final VoidCallback onPlayAgain;
   final VoidCallback onBack;
+  final String title;
+  final String subtitle;
+  final bool reducedMotion;
+  final bool enableShare;
+  final String shareModuleLabel;
 
-  /// Stars based on hearts remaining at end of quiz.
   static int starsFor(int livesRemaining) => livesRemaining.clamp(0, 3);
 
   @override
@@ -34,7 +37,7 @@ class VictoryOverlay extends StatefulWidget {
 
 class _VictoryOverlayState extends State<VictoryOverlay>
     with TickerProviderStateMixin {
-  late final ConfettiController _confetti;
+  ConfettiController? _confetti;
   late final AnimationController _entryCtrl;
   late final Animation<double> _fade;
   late final Animation<double> _scale;
@@ -43,30 +46,39 @@ class _VictoryOverlayState extends State<VictoryOverlay>
   void initState() {
     super.initState();
 
-    // Confetti — long enough to feel celebratory
-    _confetti = ConfettiController(duration: const Duration(seconds: 6))
-      ..play();
+    if (!widget.reducedMotion) {
+      _confetti = ConfettiController(duration: const Duration(seconds: 5))
+        ..play();
+    }
 
-    // Entry animation: scale + fade in
     _entryCtrl = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 550),
+      duration: Duration(milliseconds: widget.reducedMotion ? 1 : 550),
     )..forward();
 
     _fade = CurvedAnimation(parent: _entryCtrl, curve: Curves.easeOut);
-    _scale = Tween<double>(begin: 0.82, end: 1.0).animate(
+    _scale = Tween<double>(begin: widget.reducedMotion ? 1.0 : 0.82, end: 1.0)
+        .animate(
       CurvedAnimation(parent: _entryCtrl, curve: Curves.easeOutBack),
     );
   }
 
   @override
   void dispose() {
-    _confetti.dispose();
+    _confetti?.dispose();
     _entryCtrl.dispose();
     super.dispose();
   }
 
   int get _stars => VictoryOverlay.starsFor(widget.session.livesRemaining);
+  int get _wrong =>
+      (widget.session.totalQuestions - widget.session.score).clamp(0, 999);
+
+  Future<void> _onShare() async {
+    final text =
+        '${widget.shareModuleLabel}\n${widget.session.score}/${widget.session.totalQuestions} إجابات صحيحة • $_wrong خطأ\nنجوم: $_stars/3 ⭐';
+    await Share.share(text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,9 +86,8 @@ class _VictoryOverlayState extends State<VictoryOverlay>
 
     return Stack(
       children: [
-        // ── Frosted backdrop ─────────────────────────────────────────────
         GestureDetector(
-          onTap: () {}, // absorb taps — don't let them reach quiz body
+          onTap: () {},
           child: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -90,37 +101,35 @@ class _VictoryOverlayState extends State<VictoryOverlay>
             ),
           ),
         ),
-
-        // ── Confetti cannon at top-centre ─────────────────────────────────
-        Align(
-          alignment: Alignment.topCenter,
-          child: ConfettiWidget(
-            confettiController: _confetti,
-            blastDirectionality: BlastDirectionality.explosive,
-            blastDirection: pi / 2,
-            numberOfParticles: 22,
-            emissionFrequency: 0.04,
-            gravity: 0.18,
-            colors: const [
-              AppColors.primary,
-              AppColors.secondary,
-              AppColors.accent,
-              AppColors.success,
-              Colors.pinkAccent,
-              Colors.lightBlueAccent,
-            ],
-            shouldLoop: false,
+        if (_confetti != null)
+          Align(
+            alignment: Alignment.topCenter,
+            child: ConfettiWidget(
+              confettiController: _confetti!,
+              blastDirectionality: BlastDirectionality.explosive,
+              blastDirection: pi / 2,
+              numberOfParticles: 22,
+              emissionFrequency: 0.04,
+              gravity: 0.18,
+              colors: const [
+                AppColors.primary,
+                AppColors.secondary,
+                AppColors.accent,
+                AppColors.success,
+                Colors.pinkAccent,
+                Colors.lightBlueAccent,
+              ],
+              shouldLoop: false,
+            ),
           ),
-        ),
-
-        // ── Content card ─────────────────────────────────────────────────
         Center(
           child: FadeTransition(
             opacity: _fade,
             child: ScaleTransition(
               scale: _scale,
               child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 40),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 28, vertical: 40),
                 child: ConstrainedBox(
                   constraints: BoxConstraints(maxWidth: isTablet ? 480 : 360),
                   child: Container(
@@ -142,7 +151,7 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                         const Text('🏆', style: TextStyle(fontSize: 72)),
                         const SizedBox(height: 12),
                         Text(
-                          'بطل العواصم!',
+                          widget.title,
                           textAlign: TextAlign.center,
                           style: AppTextStyles.displayMedium.copyWith(
                             color: AppColors.textDark,
@@ -151,19 +160,24 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          'أتممت الاختبار بتفوق! 🎉',
+                          widget.subtitle,
                           style: AppTextStyles.bodyMedium.copyWith(
                             color: AppColors.textMedium,
                           ),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 24),
-
-                        // Score pill
                         _ScorePill(session: widget.session),
+                        const SizedBox(height: 12),
+                        Text(
+                          'صحيح: ${widget.session.score}  •  خطأ: $_wrong',
+                          style: AppTextStyles.bodyMedium.copyWith(
+                            color: AppColors.textMedium,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                         const SizedBox(height: 20),
-
-                        // Star row
                         _StarRow(stars: _stars),
                         const SizedBox(height: 8),
                         Text(
@@ -173,8 +187,15 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                           ),
                         ),
                         const SizedBox(height: 28),
-
-                        // Play Again
+                        if (widget.enableShare) ...[
+                          _ActionButton(
+                            label: 'مشاركة الإنجاز',
+                            icon: Icons.ios_share_rounded,
+                            backgroundColor: AppColors.secondary,
+                            onPressed: _onShare,
+                          ),
+                          const SizedBox(height: 12),
+                        ],
                         _ActionButton(
                           label: 'العب مجدداً',
                           icon: Icons.refresh_rounded,
@@ -182,11 +203,9 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                           onPressed: widget.onPlayAgain,
                         ),
                         const SizedBox(height: 12),
-
-                        // Back to Map
                         _ActionButton(
                           label: 'العودة للقائمة',
-                          icon: Icons.map_rounded,
+                          icon: Icons.home_rounded,
                           backgroundColor: Colors.transparent,
                           foregroundColor: AppColors.textDark,
                           side: const BorderSide(
@@ -218,10 +237,6 @@ class _VictoryOverlayState extends State<VictoryOverlay>
     }
   }
 }
-
-// =============================================================================
-// Sub-widgets shared between overlays
-// =============================================================================
 
 class _ScorePill extends StatelessWidget {
   const _ScorePill({required this.session});
@@ -316,20 +331,25 @@ class _ActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: ElevatedButton.icon(
-        onPressed: onPressed,
-        icon: Icon(icon, size: 22),
-        label: Text(label),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
-          foregroundColor: foregroundColor,
-          minimumSize: const Size(double.infinity, 56),
-          textStyle: AppTextStyles.labelLarge.copyWith(color: foregroundColor),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-            side: side,
+      child: Semantics(
+        label: label,
+        button: true,
+        child: ElevatedButton.icon(
+          onPressed: onPressed,
+          icon: Icon(icon, size: 22),
+          label: Text(label),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: backgroundColor,
+            foregroundColor: foregroundColor,
+            minimumSize: const Size(double.infinity, 56),
+            textStyle:
+                AppTextStyles.labelLarge.copyWith(color: foregroundColor),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+              side: side,
+            ),
+            elevation: backgroundColor == Colors.transparent ? 0 : 2,
           ),
-          elevation: backgroundColor == Colors.transparent ? 0 : 2,
         ),
       ),
     );

@@ -261,4 +261,354 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get brand_netflix_fact =>
       'Netflix started in 1997 as a DVD-by-mail service! Today it has over 260 million subscribers in 190 countries. Its recommendation algorithm saves it over USD 1 billion per year by helping people find shows they love.';
+
+  @override
+  String get homeBrandName => 'Aziz Academy';
+
+  @override
+  String get homeSectionLearn => 'What do you want to learn today?';
+
+  @override
+  String get homeHeroWelcome => 'Welcome, explorer! 🌟';
+
+  @override
+  String get homeHeroSubtitle =>
+      'The stars are aligned for a new discovery today.';
+
+  @override
+  String get homeCorrectTotalLabel => 'Correct answers';
+
+  @override
+  String homeStreakLabel(int days) {
+    return '$days day streak';
+  }
+
+  @override
+  String homeProgressPercent(int percent) {
+    return '$percent% complete';
+  }
+
+  @override
+  String get homeRecapTitle => 'Quick review';
+
+  @override
+  String homeRecapBody(int count) {
+    return '$count questions saved from mistakes — review now';
+  }
+
+  @override
+  String get homeRecapStart => 'Start';
+
+  @override
+  String get dailyMissionTitle => 'Daily Mission';
+
+  @override
+  String get dailyMissionSubtitleMaps =>
+      'Explore the maps and discover a new continent';
+
+  @override
+  String get dailyMissionSubtitleCapitals =>
+      'Capitals round — match countries to capitals';
+
+  @override
+  String get dailyMissionSubtitleFlags => 'Flags challenge — guess the country';
+
+  @override
+  String get dailyMissionSubtitleSciences => 'Science & discovery journey';
+
+  @override
+  String get dailyMissionSubtitleMath => 'Mental math practice';
+
+  @override
+  String get dailyMissionCtaToMaps => 'To maps';
+
+  @override
+  String get dailyMissionCtaStart => 'Start';
+
+  @override
+  String get seasonalWinter => 'Cozy winter vibes for learning ☃️';
+
+  @override
+  String get seasonalSpring =>
+      'A season of knowledge starts with one question 🌸';
+
+  @override
+  String get seasonalSummer =>
+      'Summer of discovery — learn a little every day ☀️';
+
+  @override
+  String get seasonalAutumn => 'Focus time and a strong return to routine 📚';
+
+  @override
+  String get langSwitchEn => '🌐 EN';
+
+  @override
+  String get langSwitchAr => '🌐 AR';
+
+  @override
+  String streakSnack(int days) {
+    return '🔥 $days days in a row — great job!';
+  }
+
+  @override
+  String get quiz_flags => 'Flags';
+
+  @override
+  String get quiz_maps => 'Maps';
+
+  @override
+  String get quiz_logos => 'Logos';
+
+  @override
+  String get quiz_sciences => 'Sciences';
+
+  @override
+  String get quiz_math => 'Math';
+
+  @override
+  String get moduleCapitalsSubtitle => 'Match countries to their capitals';
+
+  @override
+  String get moduleFlagsSubtitle => 'Guess the country from the flag';
+
+  @override
+  String get moduleMapsSubtitle => 'Explore continents and regions';
+
+  @override
+  String get moduleLogosSubtitle => 'Recognise world brands';
+
+  @override
+  String get moduleSciencesSubtitle => 'Journey of knowledge and discovery';
+
+  @override
+  String get moduleMathSubtitle => 'Arithmetic and mental math challenges';
+
+  @override
+  String get subjectStripCapitals => 'Capitals';
+
+  @override
+  String get subjectStripFlags => 'Flags';
+
+  @override
+  String get subjectStripLogos => 'Logos';
+
+  @override
+  String get subjectStripSciences => 'Sciences';
+
+  @override
+  String get subjectStripMath => 'Math';
+
+  @override
+  String get settingsParentTitle => 'Parent settings';
+
+  @override
+  String get settingsSoundTitle => 'Sound & voice';
+
+  @override
+  String get settingsSoundSubtitle => 'Effects and text-to-speech';
+
+  @override
+  String get settingsReducedMotionTitle => 'Reduce motion';
+
+  @override
+  String get settingsReducedMotionSubtitle => 'Less motion on success screens';
+
+  @override
+  String get settingsCoPlayTitle => 'Play with parents';
+
+  @override
+  String get settingsCoPlaySubtitle => 'Hide choices until you reveal them';
+
+  @override
+  String get settingsPracticeTitle => 'Practice without losing hearts';
+
+  @override
+  String get settingsPracticeSubtitle => 'Badges are not saved in this mode';
+
+  @override
+  String get settingsExportTitle => 'Export local backup (JSON)';
+
+  @override
+  String get settingsExportSubtitle =>
+      'Share a text file for backup or support — no auto-upload';
+
+  @override
+  String get settingsImportTitle => 'Import backup (JSON)';
+
+  @override
+  String get settingsImportSubtitle =>
+      'Replace progress on this device — parents only';
+
+  @override
+  String get backupImportTitle => 'Import backup?';
+
+  @override
+  String get backupImportBody =>
+      'Achievements and the review queue on this device will be replaced with the file data. This cannot be undone automatically.';
+
+  @override
+  String get backupCancel => 'Cancel';
+
+  @override
+  String get backupConfirm => 'Import';
+
+  @override
+  String get backupReadFileError => 'Could not read the file.';
+
+  @override
+  String get backupInvalidJson => 'The file is not valid JSON.';
+
+  @override
+  String get backupInvalidFile => 'Invalid backup file.';
+
+  @override
+  String get backupUnsupportedVersion => 'Unsupported backup version.';
+
+  @override
+  String get backupMissingAchievements => 'Invalid achievements data.';
+
+  @override
+  String get backupMissingRecap => 'Invalid review queue data.';
+
+  @override
+  String get backupSnackSuccess => 'Backup imported successfully.';
+
+  @override
+  String get backupShareSubject => 'Aziz Academy progress backup';
+
+  @override
+  String get errorPageTitle => 'Page not found';
+
+  @override
+  String get errorPageHome => 'Back to home';
+
+  @override
+  String get badge_capitals_explorer_condition =>
+      'Complete the capitals quiz successfully at least once.';
+
+  @override
+  String get badge_capitals_expert_condition =>
+      'Finish the capitals quiz perfectly (3 stars / 0 mistakes).';
+
+  @override
+  String get badge_map_master_condition =>
+      'Open and try the maps section for all 6 continents.';
+
+  @override
+  String get badge_logo_detective_condition =>
+      'Complete the logos quiz successfully at least once.';
+
+  @override
+  String get badge_logo_hunter_condition =>
+      'Finish the logos quiz perfectly (3 stars / 0 mistakes).';
+
+  @override
+  String get badge_trivia_titan_condition =>
+      'Answer 25 questions correctly across all academy modules.';
+
+  @override
+  String get badge_science_genius_name => 'Science Genius';
+
+  @override
+  String get badge_science_genius_desc => 'For excelling in science challenges';
+
+  @override
+  String get badge_science_genius_condition =>
+      'Complete the science quiz with 3 stars (0 mistakes).';
+
+  @override
+  String get badge_math_champion_name => 'Math Champion';
+
+  @override
+  String get badge_math_champion_desc => 'For mastering the math challenge';
+
+  @override
+  String get badge_math_champion_condition =>
+      'Complete the math quiz with 3 stars (0 mistakes).';
+
+  @override
+  String get badge_perfect_scholar_condition =>
+      'Earn gold-level performance in Capitals, Logos, Sciences, and Math.';
+
+  @override
+  String get badge_academy_star_condition =>
+      'Final badge: unlock all 9 other badges first!';
+
+  @override
+  String get trophyLoadError => 'Could not load trophies. Try again later.';
+
+  @override
+  String get trophyTapHint => 'Tap a badge to see how to earn it';
+
+  @override
+  String get trophyLockedHint => 'Keep playing to unlock this badge';
+
+  @override
+  String get trophyOk => 'OK';
+
+  @override
+  String get difficultyLabel => 'Difficulty';
+
+  @override
+  String get difficultyEasy => 'Easy';
+
+  @override
+  String get difficultyMedium => 'Medium';
+
+  @override
+  String get difficultyHard => 'Hard';
+
+  @override
+  String get funFactCorrectPrefix => 'Correct answer:';
+
+  @override
+  String get networkRetry => 'Retry';
+
+  @override
+  String get networkImageError => 'Could not load image';
+
+  @override
+  String get splashTagline => 'Learn. Play. Discover.';
+
+  @override
+  String get splashStartButton => 'Start Learning';
+
+  @override
+  String get mapsLoadError =>
+      'Could not load maps. Check your connection and try again.';
+
+  @override
+  String get gameOverBack => 'Back to menu';
+
+  @override
+  String get gameOverRoundScore => 'Round score';
+
+  @override
+  String get victoryShare => 'Share';
+
+  @override
+  String get victoryPlayAgain => 'Play again';
+
+  @override
+  String get quizLoadingError => 'Something went wrong';
+
+  @override
+  String get privacyTitle => 'Privacy';
+
+  @override
+  String get aboutTitle => 'About';
+
+  @override
+  String get trophyAchievementDone => 'Achievement complete!';
+
+  @override
+  String get trophyHowToEarnBadge => 'How to earn this badge:';
+
+  @override
+  String get trophyHallTitle => 'Trophy Hall';
+
+  @override
+  String trophyBadgeCount(int unlocked, int total) {
+    return '$unlocked / $total badges';
+  }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:aziz_academy/core/providers/achievement_provider.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
@@ -55,8 +56,8 @@ class _SciencesIntroScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final questionsAsync = ref.watch(sciencesQuestionsProvider);
-    // TODO: implement specific sciences stars tracking
-    final bestStars = 0; // Replace with achievement system implementation if present.
+    final bestStars =
+        ref.watch(achievementProvider).value?.sciencesStars ?? 0;
 
     return Scaffold(
       backgroundColor: AppColors.background,

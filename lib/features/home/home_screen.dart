@@ -3,11 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/locale_provider.dart';
+import 'package:aziz_academy/core/logic/daily_mission.dart';
+import 'package:aziz_academy/core/models/recap_module.dart';
+import 'package:aziz_academy/core/providers/recap_arm_provider.dart';
+import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
+import 'package:aziz_academy/l10n/app_localizations.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
+import 'package:aziz_academy/core/services/local_backup_service.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -40,7 +48,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       ref.read(audioServiceProvider).startBgm();
+      try {
+        await ref.read(appSettingsProvider.future);
+        final s = ref.read(appSettingsProvider).value;
+        if (s != null) {
+          ref.read(audioServiceProvider).updateMuteStatus(!s.soundEnabled);
+        }
+      } catch (_) {}
+      final beforeStreak =
+          ref.read(achievementProvider).value?.streakCount ?? 0;
       await ref.read(achievementProvider.notifier).recordDailyVisit();
+      if (!mounted) return;
+      final afterStreak =
+          ref.read(achievementProvider).value?.streakCount ?? 0;
+      if (afterStreak > beforeStreak &&
+          (afterStreak == 3 || afterStreak == 7)) {
+        ScaffoldMessenger.maybeOf(context)?.showSnackBar(
+          SnackBar(
+            content: Text(context.l10n.streakSnack(afterStreak)),
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      }
     });
   }
 
@@ -53,6 +82,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     final achievementAsync = ref.watch(achievementProvider);
     final achievement = achievementAsync.value;
     final unlockedCount = achievement?.unlockedBadges.length ?? 0;
@@ -87,7 +117,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                         child: _buildTopBar(context, ref, unlockedCount, isArabic),
                       ),
                       SliverToBoxAdapter(
-                        child: _buildHeroSection(isArabic, _floatCtrl),
+                        child: _buildHeroSection(context, _floatCtrl),
                       ),
                       SliverPadding(
                         padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
@@ -97,12 +127,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
                             // ── Progress strip ──────────────────────────────
                             _GlowProgressStrip(
+                              l10n: l10n,
                               totalCorrect: totalCorrect,
                               progress: progress,
                               streakDays: streakDays,
                             ),
                             const SizedBox(height: 16),
                             _SubjectStarsStrip(
+                              l10n: l10n,
                               capitalsStars: capitalsStars,
                               logosStars: logosStars,
                               mathStars: mathStars,
@@ -112,9 +144,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
                             // ── Section label ───────────────────────────────
                             Text(
-                              isArabic
-                                  ? 'ماذا تريد أن تتعلم اليوم؟'
-                                  : 'Begin Your Journey',
+                              l10n.homeSectionLearn,
                               style: AppTextStyles.headingSmall.copyWith(
                                 color: AppColors.textMedium,
                                 letterSpacing: 1,
@@ -136,11 +166,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                           ),
                           delegate: SliverChildListDelegate([
                             _GlassModuleCard(
-                              title: isArabic ? 'العواصم' : 'Capitals',
-                              titleEn: 'Capitals',
-                              subtitle: isArabic
-                                  ? 'طابق الدول بعواصمها'
-                                  : 'Match countries to their capitals',
+                              title: l10n.quiz_capitals,
+                              subtitle: l10n.moduleCapitalsSubtitle,
                               emoji: '🏛️',
                               accentColor: AppColors.capitalsColor,
                               route: AppRoutes.capitals,
@@ -149,11 +176,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               delay: 0,
                             ),
                             _GlassModuleCard(
-                              title: isArabic ? 'الأعلام' : 'Flags',
-                              titleEn: 'Flags',
-                              subtitle: isArabic
-                                  ? 'خمن الدولة من علمها'
-                                  : 'Guess the country from the flag',
+                              title: l10n.quiz_flags,
+                              subtitle: l10n.moduleFlagsSubtitle,
                               emoji: '🚩',
                               accentColor: AppColors.error,
                               route: AppRoutes.flags,
@@ -162,11 +186,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               delay: 40,
                             ),
                             _GlassModuleCard(
-                              title: isArabic ? 'الخرائط' : 'Maps',
-                              titleEn: 'Maps',
-                              subtitle: isArabic
-                                  ? 'استكشف القارات والمناطق'
-                                  : 'Explore continents & regions',
+                              title: l10n.quiz_maps,
+                              subtitle: l10n.moduleMapsSubtitle,
                               emoji: '🗺️',
                               accentColor: AppColors.mapsColor,
                               route: AppRoutes.maps,
@@ -175,11 +196,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               delay: 80,
                             ),
                             _GlassModuleCard(
-                              title: isArabic ? 'الشعارات' : 'Logos',
-                              titleEn: 'Logos',
-                              subtitle: isArabic
-                                  ? 'تعرف على العلامات التجارية'
-                                  : 'Recognise world brands',
+                              title: l10n.quiz_logos,
+                              subtitle: l10n.moduleLogosSubtitle,
                               emoji: '🏷️',
                               accentColor: AppColors.logosColor,
                               route: AppRoutes.logos,
@@ -188,11 +206,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               delay: 120,
                             ),
                             _GlassModuleCard(
-                              title: isArabic ? 'العلوم والاكتشافات' : 'Sciences',
-                              titleEn: 'Sciences',
-                              subtitle: isArabic
-                                  ? 'رحلة المعرفة والاكتشاف'
-                                  : 'Journey of knowledge & discovery',
+                              title: l10n.quiz_sciences,
+                              subtitle: l10n.moduleSciencesSubtitle,
                               emoji: '🔬',
                               accentColor: const Color(0xFFC47AC0), // Softer purple
                               route: AppRoutes.sciences,
@@ -201,11 +216,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               delay: 160,
                             ),
                             _GlassModuleCard(
-                              title: isArabic ? 'الرياضيات' : 'Math',
-                              titleEn: 'Math',
-                              subtitle: isArabic
-                                  ? 'اختبار الذكاء والعمليات الحسابية'
-                                  : 'Test intelligence and math ops',
+                              title: l10n.quiz_math,
+                              subtitle: l10n.moduleMathSubtitle,
                               emoji: '🔢',
                               accentColor: const Color(0xFF2C63B3), // Deep blue
                               route: AppRoutes.math,
@@ -221,8 +233,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
                         sliver: SliverList(
                           delegate: SliverChildListDelegate([
-                            // ── Daily Mission card ──────────────────────────
-                            _DailyMissionCard(isArabic: isArabic),
+                            Consumer(
+                              builder: (context, ref, _) {
+                                final async = ref.watch(recapQueueProvider);
+                                final n = async.value?.length ?? 0;
+                                if (n == 0) {
+                                  return const SizedBox.shrink();
+                                }
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 12),
+                                  child: _RecapCard(
+                                    l10n: l10n,
+                                    count: n,
+                                    onStart: () =>
+                                        _startRecapSession(context, ref),
+                                  ),
+                                );
+                              },
+                            ),
+                            _DailyMissionCard(
+                              l10n: l10n,
+                              mission: dailyMissionFor(DateTime.now()),
+                            ),
                             const SizedBox(height: 12),
                           ]),
                         ),
@@ -274,7 +306,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           ),
           const SizedBox(width: 12),
           Text(
-            'Aziz Academy',
+            context.l10n.homeBrandName,
             style: AppTextStyles.headingMedium.copyWith(
               color: AppColors.secondary,
             ),
@@ -285,7 +317,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           _GlassPill(
             onTap: () => ref.read(localeProvider.notifier).toggle(),
             child: Text(
-              isArabic ? '🌐 EN' : '🌐 AR',
+              isArabic ? context.l10n.langSwitchEn : context.l10n.langSwitchAr,
               style: AppTextStyles.labelMedium.copyWith(
                 color: AppColors.secondary,
                 fontSize: 13,
@@ -294,21 +326,33 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           ),
           const SizedBox(width: 8),
 
-          // Audio toggle
           Consumer(
             builder: (context, ref, _) {
-              final isMuted = ref.watch(isMutedProvider);
+              final soundOn =
+                  ref.watch(appSettingsProvider).value?.soundEnabled ?? true;
               return _GlassPill(
-                onTap: () {
-                  ref.read(isMutedProvider.notifier).toggle();
-                  ref.read(audioServiceProvider).updateMuteStatus(!isMuted);
+                onTap: () async {
+                  await ref.read(appSettingsProvider.notifier).toggleSound();
+                  final on =
+                      ref.read(appSettingsProvider).value?.soundEnabled ?? true;
+                  ref.read(audioServiceProvider).updateMuteStatus(!on);
                 },
                 child: Text(
-                  isMuted ? '🔇' : '🔊',
+                  soundOn ? '🔊' : '🔇',
                   style: const TextStyle(fontSize: 18),
                 ),
               );
             },
+          ),
+          const SizedBox(width: 8),
+
+          _GlassPill(
+            onTap: () => _showKidSettingsSheet(context, ref),
+            child: Icon(
+              Icons.tune_rounded,
+              size: 18,
+              color: AppColors.secondary.withAlpha(220),
+            ),
           ),
           const SizedBox(width: 8),
 
@@ -371,7 +415,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     );
   }
 
-  Widget _buildHeroSection(bool isArabic, AnimationController floatCtrl) {
+  Widget _buildHeroSection(BuildContext context, AnimationController floatCtrl) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
       child: AnimatedBuilder(
@@ -388,7 +432,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              isArabic ? 'أهلاً بك يا مستكشف! 🌟' : 'Welcome, Navigator! 🌟',
+              context.l10n.homeHeroWelcome,
               style: AppTextStyles.displayMedium.copyWith(
                 color: AppColors.textDark,
                 fontSize: 30,
@@ -397,9 +441,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             ),
             const SizedBox(height: 8),
             Text(
-              isArabic
-                  ? 'النجوم مصطفّة ليوم اكتشاف جديد.'
-                  : 'The stars are aligned for a new discovery today.',
+              context.l10n.homeHeroSubtitle,
               style: AppTextStyles.bodyMedium.copyWith(
                 color: AppColors.textMedium,
               ),
@@ -487,12 +529,14 @@ class _StarfieldPainter extends CustomPainter {
 
 class _SubjectStarsStrip extends StatelessWidget {
   const _SubjectStarsStrip({
+    required this.l10n,
     required this.capitalsStars,
     required this.logosStars,
     required this.mathStars,
     required this.sciencesStars,
   });
 
+  final AppLocalizations l10n;
   final int capitalsStars;
   final int logosStars;
   final int mathStars;
@@ -501,11 +545,11 @@ class _SubjectStarsStrip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final subjects = [
-      ('🏛️', 'العواصم', capitalsStars, AppColors.capitalsColor),
-      ('🚩', 'الأعلام',  0,            AppColors.error),
-      ('🏷️', 'الشعارات', logosStars,  AppColors.logosColor),
-      ('🔬', 'العلوم',   sciencesStars, const Color(0xFFC47AC0)),
-      ('🔢', 'الرياضيات', mathStars,   const Color(0xFF2C63B3)),
+      ('🏛️', l10n.subjectStripCapitals, capitalsStars, AppColors.capitalsColor),
+      ('🚩', l10n.subjectStripFlags, 0, AppColors.error),
+      ('🏷️', l10n.subjectStripLogos, logosStars, AppColors.logosColor),
+      ('🔬', l10n.subjectStripSciences, sciencesStars, const Color(0xFFC47AC0)),
+      ('🔢', l10n.subjectStripMath, mathStars, const Color(0xFF2C63B3)),
     ];
 
     return Row(
@@ -553,11 +597,13 @@ class _SubjectStarsStrip extends StatelessWidget {
 
 class _GlowProgressStrip extends StatelessWidget {
   const _GlowProgressStrip({
+    required this.l10n,
     required this.totalCorrect,
     required this.progress,
     required this.streakDays,
   });
 
+  final AppLocalizations l10n;
   final int totalCorrect;
   final double progress;
   final int streakDays;
@@ -579,7 +625,7 @@ class _GlowProgressStrip extends StatelessWidget {
               const Text('📊', style: TextStyle(fontSize: 16)),
               const SizedBox(width: 8),
               Text(
-                'إجابات صحيحة',
+                l10n.homeCorrectTotalLabel,
                 style: AppTextStyles.labelMedium.copyWith(
                   color: AppColors.textMedium,
                 ),
@@ -587,7 +633,7 @@ class _GlowProgressStrip extends StatelessWidget {
               const Spacer(),
               if (streakDays > 0) ...[
                 Text(
-                  '🔥 $streakDays يوم متتالي',
+                  '🔥 ${l10n.homeStreakLabel(streakDays)}',
                   style: AppTextStyles.labelMedium.copyWith(
                     color: AppColors.secondary,
                     fontWeight: FontWeight.w700,
@@ -644,7 +690,7 @@ class _GlowProgressStrip extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            '${(progress * 100).toInt()}% مكتمل',
+            l10n.homeProgressPercent((progress * 100).toInt()),
             style: AppTextStyles.caption.copyWith(color: AppColors.textMedium),
           ),
         ],
@@ -660,7 +706,6 @@ class _GlowProgressStrip extends StatelessWidget {
 class _GlassModuleCard extends StatefulWidget {
   const _GlassModuleCard({
     required this.title,
-    required this.titleEn,
     required this.subtitle,
     required this.emoji,
     required this.accentColor,
@@ -671,7 +716,6 @@ class _GlassModuleCard extends StatefulWidget {
   });
 
   final String title;
-  final String titleEn;
   final String subtitle;
   final String emoji;
   final Color accentColor;
@@ -836,13 +880,89 @@ class _GlassModuleCardState extends State<_GlassModuleCard>
 }
 
 // =============================================================================
+// Recap queue card
+// =============================================================================
+
+class _RecapCard extends StatelessWidget {
+  const _RecapCard({
+    required this.l10n,
+    required this.count,
+    required this.onStart,
+  });
+
+  final AppLocalizations l10n;
+  final int count;
+  final VoidCallback onStart;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.surfaceContainerLow,
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(color: AppColors.primary.withAlpha(90)),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primary.withAlpha(35),
+            blurRadius: 18,
+            offset: const Offset(0, 6),
+          ),
+        ],
+      ),
+      padding: const EdgeInsets.all(18),
+      child: Row(
+        children: [
+          const Text('🔄', style: TextStyle(fontSize: 30)),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  l10n.homeRecapTitle,
+                  style: AppTextStyles.headingSmall.copyWith(
+                    color: AppColors.textDark,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  l10n.homeRecapBody(count),
+                  style: AppTextStyles.bodyMedium.copyWith(
+                    color: AppColors.textMedium,
+                    fontSize: 13,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          TextButton(
+            onPressed: onStart,
+            child: Text(
+              l10n.homeRecapStart,
+              style: AppTextStyles.labelLarge.copyWith(
+                color: AppColors.primary,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// =============================================================================
 // Daily Mission Card
 // =============================================================================
 
 class _DailyMissionCard extends StatelessWidget {
-  const _DailyMissionCard({required this.isArabic});
+  const _DailyMissionCard({
+    required this.l10n,
+    required this.mission,
+  });
 
-  final bool isArabic;
+  final AppLocalizations l10n;
+  final DailyMissionData mission;
 
   @override
   Widget build(BuildContext context) {
@@ -873,7 +993,7 @@ class _DailyMissionCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    isArabic ? 'المهمة اليومية' : 'Daily Mission',
+                    l10n.dailyMissionTitle,
                     style: GoogleFonts.plusJakartaSans(
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
@@ -881,7 +1001,7 @@ class _DailyMissionCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    isArabic ? 'استكشف النيل' : 'Explore the Nile',
+                    dailyMissionSubtitle(l10n, DateTime.now(), mission),
                     style: GoogleFonts.beVietnamPro(
                       fontSize: 13,
                       fontWeight: FontWeight.w500,
@@ -892,7 +1012,7 @@ class _DailyMissionCard extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () => context.go(AppRoutes.maps),
+              onTap: () => context.go(mission.route),
               child: Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -901,7 +1021,7 @@ class _DailyMissionCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: Text(
-                  isArabic ? 'ابدأ' : 'Start',
+                  dailyMissionCta(l10n, mission),
                   style: GoogleFonts.plusJakartaSans(
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
@@ -942,4 +1062,123 @@ class _GlassPill extends StatelessWidget {
       ),
     );
   }
+}
+
+Future<void> _startRecapSession(BuildContext context, WidgetRef ref) async {
+  await ref.read(recapQueueProvider.future);
+  final notifier = ref.read(recapQueueProvider.notifier);
+  final entries = notifier.entriesForFirstModule();
+  if (entries.isEmpty || !context.mounted) return;
+  ref.read(recapArmProvider.notifier).arm(RecapArm(entries: entries));
+  await notifier.removeEntries(entries);
+  if (!context.mounted) return;
+  switch (entries.first.module) {
+    case RecapModule.capitals:
+      context.go(AppRoutes.capitalsQuiz);
+      return;
+    case RecapModule.flags:
+      context.go(AppRoutes.flagsQuiz);
+      return;
+    case RecapModule.sciences:
+      context.go(AppRoutes.sciencesQuiz);
+      return;
+    case RecapModule.math:
+      context.go(AppRoutes.mathQuiz);
+      return;
+    case RecapModule.maps:
+      context.go('${AppRoutes.maps}?recap=1');
+      return;
+  }
+}
+
+void _showKidSettingsSheet(BuildContext context, WidgetRef ref) {
+  showModalBottomSheet<void>(
+    context: context,
+    backgroundColor: AppColors.surfaceContainerLow,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+    ),
+    builder: (ctx) {
+      return SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(8, 12, 8, 20),
+          child: Consumer(
+            builder: (context, ref, _) {
+              final s =
+                  ref.watch(appSettingsProvider).value ?? const AppSettings();
+              final l10n = context.l10n;
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Text(
+                      l10n.settingsParentTitle,
+                      style: AppTextStyles.headingSmall.copyWith(
+                        color: AppColors.textDark,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  SwitchListTile(
+                    title: Text(l10n.settingsSoundTitle),
+                    subtitle: Text(l10n.settingsSoundSubtitle),
+                    value: s.soundEnabled,
+                    onChanged: (v) async {
+                      await ref
+                          .read(appSettingsProvider.notifier)
+                          .setSoundEnabled(v);
+                      ref.read(audioServiceProvider).updateMuteStatus(!v);
+                    },
+                  ),
+                  SwitchListTile(
+                    title: Text(l10n.settingsReducedMotionTitle),
+                    subtitle: Text(l10n.settingsReducedMotionSubtitle),
+                    value: s.reducedMotion,
+                    onChanged: (v) => ref
+                        .read(appSettingsProvider.notifier)
+                        .setReducedMotion(v),
+                  ),
+                  SwitchListTile(
+                    title: Text(l10n.settingsCoPlayTitle),
+                    subtitle: Text(l10n.settingsCoPlaySubtitle),
+                    value: s.coPlayMode,
+                    onChanged: (v) =>
+                        ref.read(appSettingsProvider.notifier).setCoPlayMode(v),
+                  ),
+                  SwitchListTile(
+                    title: Text(l10n.settingsPracticeTitle),
+                    subtitle: Text(l10n.settingsPracticeSubtitle),
+                    value: s.practiceMode,
+                    onChanged: (v) => ref
+                        .read(appSettingsProvider.notifier)
+                        .setPracticeMode(v),
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.save_alt_rounded),
+                    title: Text(l10n.settingsExportTitle),
+                    subtitle: Text(l10n.settingsExportSubtitle),
+                    onTap: () async {
+                      Navigator.of(ctx).pop();
+                      await shareLocalProgressJson(context, ref);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.upload_file_rounded),
+                    title: Text(l10n.settingsImportTitle),
+                    subtitle: Text(l10n.settingsImportSubtitle),
+                    onTap: () async {
+                      Navigator.of(ctx).pop();
+                      await importLocalProgressFromFile(context, ref);
+                    },
+                  ),
+                ],
+              );
+            },
+          ),
+        ),
+      );
+    },
+  );
 }

@@ -1,4 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
+import 'package:aziz_academy/core/theme/app_colors.dart';
+import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/features/home/splash_screen.dart';
 import 'package:aziz_academy/features/home/home_screen.dart';
 import 'package:aziz_academy/features/achievements/presentation/screens/trophy_room_screen.dart';
@@ -37,6 +41,36 @@ abstract final class AppRoutes {
 
 final appRouter = GoRouter(
   initialLocation: AppRoutes.splash,
+  errorBuilder: (context, state) {
+    final l10n = context.l10n;
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: SafeArea(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  l10n.errorPageTitle,
+                  textAlign: TextAlign.center,
+                  style: AppTextStyles.headingSmall.copyWith(
+                    color: AppColors.textDark,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                FilledButton(
+                  onPressed: () => context.go(AppRoutes.home),
+                  child: Text(l10n.errorPageHome),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  },
   routes: [
     GoRoute(
       path: AppRoutes.splash,
@@ -48,7 +82,9 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.maps,
-      builder: (context, state) => const MapsScreen(),
+      builder: (context, state) => MapsScreen(
+        skipIntro: state.uri.queryParameters['recap'] == '1',
+      ),
     ),
     GoRoute(
       path: AppRoutes.capitals,

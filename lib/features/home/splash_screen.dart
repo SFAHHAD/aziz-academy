@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
@@ -206,7 +207,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                   child: Column(
                     children: [
                       Text(
-                        isArabic ? 'أكاديمية عزيز' : 'Aziz Academy',
+                        context.l10n.appTitle,
                         style: TextStyle(
                           fontFamily: isArabic ? 'Cairo' : 'Nunito',
                           fontSize: 36,
@@ -217,9 +218,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        isArabic
-                            ? 'تعلّم بطريقة ممتعة وتفاعلية'
-                            : 'Learn. Play. Discover.',
+                        context.l10n.splashTagline,
                         style: TextStyle(
                           fontFamily: isArabic ? 'Cairo' : 'Nunito',
                           fontSize: 16,
@@ -251,7 +250,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                     child: ElevatedButton(
                       onPressed: () {
                         // User gesture instantly unlocks TTS capabilities!
-                        ref.read(ttsServiceProvider).speakArabic('أكاديمية عزيز');
+                        ref.read(ttsServiceProvider).speakArabic(context.l10n.appTitle);
                         context.go(AppRoutes.home);
                       },
                       style: ElevatedButton.styleFrom(
@@ -264,7 +263,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                         elevation: 8,
                       ),
                       child: Text(
-                        isArabic ? 'ابدأ التعلم الآن' : 'Start Learning',
+                        context.l10n.splashStartButton,
                         style: const TextStyle(
                           fontFamily: 'Cairo',
                           fontSize: 20,

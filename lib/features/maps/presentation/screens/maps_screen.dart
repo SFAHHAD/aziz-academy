@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -5,13 +6,20 @@ import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 
+import 'package:aziz_academy/core/l10n/context_ext.dart';
+import 'package:aziz_academy/core/models/recap_module.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
+import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
 import 'package:aziz_academy/features/maps/providers/maps_quiz_provider.dart';
 import 'package:aziz_academy/features/maps/presentation/widgets/real_interactive_map.dart';
 
 class MapsScreen extends ConsumerStatefulWidget {
-  const MapsScreen({super.key});
+  const MapsScreen({super.key, this.skipIntro = false});
+
+  /// When true (e.g. recap session), skip continent intro and open the quiz.
+  final bool skipIntro;
 
   @override
   ConsumerState<MapsScreen> createState() => _MapsScreenState();
@@ -26,6 +34,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
   @override
   void initState() {
     super.initState();
+    _showIntro = !widget.skipIntro;
     _fadeController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 600),
@@ -56,7 +65,34 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
           return _buildQuiz(context, state);
         },
         loading: () => const Center(child: CircularProgressIndicator(color: AppColors.primary)),
-        error: (e, st) => Center(child: Text('Error: $e', style: AppTextStyles.bodyMedium)),
+        error: (e, st) => Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  context.l10n.mapsLoadError,
+                  textAlign: TextAlign.center,
+                  style: AppTextStyles.bodyLarge.copyWith(
+                    color: AppColors.textMedium,
+                  ),
+                ),
+                if (kDebugMode) ...[
+                  const SizedBox(height: 12),
+                  Text(
+                    '$e',
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.bodyMedium.copyWith(
+                      color: AppColors.textMedium,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -77,7 +113,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
         SafeArea(
           child: Center(
             child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 560),
+              constraints: const BoxConstraints(maxWidth: 640),
               child: Column(
                 children: [
               _buildTopBar(),
@@ -184,7 +220,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
     return SafeArea(
       child: Center(
         child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 560),
+          constraints: const BoxConstraints(maxWidth: 640),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Column(
@@ -236,6 +272,16 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
                             });
                           } else {
                             ref.read(audioServiceProvider).playWrongSound();
+                            final practice = ref
+                                    .read(appSettingsProvider)
+                                    .value
+                                    ?.practiceMode ??
+                                false;
+                            if (!practice) {
+                              ref
+                                  .read(recapQueueProvider.notifier)
+                                  .recordWrong(RecapModule.maps, q.id);
+                            }
                             _showFeedbackDialog(context, false, q.correctAnswer, '', () {
                               ref.read(mapsQuizProvider.notifier).nextQuestion();
                             });
@@ -363,7 +409,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
     
     return Center(
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 480),
+        constraints: const BoxConstraints(maxWidth: 640),
         child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 24),
         padding: const EdgeInsets.all(32),

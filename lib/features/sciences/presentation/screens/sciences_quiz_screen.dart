@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -11,7 +13,12 @@ import 'package:aziz_academy/features/capitals/presentation/widgets/victory_over
 import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_overlay.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
+import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
+import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
+import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
+import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
 
 import 'package:aziz_academy/l10n/app_localizations.dart';
 
@@ -32,6 +39,7 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
   /// The option the child just tapped (null = no answer yet this round).
   String? _selectedOption;
   bool get _isRevealed => _selectedOption != null;
+  bool _coPlayChoicesVisible = false;
 
   /// Controls the slide-up / fade-in of the fun-fact + Next button.
   late final AnimationController _revealCtrl;
@@ -60,6 +68,7 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
 
   void _onAnswerTapped(String option) {
     final session = ref.read(sciencesQuizProvider).value;
+    final q = session?.currentQuestion;
     if (session != null && session.currentQuestion != null) {
       if (option == session.currentQuestion!.correctAnswer) {
         ref.read(audioServiceProvider).playCorrectSound();
@@ -67,24 +76,39 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
         ref.read(audioServiceProvider).playWrongSound();
       }
 
-      // Pronounce the correct answer aloud using dynamic TTS Engine
       ref.read(ttsServiceProvider).speakArabic(session.currentQuestion!.correctAnswer);
     }
 
     ref.read(sciencesQuizProvider.notifier).submitAnswer(option);
+    if (q != null && option.trim() != q.correctAnswer.trim()) {
+      unawaited(
+        ref.read(recapQueueProvider.notifier).recordWrong(
+              RecapModule.sciences,
+              q.id,
+            ),
+      );
+    }
     setState(() => _selectedOption = option);
     _revealCtrl.forward();
   }
 
   void _onNext() {
     _revealCtrl.reset();
-    setState(() => _selectedOption = null);
+    final co = ref.read(appSettingsProvider).value?.coPlayMode ?? false;
+    setState(() {
+      _selectedOption = null;
+      if (co) _coPlayChoicesVisible = false;
+    });
     ref.read(sciencesQuizProvider.notifier).nextQuestion();
   }
 
   void _onRestart() {
     _revealCtrl.reset();
-    setState(() => _selectedOption = null);
+    final co = ref.read(appSettingsProvider).value?.coPlayMode ?? false;
+    setState(() {
+      _selectedOption = null;
+      _coPlayChoicesVisible = !co;
+    });
     ref.read(sciencesQuizProvider.notifier).restart();
   }
 
@@ -102,10 +126,14 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
         if (next.value?.isComplete == true &&
             prev?.value?.isComplete != true) {
           final session = next.value!;
-          ref.read(achievementProvider.notifier).recordSciencesSession(
-            score: session.score,
-            livesRemaining: session.livesRemaining,
-          );
+          final practice =
+              ref.read(appSettingsProvider).value?.practiceMode ?? false;
+          if (!practice) {
+            ref.read(achievementProvider.notifier).recordSciencesSession(
+                  score: session.score,
+                  livesRemaining: session.livesRemaining,
+                );
+          }
           ref.read(audioServiceProvider).playVictorySound();
         } else if (next.value?.isGameOver == true &&
                    prev?.value?.isGameOver != true) {
@@ -122,6 +150,14 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
           error: (e, st) => _ErrorView(onRetry: _onRestart),
           data: (session) {
             // Always render the quiz body; overlays appear on top as a Stack.
+            final coPlay = ref.watch(appSettingsProvider).maybeWhen(
+                  data: (s) => s.coPlayMode,
+                  orElse: () => false,
+                );
+            final showChoices = !coPlay || _coPlayChoicesVisible;
+            final reducedMotion =
+                ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
+
             final quizBody = session.currentQuestion != null
                 ? _QuizBody(
                     session: session,
@@ -132,6 +168,10 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
                     onAnswerTapped: _onAnswerTapped,
                     onNext: _onNext,
                     onBack: () => context.go(AppRoutes.home),
+                    coPlayMode: coPlay,
+                    showAnswerChoices: showChoices,
+                    onRevealChoices: () =>
+                        setState(() => _coPlayChoicesVisible = true),
                   )
                 : const ColoredBox(
                     color: AppColors.background,
@@ -151,6 +191,9 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
                   VictoryOverlay(
                     key: const ValueKey('victory'),
                     session: session,
+                    title: 'بطل العلوم!',
+                    shareModuleLabel: 'جولة العلوم — أكاديمية عزيز',
+                    reducedMotion: reducedMotion,
                     onPlayAgain: _onRestart,
                     onBack: () => context.go(AppRoutes.home),
                   ),
@@ -158,6 +201,7 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
                   GameOverOverlay(
                     key: const ValueKey('gameover'),
                     session: session,
+                    learningTip: session.currentQuestion?.funFact,
                     onTryAgain: _onRestart,
                     onBack: () => context.go(AppRoutes.home),
                   ),
@@ -184,6 +228,9 @@ class _QuizBody extends StatelessWidget {
     required this.onAnswerTapped,
     required this.onNext,
     required this.onBack,
+    required this.coPlayMode,
+    required this.showAnswerChoices,
+    required this.onRevealChoices,
   });
 
   final QuizSessionState session;
@@ -194,6 +241,9 @@ class _QuizBody extends StatelessWidget {
   final void Function(String) onAnswerTapped;
   final VoidCallback onNext;
   final VoidCallback onBack;
+  final bool coPlayMode;
+  final bool showAnswerChoices;
+  final VoidCallback onRevealChoices;
 
   @override
   Widget build(BuildContext context) {
@@ -201,67 +251,95 @@ class _QuizBody extends StatelessWidget {
     final size = MediaQuery.sizeOf(context);
     final shortViewport = size.height < 760;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        _QuizHeader(session: session, onBack: onBack),
+    return QuizNarrowContent(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _QuizHeader(session: session, onBack: onBack),
 
-        Expanded(
-          child: SingleChildScrollView(
-            clipBehavior: Clip.hardEdge,
-            physics: const ClampingScrollPhysics(),
-            padding: const EdgeInsets.only(bottom: 8),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  _QuestionDisplay(
-                    question: question,
-                    compact: shortViewport,
-                  ),
-                  const SizedBox(height: 12),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: _AnswerGrid(
+          Expanded(
+            child: SingleChildScrollView(
+              clipBehavior: Clip.hardEdge,
+              physics: const ClampingScrollPhysics(),
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _QuestionDisplay(
                       question: question,
-                      selectedOption: selectedOption,
-                      isRevealed: isRevealed,
-                      onTap: onAnswerTapped,
+                      compact: shortViewport,
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 12),
+                    if (coPlayMode && !showAnswerChoices) ...[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Semantics(
+                          label: 'إظهار خيارات الإجابة',
+                          button: true,
+                          child: ElevatedButton.icon(
+                            onPressed: onRevealChoices,
+                            icon: const Icon(Icons.visibility_rounded),
+                            label: const Text('اعرض خيارات الإجابة'),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppColors.secondary,
+                              foregroundColor: Colors.white,
+                              minimumSize: const Size(double.infinity, 52),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                    ],
+                    if (showAnswerChoices)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: _AnswerGrid(
+                          question: question,
+                          selectedOption: selectedOption,
+                          isRevealed: isRevealed,
+                          onTap: onAnswerTapped,
+                        ),
+                      ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
 
-        AnimatedSize(
-          duration: const Duration(milliseconds: 220),
-          curve: Curves.easeOutCubic,
-          alignment: Alignment.topCenter,
-          child: isRevealed
-              ? SlideTransition(
-                  position: revealSlide,
-                  child: FadeTransition(
-                    opacity: revealFade,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 4),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          _FunFactBanner(funFact: question.funFact),
-                          const SizedBox(height: 10),
-                          _NextButton(onNext: onNext),
-                          const SizedBox(height: 12),
-                        ],
+          AnimatedSize(
+            duration: const Duration(milliseconds: 220),
+            curve: Curves.easeOutCubic,
+            alignment: Alignment.topCenter,
+            child: isRevealed
+                ? SlideTransition(
+                    position: revealSlide,
+                    child: FadeTransition(
+                      opacity: revealFade,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 4),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            QuizFunFactBar(
+                              funFact: question.funFact,
+                              wasWrong:
+                                  selectedOption != question.correctAnswer,
+                              correctAnswer: question.correctAnswer,
+                            ),
+                            const SizedBox(height: 10),
+                            _NextButton(onNext: onNext),
+                            const SizedBox(height: 12),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                )
-              : const SizedBox.shrink(),
-        ),
-      ],
+                  )
+                : const SizedBox.shrink(),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -683,46 +761,6 @@ class _AnswerCardState extends State<_AnswerCard>
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-// =============================================================================
-// Fun fact banner
-// =============================================================================
-
-class _FunFactBanner extends StatelessWidget {
-  const _FunFactBanner({required this.funFact});
-  final String funFact;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Container(
-        padding: const EdgeInsets.all(14),
-        decoration: BoxDecoration(
-          color: AppColors.secondary.withAlpha(30),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: AppColors.secondary.withAlpha(120)),
-        ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('💡', style: TextStyle(fontSize: 22)),
-            const SizedBox(width: 10),
-            Expanded(
-              child: Text(
-                funFact,
-                style: AppTextStyles.bodyMedium.copyWith(
-                  color: AppColors.textDark,
-                  height: 1.4,
-                ),
-              ),
-            ),
-          ],
         ),
       ),
     );

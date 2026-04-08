@@ -559,6 +559,648 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Netflix started in 1997 as a DVD-by-mail service! Today it has over 260 million subscribers in 190 countries. Its recommendation algorithm saves it over USD 1 billion per year by helping people find shows they love.'**
   String get brand_netflix_fact;
+
+  /// No description provided for @homeBrandName.
+  ///
+  /// In en, this message translates to:
+  /// **'Aziz Academy'**
+  String get homeBrandName;
+
+  /// No description provided for @homeSectionLearn.
+  ///
+  /// In en, this message translates to:
+  /// **'What do you want to learn today?'**
+  String get homeSectionLearn;
+
+  /// No description provided for @homeHeroWelcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome, explorer! 🌟'**
+  String get homeHeroWelcome;
+
+  /// No description provided for @homeHeroSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The stars are aligned for a new discovery today.'**
+  String get homeHeroSubtitle;
+
+  /// No description provided for @homeCorrectTotalLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Correct answers'**
+  String get homeCorrectTotalLabel;
+
+  /// No description provided for @homeStreakLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'{days} day streak'**
+  String homeStreakLabel(int days);
+
+  /// No description provided for @homeProgressPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% complete'**
+  String homeProgressPercent(int percent);
+
+  /// No description provided for @homeRecapTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick review'**
+  String get homeRecapTitle;
+
+  /// No description provided for @homeRecapBody.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} questions saved from mistakes — review now'**
+  String homeRecapBody(int count);
+
+  /// No description provided for @homeRecapStart.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get homeRecapStart;
+
+  /// No description provided for @dailyMissionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Mission'**
+  String get dailyMissionTitle;
+
+  /// No description provided for @dailyMissionSubtitleMaps.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore the maps and discover a new continent'**
+  String get dailyMissionSubtitleMaps;
+
+  /// No description provided for @dailyMissionSubtitleCapitals.
+  ///
+  /// In en, this message translates to:
+  /// **'Capitals round — match countries to capitals'**
+  String get dailyMissionSubtitleCapitals;
+
+  /// No description provided for @dailyMissionSubtitleFlags.
+  ///
+  /// In en, this message translates to:
+  /// **'Flags challenge — guess the country'**
+  String get dailyMissionSubtitleFlags;
+
+  /// No description provided for @dailyMissionSubtitleSciences.
+  ///
+  /// In en, this message translates to:
+  /// **'Science & discovery journey'**
+  String get dailyMissionSubtitleSciences;
+
+  /// No description provided for @dailyMissionSubtitleMath.
+  ///
+  /// In en, this message translates to:
+  /// **'Mental math practice'**
+  String get dailyMissionSubtitleMath;
+
+  /// No description provided for @dailyMissionCtaToMaps.
+  ///
+  /// In en, this message translates to:
+  /// **'To maps'**
+  String get dailyMissionCtaToMaps;
+
+  /// No description provided for @dailyMissionCtaStart.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get dailyMissionCtaStart;
+
+  /// No description provided for @seasonalWinter.
+  ///
+  /// In en, this message translates to:
+  /// **'Cozy winter vibes for learning ☃️'**
+  String get seasonalWinter;
+
+  /// No description provided for @seasonalSpring.
+  ///
+  /// In en, this message translates to:
+  /// **'A season of knowledge starts with one question 🌸'**
+  String get seasonalSpring;
+
+  /// No description provided for @seasonalSummer.
+  ///
+  /// In en, this message translates to:
+  /// **'Summer of discovery — learn a little every day ☀️'**
+  String get seasonalSummer;
+
+  /// No description provided for @seasonalAutumn.
+  ///
+  /// In en, this message translates to:
+  /// **'Focus time and a strong return to routine 📚'**
+  String get seasonalAutumn;
+
+  /// No description provided for @langSwitchEn.
+  ///
+  /// In en, this message translates to:
+  /// **'🌐 EN'**
+  String get langSwitchEn;
+
+  /// No description provided for @langSwitchAr.
+  ///
+  /// In en, this message translates to:
+  /// **'🌐 AR'**
+  String get langSwitchAr;
+
+  /// No description provided for @streakSnack.
+  ///
+  /// In en, this message translates to:
+  /// **'🔥 {days} days in a row — great job!'**
+  String streakSnack(int days);
+
+  /// No description provided for @quiz_flags.
+  ///
+  /// In en, this message translates to:
+  /// **'Flags'**
+  String get quiz_flags;
+
+  /// No description provided for @quiz_maps.
+  ///
+  /// In en, this message translates to:
+  /// **'Maps'**
+  String get quiz_maps;
+
+  /// No description provided for @quiz_logos.
+  ///
+  /// In en, this message translates to:
+  /// **'Logos'**
+  String get quiz_logos;
+
+  /// No description provided for @quiz_sciences.
+  ///
+  /// In en, this message translates to:
+  /// **'Sciences'**
+  String get quiz_sciences;
+
+  /// No description provided for @quiz_math.
+  ///
+  /// In en, this message translates to:
+  /// **'Math'**
+  String get quiz_math;
+
+  /// No description provided for @moduleCapitalsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Match countries to their capitals'**
+  String get moduleCapitalsSubtitle;
+
+  /// No description provided for @moduleFlagsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Guess the country from the flag'**
+  String get moduleFlagsSubtitle;
+
+  /// No description provided for @moduleMapsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore continents and regions'**
+  String get moduleMapsSubtitle;
+
+  /// No description provided for @moduleLogosSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Recognise world brands'**
+  String get moduleLogosSubtitle;
+
+  /// No description provided for @moduleSciencesSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Journey of knowledge and discovery'**
+  String get moduleSciencesSubtitle;
+
+  /// No description provided for @moduleMathSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Arithmetic and mental math challenges'**
+  String get moduleMathSubtitle;
+
+  /// No description provided for @subjectStripCapitals.
+  ///
+  /// In en, this message translates to:
+  /// **'Capitals'**
+  String get subjectStripCapitals;
+
+  /// No description provided for @subjectStripFlags.
+  ///
+  /// In en, this message translates to:
+  /// **'Flags'**
+  String get subjectStripFlags;
+
+  /// No description provided for @subjectStripLogos.
+  ///
+  /// In en, this message translates to:
+  /// **'Logos'**
+  String get subjectStripLogos;
+
+  /// No description provided for @subjectStripSciences.
+  ///
+  /// In en, this message translates to:
+  /// **'Sciences'**
+  String get subjectStripSciences;
+
+  /// No description provided for @subjectStripMath.
+  ///
+  /// In en, this message translates to:
+  /// **'Math'**
+  String get subjectStripMath;
+
+  /// No description provided for @settingsParentTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Parent settings'**
+  String get settingsParentTitle;
+
+  /// No description provided for @settingsSoundTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sound & voice'**
+  String get settingsSoundTitle;
+
+  /// No description provided for @settingsSoundSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Effects and text-to-speech'**
+  String get settingsSoundSubtitle;
+
+  /// No description provided for @settingsReducedMotionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reduce motion'**
+  String get settingsReducedMotionTitle;
+
+  /// No description provided for @settingsReducedMotionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Less motion on success screens'**
+  String get settingsReducedMotionSubtitle;
+
+  /// No description provided for @settingsCoPlayTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Play with parents'**
+  String get settingsCoPlayTitle;
+
+  /// No description provided for @settingsCoPlaySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide choices until you reveal them'**
+  String get settingsCoPlaySubtitle;
+
+  /// No description provided for @settingsPracticeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Practice without losing hearts'**
+  String get settingsPracticeTitle;
+
+  /// No description provided for @settingsPracticeSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Badges are not saved in this mode'**
+  String get settingsPracticeSubtitle;
+
+  /// No description provided for @settingsExportTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Export local backup (JSON)'**
+  String get settingsExportTitle;
+
+  /// No description provided for @settingsExportSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Share a text file for backup or support — no auto-upload'**
+  String get settingsExportSubtitle;
+
+  /// No description provided for @settingsImportTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Import backup (JSON)'**
+  String get settingsImportTitle;
+
+  /// No description provided for @settingsImportSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Replace progress on this device — parents only'**
+  String get settingsImportSubtitle;
+
+  /// No description provided for @backupImportTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Import backup?'**
+  String get backupImportTitle;
+
+  /// No description provided for @backupImportBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Achievements and the review queue on this device will be replaced with the file data. This cannot be undone automatically.'**
+  String get backupImportBody;
+
+  /// No description provided for @backupCancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get backupCancel;
+
+  /// No description provided for @backupConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Import'**
+  String get backupConfirm;
+
+  /// No description provided for @backupReadFileError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not read the file.'**
+  String get backupReadFileError;
+
+  /// No description provided for @backupInvalidJson.
+  ///
+  /// In en, this message translates to:
+  /// **'The file is not valid JSON.'**
+  String get backupInvalidJson;
+
+  /// No description provided for @backupInvalidFile.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid backup file.'**
+  String get backupInvalidFile;
+
+  /// No description provided for @backupUnsupportedVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Unsupported backup version.'**
+  String get backupUnsupportedVersion;
+
+  /// No description provided for @backupMissingAchievements.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid achievements data.'**
+  String get backupMissingAchievements;
+
+  /// No description provided for @backupMissingRecap.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid review queue data.'**
+  String get backupMissingRecap;
+
+  /// No description provided for @backupSnackSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup imported successfully.'**
+  String get backupSnackSuccess;
+
+  /// No description provided for @backupShareSubject.
+  ///
+  /// In en, this message translates to:
+  /// **'Aziz Academy progress backup'**
+  String get backupShareSubject;
+
+  /// No description provided for @errorPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Page not found'**
+  String get errorPageTitle;
+
+  /// No description provided for @errorPageHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to home'**
+  String get errorPageHome;
+
+  /// No description provided for @badge_capitals_explorer_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete the capitals quiz successfully at least once.'**
+  String get badge_capitals_explorer_condition;
+
+  /// No description provided for @badge_capitals_expert_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish the capitals quiz perfectly (3 stars / 0 mistakes).'**
+  String get badge_capitals_expert_condition;
+
+  /// No description provided for @badge_map_master_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Open and try the maps section for all 6 continents.'**
+  String get badge_map_master_condition;
+
+  /// No description provided for @badge_logo_detective_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete the logos quiz successfully at least once.'**
+  String get badge_logo_detective_condition;
+
+  /// No description provided for @badge_logo_hunter_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish the logos quiz perfectly (3 stars / 0 mistakes).'**
+  String get badge_logo_hunter_condition;
+
+  /// No description provided for @badge_trivia_titan_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Answer 25 questions correctly across all academy modules.'**
+  String get badge_trivia_titan_condition;
+
+  /// No description provided for @badge_science_genius_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Science Genius'**
+  String get badge_science_genius_name;
+
+  /// No description provided for @badge_science_genius_desc.
+  ///
+  /// In en, this message translates to:
+  /// **'For excelling in science challenges'**
+  String get badge_science_genius_desc;
+
+  /// No description provided for @badge_science_genius_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete the science quiz with 3 stars (0 mistakes).'**
+  String get badge_science_genius_condition;
+
+  /// No description provided for @badge_math_champion_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Math Champion'**
+  String get badge_math_champion_name;
+
+  /// No description provided for @badge_math_champion_desc.
+  ///
+  /// In en, this message translates to:
+  /// **'For mastering the math challenge'**
+  String get badge_math_champion_desc;
+
+  /// No description provided for @badge_math_champion_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete the math quiz with 3 stars (0 mistakes).'**
+  String get badge_math_champion_condition;
+
+  /// No description provided for @badge_perfect_scholar_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Earn gold-level performance in Capitals, Logos, Sciences, and Math.'**
+  String get badge_perfect_scholar_condition;
+
+  /// No description provided for @badge_academy_star_condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Final badge: unlock all 9 other badges first!'**
+  String get badge_academy_star_condition;
+
+  /// No description provided for @trophyLoadError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load trophies. Try again later.'**
+  String get trophyLoadError;
+
+  /// No description provided for @trophyTapHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap a badge to see how to earn it'**
+  String get trophyTapHint;
+
+  /// No description provided for @trophyLockedHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep playing to unlock this badge'**
+  String get trophyLockedHint;
+
+  /// No description provided for @trophyOk.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get trophyOk;
+
+  /// No description provided for @difficultyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Difficulty'**
+  String get difficultyLabel;
+
+  /// No description provided for @difficultyEasy.
+  ///
+  /// In en, this message translates to:
+  /// **'Easy'**
+  String get difficultyEasy;
+
+  /// No description provided for @difficultyMedium.
+  ///
+  /// In en, this message translates to:
+  /// **'Medium'**
+  String get difficultyMedium;
+
+  /// No description provided for @difficultyHard.
+  ///
+  /// In en, this message translates to:
+  /// **'Hard'**
+  String get difficultyHard;
+
+  /// No description provided for @funFactCorrectPrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'Correct answer:'**
+  String get funFactCorrectPrefix;
+
+  /// No description provided for @networkRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get networkRetry;
+
+  /// No description provided for @networkImageError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load image'**
+  String get networkImageError;
+
+  /// No description provided for @splashTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn. Play. Discover.'**
+  String get splashTagline;
+
+  /// No description provided for @splashStartButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Learning'**
+  String get splashStartButton;
+
+  /// No description provided for @mapsLoadError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load maps. Check your connection and try again.'**
+  String get mapsLoadError;
+
+  /// No description provided for @gameOverBack.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to menu'**
+  String get gameOverBack;
+
+  /// No description provided for @gameOverRoundScore.
+  ///
+  /// In en, this message translates to:
+  /// **'Round score'**
+  String get gameOverRoundScore;
+
+  /// No description provided for @victoryShare.
+  ///
+  /// In en, this message translates to:
+  /// **'Share'**
+  String get victoryShare;
+
+  /// No description provided for @victoryPlayAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Play again'**
+  String get victoryPlayAgain;
+
+  /// No description provided for @quizLoadingError.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get quizLoadingError;
+
+  /// No description provided for @privacyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy'**
+  String get privacyTitle;
+
+  /// No description provided for @aboutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get aboutTitle;
+
+  /// No description provided for @trophyAchievementDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Achievement complete!'**
+  String get trophyAchievementDone;
+
+  /// No description provided for @trophyHowToEarnBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'How to earn this badge:'**
+  String get trophyHowToEarnBadge;
+
+  /// No description provided for @trophyHallTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Trophy Hall'**
+  String get trophyHallTitle;
+
+  /// No description provided for @trophyBadgeCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{unlocked} / {total} badges'**
+  String trophyBadgeCount(int unlocked, int total);
 }
 
 class _AppLocalizationsDelegate

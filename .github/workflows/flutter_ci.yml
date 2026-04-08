@@ -26,5 +26,8 @@ jobs:
       - name: Test
         run: flutter test
 
-      - name: Build web (release)
+      - name: Build web (release, JavaScript)
         run: flutter build web --release
+
+      - name: Build web (release, WebAssembly)
+        run: flutter build web --release --wasm

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -5,8 +7,14 @@ import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
+import 'package:aziz_academy/core/models/recap_module.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
+import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
+import 'package:aziz_academy/core/widgets/network_image_retry.dart';
+import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
+import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
 import 'package:aziz_academy/features/flags/providers/flags_quiz_provider.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/victory_overlay.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_overlay.dart';
@@ -22,6 +30,7 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
     with TickerProviderStateMixin {
   String? _selectedOption;
   bool get _isRevealed => _selectedOption != null;
+  bool _coPlayChoicesVisible = false;
 
   late final AnimationController _revealCtrl;
 
@@ -42,31 +51,47 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
 
   void _onAnswerTapped(String option) {
     final session = ref.read(flagsQuizProvider).value;
+    final q = session?.currentQuestion;
     if (session != null && session.currentQuestion != null) {
       if (option == session.currentQuestion!.correctAnswer) {
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
         ref.read(audioServiceProvider).playWrongSound();
       }
-      
-      // Pronounce the correct answer aloud
+
       ref.read(ttsServiceProvider).speakArabic(session.currentQuestion!.correctAnswer);
     }
 
     ref.read(flagsQuizProvider.notifier).submitAnswer(option);
+    if (q != null && option.trim() != q.correctAnswer.trim()) {
+      unawaited(
+        ref.read(recapQueueProvider.notifier).recordWrong(
+              RecapModule.flags,
+              q.id,
+            ),
+      );
+    }
     setState(() => _selectedOption = option);
     _revealCtrl.forward();
   }
 
   void _onNext() {
     _revealCtrl.reset();
-    setState(() => _selectedOption = null);
+    final co = ref.read(appSettingsProvider).value?.coPlayMode ?? false;
+    setState(() {
+      _selectedOption = null;
+      if (co) _coPlayChoicesVisible = false;
+    });
     ref.read(flagsQuizProvider.notifier).nextQuestion();
   }
 
   void _onRestart() {
     _revealCtrl.reset();
-    setState(() => _selectedOption = null);
+    final co = ref.read(appSettingsProvider).value?.coPlayMode ?? false;
+    setState(() {
+      _selectedOption = null;
+      _coPlayChoicesVisible = !co;
+    });
     ref.read(flagsQuizProvider.notifier).restart();
   }
 
@@ -90,9 +115,15 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
       body: SafeArea(
         child: sessionAsync.when(
           data: (session) {
+            final reducedMotion =
+                ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
+
             if (session.isComplete) {
               return VictoryOverlay(
                 session: session,
+                title: 'بطل الأعلام!',
+                shareModuleLabel: 'جولة الأعلام — أكاديمية عزيز',
+                reducedMotion: reducedMotion,
                 onPlayAgain: _onRestart,
                 onBack: () => context.go(AppRoutes.home),
               );
@@ -100,6 +131,7 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
             if (session.isGameOver) {
               return GameOverOverlay(
                 session: session,
+                learningTip: session.currentQuestion?.funFact,
                 onTryAgain: _onRestart,
                 onBack: () => context.go(AppRoutes.home),
               );
@@ -108,7 +140,14 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
             final question = session.currentQuestion;
             if (question == null) return const SizedBox.shrink();
 
-            return Column(
+            final coPlay = ref.watch(appSettingsProvider).maybeWhen(
+                  data: (s) => s.coPlayMode,
+                  orElse: () => false,
+                );
+            final showChoices = !coPlay || _coPlayChoicesVisible;
+
+            return QuizNarrowContent(
+              child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Align(
@@ -166,26 +205,45 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: question.options.map((opt) {
-                              return Padding(
-                                padding: const EdgeInsets.only(bottom: 8),
-                                child: _OptionButton(
-                                  text: opt,
-                                  isRevealed: _isRevealed,
-                                  isSelected: _selectedOption == opt,
-                                  isCorrectOption: opt == question.correctAnswer,
-                                  onTap: () {
-                                    if (!_isRevealed) _onAnswerTapped(opt);
-                                  },
-                                ),
-                              );
-                            }).toList(),
+                        if (coPlay && !showChoices) ...[
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: ElevatedButton.icon(
+                              onPressed: () =>
+                                  setState(() => _coPlayChoicesVisible = true),
+                              icon: const Icon(Icons.visibility_rounded),
+                              label: const Text('اعرض خيارات الإجابة'),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: AppColors.secondary,
+                                foregroundColor: AppColors.surface,
+                                minimumSize: const Size(double.infinity, 52),
+                              ),
+                            ),
                           ),
-                        ),
+                          const SizedBox(height: 8),
+                        ],
+                        if (showChoices)
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: question.options.map((opt) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 8),
+                                  child: _OptionButton(
+                                    text: opt,
+                                    isRevealed: _isRevealed,
+                                    isSelected: _selectedOption == opt,
+                                    isCorrectOption:
+                                        opt == question.correctAnswer,
+                                    onTap: () {
+                                      if (!_isRevealed) _onAnswerTapped(opt);
+                                    },
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
                       ],
                     ),
                   ),
@@ -197,28 +255,42 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
                   child: _isRevealed
                       ? Padding(
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                          child: ElevatedButton(
-                            onPressed: _onNext,
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: AppColors.secondary,
-                              foregroundColor: AppColors.surface,
-                              padding: const EdgeInsets.symmetric(vertical: 16),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16),
+                          child: Column(
+                            children: [
+                              QuizFunFactBar(
+                                funFact: question.funFact,
+                                wasWrong:
+                                    _selectedOption != question.correctAnswer,
+                                correctAnswer: question.correctAnswer,
                               ),
-                            ),
-                            child: Text(
-                              'التالي',
-                              style: AppTextStyles.bodyLarge.copyWith(
-                                color: AppColors.surface,
-                                fontWeight: FontWeight.bold,
+                              const SizedBox(height: 12),
+                              ElevatedButton(
+                                onPressed: _onNext,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.secondary,
+                                  foregroundColor: AppColors.surface,
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 16),
+                                  minimumSize: const Size(double.infinity, 52),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
+                                child: Text(
+                                  'التالي',
+                                  style: AppTextStyles.bodyLarge.copyWith(
+                                    color: AppColors.surface,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                         )
                       : const SizedBox.shrink(),
                 ),
               ],
+            ),
             );
           },
           loading: () => const Center(child: CircularProgressIndicator()),
@@ -374,29 +446,11 @@ class _HDFlagRenderer extends StatelessWidget {
       );
     }
 
-    return Image.network(
-      flagUrl,
+    return NetworkImageRetry(
+      url: flagUrl,
       height: 200,
+      width: 300,
       fit: BoxFit.contain,
-      loadingBuilder: (context, child, loadingProgress) {
-        if (loadingProgress == null) return child;
-        return const SizedBox(
-          width: 300,
-          height: 200,
-          child: Center(
-            child: CircularProgressIndicator(color: AppColors.error),
-          ),
-        );
-      },
-      errorBuilder: (context, error, stack) {
-        return const SizedBox(
-          width: 300,
-          height: 200,
-          child: Center(
-            child: Icon(Icons.broken_image, size: 50, color: Colors.grey),
-          ),
-        );
-      },
     );
   }
 }

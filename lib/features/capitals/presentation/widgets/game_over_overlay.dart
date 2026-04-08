@@ -17,11 +17,14 @@ class GameOverOverlay extends StatefulWidget {
     required this.session,
     required this.onTryAgain,
     required this.onBack,
+    this.learningTip,
   });
 
   final QuizSessionState session;
   final VoidCallback onTryAgain;
   final VoidCallback onBack;
+  /// Shown when available (e.g. fun fact for the last question).
+  final String? learningTip;
 
   @override
   State<GameOverOverlay> createState() => _GameOverOverlayState();
@@ -157,6 +160,29 @@ class _GameOverOverlayState extends State<GameOverOverlay>
 
                         // Score
                         _GameOverScorePill(session: widget.session),
+                        if (widget.learningTip != null &&
+                            widget.learningTip!.trim().isNotEmpty) ...[
+                          const SizedBox(height: 16),
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: AppColors.primary.withAlpha(18),
+                              borderRadius: BorderRadius.circular(14),
+                              border: Border.all(
+                                color: AppColors.primary.withAlpha(60),
+                              ),
+                            ),
+                            child: Text(
+                              '📚 ${widget.learningTip!}',
+                              textAlign: TextAlign.center,
+                              style: AppTextStyles.bodyMedium.copyWith(
+                                color: AppColors.textDark,
+                                height: 1.4,
+                              ),
+                            ),
+                          ),
+                        ],
                         const SizedBox(height: 28),
 
                         // Heart refill section

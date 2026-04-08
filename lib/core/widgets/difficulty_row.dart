@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/models/quiz_difficulty.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
@@ -19,12 +20,13 @@ class DifficultyRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = accentColor ?? AppColors.capitalsColor;
+    final l10n = context.l10n;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'مستوى الصعوبة',
+          l10n.difficultyLabel,
           style: AppTextStyles.caption.copyWith(color: AppColors.textMedium),
         ),
         const SizedBox(height: 8),
@@ -58,7 +60,7 @@ class DifficultyRow extends StatelessWidget {
                             style: const TextStyle(fontSize: 16)),
                         const SizedBox(height: 2),
                         Text(
-                          d.labelAr,
+                          d.label(l10n),
                           style: AppTextStyles.caption.copyWith(
                             color: selected
                                 ? Colors.white

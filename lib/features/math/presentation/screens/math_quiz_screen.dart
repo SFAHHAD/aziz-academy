@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -11,7 +14,12 @@ import 'package:aziz_academy/features/math/providers/math_quiz_provider.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/victory_overlay.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_overlay.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
+import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
+import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
+import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
+import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
 
 class MathQuizScreen extends ConsumerStatefulWidget {
   const MathQuizScreen({super.key});
@@ -24,6 +32,7 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
     with TickerProviderStateMixin {
   String? _selectedOption;
   bool get _isRevealed => _selectedOption != null;
+  bool _coPlayChoicesVisible = false;
 
   late final AnimationController _revealCtrl;
 
@@ -44,6 +53,7 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
 
   void _onAnswerTapped(String option) {
     final session = ref.read(mathQuizProvider).value;
+    final q = session?.currentQuestion;
     if (session != null && session.currentQuestion != null) {
       if (option == session.currentQuestion!.correctAnswer) {
         ref.read(audioServiceProvider).playCorrectSound();
@@ -51,24 +61,40 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
         ref.read(audioServiceProvider).playWrongSound();
       }
 
-      // Pronounce the correct answer aloud using dynamic TTS Engine
       ref.read(ttsServiceProvider).speakArabic(session.currentQuestion!.correctAnswer);
     }
 
     ref.read(mathQuizProvider.notifier).submitAnswer(option);
+    if (q != null && option.trim() != q.correctAnswer.trim()) {
+      unawaited(
+        ref.read(recapQueueProvider.notifier).recordWrong(
+              RecapModule.math,
+              q.id,
+              snapshotJson: jsonEncode(q.toJson()),
+            ),
+      );
+    }
     setState(() => _selectedOption = option);
     _revealCtrl.forward();
   }
 
   void _onNext() {
     _revealCtrl.reset();
-    setState(() => _selectedOption = null);
+    final co = ref.read(appSettingsProvider).value?.coPlayMode ?? false;
+    setState(() {
+      _selectedOption = null;
+      if (co) _coPlayChoicesVisible = false;
+    });
     ref.read(mathQuizProvider.notifier).nextQuestion();
   }
 
   void _onRestart() {
     _revealCtrl.reset();
-    setState(() => _selectedOption = null);
+    final co = ref.read(appSettingsProvider).value?.coPlayMode ?? false;
+    setState(() {
+      _selectedOption = null;
+      _coPlayChoicesVisible = !co;
+    });
     ref.read(mathQuizProvider.notifier).restart();
   }
 
@@ -81,10 +107,14 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
       (prev, next) {
         if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
           final session = next.value!;
-          ref.read(achievementProvider.notifier).recordMathSession(
-            score: session.score,
-            livesRemaining: session.livesRemaining,
-          );
+          final practice =
+              ref.read(appSettingsProvider).value?.practiceMode ?? false;
+          if (!practice) {
+            ref.read(achievementProvider.notifier).recordMathSession(
+                  score: session.score,
+                  livesRemaining: session.livesRemaining,
+                );
+          }
           ref.read(audioServiceProvider).playVictorySound();
         } else if (next.value?.isGameOver == true && prev?.value?.isGameOver != true) {
           ref.read(audioServiceProvider).playWrongSound();
@@ -97,9 +127,15 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
       body: SafeArea(
         child: sessionAsync.when(
           data: (session) {
+            final reducedMotion =
+                ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
+
             if (session.isComplete) {
               return VictoryOverlay(
                 session: session,
+                title: 'بطل الرياضيات!',
+                shareModuleLabel: 'جولة الرياضيات — أكاديمية عزيز',
+                reducedMotion: reducedMotion,
                 onPlayAgain: _onRestart,
                 onBack: () => context.go(AppRoutes.home),
               );
@@ -107,6 +143,7 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
             if (session.isGameOver) {
               return GameOverOverlay(
                 session: session,
+                learningTip: session.currentQuestion?.funFact,
                 onTryAgain: _onRestart,
                 onBack: () => context.go(AppRoutes.home),
               );
@@ -116,8 +153,14 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
             if (question == null) return const SizedBox.shrink();
 
             final shortViewport = MediaQuery.sizeOf(context).height < 760;
+            final coPlay = ref.watch(appSettingsProvider).maybeWhen(
+                  data: (s) => s.coPlayMode,
+                  orElse: () => false,
+                );
+            final showChoices = !coPlay || _coPlayChoicesVisible;
 
-            return Column(
+            return QuizNarrowContent(
+              child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Align(
@@ -184,37 +227,59 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: _buildOpt(question.options[0], question),
-                                  ),
-                                  const SizedBox(width: 12),
-                                  Expanded(
-                                    child: _buildOpt(question.options[1], question),
-                                  ),
-                                ],
+                        if (coPlay && !showChoices) ...[
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: ElevatedButton.icon(
+                              onPressed: () =>
+                                  setState(() => _coPlayChoicesVisible = true),
+                              icon: const Icon(Icons.visibility_rounded),
+                              label: const Text('اعرض خيارات الإجابة'),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: AppColors.secondary,
+                                foregroundColor: AppColors.surface,
+                                minimumSize: const Size(double.infinity, 52),
                               ),
-                              const SizedBox(height: 12),
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: _buildOpt(question.options[2], question),
-                                  ),
-                                  const SizedBox(width: 12),
-                                  Expanded(
-                                    child: _buildOpt(question.options[3], question),
-                                  ),
-                                ],
-                              ),
-                            ],
+                            ),
                           ),
-                        ),
+                          const SizedBox(height: 8),
+                        ],
+                        if (showChoices)
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: _buildOpt(
+                                          question.options[0], question),
+                                    ),
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: _buildOpt(
+                                          question.options[1], question),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 12),
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: _buildOpt(
+                                          question.options[2], question),
+                                    ),
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: _buildOpt(
+                                          question.options[3], question),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                       ],
                     ),
                   ),
@@ -226,28 +291,42 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
                   child: _isRevealed
                       ? Padding(
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                          child: ElevatedButton(
-                            onPressed: _onNext,
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: AppColors.secondary,
-                              foregroundColor: AppColors.surface,
-                              padding: const EdgeInsets.symmetric(vertical: 16),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16),
+                          child: Column(
+                            children: [
+                              QuizFunFactBar(
+                                funFact: question.funFact,
+                                wasWrong:
+                                    _selectedOption != question.correctAnswer,
+                                correctAnswer: question.correctAnswer,
                               ),
-                            ),
-                            child: Text(
-                              'التالي',
-                              style: AppTextStyles.bodyLarge.copyWith(
-                                color: AppColors.surface,
-                                fontWeight: FontWeight.bold,
+                              const SizedBox(height: 12),
+                              ElevatedButton(
+                                onPressed: _onNext,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.secondary,
+                                  foregroundColor: AppColors.surface,
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 16),
+                                  minimumSize: const Size(double.infinity, 52),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
+                                child: Text(
+                                  'التالي',
+                                  style: AppTextStyles.bodyLarge.copyWith(
+                                    color: AppColors.surface,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                         )
                       : const SizedBox.shrink(),
                 ),
               ],
+            ),
             );
           },
           loading: () => const Center(child: CircularProgressIndicator()),

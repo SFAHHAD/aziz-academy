@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/features/logos/data/logos_repository.dart';
 
 // =============================================================================
@@ -64,11 +65,14 @@ class LogosQuizNotifier extends AsyncNotifier<QuizSessionState> {
     final session = state.value!;
     final isCorrect = answer.trim() == current.correctAnswer.trim();
 
+    final practice = readPracticeMode(ref);
+    final nextLives = isCorrect
+        ? session.livesRemaining
+        : (practice ? session.livesRemaining : session.livesRemaining - 1);
     state = AsyncData(
       session.copyWith(
         score: isCorrect ? session.score + 1 : session.score,
-        livesRemaining:
-            isCorrect ? session.livesRemaining : session.livesRemaining - 1,
+        livesRemaining: nextLives,
         lastAnswerCorrect: isCorrect,
       ),
     );
@@ -77,7 +81,7 @@ class LogosQuizNotifier extends AsyncNotifier<QuizSessionState> {
 
   void nextQuestion() {
     final session = state.value;
-    if (session == null) return;
+    if (session == null || session.isGameOver) return;
 
     final nextIndex = session.currentIndex + 1;
     final isComplete = nextIndex >= session.totalQuestions;

@@ -1,12 +1,17 @@
+import 'package:aziz_academy/l10n/app_localizations.dart';
+
 /// Difficulty level shared across all quiz modules.
 enum QuizDifficulty { easy, medium, hard }
 
 extension QuizDifficultyExt on QuizDifficulty {
-  String get labelAr {
+  String label(AppLocalizations l10n) {
     switch (this) {
-      case QuizDifficulty.easy:   return 'سهل';
-      case QuizDifficulty.medium: return 'متوسط';
-      case QuizDifficulty.hard:   return 'صعب';
+      case QuizDifficulty.easy:
+        return l10n.difficultyEasy;
+      case QuizDifficulty.medium:
+        return l10n.difficultyMedium;
+      case QuizDifficulty.hard:
+        return l10n.difficultyHard;
     }
   }
 

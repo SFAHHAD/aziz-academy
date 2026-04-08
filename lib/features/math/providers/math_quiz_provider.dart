@@ -1,8 +1,13 @@
+import 'dart:convert';
 import 'dart:math' as math;
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
 import 'package:aziz_academy/core/models/quiz_difficulty.dart';
+import 'package:aziz_academy/core/models/recap_module.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
+import 'package:aziz_academy/core/providers/recap_arm_provider.dart';
 
 enum MathOperation { addition, subtraction, multiplication, division }
 
@@ -34,10 +39,45 @@ final mathQuizProvider =
 class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
   @override
   Future<QuizSessionState> build() async {
+    final arm = ref.read(recapArmProvider);
+    if (arm != null &&
+        arm.module == RecapModule.math &&
+        arm.entries.isNotEmpty) {
+      final questions = <QuizQuestion>[];
+      for (final e in arm.entries) {
+        final raw = e.snapshotJson;
+        if (raw == null) continue;
+        try {
+          questions.add(
+            QuizQuestion.fromJson(
+              Map<String, dynamic>.from(jsonDecode(raw) as Map),
+            ),
+          );
+        } catch (_) {}
+      }
+      Future.microtask(() => ref.read(recapArmProvider.notifier).clear());
+      if (questions.isEmpty) {
+        return QuizSessionState(
+          questions: const [],
+          currentIndex: 0,
+          score: 0,
+          livesRemaining: 3,
+          status: QuizStatus.complete,
+        );
+      }
+      return QuizSessionState(
+        questions: List.of(questions)..shuffle(),
+        currentIndex: 0,
+        score: 0,
+        livesRemaining: 3,
+        status: QuizStatus.inProgress,
+      );
+    }
+
     final operation = ref.watch(mathOperationProvider);
     final diff = ref.watch(mathDifficultyProvider);
-    // Easy: small numbers / 5 questions, Medium: 10, Hard: 15 with larger range
-    final count = diff == QuizDifficulty.easy ? 5 : (diff == QuizDifficulty.medium ? 10 : 15);
+    final count =
+        diff == QuizDifficulty.easy ? 5 : (diff == QuizDifficulty.medium ? 10 : 15);
     final questions = _generateQuestions(operation, count: count, difficulty: diff);
 
     return QuizSessionState(
@@ -134,10 +174,13 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
 
     final session = state.value!;
     final isCorrect = answer.trim() == current.correctAnswer.trim();
+    final practice = readPracticeMode(ref);
+    final nextLives = isCorrect
+        ? session.livesRemaining
+        : (practice ? session.livesRemaining : session.livesRemaining - 1);
     state = AsyncData(session.copyWith(
       score: isCorrect ? session.score + 1 : session.score,
-      livesRemaining:
-          isCorrect ? session.livesRemaining : session.livesRemaining - 1,
+      livesRemaining: nextLives,
       lastAnswerCorrect: isCorrect,
     ));
     return isCorrect;

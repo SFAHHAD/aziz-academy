@@ -2,14 +2,6 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final audioServiceProvider = Provider((ref) => AudioService());
-class IsMutedNotifier extends Notifier<bool> {
-  @override
-  bool build() => false;
-
-  void toggle() => state = !state;
-}
-
-final isMutedProvider = NotifierProvider<IsMutedNotifier, bool>(IsMutedNotifier.new);
 
 class AudioService {
   final AudioPlayer _bgmPlayer = AudioPlayer();

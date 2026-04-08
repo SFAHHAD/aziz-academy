@@ -2,6 +2,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
 import 'package:aziz_academy/core/models/quiz_difficulty.dart';
+import 'package:aziz_academy/core/models/recap_module.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
+import 'package:aziz_academy/core/providers/recap_arm_provider.dart';
 import 'package:aziz_academy/features/capitals/data/capitals_repository.dart';
 
 export 'package:aziz_academy/core/models/quiz_difficulty.dart';
@@ -168,6 +171,15 @@ class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
       questions = questions.take(cap).toList();
     }
 
+    final arm = ref.read(recapArmProvider);
+    if (arm != null &&
+        arm.module == RecapModule.capitals &&
+        arm.entries.isNotEmpty) {
+      final idSet = arm.ids.toSet();
+      questions = questions.where((q) => idSet.contains(q.id)).toList();
+      Future.microtask(() => ref.read(recapArmProvider.notifier).clear());
+    }
+
     if (questions.isEmpty) {
       // Edge case: continent has no questions yet.
       return QuizSessionState(
@@ -202,10 +214,13 @@ class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
 
     final session = state.value!;
     final isCorrect = answer.trim() == current.correctAnswer.trim();
+    final practice = readPracticeMode(ref);
+    final nextLives = isCorrect
+        ? session.livesRemaining
+        : (practice ? session.livesRemaining : session.livesRemaining - 1);
     state = AsyncData(session.copyWith(
       score: isCorrect ? session.score + 1 : session.score,
-      livesRemaining:
-          isCorrect ? session.livesRemaining : session.livesRemaining - 1,
+      livesRemaining: nextLives,
       lastAnswerCorrect: isCorrect,
     ));
     return isCorrect;

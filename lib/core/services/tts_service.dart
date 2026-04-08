@@ -1,12 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:aziz_academy/core/services/audio_service.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 
 final ttsServiceProvider = Provider<TtsService>((ref) {
-  final isMuted = ref.watch(isMutedProvider);
+  final soundOn = ref.watch(appSettingsProvider).value?.soundEnabled ?? true;
   final service = TtsService();
-  service.updateMuteStatus(isMuted);
+  service.updateMuteStatus(!soundOn);
   return service;
 });
 

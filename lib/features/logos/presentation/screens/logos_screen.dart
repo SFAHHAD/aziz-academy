@@ -10,6 +10,7 @@ import 'package:aziz_academy/features/logos/providers/logos_provider.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/victory_overlay.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_overlay.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 
 import 'package:aziz_academy/l10n/app_localizations.dart';
@@ -75,10 +76,14 @@ class LogosScreen extends ConsumerWidget {
         if (next.value?.isComplete == true &&
             prev?.value?.isComplete != true) {
           final session = next.value!;
-          ref.read(achievementProvider.notifier).recordLogosSession(
-            score: session.score,
-            livesRemaining: session.livesRemaining,
-          );
+          final practice =
+              ref.read(appSettingsProvider).value?.practiceMode ?? false;
+          if (!practice) {
+            ref.read(achievementProvider.notifier).recordLogosSession(
+                  score: session.score,
+                  livesRemaining: session.livesRemaining,
+                );
+          }
           ref.read(audioServiceProvider).playVictorySound();
         } else if (next.value?.isGameOver == true &&
                    prev?.value?.isGameOver != true) {
@@ -86,6 +91,9 @@ class LogosScreen extends ConsumerWidget {
         }
       },
     );
+
+    final reducedMotion =
+        ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
 
     return sessionAsync.when(
       loading: () => const _LoadingView(),
@@ -95,6 +103,7 @@ class LogosScreen extends ConsumerWidget {
           return Scaffold(
             body: GameOverOverlay(
               session: session,
+              learningTip: session.currentQuestion?.funFact,
               onTryAgain: () => ref.read(logosQuizProvider.notifier).restart(),
               onBack: () => context.go(AppRoutes.home),
             ),
@@ -104,6 +113,9 @@ class LogosScreen extends ConsumerWidget {
           return Scaffold(
             body: VictoryOverlay(
               session: session,
+              title: 'بطل الشعارات!',
+              shareModuleLabel: 'جولة الشعارات — أكاديمية عزيز',
+              reducedMotion: reducedMotion,
               onPlayAgain: () =>
                   ref.read(logosQuizProvider.notifier).restart(),
               onBack: () => context.go(AppRoutes.home),
@@ -210,7 +222,7 @@ class _QuizViewState extends ConsumerState<_QuizView>
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 540),
+            constraints: const BoxConstraints(maxWidth: 640),
             child: Column(
               children: [
             // ── Header ─────────────────────────────────────────────────

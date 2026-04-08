@@ -23,102 +23,66 @@ enum BadgeId {
 class BadgeDefinition {
   const BadgeDefinition({
     required this.id,
-    required this.nameKey,
-    required this.descKey,
     required this.emoji,
     required this.color,
-    required this.conditionAr,
   });
 
   final BadgeId id;
-  final String nameKey;
-  final String descKey;
   final String emoji;
   final Color color;
-  final String conditionAr;
 }
 
-/// All badge definitions — order defines display order.
+/// All badge definitions — order defines display order. Names/descriptions use [AppLocalizations].
 const allBadges = [
   BadgeDefinition(
     id: BadgeId.capitalsExplorer,
-    nameKey: 'مستكشف العواصم',
-    descKey: 'لإكمال أول جولة في العواصم',
     emoji: '🌍',
     color: Color(0xFF42A5F5),
-    conditionAr: 'أكمل اختبار العواصم لمرة واحدة على الأقل بنجاح.',
   ),
   BadgeDefinition(
     id: BadgeId.capitalsExpert,
-    nameKey: 'خبير العواصم',
-    descKey: 'للحصول على تقييم 3 نجوم',
     emoji: '🏆',
     color: Color(0xFFFFB300),
-    conditionAr: 'أكمل اختبار العواصم بشكل مثالي (3 نجوم / 0 أخطاء).',
   ),
   BadgeDefinition(
     id: BadgeId.mapMaster,
-    nameKey: 'سيد الخرائط',
-    descKey: 'لاستكشاف جميع القارات',
     emoji: '🗺️',
     color: Color(0xFF26A69A),
-    conditionAr: 'قم بفتح وتجربة قسم الخرائط لجميع القارات الـ 6.',
   ),
   BadgeDefinition(
     id: BadgeId.logoDetective,
-    nameKey: 'متحري الشعارات',
-    descKey: 'لإكمال أول جولة في الشعارات',
     emoji: '🔍',
     color: Color(0xFFAB47BC),
-    conditionAr: 'أكمل اختبار الشعارات لمرة واحدة على الأقل بنجاح.',
   ),
   BadgeDefinition(
     id: BadgeId.logoHunter,
-    nameKey: 'صياد الشعارات',
-    descKey: 'للحصول على 3 نجوم',
     emoji: '🎯',
     color: Color(0xFFEF5350),
-    conditionAr: 'أكمل اختبار الشعارات بشكل مثالي (3 نجوم / 0 أخطاء).',
   ),
   BadgeDefinition(
     id: BadgeId.triviaTitan,
-    nameKey: 'عملاق المعرفة',
-    descKey: 'للإجابة عن 25 سؤالاً صحيحاً',
     emoji: '⚡',
     color: Color(0xFFFF7043),
-    conditionAr: 'أجب على ما مجموعه 25 سؤال بشكل صحيح عبر جميع أقسام الأكاديمية.',
   ),
   BadgeDefinition(
     id: BadgeId.scienceGenius,
-    nameKey: 'عبقري العلوم',
-    descKey: 'للتفوق في تحديات العلوم',
     emoji: '🔬',
     color: Color(0xFFC47AC0),
-    conditionAr: 'أكمل تحدي العلوم بـ 3 نجوم (0 أخطاء).',
   ),
   BadgeDefinition(
     id: BadgeId.mathChampion,
-    nameKey: 'بطل الرياضيات',
-    descKey: 'لإنهاء التحدي الحسابي بنجاح',
     emoji: '🔢',
     color: Color(0xFF2C63B3),
-    conditionAr: 'أكمل تحدي الرياضيات بـ 3 نجوم (0 أخطاء).',
   ),
   BadgeDefinition(
     id: BadgeId.perfectScholar,
-    nameKey: 'الباحث المثالي',
-    descKey: 'الأداء المثالي في الدورة التدريبية',
     emoji: '🎓',
     color: Color(0xFF66BB6A),
-    conditionAr: 'احصل على الأوسمة الذهبية في العواصم، الشعارات، العلوم، والرياضيات.',
   ),
   BadgeDefinition(
     id: BadgeId.academyStar,
-    nameKey: 'نجم الأكاديمية',
-    descKey: 'لفتح كافة شارات الإنجازات!',
     emoji: '🌟',
     color: Color(0xFFFFD600),
-    conditionAr: 'وسام الختام: احصل على جميع الشارات الـ 9 الأخرى أولاً!',
   ),
 ];
 
@@ -455,6 +419,56 @@ class AchievementNotifier extends AsyncNotifier<AchievementState> {
     var next = current.copyWith(
       streakCount: nextStreak,
       lastVisitDate: todayStr,
+    );
+    next = applyBadgeUnlocks(next);
+    state = AsyncData(next);
+    await _save(next);
+  }
+
+  static int _clampInt(dynamic v, [int max = 1000000]) {
+    final n = v is num ? v.toInt() : 0;
+    if (n < 0) return 0;
+    if (n > max) return max;
+    return n;
+  }
+
+  /// Overwrites local progress from an imported backup map (same keys as export).
+  Future<void> restoreFromBackup(Map<String, dynamic> j) async {
+    _prefs = await SharedPreferences.getInstance();
+
+    final continents = <String>{};
+    final ct = j['continentsTapped'];
+    if (ct is List) {
+      for (final e in ct) {
+        if (e is String) continents.add(e);
+      }
+    }
+
+    final badges = <BadgeId>{};
+    final ub = j['unlockedBadges'];
+    if (ub is List) {
+      for (final e in ub) {
+        if (e is! String) continue;
+        for (final b in BadgeId.values) {
+          if (b.name == e) badges.add(b);
+        }
+      }
+    }
+
+    var next = AchievementState(
+      capitalsStars: _clampInt(j['capitalsStars'], 3),
+      logosStars: _clampInt(j['logosStars'], 3),
+      mathStars: _clampInt(j['mathStars'], 3),
+      sciencesStars: _clampInt(j['sciencesStars'], 3),
+      capitalsCompleted: _clampInt(j['capitalsCompleted']),
+      logosCompleted: _clampInt(j['logosCompleted']),
+      mathCompleted: _clampInt(j['mathCompleted']),
+      sciencesCompleted: _clampInt(j['sciencesCompleted']),
+      totalCorrect: _clampInt(j['totalCorrect']),
+      streakCount: _clampInt(j['streakCount'], 10000),
+      lastVisitDate: j['lastVisitDate'] as String?,
+      continentsTapped: continents,
+      unlockedBadges: badges,
     );
     next = applyBadgeUnlocks(next);
     state = AsyncData(next);

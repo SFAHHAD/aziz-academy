@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
+import 'package:aziz_academy/core/l10n/badge_l10n.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
 
 // =============================================================================
@@ -69,7 +71,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                 child: Padding(
                   padding: const EdgeInsets.all(24),
                   child: Text(
-                    'تعذّر تحميل الكؤوس. أعد المحاولة لاحقاً.',
+                    context.l10n.trophyLoadError,
                     textAlign: TextAlign.center,
                     style: AppTextStyles.bodyLarge.copyWith(
                       color: AppColors.textMedium,
@@ -99,7 +101,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
                         child: Text(
-                          'اضغط أي شارة لمعرفة شرط الحصول عليها',
+                          context.l10n.trophyTapHint,
                           textAlign: TextAlign.center,
                           style: AppTextStyles.labelMedium.copyWith(
                             color: AppColors.textMedium.withAlpha(200),
@@ -220,7 +222,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  'قاعة الكؤوس',
+                  context.l10n.trophyHallTitle,
                   style: AppTextStyles.displayMedium.copyWith(
                     color: Colors.white,
                     fontSize: h < 700 ? 26 : null,
@@ -243,7 +245,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                         Border.all(color: AppColors.secondary.withAlpha(90)),
                   ),
                   child: Text(
-                    '$unlockedCount / ${allBadges.length} شارات',
+                    context.l10n.trophyBadgeCount(unlockedCount, allBadges.length),
                     style: AppTextStyles.labelLarge
                         .copyWith(color: AppColors.secondary),
                   ),
@@ -263,6 +265,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
       backgroundColor: Colors.transparent,
       isScrollControlled: true,
       builder: (context) {
+        final l10n = context.l10n;
         return Container(
           margin: const EdgeInsets.all(16),
           padding: const EdgeInsets.all(32),
@@ -318,7 +321,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
               ),
               const SizedBox(height: 24),
               Text(
-                badge.nameKey,
+                l10n.badgeName(badge.id),
                 style: AppTextStyles.headingLarge.copyWith(
                   color: isUnlocked
                       ? AppColors.textDark
@@ -328,7 +331,9 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
               ),
               const SizedBox(height: 8),
               Text(
-                isUnlocked ? badge.descKey : 'استمر في اللعب لفتح هذه الشارة',
+                isUnlocked
+                    ? l10n.badgeSubtitle(badge.id)
+                    : l10n.trophyLockedHint,
                 style: AppTextStyles.bodyMedium
                     .copyWith(color: AppColors.textMedium),
                 textAlign: TextAlign.center,
@@ -359,8 +364,8 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                         const SizedBox(width: 8),
                         Text(
                           isUnlocked
-                              ? 'إنجاز مكتمل!'
-                              : 'شروط الحصول على الشارة:',
+                              ? l10n.trophyAchievementDone
+                              : l10n.trophyHowToEarnBadge,
                           style: AppTextStyles.headingSmall.copyWith(
                             color: isUnlocked
                                 ? badge.color
@@ -371,7 +376,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      badge.conditionAr,
+                      l10n.badgeCondition(badge.id),
                       style: AppTextStyles.bodyLarge.copyWith(
                           height: 1.5, color: AppColors.textDark),
                       textAlign: TextAlign.center,
@@ -393,7 +398,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                   ),
-                  child: Text('حسناً',
+                  child: Text(l10n.trophyOk,
                       style: AppTextStyles.headingMedium
                           .copyWith(color: AppColors.background)),
                 ),
@@ -511,6 +516,7 @@ class _AnimatedBadgeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     // Staggered fade in + slide up
     final delay = (index * 0.1).clamp(0.0, 1.0);
     final slideAnim = Tween<Offset>(
@@ -641,7 +647,7 @@ class _AnimatedBadgeCard extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: isUnlocked
                         ? Text(
-                            badge.nameKey,
+                            l10n.badgeName(badge.id),
                             style: AppTextStyles.labelLarge.copyWith(
                               color: AppColors.textDark,
                               fontWeight: FontWeight.w800,
@@ -655,7 +661,7 @@ class _AnimatedBadgeCard extends StatelessWidget {
                             child: Opacity(
                               opacity: 0.5,
                               child: Text(
-                                badge.nameKey,
+                                l10n.badgeName(badge.id),
                                 style: AppTextStyles.labelLarge.copyWith(
                                   color: AppColors.textDark,
                                   fontWeight: FontWeight.w800,
