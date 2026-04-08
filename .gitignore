@@ -51,6 +51,7 @@ coverage/
 **/ios/Pods/
 **/ios/.symlinks/
 **/ios/Flutter/ephemeral/
+ios/ExportOptions-ci.plist
 
 # Symbolication / obfuscation (if used)
 app.*.symbols

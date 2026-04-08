@@ -75,7 +75,29 @@ The repo remote is **GitHub**; push to enable CI and (once Pages is configured) 
 
 **iOS signing:** Open `ios/Runner.xcworkspace` in Xcode → **Runner** target → **Signing & Capabilities** → select your Team. `ITSAppUsesNonExemptEncryption` is set to **no** in `Info.plist` (standard for apps that only use HTTPS APIs like font loading).
 
-**App Store Connect API (upload without Xcode Organizer):** In [App Store Connect](https://appstoreconnect.apple.com) → **Users and Access** → **Integrations** → **App Store Connect API**, create a key with **Admin** or **App Manager** access. Your downloaded key is `AuthKey_<KeyID>.p8` (for example Key ID `SWKQYRLMSP`). **Do not commit `.p8` files** — copy once to `~/.appstoreconnect/private_keys/` on your Mac. Copy `scripts/app_store_connect.env.example` to `scripts/app_store_connect.env`, set **Issuer ID** and **Key ID**, then after `flutter build ipa` run `scripts/upload_ipa_appstore_connect.ps1` (macOS only). For GitHub Actions, store the Issuer ID, Key ID, and the **base64-encoded** `.p8` contents as repository secrets, not the raw file in the repo.
+**App Store Connect API (upload without Xcode Organizer):** In [App Store Connect](https://appstoreconnect.apple.com) → **Users and Access** → **Integrations** → **App Store Connect API**, create a key with **Admin** or **App Manager** access. Your downloaded key is `AuthKey_<KeyID>.p8` (for example Key ID `SWKQYRLMSP`). **Do not commit `.p8` files** — copy once to `~/.appstoreconnect/private_keys/` on your Mac. Copy `scripts/app_store_connect.env.example` to `scripts/app_store_connect.env`, set **Issuer ID** and **Key ID**, then after `flutter build ipa` run `scripts/upload_ipa_appstore_connect.ps1` (macOS only).
+
+**GitHub Actions — release both stores:** Workflow **Release — Play & TestFlight** (`.github/workflows/release_stores.yml`) builds signed **`.aab`** and **`.ipa`** and uploads to Google Play and App Store Connect. In the repo → **Settings → Secrets and variables → Actions**, add:
+
+| Secret | Used for |
+|--------|----------|
+| `ANDROID_KEYSTORE_BASE64` | Base64 of your Play upload `upload-keystore.jks` |
+| `ANDROID_KEYSTORE_PASSWORD` | Keystore password |
+| `ANDROID_KEY_PASSWORD` | Key password |
+| `ANDROID_KEY_ALIAS` | Optional; defaults to `upload` if omitted |
+| `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` | Full JSON of a Play Console [API service account](https://developers.google.com/android-publisher/getting_started) (JSON key file contents) |
+| `IOS_DISTRIBUTION_CERTIFICATE_BASE64` | Base64 of **Apple Distribution** `.p12` (export from Keychain or create in Apple Developer) |
+| `IOS_DISTRIBUTION_CERTIFICATE_PASSWORD` | `.p12` export password |
+| `IOS_PROVISIONING_PROFILE_BASE64` | Base64 of **App Store** provisioning profile for `com.azizacademy.azizAcademy` |
+| `IOS_TEAM_ID` | 10-character Apple Team ID |
+| `IOS_PROVISIONING_PROFILE_NAME` | Exact profile **Name** from developer.apple.com (not the file name) |
+| `APP_STORE_CONNECT_ISSUER_ID` | Issuer UUID from App Store Connect API page |
+| `APP_STORE_CONNECT_KEY_ID` | e.g. `SWKQYRLMSP` |
+| `APP_STORE_CONNECT_API_KEY_BASE64` | Base64 of the entire `AuthKey_*.p8` file |
+
+Encode binary files for secrets: PowerShell `.\scripts\encode_file_base64.ps1 -Path your.jks -CopyToClipboard` (or print without `-CopyToClipboard`). macOS/Linux: `base64 -i file.jks`.
+
+Then **Actions → Release — Play & TestFlight → Run workflow** (choose Play track; toggle Android / iOS). The app record must already exist in [Play Console](https://play.google.com/console) and [App Store Connect](https://appstoreconnect.apple.com) with matching bundle IDs.
 
 **Privacy:** `ios/Runner/PrivacyInfo.xcprivacy` declares UserDefaults access (used by `shared_preferences`). Adjust if Apple requests more detail.
 
