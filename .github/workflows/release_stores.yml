@@ -1,7 +1,10 @@
 # One workflow: build signed Android App Bundle → Google Play, signed iOS IPA → App Store Connect.
-# Configure GitHub repository secrets (see README). Run: Actions → Release — Play & TestFlight → Run workflow.
+# Configure GitHub repository secrets (see README + docs/IOS_RELEASE_NO_MAC.md). Run: Actions → Release — Play & TestFlight → Run workflow.
 
 name: Release — Play & TestFlight
+
+permissions:
+  contents: read
 
 on:
   workflow_dispatch:

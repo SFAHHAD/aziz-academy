@@ -60,6 +60,8 @@ The repo remote is **GitHub**; push to enable CI and (once Pages is configured) 
 
 ### Google Play & Apple App Store
 
+**No Mac?** Follow the full checklist: **[docs/IOS_RELEASE_NO_MAC.md](docs/IOS_RELEASE_NO_MAC.md)** (GitHub Actions builds the iOS `.ipa` on Apple’s cloud Mac; you only add secrets and run the workflow). Secrets checklist: [docs/github_actions_secrets_checklist.txt](docs/github_actions_secrets_checklist.txt).
+
 **Versioning:** Bump `version:` in `pubspec.yaml` (e.g. `1.0.1+5`) before each store upload — `+` number is Android `versionCode` / iOS build.
 
 | Platform | Bundle ID | Build |
