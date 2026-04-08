@@ -45,21 +45,18 @@ flutter analyze --fatal-infos --fatal-warnings
 flutter test
 ```
 
-### Web deploy (Vercel)
+### Deploy (all options)
 
-From PowerShell (preview build):
+| Target | How |
+|--------|-----|
+| **GitHub** (source + CI) | Push to `main` / `master` — `flutter_ci.yml` runs analyze, test, and web builds. |
+| **GitHub Pages** | Repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**. On each push to `main`/`master`, `deploy_github_pages.yml` builds and publishes `build/web` (SPA uses `404.html` = `index.html` for client routes). |
+| **Vercel** | Install Node, run `npx vercel login` once. Preview: `.\scripts\deploy_web.ps1` · Production: `.\scripts\deploy_web.ps1 --prod` · Or combined: `.\scripts\deploy_all.ps1` / `.\scripts\deploy_all.ps1 -VercelProd` |
+| **Firebase Hosting** | [Firebase Console](https://console.firebase.google.com) → create project → Hosting. Copy `.firebaserc.example` to `.firebaserc` and set your project id. `npm i -g firebase-tools` → `firebase login` → `.\scripts\deploy_firebase.ps1` · Or: `.\scripts\deploy_all.ps1 -VercelProd -Firebase` after `.firebaserc` exists. |
 
-```powershell
-.\scripts\deploy_web.ps1
-```
+`vercel.json` in the repo root is copied into `build/web` for SPA rewrites on Vercel. Firebase uses `firebase.json` rewrites instead.
 
-Production:
-
-```powershell
-.\scripts\deploy_web.ps1 --prod
-```
-
-The repo is **git-initialized**; connect a remote (e.g. GitHub) and push to enable CI in `.github/workflows/flutter_ci.yml`.
+The repo remote is **GitHub**; push to enable CI and (once Pages is configured) automatic static hosting.
 
 ## Project layout
 

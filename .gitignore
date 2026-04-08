@@ -26,6 +26,9 @@ res.txt
 .env.*
 !.env.example
 
+# Firebase CLI
+.firebase/
+
 # Coverage
 coverage/
 *.lcov

@@ -1,0 +1,48 @@
+# Deploy Flutter web to GitHub Pages (static hosting).
+# Enable: Repo → Settings → Pages → Source: GitHub Actions.
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build web (release)
+        run: flutter build web --release
+
+      # GitHub Pages has no server-side rewrites; copy index for unknown routes (refresh/deep link).
+      - name: SPA fallback (404 → index)
+        run: cp build/web/index.html build/web/404.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+      - uses: actions/deploy-pages@v4
+        id: deployment
