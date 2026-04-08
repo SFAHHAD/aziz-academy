@@ -25,6 +25,11 @@ res.txt
 .env
 .env.*
 !.env.example
+scripts/app_store_connect.env
+
+# Apple App Store Connect API private keys (never commit)
+*.p8
+AuthKey_*.p8
 
 # Firebase CLI
 .firebase/

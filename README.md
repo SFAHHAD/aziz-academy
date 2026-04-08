@@ -75,6 +75,8 @@ The repo remote is **GitHub**; push to enable CI and (once Pages is configured) 
 
 **iOS signing:** Open `ios/Runner.xcworkspace` in Xcode → **Runner** target → **Signing & Capabilities** → select your Team. `ITSAppUsesNonExemptEncryption` is set to **no** in `Info.plist` (standard for apps that only use HTTPS APIs like font loading).
 
+**App Store Connect API (upload without Xcode Organizer):** In [App Store Connect](https://appstoreconnect.apple.com) → **Users and Access** → **Integrations** → **App Store Connect API**, create a key with **Admin** or **App Manager** access. Your downloaded key is `AuthKey_<KeyID>.p8` (for example Key ID `SWKQYRLMSP`). **Do not commit `.p8` files** — copy once to `~/.appstoreconnect/private_keys/` on your Mac. Copy `scripts/app_store_connect.env.example` to `scripts/app_store_connect.env`, set **Issuer ID** and **Key ID**, then after `flutter build ipa` run `scripts/upload_ipa_appstore_connect.ps1` (macOS only). For GitHub Actions, store the Issuer ID, Key ID, and the **base64-encoded** `.p8` contents as repository secrets, not the raw file in the repo.
+
 **Privacy:** `ios/Runner/PrivacyInfo.xcprivacy` declares UserDefaults access (used by `shared_preferences`). Adjust if Apple requests more detail.
 
 **Store listings:** You still need screenshots, descriptions, age rating, Data safety (Play), Privacy Nutrition Labels (App Store), and — for kids’ apps — compliance with each store’s family / children policies.
