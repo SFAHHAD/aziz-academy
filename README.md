@@ -58,6 +58,29 @@ flutter test
 
 The repo remote is **GitHub**; push to enable CI and (once Pages is configured) automatic static hosting.
 
+### Google Play & Apple App Store
+
+**Versioning:** Bump `version:` in `pubspec.yaml` (e.g. `1.0.1+5`) before each store upload — `+` number is Android `versionCode` / iOS build.
+
+| Platform | Bundle ID | Build |
+|----------|-----------|--------|
+| **Android** | `com.azizacademy.aziz_academy` | `.\scripts\build_play_store.ps1` → uploads `build/app/outputs/bundle/release/app-release.aab` in [Play Console](https://play.google.com/console). |
+| **iOS** | `com.azizacademy.azizAcademy` | On a Mac with Xcode: `.\scripts\build_app_store.ps1` → `build/ios/ipa/`, or Archive from Xcode. |
+
+**Android signing (required for Play uploads):**
+
+1. Copy `android/key.properties.example` to `android/key.properties` (gitignored).
+2. Create an upload keystore under `android/app/` (see comments in the example file) and point `storeFile` at it.
+3. Re-run `build_play_store.ps1` — release builds use that keystore when `key.properties` exists; otherwise they still sign with the debug key (fine for local testing only).
+
+**iOS signing:** Open `ios/Runner.xcworkspace` in Xcode → **Runner** target → **Signing & Capabilities** → select your Team. `ITSAppUsesNonExemptEncryption` is set to **no** in `Info.plist` (standard for apps that only use HTTPS APIs like font loading).
+
+**Privacy:** `ios/Runner/PrivacyInfo.xcprivacy` declares UserDefaults access (used by `shared_preferences`). Adjust if Apple requests more detail.
+
+**Store listings:** You still need screenshots, descriptions, age rating, Data safety (Play), Privacy Nutrition Labels (App Store), and — for kids’ apps — compliance with each store’s family / children policies.
+
+If `flutter build appbundle` fails with *failed to strip debug symbols*, update the Android NDK in Android Studio SDK Manager or see [Flutter issue #181031](https://github.com/flutter/flutter/issues/181031) for NDK/AGP workarounds.
+
 ## Project layout
 
 ```

@@ -1,0 +1,12 @@
+# Copy this file to key.properties (same folder) and fill in real values.
+# Never commit key.properties or your .jks / .keystore file.
+#
+# Create a keystore (one-time), from android/app:
+#   keytool -genkey -v -keystore upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+#
+# Paths are relative to android/app/ when storeFile is a simple filename.
+
+storePassword=YOUR_KEYSTORE_PASSWORD
+keyPassword=YOUR_KEY_PASSWORD
+keyAlias=upload
+storeFile=upload-keystore.jks

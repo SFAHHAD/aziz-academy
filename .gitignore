@@ -29,6 +29,11 @@ res.txt
 # Firebase CLI
 .firebase/
 
+# Android Play upload signing (never commit)
+android/key.properties
+**/upload-keystore.jks
+**/*.keystore
+
 # Coverage
 coverage/
 *.lcov
