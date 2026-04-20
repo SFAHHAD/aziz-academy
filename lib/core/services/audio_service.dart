@@ -1,7 +1,12 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final audioServiceProvider = Provider((ref) => AudioService());
+final audioServiceProvider = Provider<AudioService>((ref) {
+  final service = AudioService();
+  // Release native AudioPlayer channels when the provider scope is destroyed.
+  ref.onDispose(service.dispose);
+  return service;
+});
 
 class AudioService {
   final AudioPlayer _bgmPlayer = AudioPlayer();
@@ -31,6 +36,12 @@ class AudioService {
   Future<void> stopBgm() async {
     await _bgmPlayer.stop();
   }
+
+  /// Lowers BGM volume during TTS speech so voices are clearly audible.
+  void duckBgm() => _bgmPlayer.setVolume(0.08);
+
+  /// Restores BGM to its normal background level after TTS finishes.
+  void unduckBgm() => _bgmPlayer.setVolume(0.3);
 
   Future<void> playCorrectSound() async {
     // Relying on Visual feedback + TTS only (No CORS blocking)

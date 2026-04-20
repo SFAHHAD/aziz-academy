@@ -16,10 +16,12 @@ import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_ov
 import 'package:aziz_academy/core/services/tts_service.dart';
 import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/xp_provider.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
 import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
 import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 class MathQuizScreen extends ConsumerStatefulWidget {
   const MathQuizScreen({super.key});
@@ -55,13 +57,16 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
     final session = ref.read(mathQuizProvider).value;
     final q = session?.currentQuestion;
     if (session != null && session.currentQuestion != null) {
-      if (option == session.currentQuestion!.correctAnswer) {
+      final isCorrect = option == session.currentQuestion!.correctAnswer;
+      if (isCorrect) {
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
         ref.read(audioServiceProvider).playWrongSound();
       }
-
-      ref.read(ttsServiceProvider).speakArabic(session.currentQuestion!.correctAnswer);
+      unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
+        session.currentQuestion!.correctAnswer,
+        correct: isCorrect,
+      ));
     }
 
     ref.read(mathQuizProvider.notifier).submitAnswer(option);
@@ -114,6 +119,12 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
                   score: session.score,
                   livesRemaining: session.livesRemaining,
                 );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
+                );
           }
           ref.read(audioServiceProvider).playVictorySound();
         } else if (next.value?.isGameOver == true && prev?.value?.isGameOver != true) {
@@ -133,8 +144,8 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
             if (session.isComplete) {
               return VictoryOverlay(
                 session: session,
-                title: 'بطل الرياضيات!',
-                shareModuleLabel: 'جولة الرياضيات — أكاديمية عزيز',
+                title: context.l10n.victoryMathTitle,
+                shareModuleLabel: context.l10n.shareModuleMath,
                 reducedMotion: reducedMotion,
                 onPlayAgain: _onRestart,
                 onBack: () => context.go(AppRoutes.home),
@@ -234,7 +245,7 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
                               onPressed: () =>
                                   setState(() => _coPlayChoicesVisible = true),
                               icon: const Icon(Icons.visibility_rounded),
-                              label: const Text('اعرض خيارات الإجابة'),
+                              label: Text(context.l10n.coPlayRevealChoices),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppColors.secondary,
                                 foregroundColor: AppColors.surface,
@@ -313,7 +324,7 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
                                   ),
                                 ),
                                 child: Text(
-                                  'التالي',
+                                  context.l10n.nextAction,
                                   style: AppTextStyles.bodyLarge.copyWith(
                                     color: AppColors.surface,
                                     fontWeight: FontWeight.bold,

@@ -20,7 +20,11 @@ class AboutScreen extends StatelessWidget {
           style: AppTextStyles.headingSmall.copyWith(color: AppColors.textDark),
         ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
+          icon: Icon(
+            Directionality.of(context) == TextDirection.rtl
+                ? Icons.arrow_forward_ios_rounded
+                : Icons.arrow_back_ios_new_rounded,
+          ),
           onPressed: () {
             if (context.canPop()) {
               context.pop();
@@ -116,7 +120,7 @@ class AboutScreen extends StatelessWidget {
                 Divider(color: AppColors.divider.withAlpha(80)),
                 const SizedBox(height: 16),
                 Text(
-                  'صُنع بـ ❤️ بمساعدة Cursor AI',
+                  'صُنع بـ ❤️',
                   style: AppTextStyles.caption.copyWith(
                     color: AppColors.textMedium,
                   ),

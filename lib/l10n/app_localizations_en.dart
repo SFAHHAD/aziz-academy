@@ -611,4 +611,220 @@ class AppLocalizationsEn extends AppLocalizations {
   String trophyBadgeCount(int unlocked, int total) {
     return '$unlocked / $total badges';
   }
+
+  @override
+  String get victoryFlagsTitle => 'Flags Champion!';
+
+  @override
+  String get victoryLogosTitle => 'Logos Champion!';
+
+  @override
+  String get victorySciencesTitle => 'Science Champion!';
+
+  @override
+  String get victoryMathTitle => 'Maths Champion!';
+
+  @override
+  String get shareModuleFlags => 'Flags Round — Aziz Academy';
+
+  @override
+  String get shareModuleLogos => 'Logos Round — Aziz Academy';
+
+  @override
+  String get shareModuleSciences => 'Science Round — Aziz Academy';
+
+  @override
+  String get shareModuleMath => 'Maths Round — Aziz Academy';
+
+  @override
+  String get coPlayRevealChoices => 'Reveal answer choices';
+
+  @override
+  String get sciencesScreenTitle => 'Scientific Discoveries';
+
+  @override
+  String get sciencesStartFull => 'Start the full science challenge';
+
+  @override
+  String get sciencesOrChooseCategory => 'Or choose a science topic';
+
+  @override
+  String sciencesComprehensiveCount(int count) {
+    return '$count questions total';
+  }
+
+  @override
+  String sciencesCategoryCount(int count) {
+    return '$count questions';
+  }
+
+  @override
+  String get mathScreenTitle => 'Maths Challenge';
+
+  @override
+  String get mathStartFull => 'Full intelligence test';
+
+  @override
+  String get mathOrChooseOperation => 'Or choose an operation type';
+
+  @override
+  String get retryAction => 'Try again';
+
+  @override
+  String get quizLoadError => 'Sorry! Could not load the quiz.';
+
+  @override
+  String get nextAction => 'Next';
+
+  @override
+  String get reviewModeTitle => 'Review Mode';
+
+  @override
+  String reviewModeSubtitle(int count) {
+    return '$count questions to review';
+  }
+
+  @override
+  String get reviewModeStart => 'Start Review';
+
+  @override
+  String reviewModeQuestionOf(int current, int total) {
+    return 'Question $current of $total';
+  }
+
+  @override
+  String get reviewModeComplete => 'Review Complete!';
+
+  @override
+  String reviewModeScore(int score, int total) {
+    return '$score / $total correct';
+  }
+
+  @override
+  String reviewModeMastered(int count) {
+    return '$count question(s) mastered ✓';
+  }
+
+  @override
+  String get reviewModeGoHome => 'Back to Home';
+
+  @override
+  String get reviewModeEmpty => 'Nothing to review — great job!';
+
+  @override
+  String get reviewModeNeedsReview => 'Needs Review';
+
+  @override
+  String reviewModeCountBadge(int count) {
+    return '$count to review';
+  }
+
+  @override
+  String get reviewModeCardTitle => 'Smart Review';
+
+  @override
+  String reviewModeCardSubtitle(int count) {
+    return '$count question(s) need extra attention';
+  }
+
+  @override
+  String get dailyChallengeTitle => 'Daily Challenge';
+
+  @override
+  String get dailyChallengeSubtitle => '10 mixed questions · 2× XP';
+
+  @override
+  String get dailyChallengeStart => 'Start Now';
+
+  @override
+  String get dailyChallengeCompleted => 'Completed!';
+
+  @override
+  String dailyChallengeResetsIn(String time) {
+    return 'Resets in $time';
+  }
+
+  @override
+  String get dailyChallengeDoubleXp => '2× XP';
+
+  @override
+  String dailyChallengeXpEarned(int xp) {
+    return '+$xp XP earned!';
+  }
+
+  @override
+  String dailyChallengeScore(int score, int total) {
+    return '$score / $total correct';
+  }
+
+  @override
+  String dailyChallengeQuestionOf(int current, int total) {
+    return 'Question $current of $total';
+  }
+
+  @override
+  String get dailyChallengeGreatJob => 'Great job today!';
+
+  @override
+  String get dailyChallengeGoHome => 'Back to Home';
+
+  @override
+  String get trophyCollectionProgress => 'Collection Progress';
+
+  @override
+  String get trophyNewBadgeTitle => 'New Badge Unlocked!';
+
+  @override
+  String get trophyTapToDismiss => 'Tap anywhere to continue';
+
+  @override
+  String get badge_flag_master_name => 'Flag Master';
+
+  @override
+  String get badge_flag_master_desc => 'Completed 10 Flags quiz sessions';
+
+  @override
+  String get badge_flag_master_condition => 'Finish 10 Flags quiz sessions';
+
+  @override
+  String get badge_math_genius_name => 'Math Genius';
+
+  @override
+  String get badge_math_genius_desc =>
+      '5 perfect Math rounds — not a single mistake!';
+
+  @override
+  String get badge_math_genius_condition =>
+      'Finish 5 Math quizzes without losing any lives';
+
+  @override
+  String get badge_streak_champion_name => 'Streak Champion';
+
+  @override
+  String get badge_streak_champion_desc => '7-day learning streak achieved!';
+
+  @override
+  String get badge_streak_champion_condition =>
+      'Open the app every day for 7 consecutive days';
+
+  @override
+  String get badge_grand_scholar_name => 'Grand Scholar';
+
+  @override
+  String get badge_grand_scholar_desc =>
+      '50 total correct answers across all modules';
+
+  @override
+  String get badge_grand_scholar_condition =>
+      'Answer 50 questions correctly across all quiz modules';
+
+  @override
+  String get badge_all_rounder_name => 'All-Rounder';
+
+  @override
+  String get badge_all_rounder_desc => 'Tried every single quiz module!';
+
+  @override
+  String get badge_all_rounder_condition =>
+      'Complete at least one quiz in every module: Capitals, Flags, Logos, Math, and Sciences';
 }

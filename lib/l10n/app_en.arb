@@ -348,5 +348,229 @@
       "unlocked": { "type": "int" },
       "total": { "type": "int" }
     }
-  }
+  },
+
+  "victoryFlagsTitle": "Flags Champion!",
+  "@victoryFlagsTitle": { "description": "Victory screen heading for the flags quiz." },
+
+  "victoryLogosTitle": "Logos Champion!",
+  "@victoryLogosTitle": { "description": "Victory screen heading for the logos quiz." },
+
+  "victorySciencesTitle": "Science Champion!",
+  "@victorySciencesTitle": { "description": "Victory screen heading for the sciences quiz." },
+
+  "victoryMathTitle": "Maths Champion!",
+  "@victoryMathTitle": { "description": "Victory screen heading for the maths quiz." },
+
+  "shareModuleFlags": "Flags Round \u2014 Aziz Academy",
+  "@shareModuleFlags": { "description": "Share text for the flags quiz." },
+
+  "shareModuleLogos": "Logos Round \u2014 Aziz Academy",
+  "@shareModuleLogos": { "description": "Share text for the logos quiz." },
+
+  "shareModuleSciences": "Science Round \u2014 Aziz Academy",
+  "@shareModuleSciences": { "description": "Share text for the sciences quiz." },
+
+  "shareModuleMath": "Maths Round \u2014 Aziz Academy",
+  "@shareModuleMath": { "description": "Share text for the maths quiz." },
+
+  "coPlayRevealChoices": "Reveal answer choices",
+  "@coPlayRevealChoices": { "description": "Button to reveal choices in co-play mode." },
+
+  "sciencesScreenTitle": "Scientific Discoveries",
+  "@sciencesScreenTitle": { "description": "App-bar title for the sciences screen." },
+
+  "sciencesStartFull": "Start the full science challenge",
+  "@sciencesStartFull": { "description": "Button to start the full sciences quiz." },
+
+  "sciencesOrChooseCategory": "Or choose a science topic",
+  "@sciencesOrChooseCategory": { "description": "Section label for topic picker on the sciences screen." },
+
+  "sciencesComprehensiveCount": "{count} questions total",
+  "@sciencesComprehensiveCount": {
+    "description": "Question count for the full sciences quiz.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "sciencesCategoryCount": "{count} questions",
+  "@sciencesCategoryCount": {
+    "description": "Question count for a specific science topic.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "mathScreenTitle": "Maths Challenge",
+  "@mathScreenTitle": { "description": "App-bar title for the maths screen." },
+
+  "mathStartFull": "Full intelligence test",
+  "@mathStartFull": { "description": "Button to start the full maths quiz." },
+
+  "mathOrChooseOperation": "Or choose an operation type",
+  "@mathOrChooseOperation": { "description": "Section label for operation picker on the maths screen." },
+
+  "retryAction": "Try again",
+  "@retryAction": { "description": "General retry button label on error states." },
+
+  "quizLoadError": "Sorry! Could not load the quiz.",
+  "@quizLoadError": { "description": "Error message when quiz questions fail to load." },
+
+  "nextAction": "Next",
+  "@nextAction": { "description": "Button to advance to the next step." },
+
+  "reviewModeTitle": "Review Mode",
+  "@reviewModeTitle": { "description": "Title of the smart review mode screen." },
+
+  "reviewModeSubtitle": "{count} questions to review",
+  "@reviewModeSubtitle": {
+    "description": "Subtitle on the review card.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "reviewModeStart": "Start Review",
+  "@reviewModeStart": { "description": "Button to launch review mode." },
+
+  "reviewModeQuestionOf": "Question {current} of {total}",
+  "@reviewModeQuestionOf": {
+    "description": "Progress indicator in review mode.",
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "reviewModeComplete": "Review Complete!",
+  "@reviewModeComplete": { "description": "Heading on the review result screen." },
+
+  "reviewModeScore": "{score} / {total} correct",
+  "@reviewModeScore": {
+    "description": "Score summary on result screen.",
+    "placeholders": {
+      "score": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "reviewModeMastered": "{count} question(s) mastered ✓",
+  "@reviewModeMastered": {
+    "description": "Number of questions removed from queue.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "reviewModeGoHome": "Back to Home",
+  "@reviewModeGoHome": { "description": "Button to return home from review mode." },
+
+  "reviewModeEmpty": "Nothing to review — great job!",
+  "@reviewModeEmpty": { "description": "Message shown when the review queue is empty." },
+
+  "reviewModeNeedsReview": "Needs Review",
+  "@reviewModeNeedsReview": { "description": "Label shown on module cards with review items." },
+
+  "reviewModeCountBadge": "{count} to review",
+  "@reviewModeCountBadge": {
+    "description": "Badge on module card showing review count.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "reviewModeCardTitle": "Smart Review",
+  "@reviewModeCardTitle": { "description": "Title of the review card on the home screen." },
+
+  "reviewModeCardSubtitle": "{count} question(s) need extra attention",
+  "@reviewModeCardSubtitle": {
+    "description": "Subtitle of the review card on the home screen.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "dailyChallengeTitle": "Daily Challenge",
+  "@dailyChallengeTitle": { "description": "Title of the daily challenge feature." },
+
+  "dailyChallengeSubtitle": "10 mixed questions \u00b7 2\u00d7 XP",
+  "@dailyChallengeSubtitle": { "description": "Subtitle shown on the daily challenge card." },
+
+  "dailyChallengeStart": "Start Now",
+  "@dailyChallengeStart": { "description": "Button to start the daily challenge." },
+
+  "dailyChallengeCompleted": "Completed!",
+  "@dailyChallengeCompleted": { "description": "Status when the daily challenge is done." },
+
+  "dailyChallengeResetsIn": "Resets in {time}",
+  "@dailyChallengeResetsIn": {
+    "description": "Countdown label.",
+    "placeholders": { "time": { "type": "String" } }
+  },
+
+  "dailyChallengeDoubleXp": "2\u00d7 XP",
+  "@dailyChallengeDoubleXp": { "description": "Double XP badge label." },
+
+  "dailyChallengeXpEarned": "+{xp} XP earned!",
+  "@dailyChallengeXpEarned": {
+    "description": "XP earned message on completion.",
+    "placeholders": { "xp": { "type": "int" } }
+  },
+
+  "dailyChallengeScore": "{score} / {total} correct",
+  "@dailyChallengeScore": {
+    "description": "Score summary.",
+    "placeholders": {
+      "score": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "dailyChallengeQuestionOf": "Question {current} of {total}",
+  "@dailyChallengeQuestionOf": {
+    "description": "Question progress indicator.",
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "dailyChallengeGreatJob": "Great job today!",
+  "@dailyChallengeGreatJob": { "description": "Celebration heading on the result screen." },
+
+  "dailyChallengeGoHome": "Back to Home",
+  "@dailyChallengeGoHome": { "description": "Button to return home after challenge." },
+
+  "trophyCollectionProgress": "Collection Progress",
+  "@trophyCollectionProgress": { "description": "Label for the progress strip in the trophy room." },
+
+  "trophyNewBadgeTitle": "New Badge Unlocked!",
+  "@trophyNewBadgeTitle": { "description": "Heading inside the celebration overlay." },
+
+  "trophyTapToDismiss": "Tap anywhere to continue",
+  "@trophyTapToDismiss": { "description": "Dismiss hint in the celebration overlay." },
+
+  "badge_flag_master_name": "Flag Master",
+  "@badge_flag_master_name": { "description": "Badge name." },
+  "badge_flag_master_desc": "Completed 10 Flags quiz sessions",
+  "@badge_flag_master_desc": { "description": "Badge description." },
+  "badge_flag_master_condition": "Finish 10 Flags quiz sessions",
+  "@badge_flag_master_condition": { "description": "Badge unlock condition." },
+
+  "badge_math_genius_name": "Math Genius",
+  "@badge_math_genius_name": { "description": "Badge name." },
+  "badge_math_genius_desc": "5 perfect Math rounds \u2014 not a single mistake!",
+  "@badge_math_genius_desc": { "description": "Badge description." },
+  "badge_math_genius_condition": "Finish 5 Math quizzes without losing any lives",
+  "@badge_math_genius_condition": { "description": "Badge unlock condition." },
+
+  "badge_streak_champion_name": "Streak Champion",
+  "@badge_streak_champion_name": { "description": "Badge name." },
+  "badge_streak_champion_desc": "7-day learning streak achieved!",
+  "@badge_streak_champion_desc": { "description": "Badge description." },
+  "badge_streak_champion_condition": "Open the app every day for 7 consecutive days",
+  "@badge_streak_champion_condition": { "description": "Badge unlock condition." },
+
+  "badge_grand_scholar_name": "Grand Scholar",
+  "@badge_grand_scholar_name": { "description": "Badge name." },
+  "badge_grand_scholar_desc": "50 total correct answers across all modules",
+  "@badge_grand_scholar_desc": { "description": "Badge description." },
+  "badge_grand_scholar_condition": "Answer 50 questions correctly across all quiz modules",
+  "@badge_grand_scholar_condition": { "description": "Badge unlock condition." },
+
+  "badge_all_rounder_name": "All-Rounder",
+  "@badge_all_rounder_name": { "description": "Badge name." },
+  "badge_all_rounder_desc": "Tried every single quiz module!",
+  "@badge_all_rounder_desc": { "description": "Badge description." },
+  "badge_all_rounder_condition": "Complete at least one quiz in every module: Capitals, Flags, Logos, Math, and Sciences",
+  "@badge_all_rounder_condition": { "description": "Badge unlock condition." }
 }

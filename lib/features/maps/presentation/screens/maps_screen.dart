@@ -197,7 +197,12 @@ class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProvid
         children: [
           IconButton(
             onPressed: () => context.go(AppRoutes.home),
-            icon: const Icon(Icons.arrow_back_ios_new, color: AppColors.primary),
+            icon: Icon(
+              Directionality.of(context) == TextDirection.rtl
+                  ? Icons.arrow_forward_ios_rounded
+                  : Icons.arrow_back_ios_new_rounded,
+              color: AppColors.primary,
+            ),
             style: IconButton.styleFrom(
               backgroundColor: AppColors.surface,
               padding: const EdgeInsets.all(12),

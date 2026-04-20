@@ -600,4 +600,218 @@ class AppLocalizationsAr extends AppLocalizations {
   String trophyBadgeCount(int unlocked, int total) {
     return '$unlocked / $total شارات';
   }
+
+  @override
+  String get victoryFlagsTitle => 'بطل الأعلام!';
+
+  @override
+  String get victoryLogosTitle => 'بطل الشعارات!';
+
+  @override
+  String get victorySciencesTitle => 'بطل العلوم!';
+
+  @override
+  String get victoryMathTitle => 'بطل الرياضيات!';
+
+  @override
+  String get shareModuleFlags => 'جولة الأعلام — أكاديمية عزيز';
+
+  @override
+  String get shareModuleLogos => 'جولة الشعارات — أكاديمية عزيز';
+
+  @override
+  String get shareModuleSciences => 'جولة العلوم — أكاديمية عزيز';
+
+  @override
+  String get shareModuleMath => 'جولة الرياضيات — أكاديمية عزيز';
+
+  @override
+  String get coPlayRevealChoices => 'اعرض خيارات الإجابة';
+
+  @override
+  String get sciencesScreenTitle => 'الاكتشافات العلمية';
+
+  @override
+  String get sciencesStartFull => 'ابدأ التحدي العلمي الكامل';
+
+  @override
+  String get sciencesOrChooseCategory => 'أو اختر مجالاً علمياً';
+
+  @override
+  String sciencesComprehensiveCount(int count) {
+    return '$count سؤال شامل';
+  }
+
+  @override
+  String sciencesCategoryCount(int count) {
+    return '$count سؤال';
+  }
+
+  @override
+  String get mathScreenTitle => 'تحدي الرياضيات';
+
+  @override
+  String get mathStartFull => 'اختبار الذكاء الشامل';
+
+  @override
+  String get mathOrChooseOperation => 'أو اختر نوع العمليات';
+
+  @override
+  String get retryAction => 'حاول مجدداً';
+
+  @override
+  String get quizLoadError => 'عذراً! تعذّر تحميل الاختبار.';
+
+  @override
+  String get nextAction => 'التالي';
+
+  @override
+  String get reviewModeTitle => 'وضع المراجعة';
+
+  @override
+  String reviewModeSubtitle(int count) {
+    return '$count سؤال للمراجعة';
+  }
+
+  @override
+  String get reviewModeStart => 'ابدأ المراجعة';
+
+  @override
+  String reviewModeQuestionOf(int current, int total) {
+    return 'سؤال $current من $total';
+  }
+
+  @override
+  String get reviewModeComplete => 'اكتملت المراجعة!';
+
+  @override
+  String reviewModeScore(int score, int total) {
+    return '$score / $total صحيح';
+  }
+
+  @override
+  String reviewModeMastered(int count) {
+    return '$count سؤال تم إتقانه ✓';
+  }
+
+  @override
+  String get reviewModeGoHome => 'العودة للرئيسية';
+
+  @override
+  String get reviewModeEmpty => 'لا شيء للمراجعة — أحسنت!';
+
+  @override
+  String get reviewModeNeedsReview => 'تحتاج مراجعة';
+
+  @override
+  String reviewModeCountBadge(int count) {
+    return '$count للمراجعة';
+  }
+
+  @override
+  String get reviewModeCardTitle => 'المراجعة الذكية';
+
+  @override
+  String reviewModeCardSubtitle(int count) {
+    return '$count سؤال يحتاج اهتماماً إضافياً';
+  }
+
+  @override
+  String get dailyChallengeTitle => 'التحدي اليومي';
+
+  @override
+  String get dailyChallengeSubtitle => '١٠ أسئلة متنوعة · ضعف نقاط XP';
+
+  @override
+  String get dailyChallengeStart => 'ابدأ الآن';
+
+  @override
+  String get dailyChallengeCompleted => 'مكتمل!';
+
+  @override
+  String dailyChallengeResetsIn(String time) {
+    return 'يتجدد خلال $time';
+  }
+
+  @override
+  String get dailyChallengeDoubleXp => '٢× XP';
+
+  @override
+  String dailyChallengeXpEarned(int xp) {
+    return '+$xp XP مكسوبة!';
+  }
+
+  @override
+  String dailyChallengeScore(int score, int total) {
+    return '$score / $total صحيح';
+  }
+
+  @override
+  String dailyChallengeQuestionOf(int current, int total) {
+    return 'سؤال $current من $total';
+  }
+
+  @override
+  String get dailyChallengeGreatJob => 'أحسنت اليوم!';
+
+  @override
+  String get dailyChallengeGoHome => 'العودة للرئيسية';
+
+  @override
+  String get trophyCollectionProgress => 'تقدّم المجموعة';
+
+  @override
+  String get trophyNewBadgeTitle => 'شارة جديدة مفتوحة!';
+
+  @override
+  String get trophyTapToDismiss => 'اضغط في أي مكان للمتابعة';
+
+  @override
+  String get badge_flag_master_name => 'سيد الأعلام';
+
+  @override
+  String get badge_flag_master_desc => 'أتممت ١٠ جلسات اختبار الأعلام';
+
+  @override
+  String get badge_flag_master_condition => 'أتمم ١٠ جلسات اختبار الأعلام';
+
+  @override
+  String get badge_math_genius_name => 'عبقري الأرقام';
+
+  @override
+  String get badge_math_genius_desc => '٥ جولات رياضيات مثالية — بلا أخطاء!';
+
+  @override
+  String get badge_math_genius_condition =>
+      'أتمم ٥ اختبارات رياضيات دون خسارة أي حياة';
+
+  @override
+  String get badge_streak_champion_name => 'بطل المثابرة';
+
+  @override
+  String get badge_streak_champion_desc => 'سلسلة تعلّم ٧ أيام متواصلة!';
+
+  @override
+  String get badge_streak_champion_condition =>
+      'افتح التطبيق كل يوم لمدة ٧ أيام متتالية';
+
+  @override
+  String get badge_grand_scholar_name => 'العالم الكبير';
+
+  @override
+  String get badge_grand_scholar_desc => '٥٠ إجابة صحيحة في المجموع';
+
+  @override
+  String get badge_grand_scholar_condition =>
+      'أجب على ٥٠ سؤالاً بشكل صحيح في جميع الوحدات';
+
+  @override
+  String get badge_all_rounder_name => 'المتكامل';
+
+  @override
+  String get badge_all_rounder_desc => 'جرّبت كل وحدة مرة على الأقل!';
+
+  @override
+  String get badge_all_rounder_condition =>
+      'أتمم اختباراً واحداً على الأقل في كل وحدة: العواصم والأعلام والشعارات والرياضيات والعلوم';
 }

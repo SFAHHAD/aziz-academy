@@ -24,6 +24,16 @@ extension BadgeIdStrings on AppLocalizations {
         return badge_perfect_scholar_name;
       case BadgeId.academyStar:
         return badge_academy_star_name;
+      case BadgeId.flagMaster:
+        return badge_flag_master_name;
+      case BadgeId.mathGenius:
+        return badge_math_genius_name;
+      case BadgeId.streakChampion:
+        return badge_streak_champion_name;
+      case BadgeId.grandScholar:
+        return badge_grand_scholar_name;
+      case BadgeId.allRounder:
+        return badge_all_rounder_name;
     }
   }
 
@@ -49,6 +59,16 @@ extension BadgeIdStrings on AppLocalizations {
         return badge_perfect_scholar_desc;
       case BadgeId.academyStar:
         return badge_academy_star_desc;
+      case BadgeId.flagMaster:
+        return badge_flag_master_desc;
+      case BadgeId.mathGenius:
+        return badge_math_genius_desc;
+      case BadgeId.streakChampion:
+        return badge_streak_champion_desc;
+      case BadgeId.grandScholar:
+        return badge_grand_scholar_desc;
+      case BadgeId.allRounder:
+        return badge_all_rounder_desc;
     }
   }
 
@@ -74,6 +94,16 @@ extension BadgeIdStrings on AppLocalizations {
         return badge_perfect_scholar_condition;
       case BadgeId.academyStar:
         return badge_academy_star_condition;
+      case BadgeId.flagMaster:
+        return badge_flag_master_condition;
+      case BadgeId.mathGenius:
+        return badge_math_genius_condition;
+      case BadgeId.streakChampion:
+        return badge_streak_champion_condition;
+      case BadgeId.grandScholar:
+        return badge_grand_scholar_condition;
+      case BadgeId.allRounder:
+        return badge_all_rounder_condition;
     }
   }
 }

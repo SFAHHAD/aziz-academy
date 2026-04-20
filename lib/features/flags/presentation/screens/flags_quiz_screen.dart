@@ -18,6 +18,9 @@ import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
 import 'package:aziz_academy/features/flags/providers/flags_quiz_provider.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/victory_overlay.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_overlay.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
+import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/xp_provider.dart';
 
 class FlagsQuizScreen extends ConsumerStatefulWidget {
   const FlagsQuizScreen({super.key});
@@ -53,13 +56,25 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
     final session = ref.read(flagsQuizProvider).value;
     final q = session?.currentQuestion;
     if (session != null && session.currentQuestion != null) {
-      if (option == session.currentQuestion!.correctAnswer) {
+      final isCorrect = option == session.currentQuestion!.correctAnswer;
+      if (isCorrect) {
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
         ref.read(audioServiceProvider).playWrongSound();
       }
+      unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
+        session.currentQuestion!.correctAnswer,
+        correct: isCorrect,
+      ));
 
-      ref.read(ttsServiceProvider).speakArabic(session.currentQuestion!.correctAnswer);
+      // Prefetch next question's flag during the feedback delay.
+      final nextIdx = session.currentIndex + 1;
+      if (nextIdx < session.questions.length && mounted) {
+        final nextFlag = session.questions[nextIdx].flagUrl;
+        if (nextFlag != null && !nextFlag.startsWith('assets/')) {
+          precacheImage(NetworkImage(nextFlag), context);
+        }
+      }
     }
 
     ref.read(flagsQuizProvider.notifier).submitAnswer(option);
@@ -103,6 +118,21 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
       flagsQuizProvider,
       (prev, next) {
         if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
+          final session = next.value!;
+          final practice =
+              ref.read(appSettingsProvider).value?.practiceMode ?? false;
+          if (!practice) {
+            ref.read(achievementProvider.notifier).recordFlagsSession(
+                  score: session.score,
+                  livesRemaining: session.livesRemaining,
+                );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
+                );
+          }
           ref.read(audioServiceProvider).playVictorySound();
         } else if (next.value?.isGameOver == true && prev?.value?.isGameOver != true) {
           ref.read(audioServiceProvider).playWrongSound();
@@ -121,8 +151,8 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
             if (session.isComplete) {
               return VictoryOverlay(
                 session: session,
-                title: 'بطل الأعلام!',
-                shareModuleLabel: 'جولة الأعلام — أكاديمية عزيز',
+                title: context.l10n.victoryFlagsTitle,
+                shareModuleLabel: context.l10n.shareModuleFlags,
                 reducedMotion: reducedMotion,
                 onPlayAgain: _onRestart,
                 onBack: () => context.go(AppRoutes.home),
@@ -212,7 +242,7 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
                               onPressed: () =>
                                   setState(() => _coPlayChoicesVisible = true),
                               icon: const Icon(Icons.visibility_rounded),
-                              label: const Text('اعرض خيارات الإجابة'),
+                              label: Text(context.l10n.coPlayRevealChoices),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppColors.secondary,
                                 foregroundColor: AppColors.surface,
@@ -277,7 +307,7 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
                                   ),
                                 ),
                                 child: Text(
-                                  'التالي',
+                                  context.l10n.nextAction,
                                   style: AppTextStyles.bodyLarge.copyWith(
                                     color: AppColors.surface,
                                     fontWeight: FontWeight.bold,

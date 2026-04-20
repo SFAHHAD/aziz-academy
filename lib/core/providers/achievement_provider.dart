@@ -18,6 +18,12 @@ enum BadgeId {
   triviaTitan,
   perfectScholar,
   academyStar,
+  // ── New trophies ────────────────────────────────────────────────────────
+  flagMaster,
+  mathGenius,
+  streakChampion,
+  grandScholar,
+  allRounder,
 }
 
 class BadgeDefinition {
@@ -84,6 +90,32 @@ const allBadges = [
     emoji: '🌟',
     color: Color(0xFFFFD600),
   ),
+  // ── New trophies ──────────────────────────────────────────────────────────
+  BadgeDefinition(
+    id: BadgeId.flagMaster,
+    emoji: '🚩',
+    color: Color(0xFFEF5350),
+  ),
+  BadgeDefinition(
+    id: BadgeId.mathGenius,
+    emoji: '🧮',
+    color: Color(0xFF2C63B3),
+  ),
+  BadgeDefinition(
+    id: BadgeId.streakChampion,
+    emoji: '🔥',
+    color: Color(0xFFFF7043),
+  ),
+  BadgeDefinition(
+    id: BadgeId.grandScholar,
+    emoji: '📚',
+    color: Color(0xFF66BB6A),
+  ),
+  BadgeDefinition(
+    id: BadgeId.allRounder,
+    emoji: '🌈',
+    color: Color(0xFFAB47BC),
+  ),
 ];
 
 // =============================================================================
@@ -96,10 +128,13 @@ class AchievementState {
     this.logosStars = 0,
     this.mathStars = 0,
     this.sciencesStars = 0,
+    this.flagsStars = 0,
     this.capitalsCompleted = 0,
     this.logosCompleted = 0,
     this.mathCompleted = 0,
     this.sciencesCompleted = 0,
+    this.flagsCompleted = 0,
+    this.mathPerfect = 0,
     this.totalCorrect = 0,
     this.streakCount = 0,
     this.lastVisitDate,
@@ -111,10 +146,13 @@ class AchievementState {
   final int logosStars;         // best star rating earned in Logos (0-3)
   final int mathStars;
   final int sciencesStars;
+  final int flagsStars;
   final int capitalsCompleted;  // total capitals quiz completions
   final int logosCompleted;     // total logos quiz completions
   final int mathCompleted;
   final int sciencesCompleted;
+  final int flagsCompleted;
+  final int mathPerfect;        // math sessions completed with 3 lives remaining
   final int totalCorrect;       // cumulative correct answers across all modules
   /// Consecutive calendar days the learner opened the app (updated on home).
   final int streakCount;
@@ -133,10 +171,13 @@ class AchievementState {
     int? logosStars,
     int? mathStars,
     int? sciencesStars,
+    int? flagsStars,
     int? capitalsCompleted,
     int? logosCompleted,
     int? mathCompleted,
     int? sciencesCompleted,
+    int? flagsCompleted,
+    int? mathPerfect,
     int? totalCorrect,
     int? streakCount,
     String? lastVisitDate,
@@ -148,10 +189,13 @@ class AchievementState {
       logosStars: logosStars ?? this.logosStars,
       mathStars: mathStars ?? this.mathStars,
       sciencesStars: sciencesStars ?? this.sciencesStars,
+      flagsStars: flagsStars ?? this.flagsStars,
       capitalsCompleted: capitalsCompleted ?? this.capitalsCompleted,
       logosCompleted: logosCompleted ?? this.logosCompleted,
       mathCompleted: mathCompleted ?? this.mathCompleted,
       sciencesCompleted: sciencesCompleted ?? this.sciencesCompleted,
+      flagsCompleted: flagsCompleted ?? this.flagsCompleted,
+      mathPerfect: mathPerfect ?? this.mathPerfect,
       totalCorrect: totalCorrect ?? this.totalCorrect,
       streakCount: streakCount ?? this.streakCount,
       lastVisitDate: lastVisitDate ?? this.lastVisitDate,
@@ -178,6 +222,19 @@ AchievementState applyBadgeUnlocks(AchievementState s) {
   if (s.sciencesStars >= 3) unlocked.add(BadgeId.scienceGenius);
   if (s.mathStars >= 3) unlocked.add(BadgeId.mathChampion);
 
+  // ── New trophy rules ──────────────────────────────────────────────────────
+  if (s.flagsCompleted >= 10) unlocked.add(BadgeId.flagMaster);
+  if (s.mathPerfect >= 5) unlocked.add(BadgeId.mathGenius);
+  if (s.streakCount >= 7) unlocked.add(BadgeId.streakChampion);
+  if (s.totalCorrect >= 50) unlocked.add(BadgeId.grandScholar);
+  if (s.capitalsCompleted >= 1 &&
+      s.flagsCompleted >= 1 &&
+      s.logosCompleted >= 1 &&
+      s.mathCompleted >= 1 &&
+      s.sciencesCompleted >= 1) {
+    unlocked.add(BadgeId.allRounder);
+  }
+
   if (unlocked.contains(BadgeId.capitalsExpert) &&
       unlocked.contains(BadgeId.logoHunter) &&
       unlocked.contains(BadgeId.scienceGenius) &&
@@ -202,10 +259,13 @@ class _Keys {
   static const logosStars = 'ach_logos_stars';
   static const mathStars = 'ach_math_stars';
   static const sciencesStars = 'ach_sciences_stars';
+  static const flagsStars = 'ach_flags_stars';
   static const capitalsCompleted = 'ach_capitals_completed';
   static const logosCompleted = 'ach_logos_completed';
   static const mathCompleted = 'ach_math_completed';
   static const sciencesCompleted = 'ach_sciences_completed';
+  static const flagsCompleted = 'ach_flags_completed';
+  static const mathPerfect = 'ach_math_perfect';
   static const totalCorrect = 'ach_total_correct';
   static const streakCount = 'ach_streak_count';
   static const lastVisitDate = 'ach_last_visit_date';
@@ -256,10 +316,13 @@ class AchievementNotifier extends AsyncNotifier<AchievementState> {
       logosStars: _prefs.getInt(_Keys.logosStars) ?? 0,
       mathStars: _prefs.getInt(_Keys.mathStars) ?? 0,
       sciencesStars: _prefs.getInt(_Keys.sciencesStars) ?? 0,
+      flagsStars: _prefs.getInt(_Keys.flagsStars) ?? 0,
       capitalsCompleted: _prefs.getInt(_Keys.capitalsCompleted) ?? 0,
       logosCompleted: _prefs.getInt(_Keys.logosCompleted) ?? 0,
       mathCompleted: _prefs.getInt(_Keys.mathCompleted) ?? 0,
       sciencesCompleted: _prefs.getInt(_Keys.sciencesCompleted) ?? 0,
+      flagsCompleted: _prefs.getInt(_Keys.flagsCompleted) ?? 0,
+      mathPerfect: _prefs.getInt(_Keys.mathPerfect) ?? 0,
       totalCorrect: _prefs.getInt(_Keys.totalCorrect) ?? 0,
       streakCount: _prefs.getInt(_Keys.streakCount) ?? 0,
       lastVisitDate: _prefs.getString(_Keys.lastVisitDate),
@@ -278,10 +341,13 @@ class AchievementNotifier extends AsyncNotifier<AchievementState> {
       _prefs.setInt(_Keys.logosStars, s.logosStars),
       _prefs.setInt(_Keys.mathStars, s.mathStars),
       _prefs.setInt(_Keys.sciencesStars, s.sciencesStars),
+      _prefs.setInt(_Keys.flagsStars, s.flagsStars),
       _prefs.setInt(_Keys.capitalsCompleted, s.capitalsCompleted),
       _prefs.setInt(_Keys.logosCompleted, s.logosCompleted),
       _prefs.setInt(_Keys.mathCompleted, s.mathCompleted),
       _prefs.setInt(_Keys.sciencesCompleted, s.sciencesCompleted),
+      _prefs.setInt(_Keys.flagsCompleted, s.flagsCompleted),
+      _prefs.setInt(_Keys.mathPerfect, s.mathPerfect),
       _prefs.setInt(_Keys.totalCorrect, s.totalCorrect),
       _prefs.setInt(_Keys.streakCount, s.streakCount),
       if (s.lastVisitDate != null)
@@ -316,6 +382,25 @@ class AchievementNotifier extends AsyncNotifier<AchievementState> {
       capitalsStars:
           stars > current.capitalsStars ? stars : current.capitalsStars,
       capitalsCompleted: current.capitalsCompleted + 1,
+      totalCorrect: current.totalCorrect + score,
+    );
+    next = applyBadgeUnlocks(next);
+    state = AsyncData(next);
+    await _save(next);
+  }
+
+  /// Call when Flags quiz session completes.
+  Future<void> recordFlagsSession({
+    required int score,
+    required int livesRemaining,
+  }) async {
+    final current = state.value;
+    if (current == null) return;
+
+    final stars = livesRemaining.clamp(0, 3);
+    var next = current.copyWith(
+      flagsStars: stars > current.flagsStars ? stars : current.flagsStars,
+      flagsCompleted: current.flagsCompleted + 1,
       totalCorrect: current.totalCorrect + score,
     );
     next = applyBadgeUnlocks(next);
@@ -363,9 +448,11 @@ class AchievementNotifier extends AsyncNotifier<AchievementState> {
     if (current == null) return;
 
     final stars = livesRemaining.clamp(0, 3);
+    final isPerfect = livesRemaining >= 3;
     var next = current.copyWith(
       mathStars: stars > current.mathStars ? stars : current.mathStars,
       mathCompleted: current.mathCompleted + 1,
+      mathPerfect: current.mathPerfect + (isPerfect ? 1 : 0),
       totalCorrect: current.totalCorrect + score,
     );
     next = applyBadgeUnlocks(next);
@@ -419,6 +506,21 @@ class AchievementNotifier extends AsyncNotifier<AchievementState> {
     var next = current.copyWith(
       streakCount: nextStreak,
       lastVisitDate: todayStr,
+    );
+    next = applyBadgeUnlocks(next);
+    state = AsyncData(next);
+    await _save(next);
+  }
+
+  /// Called when the Daily Challenge session completes.
+  /// Increments [totalCorrect] by [score] and re-evaluates badge unlocks.
+  /// The streak is updated separately via [recordDailyVisit] (home open).
+  Future<void> recordDailyChallenge({required int score}) async {
+    final current = state.value;
+    if (current == null) return;
+
+    var next = current.copyWith(
+      totalCorrect: current.totalCorrect + score,
     );
     next = applyBadgeUnlocks(next);
     state = AsyncData(next);

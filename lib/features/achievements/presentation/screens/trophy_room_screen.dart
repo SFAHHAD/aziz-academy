@@ -8,6 +8,8 @@ import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/l10n/badge_l10n.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/widgets/celebration_overlay.dart';
+import 'package:aziz_academy/features/achievements/presentation/screens/badge_detail_screen.dart';
 
 // =============================================================================
 // TROPHY ROOM SCREEN (Premium Restored Design + Insights)
@@ -23,6 +25,8 @@ class TrophyRoomScreen extends ConsumerStatefulWidget {
 class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
     with SingleTickerProviderStateMixin {
   late final AnimationController _cardAnimCtrl;
+  bool _showCelebration = false;
+  Set<BadgeId> _newlyUnlocked = {};
 
   @override
   void initState() {
@@ -42,6 +46,19 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
   Widget build(BuildContext context) {
     final achievementAsync = ref.watch(achievementProvider);
     final isRtl = Directionality.of(context) == TextDirection.rtl;
+
+    // Detect newly unlocked badges and trigger celebration
+    ref.listen<AsyncValue<AchievementState>>(achievementProvider, (prev, next) {
+      final prevBadges = prev?.value?.unlockedBadges ?? {};
+      final nextBadges = next.value?.unlockedBadges ?? {};
+      final diff = nextBadges.difference(prevBadges);
+      if (diff.isNotEmpty && mounted) {
+        setState(() {
+          _newlyUnlocked = diff;
+          _showCelebration = true;
+        });
+      }
+    });
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -129,8 +146,24 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                               isUnlocked: isUnlocked,
                               index: index,
                               animCtrl: _cardAnimCtrl,
-                              onTap: () =>
-                                  _showBadgeCondition(context, badge, isUnlocked),
+                              onTap: () => Navigator.of(context).push(
+                                PageRouteBuilder(
+                                  transitionDuration:
+                                      const Duration(milliseconds: 450),
+                                  reverseTransitionDuration:
+                                      const Duration(milliseconds: 350),
+                                  pageBuilder: (ctx, a1, a2) => BadgeDetailScreen(
+                                    badge: badge,
+                                    isUnlocked: isUnlocked,
+                                  ),
+                                  transitionsBuilder: (ctx, anim, a2, child) {
+                                    return FadeTransition(
+                                      opacity: anim,
+                                      child: child,
+                                    );
+                                  },
+                                ),
+                              ),
                             );
                           },
                           childCount: allBadges.length,
@@ -143,6 +176,16 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
               },
             ),
           ),
+          // ── CelebrationOverlay (above all Stack children) ─────────────
+          if (_showCelebration)
+            Positioned.fill(
+              child: CelebrationOverlay(
+                newBadges: _newlyUnlocked,
+                onDismiss: () {
+                  if (mounted) setState(() => _showCelebration = false);
+                },
+              ),
+            ),
         ],
       ),
     );
@@ -258,6 +301,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
     );
   }
 
+  // ignore: unused_element
   void _showBadgeCondition(
       BuildContext context, BadgeDefinition badge, bool isUnlocked) {
     showModalBottomSheet(
@@ -456,7 +500,7 @@ class _TrophyProgressStrip extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'تقدّم المجموعة',
+                context.l10n.trophyCollectionProgress,
                 style: AppTextStyles.labelLarge.copyWith(
                   color: AppColors.textDark,
                   fontWeight: FontWeight.w700,
@@ -616,30 +660,33 @@ class _AnimatedBadgeCard extends StatelessWidget {
                             ],
                     ),
                     child: Center(
-                      child: isUnlocked
-                          ? Text(
-                              badge.emoji,
-                              style: TextStyle(
-                                fontSize: 42,
-                                shadows: [
-                                  Shadow(
-                                    color: Colors.white.withAlpha(150),
-                                    blurRadius: 10,
+                      child: Hero(
+                        tag: badgeHeroTag(badge.id),
+                        child: isUnlocked
+                            ? Text(
+                                badge.emoji,
+                                style: TextStyle(
+                                  fontSize: 42,
+                                  shadows: [
+                                    Shadow(
+                                      color: Colors.white.withAlpha(150),
+                                      blurRadius: 10,
+                                    ),
+                                  ],
+                                ),
+                              )
+                            : ColorFiltered(
+                                colorFilter: const ColorFilter.matrix(
+                                    _kBadgeGrayscaleMatrix),
+                                child: Opacity(
+                                  opacity: 0.5,
+                                  child: Text(
+                                    badge.emoji,
+                                    style: const TextStyle(fontSize: 42),
                                   ),
-                                ],
-                              ),
-                            )
-                          : ColorFiltered(
-                              colorFilter:
-                                  const ColorFilter.matrix(_kBadgeGrayscaleMatrix),
-                              child: Opacity(
-                                opacity: 0.5,
-                                child: Text(
-                                  badge.emoji,
-                                  style: const TextStyle(fontSize: 42),
                                 ),
                               ),
-                            ),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 20),

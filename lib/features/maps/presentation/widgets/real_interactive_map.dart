@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_map_cache/flutter_map_cache.dart';
+import 'package:dio_cache_interceptor/dio_cache_interceptor.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 
@@ -17,46 +19,77 @@ class RealInteractiveMap extends StatefulWidget {
   State<RealInteractiveMap> createState() => _RealInteractiveMapState();
 }
 
-class _RealInteractiveMapState extends State<RealInteractiveMap> with TickerProviderStateMixin {
+class _RealInteractiveMapState extends State<RealInteractiveMap>
+    with SingleTickerProviderStateMixin {
   late final MapController _mapController;
+  final _tileStore = MemCacheStore();
+
+  // Single controller created once and reused for every map pan/zoom.
+  // Tweens are mutable and updated in-place, so no new controller is ever
+  // allocated mid-flight — this eliminates the AnimationController leak.
+  late final AnimationController _moveController;
+  late final Animation<double> _moveAnimation;
+  final _latTween  = Tween<double>(begin: 0, end: 0);
+  final _lngTween  = Tween<double>(begin: 0, end: 0);
+  final _zoomTween = Tween<double>(begin: 4, end: 4);
 
   @override
   void initState() {
     super.initState();
     _mapController = MapController();
+
+    _moveController = AnimationController(
+      duration: const Duration(milliseconds: 1500),
+      vsync: this,
+    );
+    _moveAnimation = CurvedAnimation(
+      parent: _moveController,
+      curve: Curves.easeInOutCubic,
+    );
+
+    _moveController.addListener(() {
+      _mapController.move(
+        LatLng(
+          _latTween.evaluate(_moveAnimation),
+          _lngTween.evaluate(_moveAnimation),
+        ),
+        _zoomTween.evaluate(_moveAnimation),
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    _moveController.dispose();
+    super.dispose();
   }
 
   @override
   void didUpdateWidget(RealInteractiveMap oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.targetLat != widget.targetLat || oldWidget.targetLng != widget.targetLng) {
+    if (oldWidget.targetLat != widget.targetLat ||
+        oldWidget.targetLng != widget.targetLng) {
       _animatedMapMove(LatLng(widget.targetLat, widget.targetLng), 4.0);
     }
   }
 
-  void _animatedMapMove(LatLng destLocation, double destZoom) {
-    final latTween = Tween<double>(begin: _mapController.camera.center.latitude, end: destLocation.latitude);
-    final lngTween = Tween<double>(begin: _mapController.camera.center.longitude, end: destLocation.longitude);
-    final zoomTween = Tween<double>(begin: _mapController.camera.zoom, end: destZoom);
+  void _animatedMapMove(LatLng dest, double destZoom) {
+    // Update tween endpoints from the map's current camera position.
+    _latTween
+      ..begin = _mapController.camera.center.latitude
+      ..end   = dest.latitude;
+    _lngTween
+      ..begin = _mapController.camera.center.longitude
+      ..end   = dest.longitude;
+    _zoomTween
+      ..begin = _mapController.camera.zoom
+      ..end   = destZoom;
 
-    final controller = AnimationController(duration: const Duration(milliseconds: 1500), vsync: this);
-    final Animation<double> animation = CurvedAnimation(parent: controller, curve: Curves.easeInOutCubic);
-
-    controller.addListener(() {
-      _mapController.move(
-        LatLng(latTween.evaluate(animation), lngTween.evaluate(animation)),
-        zoomTween.evaluate(animation),
-      );
-    });
-
-    animation.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        controller.dispose();
-      } else if (status == AnimationStatus.dismissed) {
-        controller.dispose();
-      }
-    });
-    controller.forward();
+    // Interrupt any in-progress animation and start from the updated values.
+    _moveController
+      ..stop()
+      ..reset()
+      ..forward();
   }
 
   @override
@@ -86,9 +119,12 @@ class _RealInteractiveMapState extends State<RealInteractiveMap> with TickerProv
           ),
           children: [
             TileLayer(
-              // Using Google Maps Satellite Hybrid with Arabic labels
-              urlTemplate: 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
               userAgentPackageName: 'com.azizacademy.app',
+              tileProvider: CachedTileProvider(
+                store: _tileStore,
+                maxStale: const Duration(days: 30),
+              ),
             ),
             MarkerLayer(
               markers: [

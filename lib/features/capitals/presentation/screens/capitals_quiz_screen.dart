@@ -13,6 +13,7 @@ import 'package:aziz_academy/features/capitals/presentation/widgets/victory_over
 import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_overlay.dart';
 import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/xp_provider.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
@@ -71,13 +72,16 @@ class _CapitalsQuizScreenState extends ConsumerState<CapitalsQuizScreen>
     final session = ref.read(capitalsQuizProvider).value;
     final q = session?.currentQuestion;
     if (session != null && session.currentQuestion != null) {
-      if (option == session.currentQuestion!.correctAnswer) {
+      final isCorrect = option == session.currentQuestion!.correctAnswer;
+      if (isCorrect) {
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
         ref.read(audioServiceProvider).playWrongSound();
       }
-
-      ref.read(ttsServiceProvider).speakArabic(session.currentQuestion!.correctAnswer);
+      unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
+        session.currentQuestion!.correctAnswer,
+        correct: isCorrect,
+      ));
     }
 
     ref.read(capitalsQuizProvider.notifier).submitAnswer(option);
@@ -134,6 +138,12 @@ class _CapitalsQuizScreenState extends ConsumerState<CapitalsQuizScreen>
             ref.read(achievementProvider.notifier).recordCapitalsSession(
                   score: session.score,
                   livesRemaining: session.livesRemaining,
+                );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
                 );
           }
           ref.read(audioServiceProvider).playVictorySound();

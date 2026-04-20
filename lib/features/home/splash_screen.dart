@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -250,7 +252,8 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                     child: ElevatedButton(
                       onPressed: () {
                         // User gesture instantly unlocks TTS capabilities!
-                        ref.read(ttsServiceProvider).speakArabic(context.l10n.appTitle);
+                        unawaited(ref.read(ttsServiceProvider)
+                            .speakFeedback(TtsFeedbackType.welcome));
                         context.go(AppRoutes.home);
                       },
                       style: ElevatedButton.styleFrom(

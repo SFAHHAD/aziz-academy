@@ -7,6 +7,7 @@ import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/features/math/providers/math_quiz_provider.dart';
 import 'package:aziz_academy/core/widgets/difficulty_row.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 class MathScreen extends ConsumerWidget {
   const MathScreen({super.key});
@@ -68,7 +69,7 @@ class _MathIntroScreen extends ConsumerWidget {
                         }),
                         const SizedBox(height: 18),
                         Text(
-                          'أو اختر نوع العمليات',
+                          context.l10n.mathOrChooseOperation,
                           style: AppTextStyles.bodyMedium.copyWith(
                             color: AppColors.textMedium,
                             fontSize: 13,
@@ -119,11 +120,16 @@ class _IntroHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            icon: const Icon(Icons.arrow_back_ios_new, color: AppColors.secondary),
+            icon: Icon(
+              Directionality.of(context) == TextDirection.rtl
+                  ? Icons.arrow_forward_ios_rounded
+                  : Icons.arrow_back_ios_new_rounded,
+              color: AppColors.secondary,
+            ),
             onPressed: () => context.go(AppRoutes.home),
           ),
           Text(
-            'تحدي الرياضيات',
+            context.l10n.mathScreenTitle,
             style: AppTextStyles.headingMedium.copyWith(color: AppColors.secondary),
           ),
           const SizedBox(width: 48), // Balance spacing
@@ -169,7 +175,7 @@ class _HeroCard extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'اختبار الذكاء الشامل',
+                        context.l10n.mathStartFull,
                         style: GoogleFonts.cairo(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,

@@ -1201,6 +1201,378 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{unlocked} / {total} badges'**
   String trophyBadgeCount(int unlocked, int total);
+
+  /// Victory screen heading for the flags quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Flags Champion!'**
+  String get victoryFlagsTitle;
+
+  /// Victory screen heading for the logos quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Logos Champion!'**
+  String get victoryLogosTitle;
+
+  /// Victory screen heading for the sciences quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Science Champion!'**
+  String get victorySciencesTitle;
+
+  /// Victory screen heading for the maths quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Maths Champion!'**
+  String get victoryMathTitle;
+
+  /// Share text for the flags quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Flags Round — Aziz Academy'**
+  String get shareModuleFlags;
+
+  /// Share text for the logos quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Logos Round — Aziz Academy'**
+  String get shareModuleLogos;
+
+  /// Share text for the sciences quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Science Round — Aziz Academy'**
+  String get shareModuleSciences;
+
+  /// Share text for the maths quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Maths Round — Aziz Academy'**
+  String get shareModuleMath;
+
+  /// Button to reveal choices in co-play mode.
+  ///
+  /// In en, this message translates to:
+  /// **'Reveal answer choices'**
+  String get coPlayRevealChoices;
+
+  /// App-bar title for the sciences screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Scientific Discoveries'**
+  String get sciencesScreenTitle;
+
+  /// Button to start the full sciences quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Start the full science challenge'**
+  String get sciencesStartFull;
+
+  /// Section label for topic picker on the sciences screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Or choose a science topic'**
+  String get sciencesOrChooseCategory;
+
+  /// Question count for the full sciences quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} questions total'**
+  String sciencesComprehensiveCount(int count);
+
+  /// Question count for a specific science topic.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} questions'**
+  String sciencesCategoryCount(int count);
+
+  /// App-bar title for the maths screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Maths Challenge'**
+  String get mathScreenTitle;
+
+  /// Button to start the full maths quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Full intelligence test'**
+  String get mathStartFull;
+
+  /// Section label for operation picker on the maths screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Or choose an operation type'**
+  String get mathOrChooseOperation;
+
+  /// General retry button label on error states.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get retryAction;
+
+  /// Error message when quiz questions fail to load.
+  ///
+  /// In en, this message translates to:
+  /// **'Sorry! Could not load the quiz.'**
+  String get quizLoadError;
+
+  /// Button to advance to the next step.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get nextAction;
+
+  /// Title of the smart review mode screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Review Mode'**
+  String get reviewModeTitle;
+
+  /// Subtitle on the review card.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} questions to review'**
+  String reviewModeSubtitle(int count);
+
+  /// Button to launch review mode.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Review'**
+  String get reviewModeStart;
+
+  /// Progress indicator in review mode.
+  ///
+  /// In en, this message translates to:
+  /// **'Question {current} of {total}'**
+  String reviewModeQuestionOf(int current, int total);
+
+  /// Heading on the review result screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Review Complete!'**
+  String get reviewModeComplete;
+
+  /// Score summary on result screen.
+  ///
+  /// In en, this message translates to:
+  /// **'{score} / {total} correct'**
+  String reviewModeScore(int score, int total);
+
+  /// Number of questions removed from queue.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} question(s) mastered ✓'**
+  String reviewModeMastered(int count);
+
+  /// Button to return home from review mode.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to Home'**
+  String get reviewModeGoHome;
+
+  /// Message shown when the review queue is empty.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing to review — great job!'**
+  String get reviewModeEmpty;
+
+  /// Label shown on module cards with review items.
+  ///
+  /// In en, this message translates to:
+  /// **'Needs Review'**
+  String get reviewModeNeedsReview;
+
+  /// Badge on module card showing review count.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} to review'**
+  String reviewModeCountBadge(int count);
+
+  /// Title of the review card on the home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Smart Review'**
+  String get reviewModeCardTitle;
+
+  /// Subtitle of the review card on the home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} question(s) need extra attention'**
+  String reviewModeCardSubtitle(int count);
+
+  /// Title of the daily challenge feature.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Challenge'**
+  String get dailyChallengeTitle;
+
+  /// Subtitle shown on the daily challenge card.
+  ///
+  /// In en, this message translates to:
+  /// **'10 mixed questions · 2× XP'**
+  String get dailyChallengeSubtitle;
+
+  /// Button to start the daily challenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Now'**
+  String get dailyChallengeStart;
+
+  /// Status when the daily challenge is done.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed!'**
+  String get dailyChallengeCompleted;
+
+  /// Countdown label.
+  ///
+  /// In en, this message translates to:
+  /// **'Resets in {time}'**
+  String dailyChallengeResetsIn(String time);
+
+  /// Double XP badge label.
+  ///
+  /// In en, this message translates to:
+  /// **'2× XP'**
+  String get dailyChallengeDoubleXp;
+
+  /// XP earned message on completion.
+  ///
+  /// In en, this message translates to:
+  /// **'+{xp} XP earned!'**
+  String dailyChallengeXpEarned(int xp);
+
+  /// Score summary.
+  ///
+  /// In en, this message translates to:
+  /// **'{score} / {total} correct'**
+  String dailyChallengeScore(int score, int total);
+
+  /// Question progress indicator.
+  ///
+  /// In en, this message translates to:
+  /// **'Question {current} of {total}'**
+  String dailyChallengeQuestionOf(int current, int total);
+
+  /// Celebration heading on the result screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Great job today!'**
+  String get dailyChallengeGreatJob;
+
+  /// Button to return home after challenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to Home'**
+  String get dailyChallengeGoHome;
+
+  /// Label for the progress strip in the trophy room.
+  ///
+  /// In en, this message translates to:
+  /// **'Collection Progress'**
+  String get trophyCollectionProgress;
+
+  /// Heading inside the celebration overlay.
+  ///
+  /// In en, this message translates to:
+  /// **'New Badge Unlocked!'**
+  String get trophyNewBadgeTitle;
+
+  /// Dismiss hint in the celebration overlay.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap anywhere to continue'**
+  String get trophyTapToDismiss;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Flag Master'**
+  String get badge_flag_master_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed 10 Flags quiz sessions'**
+  String get badge_flag_master_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish 10 Flags quiz sessions'**
+  String get badge_flag_master_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Math Genius'**
+  String get badge_math_genius_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'5 perfect Math rounds — not a single mistake!'**
+  String get badge_math_genius_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish 5 Math quizzes without losing any lives'**
+  String get badge_math_genius_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Streak Champion'**
+  String get badge_streak_champion_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'7-day learning streak achieved!'**
+  String get badge_streak_champion_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Open the app every day for 7 consecutive days'**
+  String get badge_streak_champion_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Grand Scholar'**
+  String get badge_grand_scholar_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'50 total correct answers across all modules'**
+  String get badge_grand_scholar_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Answer 50 questions correctly across all quiz modules'**
+  String get badge_grand_scholar_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'All-Rounder'**
+  String get badge_all_rounder_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'Tried every single quiz module!'**
+  String get badge_all_rounder_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete at least one quiz in every module: Capitals, Flags, Logos, Math, and Sciences'**
+  String get badge_all_rounder_condition;
 }
 
 class _AppLocalizationsDelegate

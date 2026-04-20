@@ -18,8 +18,12 @@ import 'package:aziz_academy/features/flags/presentation/screens/flags_quiz_scre
 
 import 'package:aziz_academy/features/math/presentation/screens/math_screen.dart';
 import 'package:aziz_academy/features/math/presentation/screens/math_quiz_screen.dart';
+import 'package:aziz_academy/features/daily_challenge/presentation/daily_challenge_screen.dart';
+import 'package:aziz_academy/features/review_mode/presentation/review_mode_screen.dart';
 import 'package:aziz_academy/features/legal/privacy_policy_screen.dart';
 import 'package:aziz_academy/features/legal/about_screen.dart';
+import 'package:aziz_academy/features/madrasati/presentation/madrasati_screen.dart';
+import 'package:aziz_academy/features/madrasati/presentation/school_quiz_screen.dart';
 
 abstract final class AppRoutes {
   static const splash        = '/';
@@ -34,7 +38,11 @@ abstract final class AppRoutes {
   static const logos         = '/logos';
   static const sciences      = '/sciences';
   static const sciencesQuiz  = '/sciences/quiz';
-  static const trophy        = '/trophy';
+  static const trophy          = '/trophy';
+  static const dailyChallenge  = '/daily-challenge';
+  static const reviewMode       = '/review-mode';
+  static const madrasati        = '/madrasati';
+  static const schoolQuiz       = '/school-quiz';
   static const privacy       = '/privacy';
   static const about         = '/about';
 }
@@ -117,6 +125,22 @@ final appRouter = GoRouter(
     GoRoute(
       path: AppRoutes.trophy,
       builder: (context, state) => const TrophyRoomScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.dailyChallenge,
+      builder: (context, state) => const DailyChallengeScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.reviewMode,
+      builder: (context, state) => const ReviewModeScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.madrasati,
+      builder: (context, state) => const MadrasatiScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.schoolQuiz,
+      builder: (context, state) => const SchoolQuizScreen(),
     ),
     GoRoute(
       path: AppRoutes.privacy,

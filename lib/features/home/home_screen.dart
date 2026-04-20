@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,6 +17,9 @@ import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 import 'package:aziz_academy/core/services/local_backup_service.dart';
+import 'package:aziz_academy/core/providers/daily_challenge_provider.dart';
+import 'package:aziz_academy/core/providers/module_unlock_provider.dart';
+import 'package:aziz_academy/core/widgets/level_header.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -86,8 +90,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     final achievementAsync = ref.watch(achievementProvider);
     final achievement = achievementAsync.value;
     final unlockedCount = achievement?.unlockedBadges.length ?? 0;
-    final totalCorrect = achievement?.totalCorrect ?? 0;
-    final progress = achievement?.progress ?? 0.0;
     final capitalsStars = achievement?.capitalsStars ?? 0;
     final logosStars = achievement?.logosStars ?? 0;
     final mathStars = achievement?.mathStars ?? 0;
@@ -96,6 +98,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
     final localeAsync = ref.watch(localeProvider);
     final isArabic = localeAsync.value?.languageCode == 'ar';
+    final unlocks = ref.watch(moduleUnlockProvider);
+    final reviewCounts = ref.watch(moduleReviewCountProvider);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -125,13 +129,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                           delegate: SliverChildListDelegate([
                             const SizedBox(height: 8),
 
-                            // ── Progress strip ──────────────────────────────
-                            _GlowProgressStrip(
-                              l10n: l10n,
-                              totalCorrect: totalCorrect,
-                              progress: progress,
-                              streakDays: streakDays,
-                            ),
+                            // ── Level / XP Header ───────────────────────────
+                            LevelHeader(streakDays: streakDays),
                             const SizedBox(height: 16),
                             _SubjectStarsStrip(
                               l10n: l10n,
@@ -174,6 +173,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               stars: capitalsStars,
                               showStars: true,
                               delay: 0,
+                              isLocked: false,
+                              reviewCount: reviewCounts[RecapModule.capitals] ?? 0,
                             ),
                             _GlassModuleCard(
                               title: l10n.quiz_flags,
@@ -184,6 +185,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               stars: 0,
                               showStars: false,
                               delay: 40,
+                              isLocked: false,
+                              reviewCount: reviewCounts[RecapModule.flags] ?? 0,
                             ),
                             _GlassModuleCard(
                               title: l10n.quiz_maps,
@@ -194,6 +197,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               stars: 0,
                               showStars: false,
                               delay: 80,
+                              isLocked: false,
+                              reviewCount: reviewCounts[RecapModule.maps] ?? 0,
                             ),
                             _GlassModuleCard(
                               title: l10n.quiz_logos,
@@ -204,26 +209,35 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               stars: logosStars,
                               showStars: true,
                               delay: 120,
+                              isLocked: !unlocks.logos,
+                              lockHint: 'Level ${ModuleUnlocks.logosRequiredLevel} or ${ModuleUnlocks.logosCapitalsRequired} Capitals quizzes',
+                              reviewCount: 0,
                             ),
                             _GlassModuleCard(
                               title: l10n.quiz_sciences,
                               subtitle: l10n.moduleSciencesSubtitle,
                               emoji: '🔬',
-                              accentColor: const Color(0xFFC47AC0), // Softer purple
+                              accentColor: const Color(0xFFC47AC0),
                               route: AppRoutes.sciences,
                               stars: sciencesStars,
                               showStars: true,
                               delay: 160,
+                              isLocked: !unlocks.sciences,
+                              lockHint: 'Level ${ModuleUnlocks.sciencesRequiredLevel} or ${ModuleUnlocks.sciencesFlagsRequired} Flags quizzes',
+                              reviewCount: reviewCounts[RecapModule.sciences] ?? 0,
                             ),
                             _GlassModuleCard(
                               title: l10n.quiz_math,
                               subtitle: l10n.moduleMathSubtitle,
                               emoji: '🔢',
-                              accentColor: const Color(0xFF2C63B3), // Deep blue
+                              accentColor: const Color(0xFF2C63B3),
                               route: AppRoutes.math,
                               stars: mathStars,
                               showStars: true,
                               delay: 200,
+                              isLocked: !unlocks.math,
+                              lockHint: 'Level ${ModuleUnlocks.mathRequiredLevel} or ${ModuleUnlocks.mathFlagsRequired} Flags quizzes',
+                              reviewCount: reviewCounts[RecapModule.math] ?? 0,
                             ),
                           ]),
                         ),
@@ -251,6 +265,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                                 );
                               },
                             ),
+                            Consumer(
+                              builder: (context, ref, _) {
+                                final struggling = ref.watch(strugglingCountProvider);
+                                if (struggling == 0) return const SizedBox.shrink();
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 12),
+                                  child: _SmartReviewCard(
+                                    l10n: l10n,
+                                    count: struggling,
+                                  ),
+                                );
+                              },
+                            ),
+                            _MadrasatiCard(l10n: l10n),
+                            const SizedBox(height: 12),
+                            _DailyChallengeCard(l10n: l10n),
+                            const SizedBox(height: 12),
                             _DailyMissionCard(
                               l10n: l10n,
                               mission: dailyMissionFor(DateTime.now()),
@@ -592,114 +623,6 @@ class _SubjectStarsStrip extends StatelessWidget {
 }
 
 // =============================================================================
-// Glow Progress Strip
-// =============================================================================
-
-class _GlowProgressStrip extends StatelessWidget {
-  const _GlowProgressStrip({
-    required this.l10n,
-    required this.totalCorrect,
-    required this.progress,
-    required this.streakDays,
-  });
-
-  final AppLocalizations l10n;
-  final int totalCorrect;
-  final double progress;
-  final int streakDays;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.glassBorder),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Text('📊', style: TextStyle(fontSize: 16)),
-              const SizedBox(width: 8),
-              Text(
-                l10n.homeCorrectTotalLabel,
-                style: AppTextStyles.labelMedium.copyWith(
-                  color: AppColors.textMedium,
-                ),
-              ),
-              const Spacer(),
-              if (streakDays > 0) ...[
-                Text(
-                  '🔥 ${l10n.homeStreakLabel(streakDays)}',
-                  style: AppTextStyles.labelMedium.copyWith(
-                    color: AppColors.secondary,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                const SizedBox(width: 12),
-              ],
-              Text(
-                '$totalCorrect / ${AchievementState.maxCorrectForProgress}',
-                style: AppTextStyles.labelMedium.copyWith(
-                  color: AppColors.secondary,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          // Glow-Track progress bar
-          Stack(
-            children: [
-              // Track
-              Container(
-                height: 8,
-                decoration: BoxDecoration(
-                  color: AppColors.surfaceContainerHighest,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              // Active fill
-              TweenAnimationBuilder<double>(
-                tween: Tween(begin: 0, end: progress),
-                duration: const Duration(milliseconds: 1400),
-                curve: Curves.easeOutCubic,
-                builder: (context, val, _) => FractionallySizedBox(
-                  widthFactor: val.clamp(0.0, 1.0),
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                    height: 8,
-                    decoration: BoxDecoration(
-                      gradient: AppColors.progressGradient,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.secondary.withAlpha(120),
-                          blurRadius: 8,
-                          spreadRadius: 1,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Text(
-            l10n.homeProgressPercent((progress * 100).toInt()),
-            style: AppTextStyles.caption.copyWith(color: AppColors.textMedium),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-// =============================================================================
 // Glass Module Card
 // =============================================================================
 
@@ -713,6 +636,9 @@ class _GlassModuleCard extends StatefulWidget {
     required this.stars,
     required this.showStars,
     required this.delay,
+    this.isLocked = false,
+    this.lockHint,
+    this.reviewCount = 0,
   });
 
   final String title;
@@ -723,6 +649,9 @@ class _GlassModuleCard extends StatefulWidget {
   final int stars;
   final bool showStars;
   final int delay;
+  final bool isLocked;
+  final String? lockHint;
+  final int reviewCount;
 
   @override
   State<_GlassModuleCard> createState() => _GlassModuleCardState();
@@ -765,50 +694,62 @@ class _GlassModuleCardState extends State<_GlassModuleCard>
           child: child,
         ),
         child: GestureDetector(
-          onTapDown: (_) => _hoverCtrl.forward(),
+          onTapDown: (_) {
+            if (!widget.isLocked) _hoverCtrl.forward();
+          },
           onTapUp: (_) {
             _hoverCtrl.reverse();
-            context.go(widget.route);
+            if (!widget.isLocked) context.go(widget.route);
           },
           onTapCancel: () => _hoverCtrl.reverse(),
           child: Container(
             decoration: BoxDecoration(
-              color: AppColors.surfaceContainerLow,
+              color: widget.isLocked
+                  ? AppColors.surfaceContainerLow.withAlpha(120)
+                  : AppColors.surfaceContainerLow,
               borderRadius: BorderRadius.circular(28),
               border: Border.all(
-                color: widget.accentColor.withAlpha(50),
+                color: widget.isLocked
+                    ? AppColors.divider.withAlpha(60)
+                    : widget.accentColor.withAlpha(50),
                 width: 1,
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: widget.accentColor.withAlpha(30),
-                  blurRadius: 20,
-                  offset: const Offset(0, 6),
-                ),
-              ],
+              boxShadow: widget.isLocked
+                  ? []
+                  : [
+                      BoxShadow(
+                        color: widget.accentColor.withAlpha(30),
+                        blurRadius: 20,
+                        offset: const Offset(0, 6),
+                      ),
+                    ],
             ),
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Row(
                 children: [
-                  // Icon with glow halo
+                  // Icon / lock halo
                   Container(
                     width: 60,
                     height: 60,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: widget.accentColor.withAlpha(25),
-                      boxShadow: [
-                        BoxShadow(
-                          color: widget.accentColor.withAlpha(60),
-                          blurRadius: 16,
-                          spreadRadius: 2,
-                        ),
-                      ],
+                      color: widget.isLocked
+                          ? AppColors.disabled.withAlpha(30)
+                          : widget.accentColor.withAlpha(25),
+                      boxShadow: widget.isLocked
+                          ? []
+                          : [
+                              BoxShadow(
+                                color: widget.accentColor.withAlpha(60),
+                                blurRadius: 16,
+                                spreadRadius: 2,
+                              ),
+                            ],
                     ),
                     child: Center(
                       child: Text(
-                        widget.emoji,
+                        widget.isLocked ? '🔒' : widget.emoji,
                         style: const TextStyle(fontSize: 28),
                       ),
                     ),
@@ -823,19 +764,51 @@ class _GlassModuleCardState extends State<_GlassModuleCard>
                         Text(
                           widget.title,
                           style: AppTextStyles.headingSmall.copyWith(
-                            color: AppColors.textDark,
+                            color: widget.isLocked
+                                ? AppColors.disabled
+                                : AppColors.textDark,
                           ),
                         ),
                         const SizedBox(height: 3),
                         Text(
-                          widget.subtitle,
+                          widget.isLocked && widget.lockHint != null
+                              ? 'Unlocks at ${widget.lockHint}'
+                              : widget.subtitle,
                           style: AppTextStyles.bodyMedium.copyWith(
-                            fontSize: 13,
-                            color: AppColors.textMedium,
+                            fontSize: 12,
+                            color: widget.isLocked
+                                ? AppColors.disabled
+                                : AppColors.textMedium,
+                            fontStyle: widget.isLocked
+                                ? FontStyle.italic
+                                : FontStyle.normal,
                           ),
                           maxLines: 2,
                         ),
-                        if (widget.showStars) ...[
+                        if (widget.reviewCount > 0 && !widget.isLocked) ...[
+                          const SizedBox(height: 6),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: AppColors.error.withAlpha(25),
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                color: AppColors.error.withAlpha(100),
+                              ),
+                            ),
+                            child: Text(
+                              context.l10n.reviewModeCountBadge(
+                                  widget.reviewCount),
+                              style: AppTextStyles.caption.copyWith(
+                                color: AppColors.error,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
+                        ],
+                        if (widget.showStars && !widget.isLocked) ...[
                           const SizedBox(height: 8),
                           Row(
                             children: List.generate(3, (i) {
@@ -855,20 +828,23 @@ class _GlassModuleCardState extends State<_GlassModuleCard>
                     ),
                   ),
 
-                  // Arrow
-                  Container(
-                    width: 32,
-                    height: 32,
-                    decoration: BoxDecoration(
-                      color: widget.accentColor.withAlpha(30),
-                      borderRadius: BorderRadius.circular(10),
+                  // Arrow (hidden when locked)
+                  if (!widget.isLocked)
+                    Container(
+                      width: 32,
+                      height: 32,
+                      decoration: BoxDecoration(
+                        color: widget.accentColor.withAlpha(30),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Icon(
+                        Directionality.of(context) == TextDirection.rtl
+                            ? Icons.arrow_back_ios_new_rounded
+                            : Icons.arrow_forward_ios_rounded,
+                        color: widget.accentColor,
+                        size: 14,
+                      ),
                     ),
-                    child: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: widget.accentColor,
-                      size: 14,
-                    ),
-                  ),
                 ],
               ),
             ),
@@ -1030,6 +1006,314 @@ class _DailyMissionCard extends StatelessWidget {
                 ),
               ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// =============================================================================
+// Madrasati Card — entry point to مدرستي section
+// =============================================================================
+
+class _MadrasatiCard extends StatelessWidget {
+  const _MadrasatiCard({required this.l10n});
+
+  final AppLocalizations l10n;
+
+  @override
+  Widget build(BuildContext context) {
+    const accent = Color(0xFF6A1B9A);
+    return GestureDetector(
+      onTap: () => context.go(AppRoutes.madrasati),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF6A1B9A), Color(0xFF4A148C)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(22),
+          boxShadow: [
+            BoxShadow(
+              color: accent.withAlpha(70),
+              blurRadius: 18,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.all(18),
+        child: Row(
+          children: [
+            const Text('🏫', style: TextStyle(fontSize: 34)),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'مدرستي',
+                    style: AppTextStyles.headingSmall.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 18,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'مواد المناهج السعودية — ابتدائي · متوسط · ثانوي',
+                    style: AppTextStyles.bodyMedium.copyWith(
+                      color: Colors.white.withAlpha(200),
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded,
+                color: Colors.white, size: 28),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// =============================================================================
+// Smart Review Card — shown when there are struggling questions (missCount ≥ 2)
+// =============================================================================
+
+class _SmartReviewCard extends StatelessWidget {
+  const _SmartReviewCard({required this.l10n, required this.count});
+
+  final AppLocalizations l10n;
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => context.go(AppRoutes.reviewMode),
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.surfaceContainerLow,
+          borderRadius: BorderRadius.circular(22),
+          border: Border.all(color: AppColors.error.withAlpha(110)),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.error.withAlpha(35),
+              blurRadius: 18,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.all(18),
+        child: Row(
+          children: [
+            const Text('🔥', style: TextStyle(fontSize: 30)),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    l10n.reviewModeCardTitle,
+                    style: AppTextStyles.headingSmall.copyWith(
+                      color: AppColors.error,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    l10n.reviewModeCardSubtitle(count),
+                    style: AppTextStyles.bodyMedium.copyWith(
+                      color: AppColors.textMedium,
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: () => context.go(AppRoutes.reviewMode),
+              child: Text(
+                l10n.reviewModeStart,
+                style: AppTextStyles.labelLarge.copyWith(
+                  color: AppColors.error,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// =============================================================================
+// Daily Challenge Card — with live countdown timer
+// =============================================================================
+
+class _DailyChallengeCard extends ConsumerStatefulWidget {
+  const _DailyChallengeCard({required this.l10n});
+  final AppLocalizations l10n;
+
+  @override
+  ConsumerState<_DailyChallengeCard> createState() =>
+      _DailyChallengeCardState();
+}
+
+class _DailyChallengeCardState extends ConsumerState<_DailyChallengeCard> {
+  Timer? _timer;
+  Duration _remaining = DailyChallengeState.timeUntilReset();
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(const Duration(seconds: 30), (_) {
+      if (mounted) setState(() => _remaining = DailyChallengeState.timeUntilReset());
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  String get _countdownLabel {
+    final h = _remaining.inHours;
+    final m = _remaining.inMinutes % 60;
+    return '${h}h ${m}m';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final async = ref.watch(dailyChallengeProvider);
+    final isCompleted = async.value?.isCompleted ?? false;
+    final l10n = widget.l10n;
+
+    return GestureDetector(
+      onTap: isCompleted ? null : () => context.go(AppRoutes.dailyChallenge),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: isCompleted
+                ? [const Color(0xFF1A3C6E), const Color(0xFF0F2445)]
+                : [const Color(0xFF0F2C5C), const Color(0xFF1B4F8C)],
+          ),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(
+            color: isCompleted
+                ? AppColors.secondary.withAlpha(60)
+                : AppColors.secondary.withAlpha(130),
+            width: isCompleted ? 1 : 1.5,
+          ),
+          boxShadow: isCompleted
+              ? []
+              : [
+                  BoxShadow(
+                    color: AppColors.secondary.withAlpha(55),
+                    blurRadius: 20,
+                    offset: const Offset(0, 6),
+                  ),
+                ],
+        ),
+        padding: const EdgeInsets.all(18),
+        child: Row(
+          children: [
+            // Icon
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: AppColors.secondary.withAlpha(30),
+                border: Border.all(
+                  color: AppColors.secondary.withAlpha(90),
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  isCompleted ? '✅' : '⚡',
+                  style: const TextStyle(fontSize: 26),
+                ),
+              ),
+            ),
+            const SizedBox(width: 14),
+
+            // Text block
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        l10n.dailyChallengeTitle,
+                        style: AppTextStyles.headingSmall.copyWith(
+                          color: AppColors.secondary,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      // 2× XP badge
+                      if (!isCompleted)
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 7, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: AppColors.secondary,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            l10n.dailyChallengeDoubleXp,
+                            style: AppTextStyles.labelSmall.copyWith(
+                              color: AppColors.background,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 10,
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    isCompleted
+                        ? l10n.dailyChallengeResetsIn(_countdownLabel)
+                        : l10n.dailyChallengeSubtitle,
+                    style: AppTextStyles.bodyMedium.copyWith(
+                      fontSize: 12,
+                      color: isCompleted
+                          ? AppColors.textMedium
+                          : AppColors.textDark.withAlpha(200),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // CTA
+            if (isCompleted)
+              Icon(Icons.check_circle_rounded,
+                  color: AppColors.secondary, size: 28)
+            else
+              Container(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 14, vertical: 8),
+                decoration: BoxDecoration(
+                  color: AppColors.secondary,
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Text(
+                  l10n.dailyChallengeStart,
+                  style: AppTextStyles.labelMedium.copyWith(
+                    color: AppColors.background,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
           ],
         ),
       ),

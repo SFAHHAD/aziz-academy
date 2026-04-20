@@ -25,8 +25,11 @@ abstract final class AppTheme {
   }) {
     final baseText = ThemeData.dark().textTheme;
 
-    // Use Plus Jakarta Sans for display/headlines, Be Vietnam Pro for body
-    final textTheme = GoogleFonts.plusJakartaSansTextTheme(baseText);
+    // Cairo is the primary font: it covers Arabic + Latin natively, so Arabic
+    // text renders correctly throughout the app without per-widget overrides.
+    // PlusJakartaSans overrides remain available for individual Latin-heavy
+    // display widgets via GoogleFonts.plusJakartaSans(...).
+    final textTheme = GoogleFonts.cairoTextTheme(baseText);
 
     final colorScheme = ColorScheme(
       brightness: Brightness.dark,

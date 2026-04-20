@@ -10,10 +10,12 @@ import 'package:aziz_academy/features/logos/providers/logos_provider.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/victory_overlay.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_overlay.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/xp_provider.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 
 import 'package:aziz_academy/l10n/app_localizations.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 // ---------------------------------------------------------------------------
 // Helper: looks up a brand key (e.g. 'youtube') and returns fact/desc strings.
@@ -83,6 +85,12 @@ class LogosScreen extends ConsumerWidget {
                   score: session.score,
                   livesRemaining: session.livesRemaining,
                 );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
+                );
           }
           ref.read(audioServiceProvider).playVictorySound();
         } else if (next.value?.isGameOver == true &&
@@ -113,8 +121,8 @@ class LogosScreen extends ConsumerWidget {
           return Scaffold(
             body: VictoryOverlay(
               session: session,
-              title: 'بطل الشعارات!',
-              shareModuleLabel: 'جولة الشعارات — أكاديمية عزيز',
+              title: context.l10n.victoryLogosTitle,
+              shareModuleLabel: context.l10n.shareModuleLogos,
               reducedMotion: reducedMotion,
               onPlayAgain: () =>
                   ref.read(logosQuizProvider.notifier).restart(),
@@ -198,6 +206,15 @@ class _QuizViewState extends ConsumerState<_QuizView>
       ref.read(audioServiceProvider).playCorrectSound();
     } else {
       ref.read(audioServiceProvider).playWrongSound();
+    }
+
+    // Prefetch next question's logo during the feedback delay.
+    final nextIdx = widget.session.currentIndex + 1;
+    if (nextIdx < widget.session.questions.length && mounted) {
+      final nextLogo = widget.session.questions[nextIdx].imageUrl;
+      if (nextLogo != null && !nextLogo.startsWith('assets/')) {
+        precacheImage(NetworkImage(nextLogo), context);
+      }
     }
 
     _revealCtrl.stop();
@@ -423,43 +440,42 @@ class _LogoPuzzleCard extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            // Logo (always present, blur sits on top)
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: logoAsset.isNotEmpty
-                  ? (logoAsset.startsWith('assets/')
-                      ? Image.asset(
-                          logoAsset,
-                          fit: BoxFit.contain,
-                          errorBuilder: (context, error, stack) => const Icon(
-                            Icons.broken_image_outlined, size: 60, color: Colors.grey
-                          ),
-                        )
-                      : Image.network(
-                          logoAsset,
-                          fit: BoxFit.contain,
-                          errorBuilder: (context, error, stack) => const Icon(
-                            Icons.broken_image_outlined, size: 60, color: Colors.grey
-                          ),
-                        ))
-                  : const Icon(Icons.image_not_supported,
-                      size: 80, color: Colors.grey),
-            ),
-
-            // Blur overlay (fades away as revealCtrl progresses)
+            // Clear logo — opacity rises from 0→1 as the timer progresses.
             AnimatedBuilder(
               animation: revealCtrl,
-              builder: (ctx, _) {
-                // When answered, instantly clear the blur.
-                final sigma = answered
+              builder: (_, child) => Opacity(
+                opacity: answered ? 1.0 : revealCtrl.value,
+                child: child,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: _LogoImage(logoAsset: logoAsset),
+              ),
+            ),
+
+            // Blurred logo — opacity falls from 1→0 as the timer progresses.
+            // ImageFiltered uses a FIXED sigma so the GPU computes the blur
+            // once and caches the offscreen buffer; only Opacity changes
+            // per frame (a cheap compositor op, no per-frame shader work).
+            AnimatedBuilder(
+              animation: revealCtrl,
+              builder: (_, child) => Opacity(
+                opacity: answered
                     ? 0.0
-                    : 18.0 * (1.0 - revealCtrl.value);
-                if (sigma < 0.5) return const SizedBox.shrink();
-                return BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: sigma, sigmaY: sigma),
-                  child: Container(color: Colors.white.withAlpha(30)),
-                );
-              },
+                    : (1.0 - revealCtrl.value).clamp(0.0, 1.0),
+                child: child,
+              ),
+              child: ImageFiltered(
+                imageFilter: ImageFilter.blur(
+                  sigmaX: 14,
+                  sigmaY: 14,
+                  tileMode: TileMode.decal,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: _LogoImage(logoAsset: logoAsset),
+                ),
+              ),
             ),
 
             // Correct / wrong indicator ribbon
@@ -496,6 +512,33 @@ class _LogoPuzzleCard extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+// Shared logo renderer used by both the clear and blurred layers.
+class _LogoImage extends StatelessWidget {
+  const _LogoImage({required this.logoAsset});
+  final String logoAsset;
+
+  @override
+  Widget build(BuildContext context) {
+    if (logoAsset.isEmpty) {
+      return const Icon(Icons.image_not_supported, size: 80, color: Colors.grey);
+    }
+    if (logoAsset.startsWith('assets/')) {
+      return Image.asset(
+        logoAsset,
+        fit: BoxFit.contain,
+        errorBuilder: (_, __, ___) =>
+            const Icon(Icons.broken_image_outlined, size: 60, color: Colors.grey),
+      );
+    }
+    return Image.network(
+      logoAsset,
+      fit: BoxFit.contain,
+      errorBuilder: (_, __, ___) =>
+          const Icon(Icons.broken_image_outlined, size: 60, color: Colors.grey),
     );
   }
 }

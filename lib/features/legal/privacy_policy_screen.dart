@@ -20,7 +20,11 @@ class PrivacyPolicyScreen extends StatelessWidget {
           style: AppTextStyles.headingSmall.copyWith(color: AppColors.textDark),
         ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
+          icon: Icon(
+            Directionality.of(context) == TextDirection.rtl
+                ? Icons.arrow_forward_ios_rounded
+                : Icons.arrow_back_ios_new_rounded,
+          ),
           onPressed: () {
             if (context.canPop()) {
               context.pop();

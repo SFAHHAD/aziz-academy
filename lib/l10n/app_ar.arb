@@ -348,6 +348,230 @@
       "unlocked": { "type": "int" },
       "total": { "type": "int" }
     }
-  }
+  },
+
+  "victoryFlagsTitle": "بطل الأعلام!",
+  "@victoryFlagsTitle": { "description": "عنوان شاشة الانتصار في اختبار الأعلام." },
+
+  "victoryLogosTitle": "بطل الشعارات!",
+  "@victoryLogosTitle": { "description": "عنوان شاشة الانتصار في اختبار الشعارات." },
+
+  "victorySciencesTitle": "بطل العلوم!",
+  "@victorySciencesTitle": { "description": "عنوان شاشة الانتصار في اختبار العلوم." },
+
+  "victoryMathTitle": "بطل الرياضيات!",
+  "@victoryMathTitle": { "description": "عنوان شاشة الانتصار في اختبار الرياضيات." },
+
+  "shareModuleFlags": "جولة الأعلام — أكاديمية عزيز",
+  "@shareModuleFlags": { "description": "نص المشاركة لاختبار الأعلام." },
+
+  "shareModuleLogos": "جولة الشعارات — أكاديمية عزيز",
+  "@shareModuleLogos": { "description": "نص المشاركة لاختبار الشعارات." },
+
+  "shareModuleSciences": "جولة العلوم — أكاديمية عزيز",
+  "@shareModuleSciences": { "description": "نص المشاركة لاختبار العلوم." },
+
+  "shareModuleMath": "جولة الرياضيات — أكاديمية عزيز",
+  "@shareModuleMath": { "description": "نص المشاركة لاختبار الرياضيات." },
+
+  "coPlayRevealChoices": "اعرض خيارات الإجابة",
+  "@coPlayRevealChoices": { "description": "زر كشف الخيارات في وضع اللعب مع الأهل." },
+
+  "sciencesScreenTitle": "الاكتشافات العلمية",
+  "@sciencesScreenTitle": { "description": "عنوان شاشة العلوم في شريط التطبيق." },
+
+  "sciencesStartFull": "ابدأ التحدي العلمي الكامل",
+  "@sciencesStartFull": { "description": "زر بدء الاختبار الشامل في شاشة العلوم." },
+
+  "sciencesOrChooseCategory": "أو اختر مجالاً علمياً",
+  "@sciencesOrChooseCategory": { "description": "تسمية قسم اختيار التخصص في شاشة العلوم." },
+
+  "sciencesComprehensiveCount": "{count} سؤال شامل",
+  "@sciencesComprehensiveCount": {
+    "description": "عدد أسئلة اختبار العلوم الكامل.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "sciencesCategoryCount": "{count} سؤال",
+  "@sciencesCategoryCount": {
+    "description": "عدد أسئلة تخصص علمي معين.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "mathScreenTitle": "تحدي الرياضيات",
+  "@mathScreenTitle": { "description": "عنوان شاشة الرياضيات في شريط التطبيق." },
+
+  "mathStartFull": "اختبار الذكاء الشامل",
+  "@mathStartFull": { "description": "زر بدء الاختبار الشامل في شاشة الرياضيات." },
+
+  "mathOrChooseOperation": "أو اختر نوع العمليات",
+  "@mathOrChooseOperation": { "description": "تسمية قسم اختيار نوع العملية في شاشة الرياضيات." },
+
+  "retryAction": "حاول مجدداً",
+  "@retryAction": { "description": "زر إعادة المحاولة العام في حالات الخطأ." },
+
+  "quizLoadError": "عذراً! تعذّر تحميل الاختبار.",
+  "@quizLoadError": { "description": "رسالة خطأ عند تعذّر تحميل أسئلة الاختبار." },
+
+  "nextAction": "التالي",
+  "@nextAction": { "description": "زر الانتقال إلى الخطوة التالية." },
+
+  "reviewModeTitle": "وضع المراجعة",
+  "@reviewModeTitle": { "description": "عنوان شاشة وضع المراجعة الذكية." },
+
+  "reviewModeSubtitle": "{count} سؤال للمراجعة",
+  "@reviewModeSubtitle": {
+    "description": "الوصف الظاهر على بطاقة المراجعة.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "reviewModeStart": "ابدأ المراجعة",
+  "@reviewModeStart": { "description": "زر بدء وضع المراجعة." },
+
+  "reviewModeQuestionOf": "سؤال {current} من {total}",
+  "@reviewModeQuestionOf": {
+    "description": "مؤشر تقدم في وضع المراجعة.",
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "reviewModeComplete": "اكتملت المراجعة!",
+  "@reviewModeComplete": { "description": "عنوان شاشة نتيجة المراجعة." },
+
+  "reviewModeScore": "{score} / {total} صحيح",
+  "@reviewModeScore": {
+    "description": "ملخص النتيجة في شاشة النتيجة.",
+    "placeholders": {
+      "score": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "reviewModeMastered": "{count} سؤال تم إتقانه ✓",
+  "@reviewModeMastered": {
+    "description": "عدد الأسئلة التي تمت إزالتها من القائمة.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "reviewModeGoHome": "العودة للرئيسية",
+  "@reviewModeGoHome": { "description": "زر العودة للرئيسية من وضع المراجعة." },
+
+  "reviewModeEmpty": "لا شيء للمراجعة — أحسنت!",
+  "@reviewModeEmpty": { "description": "الرسالة الظاهرة عندما تكون قائمة المراجعة فارغة." },
+
+  "reviewModeNeedsReview": "تحتاج مراجعة",
+  "@reviewModeNeedsReview": { "description": "تسمية ظاهرة على بطاقات الوحدات التي تحتوي على أسئلة للمراجعة." },
+
+  "reviewModeCountBadge": "{count} للمراجعة",
+  "@reviewModeCountBadge": {
+    "description": "شارة على بطاقة الوحدة تُظهر عدد الأسئلة للمراجعة.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "reviewModeCardTitle": "المراجعة الذكية",
+  "@reviewModeCardTitle": { "description": "عنوان بطاقة المراجعة على الشاشة الرئيسية." },
+
+  "reviewModeCardSubtitle": "{count} سؤال يحتاج اهتماماً إضافياً",
+  "@reviewModeCardSubtitle": {
+    "description": "الوصف الظاهر على بطاقة المراجعة في الشاشة الرئيسية.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "dailyChallengeTitle": "التحدي اليومي",
+  "@dailyChallengeTitle": { "description": "عنوان ميزة التحدي اليومي." },
+
+  "dailyChallengeSubtitle": "١٠ أسئلة متنوعة · ضعف نقاط XP",
+  "@dailyChallengeSubtitle": { "description": "الوصف الظاهر على بطاقة التحدي اليومي." },
+
+  "dailyChallengeStart": "ابدأ الآن",
+  "@dailyChallengeStart": { "description": "زر بدء التحدي اليومي." },
+
+  "dailyChallengeCompleted": "مكتمل!",
+  "@dailyChallengeCompleted": { "description": "حالة التحدي عند الانتهاء." },
+
+  "dailyChallengeResetsIn": "يتجدد خلال {time}",
+  "@dailyChallengeResetsIn": {
+    "description": "تسمية العداد التنازلي.",
+    "placeholders": { "time": { "type": "String" } }
+  },
+
+  "dailyChallengeDoubleXp": "٢× XP",
+  "@dailyChallengeDoubleXp": { "description": "شارة مضاعفة نقاط XP." },
+
+  "dailyChallengeXpEarned": "+{xp} XP مكسوبة!",
+  "@dailyChallengeXpEarned": {
+    "description": "رسالة XP المكسوبة عند الانتهاء.",
+    "placeholders": { "xp": { "type": "int" } }
+  },
+
+  "dailyChallengeScore": "{score} / {total} صحيح",
+  "@dailyChallengeScore": {
+    "description": "ملخص النتيجة.",
+    "placeholders": {
+      "score": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "dailyChallengeQuestionOf": "سؤال {current} من {total}",
+  "@dailyChallengeQuestionOf": {
+    "description": "مؤشر تقدم الأسئلة.",
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "dailyChallengeGreatJob": "أحسنت اليوم!",
+  "@dailyChallengeGreatJob": { "description": "عنوان الاحتفال في شاشة النتيجة." },
+
+  "dailyChallengeGoHome": "العودة للرئيسية",
+  "@dailyChallengeGoHome": { "description": "زر العودة للرئيسية بعد التحدي." },
+
+  "trophyCollectionProgress": "تقدّم المجموعة",
+  "@trophyCollectionProgress": { "description": "تسمية شريط التقدم في قاعة الكؤوس." },
+
+  "trophyNewBadgeTitle": "شارة جديدة مفتوحة!",
+  "@trophyNewBadgeTitle": { "description": "عنوان داخل تراكب الاحتفال." },
+
+  "trophyTapToDismiss": "اضغط في أي مكان للمتابعة",
+  "@trophyTapToDismiss": { "description": "تلميح الإغلاق في تراكب الاحتفال." },
+
+  "badge_flag_master_name": "سيد الأعلام",
+  "@badge_flag_master_name": { "description": "اسم الشارة." },
+  "badge_flag_master_desc": "أتممت ١٠ جلسات اختبار الأعلام",
+  "@badge_flag_master_desc": { "description": "وصف الشارة." },
+  "badge_flag_master_condition": "أتمم ١٠ جلسات اختبار الأعلام",
+  "@badge_flag_master_condition": { "description": "شرط فتح الشارة." },
+
+  "badge_math_genius_name": "عبقري الأرقام",
+  "@badge_math_genius_name": { "description": "اسم الشارة." },
+  "badge_math_genius_desc": "٥ جولات رياضيات مثالية — بلا أخطاء!",
+  "@badge_math_genius_desc": { "description": "وصف الشارة." },
+  "badge_math_genius_condition": "أتمم ٥ اختبارات رياضيات دون خسارة أي حياة",
+  "@badge_math_genius_condition": { "description": "شرط فتح الشارة." },
+
+  "badge_streak_champion_name": "بطل المثابرة",
+  "@badge_streak_champion_name": { "description": "اسم الشارة." },
+  "badge_streak_champion_desc": "سلسلة تعلّم ٧ أيام متواصلة!",
+  "@badge_streak_champion_desc": { "description": "وصف الشارة." },
+  "badge_streak_champion_condition": "افتح التطبيق كل يوم لمدة ٧ أيام متتالية",
+  "@badge_streak_champion_condition": { "description": "شرط فتح الشارة." },
+
+  "badge_grand_scholar_name": "العالم الكبير",
+  "@badge_grand_scholar_name": { "description": "اسم الشارة." },
+  "badge_grand_scholar_desc": "٥٠ إجابة صحيحة في المجموع",
+  "@badge_grand_scholar_desc": { "description": "وصف الشارة." },
+  "badge_grand_scholar_condition": "أجب على ٥٠ سؤالاً بشكل صحيح في جميع الوحدات",
+  "@badge_grand_scholar_condition": { "description": "شرط فتح الشارة." },
+
+  "badge_all_rounder_name": "المتكامل",
+  "@badge_all_rounder_name": { "description": "اسم الشارة." },
+  "badge_all_rounder_desc": "جرّبت كل وحدة مرة على الأقل!",
+  "@badge_all_rounder_desc": { "description": "وصف الشارة." },
+  "badge_all_rounder_condition": "أتمم اختباراً واحداً على الأقل في كل وحدة: العواصم والأعلام والشعارات والرياضيات والعلوم",
+  "@badge_all_rounder_condition": { "description": "شرط فتح الشارة." }
 }
 

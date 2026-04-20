@@ -15,12 +15,14 @@ import 'package:aziz_academy/core/services/audio_service.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
 import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/providers/xp_provider.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
 import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
 import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
 
 import 'package:aziz_academy/l10n/app_localizations.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 // =============================================================================
 // Screen entry-point
@@ -70,13 +72,16 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
     final session = ref.read(sciencesQuizProvider).value;
     final q = session?.currentQuestion;
     if (session != null && session.currentQuestion != null) {
-      if (option == session.currentQuestion!.correctAnswer) {
+      final isCorrect = option == session.currentQuestion!.correctAnswer;
+      if (isCorrect) {
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
         ref.read(audioServiceProvider).playWrongSound();
       }
-
-      ref.read(ttsServiceProvider).speakArabic(session.currentQuestion!.correctAnswer);
+      unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
+        session.currentQuestion!.correctAnswer,
+        correct: isCorrect,
+      ));
     }
 
     ref.read(sciencesQuizProvider.notifier).submitAnswer(option);
@@ -132,6 +137,12 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
             ref.read(achievementProvider.notifier).recordSciencesSession(
                   score: session.score,
                   livesRemaining: session.livesRemaining,
+                );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
                 );
           }
           ref.read(audioServiceProvider).playVictorySound();
@@ -191,8 +202,8 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
                   VictoryOverlay(
                     key: const ValueKey('victory'),
                     session: session,
-                    title: 'بطل العلوم!',
-                    shareModuleLabel: 'جولة العلوم — أكاديمية عزيز',
+                    title: context.l10n.victorySciencesTitle,
+                    shareModuleLabel: context.l10n.shareModuleSciences,
                     reducedMotion: reducedMotion,
                     onPlayAgain: _onRestart,
                     onBack: () => context.go(AppRoutes.home),
@@ -276,12 +287,12 @@ class _QuizBody extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Semantics(
-                          label: 'إظهار خيارات الإجابة',
+                          label: context.l10n.coPlayRevealChoices,
                           button: true,
                           child: ElevatedButton.icon(
                             onPressed: onRevealChoices,
                             icon: const Icon(Icons.visibility_rounded),
-                            label: const Text('اعرض خيارات الإجابة'),
+                            label: Text(context.l10n.coPlayRevealChoices),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: AppColors.secondary,
                               foregroundColor: Colors.white,
@@ -780,12 +791,12 @@ class _NextButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Semantics(
-        label: 'السؤال التالي',
+        label: context.l10n.nextQuestion,
         button: true,
         child: ElevatedButton.icon(
           onPressed: onNext,
           icon: const Text('🚀', style: TextStyle(fontSize: 20)),
-          label: const Text('السؤال التالي'),
+          label: Text(context.l10n.nextQuestion),
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.primary,
             foregroundColor: Colors.white,
@@ -818,7 +829,7 @@ class _LoadingView extends StatelessWidget {
         children: [
           const CircularProgressIndicator(color: AppColors.primary),
           const SizedBox(height: 20),
-          Text('جارٍ تحميل الاختبار…', style: AppTextStyles.bodyLarge),
+          Text(context.l10n.loadingQuiz, style: AppTextStyles.bodyLarge),
         ],
       ),
     );
@@ -840,7 +851,7 @@ class _ErrorView extends StatelessWidget {
             const Text('😕', style: TextStyle(fontSize: 64)),
             const SizedBox(height: 16),
             Text(
-              'عذراً! تعذّر تحميل الاختبار.',
+              context.l10n.quizLoadError,
               style: AppTextStyles.headingMedium,
               textAlign: TextAlign.center,
             ),
@@ -848,7 +859,7 @@ class _ErrorView extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: onRetry,
               icon: const Icon(Icons.refresh_rounded),
-              label: const Text('حاول مجدداً'),
+              label: Text(context.l10n.retryAction),
             ),
           ],
         ),

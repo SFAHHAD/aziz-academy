@@ -9,6 +9,7 @@ import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/features/sciences/providers/sciences_quiz_provider.dart';
 import 'package:aziz_academy/core/widgets/difficulty_row.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 /// Entry point for the Sciences module.
 class SciencesScreen extends ConsumerWidget {
@@ -90,7 +91,7 @@ class _SciencesIntroScreen extends ConsumerWidget {
                         }),
                         const SizedBox(height: 18),
                         Text(
-                          'أو اختر مجالاً علمياً',
+                          context.l10n.sciencesOrChooseCategory,
                           style: AppTextStyles.bodyMedium.copyWith(
                             color: AppColors.textMedium,
                             fontSize: 13,
@@ -126,11 +127,16 @@ class _IntroHeader extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            icon: const Icon(Icons.arrow_back_ios_new, color: AppColors.secondary),
+            icon: Icon(
+              Directionality.of(context) == TextDirection.rtl
+                  ? Icons.arrow_forward_ios_rounded
+                  : Icons.arrow_back_ios_new_rounded,
+              color: AppColors.secondary,
+            ),
             onPressed: () => context.go(AppRoutes.home),
           ),
           Text(
-            'الاكتشافات العلمية',
+            context.l10n.sciencesScreenTitle,
             style: AppTextStyles.headingMedium.copyWith(color: AppColors.secondary),
           ),
           const SizedBox(width: 48), // Balance spacing
@@ -180,7 +186,7 @@ class _HeroCard extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'ابدأ التحدي العلمي الكامل',
+                        context.l10n.sciencesStartFull,
                         style: GoogleFonts.cairo(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -191,7 +197,7 @@ class _HeroCard extends ConsumerWidget {
                       const SizedBox(height: 8),
                       questionsAsync.when(
                         data: (q) => Text(
-                          '${q.length} سؤال شامل',
+                          context.l10n.sciencesComprehensiveCount(q.length),
                           style: GoogleFonts.cairo(
                             fontSize: 14,
                             color: AppColors.surface.withAlpha(200),
@@ -278,7 +284,7 @@ class _CategoryGrid extends ConsumerWidget {
         );
       },
       loading: () => const Center(child: CircularProgressIndicator(color: AppColors.primary)),
-      error: (e, trace) => Center(child: Text('خطأ في تحميل البيانات $e')),
+      error: (e, trace) => Center(child: Text(context.l10n.quizLoadingError)),
     );
   }
 }
@@ -348,7 +354,7 @@ class _CategoryItemCard extends ConsumerWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
-                  '$count سؤال',
+                  context.l10n.sciencesCategoryCount(count),
                   style: GoogleFonts.cairo(
                     fontSize: 12,
                     color: AppColors.textMedium,
