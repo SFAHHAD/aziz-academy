@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue background circle -->
+  <circle cx="100" cy="100" r="96" fill="#0B3D91"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#FC3D21" stroke-width="5"/>
+  <!-- Red chevron bar -->
+  <path d="M12,88 L100,118 L188,88 L188,112 L100,142 L12,112Z" fill="#FC3D21"/>
+  <!-- Orbit ellipse -->
+  <ellipse cx="100" cy="100" rx="76" ry="26" fill="none" stroke="white" stroke-width="5"/>
+  <!-- Stars -->
+  <circle cx="38" cy="55" r="4" fill="white"/>
+  <circle cx="62" cy="36" r="3" fill="white"/>
+  <circle cx="142" cy="34" r="4" fill="white"/>
+  <circle cx="166" cy="56" r="3" fill="white"/>
+  <circle cx="52" cy="148" r="2" fill="white"/>
+  <circle cx="155" cy="152" r="2" fill="white"/>
+</svg>

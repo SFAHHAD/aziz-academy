@@ -1,0 +1,5 @@
+<svg viewBox="0 0 280 110" xmlns="http://www.w3.org/2000/svg">
+  <rect width="280" height="110" fill="white"/>
+  <!-- Nike swoosh: starts narrow at left, swells in the middle, tapers to a point at right -->
+  <path d="M12,88 C28,28 88,8 190,52 C232,70 262,76 272,64 C278,56 256,90 196,96 C132,103 28,86 12,88Z" fill="#111111"/>
+</svg>

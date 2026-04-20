@@ -1,0 +1,8 @@
+<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stem/leaf -->
+  <path d="M100,55 C100,28 122,16 140,22 C132,44 112,46 100,55Z" fill="#888888"/>
+  <!-- Apple body -->
+  <ellipse cx="100" cy="140" rx="74" ry="82" fill="#888888"/>
+  <!-- Bite on right side -->
+  <ellipse cx="152" cy="108" rx="30" ry="36" fill="#F5F5F7"/>
+</svg>

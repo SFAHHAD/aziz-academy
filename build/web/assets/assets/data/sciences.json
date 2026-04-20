@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "sc_q0",
+    "question": "What is the chemical symbol for water?",
+    "question_ar": "ما هو الرمز الكيميائي للماء؟",
+    "options": [
+      "H2O",
+      "O2",
+      "CO2",
+      "HO"
+    ],
+    "options_ar": [
+      "H2O",
+      "O2",
+      "ثاني أكسيد الكربون",
+      "هو"
+    ],
+    "correct_answer": "H2O",
+    "correct_answer_ar": "H2O",
+    "category": "كيمياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q1",
+    "question": "What planet is known as the Red Planet?",
+    "question_ar": "ما الكوكب المعروف بالكوكب الأحمر؟",
+    "options": [
+      "Mars",
+      "Venus",
+      "Jupiter",
+      "Saturn"
+    ],
+    "options_ar": [
+      "المريخ",
+      "فينوس",
+      "كوكب المشتري",
+      "زحل"
+    ],
+    "correct_answer": "Mars",
+    "correct_answer_ar": "المريخ",
+    "category": "فلك",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q2",
+    "question": "What is the powerhouse of the cell?",
+    "question_ar": "ما هي قوة الخلية؟",
+    "options": [
+      "Mitochondria",
+      "Nucleus",
+      "Ribosome",
+      "Endoplasmic Reticulum"
+    ],
+    "options_ar": [
+      "الميتوكوندريا",
+      "نواة",
+      "الريبوسوم",
+      "الشبكة الإندوبلازمية"
+    ],
+    "correct_answer": "Mitochondria",
+    "correct_answer_ar": "الميتوكوندريا",
+    "category": "أحياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q3",
+    "question": "What gas do plants absorb during photosynthesis?",
+    "question_ar": "ما الغاز الذي تمتصه النباتات أثناء عملية التمثيل الضوئي؟",
+    "options": [
+      "Carbon Dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    "options_ar": [
+      "ثاني أكسيد الكربون",
+      "الأكسجين",
+      "نتروجين",
+      "هيدروجين"
+    ],
+    "correct_answer": "Carbon Dioxide",
+    "correct_answer_ar": "ثاني أكسيد الكربون",
+    "category": "أحياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q4",
+    "question": "Which scientist proposed the theory of relativity?",
+    "question_ar": "من هو العالم الذي اقترح النظرية النسبية؟",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Nikola Tesla",
+      "Marie Curie"
+    ],
+    "options_ar": [
+      "ألبرت أينشتاين",
+      "إسحاق نيوتن",
+      "نيكولا تيسلا",
+      "ماري كوري"
+    ],
+    "correct_answer": "Albert Einstein",
+    "correct_answer_ar": "ألبرت أينشتاين",
+    "category": "فيزياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q5",
+    "question": "What is the hardest natural substance on Earth?",
+    "question_ar": "ما هي أصعب مادة طبيعية على وجه الأرض؟",
+    "options": [
+      "Diamond",
+      "Gold",
+      "Iron",
+      "Quartz"
+    ],
+    "options_ar": [
+      "الماس",
+      "ذهب",
+      "حديد",
+      "كوارتز"
+    ],
+    "correct_answer": "Diamond",
+    "correct_answer_ar": "الماس",
+    "category": "جيولوجيا",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q6",
+    "question": "How many bones are in the adult human body?",
+    "question_ar": "كم عدد العظام الموجودة في جسم الإنسان البالغ؟",
+    "options": [
+      "206",
+      "201",
+      "210",
+      "196"
+    ],
+    "options_ar": [
+      "206",
+      "201",
+      "210",
+      "196"
+    ],
+    "correct_answer": "206",
+    "correct_answer_ar": "206",
+    "category": "تشريح",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q7",
+    "question": "What force keeps us on the ground?",
+    "question_ar": "ما هي القوة التي تبقينا على الأرض؟",
+    "options": [
+      "Gravity",
+      "Magnetism",
+      "Friction",
+      "Inertia"
+    ],
+    "options_ar": [
+      "جاذبية",
+      "المغناطيسية",
+      "احتكاك",
+      "الجمود"
+    ],
+    "correct_answer": "Gravity",
+    "correct_answer_ar": "جاذبية",
+    "category": "فيزياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q8",
+    "question": "What is the closest star to Earth?",
+    "question_ar": "ما هو أقرب نجم إلى الأرض؟",
+    "options": [
+      "The Sun",
+      "Proxima Centauri",
+      "Sirius",
+      "Alpha Centauri"
+    ],
+    "options_ar": [
+      "الشمس",
+      "بروكسيما سنتوري",
+      "سيريوس",
+      "ألفا سنتوري"
+    ],
+    "correct_answer": "The Sun",
+    "correct_answer_ar": "الشمس",
+    "category": "فلك",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q9",
+    "question": "At what temperature does water boil? (Celsius)",
+    "question_ar": "في أي درجة حرارة يغلي الماء؟ (مئوية)",
+    "options": [
+      "100",
+      "50",
+      "150",
+      "200"
+    ],
+    "options_ar": [
+      "100",
+      "50",
+      "150",
+      "200"
+    ],
+    "correct_answer": "100",
+    "correct_answer_ar": "100",
+    "category": "فيزياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q10",
+    "question": "What is the main organ of the cardiovascular system?",
+    "question_ar": "ما هو العضو الرئيسي في نظام القلب والأوعية الدموية؟",
+    "options": [
+      "Heart",
+      "Lungs",
+      "Brain",
+      "Liver"
+    ],
+    "options_ar": [
+      "قلب",
+      "الرئتين",
+      "مخ",
+      "الكبد"
+    ],
+    "correct_answer": "Heart",
+    "correct_answer_ar": "قلب",
+    "category": "أحياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q11",
+    "question": "What consists of protons, neutrons, and electrons?",
+    "question_ar": "مما يتكون من البروتونات والنيوترونات والإلكترونات؟",
+    "options": [
+      "Atom",
+      "Molecule",
+      "Cell",
+      "Tissue"
+    ],
+    "options_ar": [
+      "ذرة",
+      "جزيء",
+      "خلية",
+      "منديل"
+    ],
+    "correct_answer": "Atom",
+    "correct_answer_ar": "ذرة",
+    "category": "كيمياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q12",
+    "question": "Which organ is responsible for pumping blood?",
+    "question_ar": "ما هو العضو المسؤول عن ضخ الدم؟",
+    "options": [
+      "Heart",
+      "Lungs",
+      "Kidneys",
+      "Liver"
+    ],
+    "options_ar": [
+      "قلب",
+      "الرئتين",
+      "الكلى",
+      "الكبد"
+    ],
+    "correct_answer": "Heart",
+    "correct_answer_ar": "قلب",
+    "category": "تشريح",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q13",
+    "question": "What is the largest ocean on Earth?",
+    "question_ar": "ما هو أكبر محيط على وجه الأرض؟",
+    "options": [
+      "Pacific Ocean",
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean"
+    ],
+    "options_ar": [
+      "المحيط الهادي",
+      "المحيط الأطلسي",
+      "المحيط الهندي",
+      "المحيط المتجمد الشمالي"
+    ],
+    "correct_answer": "Pacific Ocean",
+    "correct_answer_ar": "المحيط الهادي",
+    "category": "جغرافيا حيوي",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q14",
+    "question": "What type of animal is a frog?",
+    "question_ar": "أي نوع من الحيوانات هو الضفدع؟",
+    "options": [
+      "Amphibian",
+      "Reptile",
+      "Mammal",
+      "Bird"
+    ],
+    "options_ar": [
+      "برمائية",
+      "الزواحف",
+      "الثدييات",
+      "طائر"
+    ],
+    "correct_answer": "Amphibian",
+    "correct_answer_ar": "برمائية",
+    "category": "أحياء",
+    "difficulty": 1
+  },
+  {
+    "id": "sc_q15",
+    "question": "What element is denoted by 'O' on the periodic table?",
+    "question_ar": "ما هو العنصر الذي يرمز له بالحرف \"O\" في الجدول الدوري؟",
+    "options": [
+      "Oxygen",
+      "Osmium",
+      "Oganesson",
+      "Gold"
+    ],
+    "options_ar": [
+      "الأكسجين",
+      "الأوزميوم",
+      "اوغانيسون",
+      "ذهب"
+    ],
+    "correct_answer": "Oxygen",
+    "correct_answer_ar": "الأكسجين",
+    "category": "كيمياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q16",
+    "question": "What is the center of an atom called?",
+    "question_ar": "ماذا يسمى مركز الذرة؟",
+    "options": [
+      "Nucleus",
+      "Proton",
+      "Electron",
+      "Neutron"
+    ],
+    "options_ar": [
+      "نواة",
+      "بروتون",
+      "الإلكترون",
+      "نيوترون"
+    ],
+    "correct_answer": "Nucleus",
+    "correct_answer_ar": "نواة",
+    "category": "فيزياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q17",
+    "question": "Which is the largest planet in our solar system?",
+    "question_ar": "ما هو أكبر كوكب في نظامنا الشمسي؟",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Earth",
+      "Neptune"
+    ],
+    "options_ar": [
+      "كوكب المشتري",
+      "زحل",
+      "أرض",
+      "نبتون"
+    ],
+    "correct_answer": "Jupiter",
+    "correct_answer_ar": "كوكب المشتري",
+    "category": "فلك",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q18",
+    "question": "What is the most abundant gas in Earth's atmosphere?",
+    "question_ar": "ما هو الغاز الأكثر وفرة في الغلاف الجوي للأرض؟",
+    "options": [
+      "Nitrogen",
+      "Oxygen",
+      "Carbon Dioxide",
+      "Argon"
+    ],
+    "options_ar": [
+      "نتروجين",
+      "الأكسجين",
+      "ثاني أكسيد الكربون",
+      "الأرجون"
+    ],
+    "correct_answer": "Nitrogen",
+    "correct_answer_ar": "نتروجين",
+    "category": "كيمياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q19",
+    "question": "Who invented the telephone?",
+    "question_ar": "من اخترع الهاتف؟",
+    "options": [
+      "Alexander Graham Bell",
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Guglielmo Marconi"
+    ],
+    "options_ar": [
+      "ألكسندر جراهام بيل",
+      "توماس اديسون",
+      "نيكولا تيسلا",
+      "جولييلمو ماركوني"
+    ],
+    "correct_answer": "Alexander Graham Bell",
+    "correct_answer_ar": "ألكسندر جراهام بيل",
+    "category": "اختراعات",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q20",
+    "question": "What part of the plant conducts photosynthesis?",
+    "question_ar": "أي جزء من النبات يقوم بعملية البناء الضوئي؟",
+    "options": [
+      "Leaf",
+      "Root",
+      "Stem",
+      "Flower"
+    ],
+    "options_ar": [
+      "ورقة",
+      "جذر",
+      "ينبع",
+      "ورد"
+    ],
+    "correct_answer": "Leaf",
+    "correct_answer_ar": "ورقة",
+    "category": "أحياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q21",
+    "question": "What is the speed of light in a vacuum? (approx)",
+    "question_ar": "ما هي سرعة الضوء في الفراغ؟ (تقريبا)",
+    "options": [
+      "300,000 km/s",
+      "150,000 km/s",
+      "1,000 km/s",
+      "400,000 km/s"
+    ],
+    "options_ar": [
+      "300,000 كم/ثانية",
+      "150,000 كم/ثانية",
+      "1000 كم / ثانية",
+      "400000 كم / ثانية"
+    ],
+    "correct_answer": "300,000 km/s",
+    "correct_answer_ar": "300,000 كم/ثانية",
+    "category": "فيزياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q22",
+    "question": "What is the largest organ of the human body?",
+    "question_ar": "ما هو أكبر عضو في جسم الإنسان؟",
+    "options": [
+      "Skin",
+      "Brain",
+      "Liver",
+      "Heart"
+    ],
+    "options_ar": [
+      "جلد",
+      "مخ",
+      "الكبد",
+      "قلب"
+    ],
+    "correct_answer": "Skin",
+    "correct_answer_ar": "جلد",
+    "category": "تشريح",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q23",
+    "question": "What do bees collect to make honey?",
+    "question_ar": "ماذا يجمع النحل ليصنع العسل؟",
+    "options": [
+      "Nectar",
+      "Pollen",
+      "Water",
+      "Honeydew"
+    ],
+    "options_ar": [
+      "رحيق",
+      "حبوب اللقاح",
+      "ماء",
+      "المن"
+    ],
+    "correct_answer": "Nectar",
+    "correct_answer_ar": "رحيق",
+    "category": "أحياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q24",
+    "question": "How many arms does an octopus have?",
+    "question_ar": "كم عدد أذرع الأخطبوط؟",
+    "options": [
+      "8",
+      "6",
+      "10",
+      "12"
+    ],
+    "options_ar": [
+      "8",
+      "6",
+      "10",
+      "12"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "8",
+    "category": "أحياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q25",
+    "question": "What do we call a scientist who studies stars?",
+    "question_ar": "ماذا نسمي العالم الذي يدرس النجوم؟",
+    "options": [
+      "Astronomer",
+      "Astrologer",
+      "Geologist",
+      "Biologist"
+    ],
+    "options_ar": [
+      "عالم الفلك",
+      "منجم",
+      "جيولوجي",
+      "عالم أحياء"
+    ],
+    "correct_answer": "Astronomer",
+    "correct_answer_ar": "عالم الفلك",
+    "category": "فلك",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q26",
+    "question": "Which planet is famous for its rings?",
+    "question_ar": "ما هو الكوكب المشهور بحلقاته؟",
+    "options": [
+      "Saturn",
+      "Jupiter",
+      "Uranus",
+      "Neptune"
+    ],
+    "options_ar": [
+      "زحل",
+      "كوكب المشتري",
+      "أورانوس",
+      "نبتون"
+    ],
+    "correct_answer": "Saturn",
+    "correct_answer_ar": "زحل",
+    "category": "فلك",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q27",
+    "question": "What is the chemical symbol for Gold?",
+    "question_ar": "ما هو الرمز الكيميائي للذهب؟",
+    "options": [
+      "Au",
+      "Ag",
+      "Gd",
+      "Go"
+    ],
+    "options_ar": [
+      "Au",
+      "حج",
+      "جي دي",
+      "يذهب"
+    ],
+    "correct_answer": "Au",
+    "correct_answer_ar": "Au",
+    "category": "كيمياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q28",
+    "question": "What animal is known to be the fastest land mammal?",
+    "question_ar": "ما هو الحيوان المعروف بأنه أسرع الثدييات البرية؟",
+    "options": [
+      "Cheetah",
+      "Lion",
+      "Leopard",
+      "Horse"
+    ],
+    "options_ar": [
+      "الفهد",
+      "الأسد",
+      "الفهد",
+      "حصان"
+    ],
+    "correct_answer": "Cheetah",
+    "correct_answer_ar": "الفهد",
+    "category": "أحياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q29",
+    "question": "What is H2O more commonly known as?",
+    "question_ar": "ما هو H2O المعروف أكثر؟",
+    "options": [
+      "Water",
+      "Salt",
+      "Sugar",
+      "Air"
+    ],
+    "options_ar": [
+      "ماء",
+      "ملح",
+      "سكر",
+      "هواء"
+    ],
+    "correct_answer": "Water",
+    "correct_answer_ar": "ماء",
+    "category": "كيمياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q30",
+    "question": "What causes the tides on Earth?",
+    "question_ar": "ما الذي يسبب المد والجزر على الأرض؟",
+    "options": [
+      "The Moon's Gravity",
+      "The Sun's Gravity",
+      "Earth's Rotation",
+      "Wind"
+    ],
+    "options_ar": [
+      "جاذبية القمر",
+      "جاذبية الشمس",
+      "دوران الأرض",
+      "رياح"
+    ],
+    "correct_answer": "The Moon's Gravity",
+    "correct_answer_ar": "جاذبية القمر",
+    "category": "فيزياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q31",
+    "question": "Which human organ filters blood and produces urine?",
+    "question_ar": "ما هو العضو البشري الذي يقوم بتصفية الدم وإنتاج البول؟",
+    "options": [
+      "Kidneys",
+      "Liver",
+      "Stomach",
+      "Heart"
+    ],
+    "options_ar": [
+      "الكلى",
+      "الكبد",
+      "معدة",
+      "قلب"
+    ],
+    "correct_answer": "Kidneys",
+    "correct_answer_ar": "الكلى",
+    "category": "تشريح",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q32",
+    "question": "What is the main energy source for life on Earth?",
+    "question_ar": "ما هو مصدر الطاقة الرئيسي للحياة على الأرض؟",
+    "options": [
+      "The Sun",
+      "Water",
+      "Oxygen",
+      "Geothermal Energy"
+    ],
+    "options_ar": [
+      "الشمس",
+      "ماء",
+      "الأكسجين",
+      "الطاقة الحرارية الأرضية"
+    ],
+    "correct_answer": "The Sun",
+    "correct_answer_ar": "الشمس",
+    "category": "فلك",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q33",
+    "question": "Who discovered penicillin?",
+    "question_ar": "من اكتشف البنسلين؟",
+    "options": [
+      "Alexander Fleming",
+      "Louis Pasteur",
+      "Marie Curie",
+      "Robert Koch"
+    ],
+    "options_ar": [
+      "ألكسندر فليمنج",
+      "لويس باستور",
+      "ماري كوري",
+      "روبرت كوخ"
+    ],
+    "correct_answer": "Alexander Fleming",
+    "correct_answer_ar": "ألكسندر فليمنج",
+    "category": "طب",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q34",
+    "question": "What is the largest mammal in the world?",
+    "question_ar": "ما هو أكبر حيوان ثديي في العالم؟",
+    "options": [
+      "Blue Whale",
+      "Elephant",
+      "Giraffe",
+      "Shark"
+    ],
+    "options_ar": [
+      "الحوت الأزرق",
+      "الفيل",
+      "زرافة",
+      "سمك القرش"
+    ],
+    "correct_answer": "Blue Whale",
+    "correct_answer_ar": "الحوت الأزرق",
+    "category": "أحياء",
+    "difficulty": 2
+  },
+  {
+    "id": "sc_q35",
+    "question": "What do you call a baby kangaroo?",
+    "question_ar": "ماذا تسمون طفل الكنغر؟",
+    "options": [
+      "Joey",
+      "Cub",
+      "Pup",
+      "Calf"
+    ],
+    "options_ar": [
+      "جوي",
+      "شبل",
+      "الجرو",
+      "العجل"
+    ],
+    "correct_answer": "Joey",
+    "correct_answer_ar": "جوي",
+    "category": "أحياء",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q36",
+    "question": "How many inner planets are in the solar system?",
+    "question_ar": "كم عدد الكواكب الداخلية في النظام الشمسي؟",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "options_ar": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "correct_answer": "4",
+    "correct_answer_ar": "4",
+    "category": "فلك",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q37",
+    "question": "What is the chemical symbol for Iron?",
+    "question_ar": "ما هو الرمز الكيميائي للحديد؟",
+    "options": [
+      "Fe",
+      "Ir",
+      "In",
+      "I"
+    ],
+    "options_ar": [
+      "Fe",
+      "إير",
+      "في",
+      "أنا"
+    ],
+    "correct_answer": "Fe",
+    "correct_answer_ar": "Fe",
+    "category": "كيمياء",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q38",
+    "question": "What is the process of a liquid turning into gas called?",
+    "question_ar": "ماذا تسمى عملية تحول السائل إلى غاز؟",
+    "options": [
+      "Evaporation",
+      "Condensation",
+      "Sublimation",
+      "Melting"
+    ],
+    "options_ar": [
+      "تبخر",
+      "التكثيف",
+      "التسامي",
+      "ذوبان"
+    ],
+    "correct_answer": "Evaporation",
+    "correct_answer_ar": "تبخر",
+    "category": "فيزياء",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q39",
+    "question": "Which vitamin is heavily associated with sunlight?",
+    "question_ar": "ما هو الفيتامين الذي يرتبط بشدة بأشعة الشمس؟",
+    "options": [
+      "Vitamin D",
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin B12"
+    ],
+    "options_ar": [
+      "فيتامين د",
+      "فيتامين ج",
+      "فيتامين أ",
+      "فيتامين ب12"
+    ],
+    "correct_answer": "Vitamin D",
+    "correct_answer_ar": "فيتامين د",
+    "category": "طب",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q40",
+    "question": "What protects the Earth from harmful solar radiation?",
+    "question_ar": "ما الذي يحمي الأرض من الإشعاع الشمسي الضار؟",
+    "options": [
+      "Ozone Layer",
+      "Magnetic Field",
+      "Clouds",
+      "Nitrogen"
+    ],
+    "options_ar": [
+      "طبقة الأوزون",
+      "المجال المغنطيسي",
+      "الغيوم",
+      "نتروجين"
+    ],
+    "correct_answer": "Ozone Layer",
+    "correct_answer_ar": "طبقة الأوزون",
+    "category": "جغرافيا حيوي",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q41",
+    "question": "What instrument is used to measure earthquakes?",
+    "question_ar": "ما الأداة المستخدمة لقياس الزلازل؟",
+    "options": [
+      "Seismograph",
+      "Barometer",
+      "Thermometer",
+      "Hygrometer"
+    ],
+    "options_ar": [
+      "جهاز قياس الزلازل",
+      "بارومتر",
+      "ميزان الحرارة",
+      "مقياس الرطوبة"
+    ],
+    "correct_answer": "Seismograph",
+    "correct_answer_ar": "جهاز قياس الزلازل",
+    "category": "جيولوجيا",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q42",
+    "question": "What galaxy is Earth located in?",
+    "question_ar": "في أي مجرة ​​تقع الأرض؟",
+    "options": [
+      "Milky Way",
+      "Andromeda",
+      "Sombrero",
+      "Whirlpool"
+    ],
+    "options_ar": [
+      "درب التبانة",
+      "أندروميدا",
+      "سمبريرو",
+      "دوامة"
+    ],
+    "correct_answer": "Milky Way",
+    "correct_answer_ar": "درب التبانة",
+    "category": "فلك",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q43",
+    "question": "What is the study of weather called?",
+    "question_ar": "ماذا تسمى دراسة الطقس؟",
+    "options": [
+      "Meteorology",
+      "Geology",
+      "Biology",
+      "Ecology"
+    ],
+    "options_ar": [
+      "الأرصاد الجوية",
+      "الجيولوجيا",
+      "علم الأحياء",
+      "علم البيئة"
+    ],
+    "correct_answer": "Meteorology",
+    "correct_answer_ar": "الأرصاد الجوية",
+    "category": "علوم البيئة",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q44",
+    "question": "Which blood type is the universal donor?",
+    "question_ar": "ما هي فصيلة الدم التي تعتبر المتبرع العالمي؟",
+    "options": [
+      "O Negative",
+      "AB Positive",
+      "A Positive",
+      "B Negative"
+    ],
+    "options_ar": [
+      "يا سلبي",
+      "AB إيجابي",
+      "إيجابي",
+      "ب سلبي"
+    ],
+    "correct_answer": "O Negative",
+    "correct_answer_ar": "يا سلبي",
+    "category": "طب",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q45",
+    "question": "Which gas makes up bubbles in sodas?",
+    "question_ar": "ما الغاز الذي يشكل الفقاعات في المشروبات الغازية؟",
+    "options": [
+      "Carbon Dioxide",
+      "Oxygen",
+      "Helium",
+      "Nitrogen"
+    ],
+    "options_ar": [
+      "ثاني أكسيد الكربون",
+      "الأكسجين",
+      "هيليوم",
+      "نتروجين"
+    ],
+    "correct_answer": "Carbon Dioxide",
+    "correct_answer_ar": "ثاني أكسيد الكربون",
+    "category": "كيمياء",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q46",
+    "question": "What holds atoms together in a molecule?",
+    "question_ar": "ما الذي يجمع الذرات معًا في الجزيء؟",
+    "options": [
+      "Chemical Bonds",
+      "Gravity",
+      "Magnetism",
+      "Friction"
+    ],
+    "options_ar": [
+      "الروابط الكيميائية",
+      "جاذبية",
+      "المغناطيسية",
+      "احتكاك"
+    ],
+    "correct_answer": "Chemical Bonds",
+    "correct_answer_ar": "الروابط الكيميائية",
+    "category": "فيزياء",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q47",
+    "question": "What part of the brain controls balance?",
+    "question_ar": "أي جزء من الدماغ يتحكم في التوازن؟",
+    "options": [
+      "Cerebellum",
+      "Cerebrum",
+      "Brainstem",
+      "Thalamus"
+    ],
+    "options_ar": [
+      "المخيخ",
+      "المخ",
+      "جذع الدماغ",
+      "المهاد"
+    ],
+    "correct_answer": "Cerebellum",
+    "correct_answer_ar": "المخيخ",
+    "category": "تشريح",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q48",
+    "question": "Who is known as the father of modern physics?",
+    "question_ar": "من هو الملقب بأبي الفيزياء الحديثة؟",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Niels Bohr"
+    ],
+    "options_ar": [
+      "ألبرت أينشتاين",
+      "إسحاق نيوتن",
+      "جاليليو جاليلي",
+      "نيلز بور"
+    ],
+    "correct_answer": "Albert Einstein",
+    "correct_answer_ar": "ألبرت أينشتاين",
+    "category": "فيزياء",
+    "difficulty": 3
+  },
+  {
+    "id": "sc_q49",
+    "question": "Which element makes up graphite in pencils?",
+    "question_ar": "ما العنصر الذي يشكل الجرافيت في أقلام الرصاص؟",
+    "options": [
+      "Carbon",
+      "Lead",
+      "Silver",
+      "Iron"
+    ],
+    "options_ar": [
+      "الكربون",
+      "يقود",
+      "فضي",
+      "حديد"
+    ],
+    "correct_answer": "Carbon",
+    "correct_answer_ar": "الكربون",
+    "category": "كيمياء",
+    "difficulty": 3
+  }
+]

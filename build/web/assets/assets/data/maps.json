@@ -1,0 +1,59 @@
+[
+  {
+    "id": "middle_east",
+    "region": "Middle East",
+    "countries": ["Saudi Arabia", "UAE", "Kuwait", "Bahrain", "Oman", "Qatar", "Iraq", "Iran", "Syria", "Jordan"],
+    "quiz_questions": [
+      {
+        "question": "Which country has the largest land area in the Middle East?",
+        "answer": "Saudi Arabia",
+        "options": ["Saudi Arabia", "Iran", "Iraq", "Turkey"],
+        "hint": "It covers most of the Arabian Peninsula."
+      },
+      {
+        "question": "Which Middle Eastern country is famous for its ancient city of Petra?",
+        "answer": "Jordan",
+        "options": ["Jordan", "Syria", "Lebanon", "Israel"],
+        "hint": "The Rose-Red City is carved into pink sandstone cliffs."
+      }
+    ]
+  },
+  {
+    "id": "europe",
+    "region": "Europe",
+    "countries": ["France", "Germany", "Italy", "Spain", "UK", "Netherlands", "Belgium", "Portugal", "Sweden", "Norway"],
+    "quiz_questions": [
+      {
+        "question": "Which European country is shaped like a boot?",
+        "answer": "Italy",
+        "options": ["Italy", "Spain", "Portugal", "Greece"],
+        "hint": "It's also home to the ancient Colosseum."
+      },
+      {
+        "question": "Which country has the most people in Europe?",
+        "answer": "Germany",
+        "options": ["Germany", "France", "UK", "Italy"],
+        "hint": "Its capital was once divided by a famous wall."
+      }
+    ]
+  },
+  {
+    "id": "east_asia",
+    "region": "East Asia",
+    "countries": ["China", "Japan", "South Korea", "North Korea", "Mongolia", "Taiwan"],
+    "quiz_questions": [
+      {
+        "question": "Which country has the largest population in the world?",
+        "answer": "China",
+        "options": ["China", "India", "Japan", "Indonesia"],
+        "hint": "It has the Great Wall as one of its landmarks."
+      },
+      {
+        "question": "Which East Asian country is made up of about 6,800 islands?",
+        "answer": "Japan",
+        "options": ["Japan", "South Korea", "Philippines", "Indonesia"],
+        "hint": "It's the Land of the Rising Sun."
+      }
+    ]
+  }
+]

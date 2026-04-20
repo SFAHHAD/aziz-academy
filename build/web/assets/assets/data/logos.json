@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "youtube",
+    "brand": "YouTube",
+    "brand_ar": "YouTube",
+    "logo_url": "https://logo.clearbit.com/youtube.com?size=512",
+    "brand_color": "#FF0000",
+    "options": [
+      "Amazon",
+      "Louis Vuitton",
+      "YouTube",
+      "Adidas"
+    ],
+    "options_ar": [
+      "Amazon",
+      "Louis Vuitton",
+      "YouTube",
+      "Adidas"
+    ],
+    "correct_answer": "YouTube",
+    "correct_answer_ar": "YouTube",
+    "category": "تقنية",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/youtube.png"
+  },
+  {
+    "id": "apple",
+    "brand": "Apple",
+    "brand_ar": "Apple",
+    "logo_url": "https://logo.clearbit.com/apple.com?size=512",
+    "brand_color": "#555555",
+    "options": [
+      "H&M",
+      "Apple",
+      "Amazon",
+      "Lamborghini"
+    ],
+    "options_ar": [
+      "H&M",
+      "Apple",
+      "Amazon",
+      "لامبورغيني"
+    ],
+    "correct_answer": "Apple",
+    "correct_answer_ar": "Apple",
+    "category": "تقنية",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/apple.png"
+  },
+  {
+    "id": "google",
+    "brand": "Google",
+    "brand_ar": "Google",
+    "logo_url": "https://logo.clearbit.com/google.com?size=512",
+    "brand_color": "#4285F4",
+    "options": [
+      "IKEA",
+      "Google",
+      "Ferrari",
+      "Microsoft"
+    ],
+    "options_ar": [
+      "IKEA",
+      "Google",
+      "فيراري",
+      "Microsoft"
+    ],
+    "correct_answer": "Google",
+    "correct_answer_ar": "Google",
+    "category": "تقنية",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/google.png"
+  },
+  {
+    "id": "amazon",
+    "brand": "Amazon",
+    "brand_ar": "Amazon",
+    "logo_url": "https://logo.clearbit.com/amazon.com?size=512",
+    "brand_color": "#FF9900",
+    "options": [
+      "Coca-Cola",
+      "Audi",
+      "Amazon",
+      "Samsung"
+    ],
+    "options_ar": [
+      "كوكا كولا",
+      "أودي",
+      "Amazon",
+      "Samsung"
+    ],
+    "correct_answer": "Amazon",
+    "correct_answer_ar": "Amazon",
+    "category": "تسوق",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/amazon.png"
+  },
+  {
+    "id": "microsoft",
+    "brand": "Microsoft",
+    "brand_ar": "Microsoft",
+    "logo_url": "https://logo.clearbit.com/microsoft.com?size=512",
+    "brand_color": "#00A4EF",
+    "options": [
+      "Disney",
+      "Lamborghini",
+      "Microsoft",
+      "Burger King"
+    ],
+    "options_ar": [
+      "ديزني",
+      "لامبورغيني",
+      "Microsoft",
+      "برجر كينج"
+    ],
+    "correct_answer": "Microsoft",
+    "correct_answer_ar": "Microsoft",
+    "category": "تقنية",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/microsoft.png"
+  },
+  {
+    "id": "facebook",
+    "brand": "Facebook",
+    "brand_ar": "Facebook",
+    "logo_url": "https://logo.clearbit.com/facebook.com?size=512",
+    "brand_color": "#1877F2",
+    "options": [
+      "Lego",
+      "Subway",
+      "BMW",
+      "Facebook"
+    ],
+    "options_ar": [
+      "Lego",
+      "صب واي",
+      "بي إم دبليو",
+      "Facebook"
+    ],
+    "correct_answer": "Facebook",
+    "correct_answer_ar": "Facebook",
+    "category": "تواصل اجتماعي",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/facebook.png"
+  },
+  {
+    "id": "instagram",
+    "brand": "Instagram",
+    "brand_ar": "Instagram",
+    "logo_url": "https://logo.clearbit.com/instagram.com?size=512",
+    "brand_color": "#E4405F",
+    "options": [
+      "Ford",
+      "Disney",
+      "Coca-Cola",
+      "Instagram"
+    ],
+    "options_ar": [
+      "فورد",
+      "ديزني",
+      "كوكا كولا",
+      "Instagram"
+    ],
+    "correct_answer": "Instagram",
+    "correct_answer_ar": "Instagram",
+    "category": "تواصل اجتماعي",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/instagram.png"
+  },
+  {
+    "id": "netflix",
+    "brand": "Netflix",
+    "brand_ar": "Netflix",
+    "logo_url": "https://logo.clearbit.com/netflix.com?size=512",
+    "brand_color": "#E50914",
+    "options": [
+      "Lamborghini",
+      "Netflix",
+      "BMW",
+      "Nissan"
+    ],
+    "options_ar": [
+      "لامبورغيني",
+      "Netflix",
+      "بي إم دبليو",
+      "نيسان"
+    ],
+    "correct_answer": "Netflix",
+    "correct_answer_ar": "Netflix",
+    "category": "ترفيه",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/netflix.png"
+  },
+  {
+    "id": "nike",
+    "brand": "Nike",
+    "brand_ar": "Nike",
+    "logo_url": "https://logo.clearbit.com/nike.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "Visa",
+      "IBM",
+      "Nike",
+      "KFC"
+    ],
+    "options_ar": [
+      "Visa",
+      "IBM",
+      "Nike",
+      "KFC"
+    ],
+    "correct_answer": "Nike",
+    "correct_answer_ar": "Nike",
+    "category": "رياضة",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/nike.png"
+  },
+  {
+    "id": "adidas",
+    "brand": "Adidas",
+    "brand_ar": "Adidas",
+    "logo_url": "https://logo.clearbit.com/adidas.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "BMW",
+      "Nike",
+      "Adidas",
+      "Subway"
+    ],
+    "options_ar": [
+      "بي إم دبليو",
+      "Nike",
+      "Adidas",
+      "صب واي"
+    ],
+    "correct_answer": "Adidas",
+    "correct_answer_ar": "Adidas",
+    "category": "رياضة",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/adidas.png"
+  },
+  {
+    "id": "mcdonald's",
+    "brand": "McDonald's",
+    "brand_ar": "McDonald's",
+    "logo_url": "https://logo.clearbit.com/mcdonalds.com?size=512",
+    "brand_color": "#FFC72C",
+    "options": [
+      "Volkswagen",
+      "Facebook",
+      "Zara",
+      "McDonald's"
+    ],
+    "options_ar": [
+      "فولكس واجن",
+      "Facebook",
+      "Zara",
+      "McDonald's"
+    ],
+    "correct_answer": "McDonald's",
+    "correct_answer_ar": "McDonald's",
+    "category": "مطاعم",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/mcdonald's.png"
+  },
+  {
+    "id": "x",
+    "brand": "X",
+    "brand_ar": "X",
+    "logo_url": "https://logo.clearbit.com/x.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "X",
+      "Zara",
+      "Subway",
+      "Lamborghini"
+    ],
+    "options_ar": [
+      "X",
+      "Zara",
+      "صب واي",
+      "لامبورغيني"
+    ],
+    "correct_answer": "X",
+    "correct_answer_ar": "X",
+    "category": "تواصل اجتماعي",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/x.png"
+  },
+  {
+    "id": "spotify",
+    "brand": "Spotify",
+    "brand_ar": "Spotify",
+    "logo_url": "https://logo.clearbit.com/spotify.com?size=512",
+    "brand_color": "#1DB954",
+    "options": [
+      "KFC",
+      "Spotify",
+      "Louis Vuitton",
+      "McDonald's"
+    ],
+    "options_ar": [
+      "KFC",
+      "Spotify",
+      "Louis Vuitton",
+      "McDonald's"
+    ],
+    "correct_answer": "Spotify",
+    "correct_answer_ar": "Spotify",
+    "category": "ترفيه",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/spotify.png"
+  },
+  {
+    "id": "tesla",
+    "brand": "Tesla",
+    "brand_ar": "Tesla",
+    "logo_url": "https://logo.clearbit.com/tesla.com?size=512",
+    "brand_color": "#CC0000",
+    "options": [
+      "IKEA",
+      "Zara",
+      "Tesla",
+      "Toyota"
+    ],
+    "options_ar": [
+      "IKEA",
+      "Zara",
+      "Tesla",
+      "Toyota"
+    ],
+    "correct_answer": "Tesla",
+    "correct_answer_ar": "Tesla",
+    "category": "سيارات",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/tesla.png"
+  },
+  {
+    "id": "nasa",
+    "brand": "NASA",
+    "brand_ar": "NASA",
+    "logo_url": "https://logo.clearbit.com/nasa.gov?size=512",
+    "brand_color": "#0B3D91",
+    "options": [
+      "NASA",
+      "Zara",
+      "Facebook",
+      "Honda"
+    ],
+    "options_ar": [
+      "NASA",
+      "Zara",
+      "Facebook",
+      "هوندا"
+    ],
+    "correct_answer": "NASA",
+    "correct_answer_ar": "NASA",
+    "category": "فضاء",
+    "difficulty": 1,
+    "logo_asset": "assets/images/logos/nasa.png"
+  },
+  {
+    "id": "toyota",
+    "brand": "Toyota",
+    "brand_ar": "Toyota",
+    "logo_url": "https://logo.clearbit.com/toyota.com?size=512",
+    "brand_color": "#EB0A1E",
+    "options": [
+      "Mastercard",
+      "Instagram",
+      "Toyota",
+      "Google"
+    ],
+    "options_ar": [
+      "Mastercard",
+      "Instagram",
+      "Toyota",
+      "Google"
+    ],
+    "correct_answer": "Toyota",
+    "correct_answer_ar": "Toyota",
+    "category": "سيارات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/toyota.png"
+  },
+  {
+    "id": "samsung",
+    "brand": "Samsung",
+    "brand_ar": "Samsung",
+    "logo_url": "https://logo.clearbit.com/samsung.com?size=512",
+    "brand_color": "#1428A0",
+    "options": [
+      "Nissan",
+      "Sony",
+      "Toyota",
+      "Samsung"
+    ],
+    "options_ar": [
+      "نيسان",
+      "Sony",
+      "Toyota",
+      "Samsung"
+    ],
+    "correct_answer": "Samsung",
+    "correct_answer_ar": "Samsung",
+    "category": "تقنية",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/samsung.png"
+  },
+  {
+    "id": "intel",
+    "brand": "Intel",
+    "brand_ar": "Intel",
+    "logo_url": "https://logo.clearbit.com/intel.com?size=512",
+    "brand_color": "#0071C5",
+    "options": [
+      "Intel",
+      "Honda",
+      "Samsung",
+      "BMW"
+    ],
+    "options_ar": [
+      "Intel",
+      "هوندا",
+      "Samsung",
+      "بي إم دبليو"
+    ],
+    "correct_answer": "Intel",
+    "correct_answer_ar": "Intel",
+    "category": "تقنية",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/intel.png"
+  },
+  {
+    "id": "ibm",
+    "brand": "IBM",
+    "brand_ar": "IBM",
+    "logo_url": "https://logo.clearbit.com/ibm.com?size=512",
+    "brand_color": "#0530AD",
+    "options": [
+      "Chanel",
+      "Zara",
+      "IBM",
+      "Coca-Cola"
+    ],
+    "options_ar": [
+      "Chanel",
+      "Zara",
+      "IBM",
+      "كوكا كولا"
+    ],
+    "correct_answer": "IBM",
+    "correct_answer_ar": "IBM",
+    "category": "تقنية",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/ibm.png"
+  },
+  {
+    "id": "sony",
+    "brand": "Sony",
+    "brand_ar": "Sony",
+    "logo_url": "https://logo.clearbit.com/sony.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "Adidas",
+      "YouTube",
+      "BMW",
+      "Sony"
+    ],
+    "options_ar": [
+      "Adidas",
+      "YouTube",
+      "بي إم دبليو",
+      "Sony"
+    ],
+    "correct_answer": "Sony",
+    "correct_answer_ar": "Sony",
+    "category": "ترفيه",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/sony.png"
+  },
+  {
+    "id": "disney",
+    "brand": "Disney",
+    "brand_ar": "ديزني",
+    "logo_url": "https://logo.clearbit.com/disney.com?size=512",
+    "brand_color": "#113CCF",
+    "options": [
+      "IKEA",
+      "Disney",
+      "Visa",
+      "Chanel"
+    ],
+    "options_ar": [
+      "IKEA",
+      "ديزني",
+      "Visa",
+      "Chanel"
+    ],
+    "correct_answer": "Disney",
+    "correct_answer_ar": "ديزني",
+    "category": "ترفيه",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/disney.png"
+  },
+  {
+    "id": "coca-cola",
+    "brand": "Coca-Cola",
+    "brand_ar": "كوكا كولا",
+    "logo_url": "https://logo.clearbit.com/coca-cola.com?size=512",
+    "brand_color": "#F40009",
+    "options": [
+      "Coca-Cola",
+      "H&M",
+      "IBM",
+      "X"
+    ],
+    "options_ar": [
+      "كوكا كولا",
+      "H&M",
+      "IBM",
+      "X"
+    ],
+    "correct_answer": "Coca-Cola",
+    "correct_answer_ar": "كوكا كولا",
+    "category": "مشروبات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/coca-cola.png"
+  },
+  {
+    "id": "pepsi",
+    "brand": "Pepsi",
+    "brand_ar": "بيبسي",
+    "logo_url": "https://logo.clearbit.com/pepsi.com?size=512",
+    "brand_color": "#004B93",
+    "options": [
+      "Spotify",
+      "Louis Vuitton",
+      "Adidas",
+      "Pepsi"
+    ],
+    "options_ar": [
+      "Spotify",
+      "Louis Vuitton",
+      "Adidas",
+      "بيبسي"
+    ],
+    "correct_answer": "Pepsi",
+    "correct_answer_ar": "بيبسي",
+    "category": "مشروبات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/pepsi.png"
+  },
+  {
+    "id": "starbucks",
+    "brand": "Starbucks",
+    "brand_ar": "ستاربكس",
+    "logo_url": "https://logo.clearbit.com/starbucks.com?size=512",
+    "brand_color": "#00704A",
+    "options": [
+      "Starbucks",
+      "Dominos",
+      "PayPal",
+      "Gucci"
+    ],
+    "options_ar": [
+      "ستاربكس",
+      "دومينوس",
+      "PayPal",
+      "Gucci"
+    ],
+    "correct_answer": "Starbucks",
+    "correct_answer_ar": "ستاربكس",
+    "category": "مطاعم",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/starbucks.png"
+  },
+  {
+    "id": "kfc",
+    "brand": "KFC",
+    "brand_ar": "KFC",
+    "logo_url": "https://logo.clearbit.com/kfc.com?size=512",
+    "brand_color": "#E51636",
+    "options": [
+      "KFC",
+      "Louis Vuitton",
+      "Facebook",
+      "Pizza Hut"
+    ],
+    "options_ar": [
+      "KFC",
+      "Louis Vuitton",
+      "Facebook",
+      "بيتزا هت"
+    ],
+    "correct_answer": "KFC",
+    "correct_answer_ar": "KFC",
+    "category": "مطاعم",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/kfc.png"
+  },
+  {
+    "id": "burger_king",
+    "brand": "Burger King",
+    "brand_ar": "برجر كينج",
+    "logo_url": "https://logo.clearbit.com/bk.com?size=512",
+    "brand_color": "#D62300",
+    "options": [
+      "Instagram",
+      "Burger King",
+      "Sony",
+      "H&M"
+    ],
+    "options_ar": [
+      "Instagram",
+      "برجر كينج",
+      "Sony",
+      "H&M"
+    ],
+    "correct_answer": "Burger King",
+    "correct_answer_ar": "برجر كينج",
+    "category": "مطاعم",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/burger_king.png"
+  },
+  {
+    "id": "subway",
+    "brand": "Subway",
+    "brand_ar": "صب واي",
+    "logo_url": "https://logo.clearbit.com/subway.com?size=512",
+    "brand_color": "#008C15",
+    "options": [
+      "Nissan",
+      "Apple",
+      "Chanel",
+      "Subway"
+    ],
+    "options_ar": [
+      "نيسان",
+      "Apple",
+      "Chanel",
+      "صب واي"
+    ],
+    "correct_answer": "Subway",
+    "correct_answer_ar": "صب واي",
+    "category": "مطاعم",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/subway.png"
+  },
+  {
+    "id": "pizza_hut",
+    "brand": "Pizza Hut",
+    "brand_ar": "بيتزا هت",
+    "logo_url": "https://logo.clearbit.com/pizzahut.com?size=512",
+    "brand_color": "#EE3124",
+    "options": [
+      "Pizza Hut",
+      "Honda",
+      "Netflix",
+      "Rolex"
+    ],
+    "options_ar": [
+      "بيتزا هت",
+      "هوندا",
+      "Netflix",
+      "رولكس"
+    ],
+    "correct_answer": "Pizza Hut",
+    "correct_answer_ar": "بيتزا هت",
+    "category": "مطاعم",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/pizza_hut.png"
+  },
+  {
+    "id": "dominos",
+    "brand": "Dominos",
+    "brand_ar": "دومينوس",
+    "logo_url": "https://logo.clearbit.com/dominos.com?size=512",
+    "brand_color": "#0055A5",
+    "options": [
+      "Volkswagen",
+      "IKEA",
+      "Lamborghini",
+      "Dominos"
+    ],
+    "options_ar": [
+      "فولكس واجن",
+      "IKEA",
+      "لامبورغيني",
+      "دومينوس"
+    ],
+    "correct_answer": "Dominos",
+    "correct_answer_ar": "دومينوس",
+    "category": "مطاعم",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/dominos.png"
+  },
+  {
+    "id": "mercedes-benz",
+    "brand": "Mercedes-Benz",
+    "brand_ar": "مرسيدس-بنز",
+    "logo_url": "https://logo.clearbit.com/mercedes-benz.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "Toyota",
+      "YouTube",
+      "Mercedes-Benz",
+      "Starbucks"
+    ],
+    "options_ar": [
+      "Toyota",
+      "YouTube",
+      "مرسيدس-بنز",
+      "ستاربكس"
+    ],
+    "correct_answer": "Mercedes-Benz",
+    "correct_answer_ar": "مرسيدس-بنز",
+    "category": "سيارات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/mercedes-benz.png"
+  },
+  {
+    "id": "bmw",
+    "brand": "BMW",
+    "brand_ar": "بي إم دبليو",
+    "logo_url": "https://logo.clearbit.com/bmw.com?size=512",
+    "brand_color": "#0066B1",
+    "options": [
+      "Mercedes-Benz",
+      "BMW",
+      "Nike",
+      "Ferrari"
+    ],
+    "options_ar": [
+      "مرسيدس-بنز",
+      "بي إم دبليو",
+      "Nike",
+      "فيراري"
+    ],
+    "correct_answer": "BMW",
+    "correct_answer_ar": "بي إم دبليو",
+    "category": "سيارات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/bmw.png"
+  },
+  {
+    "id": "audi",
+    "brand": "Audi",
+    "brand_ar": "أودي",
+    "logo_url": "https://logo.clearbit.com/audi.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "Audi",
+      "Pepsi",
+      "Volkswagen",
+      "Toyota"
+    ],
+    "options_ar": [
+      "أودي",
+      "بيبسي",
+      "فولكس واجن",
+      "Toyota"
+    ],
+    "correct_answer": "Audi",
+    "correct_answer_ar": "أودي",
+    "category": "سيارات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/audi.png"
+  },
+  {
+    "id": "ford",
+    "brand": "Ford",
+    "brand_ar": "فورد",
+    "logo_url": "https://logo.clearbit.com/ford.com?size=512",
+    "brand_color": "#003478",
+    "options": [
+      "Ford",
+      "Lego",
+      "Coca-Cola",
+      "Apple"
+    ],
+    "options_ar": [
+      "فورد",
+      "Lego",
+      "كوكا كولا",
+      "Apple"
+    ],
+    "correct_answer": "Ford",
+    "correct_answer_ar": "فورد",
+    "category": "سيارات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/ford.png"
+  },
+  {
+    "id": "honda",
+    "brand": "Honda",
+    "brand_ar": "هوندا",
+    "logo_url": "https://logo.clearbit.com/honda.com?size=512",
+    "brand_color": "#E40521",
+    "options": [
+      "Netflix",
+      "Lamborghini",
+      "PayPal",
+      "Honda"
+    ],
+    "options_ar": [
+      "Netflix",
+      "لامبورغيني",
+      "PayPal",
+      "هوندا"
+    ],
+    "correct_answer": "Honda",
+    "correct_answer_ar": "هوندا",
+    "category": "سيارات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/honda.png"
+  },
+  {
+    "id": "nissan",
+    "brand": "Nissan",
+    "brand_ar": "نيسان",
+    "logo_url": "https://logo.clearbit.com/nissan.com?size=512",
+    "brand_color": "#C3002F",
+    "options": [
+      "McDonald's",
+      "Dominos",
+      "Nissan",
+      "Honda"
+    ],
+    "options_ar": [
+      "McDonald's",
+      "دومينوس",
+      "نيسان",
+      "هوندا"
+    ],
+    "correct_answer": "Nissan",
+    "correct_answer_ar": "نيسان",
+    "category": "سيارات",
+    "difficulty": 2,
+    "logo_asset": "assets/images/logos/nissan.png"
+  },
+  {
+    "id": "volkswagen",
+    "brand": "Volkswagen",
+    "brand_ar": "فولكس واجن",
+    "logo_url": "https://logo.clearbit.com/vw.com?size=512",
+    "brand_color": "#001E50",
+    "options": [
+      "Dominos",
+      "Volkswagen",
+      "Ferrari",
+      "Samsung"
+    ],
+    "options_ar": [
+      "دومينوس",
+      "فولكس واجن",
+      "فيراري",
+      "Samsung"
+    ],
+    "correct_answer": "Volkswagen",
+    "correct_answer_ar": "فولكس واجن",
+    "category": "سيارات",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/volkswagen.png"
+  },
+  {
+    "id": "porsche",
+    "brand": "Porsche",
+    "brand_ar": "بورش",
+    "logo_url": "https://logo.clearbit.com/porsche.com?size=512",
+    "brand_color": "#D5001C",
+    "options": [
+      "Zara",
+      "Porsche",
+      "Lamborghini",
+      "Netflix"
+    ],
+    "options_ar": [
+      "Zara",
+      "بورش",
+      "لامبورغيني",
+      "Netflix"
+    ],
+    "correct_answer": "Porsche",
+    "correct_answer_ar": "بورش",
+    "category": "سيارات",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/porsche.png"
+  },
+  {
+    "id": "ferrari",
+    "brand": "Ferrari",
+    "brand_ar": "فيراري",
+    "logo_url": "https://logo.clearbit.com/ferrari.com?size=512",
+    "brand_color": "#E32636",
+    "options": [
+      "Ferrari",
+      "Lamborghini",
+      "Subway",
+      "Mercedes-Benz"
+    ],
+    "options_ar": [
+      "فيراري",
+      "لامبورغيني",
+      "صب واي",
+      "مرسيدس-بنز"
+    ],
+    "correct_answer": "Ferrari",
+    "correct_answer_ar": "فيراري",
+    "category": "سيارات",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/ferrari.png"
+  },
+  {
+    "id": "lamborghini",
+    "brand": "Lamborghini",
+    "brand_ar": "لامبورغيني",
+    "logo_url": "https://logo.clearbit.com/lamborghini.com?size=512",
+    "brand_color": "#D4AF37",
+    "options": [
+      "Nissan",
+      "Lamborghini",
+      "Nike",
+      "Pizza Hut"
+    ],
+    "options_ar": [
+      "نيسان",
+      "لامبورغيني",
+      "Nike",
+      "بيتزا هت"
+    ],
+    "correct_answer": "Lamborghini",
+    "correct_answer_ar": "لامبورغيني",
+    "category": "سيارات",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/lamborghini.png"
+  },
+  {
+    "id": "rolex",
+    "brand": "Rolex",
+    "brand_ar": "رولكس",
+    "logo_url": "https://logo.clearbit.com/rolex.com?size=512",
+    "brand_color": "#006039",
+    "options": [
+      "Dominos",
+      "BMW",
+      "Rolex",
+      "Instagram"
+    ],
+    "options_ar": [
+      "دومينوس",
+      "بي إم دبليو",
+      "رولكس",
+      "Instagram"
+    ],
+    "correct_answer": "Rolex",
+    "correct_answer_ar": "رولكس",
+    "category": "ساعات",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/rolex.png"
+  },
+  {
+    "id": "gucci",
+    "brand": "Gucci",
+    "brand_ar": "Gucci",
+    "logo_url": "https://logo.clearbit.com/gucci.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "Mastercard",
+      "Nike",
+      "Gucci",
+      "Porsche"
+    ],
+    "options_ar": [
+      "Mastercard",
+      "Nike",
+      "Gucci",
+      "بورش"
+    ],
+    "correct_answer": "Gucci",
+    "correct_answer_ar": "Gucci",
+    "category": "أزياء",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/gucci.png"
+  },
+  {
+    "id": "louis_vuitton",
+    "brand": "Louis Vuitton",
+    "brand_ar": "Louis Vuitton",
+    "logo_url": "https://logo.clearbit.com/louisvuitton.com?size=512",
+    "brand_color": "#5A3A22",
+    "options": [
+      "Instagram",
+      "Spotify",
+      "KFC",
+      "Louis Vuitton"
+    ],
+    "options_ar": [
+      "Instagram",
+      "Spotify",
+      "KFC",
+      "Louis Vuitton"
+    ],
+    "correct_answer": "Louis Vuitton",
+    "correct_answer_ar": "Louis Vuitton",
+    "category": "أزياء",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/louis_vuitton.png"
+  },
+  {
+    "id": "chanel",
+    "brand": "Chanel",
+    "brand_ar": "Chanel",
+    "logo_url": "https://logo.clearbit.com/chanel.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "Chanel",
+      "Pizza Hut",
+      "PayPal",
+      "Visa"
+    ],
+    "options_ar": [
+      "Chanel",
+      "بيتزا هت",
+      "PayPal",
+      "Visa"
+    ],
+    "correct_answer": "Chanel",
+    "correct_answer_ar": "Chanel",
+    "category": "أزياء",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/chanel.png"
+  },
+  {
+    "id": "zara",
+    "brand": "Zara",
+    "brand_ar": "Zara",
+    "logo_url": "https://logo.clearbit.com/zara.com?size=512",
+    "brand_color": "#000000",
+    "options": [
+      "Disney",
+      "Louis Vuitton",
+      "Microsoft",
+      "Zara"
+    ],
+    "options_ar": [
+      "ديزني",
+      "Louis Vuitton",
+      "Microsoft",
+      "Zara"
+    ],
+    "correct_answer": "Zara",
+    "correct_answer_ar": "Zara",
+    "category": "أزياء",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/zara.png"
+  },
+  {
+    "id": "h&m",
+    "brand": "H&M",
+    "brand_ar": "H&M",
+    "logo_url": "https://logo.clearbit.com/hm.com?size=512",
+    "brand_color": "#CD040B",
+    "options": [
+      "Samsung",
+      "X",
+      "H&M",
+      "Ferrari"
+    ],
+    "options_ar": [
+      "Samsung",
+      "X",
+      "H&M",
+      "فيراري"
+    ],
+    "correct_answer": "H&M",
+    "correct_answer_ar": "H&M",
+    "category": "أزياء",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/h&m.png"
+  },
+  {
+    "id": "ikea",
+    "brand": "IKEA",
+    "brand_ar": "IKEA",
+    "logo_url": "https://logo.clearbit.com/ikea.com?size=512",
+    "brand_color": "#0051BA",
+    "options": [
+      "Volkswagen",
+      "IKEA",
+      "Microsoft",
+      "Audi"
+    ],
+    "options_ar": [
+      "فولكس واجن",
+      "IKEA",
+      "Microsoft",
+      "أودي"
+    ],
+    "correct_answer": "IKEA",
+    "correct_answer_ar": "IKEA",
+    "category": "أثاث",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/ikea.png"
+  },
+  {
+    "id": "lego",
+    "brand": "Lego",
+    "brand_ar": "Lego",
+    "logo_url": "https://logo.clearbit.com/lego.com?size=512",
+    "brand_color": "#D01012",
+    "options": [
+      "Facebook",
+      "Lego",
+      "Mastercard",
+      "X"
+    ],
+    "options_ar": [
+      "Facebook",
+      "Lego",
+      "Mastercard",
+      "X"
+    ],
+    "correct_answer": "Lego",
+    "correct_answer_ar": "Lego",
+    "category": "ألعاب",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/lego.png"
+  },
+  {
+    "id": "mastercard",
+    "brand": "Mastercard",
+    "brand_ar": "Mastercard",
+    "logo_url": "https://logo.clearbit.com/mastercard.com?size=512",
+    "brand_color": "#EB001B",
+    "options": [
+      "Lamborghini",
+      "YouTube",
+      "Sony",
+      "Mastercard"
+    ],
+    "options_ar": [
+      "لامبورغيني",
+      "YouTube",
+      "Sony",
+      "Mastercard"
+    ],
+    "correct_answer": "Mastercard",
+    "correct_answer_ar": "Mastercard",
+    "category": "مالية",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/mastercard.png"
+  },
+  {
+    "id": "visa",
+    "brand": "Visa",
+    "brand_ar": "Visa",
+    "logo_url": "https://logo.clearbit.com/visa.com?size=512",
+    "brand_color": "#1A1F71",
+    "options": [
+      "Apple",
+      "Lamborghini",
+      "Tesla",
+      "Visa"
+    ],
+    "options_ar": [
+      "Apple",
+      "لامبورغيني",
+      "Tesla",
+      "Visa"
+    ],
+    "correct_answer": "Visa",
+    "correct_answer_ar": "Visa",
+    "category": "مالية",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/visa.png"
+  },
+  {
+    "id": "paypal",
+    "brand": "PayPal",
+    "brand_ar": "PayPal",
+    "logo_url": "https://logo.clearbit.com/paypal.com?size=512",
+    "brand_color": "#003087",
+    "options": [
+      "Visa",
+      "Subway",
+      "IBM",
+      "PayPal"
+    ],
+    "options_ar": [
+      "Visa",
+      "صب واي",
+      "IBM",
+      "PayPal"
+    ],
+    "correct_answer": "PayPal",
+    "correct_answer_ar": "PayPal",
+    "category": "مالية",
+    "difficulty": 3,
+    "logo_asset": "assets/images/logos/paypal.png"
+  }
+]
