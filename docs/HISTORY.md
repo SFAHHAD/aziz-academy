@@ -1,6 +1,10 @@
-# أكاديمية عزيز — Aziz Academy
+﻿> **Archived 2026-05-18.** This was the original v0.x README describing 8 modules.
+> The current README is the source of truth and describes 130+ modules in v1.1.113.
+> Kept here for historical context.
 
-> An interactive educational app for kids aged 8–12: geography, flags, maps, logos, math, and sciences — with achievements and daily streaks.
+# Ø£ÙƒØ§Ø¯ÙŠÙ…ÙŠØ© Ø¹Ø²ÙŠØ² â€” Aziz Academy
+
+> An interactive educational app for kids aged 8â€“12: geography, flags, maps, logos, math, and sciences â€” with achievements and daily streaks.
 
 ---
 
@@ -18,7 +22,7 @@
 | **Logos** | `/logos` | Recognise brand logos |
 | **Sciences** | `/sciences` | Science & discovery questions |
 | **Math** | `/math` | Arithmetic challenges |
-| **Trophy room** | `/trophy` | Badges and cups (قاعة الكؤوس) |
+| **Trophy room** | `/trophy` | Badges and cups (Ù‚Ø§Ø¹Ø© Ø§Ù„ÙƒØ¤ÙˆØ³) |
 | **Privacy** | `/privacy` | Summary for parents (Arabic) |
 
 ## Tech stack
@@ -49,10 +53,10 @@ flutter test
 
 | Target | How |
 |--------|-----|
-| **GitHub** (source + CI) | Push to `main` / `master` — `flutter_ci.yml` runs analyze, test, and web builds. |
-| **GitHub Pages** | Repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**. On each push to `main`/`master`, `deploy_github_pages.yml` builds and publishes `build/web` (SPA uses `404.html` = `index.html` for client routes). |
-| **Vercel** | Install Node, run `npx vercel login` once. Preview: `.\scripts\deploy_web.ps1` · Production: `.\scripts\deploy_web.ps1 --prod` · Or combined: `.\scripts\deploy_all.ps1` / `.\scripts\deploy_all.ps1 -VercelProd` |
-| **Firebase Hosting** | [Firebase Console](https://console.firebase.google.com) → create project → Hosting. Copy `.firebaserc.example` to `.firebaserc` and set your project id. `npm i -g firebase-tools` → `firebase login` → `.\scripts\deploy_firebase.ps1` · Or: `.\scripts\deploy_all.ps1 -VercelProd -Firebase` after `.firebaserc` exists. |
+| **GitHub** (source + CI) | Push to `main` / `master` â€” `flutter_ci.yml` runs analyze, test, and web builds. |
+| **GitHub Pages** | Repo â†’ **Settings â†’ Pages â†’ Build and deployment â†’ Source: GitHub Actions**. On each push to `main`/`master`, `deploy_github_pages.yml` builds and publishes `build/web` (SPA uses `404.html` = `index.html` for client routes). |
+| **Vercel** | Install Node, run `npx vercel login` once. Preview: `.\scripts\deploy_web.ps1` Â· Production: `.\scripts\deploy_web.ps1 --prod` Â· Or combined: `.\scripts\deploy_all.ps1` / `.\scripts\deploy_all.ps1 -VercelProd` |
+| **Firebase Hosting** | [Firebase Console](https://console.firebase.google.com) â†’ create project â†’ Hosting. Copy `.firebaserc.example` to `.firebaserc` and set your project id. `npm i -g firebase-tools` â†’ `firebase login` â†’ `.\scripts\deploy_firebase.ps1` Â· Or: `.\scripts\deploy_all.ps1 -VercelProd -Firebase` after `.firebaserc` exists. |
 
 `vercel.json` in the repo root is copied into `build/web` for SPA rewrites on Vercel. Firebase uses `firebase.json` rewrites instead.
 
@@ -60,26 +64,26 @@ The repo remote is **GitHub**; push to enable CI and (once Pages is configured) 
 
 ### Google Play & Apple App Store
 
-**No Mac?** Follow the full checklist: **[docs/IOS_RELEASE_NO_MAC.md](docs/IOS_RELEASE_NO_MAC.md)** (GitHub Actions builds the iOS `.ipa` on Apple’s cloud Mac; you only add secrets and run the workflow). Secrets checklist: [docs/github_actions_secrets_checklist.txt](docs/github_actions_secrets_checklist.txt).
+**No Mac?** Follow the full checklist: **[docs/IOS_RELEASE_NO_MAC.md](docs/IOS_RELEASE_NO_MAC.md)** (GitHub Actions builds the iOS `.ipa` on Appleâ€™s cloud Mac; you only add secrets and run the workflow). Secrets checklist: [docs/github_actions_secrets_checklist.txt](docs/github_actions_secrets_checklist.txt).
 
-**Versioning:** Bump `version:` in `pubspec.yaml` (e.g. `1.0.1+5`) before each store upload — `+` number is Android `versionCode` / iOS build.
+**Versioning:** Bump `version:` in `pubspec.yaml` (e.g. `1.0.1+5`) before each store upload â€” `+` number is Android `versionCode` / iOS build.
 
 | Platform | Bundle ID | Build |
 |----------|-----------|--------|
-| **Android** | `com.azizacademy.aziz_academy` | `.\scripts\build_play_store.ps1` → uploads `build/app/outputs/bundle/release/app-release.aab` in [Play Console](https://play.google.com/console). |
-| **iOS** | `com.azizacademy.azizAcademy` | On a Mac with Xcode: `.\scripts\build_app_store.ps1` → `build/ios/ipa/`, or Archive from Xcode. |
+| **Android** | `com.azizacademy.aziz_academy` | `.\scripts\build_play_store.ps1` â†’ uploads `build/app/outputs/bundle/release/app-release.aab` in [Play Console](https://play.google.com/console). |
+| **iOS** | `com.azizacademy.azizAcademy` | On a Mac with Xcode: `.\scripts\build_app_store.ps1` â†’ `build/ios/ipa/`, or Archive from Xcode. |
 
 **Android signing (required for Play uploads):**
 
 1. Copy `android/key.properties.example` to `android/key.properties` (gitignored).
 2. Create an upload keystore under `android/app/` (see comments in the example file) and point `storeFile` at it.
-3. Re-run `build_play_store.ps1` — release builds use that keystore when `key.properties` exists; otherwise they still sign with the debug key (fine for local testing only).
+3. Re-run `build_play_store.ps1` â€” release builds use that keystore when `key.properties` exists; otherwise they still sign with the debug key (fine for local testing only).
 
-**iOS signing:** Open `ios/Runner.xcworkspace` in Xcode → **Runner** target → **Signing & Capabilities** → select your Team. `ITSAppUsesNonExemptEncryption` is set to **no** in `Info.plist` (standard for apps that only use HTTPS APIs like font loading).
+**iOS signing:** Open `ios/Runner.xcworkspace` in Xcode â†’ **Runner** target â†’ **Signing & Capabilities** â†’ select your Team. `ITSAppUsesNonExemptEncryption` is set to **no** in `Info.plist` (standard for apps that only use HTTPS APIs like font loading).
 
-**App Store Connect API (upload without Xcode Organizer):** In [App Store Connect](https://appstoreconnect.apple.com) → **Users and Access** → **Integrations** → **App Store Connect API**, create a key with **Admin** or **App Manager** access. Your downloaded key is `AuthKey_<KeyID>.p8` (for example Key ID `SWKQYRLMSP`). **Do not commit `.p8` files** — copy once to `~/.appstoreconnect/private_keys/` on your Mac. Copy `scripts/app_store_connect.env.example` to `scripts/app_store_connect.env`, set **Issuer ID** and **Key ID**, then after `flutter build ipa` run `scripts/upload_ipa_appstore_connect.ps1` (macOS only).
+**App Store Connect API (upload without Xcode Organizer):** In [App Store Connect](https://appstoreconnect.apple.com) â†’ **Users and Access** â†’ **Integrations** â†’ **App Store Connect API**, create a key with **Admin** or **App Manager** access. Your downloaded key is `AuthKey_<KeyID>.p8` (for example Key ID `SWKQYRLMSP`). **Do not commit `.p8` files** â€” copy once to `~/.appstoreconnect/private_keys/` on your Mac. Copy `scripts/app_store_connect.env.example` to `scripts/app_store_connect.env`, set **Issuer ID** and **Key ID**, then after `flutter build ipa` run `scripts/upload_ipa_appstore_connect.ps1` (macOS only).
 
-**GitHub Actions — release both stores:** Workflow **Release — Play & TestFlight** (`.github/workflows/release_stores.yml`) builds signed **`.aab`** and **`.ipa`** and uploads to Google Play and App Store Connect. In the repo → **Settings → Secrets and variables → Actions**, add:
+**GitHub Actions â€” release both stores:** Workflow **Release â€” Play & TestFlight** (`.github/workflows/release_stores.yml`) builds signed **`.aab`** and **`.ipa`** and uploads to Google Play and App Store Connect. In the repo â†’ **Settings â†’ Secrets and variables â†’ Actions**, add:
 
 | Secret | Used for |
 |--------|----------|
@@ -99,11 +103,11 @@ The repo remote is **GitHub**; push to enable CI and (once Pages is configured) 
 
 Encode binary files for secrets: PowerShell `.\scripts\encode_file_base64.ps1 -Path your.jks -CopyToClipboard` (or print without `-CopyToClipboard`). macOS/Linux: `base64 -i file.jks`.
 
-Then **Actions → Release — Play & TestFlight → Run workflow** (choose Play track; toggle Android / iOS). The app record must already exist in [Play Console](https://play.google.com/console) and [App Store Connect](https://appstoreconnect.apple.com) with matching bundle IDs.
+Then **Actions â†’ Release â€” Play & TestFlight â†’ Run workflow** (choose Play track; toggle Android / iOS). The app record must already exist in [Play Console](https://play.google.com/console) and [App Store Connect](https://appstoreconnect.apple.com) with matching bundle IDs.
 
 **Privacy:** `ios/Runner/PrivacyInfo.xcprivacy` declares UserDefaults access (used by `shared_preferences`). Adjust if Apple requests more detail.
 
-**Store listings:** You still need screenshots, descriptions, age rating, Data safety (Play), Privacy Nutrition Labels (App Store), and — for kids’ apps — compliance with each store’s family / children policies.
+**Store listings:** You still need screenshots, descriptions, age rating, Data safety (Play), Privacy Nutrition Labels (App Store), and â€” for kidsâ€™ apps â€” compliance with each storeâ€™s family / children policies.
 
 If `flutter build appbundle` fails with *failed to strip debug symbols*, update the Android NDK in Android Studio SDK Manager or see [Flutter issue #181031](https://github.com/flutter/flutter/issues/181031) for NDK/AGP workarounds.
 
@@ -135,3 +139,4 @@ Quiz content and progress are stored **on-device** (SharedPreferences). No remot
 ---
 
 For CI, this project includes a GitHub Actions workflow (`.github/workflows/flutter_ci.yml`) that runs `flutter analyze` and `flutter test` on push/PR to `main` or `master`.
+
