@@ -47,12 +47,12 @@ class RecapEntry {
   }
 
   Map<String, dynamic> toJson() => {
-        'm': module.name,
-        'id': questionId,
-        if (snapshotJson != null) 'snap': snapshotJson,
-        'mc': missCount,
-        if (lastMissed != null) 'lm': lastMissed,
-      };
+    'm': module.name,
+    'id': questionId,
+    if (snapshotJson != null) 'snap': snapshotJson,
+    'mc': missCount,
+    if (lastMissed != null) 'lm': lastMissed,
+  };
 
   static RecapEntry? tryParse(Map<String, dynamic> j) {
     final name = j['m'] as String?;
@@ -83,18 +83,18 @@ class RecapEntry {
   }
 
   RecapEntry copyWith({int? missCount, String? lastMissed}) => RecapEntry(
-        module: module,
-        questionId: questionId,
-        snapshotJson: snapshotJson,
-        missCount: missCount ?? this.missCount,
-        lastMissed: lastMissed ?? this.lastMissed,
-      );
+    module: module,
+    questionId: questionId,
+    snapshotJson: snapshotJson,
+    missCount: missCount ?? this.missCount,
+    lastMissed: lastMissed ?? this.lastMissed,
+  );
 }
 
 final recapQueueProvider =
     AsyncNotifierProvider<RecapQueueNotifier, List<RecapEntry>>(
-  RecapQueueNotifier.new,
-);
+      RecapQueueNotifier.new,
+    );
 
 class RecapQueueNotifier extends AsyncNotifier<List<RecapEntry>> {
   static const _k = 'recap_queue_v2';
@@ -106,8 +106,7 @@ class RecapQueueNotifier extends AsyncNotifier<List<RecapEntry>> {
     final p = await SharedPreferences.getInstance();
     var list = _decode(p.getString(_k));
     if (list.isEmpty) {
-      final legacyRaw =
-          p.getString(_kLegacyV1) ?? p.getString(_kLegacy);
+      final legacyRaw = p.getString(_kLegacyV1) ?? p.getString(_kLegacy);
       if (legacyRaw != null && legacyRaw.isNotEmpty) {
         list = _decode(legacyRaw);
         if (list.isNotEmpty) {
@@ -151,10 +150,7 @@ class RecapQueueNotifier extends AsyncNotifier<List<RecapEntry>> {
 
   Future<void> _save(List<RecapEntry> entries) async {
     final p = await SharedPreferences.getInstance();
-    await p.setString(
-      _k,
-      jsonEncode(entries.map((e) => e.toJson()).toList()),
-    );
+    await p.setString(_k, jsonEncode(entries.map((e) => e.toJson()).toList()));
     state = AsyncData(entries);
   }
 

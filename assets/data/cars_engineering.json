@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "ce_001",
+    "category": "Pioneers",
+    "question": "Who built the first practical gasoline-powered automobile in 1886?",
+    "question_ar": "من بنى أول سيارة عملية تعمل بالبنزين عام ١٨٨٦م؟",
+    "options": ["Karl Benz", "Henry Ford", "Gottlieb Daimler", "Rudolf Diesel"],
+    "options_ar": ["كارل بنز", "هنري فورد", "غوتليب دايملر", "رودولف ديزل"],
+    "correct_answer": "Karl Benz",
+    "correct_answer_ar": "كارل بنز",
+    "fun_fact": "Karl Benz patented the Patent-Motorwagen in 1886 in Germany. It had three wheels and a one-cylinder engine.",
+    "fun_fact_ar": "سجَّل كارل بنز براءة اختراع سيارة «بنز موتورفاغن» عام ١٨٨٦م في ألمانيا. كان لها ثلاث عجلات ومحرك بأسطوانة واحدة.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_002",
+    "category": "Pioneers",
+    "question": "In 1888, who made the first long-distance car trip, driving 206 km from Mannheim to Pforzheim?",
+    "question_ar": "في عام ١٨٨٨م، من قام بأول رحلة طويلة بالسيارة بمسافة ٢٠٦ كم من مانهايم إلى فورتسهايم؟",
+    "options": ["Bertha Benz", "Karl Benz", "Henry Ford", "Wilhelm Maybach"],
+    "options_ar": ["بيرتا بنز", "كارل بنز", "هنري فورد", "فيلهلم مايباخ"],
+    "correct_answer": "Bertha Benz",
+    "correct_answer_ar": "بيرتا بنز",
+    "fun_fact": "Bertha Benz, Karl's wife, took her sons on the trip without telling her husband — and proved cars could travel long distances. She made history.",
+    "fun_fact_ar": "أخذت بيرتا بنز، زوجة كارل، أبناءها في الرحلة دون إخبار زوجها، وأثبتت أن السيارات قادرة على قطع المسافات الطويلة. ودخلت التاريخ بذلك.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_003",
+    "category": "Pioneers",
+    "question": "Who built a steam-powered carriage way back in 1769?",
+    "question_ar": "من بنى عربة تعمل بالبخار في وقت مبكر عام ١٧٦٩م؟",
+    "options": ["Nicolas-Joseph Cugnot", "Karl Benz", "James Watt", "Henry Ford"],
+    "options_ar": ["نيكولا جوزيف كونيو", "كارل بنز", "جيمس واط", "هنري فورد"],
+    "correct_answer": "Nicolas-Joseph Cugnot",
+    "correct_answer_ar": "نيكولا جوزيف كونيو",
+    "fun_fact": "Cugnot's steam carriage in France is often called the world's first self-propelled vehicle, more than 100 years before gasoline cars.",
+    "fun_fact_ar": "تُعتبر عربة كونيو البخارية في فرنسا أول مركبة ذاتية الدفع في العالم، قبل أكثر من ١٠٠ عام من سيارات البنزين.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_004",
+    "category": "Pioneers",
+    "question": "Which two German engineers developed an early high-speed gasoline engine and founded a famous car company?",
+    "question_ar": "أي مهندسَين ألمانيين طوَّرا محركًا مبكرًا للبنزين عالي السرعة وأسَّسا شركة سيارات شهيرة؟",
+    "options": [
+      "Daimler and Maybach",
+      "Benz and Diesel",
+      "Ford and Edison",
+      "Porsche and Bohlin"
+    ],
+    "options_ar": [
+      "دايملر ومايباخ",
+      "بنز وديزل",
+      "فورد وإديسون",
+      "بورشه وبوهلين"
+    ],
+    "correct_answer": "Daimler and Maybach",
+    "correct_answer_ar": "دايملر ومايباخ",
+    "fun_fact": "Gottlieb Daimler and Wilhelm Maybach worked together in Stuttgart and helped create the company that became Mercedes-Benz.",
+    "fun_fact_ar": "عمل غوتليب دايملر وفيلهلم مايباخ معًا في شتوتغارت، وساعدا في تأسيس الشركة التي أصبحت مرسيدس-بنز.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_005",
+    "category": "Pioneers",
+    "question": "What country were Karl Benz, Daimler, and Maybach all from?",
+    "question_ar": "من أي بلد كان كارل بنز ودايملر ومايباخ؟",
+    "options": ["Germany", "France", "Italy", "United States"],
+    "options_ar": ["ألمانيا", "فرنسا", "إيطاليا", "الولايات المتحدة"],
+    "correct_answer": "Germany",
+    "correct_answer_ar": "ألمانيا",
+    "fun_fact": "Germany is often called the birthplace of the modern automobile thanks to these inventors in the late 1800s.",
+    "fun_fact_ar": "تُلقَّب ألمانيا بمهد السيارة الحديثة بفضل هؤلاء المخترعين في أواخر القرن التاسع عشر.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_006",
+    "category": "Mass Production",
+    "question": "Which car, built from 1908 to 1927, made cars affordable for ordinary families?",
+    "question_ar": "أي سيارة، صُنعت بين ١٩٠٨م و١٩٢٧م، جعلت السيارات في متناول الأسر العادية؟",
+    "options": [
+      "Ford Model T",
+      "Volkswagen Beetle",
+      "Toyota Corolla",
+      "Mercedes-Benz S-Class"
+    ],
+    "options_ar": [
+      "فورد موديل تي",
+      "فولكس فاجن بيتل",
+      "تويوتا كورولا",
+      "مرسيدس-بنز إس كلاس"
+    ],
+    "correct_answer": "Ford Model T",
+    "correct_answer_ar": "فورد موديل تي",
+    "fun_fact": "Henry Ford's Model T sold about 15 million cars and was built on the world's first moving assembly line.",
+    "fun_fact_ar": "بِيع نحو ١٥ مليون سيارة من فورد موديل تي، وصُنعت على أول خط تجميع متحرك في العالم.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_007",
+    "category": "Mass Production",
+    "question": "What big factory idea did Henry Ford make famous to build cars faster?",
+    "question_ar": "ما الفكرة الكبيرة في المصنع التي اشتهر بها هنري فورد لصناعة السيارات بسرعة أكبر؟",
+    "options": [
+      "The moving assembly line",
+      "Hand-built workshops",
+      "Robot welders",
+      "3D printing"
+    ],
+    "options_ar": [
+      "خط التجميع المتحرك",
+      "ورش الصناعة اليدوية",
+      "روبوتات اللحام",
+      "الطباعة ثلاثية الأبعاد"
+    ],
+    "correct_answer": "The moving assembly line",
+    "correct_answer_ar": "خط التجميع المتحرك",
+    "fun_fact": "On the assembly line, the car moves while workers add parts, cutting build time from many hours to about 90 minutes.",
+    "fun_fact_ar": "على خط التجميع، تتحرك السيارة بينما يضيف العمال الأجزاء، فينخفض زمن الصناعة من ساعات كثيرة إلى نحو ٩٠ دقيقة.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_008",
+    "category": "Mass Production",
+    "question": "Which famous small German car was originally designed in 1938?",
+    "question_ar": "أي سيارة ألمانية صغيرة مشهورة صُمِّمت أصلًا عام ١٩٣٨م؟",
+    "options": [
+      "Volkswagen Beetle",
+      "BMW Mini",
+      "Mercedes A-Class",
+      "Porsche 911"
+    ],
+    "options_ar": [
+      "فولكس فاجن بيتل",
+      "بي إم دبليو ميني",
+      "مرسيدس إيه كلاس",
+      "بورشه ٩١١"
+    ],
+    "correct_answer": "Volkswagen Beetle",
+    "correct_answer_ar": "فولكس فاجن بيتل",
+    "fun_fact": "The Beetle's name 'Volkswagen' means 'people's car' in German. It became one of the best-selling cars ever.",
+    "fun_fact_ar": "اسم «فولكس فاجن» يعني «سيارة الشعب» بالألمانية. وأصبحت البيتل من أكثر السيارات مبيعًا في التاريخ.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_009",
+    "category": "Mass Production",
+    "question": "Which Japanese carmaker is famous for the lean 'Toyota Way' production system using kanban?",
+    "question_ar": "أي شركة سيارات يابانية تشتهر بنظام الإنتاج الرشيق «طريقة تويوتا» باستخدام «كانبان»؟",
+    "options": ["Toyota", "Honda", "Nissan", "Mazda"],
+    "options_ar": ["تويوتا", "هوندا", "نيسان", "مازدا"],
+    "correct_answer": "Toyota",
+    "correct_answer_ar": "تويوتا",
+    "fun_fact": "The Toyota Production System reduces waste and is studied by factories all over the world, even outside the car industry.",
+    "fun_fact_ar": "يقلل نظام إنتاج تويوتا الهدر، وتدرسه المصانع في جميع أنحاء العالم، حتى خارج صناعة السيارات.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_010",
+    "category": "Mass Production",
+    "question": "About how many cars are built worldwide every year today?",
+    "question_ar": "كم عدد السيارات التي تُصنع في العالم سنويًا في وقتنا الحاضر تقريبًا؟",
+    "options": [
+      "About 80 million",
+      "About 5 million",
+      "About 800 million",
+      "About 1 billion"
+    ],
+    "options_ar": [
+      "نحو ٨٠ مليونًا",
+      "نحو ٥ ملايين",
+      "نحو ٨٠٠ مليون",
+      "نحو مليار"
+    ],
+    "correct_answer": "About 80 million",
+    "correct_answer_ar": "نحو ٨٠ مليونًا",
+    "fun_fact": "Around 80 million new cars roll off assembly lines every year — that's about 9,000 cars every hour.",
+    "fun_fact_ar": "تخرج نحو ٨٠ مليون سيارة جديدة من خطوط التجميع سنويًا، أي حوالي ٩٠٠٠ سيارة كل ساعة.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_011",
+    "category": "Brands",
+    "question": "Which carmaker is the largest in the world by sales and was founded in Japan in 1937?",
+    "question_ar": "أي شركة سيارات هي الأكبر في العالم من حيث المبيعات، وتأسَّست في اليابان عام ١٩٣٧م؟",
+    "options": ["Toyota", "Volkswagen", "Ford", "Hyundai"],
+    "options_ar": ["تويوتا", "فولكس فاجن", "فورد", "هيونداي"],
+    "correct_answer": "Toyota",
+    "correct_answer_ar": "تويوتا",
+    "fun_fact": "Toyota was founded by Kiichiro Toyoda. Today it sells about 10 million vehicles a year around the world.",
+    "fun_fact_ar": "أسَّس تويوتا كييتشيرو تويودا. واليوم تبيع نحو ١٠ ملايين مركبة سنويًا حول العالم.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_012",
+    "category": "Brands",
+    "question": "Which big German group owns Audi, Porsche, and Lamborghini?",
+    "question_ar": "أي مجموعة ألمانية كبيرة تمتلك أودي وبورشه ولامبورغيني؟",
+    "options": [
+      "Volkswagen Group",
+      "BMW Group",
+      "Mercedes-Benz Group",
+      "Stellantis"
+    ],
+    "options_ar": [
+      "مجموعة فولكس فاجن",
+      "مجموعة بي إم دبليو",
+      "مجموعة مرسيدس-بنز",
+      "ستيلانتيس"
+    ],
+    "correct_answer": "Volkswagen Group",
+    "correct_answer_ar": "مجموعة فولكس فاجن",
+    "fun_fact": "Volkswagen Group is based in Wolfsburg, Germany, and owns about 12 famous brands including Bentley and Bugatti.",
+    "fun_fact_ar": "يقع مقر مجموعة فولكس فاجن في فولفسبورغ بألمانيا، وتمتلك نحو ١٢ علامة شهيرة، منها بنتلي وبوغاتي.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_013",
+    "category": "Brands",
+    "question": "In what year was the Ford Motor Company founded in the United States?",
+    "question_ar": "في أي عام تأسَّست شركة فورد للسيارات في الولايات المتحدة؟",
+    "options": ["1903", "1886", "1925", "1950"],
+    "options_ar": ["١٩٠٣", "١٨٨٦", "١٩٢٥", "١٩٥٠"],
+    "correct_answer": "1903",
+    "correct_answer_ar": "١٩٠٣",
+    "fun_fact": "Henry Ford founded the company in Detroit, Michigan in 1903 with $28,000 from twelve investors.",
+    "fun_fact_ar": "أسَّس هنري فورد الشركة في ديترويت بولاية ميشيغان عام ١٩٠٣م بمبلغ ٢٨٠٠٠ دولار من اثني عشر مستثمرًا.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_014",
+    "category": "Brands",
+    "question": "Which American car giant, founded in 1908, owns Chevrolet, GMC, and Cadillac?",
+    "question_ar": "أي شركة سيارات أمريكية عملاقة، تأسَّست عام ١٩٠٨م، تمتلك شيفروليه وجي إم سي وكاديلاك؟",
+    "options": [
+      "General Motors",
+      "Ford",
+      "Chrysler",
+      "Tesla"
+    ],
+    "options_ar": [
+      "جنرال موتورز",
+      "فورد",
+      "كرايسلر",
+      "تسلا"
+    ],
+    "correct_answer": "General Motors",
+    "correct_answer_ar": "جنرال موتورز",
+    "fun_fact": "General Motors, often called GM, was for many decades the largest carmaker in the world before Toyota.",
+    "fun_fact_ar": "كانت جنرال موتورز، التي يُختصر اسمها «جي إم»، أكبر صانع سيارات في العالم لعقود طويلة قبل تويوتا.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_015",
+    "category": "Brands",
+    "question": "What does 'BMW' stand for?",
+    "question_ar": "ماذا تعني الأحرف «BMW»؟",
+    "options": [
+      "Bavarian Motor Works",
+      "Best Motor Wheels",
+      "Berlin Motor Works",
+      "Big Modern Wagons"
+    ],
+    "options_ar": [
+      "أعمال محركات بافاريا",
+      "أفضل عجلات المحركات",
+      "أعمال محركات برلين",
+      "العربات الحديثة الكبيرة"
+    ],
+    "correct_answer": "Bavarian Motor Works",
+    "correct_answer_ar": "أعمال محركات بافاريا",
+    "fun_fact": "BMW started in 1916 making airplane engines. Its blue-and-white logo recalls a spinning aircraft propeller.",
+    "fun_fact_ar": "بدأت بي إم دبليو عام ١٩١٦م بصناعة محركات الطائرات، ويذكِّر شعارها الأزرق والأبيض بمروحة طائرة دوّارة.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_016",
+    "category": "Brands",
+    "question": "Which Japanese carmaker, founded in 1948, is also famous for motorcycles?",
+    "question_ar": "أي شركة سيارات يابانية، تأسَّست عام ١٩٤٨م، تشتهر أيضًا بصناعة الدراجات النارية؟",
+    "options": ["Honda", "Toyota", "Nissan", "Subaru"],
+    "options_ar": ["هوندا", "تويوتا", "نيسان", "سوبارو"],
+    "correct_answer": "Honda",
+    "correct_answer_ar": "هوندا",
+    "fun_fact": "Honda is the world's largest motorcycle maker and also builds cars, jets, and even humanoid robots like Asimo.",
+    "fun_fact_ar": "هوندا هي أكبر صانع دراجات نارية في العالم، كما تصنع السيارات والطائرات النفاثة، حتى الروبوتات الشبيهة بالإنسان مثل «أسيمو».",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_017",
+    "category": "Brands",
+    "question": "Hyundai and Kia are giant carmakers from which country?",
+    "question_ar": "هيونداي وكيا شركتان عملاقتان للسيارات من أي دولة؟",
+    "options": [
+      "South Korea",
+      "Japan",
+      "China",
+      "Vietnam"
+    ],
+    "options_ar": [
+      "كوريا الجنوبية",
+      "اليابان",
+      "الصين",
+      "فيتنام"
+    ],
+    "correct_answer": "South Korea",
+    "correct_answer_ar": "كوريا الجنوبية",
+    "fun_fact": "Hyundai means 'modern' in Korean. Together, Hyundai and Kia are part of one of the largest car groups in the world.",
+    "fun_fact_ar": "تعني كلمة «هيونداي» في الكورية «الحديث». وتُشكِّل هيونداي وكيا معًا واحدة من أكبر مجموعات السيارات في العالم.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_018",
+    "category": "Brands",
+    "question": "Which American electric car company was founded in 2003 and is led by Elon Musk?",
+    "question_ar": "أي شركة سيارات كهربائية أمريكية تأسَّست عام ٢٠٠٣م ويقودها إيلون ماسك؟",
+    "options": ["Tesla", "Ford", "Rivian", "Lucid"],
+    "options_ar": ["تسلا", "فورد", "ريفيان", "لوسيد"],
+    "correct_answer": "Tesla",
+    "correct_answer_ar": "تسلا",
+    "fun_fact": "Tesla is named after the inventor Nikola Tesla. It made electric cars cool again starting in the 2010s.",
+    "fun_fact_ar": "سُمِّيت تسلا تيمنًا بالمخترع نيكولا تسلا، وأعادت السيارات الكهربائية إلى الواجهة منذ عام ٢٠١٠م.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_019",
+    "category": "Brands",
+    "question": "Which red-colored Italian sports car brand was founded by Enzo Ferrari in 1947?",
+    "question_ar": "أي علامة سيارات رياضية إيطالية باللون الأحمر أسَّسها إنزو فيراري عام ١٩٤٧م؟",
+    "options": ["Ferrari", "Lamborghini", "Maserati", "Alfa Romeo"],
+    "options_ar": ["فيراري", "لامبورغيني", "مازيراتي", "ألفا روميو"],
+    "correct_answer": "Ferrari",
+    "correct_answer_ar": "فيراري",
+    "fun_fact": "Ferrari is based in Maranello, Italy. Its prancing horse logo was given to Enzo by an Italian World War I pilot's family.",
+    "fun_fact_ar": "يقع مقر فيراري في مارانيلو بإيطاليا. وقد أهدت عائلة طيار إيطالي من الحرب العالمية الأولى شعار الحصان القافز لإنزو.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_020",
+    "category": "Brands",
+    "question": "Lamborghini, founded in Italy in 1963, started as what kind of company before making sports cars?",
+    "question_ar": "لامبورغيني، التي تأسَّست في إيطاليا عام ١٩٦٣م، بدأت بصناعة أي نوع من المنتجات قبل السيارات الرياضية؟",
+    "options": [
+      "Tractors",
+      "Bicycles",
+      "Boats",
+      "Watches"
+    ],
+    "options_ar": [
+      "الجرارات",
+      "الدراجات",
+      "القوارب",
+      "الساعات"
+    ],
+    "correct_answer": "Tractors",
+    "correct_answer_ar": "الجرارات",
+    "fun_fact": "Ferruccio Lamborghini built tractors first. Story says he started making sports cars after a fight with Enzo Ferrari.",
+    "fun_fact_ar": "صنع فيروتشيو لامبورغيني الجرارات أولًا. وتقول القصة إنه بدأ بصناعة السيارات الرياضية بعد خلاف مع إنزو فيراري.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_021",
+    "category": "Brands",
+    "question": "Porsche, founded in 1931, is from which country?",
+    "question_ar": "بورشه التي تأسَّست عام ١٩٣١م، من أي دولة؟",
+    "options": ["Germany", "Italy", "Austria", "Switzerland"],
+    "options_ar": ["ألمانيا", "إيطاليا", "النمسا", "سويسرا"],
+    "correct_answer": "Germany",
+    "correct_answer_ar": "ألمانيا",
+    "fun_fact": "Porsche is based in Stuttgart, Germany. The famous 911 sports car has been built since 1963.",
+    "fun_fact_ar": "يقع مقر بورشه في شتوتغارت بألمانيا، ويُصنع طراز ٩١١ الرياضي الشهير منذ عام ١٩٦٣م.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_022",
+    "category": "Engine Basics",
+    "question": "How many strokes does a regular car internal combustion engine cycle have?",
+    "question_ar": "كم عدد الأشواط في دورة محرك السيارة العادي ذي الاحتراق الداخلي؟",
+    "options": ["4", "2", "6", "8"],
+    "options_ar": ["٤", "٢", "٦", "٨"],
+    "correct_answer": "4",
+    "correct_answer_ar": "٤",
+    "fun_fact": "The four strokes are intake, compression, power, and exhaust — sometimes remembered as 'suck, squeeze, bang, blow'.",
+    "fun_fact_ar": "الأشواط الأربعة هي: السحب، والضغط، والقدرة (الاحتراق)، والعادم. ويلخصها بعضهم بـ«شفط، ضغط، انفجار، طرد».",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_023",
+    "category": "Engine Basics",
+    "question": "Which stroke of a 4-stroke engine actually pushes the piston down with burning fuel?",
+    "question_ar": "أي شوط من أشواط المحرك ذي الأشواط الأربعة يدفع المكبس فعلًا إلى الأسفل بفعل احتراق الوقود؟",
+    "options": [
+      "Power stroke",
+      "Intake stroke",
+      "Compression stroke",
+      "Exhaust stroke"
+    ],
+    "options_ar": [
+      "شوط القدرة",
+      "شوط السحب",
+      "شوط الضغط",
+      "شوط العادم"
+    ],
+    "correct_answer": "Power stroke",
+    "correct_answer_ar": "شوط القدرة",
+    "fun_fact": "On the power stroke, the spark plug ignites fuel and air, pushing the piston down to turn the crankshaft.",
+    "fun_fact_ar": "في شوط القدرة، تشعل شمعة الإشعال الوقود والهواء، فتدفع المكبس للأسفل لتُدير عمود المرفق.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_024",
+    "category": "Engine Basics",
+    "question": "Who invented the diesel engine in 1892?",
+    "question_ar": "من اخترع محرك الديزل عام ١٨٩٢م؟",
+    "options": [
+      "Rudolf Diesel",
+      "Karl Benz",
+      "James Watt",
+      "Henry Ford"
+    ],
+    "options_ar": [
+      "رودولف ديزل",
+      "كارل بنز",
+      "جيمس واط",
+      "هنري فورد"
+    ],
+    "correct_answer": "Rudolf Diesel",
+    "correct_answer_ar": "رودولف ديزل",
+    "fun_fact": "Rudolf Diesel's engine uses heat from compression to ignite fuel — no spark plug needed. Diesel engines are very efficient.",
+    "fun_fact_ar": "يستخدم محرك رودولف ديزل حرارة الضغط لإشعال الوقود دون الحاجة إلى شمعة إشعال، ومحركات الديزل عالية الكفاءة.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_025",
+    "category": "Engine Basics",
+    "question": "In a car engine, the piston moves up and down inside what?",
+    "question_ar": "في محرك السيارة، يتحرك المكبس صعودًا وهبوطًا داخل ماذا؟",
+    "options": [
+      "A cylinder",
+      "A crankshaft",
+      "A radiator",
+      "A spark plug"
+    ],
+    "options_ar": [
+      "أسطوانة",
+      "عمود مرفق",
+      "مشعّ تبريد",
+      "شمعة إشعال"
+    ],
+    "correct_answer": "A cylinder",
+    "correct_answer_ar": "أسطوانة",
+    "fun_fact": "Most family cars have 4 cylinders, sports cars often have 6 or 8, and big trucks may have 10 or 12.",
+    "fun_fact_ar": "تحتوي معظم سيارات العائلة على ٤ أسطوانات، أما السيارات الرياضية فعلى ٦ أو ٨، وقد تحتوي الشاحنات الكبيرة على ١٠ أو ١٢.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_026",
+    "category": "Engine Basics",
+    "question": "Which engine part turns the up-and-down piston motion into spinning motion?",
+    "question_ar": "أي جزء من المحرك يحوِّل حركة المكبس الصاعدة والهابطة إلى حركة دوران؟",
+    "options": [
+      "The crankshaft",
+      "The camshaft",
+      "The radiator",
+      "The muffler"
+    ],
+    "options_ar": [
+      "عمود المرفق",
+      "عمود الكامات",
+      "المشعّ",
+      "كاتم الصوت"
+    ],
+    "correct_answer": "The crankshaft",
+    "correct_answer_ar": "عمود المرفق",
+    "fun_fact": "The crankshaft turns the spinning that eventually reaches the wheels through the transmission.",
+    "fun_fact_ar": "يولِّد عمود المرفق الدوران الذي يصل في النهاية إلى العجلات عبر ناقل الحركة.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_027",
+    "category": "Engine Basics",
+    "question": "How many watts of power equal one horsepower (hp), as defined by James Watt?",
+    "question_ar": "كم وحدة واط من القدرة تساوي حصانًا ميكانيكيًا واحدًا، كما عرَّفه جيمس واط؟",
+    "options": [
+      "About 746 watts",
+      "About 100 watts",
+      "About 1,000 watts",
+      "About 250 watts"
+    ],
+    "options_ar": [
+      "نحو ٧٤٦ واط",
+      "نحو ١٠٠ واط",
+      "نحو ١٠٠٠ واط",
+      "نحو ٢٥٠ واط"
+    ],
+    "correct_answer": "About 746 watts",
+    "correct_answer_ar": "نحو ٧٤٦ واط",
+    "fun_fact": "James Watt picked the number by comparing his steam engines to real horses pulling loads.",
+    "fun_fact_ar": "اختار جيمس واط هذا الرقم بمقارنة محركاته البخارية بخيول حقيقية تجر الأحمال.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_028",
+    "category": "Engine Basics",
+    "question": "Which word describes the twisting force an engine produces, useful for pulling and towing?",
+    "question_ar": "أي كلمة تصف قوة الالتواء التي ينتجها المحرك، والمفيدة للسحب والقطر؟",
+    "options": [
+      "Torque",
+      "Voltage",
+      "Pressure",
+      "Mileage"
+    ],
+    "options_ar": [
+      "العزم",
+      "الجهد الكهربائي",
+      "الضغط",
+      "المسافة"
+    ],
+    "correct_answer": "Torque",
+    "correct_answer_ar": "العزم",
+    "fun_fact": "Trucks and EVs often have huge torque, which is why they can pull heavy trailers and accelerate quickly.",
+    "fun_fact_ar": "تتمتع الشاحنات والسيارات الكهربائية بعزم كبير، ولهذا تستطيع جر المقطورات الثقيلة والتسارع بسرعة.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_029",
+    "category": "Engine Basics",
+    "question": "What part of the car has gears and decides how much engine power reaches the wheels?",
+    "question_ar": "أي جزء من السيارة يحتوي على التروس ويقرر مقدار قدرة المحرك التي تصل إلى العجلات؟",
+    "options": [
+      "The transmission",
+      "The radiator",
+      "The exhaust",
+      "The battery"
+    ],
+    "options_ar": [
+      "ناقل الحركة",
+      "المشعّ",
+      "العادم",
+      "البطارية"
+    ],
+    "correct_answer": "The transmission",
+    "correct_answer_ar": "ناقل الحركة",
+    "fun_fact": "Manual transmissions need a clutch pedal; automatic transmissions change gears for you. Many modern cars use automatics.",
+    "fun_fact_ar": "تحتاج ناقلات الحركة اليدوية إلى دوّاسة قابض، أما الأوتوماتيكية فتغيِّر التروس بدلًا منك. وتستخدم سيارات حديثة كثيرة النوع الأوتوماتيكي.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_030",
+    "category": "Electric Vehicles",
+    "question": "When did inventors first try battery-powered electric carriages?",
+    "question_ar": "متى حاول المخترعون لأول مرة صناعة عربات كهربائية تعمل بالبطارية؟",
+    "options": [
+      "In the 1830s",
+      "In the 1950s",
+      "In the 1990s",
+      "In the 2010s"
+    ],
+    "options_ar": [
+      "في ثلاثينيات القرن التاسع عشر",
+      "في خمسينيات القرن العشرين",
+      "في تسعينيات القرن العشرين",
+      "في عشرينيات القرن الحادي والعشرين"
+    ],
+    "correct_answer": "In the 1830s",
+    "correct_answer_ar": "في ثلاثينيات القرن التاسع عشر",
+    "fun_fact": "Early electric carriages appeared even before gasoline cars, but weak batteries kept them slow until modern times.",
+    "fun_fact_ar": "ظهرت العربات الكهربائية المبكرة قبل سيارات البنزين، لكن البطاريات الضعيفة جعلتها بطيئة حتى العصر الحديث.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_031",
+    "category": "Electric Vehicles",
+    "question": "Which 2012 Tesla model helped revive interest in modern electric cars?",
+    "question_ar": "أي طراز من تسلا صدر عام ٢٠١٢م وأعاد الاهتمام بالسيارات الكهربائية الحديثة؟",
+    "options": [
+      "Tesla Model S",
+      "Tesla Model T",
+      "Tesla Roadster 2",
+      "Tesla Cybertruck"
+    ],
+    "options_ar": [
+      "تسلا موديل إس",
+      "تسلا موديل تي",
+      "تسلا رودستر ٢",
+      "تسلا سايبرتراك"
+    ],
+    "correct_answer": "Tesla Model S",
+    "correct_answer_ar": "تسلا موديل إس",
+    "fun_fact": "The Model S could drive over 400 km on one charge and showed that electric cars could be fast and stylish.",
+    "fun_fact_ar": "كان موديل إس يقطع أكثر من ٤٠٠ كم بشحنة واحدة، وأثبت أن السيارات الكهربائية يمكن أن تكون سريعة وأنيقة.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_032",
+    "category": "Electric Vehicles",
+    "question": "Most modern electric cars store energy in what type of battery?",
+    "question_ar": "تخزِّن معظم السيارات الكهربائية الحديثة الطاقة في أي نوع من البطاريات؟",
+    "options": [
+      "Lithium-ion",
+      "Lead-acid",
+      "Alkaline",
+      "Zinc-carbon"
+    ],
+    "options_ar": [
+      "أيون الليثيوم",
+      "حمض الرصاص",
+      "القلوية",
+      "الزنك-كربون"
+    ],
+    "correct_answer": "Lithium-ion",
+    "correct_answer_ar": "أيون الليثيوم",
+    "fun_fact": "John Goodenough helped invent the lithium-ion battery in 1979 and won the Nobel Prize for it in 2019, at age 97.",
+    "fun_fact_ar": "ساعد جون جودإناف في اختراع بطارية أيون الليثيوم عام ١٩٧٩م، وفاز بجائزة نوبل بسببها عام ٢٠١٩م، وعمره ٩٧ عامًا.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_033",
+    "category": "Electric Vehicles",
+    "question": "What unit measures how much energy is stored in an electric car battery?",
+    "question_ar": "ما الوحدة التي تقيس كمية الطاقة المخزَّنة في بطارية السيارة الكهربائية؟",
+    "options": [
+      "kWh (kilowatt-hour)",
+      "Liter",
+      "Newton",
+      "Decibel"
+    ],
+    "options_ar": [
+      "الكيلوواط ساعة",
+      "اللتر",
+      "النيوتن",
+      "الديسيبل"
+    ],
+    "correct_answer": "kWh (kilowatt-hour)",
+    "correct_answer_ar": "الكيلوواط ساعة",
+    "fun_fact": "A typical EV has a battery between 40 and 100 kWh. The bigger the kWh number, the longer the range.",
+    "fun_fact_ar": "تحتوي السيارة الكهربائية النموذجية على بطارية بين ٤٠ و١٠٠ كيلوواط ساعة، وكلما زاد الرقم زاد مدى السير.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_034",
+    "category": "Electric Vehicles",
+    "question": "What is Tesla's special fast-charging network called?",
+    "question_ar": "ما اسم شبكة الشحن السريع الخاصة بتسلا؟",
+    "options": [
+      "Supercharger",
+      "Megacharger",
+      "Powerstop",
+      "Voltzone"
+    ],
+    "options_ar": [
+      "السوبر شارجر",
+      "الميجا شارجر",
+      "محطة القوة",
+      "منطقة الفولت"
+    ],
+    "correct_answer": "Supercharger",
+    "correct_answer_ar": "السوبر شارجر",
+    "fun_fact": "Tesla Superchargers can add hundreds of kilometers of range in just 15 to 30 minutes.",
+    "fun_fact_ar": "يمكن لمحطات السوبر شارجر من تسلا إضافة مئات الكيلومترات إلى المدى خلال ١٥ إلى ٣٠ دقيقة فقط.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_035",
+    "category": "Electric Vehicles",
+    "question": "Which Chinese carmaker overtook Tesla in EV sales in 2023?",
+    "question_ar": "أي شركة سيارات صينية تجاوزت تسلا في مبيعات السيارات الكهربائية عام ٢٠٢٣م؟",
+    "options": ["BYD", "Geely", "NIO", "Xpeng"],
+    "options_ar": ["بي واي دي", "جيلي", "نيو", "إكس بنج"],
+    "correct_answer": "BYD",
+    "correct_answer_ar": "بي واي دي",
+    "fun_fact": "BYD means 'Build Your Dreams'. The company started by making batteries and now sells more EVs than Tesla.",
+    "fun_fact_ar": "تعني الأحرف «BYD» «اصنع أحلامك». بدأت الشركة بصناعة البطاريات، وأصبحت تبيع سيارات كهربائية أكثر من تسلا.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_036",
+    "category": "Hybrid Cars",
+    "question": "Which 1997 car was the world's first mass-produced hybrid?",
+    "question_ar": "أي سيارة صدرت عام ١٩٩٧م كانت أول سيارة هجينة تُنتَج بكميات كبيرة في العالم؟",
+    "options": [
+      "Toyota Prius",
+      "Honda Insight",
+      "Ford Escape Hybrid",
+      "Tesla Model S"
+    ],
+    "options_ar": [
+      "تويوتا بريوس",
+      "هوندا إنسايت",
+      "فورد إسكيب هايبرد",
+      "تسلا موديل إس"
+    ],
+    "correct_answer": "Toyota Prius",
+    "correct_answer_ar": "تويوتا بريوس",
+    "fun_fact": "The Prius mixes a gasoline engine with an electric motor, saving fuel and helping the environment.",
+    "fun_fact_ar": "تجمع بريوس بين محرك بنزين ومحرك كهربائي، فتوفر الوقود وتساعد البيئة.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_037",
+    "category": "Hybrid Cars",
+    "question": "What does a hybrid car use to power its wheels?",
+    "question_ar": "ما الذي تستخدمه السيارة الهجينة لتشغيل عجلاتها؟",
+    "options": [
+      "Both a gasoline engine and an electric motor",
+      "Only a diesel engine",
+      "Only solar panels",
+      "Only steam"
+    ],
+    "options_ar": [
+      "محرك بنزين ومحرك كهربائي معًا",
+      "محرك ديزل فقط",
+      "ألواح شمسية فقط",
+      "بخار فقط"
+    ],
+    "correct_answer": "Both a gasoline engine and an electric motor",
+    "correct_answer_ar": "محرك بنزين ومحرك كهربائي معًا",
+    "fun_fact": "Hybrids switch between engine and motor to save fuel, especially in city traffic with lots of stops.",
+    "fun_fact_ar": "تتنقل السيارة الهجينة بين المحرك والموتور لتوفير الوقود، خاصة في ازدحام المدن بكثرة التوقف.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_038",
+    "category": "Hydrogen Cars",
+    "question": "Which Toyota car runs on hydrogen and emits only water vapor?",
+    "question_ar": "أي سيارة من تويوتا تعمل بالهيدروجين ولا تطرح إلا بخار الماء؟",
+    "options": [
+      "Toyota Mirai",
+      "Toyota Prius",
+      "Toyota Corolla",
+      "Toyota Camry"
+    ],
+    "options_ar": [
+      "تويوتا ميراي",
+      "تويوتا بريوس",
+      "تويوتا كورولا",
+      "تويوتا كامري"
+    ],
+    "correct_answer": "Toyota Mirai",
+    "correct_answer_ar": "تويوتا ميراي",
+    "fun_fact": "Mirai means 'future' in Japanese. The car uses fuel cells to combine hydrogen and oxygen, making electricity and pure water.",
+    "fun_fact_ar": "تعني كلمة «ميراي» في اليابانية «المستقبل». تستخدم السيارة خلايا وقود تجمع بين الهيدروجين والأكسجين، فتنتج الكهرباء وماءً نقيًا.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_039",
+    "category": "Hydrogen Cars",
+    "question": "Which Hyundai SUV runs on hydrogen fuel cells?",
+    "question_ar": "أي سيارة دفع رباعي من هيونداي تعمل بخلايا وقود الهيدروجين؟",
+    "options": [
+      "Hyundai Nexo",
+      "Hyundai Tucson",
+      "Hyundai Sonata",
+      "Hyundai Palisade"
+    ],
+    "options_ar": [
+      "هيونداي نكسو",
+      "هيونداي توسان",
+      "هيونداي سوناتا",
+      "هيونداي باليسيد"
+    ],
+    "correct_answer": "Hyundai Nexo",
+    "correct_answer_ar": "هيونداي نكسو",
+    "fun_fact": "The Nexo can drive over 600 km on one tank of hydrogen and refills in about 5 minutes.",
+    "fun_fact_ar": "يمكن لسيارة نكسو السير لأكثر من ٦٠٠ كم بخزان واحد من الهيدروجين، وتُملأ خلال نحو ٥ دقائق.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_040",
+    "category": "Self-Driving",
+    "question": "On the SAE scale of self-driving cars, what is the highest level — full autonomy with no human needed?",
+    "question_ar": "على مقياس SAE للسيارات ذاتية القيادة، ما الأعلى الذي يعني القيادة الذاتية الكاملة دون الحاجة إلى إنسان؟",
+    "options": [
+      "Level 5",
+      "Level 0",
+      "Level 2",
+      "Level 3"
+    ],
+    "options_ar": [
+      "المستوى ٥",
+      "المستوى ٠",
+      "المستوى ٢",
+      "المستوى ٣"
+    ],
+    "correct_answer": "Level 5",
+    "correct_answer_ar": "المستوى ٥",
+    "fun_fact": "SAE levels go from 0 (no automation) up to 5 (full self-driving everywhere). Most cars today are around Level 2.",
+    "fun_fact_ar": "تتدرج مستويات SAE من ٠ (بلا أتمتة) إلى ٥ (قيادة ذاتية كاملة في كل مكان). ومعظم السيارات اليوم في حدود المستوى ٢.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_041",
+    "category": "Self-Driving",
+    "question": "Which Google sister company runs robotaxis in the United States?",
+    "question_ar": "أي شركة شقيقة لجوجل تشغِّل سيارات أجرة آلية في الولايات المتحدة؟",
+    "options": ["Waymo", "Cruise", "Zoox", "Mobileye"],
+    "options_ar": ["وايمو", "كروز", "زوكس", "موبايل آي"],
+    "correct_answer": "Waymo",
+    "correct_answer_ar": "وايمو",
+    "fun_fact": "Waymo cars use cameras, radar, and a special spinning laser sensor called LIDAR to 'see' the road around them.",
+    "fun_fact_ar": "تستخدم سيارات وايمو الكاميرات والرادار، ومستشعرًا ليزريًا خاصًا يدور يُسمى «لايدار» لـ«رؤية» الطريق من حولها.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_042",
+    "category": "Self-Driving",
+    "question": "Which sensor uses laser pulses to make a 3D map of a self-driving car's surroundings?",
+    "question_ar": "أي مستشعر يستخدم نبضات الليزر لرسم خريطة ثلاثية الأبعاد لِما حول السيارة ذاتية القيادة؟",
+    "options": ["LIDAR", "GPS", "Microphone", "Compass"],
+    "options_ar": ["لايدار", "جي بي إس", "ميكروفون", "بوصلة"],
+    "correct_answer": "LIDAR",
+    "correct_answer_ar": "لايدار",
+    "fun_fact": "LIDAR stands for 'Light Detection and Ranging'. It can sense obstacles in the dark when cameras can't see well.",
+    "fun_fact_ar": "تعني «لايدار»: الكشف عن الضوء وقياس المسافة. ويستطيع استشعار العوائق في الظلام حين لا ترى الكاميرات جيدًا.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_043",
+    "category": "Formula 1",
+    "question": "In what year was the first Formula 1 World Championship race held at Silverstone?",
+    "question_ar": "في أي عام أُقيم أول سباق لبطولة العالم للفورمولا ١ في حلبة سيلفرستون؟",
+    "options": ["1950", "1900", "1970", "2000"],
+    "options_ar": ["١٩٥٠", "١٩٠٠", "١٩٧٠", "٢٠٠٠"],
+    "correct_answer": "1950",
+    "correct_answer_ar": "١٩٥٠",
+    "fun_fact": "Silverstone in England hosted the very first F1 World Championship Grand Prix on May 13, 1950.",
+    "fun_fact_ar": "استضافت حلبة سيلفرستون في إنجلترا أول سباق جائزة كبرى ضمن بطولة العالم للفورمولا ١ في ١٣ مايو ١٩٥٠م.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_044",
+    "category": "Formula 1",
+    "question": "Which British F1 driver has won 7 World Championships, tied with Schumacher for the all-time record?",
+    "question_ar": "أي سائق فورمولا ١ بريطاني فاز بـ ٧ بطولات عالم، متعادلًا مع شوماخر في الرقم القياسي على مر التاريخ؟",
+    "options": [
+      "Lewis Hamilton",
+      "Jenson Button",
+      "Nigel Mansell",
+      "Damon Hill"
+    ],
+    "options_ar": [
+      "لويس هاميلتون",
+      "جنسون باتون",
+      "نايجل مانسيل",
+      "دامون هيل"
+    ],
+    "correct_answer": "Lewis Hamilton",
+    "correct_answer_ar": "لويس هاميلتون",
+    "fun_fact": "Lewis Hamilton holds the record for most race wins in F1 history, over 100 victories.",
+    "fun_fact_ar": "يحمل لويس هاميلتون الرقم القياسي لأكثر سائق فاز بسباقات في تاريخ الفورمولا ١، بأكثر من ١٠٠ انتصار.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_045",
+    "category": "Formula 1",
+    "question": "Which German legend won 7 F1 titles and holds the record for 91 race wins?",
+    "question_ar": "أي أسطورة ألمانية فازت بـ ٧ ألقاب في الفورمولا ١، وتحمل الرقم القياسي بـ ٩١ انتصارًا في السباقات؟",
+    "options": [
+      "Michael Schumacher",
+      "Sebastian Vettel",
+      "Nico Rosberg",
+      "Mick Schumacher"
+    ],
+    "options_ar": [
+      "مايكل شوماخر",
+      "سيباستيان فيتل",
+      "نيكو روزبرج",
+      "ميك شوماخر"
+    ],
+    "correct_answer": "Michael Schumacher",
+    "correct_answer_ar": "مايكل شوماخر",
+    "fun_fact": "Schumacher won 5 of his titles in a row with Ferrari from 2000 to 2004, becoming a global icon.",
+    "fun_fact_ar": "فاز شوماخر بـ ٥ من ألقابه على التوالي مع فيراري بين ٢٠٠٠م و٢٠٠٤م، وأصبح أيقونة عالمية.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_046",
+    "category": "Formula 1",
+    "question": "Which Brazilian F1 legend tragically died at Imola, Italy in 1994?",
+    "question_ar": "أي أسطورة برازيلية في الفورمولا ١ توفي بحادث مأساوي في حلبة إيمولا بإيطاليا عام ١٩٩٤م؟",
+    "options": [
+      "Ayrton Senna",
+      "Nelson Piquet",
+      "Emerson Fittipaldi",
+      "Rubens Barrichello"
+    ],
+    "options_ar": [
+      "أيرتون سينا",
+      "نيلسون بيكيه",
+      "إيمرسون فيتيبالدي",
+      "روبنز باريكيلو"
+    ],
+    "correct_answer": "Ayrton Senna",
+    "correct_answer_ar": "أيرتون سينا",
+    "fun_fact": "Ayrton Senna won 3 world titles and is still loved as one of the greatest drivers ever to race in Formula 1.",
+    "fun_fact_ar": "فاز أيرتون سينا بـ ٣ ألقاب عالمية، ولا يزال محبوبًا بصفته من أعظم سائقي الفورمولا ١ في التاريخ.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_047",
+    "category": "Formula 1",
+    "question": "Which Dutch driver won 4 straight F1 World Championships from 2021 to 2024?",
+    "question_ar": "أي سائق هولندي فاز بـ ٤ بطولات عالم متتالية في الفورمولا ١ من ٢٠٢١م إلى ٢٠٢٤م؟",
+    "options": [
+      "Max Verstappen",
+      "Nico Hulkenberg",
+      "Carlos Sainz",
+      "Charles Leclerc"
+    ],
+    "options_ar": [
+      "ماكس فيرستابن",
+      "نيكو هلكنبرج",
+      "كارلوس ساينز",
+      "شارل لوكلير"
+    ],
+    "correct_answer": "Max Verstappen",
+    "correct_answer_ar": "ماكس فيرستابن",
+    "fun_fact": "Max Verstappen drives for Red Bull Racing and became the youngest F1 race winner ever at age 18 back in 2016.",
+    "fun_fact_ar": "يقود ماكس فيرستابن لفريق ريد بُل، وأصبح أصغر سائق يفوز بسباق فورمولا ١ على الإطلاق وعمره ١٨ عامًا في ٢٠١٦م.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_048",
+    "category": "Formula 1",
+    "question": "Which Middle Eastern country hosted the very first Formula 1 race in the region in 2004?",
+    "question_ar": "أي دولة في الشرق الأوسط استضافت أول سباق فورمولا ١ في المنطقة عام ٢٠٠٤م؟",
+    "options": [
+      "Bahrain",
+      "United Arab Emirates",
+      "Saudi Arabia",
+      "Qatar"
+    ],
+    "options_ar": [
+      "البحرين",
+      "الإمارات العربية المتحدة",
+      "المملكة العربية السعودية",
+      "قطر"
+    ],
+    "correct_answer": "Bahrain",
+    "correct_answer_ar": "البحرين",
+    "fun_fact": "The Bahrain Grand Prix at the Bahrain International Circuit in Sakhir was the first F1 race in the Middle East.",
+    "fun_fact_ar": "كان سباق جائزة البحرين الكبرى في حلبة البحرين الدولية في الصخير أول سباق فورمولا ١ في الشرق الأوسط.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_049",
+    "category": "Formula 1",
+    "question": "Which famous F1 circuit, often hosting the season finale, is located on Yas Island in Abu Dhabi?",
+    "question_ar": "أي حلبة شهيرة من حلبات الفورمولا ١، تستضيف غالبًا ختام الموسم، تقع في جزيرة ياس بأبوظبي؟",
+    "options": [
+      "Yas Marina Circuit",
+      "Jeddah Corniche Circuit",
+      "Bahrain International Circuit",
+      "Lusail Circuit"
+    ],
+    "options_ar": [
+      "حلبة ياس مارينا",
+      "حلبة كورنيش جدة",
+      "حلبة البحرين الدولية",
+      "حلبة لوسيل"
+    ],
+    "correct_answer": "Yas Marina Circuit",
+    "correct_answer_ar": "حلبة ياس مارينا",
+    "fun_fact": "Yas Marina hosts the Abu Dhabi Grand Prix and runs at sunset and night, with the track lit up beautifully.",
+    "fun_fact_ar": "تستضيف ياس مارينا سباق جائزة أبوظبي الكبرى عند الغروب والليل، وتُضاء الحلبة بشكل جميل.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_050",
+    "category": "Formula 1",
+    "question": "In which Saudi city is the Jeddah Corniche Circuit, where the Saudi Arabian Grand Prix has been held since 2021?",
+    "question_ar": "في أي مدينة سعودية تقع حلبة كورنيش جدة التي يُقام فيها سباق جائزة المملكة العربية السعودية الكبرى منذ ٢٠٢١م؟",
+    "options": ["Jeddah", "Riyadh", "Dammam", "Mecca"],
+    "options_ar": ["جدة", "الرياض", "الدمام", "مكة"],
+    "correct_answer": "Jeddah",
+    "correct_answer_ar": "جدة",
+    "fun_fact": "The Jeddah Corniche Circuit is one of the fastest street circuits in F1, running right by the Red Sea coast.",
+    "fun_fact_ar": "تُعدّ حلبة كورنيش جدة من أسرع الحلبات الحضرية في الفورمولا ١، وتمتد بمحاذاة ساحل البحر الأحمر.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_051",
+    "category": "Other Motorsports",
+    "question": "Which famous American racing series mostly uses oval tracks and stock cars?",
+    "question_ar": "أي سلسلة سباقات أمريكية شهيرة تستخدم في الغالب حلبات بيضاوية وسيارات إنتاج معدَّلة؟",
+    "options": ["NASCAR", "Formula 1", "Le Mans", "Formula E"],
+    "options_ar": ["ناسكار", "الفورمولا ١", "لومان", "الفورمولا إي"],
+    "correct_answer": "NASCAR",
+    "correct_answer_ar": "ناسكار",
+    "fun_fact": "NASCAR's biggest race is the Daytona 500 in Florida, watched by millions of fans every February.",
+    "fun_fact_ar": "أكبر سباق في ناسكار هو «دايتونا ٥٠٠» في فلوريدا، ويتابعه ملايين المشجعين كل فبراير.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_052",
+    "category": "Other Motorsports",
+    "question": "Which French endurance race has cars driving non-stop for an entire day?",
+    "question_ar": "أي سباق تحمُّل فرنسي تنطلق فيه السيارات بلا توقف ليوم كامل؟",
+    "options": [
+      "Le Mans 24 Hours",
+      "Monaco Grand Prix",
+      "Indy 500",
+      "Goodwood Festival"
+    ],
+    "options_ar": [
+      "سباق لومان ٢٤ ساعة",
+      "جائزة موناكو الكبرى",
+      "إندي ٥٠٠",
+      "مهرجان غودوود"
+    ],
+    "correct_answer": "Le Mans 24 Hours",
+    "correct_answer_ar": "سباق لومان ٢٤ ساعة",
+    "fun_fact": "At Le Mans, teams of drivers take turns racing through the night and day. The first race was in 1923.",
+    "fun_fact_ar": "في لومان، يتناوب فِرَق السائقين على السباق ليلًا ونهارًا. وأول سباق أُقيم عام ١٩٢٣م.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_053",
+    "category": "Other Motorsports",
+    "question": "Which famous off-road rally has been held in Saudi Arabia every year since 2020?",
+    "question_ar": "أي رالي صحراوي شهير يُقام في المملكة العربية السعودية كل عام منذ ٢٠٢٠م؟",
+    "options": [
+      "The Dakar Rally",
+      "World Rally Championship",
+      "Pikes Peak",
+      "Baja 1000"
+    ],
+    "options_ar": [
+      "رالي داكار",
+      "بطولة العالم للراليات",
+      "بايكس بيك",
+      "بايا ١٠٠٠"
+    ],
+    "correct_answer": "The Dakar Rally",
+    "correct_answer_ar": "رالي داكار",
+    "fun_fact": "The Dakar Rally first ran from Paris to Dakar in Africa, and now starts and finishes in Saudi Arabia.",
+    "fun_fact_ar": "كان رالي داكار يُقام في البداية من باريس إلى داكار في إفريقيا، ويبدأ الآن وينتهي في المملكة العربية السعودية.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_054",
+    "category": "Other Motorsports",
+    "question": "Which racing series uses only fully electric cars?",
+    "question_ar": "أي سلسلة سباقات تستخدم سيارات كهربائية بالكامل فقط؟",
+    "options": ["Formula E", "Formula 1", "NASCAR", "Rally Dakar"],
+    "options_ar": ["الفورمولا إي", "الفورمولا ١", "ناسكار", "رالي داكار"],
+    "correct_answer": "Formula E",
+    "correct_answer_ar": "الفورمولا إي",
+    "fun_fact": "Formula E started in 2014 and races in city streets like Riyadh and Diriyah, in Saudi Arabia.",
+    "fun_fact_ar": "انطلقت الفورمولا إي عام ٢٠١٤م، وتجري سباقاتها في شوارع المدن، مثل الرياض والدرعية في المملكة العربية السعودية.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_055",
+    "category": "Safety",
+    "question": "Which Swedish company gave the world the modern 3-point seatbelt in 1959?",
+    "question_ar": "أي شركة سويدية أهدت العالم حزام الأمان الحديث ذا النقاط الثلاث عام ١٩٥٩م؟",
+    "options": ["Volvo", "Saab", "Scania", "Koenigsegg"],
+    "options_ar": ["فولفو", "ساب", "سكانيا", "كونيغسيغ"],
+    "correct_answer": "Volvo",
+    "correct_answer_ar": "فولفو",
+    "fun_fact": "Volvo engineer Nils Bohlin invented the 3-point seatbelt. Volvo gave the patent away free to save lives.",
+    "fun_fact_ar": "اخترع المهندس نيلز بوهلين من فولفو حزام الأمان ذا النقاط الثلاث، ومنحت فولفو براءة الاختراع مجانًا لإنقاذ الأرواح.",
+    "difficulty": 3
+  },
+  {
+    "id": "ce_056",
+    "category": "Safety",
+    "question": "What safety device inflates quickly to protect you in a crash?",
+    "question_ar": "أي وسيلة أمان تنتفخ بسرعة لتحميك عند وقوع حادث؟",
+    "options": [
+      "Airbag",
+      "Spare tire",
+      "Sun visor",
+      "Wiper"
+    ],
+    "options_ar": [
+      "الوسادة الهوائية",
+      "الإطار الاحتياطي",
+      "حاجب الشمس",
+      "ماسحة الزجاج"
+    ],
+    "correct_answer": "Airbag",
+    "correct_answer_ar": "الوسادة الهوائية",
+    "fun_fact": "Airbags fill with gas in less than a tenth of a second to cushion drivers and passengers in a crash.",
+    "fun_fact_ar": "تمتلئ الوسائد الهوائية بالغاز في أقل من جزء من عشرة من الثانية لحماية السائقين والركاب عند الحادث.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_057",
+    "category": "Safety",
+    "question": "What does ABS in cars stand for?",
+    "question_ar": "ماذا تعني الأحرف ABS في السيارات؟",
+    "options": [
+      "Anti-lock Braking System",
+      "Automatic Battery System",
+      "Air Body Structure",
+      "All-Brake Switch"
+    ],
+    "options_ar": [
+      "نظام مانع انغلاق المكابح",
+      "نظام البطارية الأوتوماتيكي",
+      "هيكل الجسم الهوائي",
+      "مفتاح كل المكابح"
+    ],
+    "correct_answer": "Anti-lock Braking System",
+    "correct_answer_ar": "نظام مانع انغلاق المكابح",
+    "fun_fact": "ABS stops the wheels from locking up during hard braking, so the driver can still steer.",
+    "fun_fact_ar": "يمنع نظام ABS انغلاق العجلات عند الضغط القوي على المكابح، فيستطيع السائق توجيه السيارة بأمان.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_058",
+    "category": "Records",
+    "question": "Which car is widely considered the fastest production car, with a top speed over 490 km/h?",
+    "question_ar": "أي سيارة تُعدّ على نطاق واسع أسرع سيارة إنتاجية، بسرعة قصوى تتجاوز ٤٩٠ كم/س؟",
+    "options": [
+      "Bugatti Chiron Super Sport",
+      "Ferrari LaFerrari",
+      "Lamborghini Aventador",
+      "Porsche 911 GT3"
+    ],
+    "options_ar": [
+      "بوغاتي شيرون سوبر سبورت",
+      "فيراري لافيراري",
+      "لامبورغيني أفنتادور",
+      "بورشه ٩١١ جي تي ٣"
+    ],
+    "correct_answer": "Bugatti Chiron Super Sport",
+    "correct_answer_ar": "بوغاتي شيرون سوبر سبورت",
+    "fun_fact": "A Bugatti Chiron Super Sport hit over 490 km/h on a test track — fast enough to cross a football field in less than a second.",
+    "fun_fact_ar": "تجاوزت بوغاتي شيرون سوبر سبورت سرعة ٤٩٠ كم/س على حلبة اختبار، وهي سرعة تكفي لعبور ملعب كرة قدم في أقل من ثانية.",
+    "difficulty": 2
+  },
+  {
+    "id": "ce_059",
+    "category": "Auto Culture",
+    "question": "In what year did Saudi Arabia officially allow women to drive cars?",
+    "question_ar": "في أي عام سمحت المملكة العربية السعودية رسميًا للنساء بقيادة السيارات؟",
+    "options": ["2018", "1990", "2005", "2020"],
+    "options_ar": ["٢٠١٨", "١٩٩٠", "٢٠٠٥", "٢٠٢٠"],
+    "correct_answer": "2018",
+    "correct_answer_ar": "٢٠١٨",
+    "fun_fact": "In June 2018, Saudi Arabia lifted the ban so women could legally drive, a major social milestone in the Gulf.",
+    "fun_fact_ar": "في يونيو ٢٠١٨م، رفعت المملكة العربية السعودية الحظر، فأصبحت قيادة النساء للسيارات قانونية، وهو حدث اجتماعي مهم في الخليج.",
+    "difficulty": 1
+  },
+  {
+    "id": "ce_060",
+    "category": "Islamic Angle",
+    "question": "What word do Muslims often say before starting a journey by car?",
+    "question_ar": "ما الكلمة التي يقولها المسلمون عادةً قبل بدء رحلة بالسيارة؟",
+    "options": [
+      "Bismillah",
+      "Alhamdulillah",
+      "Mashallah",
+      "Inshallah"
+    ],
+    "options_ar": [
+      "بسم الله",
+      "الحمد لله",
+      "ما شاء الله",
+      "إن شاء الله"
+    ],
+    "correct_answer": "Bismillah",
+    "correct_answer_ar": "بسم الله",
+    "fun_fact": "Muslims say 'Bismillah' (in the name of Allah) and read the dua of travel for safety. Caring for the earth and using clean cars also fits the duty of khalifah (stewardship).",
+    "fun_fact_ar": "يقول المسلمون «بسم الله» ويقرؤون دعاء السفر لطلب السلامة. ورعاية الأرض واستخدام سيارات نظيفة يتفق مع واجب الخلافة في الأرض.",
+    "difficulty": 1
+  }
+]

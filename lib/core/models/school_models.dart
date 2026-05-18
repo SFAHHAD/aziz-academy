@@ -21,13 +21,13 @@ class SchoolQuestion {
   final String funFact;
 
   QuizQuestion toQuizQuestion(String category) => QuizQuestion(
-        id: id,
-        question: question,
-        options: List<String>.from(options),
-        correctAnswer: correctAnswer,
-        category: category,
-        funFact: funFact,
-      );
+    id: id,
+    question: question,
+    options: List<String>.from(options),
+    correctAnswer: correctAnswer,
+    category: category,
+    funFact: funFact,
+  );
 }
 
 class SchoolChapter {

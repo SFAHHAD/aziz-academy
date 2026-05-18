@@ -4,9 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
+import 'package:aziz_academy/core/utils/image_precache.dart';
+
+/// Tracked by `scripts/audit_version_consistency.py` — keep this in
+/// sync with pubspec.yaml at every release.
+const String _kAppVersion = '1.1.113+118';
 
 /// Animated splash screen shown on first launch.
 /// Displays the Aziz Academy logo with a gold shimmer entrance,
@@ -32,6 +38,8 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
   late Animation<double> _ringOpacity;
 
   bool _isReady = false;
+  Timer? _textTimer;
+  Timer? _readyTimer;
 
   @override
   void initState() {
@@ -60,42 +68,48 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
     _ringScale = Tween<double>(begin: 0.85, end: 1.15).animate(
       CurvedAnimation(parent: _ringController, curve: Curves.easeInOut),
     );
-    _ringOpacity = Tween<double>(begin: 0.6, end: 0.0).animate(
-      CurvedAnimation(parent: _ringController, curve: Curves.easeOut),
-    );
+    _ringOpacity = Tween<double>(
+      begin: 0.6,
+      end: 0.0,
+    ).animate(CurvedAnimation(parent: _ringController, curve: Curves.easeOut));
 
     // Text animation
     _textController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 700),
     );
-    _textOpacity = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _textController, curve: Curves.easeIn),
-    );
-    _textSlide = Tween<double>(begin: 30, end: 0).animate(
-      CurvedAnimation(parent: _textController, curve: Curves.easeOut),
-    );
+    _textOpacity = Tween<double>(
+      begin: 0.0,
+      end: 1.0,
+    ).animate(CurvedAnimation(parent: _textController, curve: Curves.easeIn));
+    _textSlide = Tween<double>(
+      begin: 30,
+      end: 0,
+    ).animate(CurvedAnimation(parent: _textController, curve: Curves.easeOut));
 
     // Sequence: logo → ring → text → show start button
     _logoController.forward().then((_) {
-      _ringController.repeat(reverse: true);
-      Future.delayed(const Duration(milliseconds: 300), () {
-        if (mounted) {
-          _textController.forward();
-        }
+      if (!mounted) return;
+      final reducedMotion =
+          ref.read(appSettingsProvider).value?.reducedMotion ?? false;
+      final disableAnimations =
+          MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+      if (!reducedMotion && !disableAnimations) {
+        _ringController.repeat(reverse: true);
+      }
+      _textTimer = Timer(const Duration(milliseconds: 300), () {
+        if (mounted) _textController.forward();
       });
-      Future.delayed(const Duration(milliseconds: 1400), () {
-        if (mounted) {
-          setState(() {
-            _isReady = true;
-          });
-        }
+      _readyTimer = Timer(const Duration(milliseconds: 1400), () {
+        if (mounted) setState(() => _isReady = true);
       });
     });
   }
 
   @override
   void dispose() {
+    _textTimer?.cancel();
+    _readyTimer?.cancel();
     _logoController.dispose();
     _textController.dispose();
     _ringController.dispose();
@@ -181,9 +195,14 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                             child: Image.asset(
                               'assets/images/logo_final.png',
                               fit: BoxFit.contain,
-                              errorBuilder: (context, error, stack) => const Center(
-                                child: Text('🎓', style: TextStyle(fontSize: 96)),
-                              ),
+                              semanticLabel: context.l10n.appTitle,
+                              errorBuilder: (context, error, stack) =>
+                                  const Center(
+                                    child: Text(
+                                      '🎓',
+                                      style: TextStyle(fontSize: 96),
+                                    ),
+                                  ),
                             ),
                           ),
                         ),
@@ -216,6 +235,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                           fontWeight: FontWeight.w900,
                           color: AppColors.secondary,
                           letterSpacing: isArabic ? 0 : 2,
+                          fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -226,13 +246,14 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           color: AppColors.textLight.withAlpha(180),
+                          fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                           letterSpacing: 1,
                         ),
                       ),
                     ],
                   ),
                 ),
-                
+
                 const SizedBox(height: 48),
 
                 // Manual Start Button (unblocks Web Audio Context!)
@@ -252,14 +273,31 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                     child: ElevatedButton(
                       onPressed: () {
                         // User gesture instantly unlocks TTS capabilities!
-                        unawaited(ref.read(ttsServiceProvider)
-                            .speakFeedback(TtsFeedbackType.welcome));
-                        context.go(AppRoutes.home);
+                        unawaited(
+                          ref
+                              .read(ttsServiceProvider)
+                              .speakFeedback(TtsFeedbackType.welcome),
+                        );
+                        // Warm up hot images during the user-gesture latency
+                        // budget so the home logo is ready by first paint.
+                        unawaited(precacheHotImages(context));
+                        final completed =
+                            ref
+                                .read(appSettingsProvider)
+                                .value
+                                ?.onboardingCompleted ??
+                            false;
+                        context.go(
+                          completed ? AppRoutes.home : AppRoutes.welcome,
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.secondary,
                         foregroundColor: AppColors.surface,
-                        padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 16),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 48,
+                          vertical: 16,
+                        ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -271,6 +309,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                           fontFamily: 'Cairo',
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                         ),
                       ),
                     ),
@@ -283,12 +322,10 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
               bottom: 48,
               child: AnimatedBuilder(
                 animation: _textController,
-                builder: (context, child) => Opacity(
-                  opacity: _textOpacity.value * 0.5,
-                  child: child,
-                ),
+                builder: (context, child) =>
+                    Opacity(opacity: _textOpacity.value * 0.5, child: child),
                 child: Text(
-                  'v1.0.0',
+                  'v${_kAppVersion.split('+').first}',
                   style: TextStyle(
                     fontSize: 12,
                     color: AppColors.textLight.withAlpha(120),
@@ -318,7 +355,13 @@ class _BackgroundRings extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
-                color: AppColors.secondary.withAlpha(size == 700 ? 15 : size == 550 ? 25 : 35),
+                color: AppColors.secondary.withAlpha(
+                  size == 700
+                      ? 15
+                      : size == 550
+                      ? 25
+                      : 35,
+                ),
                 width: 1,
               ),
             ),

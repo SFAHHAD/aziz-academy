@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "mwp_e_001",
+    "question": "Sara has 12 apples. She gives 4 to her friend. How many are left?",
+    "question_ar": "لدى سارة ١٢ تفاحة. أعطت ٤ لصديقتها. كم تبقى؟",
+    "options": [
+      "8",
+      "9",
+      "7",
+      "16"
+    ],
+    "options_ar": [
+      "٨",
+      "٩",
+      "٧",
+      "١٦"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "٨",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "Subtraction is the inverse of addition — it tells you what's left.",
+    "fun_fact_ar": "الطرح عكس الجمع — يخبرك بما تبقى."
+  },
+  {
+    "id": "mwp_e_002",
+    "question": "Ahmed finds 5 marbles. He already had 7. How many marbles now?",
+    "question_ar": "وجد أحمد ٥ كرات. كان لديه ٧ من قبل. كم كرة الآن؟",
+    "options": [
+      "12",
+      "11",
+      "13",
+      "2"
+    ],
+    "options_ar": [
+      "١٢",
+      "١١",
+      "١٣",
+      "٢"
+    ],
+    "correct_answer": "12",
+    "correct_answer_ar": "١٢",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "The plus sign was first used in the 1300s.",
+    "fun_fact_ar": "علامة الجمع استُخدمت لأول مرة في القرن الرابع عشر."
+  },
+  {
+    "id": "mwp_e_003",
+    "question": "Layla buys 9 stickers and gets 6 more. How many stickers in total?",
+    "question_ar": "اشترت ليلى ٩ ملصقات وحصلت على ٦ أخرى. كم ملصقًا في المجموع؟",
+    "options": [
+      "15",
+      "14",
+      "16",
+      "3"
+    ],
+    "options_ar": [
+      "١٥",
+      "١٤",
+      "١٦",
+      "٣"
+    ],
+    "correct_answer": "15",
+    "correct_answer_ar": "١٥",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "Stickers can be used to make cool patterns and shapes!",
+    "fun_fact_ar": "يمكن استخدام الملصقات لصنع أنماط وأشكال رائعة!"
+  },
+  {
+    "id": "mwp_e_004",
+    "question": "Mohammed has 14 candies. He eats 5. How many candies remain?",
+    "question_ar": "لدى محمد ١٤ حلوى. أكل ٥ منها. كم حلوى تبقت؟",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "19"
+    ],
+    "options_ar": [
+      "٩",
+      "٨",
+      "١٠",
+      "١٩"
+    ],
+    "correct_answer": "9",
+    "correct_answer_ar": "٩",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "Eating too much candy isn't great — but math is always sweet!",
+    "fun_fact_ar": "الإفراط في الحلوى ليس جيدًا — لكن الرياضيات دائمًا حلوة!"
+  },
+  {
+    "id": "mwp_e_005",
+    "question": "Sara saves 6 riyals on Monday and 8 on Tuesday. How much saved?",
+    "question_ar": "ادخرت سارة ٦ ريالات الإثنين و ٨ الثلاثاء. كم ادخرت؟",
+    "options": [
+      "14",
+      "13",
+      "15",
+      "2"
+    ],
+    "options_ar": [
+      "١٤",
+      "١٣",
+      "١٥",
+      "٢"
+    ],
+    "correct_answer": "14",
+    "correct_answer_ar": "١٤",
+    "category": "Money",
+    "category_ar": "نقود",
+    "difficulty": 1,
+    "fun_fact": "Saving a little each day adds up quickly!",
+    "fun_fact_ar": "ادخار القليل كل يوم يتراكم بسرعة!"
+  },
+  {
+    "id": "mwp_e_006",
+    "question": "Ahmed has 10 toy cars. He loses 3. How many cars left?",
+    "question_ar": "لدى أحمد ١٠ سيارات لعبة. فقد ٣ منها. كم سيارة تبقت؟",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "13"
+    ],
+    "options_ar": [
+      "٧",
+      "٦",
+      "٨",
+      "١٣"
+    ],
+    "correct_answer": "7",
+    "correct_answer_ar": "٧",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "The first toy cars were made over 100 years ago!",
+    "fun_fact_ar": "أول سيارات لعبة صُنعت قبل أكثر من مئة عام!"
+  },
+  {
+    "id": "mwp_e_007",
+    "question": "Layla picks 4 flowers in the morning and 9 in the afternoon. Total?",
+    "question_ar": "قطفت ليلى ٤ زهور صباحًا و ٩ بعد الظهر. المجموع؟",
+    "options": [
+      "13",
+      "12",
+      "14",
+      "5"
+    ],
+    "options_ar": [
+      "١٣",
+      "١٢",
+      "١٤",
+      "٥"
+    ],
+    "correct_answer": "13",
+    "correct_answer_ar": "١٣",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "Flowers come in over 400,000 different species worldwide!",
+    "fun_fact_ar": "توجد أكثر من ٤٠٠ ألف نوع من الزهور حول العالم!"
+  },
+  {
+    "id": "mwp_e_008",
+    "question": "Mohammed has 18 books. He gives 6 to his sister. How many left?",
+    "question_ar": "لدى محمد ١٨ كتابًا. أعطى ٦ لأخته. كم كتابًا تبقى؟",
+    "options": [
+      "12",
+      "11",
+      "13",
+      "24"
+    ],
+    "options_ar": [
+      "١٢",
+      "١١",
+      "١٣",
+      "٢٤"
+    ],
+    "correct_answer": "12",
+    "correct_answer_ar": "١٢",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "Reading a book a week can boost your imagination!",
+    "fun_fact_ar": "قراءة كتاب كل أسبوع تنمي خيالك!"
+  },
+  {
+    "id": "mwp_e_009",
+    "question": "Sara has 7 pens. Her dad gives her 8 more. How many pens now?",
+    "question_ar": "لدى سارة ٧ أقلام. أعطاها والدها ٨ أخرى. كم قلمًا الآن؟",
+    "options": [
+      "15",
+      "14",
+      "16",
+      "1"
+    ],
+    "options_ar": [
+      "١٥",
+      "١٤",
+      "١٦",
+      "١"
+    ],
+    "correct_answer": "15",
+    "correct_answer_ar": "١٥",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "The first ballpoint pen was invented in 1888!",
+    "fun_fact_ar": "اختُرع أول قلم حبر جاف عام ١٨٨٨!"
+  },
+  {
+    "id": "mwp_e_010",
+    "question": "Ahmed scored 11 goals this month. Last month he scored 8. Total?",
+    "question_ar": "سجل أحمد ١١ هدفًا هذا الشهر و ٨ الشهر الماضي. المجموع؟",
+    "options": [
+      "19",
+      "18",
+      "20",
+      "3"
+    ],
+    "options_ar": [
+      "١٩",
+      "١٨",
+      "٢٠",
+      "٣"
+    ],
+    "correct_answer": "19",
+    "correct_answer_ar": "١٩",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "Soccer is played by over 250 million people worldwide!",
+    "fun_fact_ar": "يلعب كرة القدم أكثر من ٢٥٠ مليون شخص حول العالم!"
+  },
+  {
+    "id": "mwp_e_011",
+    "question": "Layla has 16 cookies. She eats 7. How many cookies left?",
+    "question_ar": "لدى ليلى ١٦ بسكويتة. أكلت ٧. كم بسكويتة تبقت؟",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "23"
+    ],
+    "options_ar": [
+      "٩",
+      "٨",
+      "١٠",
+      "٢٣"
+    ],
+    "correct_answer": "9",
+    "correct_answer_ar": "٩",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "Cookies were first made in Persia in the 7th century!",
+    "fun_fact_ar": "صُنعت البسكويتات أول مرة في بلاد فارس في القرن السابع!"
+  },
+  {
+    "id": "mwp_e_012",
+    "question": "Mohammed has 5 fish. He buys 9 more. How many fish now?",
+    "question_ar": "لدى محمد ٥ أسماك. اشترى ٩ أخرى. كم سمكة الآن؟",
+    "options": [
+      "14",
+      "13",
+      "15",
+      "4"
+    ],
+    "options_ar": [
+      "١٤",
+      "١٣",
+      "١٥",
+      "٤"
+    ],
+    "correct_answer": "14",
+    "correct_answer_ar": "١٤",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "Some goldfish can live for over 20 years!",
+    "fun_fact_ar": "بعض أسماك الزينة تعيش لأكثر من ٢٠ عامًا!"
+  },
+  {
+    "id": "mwp_e_013",
+    "question": "Sara had 20 grapes. She ate 8. How many grapes are left?",
+    "question_ar": "كان لدى سارة ٢٠ حبة عنب. أكلت ٨. كم حبة تبقت؟",
+    "options": [
+      "12",
+      "11",
+      "13",
+      "28"
+    ],
+    "options_ar": [
+      "١٢",
+      "١١",
+      "١٣",
+      "٢٨"
+    ],
+    "correct_answer": "12",
+    "correct_answer_ar": "١٢",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "Grapes come in red, green, and purple colors.",
+    "fun_fact_ar": "العنب يأتي بألوان أحمر وأخضر وبنفسجي."
+  },
+  {
+    "id": "mwp_e_014",
+    "question": "Ahmed walks 3 km then 6 km more. How many km total?",
+    "question_ar": "مشى أحمد ٣ كم ثم ٦ كم أخرى. كم كم في المجموع؟",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "3"
+    ],
+    "options_ar": [
+      "٩",
+      "٨",
+      "١٠",
+      "٣"
+    ],
+    "correct_answer": "9",
+    "correct_answer_ar": "٩",
+    "category": "Measurement",
+    "category_ar": "قياس",
+    "difficulty": 1,
+    "fun_fact": "Walking is great exercise — and easy math!",
+    "fun_fact_ar": "المشي رياضة رائعة — ورياضيات سهلة!"
+  },
+  {
+    "id": "mwp_e_015",
+    "question": "Layla has 13 balloons. 5 fly away. How many balloons left?",
+    "question_ar": "لدى ليلى ١٣ بالونًا. طار ٥ منها. كم بالونًا تبقى؟",
+    "options": [
+      "8",
+      "7",
+      "9",
+      "18"
+    ],
+    "options_ar": [
+      "٨",
+      "٧",
+      "٩",
+      "١٨"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "٨",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "Helium balloons float because helium is lighter than air!",
+    "fun_fact_ar": "بالونات الهيليوم تطفو لأن الهيليوم أخف من الهواء!"
+  },
+  {
+    "id": "mwp_e_016",
+    "question": "Mohammed has 9 pencils. He finds 7 more. How many pencils?",
+    "question_ar": "لدى محمد ٩ أقلام رصاص. وجد ٧ أخرى. كم قلمًا؟",
+    "options": [
+      "16",
+      "15",
+      "17",
+      "2"
+    ],
+    "options_ar": [
+      "١٦",
+      "١٥",
+      "١٧",
+      "٢"
+    ],
+    "correct_answer": "16",
+    "correct_answer_ar": "١٦",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "An average pencil can draw a line 56 km long!",
+    "fun_fact_ar": "القلم العادي يرسم خطًا بطول ٥٦ كم!"
+  },
+  {
+    "id": "mwp_e_017",
+    "question": "Sara had 17 strawberries. She gave 9 away. How many left?",
+    "question_ar": "كان لدى سارة ١٧ فراولة. أعطت ٩. كم تبقى؟",
+    "options": [
+      "8",
+      "7",
+      "9",
+      "26"
+    ],
+    "options_ar": [
+      "٨",
+      "٧",
+      "٩",
+      "٢٦"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "٨",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "Strawberries are the only fruit with seeds on the outside!",
+    "fun_fact_ar": "الفراولة الفاكهة الوحيدة التي تحمل بذورها على الخارج!"
+  },
+  {
+    "id": "mwp_e_018",
+    "question": "Ahmed read 6 pages, then 9 more. How many pages total?",
+    "question_ar": "قرأ أحمد ٦ صفحات ثم ٩ أخرى. كم صفحة في المجموع؟",
+    "options": [
+      "15",
+      "14",
+      "16",
+      "3"
+    ],
+    "options_ar": [
+      "١٥",
+      "١٤",
+      "١٦",
+      "٣"
+    ],
+    "correct_answer": "15",
+    "correct_answer_ar": "١٥",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "Reading every day makes your brain stronger!",
+    "fun_fact_ar": "القراءة كل يوم تقوي عقلك!"
+  },
+  {
+    "id": "mwp_e_019",
+    "question": "Layla has 19 crayons. She breaks 6. How many work?",
+    "question_ar": "لدى ليلى ١٩ قلم تلوين. كسرت ٦. كم قلمًا يعمل؟",
+    "options": [
+      "13",
+      "12",
+      "14",
+      "25"
+    ],
+    "options_ar": [
+      "١٣",
+      "١٢",
+      "١٤",
+      "٢٥"
+    ],
+    "correct_answer": "13",
+    "correct_answer_ar": "١٣",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 1,
+    "fun_fact": "Crayons come in over 100 different colors!",
+    "fun_fact_ar": "أقلام التلوين تأتي بأكثر من ١٠٠ لون مختلف!"
+  },
+  {
+    "id": "mwp_e_020",
+    "question": "Mohammed had 4 cats. His friend gives 8 more. How many cats?",
+    "question_ar": "كان لدى محمد ٤ قطط. أعطاه صديقه ٨ أخرى. كم قطة؟",
+    "options": [
+      "12",
+      "11",
+      "13",
+      "4"
+    ],
+    "options_ar": [
+      "١٢",
+      "١١",
+      "١٣",
+      "٤"
+    ],
+    "correct_answer": "12",
+    "correct_answer_ar": "١٢",
+    "category": "Addition",
+    "category_ar": "جمع",
+    "difficulty": 1,
+    "fun_fact": "Cats spend about 70% of their lives sleeping!",
+    "fun_fact_ar": "القطط تقضي حوالي ٧٠% من حياتها في النوم!"
+  },
+  {
+    "id": "mwp_m_001",
+    "question": "Sara has 6 boxes with 8 pencils each. How many pencils total?",
+    "question_ar": "لدى سارة ٦ صناديق فيها ٨ أقلام رصاص لكل صندوق. كم قلمًا في المجموع؟",
+    "options": [
+      "48",
+      "46",
+      "56",
+      "14"
+    ],
+    "options_ar": [
+      "٤٨",
+      "٤٦",
+      "٥٦",
+      "١٤"
+    ],
+    "correct_answer": "48",
+    "correct_answer_ar": "٤٨",
+    "category": "Multiplication",
+    "category_ar": "ضرب",
+    "difficulty": 2,
+    "fun_fact": "Multiplication is repeated addition made faster.",
+    "fun_fact_ar": "الضرب هو جمع متكرر بشكل أسرع."
+  },
+  {
+    "id": "mwp_m_002",
+    "question": "Ahmed shares 36 candies equally among 4 friends. How many each?",
+    "question_ar": "وزع أحمد ٣٦ حلوى بالتساوي على ٤ أصدقاء. كم لكل واحد؟",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "32"
+    ],
+    "options_ar": [
+      "٩",
+      "٨",
+      "١٠",
+      "٣٢"
+    ],
+    "correct_answer": "9",
+    "correct_answer_ar": "٩",
+    "category": "Division",
+    "category_ar": "قسمة",
+    "difficulty": 2,
+    "fun_fact": "Division splits things into equal groups.",
+    "fun_fact_ar": "القسمة توزع الأشياء إلى مجموعات متساوية."
+  },
+  {
+    "id": "mwp_m_003",
+    "question": "Layla buys 5 books at 12 riyals each. How much did she pay?",
+    "question_ar": "اشترت ليلى ٥ كتب بسعر ١٢ ريالًا لكل واحد. كم دفعت؟",
+    "options": [
+      "60",
+      "55",
+      "70",
+      "17"
+    ],
+    "options_ar": [
+      "٦٠",
+      "٥٥",
+      "٧٠",
+      "١٧"
+    ],
+    "correct_answer": "60",
+    "correct_answer_ar": "٦٠",
+    "category": "Money",
+    "category_ar": "نقود",
+    "difficulty": 2,
+    "fun_fact": "Saudi Arabia's currency is the riyal.",
+    "fun_fact_ar": "عملة المملكة العربية السعودية هي الريال."
+  },
+  {
+    "id": "mwp_m_004",
+    "question": "Mohammed has 24 marbles. He puts them in 6 bags. How many per bag?",
+    "question_ar": "لدى محمد ٢٤ كرة. وضعها في ٦ أكياس. كم كرة في كل كيس؟",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "18"
+    ],
+    "options_ar": [
+      "٤",
+      "٣",
+      "٥",
+      "١٨"
+    ],
+    "correct_answer": "4",
+    "correct_answer_ar": "٤",
+    "category": "Division",
+    "category_ar": "قسمة",
+    "difficulty": 2,
+    "fun_fact": "Marbles have been played with for over 5,000 years!",
+    "fun_fact_ar": "لُعبت الكرات الزجاجية لأكثر من ٥٠٠٠ عام!"
+  },
+  {
+    "id": "mwp_m_005",
+    "question": "Sara reads 15 pages a day for 7 days. How many pages total?",
+    "question_ar": "تقرأ سارة ١٥ صفحة يوميًا لمدة ٧ أيام. كم صفحة في المجموع؟",
+    "options": [
+      "105",
+      "95",
+      "115",
+      "22"
+    ],
+    "options_ar": [
+      "١٠٥",
+      "٩٥",
+      "١١٥",
+      "٢٢"
+    ],
+    "correct_answer": "105",
+    "correct_answer_ar": "١٠٥",
+    "category": "Multiplication",
+    "category_ar": "ضرب",
+    "difficulty": 2,
+    "fun_fact": "Reading daily improves vocabulary fast!",
+    "fun_fact_ar": "القراءة اليومية تطور المفردات بسرعة!"
+  },
+  {
+    "id": "mwp_m_006",
+    "question": "Ahmed has 50 stickers. He gives 18 away then buys 12. How many?",
+    "question_ar": "لدى أحمد ٥٠ ملصقًا. أعطى ١٨ ثم اشترى ١٢. كم لديه؟",
+    "options": [
+      "44",
+      "42",
+      "46",
+      "20"
+    ],
+    "options_ar": [
+      "٤٤",
+      "٤٢",
+      "٤٦",
+      "٢٠"
+    ],
+    "correct_answer": "44",
+    "correct_answer_ar": "٤٤",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 2,
+    "fun_fact": "Two-step problems need careful order of operations.",
+    "fun_fact_ar": "المسائل ذات الخطوتين تحتاج ترتيبًا دقيقًا للعمليات."
+  },
+  {
+    "id": "mwp_m_007",
+    "question": "Layla earns 25 riyals a week. After 4 weeks, how much saved?",
+    "question_ar": "تكسب ليلى ٢٥ ريالًا أسبوعيًا. بعد ٤ أسابيع، كم ادخرت؟",
+    "options": [
+      "100",
+      "90",
+      "110",
+      "29"
+    ],
+    "options_ar": [
+      "١٠٠",
+      "٩٠",
+      "١١٠",
+      "٢٩"
+    ],
+    "correct_answer": "100",
+    "correct_answer_ar": "١٠٠",
+    "category": "Money",
+    "category_ar": "نقود",
+    "difficulty": 2,
+    "fun_fact": "Saving regularly builds great habits!",
+    "fun_fact_ar": "الادخار المنتظم يبني عادات رائعة!"
+  },
+  {
+    "id": "mwp_m_008",
+    "question": "Mohammed runs 8 laps daily for 9 days. How many laps total?",
+    "question_ar": "يجري محمد ٨ لفات يوميًا لمدة ٩ أيام. كم لفة في المجموع؟",
+    "options": [
+      "72",
+      "64",
+      "81",
+      "17"
+    ],
+    "options_ar": [
+      "٧٢",
+      "٦٤",
+      "٨١",
+      "١٧"
+    ],
+    "correct_answer": "72",
+    "correct_answer_ar": "٧٢",
+    "category": "Multiplication",
+    "category_ar": "ضرب",
+    "difficulty": 2,
+    "fun_fact": "Running boosts energy and focus.",
+    "fun_fact_ar": "الجري يعزز الطاقة والتركيز."
+  },
+  {
+    "id": "mwp_m_009",
+    "question": "Sara has 81 cards. She splits them into 9 piles. How many per pile?",
+    "question_ar": "لدى سارة ٨١ بطاقة. قسمتها إلى ٩ أكوام. كم بطاقة في كل كوم؟",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "72"
+    ],
+    "options_ar": [
+      "٩",
+      "٨",
+      "١٠",
+      "٧٢"
+    ],
+    "correct_answer": "9",
+    "correct_answer_ar": "٩",
+    "category": "Division",
+    "category_ar": "قسمة",
+    "difficulty": 2,
+    "fun_fact": "Nine times nine is one of the trickiest tables!",
+    "fun_fact_ar": "تسعة في تسعة من أصعب جداول الضرب!"
+  },
+  {
+    "id": "mwp_m_010",
+    "question": "Ahmed buys 3 shirts at 20 riyals each. He pays 100. Change?",
+    "question_ar": "يشتري أحمد ٣ قمصان بسعر ٢٠ ريالًا لكل واحد ودفع ١٠٠. كم الباقي؟",
+    "options": [
+      "40",
+      "30",
+      "50",
+      "60"
+    ],
+    "options_ar": [
+      "٤٠",
+      "٣٠",
+      "٥٠",
+      "٦٠"
+    ],
+    "correct_answer": "40",
+    "correct_answer_ar": "٤٠",
+    "category": "Money",
+    "category_ar": "نقود",
+    "difficulty": 2,
+    "fun_fact": "Always count your change at the store!",
+    "fun_fact_ar": "احسب دائمًا الباقي في المتجر!"
+  },
+  {
+    "id": "mwp_m_011",
+    "question": "Layla bakes 7 trays with 12 cupcakes each. How many cupcakes?",
+    "question_ar": "تخبز ليلى ٧ صواني فيها ١٢ كب كيك لكل صينية. كم كب كيك؟",
+    "options": [
+      "84",
+      "74",
+      "94",
+      "19"
+    ],
+    "options_ar": [
+      "٨٤",
+      "٧٤",
+      "٩٤",
+      "١٩"
+    ],
+    "correct_answer": "84",
+    "correct_answer_ar": "٨٤",
+    "category": "Multiplication",
+    "category_ar": "ضرب",
+    "difficulty": 2,
+    "fun_fact": "Cupcakes were first baked in America around 1796!",
+    "fun_fact_ar": "خُبز أول كب كيك في أمريكا حوالي عام ١٧٩٦!"
+  },
+  {
+    "id": "mwp_m_012",
+    "question": "Mohammed has 96 candies. He shares with 8 friends equally. How many each?",
+    "question_ar": "لدى محمد ٩٦ حلوى. وزعها بالتساوي على ٨ أصدقاء. كم لكل واحد؟",
+    "options": [
+      "12",
+      "11",
+      "13",
+      "88"
+    ],
+    "options_ar": [
+      "١٢",
+      "١١",
+      "١٣",
+      "٨٨"
+    ],
+    "correct_answer": "12",
+    "correct_answer_ar": "١٢",
+    "category": "Division",
+    "category_ar": "قسمة",
+    "difficulty": 2,
+    "fun_fact": "Sharing makes friendships sweeter!",
+    "fun_fact_ar": "المشاركة تجعل الصداقات أحلى!"
+  },
+  {
+    "id": "mwp_m_013",
+    "question": "Sara walks 4 km, runs 6 km, then bikes 8 km. Total distance?",
+    "question_ar": "تمشي سارة ٤ كم وتجري ٦ كم ثم تركب الدراجة ٨ كم. المسافة الكلية؟",
+    "options": [
+      "18",
+      "16",
+      "20",
+      "10"
+    ],
+    "options_ar": [
+      "١٨",
+      "١٦",
+      "٢٠",
+      "١٠"
+    ],
+    "correct_answer": "18",
+    "correct_answer_ar": "١٨",
+    "category": "Measurement",
+    "category_ar": "قياس",
+    "difficulty": 2,
+    "fun_fact": "A kilometer is 1,000 meters!",
+    "fun_fact_ar": "الكيلومتر يساوي ١٠٠٠ متر!"
+  },
+  {
+    "id": "mwp_m_014",
+    "question": "Ahmed studies 45 minutes daily. How long after 6 days?",
+    "question_ar": "يدرس أحمد ٤٥ دقيقة يوميًا. كم دقيقة بعد ٦ أيام؟",
+    "options": [
+      "270",
+      "240",
+      "300",
+      "51"
+    ],
+    "options_ar": [
+      "٢٧٠",
+      "٢٤٠",
+      "٣٠٠",
+      "٥١"
+    ],
+    "correct_answer": "270",
+    "correct_answer_ar": "٢٧٠",
+    "category": "Time",
+    "category_ar": "وقت",
+    "difficulty": 2,
+    "fun_fact": "An hour has 60 minutes.",
+    "fun_fact_ar": "الساعة تحتوي على ٦٠ دقيقة."
+  },
+  {
+    "id": "mwp_m_015",
+    "question": "Layla has 11 boxes with 9 erasers each. How many erasers total?",
+    "question_ar": "لدى ليلى ١١ صندوقًا فيها ٩ ممحاة لكل صندوق. كم ممحاة؟",
+    "options": [
+      "99",
+      "89",
+      "109",
+      "20"
+    ],
+    "options_ar": [
+      "٩٩",
+      "٨٩",
+      "١٠٩",
+      "٢٠"
+    ],
+    "correct_answer": "99",
+    "correct_answer_ar": "٩٩",
+    "category": "Multiplication",
+    "category_ar": "ضرب",
+    "difficulty": 2,
+    "fun_fact": "Erasers were invented in 1770.",
+    "fun_fact_ar": "اختُرعت الممحاة عام ١٧٧٠."
+  },
+  {
+    "id": "mwp_m_016",
+    "question": "Mohammed has a square garden with side 9 m. What is the perimeter?",
+    "question_ar": "لدى محمد حديقة مربعة طول ضلعها ٩ أمتار. ما المحيط؟",
+    "options": [
+      "36",
+      "27",
+      "81",
+      "18"
+    ],
+    "options_ar": [
+      "٣٦",
+      "٢٧",
+      "٨١",
+      "١٨"
+    ],
+    "correct_answer": "36",
+    "correct_answer_ar": "٣٦",
+    "category": "Geometry",
+    "category_ar": "هندسة",
+    "difficulty": 2,
+    "fun_fact": "Perimeter is the total distance around a shape.",
+    "fun_fact_ar": "المحيط هو المسافة الكاملة حول الشكل."
+  },
+  {
+    "id": "mwp_m_017",
+    "question": "Sara buys 4 toys at 18 riyals each. How much in total?",
+    "question_ar": "تشتري سارة ٤ ألعاب بسعر ١٨ ريالًا لكل واحدة. كم الإجمالي؟",
+    "options": [
+      "72",
+      "62",
+      "82",
+      "22"
+    ],
+    "options_ar": [
+      "٧٢",
+      "٦٢",
+      "٨٢",
+      "٢٢"
+    ],
+    "correct_answer": "72",
+    "correct_answer_ar": "٧٢",
+    "category": "Money",
+    "category_ar": "نقود",
+    "difficulty": 2,
+    "fun_fact": "Multiplication helps with quick shopping math.",
+    "fun_fact_ar": "الضرب يساعد في حسابات التسوق السريعة."
+  },
+  {
+    "id": "mwp_m_018",
+    "question": "Ahmed scores 7 goals in each of 8 games. How many goals total?",
+    "question_ar": "سجل أحمد ٧ أهداف في كل من ٨ مباريات. كم هدفًا في المجموع؟",
+    "options": [
+      "56",
+      "54",
+      "63",
+      "15"
+    ],
+    "options_ar": [
+      "٥٦",
+      "٥٤",
+      "٦٣",
+      "١٥"
+    ],
+    "correct_answer": "56",
+    "correct_answer_ar": "٥٦",
+    "category": "Multiplication",
+    "category_ar": "ضرب",
+    "difficulty": 2,
+    "fun_fact": "Practice every day to score more goals!",
+    "fun_fact_ar": "تدرب يوميًا لتسجل أهدافًا أكثر!"
+  },
+  {
+    "id": "mwp_m_019",
+    "question": "Layla had 60 grapes. She ate 25 then her brother ate 10. Left?",
+    "question_ar": "كان لدى ليلى ٦٠ حبة عنب. أكلت ٢٥ ثم أكل أخوها ١٠. كم تبقى؟",
+    "options": [
+      "25",
+      "20",
+      "30",
+      "35"
+    ],
+    "options_ar": [
+      "٢٥",
+      "٢٠",
+      "٣٠",
+      "٣٥"
+    ],
+    "correct_answer": "25",
+    "correct_answer_ar": "٢٥",
+    "category": "Subtraction",
+    "category_ar": "طرح",
+    "difficulty": 2,
+    "fun_fact": "Track each step in two-step problems.",
+    "fun_fact_ar": "تتبع كل خطوة في المسائل ذات الخطوتين."
+  },
+  {
+    "id": "mwp_m_020",
+    "question": "Mohammed needs 100 cm of ribbon. He has 35 cm. How much more?",
+    "question_ar": "يحتاج محمد ١٠٠ سم من الشريط. لديه ٣٥ سم. كم يحتاج أيضًا؟",
+    "options": [
+      "65",
+      "55",
+      "75",
+      "135"
+    ],
+    "options_ar": [
+      "٦٥",
+      "٥٥",
+      "٧٥",
+      "١٣٥"
+    ],
+    "correct_answer": "65",
+    "correct_answer_ar": "٦٥",
+    "category": "Measurement",
+    "category_ar": "قياس",
+    "difficulty": 2,
+    "fun_fact": "100 centimeters equals one meter.",
+    "fun_fact_ar": "١٠٠ سنتيمتر تساوي مترًا واحدًا."
+  },
+  {
+    "id": "mwp_h_001",
+    "question": "Sara has 240 candies. She gives 1/4 to her brother. How many left?",
+    "question_ar": "لدى سارة ٢٤٠ حلوى. أعطت ربعها لأخيها. كم تبقى؟",
+    "options": [
+      "180",
+      "160",
+      "200",
+      "60"
+    ],
+    "options_ar": [
+      "١٨٠",
+      "١٦٠",
+      "٢٠٠",
+      "٦٠"
+    ],
+    "correct_answer": "180",
+    "correct_answer_ar": "١٨٠",
+    "category": "Fractions",
+    "category_ar": "كسور",
+    "difficulty": 3,
+    "fun_fact": "A fraction shows part of a whole.",
+    "fun_fact_ar": "الكسر يمثل جزءًا من الكل."
+  },
+  {
+    "id": "mwp_h_002",
+    "question": "Ahmed scores 80% on a 50-question test. How many correct?",
+    "question_ar": "حصل أحمد على ٨٠% في اختبار من ٥٠ سؤالًا. كم إجابة صحيحة؟",
+    "options": [
+      "40",
+      "35",
+      "45",
+      "30"
+    ],
+    "options_ar": [
+      "٤٠",
+      "٣٥",
+      "٤٥",
+      "٣٠"
+    ],
+    "correct_answer": "40",
+    "correct_answer_ar": "٤٠",
+    "category": "Percentages",
+    "category_ar": "نسب مئوية",
+    "difficulty": 3,
+    "fun_fact": "Percent means 'per hundred'.",
+    "fun_fact_ar": "النسبة المئوية تعني 'لكل مئة'."
+  },
+  {
+    "id": "mwp_h_003",
+    "question": "Layla saves 150 riyals. She spends 2/5 on books. How much left?",
+    "question_ar": "ادخرت ليلى ١٥٠ ريالًا. أنفقت خمسيها على الكتب. كم تبقى؟",
+    "options": [
+      "90",
+      "60",
+      "100",
+      "120"
+    ],
+    "options_ar": [
+      "٩٠",
+      "٦٠",
+      "١٠٠",
+      "١٢٠"
+    ],
+    "correct_answer": "90",
+    "correct_answer_ar": "٩٠",
+    "category": "Fractions",
+    "category_ar": "كسور",
+    "difficulty": 3,
+    "fun_fact": "Fractions help us share things fairly.",
+    "fun_fact_ar": "الكسور تساعدنا على المشاركة بإنصاف."
+  },
+  {
+    "id": "mwp_h_004",
+    "question": "Mohammed had 200 stickers. He gave 25% to Sara. How many remain?",
+    "question_ar": "كان لدى محمد ٢٠٠ ملصق. أعطى ٢٥% منها لسارة. كم تبقى؟",
+    "options": [
+      "150",
+      "125",
+      "175",
+      "50"
+    ],
+    "options_ar": [
+      "١٥٠",
+      "١٢٥",
+      "١٧٥",
+      "٥٠"
+    ],
+    "correct_answer": "150",
+    "correct_answer_ar": "١٥٠",
+    "category": "Percentages",
+    "category_ar": "نسب مئوية",
+    "difficulty": 3,
+    "fun_fact": "25% is the same as one quarter.",
+    "fun_fact_ar": "٢٥% تساوي ربعًا واحدًا."
+  },
+  {
+    "id": "mwp_h_005",
+    "question": "Sara buys 12 boxes of 30 markers. She loses 24. How many remain?",
+    "question_ar": "تشتري سارة ١٢ صندوقًا فيها ٣٠ قلم تلوين. فقدت ٢٤. كم تبقى؟",
+    "options": [
+      "336",
+      "326",
+      "346",
+      "360"
+    ],
+    "options_ar": [
+      "٣٣٦",
+      "٣٢٦",
+      "٣٤٦",
+      "٣٦٠"
+    ],
+    "correct_answer": "336",
+    "correct_answer_ar": "٣٣٦",
+    "category": "Multiplication",
+    "category_ar": "ضرب",
+    "difficulty": 3,
+    "fun_fact": "Multi-step problems test all your skills!",
+    "fun_fact_ar": "المسائل متعددة الخطوات تختبر كل مهاراتك!"
+  },
+  {
+    "id": "mwp_h_006",
+    "question": "Ahmed runs 1/3 of 450 m. How many meters did he run?",
+    "question_ar": "جرى أحمد ثلث ٤٥٠ مترًا. كم مترًا جرى؟",
+    "options": [
+      "150",
+      "120",
+      "180",
+      "100"
+    ],
+    "options_ar": [
+      "١٥٠",
+      "١٢٠",
+      "١٨٠",
+      "١٠٠"
+    ],
+    "correct_answer": "150",
+    "correct_answer_ar": "١٥٠",
+    "category": "Fractions",
+    "category_ar": "كسور",
+    "difficulty": 3,
+    "fun_fact": "1/3 means one out of three equal parts.",
+    "fun_fact_ar": "الثلث يعني جزءًا من ثلاثة أجزاء متساوية."
+  },
+  {
+    "id": "mwp_h_007",
+    "question": "Layla earns 500 riyals. She saves 60% of it. How much saved?",
+    "question_ar": "تكسب ليلى ٥٠٠ ريال وتدخر ٦٠% منها. كم ادخرت؟",
+    "options": [
+      "300",
+      "250",
+      "350",
+      "200"
+    ],
+    "options_ar": [
+      "٣٠٠",
+      "٢٥٠",
+      "٣٥٠",
+      "٢٠٠"
+    ],
+    "correct_answer": "300",
+    "correct_answer_ar": "٣٠٠",
+    "category": "Percentages",
+    "category_ar": "نسب مئوية",
+    "difficulty": 3,
+    "fun_fact": "Saving 60% is a great financial habit!",
+    "fun_fact_ar": "ادخار ٦٠% عادة مالية رائعة!"
+  },
+  {
+    "id": "mwp_h_008",
+    "question": "Mohammed has 360 marbles split equally into 8 boxes. Per box?",
+    "question_ar": "لدى محمد ٣٦٠ كرة موزعة بالتساوي في ٨ صناديق. كم في كل صندوق؟",
+    "options": [
+      "45",
+      "40",
+      "50",
+      "352"
+    ],
+    "options_ar": [
+      "٤٥",
+      "٤٠",
+      "٥٠",
+      "٣٥٢"
+    ],
+    "correct_answer": "45",
+    "correct_answer_ar": "٤٥",
+    "category": "Division",
+    "category_ar": "قسمة",
+    "difficulty": 3,
+    "fun_fact": "Long division takes patience and practice.",
+    "fun_fact_ar": "القسمة الطويلة تحتاج صبرًا وتدريبًا."
+  },
+  {
+    "id": "mwp_h_009",
+    "question": "Sara reads 3/4 of a 320-page book. How many pages read?",
+    "question_ar": "قرأت سارة ثلاثة أرباع كتاب من ٣٢٠ صفحة. كم صفحة قرأت؟",
+    "options": [
+      "240",
+      "220",
+      "260",
+      "80"
+    ],
+    "options_ar": [
+      "٢٤٠",
+      "٢٢٠",
+      "٢٦٠",
+      "٨٠"
+    ],
+    "correct_answer": "240",
+    "correct_answer_ar": "٢٤٠",
+    "category": "Fractions",
+    "category_ar": "كسور",
+    "difficulty": 3,
+    "fun_fact": "3/4 is more than half — it's most of it!",
+    "fun_fact_ar": "ثلاثة أرباع أكثر من النصف — معظمه!"
+  },
+  {
+    "id": "mwp_h_010",
+    "question": "Ahmed's rectangle field is 25 m by 16 m. What's the area?",
+    "question_ar": "حقل أحمد المستطيل ٢٥ مترًا في ١٦ مترًا. ما المساحة؟",
+    "options": [
+      "400",
+      "390",
+      "410",
+      "82"
+    ],
+    "options_ar": [
+      "٤٠٠",
+      "٣٩٠",
+      "٤١٠",
+      "٨٢"
+    ],
+    "correct_answer": "400",
+    "correct_answer_ar": "٤٠٠",
+    "category": "Geometry",
+    "category_ar": "هندسة",
+    "difficulty": 3,
+    "fun_fact": "Area equals length times width.",
+    "fun_fact_ar": "المساحة تساوي الطول في العرض."
+  },
+  {
+    "id": "mwp_h_011",
+    "question": "Layla had 480 beads. She used 35% for a necklace. How many used?",
+    "question_ar": "كان لدى ليلى ٤٨٠ خرزة. استخدمت ٣٥% لقلادة. كم استخدمت؟",
+    "options": [
+      "168",
+      "158",
+      "178",
+      "312"
+    ],
+    "options_ar": [
+      "١٦٨",
+      "١٥٨",
+      "١٧٨",
+      "٣١٢"
+    ],
+    "correct_answer": "168",
+    "correct_answer_ar": "١٦٨",
+    "category": "Percentages",
+    "category_ar": "نسب مئوية",
+    "difficulty": 3,
+    "fun_fact": "Percentages are useful for sales and discounts.",
+    "fun_fact_ar": "النسب المئوية مفيدة للتخفيضات والعروض."
+  },
+  {
+    "id": "mwp_h_012",
+    "question": "Mohammed runs 12 laps daily. After 30 days, how many laps?",
+    "question_ar": "يجري محمد ١٢ لفة يوميًا. بعد ٣٠ يومًا، كم لفة؟",
+    "options": [
+      "360",
+      "350",
+      "370",
+      "42"
+    ],
+    "options_ar": [
+      "٣٦٠",
+      "٣٥٠",
+      "٣٧٠",
+      "٤٢"
+    ],
+    "correct_answer": "360",
+    "correct_answer_ar": "٣٦٠",
+    "category": "Multiplication",
+    "category_ar": "ضرب",
+    "difficulty": 3,
+    "fun_fact": "Consistency leads to big results!",
+    "fun_fact_ar": "الاستمرارية تؤدي إلى نتائج كبيرة!"
+  },
+  {
+    "id": "mwp_h_013",
+    "question": "Sara mixed 250 ml juice and 150 ml water. What total in liters?",
+    "question_ar": "خلطت سارة ٢٥٠ مل عصير و ١٥٠ مل ماء. ما المجموع باللتر؟",
+    "options": [
+      "0.4",
+      "0.04",
+      "4",
+      "0.5"
+    ],
+    "options_ar": [
+      "٠٫٤",
+      "٠٫٠٤",
+      "٤",
+      "٠٫٥"
+    ],
+    "correct_answer": "0.4",
+    "correct_answer_ar": "٠٫٤",
+    "category": "Measurement",
+    "category_ar": "قياس",
+    "difficulty": 3,
+    "fun_fact": "1000 milliliters make 1 liter.",
+    "fun_fact_ar": "١٠٠٠ ملليلتر تساوي لترًا واحدًا."
+  },
+  {
+    "id": "mwp_h_014",
+    "question": "Ahmed buys 8 books at 35 riyals. He pays with 300. Change?",
+    "question_ar": "يشتري أحمد ٨ كتب بسعر ٣٥ ريالًا للكتاب. دفع ٣٠٠. الباقي؟",
+    "options": [
+      "20",
+      "10",
+      "30",
+      "40"
+    ],
+    "options_ar": [
+      "٢٠",
+      "١٠",
+      "٣٠",
+      "٤٠"
+    ],
+    "correct_answer": "20",
+    "correct_answer_ar": "٢٠",
+    "category": "Money",
+    "category_ar": "نقود",
+    "difficulty": 3,
+    "fun_fact": "Multi-step money problems are everyday math.",
+    "fun_fact_ar": "مسائل المال متعددة الخطوات رياضيات يومية."
+  },
+  {
+    "id": "mwp_h_015",
+    "question": "Layla studies 90 min daily for 5 days. How many hours total?",
+    "question_ar": "تدرس ليلى ٩٠ دقيقة يوميًا لمدة ٥ أيام. كم ساعة في المجموع؟",
+    "options": [
+      "7.5",
+      "6.5",
+      "8.5",
+      "450"
+    ],
+    "options_ar": [
+      "٧٫٥",
+      "٦٫٥",
+      "٨٫٥",
+      "٤٥٠"
+    ],
+    "correct_answer": "7.5",
+    "correct_answer_ar": "٧٫٥",
+    "category": "Time",
+    "category_ar": "وقت",
+    "difficulty": 3,
+    "fun_fact": "60 minutes equal 1 hour.",
+    "fun_fact_ar": "٦٠ دقيقة تساوي ساعة واحدة."
+  },
+  {
+    "id": "mwp_h_016",
+    "question": "Mohammed has 5/6 of 300 stamps. How many stamps?",
+    "question_ar": "لدى محمد خمسة أسداس من ٣٠٠ طابع. كم طابعًا؟",
+    "options": [
+      "250",
+      "240",
+      "260",
+      "50"
+    ],
+    "options_ar": [
+      "٢٥٠",
+      "٢٤٠",
+      "٢٦٠",
+      "٥٠"
+    ],
+    "correct_answer": "250",
+    "correct_answer_ar": "٢٥٠",
+    "category": "Fractions",
+    "category_ar": "كسور",
+    "difficulty": 3,
+    "fun_fact": "Fractions appear everywhere — pizza, pies, time!",
+    "fun_fact_ar": "الكسور موجودة في كل مكان — البيتزا والفطائر والوقت!"
+  },
+  {
+    "id": "mwp_h_017",
+    "question": "Sara's triangle has sides 12, 15, and 18 cm. Perimeter?",
+    "question_ar": "مثلث سارة أضلاعه ١٢ و ١٥ و ١٨ سم. ما المحيط؟",
+    "options": [
+      "45",
+      "40",
+      "50",
+      "30"
+    ],
+    "options_ar": [
+      "٤٥",
+      "٤٠",
+      "٥٠",
+      "٣٠"
+    ],
+    "correct_answer": "45",
+    "correct_answer_ar": "٤٥",
+    "category": "Geometry",
+    "category_ar": "هندسة",
+    "difficulty": 3,
+    "fun_fact": "Triangle perimeter is sum of all three sides.",
+    "fun_fact_ar": "محيط المثلث هو مجموع أضلاعه الثلاثة."
+  },
+  {
+    "id": "mwp_h_018",
+    "question": "Ahmed had 400 cards. He gave 30% to Mohammed. How many remain?",
+    "question_ar": "كان لدى أحمد ٤٠٠ بطاقة. أعطى ٣٠% لمحمد. كم تبقى؟",
+    "options": [
+      "280",
+      "260",
+      "300",
+      "120"
+    ],
+    "options_ar": [
+      "٢٨٠",
+      "٢٦٠",
+      "٣٠٠",
+      "١٢٠"
+    ],
+    "correct_answer": "280",
+    "correct_answer_ar": "٢٨٠",
+    "category": "Percentages",
+    "category_ar": "نسب مئوية",
+    "difficulty": 3,
+    "fun_fact": "30% off is a common discount in stores.",
+    "fun_fact_ar": "خصم ٣٠% تخفيض شائع في المتاجر."
+  },
+  {
+    "id": "mwp_h_019",
+    "question": "Layla bought 6 packs of 24 stickers. She used 1/3. How many used?",
+    "question_ar": "اشترت ليلى ٦ عبوات فيها ٢٤ ملصقًا. استخدمت ثلثها. كم استخدمت؟",
+    "options": [
+      "48",
+      "42",
+      "54",
+      "96"
+    ],
+    "options_ar": [
+      "٤٨",
+      "٤٢",
+      "٥٤",
+      "٩٦"
+    ],
+    "correct_answer": "48",
+    "correct_answer_ar": "٤٨",
+    "category": "Fractions",
+    "category_ar": "كسور",
+    "difficulty": 3,
+    "fun_fact": "Multi-step problems combine many skills.",
+    "fun_fact_ar": "المسائل متعددة الخطوات تجمع مهارات عديدة."
+  },
+  {
+    "id": "mwp_h_020",
+    "question": "Mohammed bikes 18 km/h for 2.5 hours. How many km traveled?",
+    "question_ar": "يركب محمد دراجته بسرعة ١٨ كم/ساعة لمدة ٢.٥ ساعة. كم كم قطع؟",
+    "options": [
+      "45",
+      "40",
+      "50",
+      "20.5"
+    ],
+    "options_ar": [
+      "٤٥",
+      "٤٠",
+      "٥٠",
+      "٢٠٫٥"
+    ],
+    "correct_answer": "45",
+    "correct_answer_ar": "٤٥",
+    "category": "Measurement",
+    "category_ar": "قياس",
+    "difficulty": 3,
+    "fun_fact": "Distance equals speed times time!",
+    "fun_fact_ar": "المسافة تساوي السرعة في الزمن!"
+  }
+]

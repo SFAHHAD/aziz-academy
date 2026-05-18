@@ -1,6 +1,6 @@
 # أكاديمية عزيز — Aziz Academy
 
-> An interactive educational app for kids aged 8–12: geography, flags, maps, logos, math, and sciences — with achievements and daily streaks.
+> An interactive educational app for kids aged 6–12: 130+ bilingual (Arabic/English) activities across geography, math, sciences, Islamic content, brain training, and early-elementary learning — with achievements and daily streaks. Live at https://aziz-academy.com.
 
 ---
 
@@ -10,23 +10,27 @@
 
 ## Modules
 
-| Module | Route | Description |
-|--------|-------|-------------|
-| **Capitals** | `/capitals` | Match countries to capitals |
-| **Flags** | `/flags` | Guess the country from the flag |
-| **Maps** | `/maps` | Explore continents and map quizzes |
-| **Logos** | `/logos` | Recognise brand logos |
-| **Sciences** | `/sciences` | Science & discovery questions |
-| **Math** | `/math` | Arithmetic challenges |
-| **Trophy room** | `/trophy` | Badges and cups (قاعة الكؤوس) |
-| **Privacy** | `/privacy` | Summary for parents (Arabic) |
+The full activity catalog lives in `lib/features/home/activity_catalog.dart`
+(131 entries as of v1.1.97) and the live sitemap at `web/sitemap.xml`
+(137 crawlable URLs). Highlights:
+
+| Category | Examples |
+|----------|----------|
+| **Learn** | Capitals, Flags, Maps, Logos, Sciences, Math Quiz |
+| **Words** | Spelling, Hangman, Crossword, Word Search, Arabic Alphabet, English Alphabet |
+| **Math (KG–G3)** | Number Bonds (Make 10 / 20), Place Value, Skip Counting, Shapes Basics, Times Tables, Fractions, Mental Math |
+| **Brain** | IQ Challenge, Sudoku, Memory Match, Mastermind, Maze Runner, Schulte, Stroop |
+| **Action** | Snake, Brick Breaker, Bubble Pop, Whack-a-Mole, Tetris-lite, many more |
+| **Versus** | Pass-and-Play, Tic-Tac-Toe, Connect 4, Battleship, Reversi |
+| **Islamic** | 15 short Surahs (real-reciter audio via EveryAyah CDN), Hadith, 99 Names, Prophet Stories, Du'a, Athkar, Tasbih, Tajweed Basics, Prayer Times |
+| **Tools** | Trophy Room, Parent Dashboard, Self-Audit Admin (hidden), Privacy, About |
 
 ## Tech stack
 
 - **Flutter** (Dart ^3.11)
 - **State:** Riverpod
 - **Navigation:** GoRouter
-- **Localisation:** `flutter gen-l10n` (Arabic is the default runtime locale in `main.dart`; English ARBs remain for future use)
+- **Localisation:** `flutter gen-l10n` (full bilingual AR/EN, RTL-aware, locale persisted via `localeProvider`)
 - **Persistence:** SharedPreferences (achievements, streaks, quiz stats)
 - **Maps:** flutter_map + latlong2
 - **Audio / TTS:** audioplayers, flutter_tts

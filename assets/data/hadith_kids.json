@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "hdt_e_001",
+    "question": "Complete the hadith: 'None of you truly believes until ___'",
+    "question_ar": "أكمل الحديث: 'لا يؤمن أحدكم حتى ___'",
+    "options": [
+      "he loves for his brother what he loves for himself",
+      "he prays five times a day",
+      "he memorizes the whole Qur'an",
+      "he travels to Makkah"
+    ],
+    "options_ar": [
+      "يحب لأخيه ما يحب لنفسه",
+      "يصلي خمس مرات في اليوم",
+      "يحفظ القرآن كله",
+      "يسافر إلى مكة"
+    ],
+    "correct_answer": "he loves for his brother what he loves for himself",
+    "correct_answer_ar": "يحب لأخيه ما يحب لنفسه",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 1,
+    "fun_fact": "This famous hadith is reported in Sahih al-Bukhari and Sahih Muslim, narrated by Anas ibn Malik.",
+    "fun_fact_ar": "هذا الحديث المشهور رواه البخاري ومسلم عن أنس بن مالك رضي الله عنه."
+  },
+  {
+    "id": "hdt_e_002",
+    "question": "The Prophet Muhammad ﷺ said: 'Smiling at your brother is ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'تبسمك في وجه أخيك ___'",
+    "options": [
+      "charity",
+      "a duty",
+      "a sign of weakness",
+      "forbidden"
+    ],
+    "options_ar": [
+      "صدقة",
+      "واجب",
+      "علامة ضعف",
+      "حرام"
+    ],
+    "correct_answer": "charity",
+    "correct_answer_ar": "صدقة",
+    "category": "Charity",
+    "category_ar": "الصدقة",
+    "difficulty": 1,
+    "fun_fact": "Reported by al-Tirmidhi and graded sahih, this hadith shows that even small kind acts count as sadaqah.",
+    "fun_fact_ar": "رواه الترمذي وصححه، ويبين أن أصغر الأعمال الطيبة تُعد صدقة."
+  },
+  {
+    "id": "hdt_e_003",
+    "question": "What did the Prophet Muhammad ﷺ teach us to say before eating?",
+    "question_ar": "ماذا علمنا النبي محمد ﷺ أن نقول قبل الأكل؟",
+    "options": [
+      "Bismillah",
+      "Alhamdulillah",
+      "Subhanallah",
+      "Astaghfirullah"
+    ],
+    "options_ar": [
+      "بسم الله",
+      "الحمد لله",
+      "سبحان الله",
+      "أستغفر الله"
+    ],
+    "correct_answer": "Bismillah",
+    "correct_answer_ar": "بسم الله",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 1,
+    "fun_fact": "Reported by Abu Dawud and al-Tirmidhi, the Prophet ﷺ taught Umar ibn Abi Salamah to say Bismillah and eat with the right hand.",
+    "fun_fact_ar": "روى أبو داود والترمذي أن النبي ﷺ علّم عمر بن أبي سلمة أن يسمي الله ويأكل بيمينه."
+  },
+  {
+    "id": "hdt_e_004",
+    "question": "Complete the hadith: 'The strong person is not the one who wrestles others; the strong is the one who ___'",
+    "question_ar": "أكمل الحديث: 'ليس الشديد بالصُّرَعة، إنما الشديد ___'",
+    "options": [
+      "controls himself when angry",
+      "lifts heavy weights",
+      "runs the fastest",
+      "speaks the loudest"
+    ],
+    "options_ar": [
+      "الذي يملك نفسه عند الغضب",
+      "الذي يرفع الأوزان الثقيلة",
+      "الذي يجري بأسرع ما يمكن",
+      "الذي يتكلم بأعلى صوت"
+    ],
+    "correct_answer": "controls himself when angry",
+    "correct_answer_ar": "الذي يملك نفسه عند الغضب",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 1,
+    "fun_fact": "Found in Sahih al-Bukhari and Sahih Muslim, this hadith teaches that real strength is self-control.",
+    "fun_fact_ar": "ورد في صحيح البخاري ومسلم، ويعلمنا أن القوة الحقيقية هي ضبط النفس."
+  },
+  {
+    "id": "hdt_e_005",
+    "question": "The Prophet Muhammad ﷺ said: 'Cleanliness is ___ of faith.'",
+    "question_ar": "قال النبي محمد ﷺ: 'الطهور ___ الإيمان.'",
+    "options": [
+      "half",
+      "a quarter",
+      "the whole",
+      "a small part"
+    ],
+    "options_ar": [
+      "شطر",
+      "ربع",
+      "كل",
+      "جزء صغير من"
+    ],
+    "correct_answer": "half",
+    "correct_answer_ar": "شطر",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 1,
+    "fun_fact": "Reported by Muslim from Abu Malik al-Ash'ari, this hadith shows how important purity is in Islam.",
+    "fun_fact_ar": "رواه مسلم عن أبي مالك الأشعري، ويُظهر مكانة الطهارة في الإسلام."
+  },
+  {
+    "id": "hdt_e_006",
+    "question": "The Prophet Muhammad ﷺ said: 'He who does not show mercy to others, ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'من لا يَرحم ___'",
+    "options": [
+      "will not be shown mercy",
+      "will be left alone",
+      "will lose his money",
+      "will not enter the masjid"
+    ],
+    "options_ar": [
+      "لا يُرحَم",
+      "يُترَك وحده",
+      "يفقد ماله",
+      "لا يدخل المسجد"
+    ],
+    "correct_answer": "will not be shown mercy",
+    "correct_answer_ar": "لا يُرحَم",
+    "category": "Mercy",
+    "category_ar": "الرحمة",
+    "difficulty": 1,
+    "fun_fact": "Reported in Sahih al-Bukhari and Sahih Muslim, this hadith shows that mercy is rewarded with mercy.",
+    "fun_fact_ar": "ورد في صحيح البخاري ومسلم، ويعلمنا أن الرحمة تُجازى بالرحمة."
+  },
+  {
+    "id": "hdt_e_007",
+    "question": "Based on the hadith of good speech, what should we do if we have nothing kind to say?",
+    "question_ar": "بناءً على حديث الكلام الطيب، ماذا نفعل إذا لم يكن لدينا كلام طيب نقوله؟",
+    "options": [
+      "stay silent",
+      "shout loudly",
+      "say anything",
+      "criticize others"
+    ],
+    "options_ar": [
+      "نسكت",
+      "نصرخ بصوت عالٍ",
+      "نقول أي شيء",
+      "ننتقد الآخرين"
+    ],
+    "correct_answer": "stay silent",
+    "correct_answer_ar": "نسكت",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 1,
+    "fun_fact": "The Prophet ﷺ said: 'Whoever believes in Allah and the Last Day, let him say good or stay silent.' (Bukhari and Muslim)",
+    "fun_fact_ar": "قال النبي ﷺ: 'من كان يؤمن بالله واليوم الآخر فليقل خيرًا أو ليصمت.' (رواه البخاري ومسلم)"
+  },
+  {
+    "id": "hdt_e_008",
+    "question": "Which hand did the Prophet Muhammad ﷺ teach us to eat with?",
+    "question_ar": "بأي يد علمنا النبي محمد ﷺ أن نأكل؟",
+    "options": [
+      "the right hand",
+      "the left hand",
+      "either hand",
+      "both hands together"
+    ],
+    "options_ar": [
+      "اليد اليمنى",
+      "اليد اليسرى",
+      "أي يد",
+      "كلتا اليدين معًا"
+    ],
+    "correct_answer": "the right hand",
+    "correct_answer_ar": "اليد اليمنى",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 1,
+    "fun_fact": "Reported by Bukhari and Muslim, the Prophet ﷺ said: 'When one of you eats, let him eat with his right hand.'",
+    "fun_fact_ar": "روى البخاري ومسلم أن النبي ﷺ قال: 'إذا أكل أحدكم فليأكل بيمينه.'"
+  },
+  {
+    "id": "hdt_e_009",
+    "question": "The Prophet Muhammad ﷺ said: 'Paradise is at the feet of ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'الجنة تحت أقدام ___'",
+    "options": [
+      "mothers",
+      "kings",
+      "scholars",
+      "warriors"
+    ],
+    "options_ar": [
+      "الأمهات",
+      "الملوك",
+      "العلماء",
+      "المحاربين"
+    ],
+    "correct_answer": "mothers",
+    "correct_answer_ar": "الأمهات",
+    "category": "Family",
+    "category_ar": "الأسرة",
+    "difficulty": 1,
+    "fun_fact": "This well-known meaning is reported by al-Nasa'i and shows the high status mothers have in Islam.",
+    "fun_fact_ar": "هذا المعنى المشهور رواه النسائي ويُظهر علو منزلة الأم في الإسلام."
+  },
+  {
+    "id": "hdt_e_010",
+    "question": "What did the Prophet Muhammad ﷺ teach us to say when we sneeze?",
+    "question_ar": "ماذا علمنا النبي محمد ﷺ أن نقول عندما نعطس؟",
+    "options": [
+      "Alhamdulillah",
+      "Bismillah",
+      "Subhanallah",
+      "Allahu Akbar"
+    ],
+    "options_ar": [
+      "الحمد لله",
+      "بسم الله",
+      "سبحان الله",
+      "الله أكبر"
+    ],
+    "correct_answer": "Alhamdulillah",
+    "correct_answer_ar": "الحمد لله",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 1,
+    "fun_fact": "Reported in Sahih al-Bukhari from Abu Hurairah, the Prophet ﷺ said: 'When one of you sneezes, let him say Alhamdulillah.'",
+    "fun_fact_ar": "روى البخاري عن أبي هريرة أن النبي ﷺ قال: 'إذا عطس أحدكم فليقل: الحمد لله.'"
+  },
+  {
+    "id": "hdt_e_011",
+    "question": "Is this an authentic hadith: 'Seeking knowledge is an obligation upon every Muslim'?",
+    "question_ar": "هل هذا حديث صحيح: 'طلب العلم فريضة على كل مسلم'؟",
+    "options": [
+      "Yes, narrated by Ibn Majah",
+      "No, it is fabricated",
+      "No, it is from the Qur'an",
+      "Yes, but only for adults"
+    ],
+    "options_ar": [
+      "نعم، رواه ابن ماجه",
+      "لا، إنه موضوع",
+      "لا، إنه من القرآن",
+      "نعم، لكن للكبار فقط"
+    ],
+    "correct_answer": "Yes, narrated by Ibn Majah",
+    "correct_answer_ar": "نعم، رواه ابن ماجه",
+    "category": "Knowledge",
+    "category_ar": "العلم",
+    "difficulty": 1,
+    "fun_fact": "Narrated by Ibn Majah from Anas ibn Malik and graded hasan by scholars, this hadith makes learning a duty.",
+    "fun_fact_ar": "رواه ابن ماجه عن أنس بن مالك وحسّنه العلماء، ويجعل طلب العلم واجبًا."
+  },
+  {
+    "id": "hdt_e_012",
+    "question": "Complete the hadith: 'The truthful one is with the prophets and ___ on the Day of Judgement.'",
+    "question_ar": "أكمل الحديث: 'الصادق مع النبيين و___ يوم القيامة.'",
+    "options": [
+      "the righteous",
+      "the rich",
+      "the rulers",
+      "the warriors"
+    ],
+    "options_ar": [
+      "الصالحين",
+      "الأغنياء",
+      "الحكام",
+      "المحاربين"
+    ],
+    "correct_answer": "the righteous",
+    "correct_answer_ar": "الصالحين",
+    "category": "Truthfulness",
+    "category_ar": "الصدق",
+    "difficulty": 1,
+    "fun_fact": "Based on the hadith reported by Bukhari and Muslim that truthfulness leads to righteousness and to Paradise.",
+    "fun_fact_ar": "مستند إلى الحديث الذي رواه البخاري ومسلم أن الصدق يهدي إلى البر وإلى الجنة."
+  },
+  {
+    "id": "hdt_e_013",
+    "question": "The Prophet Muhammad ﷺ said: 'The best of you is the one who is best to ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'خيركم خيركم ___'",
+    "options": [
+      "his family",
+      "strangers",
+      "his enemies",
+      "merchants"
+    ],
+    "options_ar": [
+      "لأهله",
+      "للغرباء",
+      "لأعدائه",
+      "للتجار"
+    ],
+    "correct_answer": "his family",
+    "correct_answer_ar": "لأهله",
+    "category": "Family",
+    "category_ar": "الأسرة",
+    "difficulty": 1,
+    "fun_fact": "Reported by al-Tirmidhi from Aisha and graded sahih, this teaches kindness begins at home.",
+    "fun_fact_ar": "رواه الترمذي عن عائشة وصححه، ويُعلمنا أن الإحسان يبدأ بالأهل."
+  },
+  {
+    "id": "hdt_e_014",
+    "question": "Based on the hadith of greetings, what should we say when we meet a Muslim?",
+    "question_ar": "بناءً على حديث السلام، ماذا نقول عند لقاء المسلم؟",
+    "options": [
+      "Assalamu Alaikum",
+      "Marhaban",
+      "Hello there",
+      "Sabah al-khair"
+    ],
+    "options_ar": [
+      "السلام عليكم",
+      "مرحبًا",
+      "أهلاً",
+      "صباح الخير"
+    ],
+    "correct_answer": "Assalamu Alaikum",
+    "correct_answer_ar": "السلام عليكم",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 1,
+    "fun_fact": "Reported in Sahih al-Bukhari, the Prophet ﷺ taught us to spread the salam to whoever we meet.",
+    "fun_fact_ar": "روى البخاري أن النبي ﷺ علمنا أن نُفشي السلام لمن لقينا ومن لم نلقَ."
+  },
+  {
+    "id": "hdt_e_015",
+    "question": "The Prophet Muhammad ﷺ said: 'A Muslim is the brother of ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'المسلم أخو ___'",
+    "options": [
+      "the Muslim",
+      "every person",
+      "his neighbor only",
+      "his teacher"
+    ],
+    "options_ar": [
+      "المسلم",
+      "كل الناس",
+      "جاره فقط",
+      "معلمه"
+    ],
+    "correct_answer": "the Muslim",
+    "correct_answer_ar": "المسلم",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 1,
+    "fun_fact": "Reported by Bukhari and Muslim, this teaches that Muslims should treat each other like family.",
+    "fun_fact_ar": "رواه البخاري ومسلم، ويُعلمنا أن يعامل المسلمون بعضهم كالإخوة."
+  },
+  {
+    "id": "hdt_e_016",
+    "question": "What did the Prophet Muhammad ﷺ teach us to do before sleeping?",
+    "question_ar": "ماذا علمنا النبي محمد ﷺ أن نفعل قبل النوم؟",
+    "options": [
+      "remember Allah and make du'a",
+      "watch a long story",
+      "play outside",
+      "eat a big meal"
+    ],
+    "options_ar": [
+      "نذكر الله وندعو",
+      "نشاهد قصة طويلة",
+      "نلعب خارجًا",
+      "نأكل وجبة كبيرة"
+    ],
+    "correct_answer": "remember Allah and make du'a",
+    "correct_answer_ar": "نذكر الله وندعو",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 1,
+    "fun_fact": "Reported in Sahih al-Bukhari, the Prophet ﷺ would say: 'Bismika Allahumma amutu wa ahya' before sleep.",
+    "fun_fact_ar": "روى البخاري أن النبي ﷺ كان يقول قبل النوم: 'باسمك اللهم أموت وأحيا.'"
+  },
+  {
+    "id": "hdt_e_017",
+    "question": "Pick the meaning: The Prophet Muhammad ﷺ said the believer is like a date palm. What does this mean?",
+    "question_ar": "اختر المعنى: قال النبي محمد ﷺ المؤمن كالنخلة. ماذا يعني هذا؟",
+    "options": [
+      "all of the believer is beneficial",
+      "the believer is tall",
+      "the believer eats dates only",
+      "the believer lives in the desert"
+    ],
+    "options_ar": [
+      "كل المؤمن نافع",
+      "المؤمن طويل",
+      "المؤمن يأكل التمر فقط",
+      "المؤمن يعيش في الصحراء"
+    ],
+    "correct_answer": "all of the believer is beneficial",
+    "correct_answer_ar": "كل المؤمن نافع",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 1,
+    "fun_fact": "Reported in Sahih al-Bukhari from Ibn Umar, every part of a believer brings goodness, like every part of the palm.",
+    "fun_fact_ar": "روى البخاري عن ابن عمر، فكل جزء من المؤمن يأتي بخير كأجزاء النخلة."
+  },
+  {
+    "id": "hdt_e_018",
+    "question": "The Prophet Muhammad ﷺ said: 'Religion is ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'الدين ___'",
+    "options": [
+      "sincere advice",
+      "long stories",
+      "many travels",
+      "rich gifts"
+    ],
+    "options_ar": [
+      "النصيحة",
+      "القصص الطويلة",
+      "الأسفار الكثيرة",
+      "الهدايا الغنية"
+    ],
+    "correct_answer": "sincere advice",
+    "correct_answer_ar": "النصيحة",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 1,
+    "fun_fact": "Reported by Muslim from Tamim al-Dari, this short hadith is one of the famous Forty Hadith of al-Nawawi.",
+    "fun_fact_ar": "رواه مسلم عن تميم الداري، وهو من الأحاديث الأربعين النووية المشهورة."
+  },
+  {
+    "id": "hdt_e_019",
+    "question": "Based on the hadith of cleanliness, what should we do before praying?",
+    "question_ar": "بناءً على حديث الطهارة، ماذا نفعل قبل الصلاة؟",
+    "options": [
+      "make wudu",
+      "eat first",
+      "sleep a little",
+      "speak a lot"
+    ],
+    "options_ar": [
+      "نتوضأ",
+      "نأكل أولاً",
+      "ننام قليلاً",
+      "نتكلم كثيرًا"
+    ],
+    "correct_answer": "make wudu",
+    "correct_answer_ar": "نتوضأ",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 1,
+    "fun_fact": "Reported in Sahih al-Bukhari, the Prophet ﷺ said: 'Allah does not accept prayer without purification.'",
+    "fun_fact_ar": "روى البخاري أن النبي ﷺ قال: 'لا يقبل الله صلاة بغير طهور.'"
+  },
+  {
+    "id": "hdt_e_020",
+    "question": "What did the Prophet Muhammad ﷺ love to be called?",
+    "question_ar": "ما الاسم الذي كان النبي محمد ﷺ يحب أن يُنادى به؟",
+    "options": [
+      "Servant of Allah and His Messenger",
+      "King of the Arabs",
+      "Master of the worlds",
+      "Greatest of mankind"
+    ],
+    "options_ar": [
+      "عبد الله ورسوله",
+      "ملك العرب",
+      "سيد العالمين",
+      "أعظم البشر"
+    ],
+    "correct_answer": "Servant of Allah and His Messenger",
+    "correct_answer_ar": "عبد الله ورسوله",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 1,
+    "fun_fact": "Reported by al-Bukhari, the Prophet ﷺ said: 'I am only a servant, so call me the servant of Allah and His Messenger.'",
+    "fun_fact_ar": "روى البخاري أن النبي ﷺ قال: 'إنما أنا عبد، فقولوا: عبد الله ورسوله.'"
+  },
+  {
+    "id": "hdt_m_001",
+    "question": "Complete the hadith: 'Actions are only by ___'",
+    "question_ar": "أكمل الحديث: 'إنما الأعمال ___'",
+    "options": [
+      "intentions",
+      "results",
+      "appearances",
+      "rewards"
+    ],
+    "options_ar": [
+      "بالنيات",
+      "بالنتائج",
+      "بالمظاهر",
+      "بالمكافآت"
+    ],
+    "correct_answer": "intentions",
+    "correct_answer_ar": "بالنيات",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 2,
+    "fun_fact": "Narrated by Umar ibn al-Khattab and reported in Bukhari and Muslim, this is the first hadith in al-Nawawi's collection.",
+    "fun_fact_ar": "رواه عمر بن الخطاب وأخرجه البخاري ومسلم، وهو أول حديث في الأربعين النووية."
+  },
+  {
+    "id": "hdt_m_002",
+    "question": "The Prophet Muhammad ﷺ said: 'The believer does not ___ or curse, nor is he obscene.'",
+    "question_ar": "قال النبي محمد ﷺ: 'ليس المؤمن ___ ولا اللعان ولا الفاحش ولا البذيء.'",
+    "options": [
+      "by the slanderer",
+      "by the worker",
+      "by the traveller",
+      "by the buyer"
+    ],
+    "options_ar": [
+      "بالطعان",
+      "بالعامل",
+      "بالمسافر",
+      "بالمشتري"
+    ],
+    "correct_answer": "by the slanderer",
+    "correct_answer_ar": "بالطعان",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 2,
+    "fun_fact": "Reported by al-Tirmidhi and graded sahih, narrated by Abdullah ibn Mas'ud.",
+    "fun_fact_ar": "رواه الترمذي وصححه، عن عبد الله بن مسعود رضي الله عنه."
+  },
+  {
+    "id": "hdt_m_003",
+    "question": "The Prophet Muhammad ﷺ said: 'The best of people are those who ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'خير الناس ___'",
+    "options": [
+      "are most beneficial to people",
+      "have the most money",
+      "live the longest",
+      "speak the most"
+    ],
+    "options_ar": [
+      "أنفعهم للناس",
+      "أكثرهم مالاً",
+      "أطولهم عمرًا",
+      "أكثرهم كلامًا"
+    ],
+    "correct_answer": "are most beneficial to people",
+    "correct_answer_ar": "أنفعهم للناس",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 2,
+    "fun_fact": "Reported by al-Tabarani and graded hasan, this hadith encourages us to help others.",
+    "fun_fact_ar": "رواه الطبراني وحسّنه العلماء، ويُحفّزنا على نفع الناس."
+  },
+  {
+    "id": "hdt_m_004",
+    "question": "Pick the meaning: The Prophet Muhammad ﷺ said two blessings many people lose. What are they?",
+    "question_ar": "اختر المعنى: قال النبي محمد ﷺ نعمتان مغبون فيهما كثير من الناس. ما هما؟",
+    "options": [
+      "health and free time",
+      "money and houses",
+      "food and water",
+      "friends and family"
+    ],
+    "options_ar": [
+      "الصحة والفراغ",
+      "المال والبيوت",
+      "الطعام والماء",
+      "الأصدقاء والعائلة"
+    ],
+    "correct_answer": "health and free time",
+    "correct_answer_ar": "الصحة والفراغ",
+    "category": "Knowledge",
+    "category_ar": "العلم",
+    "difficulty": 2,
+    "fun_fact": "Reported in Sahih al-Bukhari from Ibn Abbas, this teaches us to use our time and health wisely.",
+    "fun_fact_ar": "روى البخاري عن ابن عباس، ويُعلمنا أن نستغل الوقت والصحة بحكمة."
+  },
+  {
+    "id": "hdt_m_005",
+    "question": "Complete the hadith: 'Whoever believes in Allah and the Last Day, let him honor ___'",
+    "question_ar": "أكمل الحديث: 'من كان يؤمن بالله واليوم الآخر فليكرم ___'",
+    "options": [
+      "his neighbor",
+      "his money",
+      "his clothes",
+      "his books"
+    ],
+    "options_ar": [
+      "جاره",
+      "ماله",
+      "ثيابه",
+      "كتبه"
+    ],
+    "correct_answer": "his neighbor",
+    "correct_answer_ar": "جاره",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 2,
+    "fun_fact": "Reported in Bukhari and Muslim from Abu Hurairah, this hadith joins faith with kindness to neighbors.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن أبي هريرة، ويربط بين الإيمان والإحسان إلى الجار."
+  },
+  {
+    "id": "hdt_m_006",
+    "question": "The Prophet Muhammad ﷺ said: 'The believers in their love and mercy are like ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'مَثَل المؤمنين في توادهم وتراحمهم مثل ___'",
+    "options": [
+      "one body",
+      "a tall mountain",
+      "a flowing river",
+      "a flying bird"
+    ],
+    "options_ar": [
+      "الجسد الواحد",
+      "الجبل الشامخ",
+      "النهر الجاري",
+      "الطائر المحلق"
+    ],
+    "correct_answer": "one body",
+    "correct_answer_ar": "الجسد الواحد",
+    "category": "Mercy",
+    "category_ar": "الرحمة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Sahih Muslim from al-Nu'man ibn Bashir, when one part hurts the whole body suffers.",
+    "fun_fact_ar": "رواه مسلم عن النعمان بن بشير، إذا اشتكى عضو تداعى له سائر الجسد."
+  },
+  {
+    "id": "hdt_m_007",
+    "question": "Based on the hadith about parents, what is the most loved deed to Allah after prayer?",
+    "question_ar": "بناءً على الحديث عن الوالدين، ما أحب الأعمال إلى الله بعد الصلاة؟",
+    "options": [
+      "kindness to parents",
+      "fasting all year",
+      "giving lots of gold",
+      "travelling far"
+    ],
+    "options_ar": [
+      "بر الوالدين",
+      "الصيام طوال السنة",
+      "بذل الذهب الكثير",
+      "السفر البعيد"
+    ],
+    "correct_answer": "kindness to parents",
+    "correct_answer_ar": "بر الوالدين",
+    "category": "Family",
+    "category_ar": "الأسرة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Bukhari and Muslim from Ibn Mas'ud, when he asked the Prophet ﷺ about the most loved deeds.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن ابن مسعود حين سأل النبي ﷺ عن أحب الأعمال."
+  },
+  {
+    "id": "hdt_m_008",
+    "question": "The Prophet Muhammad ﷺ said: 'Whoever conceals a Muslim, Allah will ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'من ستر مسلمًا ___'",
+    "options": [
+      "conceal him on the Day of Judgement",
+      "give him a big house",
+      "make him very rich",
+      "make him sleep peacefully"
+    ],
+    "options_ar": [
+      "ستره الله يوم القيامة",
+      "أعطاه بيتًا كبيرًا",
+      "جعله غنيًا جدًا",
+      "جعله ينام بهدوء"
+    ],
+    "correct_answer": "conceal him on the Day of Judgement",
+    "correct_answer_ar": "ستره الله يوم القيامة",
+    "category": "Mercy",
+    "category_ar": "الرحمة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Sahih Muslim from Abu Hurairah, this teaches us not to expose the faults of others.",
+    "fun_fact_ar": "رواه مسلم عن أبي هريرة، ويُعلمنا ألا نكشف عيوب الآخرين."
+  },
+  {
+    "id": "hdt_m_009",
+    "question": "Is this an authentic hadith: 'The seeker of knowledge is in the path of Allah until he returns'?",
+    "question_ar": "هل هذا حديث صحيح: 'طالب العلم في سبيل الله حتى يرجع'؟",
+    "options": [
+      "Yes, narrated by al-Tirmidhi as hasan",
+      "No, it is fabricated",
+      "Yes, but only in Sahih Muslim",
+      "No, it is a poem"
+    ],
+    "options_ar": [
+      "نعم، رواه الترمذي وحسّنه",
+      "لا، إنه موضوع",
+      "نعم، لكن في صحيح مسلم فقط",
+      "لا، إنه شعر"
+    ],
+    "correct_answer": "Yes, narrated by al-Tirmidhi as hasan",
+    "correct_answer_ar": "نعم، رواه الترمذي وحسّنه",
+    "category": "Knowledge",
+    "category_ar": "العلم",
+    "difficulty": 2,
+    "fun_fact": "Reported by al-Tirmidhi from Anas ibn Malik and graded hasan, it shows the high status of seeking knowledge.",
+    "fun_fact_ar": "رواه الترمذي عن أنس بن مالك وحسّنه، ويُظهر مكانة طالب العلم."
+  },
+  {
+    "id": "hdt_m_010",
+    "question": "Complete the hadith: 'A good word is ___'",
+    "question_ar": "أكمل الحديث: 'الكلمة الطيبة ___'",
+    "options": [
+      "a charity",
+      "a sword",
+      "a key only",
+      "a small thing"
+    ],
+    "options_ar": [
+      "صدقة",
+      "سيف",
+      "مفتاح فقط",
+      "شيء صغير"
+    ],
+    "correct_answer": "a charity",
+    "correct_answer_ar": "صدقة",
+    "category": "Charity",
+    "category_ar": "الصدقة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Bukhari and Muslim from Abu Hurairah, kind words are counted as sadaqah.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن أبي هريرة، فالكلمات الطيبة تُحتسب صدقة."
+  },
+  {
+    "id": "hdt_m_011",
+    "question": "The Prophet Muhammad ﷺ said: 'Whoever guides someone to good has the reward like ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'من دل على خير فله ___'",
+    "options": [
+      "the one who does it",
+      "half of the doer",
+      "double the doer",
+      "no reward at all"
+    ],
+    "options_ar": [
+      "مثل أجر فاعله",
+      "نصف أجر فاعله",
+      "ضعف أجر فاعله",
+      "لا أجر له"
+    ],
+    "correct_answer": "the one who does it",
+    "correct_answer_ar": "مثل أجر فاعله",
+    "category": "Knowledge",
+    "category_ar": "العلم",
+    "difficulty": 2,
+    "fun_fact": "Reported in Sahih Muslim from Abu Mas'ud al-Ansari, encouraging us to share goodness.",
+    "fun_fact_ar": "رواه مسلم عن أبي مسعود الأنصاري، ويُحثّنا على نشر الخير."
+  },
+  {
+    "id": "hdt_m_012",
+    "question": "Pick the meaning: The Prophet Muhammad ﷺ said angels surround a gathering of dhikr. What does dhikr mean?",
+    "question_ar": "اختر المعنى: قال النبي محمد ﷺ تحف الملائكة مجلس الذكر. ما معنى الذكر؟",
+    "options": [
+      "remembering Allah",
+      "remembering history",
+      "telling stories",
+      "writing letters"
+    ],
+    "options_ar": [
+      "ذكر الله",
+      "ذكر التاريخ",
+      "رواية القصص",
+      "كتابة الرسائل"
+    ],
+    "correct_answer": "remembering Allah",
+    "correct_answer_ar": "ذكر الله",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Sahih Muslim from Abu Hurairah, angels search for circles where Allah is remembered.",
+    "fun_fact_ar": "رواه مسلم عن أبي هريرة، فالملائكة تبحث عن مجالس ذكر الله."
+  },
+  {
+    "id": "hdt_m_013",
+    "question": "The Prophet Muhammad ﷺ said: 'Three du'as are answered without doubt: the oppressed, the traveller, and ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'ثلاث دعوات مستجابات لا شك فيهن: المظلوم، المسافر، و___'",
+    "options": [
+      "the parent for his child",
+      "the rich for himself",
+      "the strong soldier",
+      "the sleeping person"
+    ],
+    "options_ar": [
+      "الوالد على ولده",
+      "الغني لنفسه",
+      "الجندي القوي",
+      "النائم"
+    ],
+    "correct_answer": "the parent for his child",
+    "correct_answer_ar": "الوالد على ولده",
+    "category": "Family",
+    "category_ar": "الأسرة",
+    "difficulty": 2,
+    "fun_fact": "Reported by Abu Dawud and al-Tirmidhi from Abu Hurairah, this shows the power of a parent's du'a.",
+    "fun_fact_ar": "رواه أبو داود والترمذي عن أبي هريرة، ويُظهر قوة دعوة الوالد."
+  },
+  {
+    "id": "hdt_m_014",
+    "question": "Based on the hadith of charity, even removing harm from the road counts as what?",
+    "question_ar": "بناءً على حديث الصدقة، حتى إزالة الأذى عن الطريق تُعتبر ماذا؟",
+    "options": [
+      "sadaqah",
+      "a small game",
+      "a duty for guards only",
+      "an old custom"
+    ],
+    "options_ar": [
+      "صدقة",
+      "لعبة صغيرة",
+      "واجب على الحراس فقط",
+      "عادة قديمة"
+    ],
+    "correct_answer": "sadaqah",
+    "correct_answer_ar": "صدقة",
+    "category": "Charity",
+    "category_ar": "الصدقة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Bukhari and Muslim, every joint of the body owes sadaqah every day; removing harm counts.",
+    "fun_fact_ar": "رواه البخاري ومسلم، فعلى كل سلامى من الإنسان صدقة كل يوم، وإماطة الأذى منها."
+  },
+  {
+    "id": "hdt_m_015",
+    "question": "The Prophet Muhammad ﷺ said: 'He who relieves a hardship for a believer, Allah will ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'من نفّس عن مؤمن كربة ___'",
+    "options": [
+      "relieve a hardship of his on the Day of Judgement",
+      "give him a great horse",
+      "make his hair long",
+      "feed him daily"
+    ],
+    "options_ar": [
+      "نفّس الله عنه كربة يوم القيامة",
+      "أعطاه فرسًا عظيمًا",
+      "جعل شعره طويلاً",
+      "أطعمه كل يوم"
+    ],
+    "correct_answer": "relieve a hardship of his on the Day of Judgement",
+    "correct_answer_ar": "نفّس الله عنه كربة يوم القيامة",
+    "category": "Mercy",
+    "category_ar": "الرحمة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Sahih Muslim from Abu Hurairah, helping others in need brings divine help in return.",
+    "fun_fact_ar": "رواه مسلم عن أبي هريرة، ومن أعان غيره أعانه الله سبحانه."
+  },
+  {
+    "id": "hdt_m_016",
+    "question": "Complete the hadith: 'The best charity is that given when ___'",
+    "question_ar": "أكمل الحديث: 'أفضل الصدقة ___'",
+    "options": [
+      "you are healthy and want wealth",
+      "you have nothing left",
+      "people are watching",
+      "you are sleeping"
+    ],
+    "options_ar": [
+      "أن تتصدق وأنت صحيح شحيح",
+      "أن تتصدق وليس لديك شيء",
+      "أن يراك الناس",
+      "وأنت نائم"
+    ],
+    "correct_answer": "you are healthy and want wealth",
+    "correct_answer_ar": "أن تتصدق وأنت صحيح شحيح",
+    "category": "Charity",
+    "category_ar": "الصدقة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Bukhari and Muslim from Abu Hurairah, sincere giving while strong is best.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن أبي هريرة، فالعطاء وأنت قوي محتاج للمال هو الأفضل."
+  },
+  {
+    "id": "hdt_m_017",
+    "question": "The Prophet Muhammad ﷺ said: 'Whoever lies on me deliberately, let him ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'من كذب عليّ متعمدًا فليتبوأ ___'",
+    "options": [
+      "take his seat in the Fire",
+      "leave the masjid",
+      "sit at the back",
+      "stop teaching"
+    ],
+    "options_ar": [
+      "مقعده من النار",
+      "يخرج من المسجد",
+      "يجلس في الخلف",
+      "يترك التعليم"
+    ],
+    "correct_answer": "take his seat in the Fire",
+    "correct_answer_ar": "مقعده من النار",
+    "category": "Truthfulness",
+    "category_ar": "الصدق",
+    "difficulty": 2,
+    "fun_fact": "Reported in Bukhari and Muslim, this is a strong warning to never make up sayings of the Prophet ﷺ.",
+    "fun_fact_ar": "رواه البخاري ومسلم، وهو تحذير شديد من اختلاق الأحاديث على النبي ﷺ."
+  },
+  {
+    "id": "hdt_m_018",
+    "question": "The Prophet Muhammad ﷺ said: 'A father gives his child no better gift than ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'ما نحل والد ولده من نحل أفضل من ___'",
+    "options": [
+      "good manners",
+      "many toys",
+      "a big house",
+      "fine clothes"
+    ],
+    "options_ar": [
+      "أدب حسن",
+      "ألعاب كثيرة",
+      "بيت كبير",
+      "ثياب فاخرة"
+    ],
+    "correct_answer": "good manners",
+    "correct_answer_ar": "أدب حسن",
+    "category": "Family",
+    "category_ar": "الأسرة",
+    "difficulty": 2,
+    "fun_fact": "Reported by al-Tirmidhi from Amr ibn Sa'id and graded hasan, this shows manners outweigh material gifts.",
+    "fun_fact_ar": "رواه الترمذي عن عمرو بن سعيد وحسّنه، ويُبيّن أن الأدب أعظم من الهدايا المادية."
+  },
+  {
+    "id": "hdt_m_019",
+    "question": "Pick the meaning: The Prophet Muhammad ﷺ said the upper hand is better than the lower hand. What does this mean?",
+    "question_ar": "اختر المعنى: قال النبي محمد ﷺ اليد العليا خير من اليد السفلى. ماذا يعني هذا؟",
+    "options": [
+      "the giver is better than the receiver",
+      "the right hand is better than the left",
+      "the strong hand is best",
+      "the clean hand is best"
+    ],
+    "options_ar": [
+      "المُعطي خير من الآخذ",
+      "اليمنى خير من اليسرى",
+      "اليد القوية أفضل",
+      "اليد النظيفة أفضل"
+    ],
+    "correct_answer": "the giver is better than the receiver",
+    "correct_answer_ar": "المُعطي خير من الآخذ",
+    "category": "Charity",
+    "category_ar": "الصدقة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Bukhari and Muslim from Hakim ibn Hizam, this hadith honors generosity.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن حكيم بن حزام، ويُكرّم العطاء والكرم."
+  },
+  {
+    "id": "hdt_m_020",
+    "question": "The Prophet Muhammad ﷺ said: 'Modesty is from ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'الحياء من ___'",
+    "options": [
+      "faith",
+      "habit",
+      "shyness only",
+      "old age"
+    ],
+    "options_ar": [
+      "الإيمان",
+      "العادة",
+      "الخجل فقط",
+      "الكبر في السن"
+    ],
+    "correct_answer": "faith",
+    "correct_answer_ar": "الإيمان",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 2,
+    "fun_fact": "Reported in Bukhari and Muslim from Ibn Umar, modesty (haya) is part of complete iman.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن ابن عمر، فالحياء جزء من كمال الإيمان."
+  },
+  {
+    "id": "hdt_h_001",
+    "question": "Complete the famous hadith of Jibril: 'Worship Allah as though ___'",
+    "question_ar": "أكمل حديث جبريل المشهور: 'أن تعبد الله كأنك ___'",
+    "options": [
+      "you see Him",
+      "you fear Him only",
+      "you hear Him",
+      "you teach Him"
+    ],
+    "options_ar": [
+      "تراه",
+      "تخافه فقط",
+      "تسمعه",
+      "تعلّمه"
+    ],
+    "correct_answer": "you see Him",
+    "correct_answer_ar": "تراه",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Sahih Muslim from Umar ibn al-Khattab, this defines ihsan: worshipping Allah with full awareness.",
+    "fun_fact_ar": "رواه مسلم عن عمر بن الخطاب، ويُعرّف الإحسان: عبادة الله بكامل المراقبة."
+  },
+  {
+    "id": "hdt_h_002",
+    "question": "The Prophet Muhammad ﷺ said the seven who will be shaded by Allah's shade. Who is one of them?",
+    "question_ar": "ذكر النبي محمد ﷺ السبعة الذين يظلهم الله في ظله. من أحدهم؟",
+    "options": [
+      "a youth who grew up worshipping Allah",
+      "a man who collected the most gold",
+      "a soldier who never lost a battle",
+      "a writer of poetry"
+    ],
+    "options_ar": [
+      "شاب نشأ في عبادة الله",
+      "رجل جمع أكثر الذهب",
+      "جندي لم يخسر معركة",
+      "شاعر يكتب الشعر"
+    ],
+    "correct_answer": "a youth who grew up worshipping Allah",
+    "correct_answer_ar": "شاب نشأ في عبادة الله",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Bukhari and Muslim from Abu Hurairah, the seven include the just leader and one who gives in secret.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن أبي هريرة، ومنهم الإمام العادل ومن تصدّق سرًا."
+  },
+  {
+    "id": "hdt_h_003",
+    "question": "Pick the meaning: The Prophet Muhammad ﷺ said two words light on the tongue but heavy on the scale. What are they?",
+    "question_ar": "اختر المعنى: قال النبي محمد ﷺ كلمتان خفيفتان على اللسان ثقيلتان في الميزان. ما هما؟",
+    "options": [
+      "Subhan Allah wa bihamdihi, Subhan Allah al-Azim",
+      "La ilaha illa Allah",
+      "Astaghfirullah wa atubu ilayh",
+      "Ya Hayyu Ya Qayyum"
+    ],
+    "options_ar": [
+      "سبحان الله وبحمده، سبحان الله العظيم",
+      "لا إله إلا الله",
+      "أستغفر الله وأتوب إليه",
+      "يا حي يا قيوم"
+    ],
+    "correct_answer": "Subhan Allah wa bihamdihi, Subhan Allah al-Azim",
+    "correct_answer_ar": "سبحان الله وبحمده، سبحان الله العظيم",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Bukhari and Muslim from Abu Hurairah, these short words bring great reward.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن أبي هريرة، وهما كلمتان قصيرتان عظيمتا الأجر."
+  },
+  {
+    "id": "hdt_h_004",
+    "question": "Is this an authentic hadith: 'Whoever fasts Ramadan with faith and seeking reward, his past sins will be forgiven'?",
+    "question_ar": "هل هذا حديث صحيح: 'من صام رمضان إيمانًا واحتسابًا غُفر له ما تقدّم من ذنبه'؟",
+    "options": [
+      "Yes, in Bukhari and Muslim",
+      "No, it is fabricated",
+      "Yes, only in Ibn Majah",
+      "No, it is from a poem"
+    ],
+    "options_ar": [
+      "نعم، في البخاري ومسلم",
+      "لا، إنه موضوع",
+      "نعم، في ابن ماجه فقط",
+      "لا، إنه من شعر"
+    ],
+    "correct_answer": "Yes, in Bukhari and Muslim",
+    "correct_answer_ar": "نعم، في البخاري ومسلم",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Bukhari and Muslim from Abu Hurairah, this hadith inspires sincere fasting.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن أبي هريرة، ويُحفّز على الصيام بإخلاص."
+  },
+  {
+    "id": "hdt_h_005",
+    "question": "Complete the hadith: 'The supplication of a Muslim for his brother in his absence is ___'",
+    "question_ar": "أكمل الحديث: 'دعوة المسلم لأخيه بظهر الغيب ___'",
+    "options": [
+      "answered",
+      "hidden",
+      "ignored",
+      "delayed"
+    ],
+    "options_ar": [
+      "مستجابة",
+      "مخفية",
+      "مهملة",
+      "مؤجلة"
+    ],
+    "correct_answer": "answered",
+    "correct_answer_ar": "مستجابة",
+    "category": "Mercy",
+    "category_ar": "الرحمة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Sahih Muslim from Abu al-Darda, the angel says: and for you the same.",
+    "fun_fact_ar": "رواه مسلم عن أبي الدرداء، ويقول الملك: ولك بمثل."
+  },
+  {
+    "id": "hdt_h_006",
+    "question": "The Prophet Muhammad ﷺ said: 'Whoever follows a path seeking knowledge, Allah makes easy for him ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'من سلك طريقًا يلتمس فيه علمًا سهل الله له به ___'",
+    "options": [
+      "a path to Paradise",
+      "a path to wealth",
+      "a path to fame",
+      "a path to power"
+    ],
+    "options_ar": [
+      "طريقًا إلى الجنة",
+      "طريقًا إلى الثروة",
+      "طريقًا إلى الشهرة",
+      "طريقًا إلى السلطة"
+    ],
+    "correct_answer": "a path to Paradise",
+    "correct_answer_ar": "طريقًا إلى الجنة",
+    "category": "Knowledge",
+    "category_ar": "العلم",
+    "difficulty": 3,
+    "fun_fact": "Reported in Sahih Muslim from Abu Hurairah, knowledge eases the path to Jannah.",
+    "fun_fact_ar": "رواه مسلم عن أبي هريرة، فالعلم يُيسّر الطريق إلى الجنة."
+  },
+  {
+    "id": "hdt_h_007",
+    "question": "Pick the meaning: The Prophet Muhammad ﷺ said the world is a prison for the believer. What does this mean?",
+    "question_ar": "اختر المعنى: قال النبي محمد ﷺ الدنيا سجن المؤمن. ماذا يعني هذا؟",
+    "options": [
+      "the believer is restrained from sins, his real reward is the Hereafter",
+      "the believer must live in jail",
+      "the believer cannot be happy",
+      "the believer must hide always"
+    ],
+    "options_ar": [
+      "المؤمن مقيد عن المعاصي وجزاؤه الحقيقي في الآخرة",
+      "المؤمن يعيش في سجن",
+      "لا يمكن للمؤمن أن يفرح",
+      "على المؤمن أن يختبئ دومًا"
+    ],
+    "correct_answer": "the believer is restrained from sins, his real reward is the Hereafter",
+    "correct_answer_ar": "المؤمن مقيد عن المعاصي وجزاؤه الحقيقي في الآخرة",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Sahih Muslim from Abu Hurairah, the world is small compared to the eternal Hereafter.",
+    "fun_fact_ar": "رواه مسلم عن أبي هريرة، فالدنيا قصيرة بجانب الآخرة الباقية."
+  },
+  {
+    "id": "hdt_h_008",
+    "question": "The Prophet Muhammad ﷺ said: 'Whoever takes care of an orphan and I will be in Paradise like ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'أنا وكافل اليتيم في الجنة ___'",
+    "options": [
+      "these two fingers",
+      "these two arms",
+      "two stars far apart",
+      "two clouds"
+    ],
+    "options_ar": [
+      "كهاتين",
+      "كذراعين",
+      "كنجمين متباعدين",
+      "كسحابتين"
+    ],
+    "correct_answer": "these two fingers",
+    "correct_answer_ar": "كهاتين",
+    "category": "Mercy",
+    "category_ar": "الرحمة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Sahih al-Bukhari from Sahl ibn Sa'd, the Prophet ﷺ pointed to his index and middle fingers.",
+    "fun_fact_ar": "رواه البخاري عن سهل بن سعد، وأشار النبي ﷺ بالسبابة والوسطى."
+  },
+  {
+    "id": "hdt_h_009",
+    "question": "Based on the hadith of the bedouin and the Bedouin's question, what are the pillars of Islam?",
+    "question_ar": "بناءً على حديث الأعرابي، ما أركان الإسلام؟",
+    "options": [
+      "shahadah, salah, zakah, sawm, hajj",
+      "iman, du'a, tawakkul, sabr",
+      "salah, zakah, jihad, hijrah",
+      "tawhid, ihsan, taqwa, shukr"
+    ],
+    "options_ar": [
+      "الشهادة والصلاة والزكاة والصيام والحج",
+      "الإيمان والدعاء والتوكل والصبر",
+      "الصلاة والزكاة والجهاد والهجرة",
+      "التوحيد والإحسان والتقوى والشكر"
+    ],
+    "correct_answer": "shahadah, salah, zakah, sawm, hajj",
+    "correct_answer_ar": "الشهادة والصلاة والزكاة والصيام والحج",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Bukhari and Muslim from Ibn Umar, this is the famous hadith of the five pillars.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن ابن عمر، وهو حديث أركان الإسلام الخمسة."
+  },
+  {
+    "id": "hdt_h_010",
+    "question": "The Prophet Muhammad ﷺ said: 'The deeds dearest to Allah are those done ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'أحب الأعمال إلى الله ___'",
+    "options": [
+      "regularly even if small",
+      "all at once",
+      "only on Fridays",
+      "only when seen"
+    ],
+    "options_ar": [
+      "أدومها وإن قل",
+      "كلها مرة واحدة",
+      "في الجمعة فقط",
+      "حين يراها الناس فقط"
+    ],
+    "correct_answer": "regularly even if small",
+    "correct_answer_ar": "أدومها وإن قل",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Bukhari and Muslim from Aisha, consistency is loved by Allah more than rare big efforts.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن عائشة، فالمداومة على العمل أحب من العمل الكبير النادر."
+  },
+  {
+    "id": "hdt_h_011",
+    "question": "Complete the hadith: 'A liar is taken further from his good in this world; truthfulness leads to ___'",
+    "question_ar": "أكمل الحديث: 'الكذب يُبعد المرء عن الخير، والصدق يهدي إلى ___'",
+    "options": [
+      "righteousness",
+      "long life",
+      "wealth",
+      "fame"
+    ],
+    "options_ar": [
+      "البر",
+      "طول العمر",
+      "الثراء",
+      "الشهرة"
+    ],
+    "correct_answer": "righteousness",
+    "correct_answer_ar": "البر",
+    "category": "Truthfulness",
+    "category_ar": "الصدق",
+    "difficulty": 3,
+    "fun_fact": "Based on the hadith in Bukhari and Muslim from Ibn Mas'ud: truthfulness leads to righteousness, which leads to Paradise.",
+    "fun_fact_ar": "مستند إلى حديث البخاري ومسلم عن ابن مسعود: الصدق يهدي إلى البر، والبر يهدي إلى الجنة."
+  },
+  {
+    "id": "hdt_h_012",
+    "question": "Pick the meaning: The Prophet Muhammad ﷺ said the believer's affair is wonderful. Why?",
+    "question_ar": "اختر المعنى: قال النبي محمد ﷺ عجبًا لأمر المؤمن. لماذا؟",
+    "options": [
+      "in ease he thanks, in hardship he is patient, both are good for him",
+      "he never feels sadness",
+      "he always becomes rich",
+      "he never gets sick"
+    ],
+    "options_ar": [
+      "في الرخاء يشكر، وفي الشدة يصبر، وكلاهما خير له",
+      "لا يحزن أبدًا",
+      "يصبح غنيًا دائمًا",
+      "لا يمرض أبدًا"
+    ],
+    "correct_answer": "in ease he thanks, in hardship he is patient, both are good for him",
+    "correct_answer_ar": "في الرخاء يشكر، وفي الشدة يصبر، وكلاهما خير له",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Sahih Muslim from Suhayb, all of the believer's life turns to khayr.",
+    "fun_fact_ar": "رواه مسلم عن صهيب، فحياة المؤمن كلها تتحول إلى خير."
+  },
+  {
+    "id": "hdt_h_013",
+    "question": "Based on the hadith of the prayer, what is the first deed a person will be questioned about on the Day of Judgement?",
+    "question_ar": "بناءً على حديث الصلاة، ما أول ما يُسأل عنه العبد يوم القيامة؟",
+    "options": [
+      "his prayer",
+      "his money",
+      "his work",
+      "his food"
+    ],
+    "options_ar": [
+      "صلاته",
+      "ماله",
+      "عمله",
+      "طعامه"
+    ],
+    "correct_answer": "his prayer",
+    "correct_answer_ar": "صلاته",
+    "category": "Worship",
+    "category_ar": "العبادة",
+    "difficulty": 3,
+    "fun_fact": "Reported by al-Tirmidhi and al-Nasa'i and graded sahih, narrated by Abu Hurairah.",
+    "fun_fact_ar": "رواه الترمذي والنسائي وصححاه، عن أبي هريرة رضي الله عنه."
+  },
+  {
+    "id": "hdt_h_014",
+    "question": "Is this an authentic hadith: 'The best of you are those best to their wives'?",
+    "question_ar": "هل هذا حديث صحيح: 'خيركم خيركم لأهله'؟",
+    "options": [
+      "Yes, narrated by al-Tirmidhi as sahih",
+      "No, it is weak",
+      "No, it contradicts the Qur'an",
+      "Yes, only by Ibn Majah weakly"
+    ],
+    "options_ar": [
+      "نعم، رواه الترمذي وصححه",
+      "لا، إنه ضعيف",
+      "لا، يخالف القرآن",
+      "نعم، رواه ابن ماجه بضعف فقط"
+    ],
+    "correct_answer": "Yes, narrated by al-Tirmidhi as sahih",
+    "correct_answer_ar": "نعم، رواه الترمذي وصححه",
+    "category": "Family",
+    "category_ar": "الأسرة",
+    "difficulty": 3,
+    "fun_fact": "Reported by al-Tirmidhi and Ibn Majah from Aisha and Abu Hurairah, graded sahih by scholars.",
+    "fun_fact_ar": "رواه الترمذي وابن ماجه عن عائشة وأبي هريرة، وصححه العلماء."
+  },
+  {
+    "id": "hdt_h_015",
+    "question": "The Prophet Muhammad ﷺ said: 'The most perfect of believers in faith are those ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'أكمل المؤمنين إيمانًا ___'",
+    "options": [
+      "best in character",
+      "longest in prayer",
+      "loudest in dhikr",
+      "tallest in body"
+    ],
+    "options_ar": [
+      "أحسنهم خلقًا",
+      "أطولهم صلاة",
+      "أعلاهم صوتًا في الذكر",
+      "أطولهم جسمًا"
+    ],
+    "correct_answer": "best in character",
+    "correct_answer_ar": "أحسنهم خلقًا",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 3,
+    "fun_fact": "Reported by al-Tirmidhi from Abu Hurairah and graded sahih, character is a measure of iman.",
+    "fun_fact_ar": "رواه الترمذي عن أبي هريرة وصححه، فالخلق ميزان للإيمان."
+  },
+  {
+    "id": "hdt_h_016",
+    "question": "Complete the hadith: 'Whoever does not thank people, does not ___'",
+    "question_ar": "أكمل الحديث: 'من لا يشكر الناس ___'",
+    "options": [
+      "thank Allah",
+      "see his family",
+      "earn money",
+      "get long life"
+    ],
+    "options_ar": [
+      "لا يشكر الله",
+      "يرى أهله",
+      "يكسب المال",
+      "يطول عمره"
+    ],
+    "correct_answer": "thank Allah",
+    "correct_answer_ar": "لا يشكر الله",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 3,
+    "fun_fact": "Reported by Abu Dawud and al-Tirmidhi from Abu Hurairah and graded sahih.",
+    "fun_fact_ar": "رواه أبو داود والترمذي عن أبي هريرة وصححاه."
+  },
+  {
+    "id": "hdt_h_017",
+    "question": "Pick the meaning: The Prophet Muhammad ﷺ said the upright Muslim is one whose hand and tongue are safe from harming others. What does this teach us?",
+    "question_ar": "اختر المعنى: قال النبي محمد ﷺ المسلم من سلم المسلمون من لسانه ويده. ماذا يُعلّمنا؟",
+    "options": [
+      "we must not hurt others by speech or action",
+      "we must travel to far lands",
+      "we must always carry a sword",
+      "we must speak in Arabic only"
+    ],
+    "options_ar": [
+      "ألا نؤذي غيرنا بالقول أو الفعل",
+      "أن نسافر إلى أراضٍ بعيدة",
+      "أن نحمل سيفًا دائمًا",
+      "أن نتكلم بالعربية فقط"
+    ],
+    "correct_answer": "we must not hurt others by speech or action",
+    "correct_answer_ar": "ألا نؤذي غيرنا بالقول أو الفعل",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 3,
+    "fun_fact": "Reported in Bukhari and Muslim from Abdullah ibn Amr, true Islam keeps others safe from us.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن عبد الله بن عمرو، فالإسلام الحق يجعل الناس آمنين منا."
+  },
+  {
+    "id": "hdt_h_018",
+    "question": "The Prophet Muhammad ﷺ said: 'Whoever recites one letter from the Book of Allah gets ___'",
+    "question_ar": "قال النبي محمد ﷺ: 'من قرأ حرفًا من كتاب الله فله ___'",
+    "options": [
+      "a good deed multiplied by ten",
+      "a small reward",
+      "only one good deed",
+      "a special gift"
+    ],
+    "options_ar": [
+      "حسنة والحسنة بعشر أمثالها",
+      "مكافأة صغيرة",
+      "حسنة واحدة فقط",
+      "هدية خاصة"
+    ],
+    "correct_answer": "a good deed multiplied by ten",
+    "correct_answer_ar": "حسنة والحسنة بعشر أمثالها",
+    "category": "Knowledge",
+    "category_ar": "العلم",
+    "difficulty": 3,
+    "fun_fact": "Reported by al-Tirmidhi from Abdullah ibn Mas'ud and graded sahih, each letter brings a tenfold reward.",
+    "fun_fact_ar": "رواه الترمذي عن عبد الله بن مسعود وصححه، فكل حرف بعشر حسنات."
+  },
+  {
+    "id": "hdt_h_019",
+    "question": "Based on the hadith of the seven destructive sins, what is the first one mentioned?",
+    "question_ar": "بناءً على حديث السبع الموبقات، ما أولها؟",
+    "options": [
+      "shirk with Allah",
+      "lying to parents",
+      "eating too much",
+      "sleeping during prayer"
+    ],
+    "options_ar": [
+      "الشرك بالله",
+      "الكذب على الوالدين",
+      "الإفراط في الأكل",
+      "النوم أثناء الصلاة"
+    ],
+    "correct_answer": "shirk with Allah",
+    "correct_answer_ar": "الشرك بالله",
+    "category": "Belief",
+    "category_ar": "العقيدة",
+    "difficulty": 3,
+    "fun_fact": "Reported in Bukhari and Muslim from Abu Hurairah, the seven major sins begin with shirk.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن أبي هريرة، فالسبع الموبقات تبدأ بالشرك بالله."
+  },
+  {
+    "id": "hdt_h_020",
+    "question": "Complete the closing of the famous hadith: 'Whoever believes in Allah and the Last Day, let him ___ his guest.'",
+    "question_ar": "أكمل ختام الحديث المشهور: 'من كان يؤمن بالله واليوم الآخر فليكرم ___'",
+    "options": [
+      "honor",
+      "ignore",
+      "test",
+      "follow"
+    ],
+    "options_ar": [
+      "ضيفه",
+      "يتجاهل ضيفه",
+      "يختبر ضيفه",
+      "يتبع ضيفه"
+    ],
+    "correct_answer": "honor",
+    "correct_answer_ar": "ضيفه",
+    "category": "Manners",
+    "category_ar": "الأخلاق",
+    "difficulty": 3,
+    "fun_fact": "Reported in Bukhari and Muslim from Abu Hurairah, faith is shown through hospitality and good speech.",
+    "fun_fact_ar": "رواه البخاري ومسلم عن أبي هريرة، فالإيمان يظهر بإكرام الضيف والكلام الطيب."
+  }
+]

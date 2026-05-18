@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:math' as math;
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
@@ -48,8 +49,8 @@ class DailyChallengeState {
 
   QuizQuestion? get currentQuestion =>
       status == QuizStatus.inProgress && currentIndex < questions.length
-          ? questions[currentIndex]
-          : null;
+      ? questions[currentIndex]
+      : null;
 
   /// Time remaining until reset (local midnight).
   static Duration timeUntilReset() {
@@ -78,8 +79,9 @@ class DailyChallengeState {
       score: score ?? this.score,
       livesRemaining: livesRemaining ?? this.livesRemaining,
       status: status ?? this.status,
-      lastAnswerCorrect:
-          clearLastAnswer ? null : (lastAnswerCorrect ?? this.lastAnswerCorrect),
+      lastAnswerCorrect: clearLastAnswer
+          ? null
+          : (lastAnswerCorrect ?? this.lastAnswerCorrect),
       xpEarned: xpEarned ?? this.xpEarned,
     );
   }
@@ -103,16 +105,16 @@ abstract final class _DCKeys {
 
 final dailyChallengeProvider =
     AsyncNotifierProvider<DailyChallengeNotifier, DailyChallengeState>(
-  DailyChallengeNotifier.new,
-  name: 'dailyChallengeProvider',
-);
+      DailyChallengeNotifier.new,
+      name: 'dailyChallengeProvider',
+    );
 
 class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
-  late SharedPreferences _prefs;
+  SharedPreferences? _prefs;
 
   @override
   Future<DailyChallengeState> build() async {
-    _prefs = await SharedPreferences.getInstance();
+    _prefs ??= await SharedPreferences.getInstance();
     return _loadOrGenerate();
   }
 
@@ -130,20 +132,23 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
   // ---------------------------------------------------------------------------
 
   Future<DailyChallengeState> _loadOrGenerate() async {
-    final storedDate = _prefs.getString(_DCKeys.date);
+    _prefs ??= await SharedPreferences.getInstance();
+    final storedDate = _prefs!.getString(_DCKeys.date);
     final today = _todayKey();
 
     if (storedDate == today) {
-      final qJson = _prefs.getString(_DCKeys.questions);
-      final completed = _prefs.getBool(_DCKeys.isCompleted) ?? false;
-      final savedScore = _prefs.getInt(_DCKeys.score) ?? 0;
-      final savedXp = _prefs.getInt(_DCKeys.xpEarned) ?? 0;
+      final qJson = _prefs!.getString(_DCKeys.questions);
+      final completed = _prefs!.getBool(_DCKeys.isCompleted) ?? false;
+      final savedScore = _prefs!.getInt(_DCKeys.score) ?? 0;
+      final savedXp = _prefs!.getInt(_DCKeys.xpEarned) ?? 0;
 
       if (qJson != null) {
         try {
           final qList = (jsonDecode(qJson) as List)
-              .map((e) =>
-                  QuizQuestion.fromJson(Map<String, dynamic>.from(e as Map)))
+              .map(
+                (e) =>
+                    QuizQuestion.fromJson(Map<String, dynamic>.from(e as Map)),
+              )
               .toList();
           return DailyChallengeState(
             dateKey: today,
@@ -153,7 +158,11 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
             status: completed ? QuizStatus.complete : QuizStatus.inProgress,
             xpEarned: savedXp,
           );
-        } catch (_) {}
+        } catch (e, st) {
+          debugPrint(
+            'DailyChallenge: failed to restore saved session: $e\n$st',
+          );
+        }
       }
     }
 
@@ -161,22 +170,20 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
   }
 
   Future<DailyChallengeState> _generateAndSave(String today) async {
+    _prefs ??= await SharedPreferences.getInstance();
     final questions = await _buildQuestions();
 
-    final s = DailyChallengeState(
-      dateKey: today,
-      questions: questions,
-    );
+    final s = DailyChallengeState(dateKey: today, questions: questions);
 
     await Future.wait([
-      _prefs.setString(_DCKeys.date, today),
-      _prefs.setString(
+      _prefs!.setString(_DCKeys.date, today),
+      _prefs!.setString(
         _DCKeys.questions,
         jsonEncode(questions.map((q) => q.toJson()).toList()),
       ),
-      _prefs.setBool(_DCKeys.isCompleted, false),
-      _prefs.setInt(_DCKeys.score, 0),
-      _prefs.setInt(_DCKeys.xpEarned, 0),
+      _prefs!.setBool(_DCKeys.isCompleted, false),
+      _prefs!.setInt(_DCKeys.score, 0),
+      _prefs!.setInt(_DCKeys.xpEarned, 0),
     ]);
 
     return s;
@@ -191,28 +198,36 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
       final all = await const CapitalsRepository().loadQuestions();
       all.shuffle(rng);
       pool.addAll(all.take(2));
-    } catch (_) {}
+    } catch (e) {
+      debugPrint('DailyChallenge: capitals load failed: $e');
+    }
 
     // 2 flags
     try {
       final all = await const FlagsRepository().loadQuestions();
       all.shuffle(rng);
       pool.addAll(all.take(2));
-    } catch (_) {}
+    } catch (e) {
+      debugPrint('DailyChallenge: flags load failed: $e');
+    }
 
     // 2 sciences
     try {
       final all = await const SciencesRepository().loadQuestions();
       all.shuffle(rng);
       pool.addAll(all.take(2));
-    } catch (_) {}
+    } catch (e) {
+      debugPrint('DailyChallenge: sciences load failed: $e');
+    }
 
     // 2 logos
     try {
       final all = await const LogosRepository().loadQuestions();
       all.shuffle(rng);
       pool.addAll(all.take(2));
-    } catch (_) {}
+    } catch (e) {
+      debugPrint('DailyChallenge: logos load failed: $e');
+    }
 
     // 2 math (generated inline)
     pool.addAll(_generateMathQs(2, rng));
@@ -249,7 +264,8 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
               if (entry.snapshotJson != null) {
                 q = QuizQuestion.fromJson(
                   Map<String, dynamic>.from(
-                      jsonDecode(entry.snapshotJson!) as Map),
+                    jsonDecode(entry.snapshotJson!) as Map,
+                  ),
                 );
               }
               break;
@@ -272,8 +288,7 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
               }
               break;
             case RecapModule.sciences:
-              final sciences =
-                  await const SciencesRepository().loadQuestions();
+              final sciences = await const SciencesRepository().loadQuestions();
               for (final c in sciences) {
                 if (c.id == entry.questionId) {
                   q = c;
@@ -284,7 +299,8 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
             case RecapModule.maps:
               break;
           }
-        } catch (_) {
+        } catch (e) {
+          debugPrint('DailyChallenge: recap lookup failed: $e');
           continue;
         }
         if (q != null && !pool.any((p) => p.id == q!.id)) {
@@ -293,7 +309,9 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
           injected++;
         }
       }
-    } catch (_) {}
+    } catch (e) {
+      debugPrint('DailyChallenge: recap injection failed: $e');
+    }
   }
 
   List<QuizQuestion> _generateMathQs(int count, math.Random rng) {
@@ -330,18 +348,18 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
         final fake = answer + offset;
         if (fake >= 0 && fake != answer) wrongSet.add(fake);
       }
-      final options = [
-        ...wrongSet.map((e) => e.toString()),
-        answer.toString(),
-      ]..shuffle(rng);
-      result.add(QuizQuestion(
-        id: 'dc_math_${i}_${rng.nextInt(9999)}',
-        question: '$a ${ops[opIdx]} $b = ؟',
-        options: options,
-        correctAnswer: answer.toString(),
-        category: 'math',
-        funFact: 'عمل رائع! الإجابة الصحيحة هي $answer.',
-      ));
+      final options = [...wrongSet.map((e) => e.toString()), answer.toString()]
+        ..shuffle(rng);
+      result.add(
+        QuizQuestion(
+          id: 'dc_math_${i}_${rng.nextInt(9999)}',
+          question: '$a ${ops[opIdx]} $b = ؟',
+          options: options,
+          correctAnswer: answer.toString(),
+          category: 'math',
+          funFact: 'عمل رائع! الإجابة الصحيحة هي $answer.',
+        ),
+      );
     }
     return result;
   }
@@ -351,6 +369,12 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
   // ---------------------------------------------------------------------------
 
   /// Submits an answer for the current question. Returns true if correct.
+  ///
+  /// Records score/lives/`lastAnswerCorrect` but does NOT advance the
+  /// question. Call [nextQuestion] when the reveal animation finishes,
+  /// otherwise the UI flashes the next question's correct answer during the
+  /// reveal window (the screen only knows about a single
+  /// `state.currentQuestion`, so advancing here would leak the next answer).
   bool answer(String choice) {
     final s = state.value;
     if (s == null || s.status != QuizStatus.inProgress) return false;
@@ -359,23 +383,40 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
 
     final correct = choice == q.correctAnswer;
     final newScore = correct ? s.score + 1 : s.score;
-    final newLives = (correct ? s.livesRemaining : s.livesRemaining - 1).clamp(0, 3);
-    final newIndex = s.currentIndex + 1;
-    final isDone = newIndex >= s.totalQuestions || newLives <= 0;
+    final newLives = (correct ? s.livesRemaining : s.livesRemaining - 1).clamp(
+      0,
+      3,
+    );
 
-    state = AsyncData(s.copyWith(
-      currentIndex: newIndex,
-      score: newScore,
-      livesRemaining: newLives,
-      status: isDone ? QuizStatus.complete : QuizStatus.inProgress,
-      lastAnswerCorrect: correct,
-    ));
+    state = AsyncData(
+      s.copyWith(
+        score: newScore,
+        livesRemaining: newLives,
+        lastAnswerCorrect: correct,
+      ),
+    );
 
     return correct;
   }
 
+  /// Advances to the next question, or marks the session complete if we've
+  /// run out of questions or lives.
+  void nextQuestion() {
+    final s = state.value;
+    if (s == null || s.status != QuizStatus.inProgress) return;
+    final newIndex = s.currentIndex + 1;
+    final isDone = newIndex >= s.totalQuestions || s.livesRemaining <= 0;
+    state = AsyncData(
+      s.copyWith(
+        currentIndex: newIndex,
+        status: isDone ? QuizStatus.complete : QuizStatus.inProgress,
+      ),
+    );
+  }
+
   /// Called when the session ends — persists completion, awards 2× XP.
   Future<int> complete() async {
+    _prefs ??= await SharedPreferences.getInstance();
     final s = state.value;
     if (s == null || s.isCompleted) return 0;
 
@@ -389,9 +430,9 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
     state = AsyncData(finished);
 
     await Future.wait([
-      _prefs.setBool(_DCKeys.isCompleted, true),
-      _prefs.setInt(_DCKeys.score, s.score),
-      _prefs.setInt(_DCKeys.xpEarned, doubleXp),
+      _prefs!.setBool(_DCKeys.isCompleted, true),
+      _prefs!.setInt(_DCKeys.score, s.score),
+      _prefs!.setInt(_DCKeys.xpEarned, doubleXp),
     ]);
 
     // Award 2× XP
@@ -407,7 +448,8 @@ class DailyChallengeNotifier extends AsyncNotifier<DailyChallengeState> {
 
   /// Force a regeneration (for debug / testing).
   Future<void> forceReset() async {
-    await _prefs.remove(_DCKeys.date);
+    _prefs ??= await SharedPreferences.getInstance();
+    await _prefs!.remove(_DCKeys.date);
     state = const AsyncLoading();
     state = await AsyncValue.guard(_loadOrGenerate);
   }

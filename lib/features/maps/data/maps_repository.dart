@@ -27,11 +27,13 @@ class MapEntry {
     return MapEntry(
       id: json['id'] as String,
       country: json['country'] as String,
-      countryAr: json['country_ar'] as String,
+      countryAr: json['country_ar'] as String? ?? json['country'] as String,
       lat: (json['lat'] as num).toDouble(),
       lng: (json['lng'] as num).toDouble(),
       continent: json['continent'] as String,
-      flagUrl: json['flag_emoji'] as String? ?? 'https://flagcdn.com/w160/${json['id'] as String}.png',
+      flagUrl:
+          json['flag_emoji'] as String? ??
+          'https://flagcdn.com/w160/${json['id'] as String}.png',
     );
   }
 }
@@ -41,37 +43,44 @@ class MapsRepository {
 
   static const _assetPath = 'assets/data/capitals.json';
 
-  Future<List<QuizQuestion>> loadQuestions() async {
+  Future<List<QuizQuestion>> loadQuestions({bool arabic = true}) async {
     try {
       final raw = await rootBundle.loadString(_assetPath);
       final List<dynamic> decoded = jsonDecode(raw) as List<dynamic>;
-      final parseList = decoded.map((e) => MapEntry.fromJson(e as Map<String, dynamic>)).toList();
-      
+      final parseList = decoded
+          .map((e) => MapEntry.fromJson(e as Map<String, dynamic>))
+          .toList();
+
       final random = math.Random();
       final List<QuizQuestion> questions = [];
-      
+
       for (final entry in parseList) {
+        final correctName = arabic ? entry.countryAr : entry.country;
         final wrongOptions = <String>{};
         while (wrongOptions.length < 3) {
           final candidate = parseList[random.nextInt(parseList.length)];
+          final candName = arabic ? candidate.countryAr : candidate.country;
           if (candidate.id != entry.id) {
-            wrongOptions.add(candidate.countryAr);
+            wrongOptions.add(candName);
           }
         }
-        
-        final options = [entry.countryAr, ...wrongOptions]..shuffle(random);
-        
-        questions.add(QuizQuestion(
-          id: entry.id,
-          question: 'ما اسم الدولة المشار إليها في الخريطة؟', // What is the name of the country pointed to on the map?
-          options: options,
-          correctAnswer: entry.countryAr,
-          category: entry.continent,
-          funFact: 'This is ${entry.countryAr}.', // Maybe add custom fun fact later
-          lat: entry.lat,
-          lng: entry.lng,
-          flagUrl: entry.flagUrl,
-        ));
+        final options = [correctName, ...wrongOptions]..shuffle(random);
+
+        questions.add(
+          QuizQuestion(
+            id: entry.id,
+            question: arabic
+                ? 'ما اسم الدولة المشار إليها في الخريطة؟'
+                : 'Which country is shown on the map?',
+            options: options,
+            correctAnswer: correctName,
+            category: entry.continent,
+            funFact: arabic ? 'هذه هي $correctName.' : 'This is $correctName.',
+            lat: entry.lat,
+            lng: entry.lng,
+            flagUrl: entry.flagUrl,
+          ),
+        );
       }
       return questions;
     } catch (e, st) {

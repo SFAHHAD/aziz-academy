@@ -47,7 +47,7 @@
   "heartsRefilled": "❤️ Hearts Refilled!",
   "@heartsRefilled": { "description": "Label when the heart-refill animation completes." },
 
-  "tryAgainNow": "Try Again Now →",
+  "tryAgainNow": "Try Again Now »",
   "@tryAgainNow": { "description": "Try-again button label before refill completes." },
 
   "readyLetsGo": "Ready! Let's Go 🚀",
@@ -449,7 +449,7 @@
     }
   },
 
-  "reviewModeMastered": "{count} question(s) mastered ✓",
+  "reviewModeMastered": "{count} question(s) mastered",
   "@reviewModeMastered": {
     "description": "Number of questions removed from queue.",
     "placeholders": { "count": { "type": "int" } }
@@ -572,5 +572,533 @@
   "badge_all_rounder_desc": "Tried every single quiz module!",
   "@badge_all_rounder_desc": { "description": "Badge description." },
   "badge_all_rounder_condition": "Complete at least one quiz in every module: Capitals, Flags, Logos, Math, and Sciences",
-  "@badge_all_rounder_condition": { "description": "Badge unlock condition." }
+  "@badge_all_rounder_condition": { "description": "Badge unlock condition." },
+
+  "badge_brain_boost_beginner_name": "Brain Boost Beginner",
+  "@badge_brain_boost_beginner_name": { "description": "Badge name." },
+  "badge_brain_boost_beginner_desc": "Started training your brain — keep going!",
+  "@badge_brain_boost_beginner_desc": { "description": "Badge description." },
+  "badge_brain_boost_beginner_condition": "Complete your first Brain Boost daily challenge",
+  "@badge_brain_boost_beginner_condition": { "description": "Badge unlock condition." },
+
+  "badge_brain_boost_streak_master_name": "Streak Master",
+  "@badge_brain_boost_streak_master_name": { "description": "Badge name." },
+  "badge_brain_boost_streak_master_desc": "Practiced 7 days in a row — that's dedication!",
+  "@badge_brain_boost_streak_master_desc": { "description": "Badge description." },
+  "badge_brain_boost_streak_master_condition": "Reach a 7-day Brain Boost streak",
+  "@badge_brain_boost_streak_master_condition": { "description": "Badge unlock condition." },
+
+  "badge_brain_boost_champion_name": "Brain Boost Champion",
+  "@badge_brain_boost_champion_name": { "description": "Badge name." },
+  "badge_brain_boost_champion_desc": "A perfect Champion Mode run!",
+  "@badge_brain_boost_champion_desc": { "description": "Badge description." },
+  "badge_brain_boost_champion_condition": "Get 12/12 in Brain Boost Champion Mode",
+  "@badge_brain_boost_champion_condition": { "description": "Badge unlock condition." },
+
+  "badge_boss_rush_perfect_name": "Dragon Slayer",
+  "@badge_boss_rush_perfect_name": { "description": "Badge name." },
+  "badge_boss_rush_perfect_desc": "All 12 questions correct in Boss Rush!",
+  "@badge_boss_rush_perfect_desc": { "description": "Badge description." },
+  "badge_boss_rush_perfect_condition": "Score 12/12 in Boss Rush",
+  "@badge_boss_rush_perfect_condition": { "description": "Badge unlock condition." },
+
+  "badge_pass_play_winner_name": "Pass-Play Champion",
+  "@badge_pass_play_winner_name": { "description": "Badge name." },
+  "badge_pass_play_winner_desc": "Won 3 Pass-and-Play matches!",
+  "@badge_pass_play_winner_desc": { "description": "Badge description." },
+  "badge_pass_play_winner_condition": "Win 3 Pass-and-Play matches",
+  "@badge_pass_play_winner_condition": { "description": "Badge unlock condition." },
+
+  "badge_tourney_champion_name": "Weekly Champion",
+  "@badge_tourney_champion_name": { "description": "Badge name." },
+  "badge_tourney_champion_desc": "First place on the family weekly tournament!",
+  "@badge_tourney_champion_desc": { "description": "Badge description." },
+  "badge_tourney_champion_condition": "Finish #1 on the Weekly Tournament",
+  "@badge_tourney_champion_condition": { "description": "Badge unlock condition." },
+
+  "blitzTitle": "Blitz Round",
+  "@blitzTitle": { "description": "Title of the blitz round screen and home card." },
+
+  "blitzDescription": "60 seconds. As many correct answers as you can. Questions from every module.",
+  "@blitzDescription": { "description": "Intro paragraph on the blitz ready screen." },
+
+  "blitzBest": "Best: {score}",
+  "@blitzBest": {
+    "description": "Best score pill on the blitz ready screen.",
+    "placeholders": { "score": { "type": "int" } }
+  },
+
+  "blitzStartButton": "Start Blitz",
+  "@blitzStartButton": { "description": "Button to start the blitz round." },
+
+  "blitzScoreLabel": "Score",
+  "@blitzScoreLabel": { "description": "Score pill label in the blitz round." },
+
+  "blitzStreakLabel": "Streak",
+  "@blitzStreakLabel": { "description": "Streak pill label in the blitz round." },
+
+  "blitzNewBest": "New Best!",
+  "@blitzNewBest": { "description": "Heading on the blitz result screen when a new high score is set." },
+
+  "blitzTimesUp": "Time’s up!",
+  "@blitzTimesUp": { "description": "Heading on the blitz result screen when time runs out." },
+
+  "blitzBestStreak": "Best streak: {streak}",
+  "@blitzBestStreak": {
+    "description": "Longest streak achieved during the blitz round.",
+    "placeholders": { "streak": { "type": "int" } }
+  },
+
+  "blitzPlayAgain": "Play again",
+  "@blitzPlayAgain": { "description": "Button to replay the blitz round." },
+
+  "blitzHome": "Home",
+  "@blitzHome": { "description": "Button to leave the blitz round and return home." },
+
+  "blitzCardSubtitle": "60 seconds. Rapid-fire from every module",
+  "@blitzCardSubtitle": { "description": "Subtitle of the blitz card on the home screen." },
+
+  "iqTitle": "Brain Boost",
+  "@iqTitle": { "description": "App-bar and home card title for the Brain Boost (formerly IQ) feature." },
+
+  "iqHeroStartFull": "Start full challenge",
+  "@iqHeroStartFull": { "description": "Hero card label on the Brain Boost intro screen." },
+
+  "brainBoostDisclaimerTitle": "About Brain Boost",
+  "@brainBoostDisclaimerTitle": { "description": "First-open disclaimer header for the Brain Boost section." },
+
+  "brainBoostDisclaimerBody": "Brain Boost is a fun way to practice logical thinking — it is not a real IQ test. Your scores stay on this device and are never compared with other children.",
+  "@brainBoostDisclaimerBody": { "description": "First-open disclaimer body in plain kid-and-parent language." },
+
+  "brainBoostDisclaimerOk": "Got it",
+  "@brainBoostDisclaimerOk": { "description": "Disclaimer dismiss button label." },
+
+  "iqOrChooseCategory": "Or choose a category",
+  "@iqOrChooseCategory": { "description": "Section label for IQ topic picker." },
+
+  "iqLoadError": "Could not load questions.",
+  "@iqLoadError": { "description": "Error shown when IQ questions fail to load." },
+
+  "iqComprehensiveCount": "{count} comprehensive questions",
+  "@iqComprehensiveCount": {
+    "description": "Question count for the full IQ challenge.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "iqCategoryCount": "{count} questions",
+  "@iqCategoryCount": {
+    "description": "Question count for a specific IQ category.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "iqVictoryTitle": "IQ Champion!",
+  "@iqVictoryTitle": { "description": "Victory heading on the IQ quiz." },
+
+  "iqShareLabel": "IQ Challenge — Aziz Academy",
+  "@iqShareLabel": { "description": "Share text for the IQ quiz." },
+
+  "iqScoreLabel": "Score",
+  "@iqScoreLabel": { "description": "Score badge label inside the IQ quiz." },
+
+  "iqRevealChoices": "Reveal choices",
+  "@iqRevealChoices": { "description": "Button to reveal choices in co-play mode (IQ quiz)." },
+
+  "iqNextQuestion": "Next question",
+  "@iqNextQuestion": { "description": "Next question button in the IQ quiz." },
+
+  "iqLoading": "Loading IQ questions...",
+  "@iqLoading": { "description": "Loading indicator label for IQ questions." },
+
+  "iqLoadFailed": "Failed to load questions",
+  "@iqLoadFailed": { "description": "Error heading when IQ questions fail to load." },
+
+  "iqCardSubtitle": "Patterns, math, analogies & logic",
+  "@iqCardSubtitle": { "description": "Subtitle of the IQ card on the home screen." },
+
+  "generalQuizTitle": "General Knowledge",
+  "@generalQuizTitle": { "description": "App-bar and home card title for the general quiz feature." },
+
+  "generalQuizHeroStartFull": "Start full general challenge",
+  "@generalQuizHeroStartFull": { "description": "Hero card label on the general quiz intro screen." },
+
+  "generalQuizOrChooseCategory": "Or choose a category",
+  "@generalQuizOrChooseCategory": { "description": "Section label for general quiz topic picker." },
+
+  "generalQuizLoadError": "Could not load questions.",
+  "@generalQuizLoadError": { "description": "Error shown when general quiz questions fail to load." },
+
+  "generalQuizCount": "{count} questions",
+  "@generalQuizCount": {
+    "description": "Question count label for general quiz hero/category cards.",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "generalQuizVictoryTitle": "Knowledge Champion!",
+  "@generalQuizVictoryTitle": { "description": "Victory heading on the general quiz." },
+
+  "generalQuizShareLabel": "General Knowledge Challenge — Aziz Academy",
+  "@generalQuizShareLabel": { "description": "Share text for the general quiz." },
+
+  "generalQuizRevealChoices": "Reveal choices",
+  "@generalQuizRevealChoices": { "description": "Button to reveal choices in co-play mode (general quiz)." },
+
+  "generalQuizNextQuestion": "Next question",
+  "@generalQuizNextQuestion": { "description": "Next question button in the general quiz." },
+
+  "generalQuizLoading": "Loading questions...",
+  "@generalQuizLoading": { "description": "Loading indicator label for general quiz questions." },
+
+  "generalQuizLoadFailed": "Failed to load questions",
+  "@generalQuizLoadFailed": { "description": "Error heading when general quiz questions fail to load." },
+
+  "generalQuizCardSubtitle": "Geography, Islamic, Arabic & Math",
+  "@generalQuizCardSubtitle": { "description": "Subtitle of the general knowledge card on the home screen." },
+
+  "capitalsVictoryTitle": "Capitals Champion!",
+  "@capitalsVictoryTitle": { "description": "Victory heading on the capitals quiz." },
+
+  "capitalsShareLabel": "Capitals Round — Aziz Academy",
+  "@capitalsShareLabel": { "description": "Share text for the capitals quiz." },
+
+  "homeLogosLockHint": "Level {level} or {count} Capitals quizzes",
+  "@homeLogosLockHint": {
+    "description": "Lock hint shown on the logos card before it is unlocked.",
+    "placeholders": {
+      "level": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+
+  "homeSciencesLockHint": "Level {level} or {count} Flags quizzes",
+  "@homeSciencesLockHint": {
+    "description": "Lock hint shown on the sciences card before it is unlocked.",
+    "placeholders": {
+      "level": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+
+  "homeMathLockHint": "Level {level} or {count} Flags quizzes",
+  "@homeMathLockHint": {
+    "description": "Lock hint shown on the math card before it is unlocked.",
+    "placeholders": {
+      "level": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+
+  "lifelineFiftyFifty": "50/50",
+  "@lifelineFiftyFifty": { "description": "Lifeline that removes two wrong answers." },
+
+  "lifelineSkip": "Skip",
+  "@lifelineSkip": { "description": "Lifeline that skips the current question." },
+
+  "lifelineHint": "Hint",
+  "@lifelineHint": { "description": "Lifeline that reveals a clue toward the correct answer." },
+
+  "lifelineNotEnoughCoins": "Not enough coins. Earn more by answering correctly!",
+  "@lifelineNotEnoughCoins": { "description": "Snackbar when the learner cannot afford a lifeline." },
+
+  "coinsLabel": "Coins",
+  "@coinsLabel": { "description": "Generic coin balance label." },
+
+  "onboardingTitle1": "Pick a subject",
+  "@onboardingTitle1": { "description": "First onboarding card title." },
+
+  "onboardingBody1": "Choose a learning module from the home screen — Capitals, Sciences, IQ, Math, and many more.",
+  "@onboardingBody1": { "description": "First onboarding card body." },
+
+  "onboardingTitle2": "Earn stars and coins",
+  "@onboardingTitle2": { "description": "Second onboarding card title." },
+
+  "onboardingBody2": "Answer correctly to earn XP, stars, and coins. Use coins to unlock helpful lifelines.",
+  "@onboardingBody2": { "description": "Second onboarding card body." },
+
+  "onboardingTitle3": "Build a daily streak",
+  "@onboardingTitle3": { "description": "Third onboarding card title." },
+
+  "onboardingBody3": "Play every day to keep your streak alive — bigger streaks unlock bigger rewards!",
+  "@onboardingBody3": { "description": "Third onboarding card body." },
+
+  "onboardingSkip": "Skip",
+  "@onboardingSkip": { "description": "Skip the intro." },
+
+  "onboardingNext": "Next",
+  "@onboardingNext": { "description": "Advance to the next onboarding card." },
+
+  "onboardingGotIt": "Let’s play!",
+  "@onboardingGotIt": { "description": "Final onboarding CTA." },
+
+  "survivalTitle": "Survival Mode",
+  "@survivalTitle": { "description": "Title for survival mode." },
+
+  "survivalIntro": "One life. Endless questions. How far can you go?",
+  "@survivalIntro": { "description": "Survival intro text." },
+
+  "survivalBest": "Best",
+  "@survivalBest": { "description": "Best score label." },
+
+  "survivalStart": "Start Survival",
+  "@survivalStart": { "description": "Start survival button." },
+
+  "survivalNewBest": "New best!",
+  "@survivalNewBest": { "description": "Survival new best heading." },
+
+  "survivalGameOver": "Game over",
+  "@survivalGameOver": { "description": "Survival game over heading." },
+
+  "survivalReward": "coins earned",
+  "@survivalReward": { "description": "Coin reward suffix." },
+
+  "homeButton": "Home",
+  "@homeButton": { "description": "Home navigation button." },
+
+  "bossTitle": "Boss Round",
+  "@bossTitle": { "description": "Boss round title." },
+
+  "bossIntro": "5 toughest questions. 1 life. Triple coin reward!",
+  "@bossIntro": { "description": "Boss intro text." },
+
+  "bossStart": "Face the Boss",
+  "@bossStart": { "description": "Start boss button." },
+
+  "bossWin": "Boss defeated!",
+  "@bossWin": { "description": "Boss win heading." },
+
+  "bossLoss": "The boss won this round",
+  "@bossLoss": { "description": "Boss loss heading." },
+
+  "homeSurvivalTitle": "Survival",
+  "@homeSurvivalTitle": { "description": "Home tile for Survival." },
+
+  "homeSurvivalSubtitle": "One life. Endless questions.",
+  "@homeSurvivalSubtitle": { "description": "Home tile subtitle for Survival." },
+
+  "homeBossTitle": "Boss Round",
+  "@homeBossTitle": { "description": "Home tile for Boss." },
+
+  "homeBossSubtitle": "5 hard questions. Triple reward.",
+  "@homeBossSubtitle": { "description": "Home tile subtitle for Boss." },
+
+  "errorLoadingRegions": "Error loading regions",
+  "@errorLoadingRegions": { "description": "Shown on the flags screen when the regions list fails to load." },
+
+  "settingsDyslexiaFriendlyFont": "Dyslexia-friendly font",
+  "@settingsDyslexiaFriendlyFont": { "description": "Settings toggle label." },
+  "settingsDyslexiaFriendlyFontDesc": "Use OpenDyslexic-style spacing",
+  "@settingsDyslexiaFriendlyFontDesc": { "description": "Settings toggle subtitle." },
+
+  "settingsLargerText": "Larger text",
+  "@settingsLargerText": { "description": "Settings toggle label." },
+  "settingsLargerTextDesc": "Bigger letters across the whole app",
+  "@settingsLargerTextDesc": { "description": "Settings toggle subtitle." },
+
+  "settingsShorterRounds": "Shorter rounds",
+  "@settingsShorterRounds": { "description": "Settings toggle label." },
+  "settingsShorterRoundsDesc": "Default to 3-question rounds",
+  "@settingsShorterRoundsDesc": { "description": "Settings toggle subtitle." },
+
+  "settingsLightTheme": "Light theme",
+  "@settingsLightTheme": { "description": "Settings toggle label." },
+  "settingsLightThemeDesc": "Switch the whole app to a light look",
+  "@settingsLightThemeDesc": { "description": "Settings toggle subtitle." },
+
+  "settingsReadAloud": "Read questions aloud",
+  "@settingsReadAloud": { "description": "Settings toggle for text-to-speech narration." },
+
+  "ttsButtonTooltip": "Read aloud",
+  "@ttsButtonTooltip": { "description": "Tooltip on the TTS button that narrates the current question." },
+
+  "commonBack": "Back",
+  "@commonBack": { "description": "Generic 'go back' label for screen-reader tooltips on back-arrow IconButtons across the app." },
+
+  "parentArea": "Parent area",
+  "@parentArea": { "description": "Title of the parent zone entry tile." },
+  "parentDashboard": "Parent dashboard",
+  "@parentDashboard": { "description": "Header on the parent dashboard screen." },
+
+  "parentResetProfile": "Reset profile",
+  "@parentResetProfile": { "description": "Section title." },
+  "parentResetProfileDescription": "Wipes all on-device learning data: stars, XP, coins, skill estimates, mistakes, favorites, and shop items. Cannot be undone.",
+  "@parentResetProfileDescription": { "description": "Body text under the reset profile section." },
+  "parentResetEverything": "Reset everything",
+  "@parentResetEverything": { "description": "Button — confirms reset." },
+  "parentResetConfirmTitle": "Reset all data?",
+  "@parentResetConfirmTitle": { "description": "Confirmation dialog title for full reset." },
+  "parentResetConfirmBody": "This permanently deletes everything stored on this device. Are you sure?",
+  "@parentResetConfirmBody": { "description": "Confirmation dialog body for full reset." },
+  "parentResetConfirmYes": "Yes, reset",
+  "@parentResetConfirmYes": { "description": "Confirmation dialog 'reset' action." },
+  "parentResetSuccess": "Profile reset.",
+  "@parentResetSuccess": { "description": "Snackbar after successful reset." },
+
+  "parentThisWeek": "This week",
+  "@parentThisWeek": { "description": "Section header showing this-week stats." },
+  "parentSkillByTopic": "Skill by topic",
+  "@parentSkillByTopic": { "description": "Section header showing skill breakdown by topic." },
+
+  "shopNotEnoughCoins": "Not enough coins yet — keep playing!",
+  "@shopNotEnoughCoins": { "description": "Snackbar when a kid tries to buy a shop item they can't afford." },
+
+  "shopEquipped": "Equipped",
+  "@shopEquipped": { "description": "Shop tile CTA when an item is currently equipped." },
+
+  "shopEquip": "Equip",
+  "@shopEquip": { "description": "Shop tile CTA when an item is owned but not equipped." },
+
+  "surpriseGoingTo": "🎲 Heading to {destination}!",
+  "@surpriseGoingTo": {
+    "description": "Surprise-me flash snackbar before navigating to a random module.",
+    "placeholders": { "destination": { "type": "String" } }
+  },
+
+  "iqComebackSnack": "You got it! Better than last time.",
+  "@iqComebackSnack": { "description": "Snackbar shown when a learner gets a previously-missed IQ question right on retry." },
+
+  "feedbackThanks": "Thanks — got it.",
+
+  "parentGatePrompt": "Solve to enter:  {a} + {b} = ?",
+  "@parentGatePrompt": {
+    "description": "Math-gate prompt shown on the parent-area lock screen.",
+    "placeholders": {
+      "a": { "type": "int" },
+      "b": { "type": "int" }
+    }
+  },
+
+  "parentGateUnlock": "Unlock",
+  "@parentGateUnlock": { "description": "Button label on the parent-area math gate." },
+
+  "parentGateTryAgain": "Try again",
+  "@parentGateTryAgain": { "description": "Error text under the parent-area math gate when answer is wrong." },
+
+  "parentStuckHeading": "Where they're stuck",
+  "@parentStuckHeading": { "description": "Heading on parent dashboard listing the kid's hot mistake patterns." },
+
+  "parentStuckRow": "• {module} — {category} ({count} misses)",
+  "@parentStuckRow": {
+    "description": "Row format under the 'Where they're stuck' section.",
+    "placeholders": {
+      "module": { "type": "String" },
+      "category": { "type": "String" },
+      "count": { "type": "int" }
+    }
+  },
+
+  "parentPrivacyHeading": "Privacy",
+  "@parentPrivacyHeading": { "description": "Heading inside the parent-dashboard privacy footer note." },
+
+  "parentPrivacyNote": "All learning data shown here lives on this device only. Nothing is uploaded. Reset from Settings » Reset profile if needed.",
+  "@parentPrivacyNote": { "description": "Body of the parent-dashboard privacy footer note." },
+
+  "mapsIntroTitle": "Map explorer",
+  "@mapsIntroTitle": { "description": "Title on the Maps game intro screen." },
+  "mapsIntroBody": "Find countries by their location on the map. Ready for the challenge?",
+  "@mapsIntroBody": { "description": "Subtitle on the Maps game intro screen." },
+  "mapsIntroStart": "Start exploring",
+  "@mapsIntroStart": { "description": "CTA on the Maps intro that starts the quiz." },
+  "mapsCorrectTitle": "✅ Correct!",
+  "@mapsCorrectTitle": { "description": "Feedback dialog title after a correct Maps answer." },
+  "mapsIncorrectTitle": "❌ Wrong answer",
+  "@mapsIncorrectTitle": { "description": "Feedback dialog title after a wrong Maps answer." },
+  "mapsAnswerReveal": "The country is: {country}",
+  "@mapsAnswerReveal": {
+    "description": "Reveals the correct country in the Maps feedback dialog.",
+    "placeholders": { "country": { "type": "String" } }
+  },
+  "quizNextQuestion": "Next question",
+  "@quizNextQuestion": { "description": "Button in a quiz feedback dialog/screen to advance to the next question." },
+  "quizLoading": "Loading quiz…",
+  "@quizLoading": { "description": "Loading-state caption shown while a quiz pool is being fetched." },
+  "quizBackToMenu": "Back to menu",
+  "@quizBackToMenu": { "description": "Secondary CTA on a game-over screen that returns to the module's menu." },
+  "quizRoundScore": "This round's score",
+  "@quizRoundScore": { "description": "Label above the round-final score on a game-over overlay." },
+  "capitalsRevealChoices": "Show answer options",
+  "@capitalsRevealChoices": { "description": "Capitals quiz fallback button that switches from type-in mode to multiple-choice." },
+  "madrasatiRestart": "Restart",
+  "@madrasatiRestart": { "description": "Madrasati quiz post-score button to start the quiz over." },
+  "madrasatiHome": "Madrasati",
+  "@madrasatiHome": { "description": "Madrasati quiz post-score button that returns to the Madrasati feature home (kept as the proper-noun brand name in both locales)." },
+  "quizShowResult": "Show result",
+  "@quizShowResult": { "description": "Button on the final question that advances to the result screen." },
+  "madrasatiResultScore": "Score: {score} / {total}",
+  "@madrasatiResultScore": {
+    "description": "Score line on the Madrasati post-quiz result screen.",
+    "placeholders": {
+      "score": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "victoryDefaultSubtitle": "You crushed the quiz! 🎉",
+  "@victoryDefaultSubtitle": { "description": "Default subtitle on the post-quiz victory overlay shared across modules." },
+  "victoryScoreLine": "Correct: {score}  •  Wrong: {wrong}",
+  "@victoryScoreLine": {
+    "description": "Victory-overlay tally line under the score pill.",
+    "placeholders": {
+      "score": { "type": "int" },
+      "wrong": { "type": "int" }
+    }
+  },
+  "victoryStarsPerfect": "⚡ Total mastery! Zero mistakes!",
+  "@victoryStarsPerfect": { "description": "Encouragement line for a 3-star victory (no lives lost)." },
+  "victoryStarsExcellent": "👍 Excellent! Nearly perfect!",
+  "@victoryStarsExcellent": { "description": "Encouragement line for a 2-star victory." },
+  "victoryStarsGood": "✅ Well done! Keep practicing!",
+  "@victoryStarsGood": { "description": "Encouragement line for a 1-star (or fallback) victory." },
+  "victoryShareAchievement": "Share achievement",
+  "@victoryShareAchievement": { "description": "Victory-overlay primary CTA that opens the share sheet." },
+  "victoryPlayAgain": "Play again",
+  "@victoryPlayAgain": { "description": "Victory-overlay CTA that restarts the same quiz." },
+  "victoryShareBody": "{score}/{total} correct  •  {wrong} wrong\nStars: {stars}/3 ⭐",
+  "@victoryShareBody": {
+    "description": "Text shared to social/IM when a kid taps the share button on the post-quiz victory overlay. Concatenated under the module title in the share payload.",
+    "placeholders": {
+      "score": { "type": "int" },
+      "total": { "type": "int" },
+      "wrong": { "type": "int" },
+      "stars": { "type": "int" }
+    }
+  },
+  "certificateShareText": "Certificate from Aziz Academy 🌟",
+  "@certificateShareText": { "description": "Default text body shared alongside an exported certificate image." },
+  "progressReportShareText": "Aziz Academy progress report",
+  "@progressReportShareText": { "description": "Default text body shared alongside an exported parent progress report image." },
+  "onboardingDefaultName": "Friend",
+  "@onboardingDefaultName": { "description": "Fallback display name when a kid skips the name field in onboarding. Stored persistently in the profile, so it shows up on the home greeting and any place the display name renders later." },
+  "levelLabel": "Level {n}",
+  "@levelLabel": {
+    "description": "Label on the home XP header showing the kid's current level.",
+    "placeholders": { "n": { "type": "String" } }
+  },
+  "levelXpProgress": "{current} / {needed} XP",
+  "@levelXpProgress": {
+    "description": "XP progress text on the home XP header (e.g. \"120 / 250 XP\").",
+    "placeholders": {
+      "current": { "type": "String" },
+      "needed": { "type": "String" }
+    }
+  },
+  "levelMaxXp": "{total} XP",
+  "@levelMaxXp": {
+    "description": "Total-XP indicator when the kid has hit the max level.",
+    "placeholders": { "total": { "type": "String" } }
+  },
+  "levelMaxBanner": "Max Level!",
+  "@levelMaxBanner": { "description": "Caption shown under the XP bar when the kid is at the highest level." },
+  "levelNextInfo": "Next: Level {n}  •  {total} XP total",
+  "@levelNextInfo": {
+    "description": "Caption under the XP bar showing the next level and lifetime XP total.",
+    "placeholders": {
+      "n": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "mapsGameOverTitle": "Challenge complete!",
+  "@mapsGameOverTitle": { "description": "Title on the Maps game-over screen." },
+  "mapsScore": "Your score: {score}",
+  "@mapsScore": {
+    "description": "Score line on the Maps game-over screen.",
+    "placeholders": { "score": { "type": "String" } }
+  }
 }

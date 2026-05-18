@@ -20,6 +20,18 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Version consistency
+        # Guards against pubspec.yaml drifting from the hardcoded
+        # _kAppVersion constants in the splash / about / admin screens.
+        # See scripts/audit_version_consistency.py for the rationale.
+        run: python3 scripts/audit_version_consistency.py
+
+      - name: Content audits (fonts + Islamic audio + sitemap routes)
+        run: |
+          python3 scripts/audit_font_coverage.py
+          python3 scripts/audit_islamic_audio.py
+          python3 scripts/audit_sitemap_routes.py
+
       - name: Analyze
         run: flutter analyze --fatal-infos --fatal-warnings
 

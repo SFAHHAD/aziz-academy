@@ -191,7 +191,7 @@ abstract class AppLocalizations {
   /// Try-again button label before refill completes.
   ///
   /// In en, this message translates to:
-  /// **'Try Again Now →'**
+  /// **'Try Again Now »'**
   String get tryAgainNow;
 
   /// Try-again button label after refill completes.
@@ -1154,7 +1154,7 @@ abstract class AppLocalizations {
   /// **'Share'**
   String get victoryShare;
 
-  /// No description provided for @victoryPlayAgain.
+  /// Victory-overlay CTA that restarts the same quiz.
   ///
   /// In en, this message translates to:
   /// **'Play again'**
@@ -1361,7 +1361,7 @@ abstract class AppLocalizations {
   /// Number of questions removed from queue.
   ///
   /// In en, this message translates to:
-  /// **'{count} question(s) mastered ✓'**
+  /// **'{count} question(s) mastered'**
   String reviewModeMastered(int count);
 
   /// Button to return home from review mode.
@@ -1573,6 +1573,984 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Complete at least one quiz in every module: Capitals, Flags, Logos, Math, and Sciences'**
   String get badge_all_rounder_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Brain Boost Beginner'**
+  String get badge_brain_boost_beginner_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'Started training your brain — keep going!'**
+  String get badge_brain_boost_beginner_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your first Brain Boost daily challenge'**
+  String get badge_brain_boost_beginner_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Streak Master'**
+  String get badge_brain_boost_streak_master_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'Practiced 7 days in a row — that\'s dedication!'**
+  String get badge_brain_boost_streak_master_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Reach a 7-day Brain Boost streak'**
+  String get badge_brain_boost_streak_master_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Brain Boost Champion'**
+  String get badge_brain_boost_champion_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'A perfect Champion Mode run!'**
+  String get badge_brain_boost_champion_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Get 12/12 in Brain Boost Champion Mode'**
+  String get badge_brain_boost_champion_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Dragon Slayer'**
+  String get badge_boss_rush_perfect_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'All 12 questions correct in Boss Rush!'**
+  String get badge_boss_rush_perfect_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Score 12/12 in Boss Rush'**
+  String get badge_boss_rush_perfect_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Pass-Play Champion'**
+  String get badge_pass_play_winner_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'Won 3 Pass-and-Play matches!'**
+  String get badge_pass_play_winner_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Win 3 Pass-and-Play matches'**
+  String get badge_pass_play_winner_condition;
+
+  /// Badge name.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Champion'**
+  String get badge_tourney_champion_name;
+
+  /// Badge description.
+  ///
+  /// In en, this message translates to:
+  /// **'First place on the family weekly tournament!'**
+  String get badge_tourney_champion_desc;
+
+  /// Badge unlock condition.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish #1 on the Weekly Tournament'**
+  String get badge_tourney_champion_condition;
+
+  /// Title of the blitz round screen and home card.
+  ///
+  /// In en, this message translates to:
+  /// **'Blitz Round'**
+  String get blitzTitle;
+
+  /// Intro paragraph on the blitz ready screen.
+  ///
+  /// In en, this message translates to:
+  /// **'60 seconds. As many correct answers as you can. Questions from every module.'**
+  String get blitzDescription;
+
+  /// Best score pill on the blitz ready screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Best: {score}'**
+  String blitzBest(int score);
+
+  /// Button to start the blitz round.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Blitz'**
+  String get blitzStartButton;
+
+  /// Score pill label in the blitz round.
+  ///
+  /// In en, this message translates to:
+  /// **'Score'**
+  String get blitzScoreLabel;
+
+  /// Streak pill label in the blitz round.
+  ///
+  /// In en, this message translates to:
+  /// **'Streak'**
+  String get blitzStreakLabel;
+
+  /// Heading on the blitz result screen when a new high score is set.
+  ///
+  /// In en, this message translates to:
+  /// **'New Best!'**
+  String get blitzNewBest;
+
+  /// Heading on the blitz result screen when time runs out.
+  ///
+  /// In en, this message translates to:
+  /// **'Time’s up!'**
+  String get blitzTimesUp;
+
+  /// Longest streak achieved during the blitz round.
+  ///
+  /// In en, this message translates to:
+  /// **'Best streak: {streak}'**
+  String blitzBestStreak(int streak);
+
+  /// Button to replay the blitz round.
+  ///
+  /// In en, this message translates to:
+  /// **'Play again'**
+  String get blitzPlayAgain;
+
+  /// Button to leave the blitz round and return home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get blitzHome;
+
+  /// Subtitle of the blitz card on the home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'60 seconds. Rapid-fire from every module'**
+  String get blitzCardSubtitle;
+
+  /// App-bar and home card title for the Brain Boost (formerly IQ) feature.
+  ///
+  /// In en, this message translates to:
+  /// **'Brain Boost'**
+  String get iqTitle;
+
+  /// Hero card label on the Brain Boost intro screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Start full challenge'**
+  String get iqHeroStartFull;
+
+  /// First-open disclaimer header for the Brain Boost section.
+  ///
+  /// In en, this message translates to:
+  /// **'About Brain Boost'**
+  String get brainBoostDisclaimerTitle;
+
+  /// First-open disclaimer body in plain kid-and-parent language.
+  ///
+  /// In en, this message translates to:
+  /// **'Brain Boost is a fun way to practice logical thinking — it is not a real IQ test. Your scores stay on this device and are never compared with other children.'**
+  String get brainBoostDisclaimerBody;
+
+  /// Disclaimer dismiss button label.
+  ///
+  /// In en, this message translates to:
+  /// **'Got it'**
+  String get brainBoostDisclaimerOk;
+
+  /// Section label for IQ topic picker.
+  ///
+  /// In en, this message translates to:
+  /// **'Or choose a category'**
+  String get iqOrChooseCategory;
+
+  /// Error shown when IQ questions fail to load.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load questions.'**
+  String get iqLoadError;
+
+  /// Question count for the full IQ challenge.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} comprehensive questions'**
+  String iqComprehensiveCount(int count);
+
+  /// Question count for a specific IQ category.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} questions'**
+  String iqCategoryCount(int count);
+
+  /// Victory heading on the IQ quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'IQ Champion!'**
+  String get iqVictoryTitle;
+
+  /// Share text for the IQ quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'IQ Challenge — Aziz Academy'**
+  String get iqShareLabel;
+
+  /// Score badge label inside the IQ quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Score'**
+  String get iqScoreLabel;
+
+  /// Button to reveal choices in co-play mode (IQ quiz).
+  ///
+  /// In en, this message translates to:
+  /// **'Reveal choices'**
+  String get iqRevealChoices;
+
+  /// Next question button in the IQ quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Next question'**
+  String get iqNextQuestion;
+
+  /// Loading indicator label for IQ questions.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading IQ questions...'**
+  String get iqLoading;
+
+  /// Error heading when IQ questions fail to load.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load questions'**
+  String get iqLoadFailed;
+
+  /// Subtitle of the IQ card on the home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Patterns, math, analogies & logic'**
+  String get iqCardSubtitle;
+
+  /// App-bar and home card title for the general quiz feature.
+  ///
+  /// In en, this message translates to:
+  /// **'General Knowledge'**
+  String get generalQuizTitle;
+
+  /// Hero card label on the general quiz intro screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Start full general challenge'**
+  String get generalQuizHeroStartFull;
+
+  /// Section label for general quiz topic picker.
+  ///
+  /// In en, this message translates to:
+  /// **'Or choose a category'**
+  String get generalQuizOrChooseCategory;
+
+  /// Error shown when general quiz questions fail to load.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load questions.'**
+  String get generalQuizLoadError;
+
+  /// Question count label for general quiz hero/category cards.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} questions'**
+  String generalQuizCount(int count);
+
+  /// Victory heading on the general quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Knowledge Champion!'**
+  String get generalQuizVictoryTitle;
+
+  /// Share text for the general quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'General Knowledge Challenge — Aziz Academy'**
+  String get generalQuizShareLabel;
+
+  /// Button to reveal choices in co-play mode (general quiz).
+  ///
+  /// In en, this message translates to:
+  /// **'Reveal choices'**
+  String get generalQuizRevealChoices;
+
+  /// Next question button in the general quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Next question'**
+  String get generalQuizNextQuestion;
+
+  /// Loading indicator label for general quiz questions.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading questions...'**
+  String get generalQuizLoading;
+
+  /// Error heading when general quiz questions fail to load.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load questions'**
+  String get generalQuizLoadFailed;
+
+  /// Subtitle of the general knowledge card on the home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Geography, Islamic, Arabic & Math'**
+  String get generalQuizCardSubtitle;
+
+  /// Victory heading on the capitals quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Capitals Champion!'**
+  String get capitalsVictoryTitle;
+
+  /// Share text for the capitals quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Capitals Round — Aziz Academy'**
+  String get capitalsShareLabel;
+
+  /// Lock hint shown on the logos card before it is unlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Level {level} or {count} Capitals quizzes'**
+  String homeLogosLockHint(int level, int count);
+
+  /// Lock hint shown on the sciences card before it is unlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Level {level} or {count} Flags quizzes'**
+  String homeSciencesLockHint(int level, int count);
+
+  /// Lock hint shown on the math card before it is unlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Level {level} or {count} Flags quizzes'**
+  String homeMathLockHint(int level, int count);
+
+  /// Lifeline that removes two wrong answers.
+  ///
+  /// In en, this message translates to:
+  /// **'50/50'**
+  String get lifelineFiftyFifty;
+
+  /// Lifeline that skips the current question.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get lifelineSkip;
+
+  /// Lifeline that reveals a clue toward the correct answer.
+  ///
+  /// In en, this message translates to:
+  /// **'Hint'**
+  String get lifelineHint;
+
+  /// Snackbar when the learner cannot afford a lifeline.
+  ///
+  /// In en, this message translates to:
+  /// **'Not enough coins. Earn more by answering correctly!'**
+  String get lifelineNotEnoughCoins;
+
+  /// Generic coin balance label.
+  ///
+  /// In en, this message translates to:
+  /// **'Coins'**
+  String get coinsLabel;
+
+  /// First onboarding card title.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a subject'**
+  String get onboardingTitle1;
+
+  /// First onboarding card body.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a learning module from the home screen — Capitals, Sciences, IQ, Math, and many more.'**
+  String get onboardingBody1;
+
+  /// Second onboarding card title.
+  ///
+  /// In en, this message translates to:
+  /// **'Earn stars and coins'**
+  String get onboardingTitle2;
+
+  /// Second onboarding card body.
+  ///
+  /// In en, this message translates to:
+  /// **'Answer correctly to earn XP, stars, and coins. Use coins to unlock helpful lifelines.'**
+  String get onboardingBody2;
+
+  /// Third onboarding card title.
+  ///
+  /// In en, this message translates to:
+  /// **'Build a daily streak'**
+  String get onboardingTitle3;
+
+  /// Third onboarding card body.
+  ///
+  /// In en, this message translates to:
+  /// **'Play every day to keep your streak alive — bigger streaks unlock bigger rewards!'**
+  String get onboardingBody3;
+
+  /// Skip the intro.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get onboardingSkip;
+
+  /// Advance to the next onboarding card.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get onboardingNext;
+
+  /// Final onboarding CTA.
+  ///
+  /// In en, this message translates to:
+  /// **'Let’s play!'**
+  String get onboardingGotIt;
+
+  /// Title for survival mode.
+  ///
+  /// In en, this message translates to:
+  /// **'Survival Mode'**
+  String get survivalTitle;
+
+  /// Survival intro text.
+  ///
+  /// In en, this message translates to:
+  /// **'One life. Endless questions. How far can you go?'**
+  String get survivalIntro;
+
+  /// Best score label.
+  ///
+  /// In en, this message translates to:
+  /// **'Best'**
+  String get survivalBest;
+
+  /// Start survival button.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Survival'**
+  String get survivalStart;
+
+  /// Survival new best heading.
+  ///
+  /// In en, this message translates to:
+  /// **'New best!'**
+  String get survivalNewBest;
+
+  /// Survival game over heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Game over'**
+  String get survivalGameOver;
+
+  /// Coin reward suffix.
+  ///
+  /// In en, this message translates to:
+  /// **'coins earned'**
+  String get survivalReward;
+
+  /// Home navigation button.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get homeButton;
+
+  /// Boss round title.
+  ///
+  /// In en, this message translates to:
+  /// **'Boss Round'**
+  String get bossTitle;
+
+  /// Boss intro text.
+  ///
+  /// In en, this message translates to:
+  /// **'5 toughest questions. 1 life. Triple coin reward!'**
+  String get bossIntro;
+
+  /// Start boss button.
+  ///
+  /// In en, this message translates to:
+  /// **'Face the Boss'**
+  String get bossStart;
+
+  /// Boss win heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Boss defeated!'**
+  String get bossWin;
+
+  /// Boss loss heading.
+  ///
+  /// In en, this message translates to:
+  /// **'The boss won this round'**
+  String get bossLoss;
+
+  /// Home tile for Survival.
+  ///
+  /// In en, this message translates to:
+  /// **'Survival'**
+  String get homeSurvivalTitle;
+
+  /// Home tile subtitle for Survival.
+  ///
+  /// In en, this message translates to:
+  /// **'One life. Endless questions.'**
+  String get homeSurvivalSubtitle;
+
+  /// Home tile for Boss.
+  ///
+  /// In en, this message translates to:
+  /// **'Boss Round'**
+  String get homeBossTitle;
+
+  /// Home tile subtitle for Boss.
+  ///
+  /// In en, this message translates to:
+  /// **'5 hard questions. Triple reward.'**
+  String get homeBossSubtitle;
+
+  /// Shown on the flags screen when the regions list fails to load.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading regions'**
+  String get errorLoadingRegions;
+
+  /// Settings toggle label.
+  ///
+  /// In en, this message translates to:
+  /// **'Dyslexia-friendly font'**
+  String get settingsDyslexiaFriendlyFont;
+
+  /// Settings toggle subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Use OpenDyslexic-style spacing'**
+  String get settingsDyslexiaFriendlyFontDesc;
+
+  /// Settings toggle label.
+  ///
+  /// In en, this message translates to:
+  /// **'Larger text'**
+  String get settingsLargerText;
+
+  /// Settings toggle subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Bigger letters across the whole app'**
+  String get settingsLargerTextDesc;
+
+  /// Settings toggle label.
+  ///
+  /// In en, this message translates to:
+  /// **'Shorter rounds'**
+  String get settingsShorterRounds;
+
+  /// Settings toggle subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Default to 3-question rounds'**
+  String get settingsShorterRoundsDesc;
+
+  /// Settings toggle label.
+  ///
+  /// In en, this message translates to:
+  /// **'Light theme'**
+  String get settingsLightTheme;
+
+  /// Settings toggle subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Switch the whole app to a light look'**
+  String get settingsLightThemeDesc;
+
+  /// Settings toggle for text-to-speech narration.
+  ///
+  /// In en, this message translates to:
+  /// **'Read questions aloud'**
+  String get settingsReadAloud;
+
+  /// Tooltip on the TTS button that narrates the current question.
+  ///
+  /// In en, this message translates to:
+  /// **'Read aloud'**
+  String get ttsButtonTooltip;
+
+  /// Generic 'go back' label for screen-reader tooltips on back-arrow IconButtons across the app.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get commonBack;
+
+  /// Title of the parent zone entry tile.
+  ///
+  /// In en, this message translates to:
+  /// **'Parent area'**
+  String get parentArea;
+
+  /// Header on the parent dashboard screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Parent dashboard'**
+  String get parentDashboard;
+
+  /// Section title.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset profile'**
+  String get parentResetProfile;
+
+  /// Body text under the reset profile section.
+  ///
+  /// In en, this message translates to:
+  /// **'Wipes all on-device learning data: stars, XP, coins, skill estimates, mistakes, favorites, and shop items. Cannot be undone.'**
+  String get parentResetProfileDescription;
+
+  /// Button — confirms reset.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset everything'**
+  String get parentResetEverything;
+
+  /// Confirmation dialog title for full reset.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset all data?'**
+  String get parentResetConfirmTitle;
+
+  /// Confirmation dialog body for full reset.
+  ///
+  /// In en, this message translates to:
+  /// **'This permanently deletes everything stored on this device. Are you sure?'**
+  String get parentResetConfirmBody;
+
+  /// Confirmation dialog 'reset' action.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, reset'**
+  String get parentResetConfirmYes;
+
+  /// Snackbar after successful reset.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile reset.'**
+  String get parentResetSuccess;
+
+  /// Section header showing this-week stats.
+  ///
+  /// In en, this message translates to:
+  /// **'This week'**
+  String get parentThisWeek;
+
+  /// Section header showing skill breakdown by topic.
+  ///
+  /// In en, this message translates to:
+  /// **'Skill by topic'**
+  String get parentSkillByTopic;
+
+  /// Snackbar when a kid tries to buy a shop item they can't afford.
+  ///
+  /// In en, this message translates to:
+  /// **'Not enough coins yet — keep playing!'**
+  String get shopNotEnoughCoins;
+
+  /// Shop tile CTA when an item is currently equipped.
+  ///
+  /// In en, this message translates to:
+  /// **'Equipped'**
+  String get shopEquipped;
+
+  /// Shop tile CTA when an item is owned but not equipped.
+  ///
+  /// In en, this message translates to:
+  /// **'Equip'**
+  String get shopEquip;
+
+  /// Surprise-me flash snackbar before navigating to a random module.
+  ///
+  /// In en, this message translates to:
+  /// **'🎲 Heading to {destination}!'**
+  String surpriseGoingTo(String destination);
+
+  /// Snackbar shown when a learner gets a previously-missed IQ question right on retry.
+  ///
+  /// In en, this message translates to:
+  /// **'You got it! Better than last time.'**
+  String get iqComebackSnack;
+
+  /// No description provided for @feedbackThanks.
+  ///
+  /// In en, this message translates to:
+  /// **'Thanks — got it.'**
+  String get feedbackThanks;
+
+  /// Math-gate prompt shown on the parent-area lock screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Solve to enter:  {a} + {b} = ?'**
+  String parentGatePrompt(int a, int b);
+
+  /// Button label on the parent-area math gate.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock'**
+  String get parentGateUnlock;
+
+  /// Error text under the parent-area math gate when answer is wrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get parentGateTryAgain;
+
+  /// Heading on parent dashboard listing the kid's hot mistake patterns.
+  ///
+  /// In en, this message translates to:
+  /// **'Where they\'re stuck'**
+  String get parentStuckHeading;
+
+  /// Row format under the 'Where they're stuck' section.
+  ///
+  /// In en, this message translates to:
+  /// **'• {module} — {category} ({count} misses)'**
+  String parentStuckRow(String module, String category, int count);
+
+  /// Heading inside the parent-dashboard privacy footer note.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy'**
+  String get parentPrivacyHeading;
+
+  /// Body of the parent-dashboard privacy footer note.
+  ///
+  /// In en, this message translates to:
+  /// **'All learning data shown here lives on this device only. Nothing is uploaded. Reset from Settings » Reset profile if needed.'**
+  String get parentPrivacyNote;
+
+  /// Title on the Maps game intro screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Map explorer'**
+  String get mapsIntroTitle;
+
+  /// Subtitle on the Maps game intro screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Find countries by their location on the map. Ready for the challenge?'**
+  String get mapsIntroBody;
+
+  /// CTA on the Maps intro that starts the quiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Start exploring'**
+  String get mapsIntroStart;
+
+  /// Feedback dialog title after a correct Maps answer.
+  ///
+  /// In en, this message translates to:
+  /// **'✅ Correct!'**
+  String get mapsCorrectTitle;
+
+  /// Feedback dialog title after a wrong Maps answer.
+  ///
+  /// In en, this message translates to:
+  /// **'❌ Wrong answer'**
+  String get mapsIncorrectTitle;
+
+  /// Reveals the correct country in the Maps feedback dialog.
+  ///
+  /// In en, this message translates to:
+  /// **'The country is: {country}'**
+  String mapsAnswerReveal(String country);
+
+  /// Button in a quiz feedback dialog/screen to advance to the next question.
+  ///
+  /// In en, this message translates to:
+  /// **'Next question'**
+  String get quizNextQuestion;
+
+  /// Loading-state caption shown while a quiz pool is being fetched.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading quiz…'**
+  String get quizLoading;
+
+  /// Secondary CTA on a game-over screen that returns to the module's menu.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to menu'**
+  String get quizBackToMenu;
+
+  /// Label above the round-final score on a game-over overlay.
+  ///
+  /// In en, this message translates to:
+  /// **'This round\'s score'**
+  String get quizRoundScore;
+
+  /// Capitals quiz fallback button that switches from type-in mode to multiple-choice.
+  ///
+  /// In en, this message translates to:
+  /// **'Show answer options'**
+  String get capitalsRevealChoices;
+
+  /// Madrasati quiz post-score button to start the quiz over.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart'**
+  String get madrasatiRestart;
+
+  /// Madrasati quiz post-score button that returns to the Madrasati feature home (kept as the proper-noun brand name in both locales).
+  ///
+  /// In en, this message translates to:
+  /// **'Madrasati'**
+  String get madrasatiHome;
+
+  /// Button on the final question that advances to the result screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Show result'**
+  String get quizShowResult;
+
+  /// Score line on the Madrasati post-quiz result screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Score: {score} / {total}'**
+  String madrasatiResultScore(String score, String total);
+
+  /// Default subtitle on the post-quiz victory overlay shared across modules.
+  ///
+  /// In en, this message translates to:
+  /// **'You crushed the quiz! 🎉'**
+  String get victoryDefaultSubtitle;
+
+  /// Victory-overlay tally line under the score pill.
+  ///
+  /// In en, this message translates to:
+  /// **'Correct: {score}  •  Wrong: {wrong}'**
+  String victoryScoreLine(int score, int wrong);
+
+  /// Encouragement line for a 3-star victory (no lives lost).
+  ///
+  /// In en, this message translates to:
+  /// **'⚡ Total mastery! Zero mistakes!'**
+  String get victoryStarsPerfect;
+
+  /// Encouragement line for a 2-star victory.
+  ///
+  /// In en, this message translates to:
+  /// **'👍 Excellent! Nearly perfect!'**
+  String get victoryStarsExcellent;
+
+  /// Encouragement line for a 1-star (or fallback) victory.
+  ///
+  /// In en, this message translates to:
+  /// **'✅ Well done! Keep practicing!'**
+  String get victoryStarsGood;
+
+  /// Victory-overlay primary CTA that opens the share sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Share achievement'**
+  String get victoryShareAchievement;
+
+  /// Text shared to social/IM when a kid taps the share button on the post-quiz victory overlay. Concatenated under the module title in the share payload.
+  ///
+  /// In en, this message translates to:
+  /// **'{score}/{total} correct  •  {wrong} wrong\nStars: {stars}/3 ⭐'**
+  String victoryShareBody(int score, int total, int wrong, int stars);
+
+  /// Default text body shared alongside an exported certificate image.
+  ///
+  /// In en, this message translates to:
+  /// **'Certificate from Aziz Academy 🌟'**
+  String get certificateShareText;
+
+  /// Default text body shared alongside an exported parent progress report image.
+  ///
+  /// In en, this message translates to:
+  /// **'Aziz Academy progress report'**
+  String get progressReportShareText;
+
+  /// Fallback display name when a kid skips the name field in onboarding. Stored persistently in the profile, so it shows up on the home greeting and any place the display name renders later.
+  ///
+  /// In en, this message translates to:
+  /// **'Friend'**
+  String get onboardingDefaultName;
+
+  /// Label on the home XP header showing the kid's current level.
+  ///
+  /// In en, this message translates to:
+  /// **'Level {n}'**
+  String levelLabel(String n);
+
+  /// XP progress text on the home XP header (e.g. "120 / 250 XP").
+  ///
+  /// In en, this message translates to:
+  /// **'{current} / {needed} XP'**
+  String levelXpProgress(String current, String needed);
+
+  /// Total-XP indicator when the kid has hit the max level.
+  ///
+  /// In en, this message translates to:
+  /// **'{total} XP'**
+  String levelMaxXp(String total);
+
+  /// Caption shown under the XP bar when the kid is at the highest level.
+  ///
+  /// In en, this message translates to:
+  /// **'Max Level!'**
+  String get levelMaxBanner;
+
+  /// Caption under the XP bar showing the next level and lifetime XP total.
+  ///
+  /// In en, this message translates to:
+  /// **'Next: Level {n}  •  {total} XP total'**
+  String levelNextInfo(String n, String total);
+
+  /// Title on the Maps game-over screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge complete!'**
+  String get mapsGameOverTitle;
+
+  /// Score line on the Maps game-over screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Your score: {score}'**
+  String mapsScore(String score);
 }
 
 class _AppLocalizationsDelegate

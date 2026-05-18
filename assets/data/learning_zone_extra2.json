@@ -1,0 +1,682 @@
+[
+  {
+    "id": "lz_brave_owl",
+    "title": "The Brave Little Owl",
+    "title_ar": "البومة الصغيرة الشجاعة",
+    "passage": "Hooty was the smallest owl in the old oak tree. Her brothers laughed because she was afraid of the dark. One night, a baby squirrel got lost near the river. Hooty heard him crying. She took a deep breath and flew through the dark forest. She guided the squirrel home using her sharp eyes. After that night, Hooty was never afraid again. She learned that being brave does not mean having no fear, but doing the right thing anyway.",
+    "passage_ar": "كانت هوتي أصغر بومة في شجرة البلوط القديمة. كان إخوتها يضحكون عليها لأنها تخاف من الظلام. في إحدى الليالي، تاه سنجابٌ صغير قرب النهر. سمعت هوتي بكاءه. أخذت نفسًا عميقًا وطارت عبر الغابة المظلمة. أرشدت السنجاب إلى بيته بعينيها الحادّتين. بعد تلك الليلة، لم تعد هوتي خائفة أبدًا. تعلّمت أنّ الشجاعة لا تعني انعدام الخوف، بل فعل الصواب رغم الخوف.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "Why did Hooty's brothers laugh at her?",
+        "q_ar": "لماذا كان إخوة هوتي يضحكون عليها؟",
+        "options": ["She was afraid of the dark", "She was too loud", "She could not fly", "She slept all day"],
+        "options_ar": ["كانت تخاف من الظلام", "كانت صاخبة جدًا", "لم تكن تستطيع الطيران", "كانت تنام طوال النهار"],
+        "correct": "She was afraid of the dark",
+        "correct_ar": "كانت تخاف من الظلام"
+      },
+      {
+        "q": "Who did Hooty help that night?",
+        "q_ar": "من ساعدت هوتي تلك الليلة؟",
+        "options": ["A lost baby squirrel", "An old fox", "A sleepy bear", "Her brother"],
+        "options_ar": ["سنجابًا صغيرًا تائهًا", "ثعلبًا عجوزًا", "دبًا نعسانًا", "أخاها"],
+        "correct": "A lost baby squirrel",
+        "correct_ar": "سنجابًا صغيرًا تائهًا"
+      },
+      {
+        "q": "What does the story teach about being brave?",
+        "q_ar": "ماذا تعلّمنا القصة عن الشجاعة؟",
+        "options": ["Doing right even when afraid", "Never feeling fear", "Yelling loudly", "Flying very fast"],
+        "options_ar": ["فعل الصواب رغم الخوف", "ألّا تشعر بالخوف أبدًا", "الصراخ بصوت عالٍ", "الطيران بسرعة كبيرة"],
+        "correct": "Doing right even when afraid",
+        "correct_ar": "فعل الصواب رغم الخوف"
+      }
+    ]
+  },
+  {
+    "id": "lz_silk_road",
+    "title": "Bilal and the Silk Road",
+    "title_ar": "بلال وطريق الحرير",
+    "passage": "Bilal loved old maps. His grandfather told him about the Silk Road, a long path that traders walked many years ago. They carried silk, spices, and books between far cities. Camels crossed deserts and mountains. Travelers shared stories at night around small fires. Bilal imagined the smell of cinnamon and the sound of bells on camels. He decided that one day he would travel too, and bring back stories instead of silk.",
+    "passage_ar": "كان بلال يحبّ الخرائط القديمة. أخبره جدّه عن طريق الحرير، وهو مسار طويل سار فيه التجار قبل سنوات كثيرة. كانوا يحملون الحرير والتوابل والكتب بين المدن البعيدة. كانت الجمال تعبر الصحاري والجبال. كان المسافرون يتبادلون الحكايات ليلًا حول النار الصغيرة. تخيّل بلال رائحة القرفة وصوت الأجراس على الجمال. قرّر أن يسافر يومًا ما، ويعود بالحكايات بدل الحرير.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What was the Silk Road?",
+        "q_ar": "ما هو طريق الحرير؟",
+        "options": ["A long trade path between cities", "A river in the desert", "A small village", "A school"],
+        "options_ar": ["مسار تجاري طويل بين المدن", "نهر في الصحراء", "قرية صغيرة", "مدرسة"],
+        "correct": "A long trade path between cities",
+        "correct_ar": "مسار تجاري طويل بين المدن"
+      },
+      {
+        "q": "What did traders carry on the Silk Road?",
+        "q_ar": "ماذا كان يحمل التجار على طريق الحرير؟",
+        "options": ["Silk, spices, and books", "Only gold", "Toys", "Ice"],
+        "options_ar": ["الحرير والتوابل والكتب", "الذهب فقط", "الألعاب", "الجليد"],
+        "correct": "Silk, spices, and books",
+        "correct_ar": "الحرير والتوابل والكتب"
+      },
+      {
+        "q": "What does Bilal want to bring back from his future trip?",
+        "q_ar": "ماذا يريد بلال أن يعود به من رحلته المستقبلية؟",
+        "options": ["Stories", "Gold", "Camels", "Fire"],
+        "options_ar": ["الحكايات", "الذهب", "الجمال", "النار"],
+        "correct": "Stories",
+        "correct_ar": "الحكايات"
+      }
+    ]
+  },
+  {
+    "id": "lz_friendly_robot",
+    "title": "The Friendly Robot",
+    "title_ar": "الإنسان الآلي الودود",
+    "passage": "In a small lab, a girl named Salma built a tiny robot called Tobi. Tobi could roll, blink, and say hello in two languages. One afternoon, Salma's little cousin was sad because his toy was broken. Salma sent Tobi over with a tiny tool. Tobi twisted, clicked, and fixed the toy. The cousin clapped and laughed. Salma smiled. A robot is only as friendly as the heart that builds it.",
+    "passage_ar": "في مختبر صغير، صنعت فتاة اسمها سلمى إنسانًا آليًا صغيرًا اسمه توبي. كان توبي يستطيع التدحرج والوميض وقول مرحبًا بلغتين. في إحدى الظهيرات، حزن ابن عمّها الصغير لأنّ لعبته انكسرت. أرسلت سلمى توبي مع أداة صغيرة. لفّ توبي وطقطق وأصلح اللعبة. صفّق ابن العمّ وضحك. ابتسمت سلمى. الإنسان الآلي لا يكون ودودًا إلا بقدر القلب الذي يصنعه.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "Who built the robot Tobi?",
+        "q_ar": "من صنع توبي؟",
+        "options": ["Salma", "Her cousin", "A teacher", "Her father"],
+        "options_ar": ["سلمى", "ابن عمّها", "معلّم", "والدها"],
+        "correct": "Salma",
+        "correct_ar": "سلمى"
+      },
+      {
+        "q": "What did Tobi do for the cousin?",
+        "q_ar": "ماذا فعل توبي لابن العمّ؟",
+        "options": ["Fixed his broken toy", "Sang a song", "Cooked food", "Walked the dog"],
+        "options_ar": ["أصلح لعبته المكسورة", "غنّى أغنية", "طبخ طعامًا", "تنزّه مع الكلب"],
+        "correct": "Fixed his broken toy",
+        "correct_ar": "أصلح لعبته المكسورة"
+      },
+      {
+        "q": "What is the lesson of the story?",
+        "q_ar": "ما الدرس من القصة؟",
+        "options": ["Kindness shows in what we build", "Robots are scary", "Toys never break", "Cousins are loud"],
+        "options_ar": ["اللطف يظهر فيما نصنعه", "الروبوتات مخيفة", "الألعاب لا تنكسر", "أبناء العمومة صاخبون"],
+        "correct": "Kindness shows in what we build",
+        "correct_ar": "اللطف يظهر فيما نصنعه"
+      }
+    ]
+  },
+  {
+    "id": "lz_first_fast",
+    "title": "Tariq's First Fast",
+    "title_ar": "أول صيام لطارق",
+    "passage": "Tariq was nine years old, and this Ramadan he wanted to try fasting for a full day. In the morning, he ate dates and drank water with his family. By noon, his stomach felt empty. His mother told him to read a book to keep his mind busy. When the sun set, Tariq heard the call to prayer. He sipped cool water and bit into a soft date. He felt proud. Patience, he thought, has a sweet taste.",
+    "passage_ar": "كان طارق في التاسعة من عمره، وفي رمضان هذا أراد أن يصوم يومًا كاملًا. في الصباح، أكل التمر وشرب الماء مع عائلته. عند الظهر، شعر بأنّ معدته فارغة. طلبت منه أمّه أن يقرأ كتابًا ليشغل عقله. عند غروب الشمس، سمع طارق الأذان. ارتشف الماء البارد، وعضّ على تمرة طريّة. شعر بالفخر. وقال في نفسه: للصبر طعم حلو.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "How old was Tariq?",
+        "q_ar": "كم كان عمر طارق؟",
+        "options": ["Nine years old", "Six years old", "Twelve years old", "Five years old"],
+        "options_ar": ["تسع سنوات", "ست سنوات", "اثنتا عشرة سنة", "خمس سنوات"],
+        "correct": "Nine years old",
+        "correct_ar": "تسع سنوات"
+      },
+      {
+        "q": "What did his mother tell him to do when he felt hungry?",
+        "q_ar": "ماذا طلبت منه أمّه عندما شعر بالجوع؟",
+        "options": ["Read a book", "Take a nap", "Watch a movie", "Run in the yard"],
+        "options_ar": ["أن يقرأ كتابًا", "أن يأخذ قيلولة", "أن يشاهد فيلمًا", "أن يجري في الحديقة"],
+        "correct": "Read a book",
+        "correct_ar": "أن يقرأ كتابًا"
+      },
+      {
+        "q": "What did Tariq learn from fasting?",
+        "q_ar": "ماذا تعلّم طارق من الصيام؟",
+        "options": ["Patience has a sweet taste", "Food is boring", "Days are too long", "Dates are sour"],
+        "options_ar": ["للصبر طعم حلو", "الطعام مملّ", "الأيام طويلة جدًا", "التمر حامض"],
+        "correct": "Patience has a sweet taste",
+        "correct_ar": "للصبر طعم حلو"
+      }
+    ]
+  },
+  {
+    "id": "lz_neighbor_soup",
+    "title": "A Bowl of Soup for the Neighbor",
+    "title_ar": "صحن حساء للجار",
+    "passage": "Aisha's mother made a big pot of warm lentil soup. She poured a small bowl for Aisha and another one for Mr. Karim, the elderly neighbor who lived alone. Aisha carried the bowl carefully across the hallway. Mr. Karim opened the door slowly and his eyes lit up. Thank you, dear, he said. Aisha remembered her mother's words: a good neighbor is like family. She walked back home feeling warm inside, even before tasting the soup.",
+    "passage_ar": "أعدّت أمّ عائشة قِدرًا كبيرًا من حساء العدس الدافئ. سكبت صحنًا صغيرًا لعائشة وآخر للسيد كريم، الجار المسنّ الذي يعيش وحده. حملت عائشة الصحن بحذر عبر الممرّ. فتح السيد كريم الباب ببطء وأشرقت عيناه. وقال لها: شكرًا يا حبيبتي. تذكّرت عائشة كلام أمّها: الجار الصالح كالأهل. عادت إلى البيت وقلبها دافئ، حتى قبل أن تتذوّق الحساء.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did Aisha bring to her neighbor?",
+        "q_ar": "ماذا أحضرت عائشة لجارها؟",
+        "options": ["A bowl of lentil soup", "A loaf of bread", "A glass of milk", "A box of cookies"],
+        "options_ar": ["صحن حساء العدس", "رغيف خبز", "كوب حليب", "علبة بسكويت"],
+        "correct": "A bowl of lentil soup",
+        "correct_ar": "صحن حساء العدس"
+      },
+      {
+        "q": "Why did Aisha visit Mr. Karim?",
+        "q_ar": "لماذا زارت عائشة السيد كريم؟",
+        "options": ["He lived alone and is their neighbor", "He needed homework help", "He owed her a book", "He was her teacher"],
+        "options_ar": ["لأنه يعيش وحده وهو جارهم", "ليساعدها في الواجب", "لأنه يدين لها بكتاب", "لأنه معلّمها"],
+        "correct": "He lived alone and is their neighbor",
+        "correct_ar": "لأنه يعيش وحده وهو جارهم"
+      },
+      {
+        "q": "What did Aisha's mother say about a good neighbor?",
+        "q_ar": "ماذا قالت أمّ عائشة عن الجار الصالح؟",
+        "options": ["A good neighbor is like family", "Neighbors are strangers", "A neighbor is far", "Neighbors are noisy"],
+        "options_ar": ["الجار الصالح كالأهل", "الجيران غرباء", "الجار بعيد", "الجيران مزعجون"],
+        "correct": "A good neighbor is like family",
+        "correct_ar": "الجار الصالح كالأهل"
+      }
+    ]
+  },
+  {
+    "id": "lz_secret_garden",
+    "title": "The Secret Garden Behind the Wall",
+    "title_ar": "الحديقة السرّية خلف الجدار",
+    "passage": "Behind a tall stone wall, Yara found a tiny wooden door. She pushed it open and gasped. Inside was a forgotten garden full of wild roses, sleepy butterflies, and a stone bench covered in moss. Every afternoon, she returned with a small watering can. She pulled weeds and planted seeds. By the end of summer, the garden glowed with color. The garden had been waiting for someone to care, and Yara had shown up.",
+    "passage_ar": "خلف جدارٍ حجريّ عالٍ، وجدت يارا بابًا خشبيًا صغيرًا. دفعته فُتح، فأخذت شهقة. كانت في الداخل حديقة منسيّة مليئة بالورود البريّة والفراشات الهادئة، ومقعد حجري تغطّيه الطحالب. عادت كلّ ظهيرة ومعها مرشّ ماء صغير. اقتلعت الأعشاب وزرعت البذور. ومع نهاية الصيف، تألّقت الحديقة بالألوان. كانت الحديقة تنتظر من يهتمّ بها، وحضرت يارا.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did Yara find behind the wall?",
+        "q_ar": "ماذا وجدت يارا خلف الجدار؟",
+        "options": ["A forgotten garden", "A market", "A library", "A train station"],
+        "options_ar": ["حديقة منسيّة", "سوقًا", "مكتبة", "محطة قطار"],
+        "correct": "A forgotten garden",
+        "correct_ar": "حديقة منسيّة"
+      },
+      {
+        "q": "What did Yara use to care for the plants?",
+        "q_ar": "ما الذي استخدمته يارا للعناية بالنباتات؟",
+        "options": ["A small watering can", "A long pipe", "A camera", "A drone"],
+        "options_ar": ["مرشّ ماء صغيرًا", "أنبوبًا طويلًا", "كاميرا", "طائرة بدون طيّار"],
+        "correct": "A small watering can",
+        "correct_ar": "مرشّ ماء صغيرًا"
+      },
+      {
+        "q": "What is the message of the story?",
+        "q_ar": "ما رسالة القصة؟",
+        "options": ["Caring brings beauty back", "Walls hide nothing", "Gardens are scary", "Summer is short"],
+        "options_ar": ["الاهتمام يعيد الجمال", "الجدران لا تخفي شيئًا", "الحدائق مخيفة", "الصيف قصير"],
+        "correct": "Caring brings beauty back",
+        "correct_ar": "الاهتمام يعيد الجمال"
+      }
+    ]
+  },
+  {
+    "id": "lz_charity_jar",
+    "title": "The Charity Jar",
+    "title_ar": "جرّة الصدقة",
+    "passage": "Khadija's family kept a glass jar on the kitchen shelf. Every week, each person dropped a few coins inside. At the end of the month, they took the jar to a small shop and bought rice, oil, and biscuits for families who needed help. Khadija loved hearing the coins clink. One day, she gave her own birthday money to the jar. Her father said, money you give away grows in a way you cannot see, but you will feel it.",
+    "passage_ar": "كانت عائلة خديجة تحتفظ بجرّة زجاجية على رفّ المطبخ. في كلّ أسبوع، يضع كلّ فرد فيها بعض القطع النقدية. وفي آخر الشهر، يأخذون الجرّة إلى دكّان صغير، ويشترون أرزًا وزيتًا وبسكويتًا لأسرٍ تحتاج المساعدة. كانت خديجة تحبّ صوت رنين القطع. وفي يومٍ ما، وضعت في الجرّة نقود عيد ميلادها. قال لها والدها: المال الذي تتصدّقين به ينمو بطريقة لا تراها، لكنك ستشعرين بها.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "Where did the family keep the charity jar?",
+        "q_ar": "أين كانت العائلة تضع جرّة الصدقة؟",
+        "options": ["On the kitchen shelf", "Under the bed", "In the garden", "In the car"],
+        "options_ar": ["على رفّ المطبخ", "تحت السرير", "في الحديقة", "في السيارة"],
+        "correct": "On the kitchen shelf",
+        "correct_ar": "على رفّ المطبخ"
+      },
+      {
+        "q": "What did Khadija give one day?",
+        "q_ar": "ماذا أعطت خديجة في يومٍ ما؟",
+        "options": ["Her birthday money", "Her toys", "Her books", "Her shoes"],
+        "options_ar": ["نقود عيد ميلادها", "ألعابها", "كتبها", "حذاءها"],
+        "correct": "Her birthday money",
+        "correct_ar": "نقود عيد ميلادها"
+      },
+      {
+        "q": "What did her father say about giving?",
+        "q_ar": "ماذا قال والدها عن الصدقة؟",
+        "options": ["It grows in ways you can feel", "It is wasted", "It is too hard", "It is for adults only"],
+        "options_ar": ["تنمو بطريقة تشعرين بها", "ضائعة", "صعبة جدًا", "للكبار فقط"],
+        "correct": "It grows in ways you can feel",
+        "correct_ar": "تنمو بطريقة تشعرين بها"
+      }
+    ]
+  },
+  {
+    "id": "lz_mountain_climb",
+    "title": "Climbing the Small Mountain",
+    "title_ar": "تسلّق الجبل الصغير",
+    "passage": "Adam and his uncle decided to climb a small mountain near their village. They packed water, sandwiches, and a flashlight. The path was steep, and Adam wanted to stop many times. His uncle said, look only at the next step, not the top. Adam followed the advice. Step by step, the path got easier. When they reached the top, the whole valley spread below them like a green blanket. Adam learned that big goals are reached one small step at a time.",
+    "passage_ar": "قرّر آدم وعمّه أن يتسلّقا جبلًا صغيرًا قرب قريتهما. حزما الماء والشطائر والمصباح اليدوي. كان الطريق شديد الانحدار، وأراد آدم التوقّف مرّاتٍ كثيرة. قال له عمّه: انظر إلى الخطوة التالية فقط، لا إلى القمة. اتّبع آدم النصيحة. خطوة تلو الأخرى، صار الطريق أسهل. وحين وصلا إلى القمة، انبسط الوادي تحتهما كبساطٍ أخضر. تعلّم آدم أنّ الأهداف الكبيرة تُبلغ بخطوات صغيرة.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did Adam and his uncle pack?",
+        "q_ar": "ماذا حزم آدم وعمّه؟",
+        "options": ["Water, sandwiches, and a flashlight", "Only a phone", "Only a hat", "A heavy book"],
+        "options_ar": ["الماء والشطائر والمصباح اليدوي", "هاتفًا فقط", "قبّعة فقط", "كتابًا ثقيلًا"],
+        "correct": "Water, sandwiches, and a flashlight",
+        "correct_ar": "الماء والشطائر والمصباح اليدوي"
+      },
+      {
+        "q": "What advice did the uncle give?",
+        "q_ar": "ما النصيحة التي قدّمها العمّ؟",
+        "options": ["Look at the next step, not the top", "Run as fast as possible", "Sing loudly", "Close your eyes"],
+        "options_ar": ["انظر إلى الخطوة التالية لا إلى القمة", "اجرِ بأقصى سرعة", "غنِّ بصوت عالٍ", "أغمض عينيك"],
+        "correct": "Look at the next step, not the top",
+        "correct_ar": "انظر إلى الخطوة التالية لا إلى القمة"
+      },
+      {
+        "q": "What is the lesson of the story?",
+        "q_ar": "ما الدرس من القصة؟",
+        "options": ["Big goals come from small steps", "Mountains are useless", "Walking is boring", "Uncles know nothing"],
+        "options_ar": ["الأهداف الكبيرة تأتي بخطوات صغيرة", "الجبال بلا فائدة", "المشي ممل", "الأعمام لا يعرفون شيئًا"],
+        "correct": "Big goals come from small steps",
+        "correct_ar": "الأهداف الكبيرة تأتي بخطوات صغيرة"
+      }
+    ]
+  },
+  {
+    "id": "lz_thankful_heart",
+    "title": "A Thankful Heart",
+    "title_ar": "قلب شاكر",
+    "passage": "Every night before sleeping, little Hamza listed three things he was thankful for. Some nights it was easy: his mother's cooking, his soft pillow, or a sunny day. Other nights, when he was tired, he had to think hard. He thanked the moon for shining, the cat for purring, and his shoes for not having holes. Slowly, Hamza noticed that even on hard days he could find good things. A thankful heart, his grandmother said, makes ordinary things shine.",
+    "passage_ar": "في كلّ ليلة قبل النوم، كان حمزة الصغير يعدّ ثلاثة أشياء يشكر الله عليها. في بعض الليالي كان الأمر سهلًا: طبخ أمّه، ووسادته الناعمة، ويوم مشمس. وفي ليالٍ أخرى، حين يكون متعبًا، كان يحتاج إلى التفكير. كان يشكر القمر لأنه ينير، والقطّة لأنها تخرخر، وحذاءه لأنه ليس فيه ثقوب. شيئًا فشيئًا لاحظ حمزة أنه حتى في الأيام الصعبة يجد أشياء جميلة. قالت جدّته: القلب الشاكر يجعل العادي مضيئًا.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "How many things did Hamza list each night?",
+        "q_ar": "كم شيئًا كان حمزة يعدّ كلّ ليلة؟",
+        "options": ["Three", "Ten", "One", "Twenty"],
+        "options_ar": ["ثلاثة", "عشرة", "واحدًا", "عشرين"],
+        "correct": "Three",
+        "correct_ar": "ثلاثة"
+      },
+      {
+        "q": "What did his grandmother say about a thankful heart?",
+        "q_ar": "ماذا قالت جدّته عن القلب الشاكر؟",
+        "options": ["It makes ordinary things shine", "It feels heavy", "It is silent", "It needs gifts"],
+        "options_ar": ["يجعل العادي مضيئًا", "يشعر بالثقل", "صامت", "يحتاج إلى هدايا"],
+        "correct": "It makes ordinary things shine",
+        "correct_ar": "يجعل العادي مضيئًا"
+      },
+      {
+        "q": "What did Hamza notice over time?",
+        "q_ar": "ماذا لاحظ حمزة مع الوقت؟",
+        "options": ["Even hard days have good things", "Nights are short", "Pillows are loud", "Cats can talk"],
+        "options_ar": ["حتى الأيام الصعبة فيها أشياء جميلة", "الليالي قصيرة", "الوسائد صاخبة", "القطط تتكلّم"],
+        "correct": "Even hard days have good things",
+        "correct_ar": "حتى الأيام الصعبة فيها أشياء جميلة"
+      }
+    ]
+  },
+  {
+    "id": "lz_solar_panel",
+    "title": "The Solar Panel on the Roof",
+    "title_ar": "اللوح الشمسي على السطح",
+    "passage": "When workers placed a shiny black panel on Zayd's roof, he asked his father what it was. His father explained that it catches sunlight and turns it into electricity. The same sun that warms the garden can light a lamp inside. Zayd felt amazed. After that, he started turning off lights he did not need. He said, the sun gives us power for free, but we should not waste it. Even free gifts deserve respect.",
+    "passage_ar": "حين وضع العمّال لوحًا أسود لامعًا على سطح بيت زيد، سأل والده ما هذا. شرح له والده أنه يلتقط ضوء الشمس ويحوّله إلى كهرباء. الشمس نفسها التي تدفّئ الحديقة تستطيع أن تضيء مصباحًا في الداخل. شعر زيد بالدهشة. بعد ذلك بدأ يطفئ المصابيح التي لا يحتاجها. وقال: الشمس تعطينا الطاقة مجّانًا، لكن لا ينبغي أن نهدرها. حتى الهبات المجّانية تستحقّ الاحترام.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What does a solar panel do?",
+        "q_ar": "ماذا يفعل اللوح الشمسي؟",
+        "options": ["Turns sunlight into electricity", "Cools the house", "Plays music", "Stores water"],
+        "options_ar": ["يحوّل ضوء الشمس إلى كهرباء", "يبرّد البيت", "يشغّل الموسيقى", "يخزّن الماء"],
+        "correct": "Turns sunlight into electricity",
+        "correct_ar": "يحوّل ضوء الشمس إلى كهرباء"
+      },
+      {
+        "q": "What did Zayd start doing after he learned?",
+        "q_ar": "ماذا بدأ زيد يفعل بعد أن عرف؟",
+        "options": ["Turning off unused lights", "Buying many lamps", "Sleeping during the day", "Painting the roof"],
+        "options_ar": ["إطفاء المصابيح غير المستخدمة", "شراء مصابيح كثيرة", "النوم في النهار", "طلاء السطح"],
+        "correct": "Turning off unused lights",
+        "correct_ar": "إطفاء المصابيح غير المستخدمة"
+      },
+      {
+        "q": "What is the main idea?",
+        "q_ar": "ما الفكرة الرئيسية؟",
+        "options": ["Even free gifts deserve respect", "Roofs are dangerous", "The sun is far", "Electricity is rare"],
+        "options_ar": ["حتى الهبات المجّانية تستحقّ الاحترام", "السطوح خطيرة", "الشمس بعيدة", "الكهرباء نادرة"],
+        "correct": "Even free gifts deserve respect",
+        "correct_ar": "حتى الهبات المجّانية تستحقّ الاحترام"
+      }
+    ]
+  },
+  {
+    "id": "lz_lost_kitten",
+    "title": "The Lost Kitten",
+    "title_ar": "الهرّة الضائعة",
+    "passage": "On a rainy evening, Reem heard a tiny meow near her gate. A wet, shivering kitten with white paws was hiding under a bush. Reem ran inside and brought a soft towel and a bowl of warm milk. The kitten drank quickly and fell asleep on her lap. The next morning, Reem put up signs around the neighborhood. By afternoon, a kind girl came knocking. She had been crying for two days. Reem returned the kitten and gained a new friend.",
+    "passage_ar": "في مساءٍ ممطر، سمعت ريم مواءً ضعيفًا قرب البوّابة. كانت هرّة صغيرة مبلّلة ترتجف، بأقدام بيضاء، تختبئ تحت شجيرة. ركضت ريم إلى البيت وأحضرت منشفة ناعمة وصحنًا من الحليب الدافئ. شربت الهرّة بسرعة ونامت في حِجرها. في صباح اليوم التالي، علّقت ريم لافتات في الحيّ. وبحلول الظهر، طرقت الباب فتاة طيّبة. كانت تبكي منذ يومين. أعادت ريم الهرّة، وكسبت صديقة جديدة.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "Where was the kitten hiding?",
+        "q_ar": "أين كانت الهرّة مختبئة؟",
+        "options": ["Under a bush", "In a tree", "In a box", "On a roof"],
+        "options_ar": ["تحت شجيرة", "في شجرة", "في صندوق", "على سطح"],
+        "correct": "Under a bush",
+        "correct_ar": "تحت شجيرة"
+      },
+      {
+        "q": "What did Reem give the kitten?",
+        "q_ar": "ماذا أعطت ريم للهرّة؟",
+        "options": ["A towel and warm milk", "Cold water", "A toy mouse", "Bread crumbs"],
+        "options_ar": ["منشفة وحليبًا دافئًا", "ماءً باردًا", "فأرًا لعبة", "فتات خبز"],
+        "correct": "A towel and warm milk",
+        "correct_ar": "منشفة وحليبًا دافئًا"
+      },
+      {
+        "q": "What did Reem gain in the end?",
+        "q_ar": "ماذا كسبت ريم في النهاية؟",
+        "options": ["A new friend", "A new house", "A bigger garden", "A new toy"],
+        "options_ar": ["صديقة جديدة", "بيتًا جديدًا", "حديقة أكبر", "لعبة جديدة"],
+        "correct": "A new friend",
+        "correct_ar": "صديقة جديدة"
+      }
+    ]
+  },
+  {
+    "id": "lz_apology_letter",
+    "title": "The Apology Letter",
+    "title_ar": "رسالة الاعتذار",
+    "passage": "Faris said something rude to his best friend Saif during recess. Saif walked away quietly and did not speak to him all day. That night, Faris felt heavy in his chest. He took out a sheet of paper and wrote, I was wrong. I am sorry. I miss our games. The next morning, he placed the note on Saif's desk. Saif read it, smiled a tiny smile, and offered Faris half of his sandwich. Sometimes a few honest words fix what shouting cannot.",
+    "passage_ar": "قال فارس كلمة قاسية لصديقه المقرّب سيف في الاستراحة. ابتعد سيف بهدوء ولم يكلّمه طوال اليوم. في تلك الليلة، شعر فارس بثقل في صدره. أخذ ورقة وكتب: لقد أخطأت، أنا آسف، اشتقت إلى ألعابنا. في صباح اليوم التالي، وضع الرسالة على مكتب سيف. قرأها سيف، وابتسم ابتسامة صغيرة، وقدّم لفارس نصف شطيرته. أحيانًا تُصلح كلمات صادقة قليلة ما لا يصلحه الصراخ.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did Faris do to fix things?",
+        "q_ar": "ماذا فعل فارس ليُصلح الأمور؟",
+        "options": ["Wrote an apology letter", "Yelled louder", "Hid from his friend", "Told the teacher"],
+        "options_ar": ["كتب رسالة اعتذار", "صرخ بصوت أعلى", "اختبأ من صديقه", "أخبر المعلّم"],
+        "correct": "Wrote an apology letter",
+        "correct_ar": "كتب رسالة اعتذار"
+      },
+      {
+        "q": "How did Saif respond?",
+        "q_ar": "كيف ردّ سيف؟",
+        "options": ["He smiled and shared his sandwich", "He tore the note", "He left school", "He laughed loudly"],
+        "options_ar": ["ابتسم وقاسمه شطيرته", "مزّق الرسالة", "غادر المدرسة", "ضحك بصوت عالٍ"],
+        "correct": "He smiled and shared his sandwich",
+        "correct_ar": "ابتسم وقاسمه شطيرته"
+      },
+      {
+        "q": "What does the story teach us?",
+        "q_ar": "ماذا تعلّمنا القصة؟",
+        "options": ["Honest words can fix friendships", "Friends should fight more", "Letters are useless", "Sandwiches solve problems"],
+        "options_ar": ["الكلمات الصادقة تُصلح الصداقات", "على الأصدقاء أن يتشاجروا أكثر", "الرسائل بلا فائدة", "الشطائر تحلّ المشاكل"],
+        "correct": "Honest words can fix friendships",
+        "correct_ar": "الكلمات الصادقة تُصلح الصداقات"
+      }
+    ]
+  },
+  {
+    "id": "lz_bird_migration",
+    "title": "Why Birds Travel",
+    "title_ar": "لماذا تسافر الطيور",
+    "passage": "Every autumn, Maha watched flocks of birds fly across the sky in long V shapes. Her science teacher explained that many birds travel thousands of kilometers to warmer places when winter comes. They follow the sun, the stars, and even the shape of mountains below. Some birds rest on islands along the way. In spring, they fly back. Maha looked up at the sky and waved. She felt proud that such tiny creatures could find their way without any map.",
+    "passage_ar": "في كلّ خريف، كانت مها تراقب أسرابًا من الطيور تطير في السماء على شكل حرف طويل. شرح لها معلّم العلوم أنّ كثيرًا من الطيور تسافر آلاف الكيلومترات إلى أماكن أدفأ حين يأتي الشتاء. تتّبع الشمس والنجوم وحتى شكل الجبال تحتها. تستريح بعض الطيور على جزر في طريقها. وفي الربيع، تعود. نظرت مها إلى السماء ولوّحت. شعرت بالفخر لأنّ مخلوقات بهذا الصغر تجد طريقها دون خريطة.",
+    "category": "Sciences",
+    "questions": [
+      {
+        "q": "Why do birds travel in autumn?",
+        "q_ar": "لماذا تسافر الطيور في الخريف؟",
+        "options": ["To find warmer places", "To race other birds", "To find new colors", "To take pictures"],
+        "options_ar": ["لتجد أماكن أدفأ", "لتتسابق مع طيور أخرى", "لتجد ألوانًا جديدة", "لتلتقط صورًا"],
+        "correct": "To find warmer places",
+        "correct_ar": "لتجد أماكن أدفأ"
+      },
+      {
+        "q": "What helps birds find their way?",
+        "q_ar": "ما الذي يساعد الطيور على إيجاد طريقها؟",
+        "options": ["The sun, stars, and mountains", "Phones", "Road signs", "Boats"],
+        "options_ar": ["الشمس والنجوم والجبال", "الهواتف", "إشارات الطرق", "القوارب"],
+        "correct": "The sun, stars, and mountains",
+        "correct_ar": "الشمس والنجوم والجبال"
+      },
+      {
+        "q": "Why was Maha proud?",
+        "q_ar": "لماذا شعرت مها بالفخر؟",
+        "options": ["Tiny birds find their way without maps", "Birds can speak", "She caught a bird", "She drew a bird"],
+        "options_ar": ["الطيور الصغيرة تجد طريقها دون خرائط", "الطيور تتكلّم", "أمسكت بطائر", "رسمت طائرًا"],
+        "correct": "Tiny birds find their way without maps",
+        "correct_ar": "الطيور الصغيرة تجد طريقها دون خرائط"
+      }
+    ]
+  },
+  {
+    "id": "lz_grandma_recipe",
+    "title": "Grandma's Old Recipe",
+    "title_ar": "وصفة الجدّة القديمة",
+    "passage": "Yasmin's grandmother had a small notebook full of handwritten recipes. One Friday, they decided to bake the date cookies her great-grandmother used to make. They mixed flour, butter, and a pinch of cinnamon. Yasmin shaped each cookie carefully, pressing a soft date inside. The kitchen filled with a warm sweet smell. When they shared the cookies with neighbors, an old auntie said, these taste exactly like my childhood. A recipe, Yasmin realized, can carry love across many years.",
+    "passage_ar": "كان لجدّة ياسمين دفتر صغير مليء بوصفات مكتوبة بخطّ اليد. في أحد أيام الجمعة، قرّرتا أن تخبزا كعك التمر الذي كانت جدّة الجدّة تصنعه. خلطتا الطحين والزبدة ورشّة من القرفة. شكّلت ياسمين كلّ قطعة بعناية، وضغطت داخلها تمرة طريّة. امتلأ المطبخ برائحة دافئة حلوة. حين وزّعتا الكعك على الجيران، قالت خالة كبيرة: طعمه تمامًا كطعم طفولتي. أدركت ياسمين أنّ الوصفة قد تحمل الحبّ عبر سنواتٍ كثيرة.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did Yasmin and her grandmother bake?",
+        "q_ar": "ماذا خبزت ياسمين مع جدّتها؟",
+        "options": ["Date cookies", "Bread", "Pancakes", "Cake"],
+        "options_ar": ["كعك التمر", "خبزًا", "فطائر", "كعكة"],
+        "correct": "Date cookies",
+        "correct_ar": "كعك التمر"
+      },
+      {
+        "q": "What did the old auntie say?",
+        "q_ar": "ماذا قالت الخالة الكبيرة؟",
+        "options": ["They taste like her childhood", "They are too sweet", "They are too small", "They are burnt"],
+        "options_ar": ["طعمها كطفولتها", "حلوة جدًا", "صغيرة جدًا", "محروقة"],
+        "correct": "They taste like her childhood",
+        "correct_ar": "طعمها كطفولتها"
+      },
+      {
+        "q": "What did Yasmin realize?",
+        "q_ar": "ماذا أدركت ياسمين؟",
+        "options": ["A recipe can carry love across years", "Cooking is boring", "Cinnamon is bitter", "Notebooks are heavy"],
+        "options_ar": ["الوصفة قد تحمل الحبّ عبر السنوات", "الطبخ ممل", "القرفة مرّة", "الدفاتر ثقيلة"],
+        "correct": "A recipe can carry love across years",
+        "correct_ar": "الوصفة قد تحمل الحبّ عبر السنوات"
+      }
+    ]
+  },
+  {
+    "id": "lz_school_garden",
+    "title": "The School Garden Project",
+    "title_ar": "مشروع حديقة المدرسة",
+    "passage": "The students of Class Four decided to grow vegetables in the empty corner of the schoolyard. They cleaned the dirt, planted tomato and mint seeds, and made a watering schedule. Some days the seeds did nothing. Then tiny green shoots appeared. Weeks later, ripe red tomatoes hung on the plants. They picked them and made a salad for the whole class. Working together, they learned, turns a dusty corner into a tasty surprise.",
+    "passage_ar": "قرّر طلاب الصفّ الرابع أن يزرعوا الخضروات في الزاوية الفارغة من ساحة المدرسة. نظّفوا التراب، وزرعوا بذور الطماطم والنعناع، ووضعوا جدولًا للسقي. في بعض الأيام لم تفعل البذور شيئًا. ثم ظهرت براعم خضراء صغيرة. وبعد أسابيع، تدلّت حبّات طماطم حمراء ناضجة. قطفوها وصنعوا سلطة للصفّ كلّه. تعلّموا أنّ العمل المشترك يحوّل زاوية مغبرّة إلى مفاجأة لذيذة.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did the students plant?",
+        "q_ar": "ماذا زرع الطلاب؟",
+        "options": ["Tomato and mint seeds", "Apple trees", "Cactus", "Roses only"],
+        "options_ar": ["بذور الطماطم والنعناع", "أشجار التفاح", "صبار", "ورودًا فقط"],
+        "correct": "Tomato and mint seeds",
+        "correct_ar": "بذور الطماطم والنعناع"
+      },
+      {
+        "q": "What did they make from the tomatoes?",
+        "q_ar": "ماذا صنعوا من الطماطم؟",
+        "options": ["A salad for the class", "A cake", "Juice", "Soup"],
+        "options_ar": ["سلطة للصفّ", "كعكة", "عصيرًا", "حساءً"],
+        "correct": "A salad for the class",
+        "correct_ar": "سلطة للصفّ"
+      },
+      {
+        "q": "What did the students learn?",
+        "q_ar": "ماذا تعلّم الطلاب؟",
+        "options": ["Working together brings good results", "Gardens are boring", "Tomatoes are blue", "School corners are useless"],
+        "options_ar": ["العمل المشترك يأتي بنتائج جميلة", "الحدائق مملّة", "الطماطم زرقاء", "زوايا المدرسة بلا فائدة"],
+        "correct": "Working together brings good results",
+        "correct_ar": "العمل المشترك يأتي بنتائج جميلة"
+      }
+    ]
+  },
+  {
+    "id": "lz_brave_swimmer",
+    "title": "The Day Layan Learned to Swim",
+    "title_ar": "يوم تعلّمت ليان السباحة",
+    "passage": "Layan was scared of the deep end of the pool. Her swimming teacher gave her a foam noodle and walked next to her. Kick gently, the teacher said, the water will hold you. Layan kicked, splashed, and swallowed a tiny mouthful. She did not give up. After many tries, she let go of the noodle and floated for three full seconds. Her teacher cheered. Layan laughed. Water was no longer her enemy, just a new friend she had to get to know.",
+    "passage_ar": "كانت ليان خائفة من الجزء العميق من المسبح. أعطتها معلّمة السباحة عوّامة طويلة وسارت بجانبها. قالت لها: ارفسي بلطف، الماء سيحملك. رفست ليان وتطايرت الرذاذ، وابتلعت قليلًا من الماء. لكنّها لم تستسلم. بعد محاولاتٍ كثيرة، تركت العوّامة وطفت ثلاث ثوانٍ كاملة. صفّقت لها المعلّمة. ضحكت ليان. لم يعد الماء عدوًّا، بل صار صديقًا جديدًا تتعرّف إليه.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did the teacher give Layan?",
+        "q_ar": "ماذا أعطت المعلّمة ليان؟",
+        "options": ["A foam noodle", "Goggles", "A boat", "A whistle"],
+        "options_ar": ["عوّامة طويلة", "نظارات سباحة", "قاربًا", "صفّارة"],
+        "correct": "A foam noodle",
+        "correct_ar": "عوّامة طويلة"
+      },
+      {
+        "q": "How long did Layan float without the noodle?",
+        "q_ar": "كم ثانية طفت ليان بدون العوّامة؟",
+        "options": ["Three seconds", "Ten seconds", "One minute", "Half an hour"],
+        "options_ar": ["ثلاث ثوانٍ", "عشر ثوانٍ", "دقيقة", "نصف ساعة"],
+        "correct": "Three seconds",
+        "correct_ar": "ثلاث ثوانٍ"
+      },
+      {
+        "q": "How did Layan see water by the end?",
+        "q_ar": "كيف نظرت ليان إلى الماء في النهاية؟",
+        "options": ["As a new friend", "As a scary monster", "As something boring", "As a big puddle"],
+        "options_ar": ["كصديق جديد", "كوحش مخيف", "كشيء ممل", "كبركة كبيرة"],
+        "correct": "As a new friend",
+        "correct_ar": "كصديق جديد"
+      }
+    ]
+  },
+  {
+    "id": "lz_market_day",
+    "title": "Market Day with Father",
+    "title_ar": "يوم السوق مع أبي",
+    "passage": "On Saturday mornings, Mazen went to the market with his father. They greeted the bread seller, smelled fresh herbs, and tasted small pieces of cheese. Father always asked the sellers about their families before buying anything. Mazen wondered why. His father smiled and said, when you trade with someone, treat them as a person, not just a price. On the way home, the heavy basket felt light because Mazen carried something else inside him: a small lesson about respect.",
+    "passage_ar": "في صباح كلّ سبت، كان مازن يذهب إلى السوق مع والده. كانا يلقيان السلام على بائع الخبز، ويشمّان الأعشاب الطازجة، ويتذوّقان قطعًا صغيرة من الجبن. كان والده يسأل الباعة دائمًا عن أحوال عائلاتهم قبل أن يشتري شيئًا. تعجّب مازن من ذلك. ابتسم والده وقال: حين تتاجر مع أحد، عامله كإنسان لا كسعر فقط. في طريق العودة، شعر مازن أنّ السلّة الثقيلة خفيفة، لأنه كان يحمل في داخله درسًا صغيرًا عن الاحترام.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did Mazen and his father do at the market?",
+        "q_ar": "ماذا فعل مازن ووالده في السوق؟",
+        "options": ["Greeted sellers and bought food", "Sold bread", "Played football", "Painted walls"],
+        "options_ar": ["ألقيا السلام على الباعة واشتريا الطعام", "باعا الخبز", "لعبا كرة القدم", "طلَيا الجدران"],
+        "correct": "Greeted sellers and bought food",
+        "correct_ar": "ألقيا السلام على الباعة واشتريا الطعام"
+      },
+      {
+        "q": "What did Father say about trading?",
+        "q_ar": "ماذا قال الأب عن التعامل التجاري؟",
+        "options": ["Treat people as persons, not just prices", "Always pay less", "Speak loudly", "Avoid asking questions"],
+        "options_ar": ["عامل الناس كأشخاص لا كأسعار", "ادفع أقلّ دائمًا", "تكلّم بصوت عالٍ", "تجنّب الأسئلة"],
+        "correct": "Treat people as persons, not just prices",
+        "correct_ar": "عامل الناس كأشخاص لا كأسعار"
+      },
+      {
+        "q": "What lesson did Mazen carry home?",
+        "q_ar": "أيّ درس حمله مازن إلى البيت؟",
+        "options": ["A small lesson about respect", "How to bake bread", "How to ride a bike", "How to sing"],
+        "options_ar": ["درسًا صغيرًا عن الاحترام", "كيفية خبز الخبز", "كيفية ركوب الدراجة", "كيفية الغناء"],
+        "correct": "A small lesson about respect",
+        "correct_ar": "درسًا صغيرًا عن الاحترام"
+      }
+    ]
+  },
+  {
+    "id": "lz_paper_boats",
+    "title": "Paper Boats After the Rain",
+    "title_ar": "قوارب ورقيّة بعد المطر",
+    "passage": "After a heavy rain, Joud and her cousin folded paper boats from old notebook pages. They wrote tiny wishes on them: a healthy grandfather, a sunny picnic, a new library book. They placed the boats on a small stream of rainwater near the curb. The boats floated, spun, and disappeared down the road. Joud knew the boats were just paper, but she felt that her wishes had begun their journey. Sometimes hope needs only a small boat to start moving.",
+    "passage_ar": "بعد مطرٍ غزير، طوت جود وابنة عمّتها قوارب ورقيّة من صفحات دفاتر قديمة. كتبتا عليها أمنيات صغيرة: جدّ معافى، ونزهة مشمسة، وكتاب جديد من المكتبة. وضعتا القوارب على جدول صغير من ماء المطر قرب الرصيف. طفت القوارب ودارت ثم اختفت في آخر الطريق. تعلم جود أنّ القوارب مجرّد ورق، لكنّها شعرت أنّ أمنياتها بدأت رحلتها. أحيانًا لا يحتاج الأمل إلا إلى قارب صغير ليتحرّك.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "What did Joud make from old notebook pages?",
+        "q_ar": "ماذا صنعت جود من صفحات الدفاتر القديمة؟",
+        "options": ["Paper boats", "Paper planes", "Paper hats", "Paper flowers"],
+        "options_ar": ["قوارب ورقيّة", "طائرات ورقيّة", "قبّعات ورقيّة", "زهور ورقيّة"],
+        "correct": "Paper boats",
+        "correct_ar": "قوارب ورقيّة"
+      },
+      {
+        "q": "What did the girls write on the boats?",
+        "q_ar": "ماذا كتبت الفتاتان على القوارب؟",
+        "options": ["Small wishes", "Long stories", "Math problems", "Their phone numbers"],
+        "options_ar": ["أمنيات صغيرة", "قصصًا طويلة", "مسائل رياضيات", "أرقام هواتفهما"],
+        "correct": "Small wishes",
+        "correct_ar": "أمنيات صغيرة"
+      },
+      {
+        "q": "What is the story really about?",
+        "q_ar": "عمّ تتحدّث القصة حقًّا؟",
+        "options": ["Hope and small starts", "Bad weather", "Folding paper", "Sailing ships"],
+        "options_ar": ["الأمل والبدايات الصغيرة", "الطقس السيّئ", "طيّ الورق", "السفن الكبيرة"],
+        "correct": "Hope and small starts",
+        "correct_ar": "الأمل والبدايات الصغيرة"
+      }
+    ]
+  },
+  {
+    "id": "lz_shooting_star",
+    "title": "The Shooting Star",
+    "title_ar": "الشهاب الساقط",
+    "passage": "Camping in the desert with his family, Anas saw a thin streak of light cross the night sky. His sister whispered, that is a shooting star, make a wish. His father gently explained that a shooting star is actually a tiny piece of rock burning as it enters the air around Earth. Anas felt amazed in a different way. Wishing was nice, but knowing why something happens was its own kind of magic. He smiled and made a wish anyway.",
+    "passage_ar": "بينما كان أنس يخيّم في الصحراء مع عائلته، رأى خطًّا رفيعًا من الضوء يعبر سماء الليل. همست أخته: هذا شهاب، تمنَّ أمنية. شرح له والده بلطف أنّ الشهاب في الحقيقة قطعة صغيرة من الصخر تحترق وهي تدخل الهواء حول الأرض. شعر أنس بدهشة من نوع آخر. التمنّي جميل، لكنّ معرفة سبب حدوث شيء له سحرٌ خاصّ. ابتسم وتمنّى أمنيته على أيّ حال.",
+    "category": "Sciences",
+    "questions": [
+      {
+        "q": "What is a shooting star really?",
+        "q_ar": "ما هو الشهاب في الحقيقة؟",
+        "options": ["A small rock burning in the air", "A flying bird", "A balloon", "A signal light"],
+        "options_ar": ["صخرة صغيرة تحترق في الهواء", "طائر طائر", "بالون", "ضوء إشارة"],
+        "correct": "A small rock burning in the air",
+        "correct_ar": "صخرة صغيرة تحترق في الهواء"
+      },
+      {
+        "q": "Where was Anas when he saw it?",
+        "q_ar": "أين كان أنس حين رأى الشهاب؟",
+        "options": ["Camping in the desert", "At school", "In a city park", "On a boat"],
+        "options_ar": ["يخيّم في الصحراء", "في المدرسة", "في حديقة المدينة", "على قارب"],
+        "correct": "Camping in the desert",
+        "correct_ar": "يخيّم في الصحراء"
+      },
+      {
+        "q": "What did Anas learn?",
+        "q_ar": "ماذا تعلّم أنس؟",
+        "options": ["Knowing why things happen is its own magic", "Wishes never come true", "Stars are made of paper", "The desert is loud"],
+        "options_ar": ["معرفة السبب لها سحرها الخاص", "الأمنيات لا تتحقّق أبدًا", "النجوم من ورق", "الصحراء صاخبة"],
+        "correct": "Knowing why things happen is its own magic",
+        "correct_ar": "معرفة السبب لها سحرها الخاص"
+      }
+    ]
+  },
+  {
+    "id": "lz_quiet_classmate",
+    "title": "The Quiet Classmate",
+    "title_ar": "الزميلة الهادئة",
+    "passage": "A new girl named Selin joined the class. She did not speak Arabic well, so she sat quietly during recess. Most kids forgot she was there. Hadi noticed her drawing in a small notebook. He sat next to her and pointed at her drawing of a horse. He drew a stick figure waving and wrote his name. Selin smiled the biggest smile. The next day, she taught Hadi a word from her language. Friendship does not always need many words to begin.",
+    "passage_ar": "انضمّت إلى الصفّ فتاة جديدة اسمها سيلين. لم تكن تتقن العربية، فجلست بهدوء خلال الاستراحة. نسي معظم الأطفال وجودها. لاحظ هادي أنها ترسم في دفتر صغير. جلس بجانبها وأشار إلى رسمها لحصان. ثم رسم شخصًا يلوّح وكتب اسمه. ابتسمت سيلين أكبر ابتسامة. في اليوم التالي، علّمته كلمة من لغتها. الصداقة لا تحتاج دائمًا إلى كلمات كثيرة لتبدأ.",
+    "category": "Stories",
+    "questions": [
+      {
+        "q": "Why was Selin quiet at first?",
+        "q_ar": "لماذا كانت سيلين هادئة في البداية؟",
+        "options": ["She did not speak Arabic well", "She was sleepy", "She was angry", "She was sick"],
+        "options_ar": ["لم تكن تتقن العربية", "كانت نعسانة", "كانت غاضبة", "كانت مريضة"],
+        "correct": "She did not speak Arabic well",
+        "correct_ar": "لم تكن تتقن العربية"
+      },
+      {
+        "q": "How did Hadi reach out?",
+        "q_ar": "كيف تواصل هادي معها؟",
+        "options": ["He drew and pointed at her notebook", "He shouted her name", "He gave her a test", "He laughed at her"],
+        "options_ar": ["رسم وأشار إلى دفترها", "صرخ باسمها", "أعطاها اختبارًا", "ضحك منها"],
+        "correct": "He drew and pointed at her notebook",
+        "correct_ar": "رسم وأشار إلى دفترها"
+      },
+      {
+        "q": "What does the story tell us about friendship?",
+        "q_ar": "ماذا تخبرنا القصة عن الصداقة؟",
+        "options": ["It does not always need many words", "It must be loud", "It needs gifts", "It needs the same language"],
+        "options_ar": ["لا تحتاج دائمًا إلى كلمات كثيرة", "يجب أن تكون صاخبة", "تحتاج إلى هدايا", "تحتاج إلى اللغة نفسها"],
+        "correct": "It does not always need many words",
+        "correct_ar": "لا تحتاج دائمًا إلى كلمات كثيرة"
+      }
+    ]
+  }
+]

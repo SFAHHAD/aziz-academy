@@ -3,7 +3,6 @@ import 'dart:math' as math;
 import 'package:flutter/services.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 
-// Raw DTO for parsing sciences.json properly
 class ScienceEntry {
   const ScienceEntry({
     required this.id,
@@ -15,6 +14,7 @@ class ScienceEntry {
     required this.correctAnswerAr,
     required this.category,
     this.funFact,
+    this.difficulty = 1,
   });
 
   final String id;
@@ -26,6 +26,7 @@ class ScienceEntry {
   final String? correctAnswerAr;
   final String category;
   final String? funFact;
+  final int difficulty;
 
   factory ScienceEntry.fromJson(Map<String, dynamic> json) {
     return ScienceEntry(
@@ -40,19 +41,29 @@ class ScienceEntry {
       correctAnswerAr: json['correct_answer_ar'] as String?,
       category: json['category'] as String,
       funFact: json['fun_fact'] as String?,
+      difficulty: (json['difficulty'] as num?)?.toInt() ?? 1,
     );
   }
 
-  QuizQuestion toQuizQuestion() {
-    // Map to arabic since app is only AR
-    final shuffled = List<String>.from(optionsAr)..shuffle(math.Random());
+  QuizQuestion toQuizQuestion({required bool arabic}) {
+    final opts = arabic
+        ? List<String>.from(optionsAr)
+        : List<String>.from(options);
+    opts.shuffle(math.Random());
     return QuizQuestion(
       id: id,
-      question: questionAr ?? question,
-      options: shuffled,
-      correctAnswer: correctAnswerAr ?? correctAnswer,
+      question: arabic ? (questionAr ?? question) : question,
+      options: opts,
+      correctAnswer: arabic
+          ? (correctAnswerAr ?? correctAnswer)
+          : correctAnswer,
       category: category,
-      funFact: funFact ?? 'هل تعلم أن هذا الاكتشاف غير العالم؟', // Fallback
+      funFact:
+          funFact ??
+          (arabic
+              ? 'هل تعلم أن هذا الاكتشاف غير العالم؟'
+              : 'Did you know this discovery changed the world?'),
+      difficulty: difficulty,
     );
   }
 }
@@ -60,13 +71,47 @@ class ScienceEntry {
 class SciencesRepository {
   const SciencesRepository();
 
-  Future<List<QuizQuestion>> loadQuestions() async {
-    final byteData = await rootBundle.load('assets/data/sciences.json');
+  Future<List<QuizQuestion>> loadQuestions({bool arabic = true}) async {
+    final entries = await loadEntries();
+    return entries.map((e) => e.toQuizQuestion(arabic: arabic)).toList();
+  }
+
+  Future<List<ScienceEntry>> loadEntries() async {
+    final base = await _readPack('assets/data/sciences.json');
+    final extras = await Future.wait([
+      _tryReadPack('assets/data/sciences_l2.json'),
+      _tryReadPack('assets/data/sciences_l3.json'),
+      _tryReadPack('assets/data/sciences_l4.json'),
+      _tryReadPack('assets/data/sciences_l5.json'),
+      _tryReadPack('assets/data/sciences_l6.json'),
+    ]);
+    final seen = base.map((e) => e.id).toSet();
+    final out = <ScienceEntry>[...base];
+    for (final pack in extras) {
+      if (pack == null) continue;
+      for (final e in pack) {
+        if (seen.add(e.id)) out.add(e);
+      }
+    }
+    return out;
+  }
+
+  Future<List<ScienceEntry>> _readPack(String path) async {
+    final byteData = await rootBundle.load(path);
     final jsonString = utf8.decode(byteData.buffer.asUint8List());
     final List<dynamic> jsonList = json.decode(jsonString);
-
     return jsonList
-        .map((jsonObj) => ScienceEntry.fromJson(jsonObj).toQuizQuestion())
+        .map(
+          (jsonObj) => ScienceEntry.fromJson(jsonObj as Map<String, dynamic>),
+        )
         .toList();
+  }
+
+  Future<List<ScienceEntry>?> _tryReadPack(String path) async {
+    try {
+      return await _readPack(path);
+    } catch (_) {
+      return null;
+    }
   }
 }

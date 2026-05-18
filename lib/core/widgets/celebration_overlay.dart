@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +43,7 @@ class _CelebrationOverlayState extends State<CelebrationOverlay>
   late final AnimationController _slideCtrl;
   late final Animation<double> _fade;
   late final Animation<Offset> _slide;
+  Timer? _dismissTimer;
 
   @override
   void initState() {
@@ -68,11 +70,12 @@ class _CelebrationOverlayState extends State<CelebrationOverlay>
       end: Offset.zero,
     ).animate(CurvedAnimation(parent: _slideCtrl, curve: Curves.easeOutCubic));
 
-    Future.delayed(widget.autoDismissAfter, _dismiss);
+    _dismissTimer = Timer(widget.autoDismissAfter, _dismiss);
   }
 
   @override
   void dispose() {
+    _dismissTimer?.cancel();
     _leftCtrl.dispose();
     _rightCtrl.dispose();
     _fadeCtrl.dispose();
@@ -146,7 +149,9 @@ class _CelebrationOverlayState extends State<CelebrationOverlay>
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 32),
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 28, vertical: 32),
+                    horizontal: 28,
+                    vertical: 32,
+                  ),
                   decoration: BoxDecoration(
                     color: AppColors.surface,
                     borderRadius: BorderRadius.circular(36),
@@ -199,8 +204,9 @@ class _CelebrationOverlayState extends State<CelebrationOverlay>
                         alignment: WrapAlignment.center,
                         children: widget.newBadges.map((id) {
                           final def = allBadges.firstWhere(
-                              (b) => b.id == id,
-                              orElse: () => allBadges.first);
+                            (b) => b.id == id,
+                            orElse: () => allBadges.first,
+                          );
                           return _BadgeChip(
                             badge: def,
                             name: context.l10n.badgeName(id),

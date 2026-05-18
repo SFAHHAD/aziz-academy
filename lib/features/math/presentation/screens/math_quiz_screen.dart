@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
@@ -19,9 +20,13 @@ import 'package:aziz_academy/core/providers/achievement_provider.dart';
 import 'package:aziz_academy/core/providers/xp_provider.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
+import 'package:aziz_academy/core/widgets/lifeline_bar.dart';
 import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
 import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
+import 'package:aziz_academy/core/widgets/responsive.dart';
+import 'package:aziz_academy/core/widgets/tts_speaker_icon.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
+import 'package:aziz_academy/core/utils/digits.dart';
 
 class MathQuizScreen extends ConsumerStatefulWidget {
   const MathQuizScreen({super.key});
@@ -35,6 +40,13 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
   String? _selectedOption;
   bool get _isRevealed => _selectedOption != null;
   bool _coPlayChoicesVisible = false;
+
+  // Lifeline state — reset every question.
+  bool _usedFiftyFifty = false;
+  bool _usedSkip = false;
+  bool _usedHint = false;
+  List<String> _hiddenOptions = const [];
+  String? _hintText;
 
   late final AnimationController _revealCtrl;
 
@@ -59,20 +71,28 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
     if (session != null && session.currentQuestion != null) {
       final isCorrect = option == session.currentQuestion!.correctAnswer;
       if (isCorrect) {
+        HapticFeedback.lightImpact();
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
+        HapticFeedback.mediumImpact();
         ref.read(audioServiceProvider).playWrongSound();
       }
-      unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
-        session.currentQuestion!.correctAnswer,
-        correct: isCorrect,
-      ));
+      unawaited(
+        ref
+            .read(ttsServiceProvider)
+            .speakAnswerFeedback(
+              session.currentQuestion!.correctAnswer,
+              correct: isCorrect,
+            ),
+      );
     }
 
     ref.read(mathQuizProvider.notifier).submitAnswer(option);
     if (q != null && option.trim() != q.correctAnswer.trim()) {
       unawaited(
-        ref.read(recapQueueProvider.notifier).recordWrong(
+        ref
+            .read(recapQueueProvider.notifier)
+            .recordWrong(
               RecapModule.math,
               q.id,
               snapshotJson: jsonEncode(q.toJson()),
@@ -89,6 +109,11 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
     setState(() {
       _selectedOption = null;
       if (co) _coPlayChoicesVisible = false;
+      _usedFiftyFifty = false;
+      _usedSkip = false;
+      _usedHint = false;
+      _hiddenOptions = const [];
+      _hintText = null;
     });
     ref.read(mathQuizProvider.notifier).nextQuestion();
   }
@@ -99,39 +124,66 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
     setState(() {
       _selectedOption = null;
       _coPlayChoicesVisible = !co;
+      _usedFiftyFifty = false;
+      _usedSkip = false;
+      _usedHint = false;
+      _hiddenOptions = const [];
+      _hintText = null;
     });
     ref.read(mathQuizProvider.notifier).restart();
+  }
+
+  void _onFiftyFifty(List<String> hidden) {
+    setState(() {
+      _hiddenOptions = hidden;
+      _usedFiftyFifty = true;
+    });
+  }
+
+  void _onSkip() {
+    setState(() => _usedSkip = true);
+    _onNext();
+  }
+
+  void _onHint(String text) {
+    setState(() {
+      _hintText = text;
+      _usedHint = true;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     final sessionAsync = ref.watch(mathQuizProvider);
 
-    ref.listen<AsyncValue<QuizSessionState>>(
-      mathQuizProvider,
-      (prev, next) {
-        if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
-          final session = next.value!;
-          final practice =
-              ref.read(appSettingsProvider).value?.practiceMode ?? false;
-          if (!practice) {
-            ref.read(achievementProvider.notifier).recordMathSession(
+    ref.listen<AsyncValue<QuizSessionState>>(mathQuizProvider, (prev, next) {
+      if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
+        final session = next.value!;
+        final practice =
+            ref.read(appSettingsProvider).value?.practiceMode ?? false;
+        if (!practice) {
+          ref
+              .read(achievementProvider.notifier)
+              .recordMathSession(
+                score: session.score,
+                livesRemaining: session.livesRemaining,
+              );
+          ref
+              .read(xpProvider.notifier)
+              .addXp(
+                XpNotifier.sessionXp(
                   score: session.score,
                   livesRemaining: session.livesRemaining,
-                );
-            ref.read(xpProvider.notifier).addXp(
-                  XpNotifier.sessionXp(
-                    score: session.score,
-                    livesRemaining: session.livesRemaining,
-                  ),
-                );
-          }
-          ref.read(audioServiceProvider).playVictorySound();
-        } else if (next.value?.isGameOver == true && prev?.value?.isGameOver != true) {
-          ref.read(audioServiceProvider).playWrongSound();
+                ),
+              );
         }
-      },
-    );
+        HapticFeedback.heavyImpact();
+        ref.read(audioServiceProvider).playVictorySound();
+      } else if (next.value?.isGameOver == true &&
+          prev?.value?.isGameOver != true) {
+        ref.read(audioServiceProvider).playWrongSound();
+      }
+    });
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -147,6 +199,7 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
                 title: context.l10n.victoryMathTitle,
                 shareModuleLabel: context.l10n.shareModuleMath,
                 reducedMotion: reducedMotion,
+                coinsEarned: session.score * 5 + session.livesRemaining * 10,
                 onPlayAgain: _onRestart,
                 onBack: () => context.go(AppRoutes.home),
               );
@@ -164,198 +217,275 @@ class _MathQuizScreenState extends ConsumerState<MathQuizScreen>
             if (question == null) return const SizedBox.shrink();
 
             final shortViewport = MediaQuery.sizeOf(context).height < 760;
-            final coPlay = ref.watch(appSettingsProvider).maybeWhen(
-                  data: (s) => s.coPlayMode,
-                  orElse: () => false,
-                );
+            final coPlay = ref
+                .watch(appSettingsProvider)
+                .maybeWhen(data: (s) => s.coPlayMode, orElse: () => false);
             final showChoices = !coPlay || _coPlayChoicesVisible;
 
-            return QuizNarrowContent(
-              child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Align(
-                  alignment: Alignment.topRight,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 8, right: 8),
-                    child: IconButton(
-                      icon: const Icon(Icons.close, color: AppColors.textMedium),
-                      onPressed: () {
-                        if (context.canPop()) {
-                          context.pop();
-                        } else {
-                          context.go(AppRoutes.home);
-                        }
-                      },
-                    ),
-                  ),
-                ),
-                _Header(
-                  score: session.score,
-                  lives: session.livesRemaining,
-                  currentIndex: session.currentIndex,
-                  total: session.totalQuestions,
-                ),
-                Expanded(
-                  child: SingleChildScrollView(
-                    physics: const ClampingScrollPhysics(),
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 16,
-                            horizontal: 16,
+            return CenteredBody(
+              child: QuizNarrowContent(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8, right: 8),
+                        child: IconButton(
+                          icon: const Icon(
+                            Icons.close,
+                            color: AppColors.textMedium,
                           ),
-                          child: Container(
-                            width: double.infinity,
-                            height: shortViewport ? 110 : 140,
-                            decoration: BoxDecoration(
-                              color: AppColors.surface,
-                              borderRadius: BorderRadius.circular(24),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withAlpha(15),
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 5),
-                                ),
-                              ],
-                              border: Border.all(
-                                color: AppColors.primary.withAlpha(50),
-                                width: 2,
-                              ),
-                            ),
-                            child: Center(
-                              child: Text(
-                                question.question,
-                                textDirection: TextDirection.ltr,
-                                style: AppTextStyles.headingLarge.copyWith(
-                                  fontSize: shortViewport ? 36 : 48,
-                                  color: AppColors.primary,
-                                ),
-                              ),
-                            ),
+                          onPressed: () {
+                            if (context.canPop()) {
+                              context.pop();
+                            } else {
+                              context.go(AppRoutes.home);
+                            }
+                          },
+                        ),
+                      ),
+                    ),
+                    _Header(
+                      score: session.score,
+                      lives: session.livesRemaining,
+                      currentIndex: session.currentIndex,
+                      total: session.totalQuestions,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+                      child: LifelineBar(
+                        options: question.options,
+                        correctAnswer: question.correctAnswer,
+                        locked: _isRevealed,
+                        usedFiftyFifty: _usedFiftyFifty,
+                        usedSkip: _usedSkip,
+                        usedHint: _usedHint,
+                        onFiftyFifty: _onFiftyFifty,
+                        onSkip: _onSkip,
+                        onHint: _onHint,
+                      ),
+                    ),
+                    if (_hintText != null)
+                      Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                          20,
+                          0,
+                          20,
+                          4,
+                        ),
+                        child: Text(
+                          '💡 $_hintText',
+                          textAlign: TextAlign.center,
+                          style: AppTextStyles.labelMedium.copyWith(
+                            color: AppColors.secondary,
                           ),
                         ),
-                        if (coPlay && !showChoices) ...[
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: ElevatedButton.icon(
-                              onPressed: () =>
-                                  setState(() => _coPlayChoicesVisible = true),
-                              icon: const Icon(Icons.visibility_rounded),
-                              label: Text(context.l10n.coPlayRevealChoices),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: AppColors.secondary,
-                                foregroundColor: AppColors.surface,
-                                minimumSize: const Size(double.infinity, 52),
+                      ),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        physics: const ClampingScrollPhysics(),
+                        padding: const EdgeInsets.only(bottom: 8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 16,
+                                horizontal: 16,
                               ),
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                        ],
-                        if (showChoices)
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Row(
-                                  children: [
-                                    Expanded(
-                                      child: _buildOpt(
-                                          question.options[0], question),
+                              child: Container(
+                                width: double.infinity,
+                                height: shortViewport ? 110 : 140,
+                                decoration: BoxDecoration(
+                                  color: AppColors.surface,
+                                  borderRadius: BorderRadius.circular(24),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withAlpha(15),
+                                      blurRadius: 10,
+                                      offset: const Offset(0, 5),
                                     ),
-                                    const SizedBox(width: 12),
-                                    Expanded(
-                                      child: _buildOpt(
-                                          question.options[1], question),
+                                  ],
+                                  border: Border.all(
+                                    color: AppColors.primary.withAlpha(50),
+                                    width: 2,
+                                  ),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Center(
+                                      child: Text(
+                                        question.question,
+                                        textDirection: TextDirection.ltr,
+                                        style: AppTextStyles.headingLarge
+                                            .copyWith(
+                                              fontSize: shortViewport ? 36 : 48,
+                                              color: AppColors.primary,
+                                            ),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      top: 4,
+                                      right: 4,
+                                      child: TtsSpeakerIcon(
+                                        text: question.question,
+                                        color: AppColors.primary,
+                                        tooltip: context.l10n.ttsButtonTooltip,
+                                      ),
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 12),
-                                Row(
-                                  children: [
-                                    Expanded(
-                                      child: _buildOpt(
-                                          question.options[2], question),
-                                    ),
-                                    const SizedBox(width: 12),
-                                    Expanded(
-                                      child: _buildOpt(
-                                          question.options[3], question),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                              ),
                             ),
-                          ),
-                      ],
-                    ),
-                  ),
-                ),
-                AnimatedSize(
-                  duration: const Duration(milliseconds: 220),
-                  curve: Curves.easeOutCubic,
-                  alignment: Alignment.topCenter,
-                  child: _isRevealed
-                      ? Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                          child: Column(
-                            children: [
-                              QuizFunFactBar(
-                                funFact: question.funFact,
-                                wasWrong:
-                                    _selectedOption != question.correctAnswer,
-                                correctAnswer: question.correctAnswer,
-                              ),
-                              const SizedBox(height: 12),
-                              ElevatedButton(
-                                onPressed: _onNext,
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: AppColors.secondary,
-                                  foregroundColor: AppColors.surface,
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 16),
-                                  minimumSize: const Size(double.infinity, 52),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(16),
-                                  ),
+                            if (coPlay && !showChoices) ...[
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 20,
                                 ),
-                                child: Text(
-                                  context.l10n.nextAction,
-                                  style: AppTextStyles.bodyLarge.copyWith(
-                                    color: AppColors.surface,
-                                    fontWeight: FontWeight.bold,
+                                child: ElevatedButton.icon(
+                                  onPressed: () => setState(
+                                    () => _coPlayChoicesVisible = true,
+                                  ),
+                                  icon: const Icon(Icons.visibility_rounded),
+                                  label: Text(context.l10n.coPlayRevealChoices),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: AppColors.secondary,
+                                    foregroundColor: AppColors.surface,
+                                    minimumSize: const Size(
+                                      double.infinity,
+                                      52,
+                                    ),
                                   ),
                                 ),
                               ),
+                              const SizedBox(height: 8),
                             ],
-                          ),
-                        )
-                      : const SizedBox.shrink(),
+                            if (showChoices)
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                ),
+                                child: Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: _buildOpt(
+                                            question.options[0],
+                                            question,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 12),
+                                        Expanded(
+                                          child: _buildOpt(
+                                            question.options[1],
+                                            question,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 12),
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: _buildOpt(
+                                            question.options[2],
+                                            question,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 12),
+                                        Expanded(
+                                          child: _buildOpt(
+                                            question.options[3],
+                                            question,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    AnimatedSize(
+                      duration: const Duration(milliseconds: 220),
+                      curve: Curves.easeOutCubic,
+                      alignment: Alignment.topCenter,
+                      child: _isRevealed
+                          ? Padding(
+                              padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                              child: Column(
+                                children: [
+                                  QuizFunFactBar(
+                                    funFact: question.funFact,
+                                    wasWrong:
+                                        _selectedOption !=
+                                        question.correctAnswer,
+                                    correctAnswer: question.correctAnswer,
+                                  ),
+                                  const SizedBox(height: 12),
+                                  ElevatedButton(
+                                    onPressed: _onNext,
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: AppColors.secondary,
+                                      foregroundColor: AppColors.surface,
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 16,
+                                      ),
+                                      minimumSize: const Size(
+                                        double.infinity,
+                                        52,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(16),
+                                      ),
+                                    ),
+                                    child: Text(
+                                      context.l10n.nextAction,
+                                      style: AppTextStyles.bodyLarge.copyWith(
+                                        color: AppColors.surface,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          : const SizedBox.shrink(),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
             );
           },
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (e, _) => Center(child: Text('Error: $e')),
+          error: (e, _) => Center(child: Text(context.l10n.quizLoadError)),
         ),
       ),
     );
   }
 
   Widget _buildOpt(String opt, QuizQuestion question) {
-    return _OptionCard(
-      text: opt,
-      isRevealed: _isRevealed,
-      isSelected: _selectedOption == opt,
-      isCorrectOption: opt == question.correctAnswer,
-      onTap: () {
-        if (!_isRevealed) _onAnswerTapped(opt);
-      },
+    final hidden = _hiddenOptions.contains(opt);
+    return Opacity(
+      opacity: hidden ? 0.0 : 1.0,
+      child: IgnorePointer(
+        ignoring: hidden,
+        child: _OptionCard(
+          text: opt,
+          isRevealed: _isRevealed,
+          isSelected: _selectedOption == opt,
+          isCorrectOption: opt == question.correctAnswer,
+          onTap: () {
+            if (!_isRevealed) _onAnswerTapped(opt);
+          },
+        ),
+      ),
     );
   }
 }
@@ -391,8 +521,10 @@ class _Header extends StatelessWidget {
             ),
           ),
           Text(
-            '${currentIndex + 1} / $total',
-            style: AppTextStyles.bodyLarge.copyWith(color: AppColors.textMedium),
+            '${localizeDigitsCtx(currentIndex + 1, context)} / ${localizeDigitsCtx(total, context)}',
+            style: AppTextStyles.bodyLarge.copyWith(
+              color: AppColors.textMedium,
+            ),
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -401,7 +533,7 @@ class _Header extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             child: Text(
-              '⭐ $score',
+              '⭐ ${localizeDigitsCtx(score, context)}',
               style: AppTextStyles.headingMedium.copyWith(
                 color: AppColors.primary,
                 fontSize: 18,

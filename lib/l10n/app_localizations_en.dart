@@ -55,7 +55,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get heartsRefilled => '❤️ Hearts Refilled!';
 
   @override
-  String get tryAgainNow => 'Try Again Now →';
+  String get tryAgainNow => 'Try Again Now »';
 
   @override
   String get readyLetsGo => 'Ready! Let\'s Go 🚀';
@@ -702,7 +702,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String reviewModeMastered(int count) {
-    return '$count question(s) mastered ✓';
+    return '$count question(s) mastered';
   }
 
   @override
@@ -827,4 +827,554 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get badge_all_rounder_condition =>
       'Complete at least one quiz in every module: Capitals, Flags, Logos, Math, and Sciences';
+
+  @override
+  String get badge_brain_boost_beginner_name => 'Brain Boost Beginner';
+
+  @override
+  String get badge_brain_boost_beginner_desc =>
+      'Started training your brain — keep going!';
+
+  @override
+  String get badge_brain_boost_beginner_condition =>
+      'Complete your first Brain Boost daily challenge';
+
+  @override
+  String get badge_brain_boost_streak_master_name => 'Streak Master';
+
+  @override
+  String get badge_brain_boost_streak_master_desc =>
+      'Practiced 7 days in a row — that\'s dedication!';
+
+  @override
+  String get badge_brain_boost_streak_master_condition =>
+      'Reach a 7-day Brain Boost streak';
+
+  @override
+  String get badge_brain_boost_champion_name => 'Brain Boost Champion';
+
+  @override
+  String get badge_brain_boost_champion_desc => 'A perfect Champion Mode run!';
+
+  @override
+  String get badge_brain_boost_champion_condition =>
+      'Get 12/12 in Brain Boost Champion Mode';
+
+  @override
+  String get badge_boss_rush_perfect_name => 'Dragon Slayer';
+
+  @override
+  String get badge_boss_rush_perfect_desc =>
+      'All 12 questions correct in Boss Rush!';
+
+  @override
+  String get badge_boss_rush_perfect_condition => 'Score 12/12 in Boss Rush';
+
+  @override
+  String get badge_pass_play_winner_name => 'Pass-Play Champion';
+
+  @override
+  String get badge_pass_play_winner_desc => 'Won 3 Pass-and-Play matches!';
+
+  @override
+  String get badge_pass_play_winner_condition => 'Win 3 Pass-and-Play matches';
+
+  @override
+  String get badge_tourney_champion_name => 'Weekly Champion';
+
+  @override
+  String get badge_tourney_champion_desc =>
+      'First place on the family weekly tournament!';
+
+  @override
+  String get badge_tourney_champion_condition =>
+      'Finish #1 on the Weekly Tournament';
+
+  @override
+  String get blitzTitle => 'Blitz Round';
+
+  @override
+  String get blitzDescription =>
+      '60 seconds. As many correct answers as you can. Questions from every module.';
+
+  @override
+  String blitzBest(int score) {
+    return 'Best: $score';
+  }
+
+  @override
+  String get blitzStartButton => 'Start Blitz';
+
+  @override
+  String get blitzScoreLabel => 'Score';
+
+  @override
+  String get blitzStreakLabel => 'Streak';
+
+  @override
+  String get blitzNewBest => 'New Best!';
+
+  @override
+  String get blitzTimesUp => 'Time’s up!';
+
+  @override
+  String blitzBestStreak(int streak) {
+    return 'Best streak: $streak';
+  }
+
+  @override
+  String get blitzPlayAgain => 'Play again';
+
+  @override
+  String get blitzHome => 'Home';
+
+  @override
+  String get blitzCardSubtitle => '60 seconds. Rapid-fire from every module';
+
+  @override
+  String get iqTitle => 'Brain Boost';
+
+  @override
+  String get iqHeroStartFull => 'Start full challenge';
+
+  @override
+  String get brainBoostDisclaimerTitle => 'About Brain Boost';
+
+  @override
+  String get brainBoostDisclaimerBody =>
+      'Brain Boost is a fun way to practice logical thinking — it is not a real IQ test. Your scores stay on this device and are never compared with other children.';
+
+  @override
+  String get brainBoostDisclaimerOk => 'Got it';
+
+  @override
+  String get iqOrChooseCategory => 'Or choose a category';
+
+  @override
+  String get iqLoadError => 'Could not load questions.';
+
+  @override
+  String iqComprehensiveCount(int count) {
+    return '$count comprehensive questions';
+  }
+
+  @override
+  String iqCategoryCount(int count) {
+    return '$count questions';
+  }
+
+  @override
+  String get iqVictoryTitle => 'IQ Champion!';
+
+  @override
+  String get iqShareLabel => 'IQ Challenge — Aziz Academy';
+
+  @override
+  String get iqScoreLabel => 'Score';
+
+  @override
+  String get iqRevealChoices => 'Reveal choices';
+
+  @override
+  String get iqNextQuestion => 'Next question';
+
+  @override
+  String get iqLoading => 'Loading IQ questions...';
+
+  @override
+  String get iqLoadFailed => 'Failed to load questions';
+
+  @override
+  String get iqCardSubtitle => 'Patterns, math, analogies & logic';
+
+  @override
+  String get generalQuizTitle => 'General Knowledge';
+
+  @override
+  String get generalQuizHeroStartFull => 'Start full general challenge';
+
+  @override
+  String get generalQuizOrChooseCategory => 'Or choose a category';
+
+  @override
+  String get generalQuizLoadError => 'Could not load questions.';
+
+  @override
+  String generalQuizCount(int count) {
+    return '$count questions';
+  }
+
+  @override
+  String get generalQuizVictoryTitle => 'Knowledge Champion!';
+
+  @override
+  String get generalQuizShareLabel =>
+      'General Knowledge Challenge — Aziz Academy';
+
+  @override
+  String get generalQuizRevealChoices => 'Reveal choices';
+
+  @override
+  String get generalQuizNextQuestion => 'Next question';
+
+  @override
+  String get generalQuizLoading => 'Loading questions...';
+
+  @override
+  String get generalQuizLoadFailed => 'Failed to load questions';
+
+  @override
+  String get generalQuizCardSubtitle => 'Geography, Islamic, Arabic & Math';
+
+  @override
+  String get capitalsVictoryTitle => 'Capitals Champion!';
+
+  @override
+  String get capitalsShareLabel => 'Capitals Round — Aziz Academy';
+
+  @override
+  String homeLogosLockHint(int level, int count) {
+    return 'Level $level or $count Capitals quizzes';
+  }
+
+  @override
+  String homeSciencesLockHint(int level, int count) {
+    return 'Level $level or $count Flags quizzes';
+  }
+
+  @override
+  String homeMathLockHint(int level, int count) {
+    return 'Level $level or $count Flags quizzes';
+  }
+
+  @override
+  String get lifelineFiftyFifty => '50/50';
+
+  @override
+  String get lifelineSkip => 'Skip';
+
+  @override
+  String get lifelineHint => 'Hint';
+
+  @override
+  String get lifelineNotEnoughCoins =>
+      'Not enough coins. Earn more by answering correctly!';
+
+  @override
+  String get coinsLabel => 'Coins';
+
+  @override
+  String get onboardingTitle1 => 'Pick a subject';
+
+  @override
+  String get onboardingBody1 =>
+      'Choose a learning module from the home screen — Capitals, Sciences, IQ, Math, and many more.';
+
+  @override
+  String get onboardingTitle2 => 'Earn stars and coins';
+
+  @override
+  String get onboardingBody2 =>
+      'Answer correctly to earn XP, stars, and coins. Use coins to unlock helpful lifelines.';
+
+  @override
+  String get onboardingTitle3 => 'Build a daily streak';
+
+  @override
+  String get onboardingBody3 =>
+      'Play every day to keep your streak alive — bigger streaks unlock bigger rewards!';
+
+  @override
+  String get onboardingSkip => 'Skip';
+
+  @override
+  String get onboardingNext => 'Next';
+
+  @override
+  String get onboardingGotIt => 'Let’s play!';
+
+  @override
+  String get survivalTitle => 'Survival Mode';
+
+  @override
+  String get survivalIntro =>
+      'One life. Endless questions. How far can you go?';
+
+  @override
+  String get survivalBest => 'Best';
+
+  @override
+  String get survivalStart => 'Start Survival';
+
+  @override
+  String get survivalNewBest => 'New best!';
+
+  @override
+  String get survivalGameOver => 'Game over';
+
+  @override
+  String get survivalReward => 'coins earned';
+
+  @override
+  String get homeButton => 'Home';
+
+  @override
+  String get bossTitle => 'Boss Round';
+
+  @override
+  String get bossIntro => '5 toughest questions. 1 life. Triple coin reward!';
+
+  @override
+  String get bossStart => 'Face the Boss';
+
+  @override
+  String get bossWin => 'Boss defeated!';
+
+  @override
+  String get bossLoss => 'The boss won this round';
+
+  @override
+  String get homeSurvivalTitle => 'Survival';
+
+  @override
+  String get homeSurvivalSubtitle => 'One life. Endless questions.';
+
+  @override
+  String get homeBossTitle => 'Boss Round';
+
+  @override
+  String get homeBossSubtitle => '5 hard questions. Triple reward.';
+
+  @override
+  String get errorLoadingRegions => 'Error loading regions';
+
+  @override
+  String get settingsDyslexiaFriendlyFont => 'Dyslexia-friendly font';
+
+  @override
+  String get settingsDyslexiaFriendlyFontDesc =>
+      'Use OpenDyslexic-style spacing';
+
+  @override
+  String get settingsLargerText => 'Larger text';
+
+  @override
+  String get settingsLargerTextDesc => 'Bigger letters across the whole app';
+
+  @override
+  String get settingsShorterRounds => 'Shorter rounds';
+
+  @override
+  String get settingsShorterRoundsDesc => 'Default to 3-question rounds';
+
+  @override
+  String get settingsLightTheme => 'Light theme';
+
+  @override
+  String get settingsLightThemeDesc => 'Switch the whole app to a light look';
+
+  @override
+  String get settingsReadAloud => 'Read questions aloud';
+
+  @override
+  String get ttsButtonTooltip => 'Read aloud';
+
+  @override
+  String get commonBack => 'Back';
+
+  @override
+  String get parentArea => 'Parent area';
+
+  @override
+  String get parentDashboard => 'Parent dashboard';
+
+  @override
+  String get parentResetProfile => 'Reset profile';
+
+  @override
+  String get parentResetProfileDescription =>
+      'Wipes all on-device learning data: stars, XP, coins, skill estimates, mistakes, favorites, and shop items. Cannot be undone.';
+
+  @override
+  String get parentResetEverything => 'Reset everything';
+
+  @override
+  String get parentResetConfirmTitle => 'Reset all data?';
+
+  @override
+  String get parentResetConfirmBody =>
+      'This permanently deletes everything stored on this device. Are you sure?';
+
+  @override
+  String get parentResetConfirmYes => 'Yes, reset';
+
+  @override
+  String get parentResetSuccess => 'Profile reset.';
+
+  @override
+  String get parentThisWeek => 'This week';
+
+  @override
+  String get parentSkillByTopic => 'Skill by topic';
+
+  @override
+  String get shopNotEnoughCoins => 'Not enough coins yet — keep playing!';
+
+  @override
+  String get shopEquipped => 'Equipped';
+
+  @override
+  String get shopEquip => 'Equip';
+
+  @override
+  String surpriseGoingTo(String destination) {
+    return '🎲 Heading to $destination!';
+  }
+
+  @override
+  String get iqComebackSnack => 'You got it! Better than last time.';
+
+  @override
+  String get feedbackThanks => 'Thanks — got it.';
+
+  @override
+  String parentGatePrompt(int a, int b) {
+    return 'Solve to enter:  $a + $b = ?';
+  }
+
+  @override
+  String get parentGateUnlock => 'Unlock';
+
+  @override
+  String get parentGateTryAgain => 'Try again';
+
+  @override
+  String get parentStuckHeading => 'Where they\'re stuck';
+
+  @override
+  String parentStuckRow(String module, String category, int count) {
+    return '• $module — $category ($count misses)';
+  }
+
+  @override
+  String get parentPrivacyHeading => 'Privacy';
+
+  @override
+  String get parentPrivacyNote =>
+      'All learning data shown here lives on this device only. Nothing is uploaded. Reset from Settings » Reset profile if needed.';
+
+  @override
+  String get mapsIntroTitle => 'Map explorer';
+
+  @override
+  String get mapsIntroBody =>
+      'Find countries by their location on the map. Ready for the challenge?';
+
+  @override
+  String get mapsIntroStart => 'Start exploring';
+
+  @override
+  String get mapsCorrectTitle => '✅ Correct!';
+
+  @override
+  String get mapsIncorrectTitle => '❌ Wrong answer';
+
+  @override
+  String mapsAnswerReveal(String country) {
+    return 'The country is: $country';
+  }
+
+  @override
+  String get quizNextQuestion => 'Next question';
+
+  @override
+  String get quizLoading => 'Loading quiz…';
+
+  @override
+  String get quizBackToMenu => 'Back to menu';
+
+  @override
+  String get quizRoundScore => 'This round\'s score';
+
+  @override
+  String get capitalsRevealChoices => 'Show answer options';
+
+  @override
+  String get madrasatiRestart => 'Restart';
+
+  @override
+  String get madrasatiHome => 'Madrasati';
+
+  @override
+  String get quizShowResult => 'Show result';
+
+  @override
+  String madrasatiResultScore(String score, String total) {
+    return 'Score: $score / $total';
+  }
+
+  @override
+  String get victoryDefaultSubtitle => 'You crushed the quiz! 🎉';
+
+  @override
+  String victoryScoreLine(int score, int wrong) {
+    return 'Correct: $score  •  Wrong: $wrong';
+  }
+
+  @override
+  String get victoryStarsPerfect => '⚡ Total mastery! Zero mistakes!';
+
+  @override
+  String get victoryStarsExcellent => '👍 Excellent! Nearly perfect!';
+
+  @override
+  String get victoryStarsGood => '✅ Well done! Keep practicing!';
+
+  @override
+  String get victoryShareAchievement => 'Share achievement';
+
+  @override
+  String victoryShareBody(int score, int total, int wrong, int stars) {
+    return '$score/$total correct  •  $wrong wrong\nStars: $stars/3 ⭐';
+  }
+
+  @override
+  String get certificateShareText => 'Certificate from Aziz Academy 🌟';
+
+  @override
+  String get progressReportShareText => 'Aziz Academy progress report';
+
+  @override
+  String get onboardingDefaultName => 'Friend';
+
+  @override
+  String levelLabel(String n) {
+    return 'Level $n';
+  }
+
+  @override
+  String levelXpProgress(String current, String needed) {
+    return '$current / $needed XP';
+  }
+
+  @override
+  String levelMaxXp(String total) {
+    return '$total XP';
+  }
+
+  @override
+  String get levelMaxBanner => 'Max Level!';
+
+  @override
+  String levelNextInfo(String n, String total) {
+    return 'Next: Level $n  •  $total XP total';
+  }
+
+  @override
+  String get mapsGameOverTitle => 'Challenge complete!';
+
+  @override
+  String mapsScore(String score) {
+    return 'Your score: $score';
+  }
 }

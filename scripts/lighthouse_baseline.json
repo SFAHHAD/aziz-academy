@@ -1,0 +1,17 @@
+{
+  "_": "Captured 2026-05-03 against https://aziz-academy.vercel.app/ (warm-cache run after gstatic preconnect + canvaskit-strip + spelling pack land). Diff scores against this to spot regressions; the previous capture had an anomalous interactive_ms=351 from a partial run.",
+  "categories": {
+    "performance": 0.75,
+    "accessibility": 0.92,
+    "best-practices": 0.81,
+    "seo": 0.92
+  },
+  "metrics": {
+    "first-contentful-paint_ms": 944,
+    "largest-contentful-paint_ms": 1133,
+    "speed-index_ms": 8575,
+    "total-blocking-time_ms": 656,
+    "cumulative-layout-shift_score": 0.0,
+    "interactive_ms": 17749
+  }
+}

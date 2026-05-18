@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:aziz_academy/core/providers/coin_provider.dart';
+
 // =============================================================================
 // Level system
 // =============================================================================
@@ -62,8 +64,7 @@ class XpState {
     return (xpInCurrentLevel / span).clamp(0.0, 1.0);
   }
 
-  XpState copyWith({int? totalXp}) =>
-      XpState(totalXp: totalXp ?? this.totalXp);
+  XpState copyWith({int? totalXp}) => XpState(totalXp: totalXp ?? this.totalXp);
 }
 
 // =============================================================================
@@ -82,21 +83,28 @@ final xpProvider = AsyncNotifierProvider<XpNotifier, XpState>(
 );
 
 class XpNotifier extends AsyncNotifier<XpState> {
-  late SharedPreferences _prefs;
+  SharedPreferences? _prefs;
 
   @override
   Future<XpState> build() async {
-    _prefs = await SharedPreferences.getInstance();
-    return XpState(totalXp: _prefs.getInt(_kXpKey) ?? 0);
+    _prefs ??= await SharedPreferences.getInstance();
+    return XpState(totalXp: _prefs!.getInt(_kXpKey) ?? 0);
   }
 
-  /// Adds [amount] XP and persists the new total.
+  /// Adds [amount] XP and persists the new total. Also awards coins at a
+  /// fixed ratio so every quiz session feeds the lifeline economy.
   Future<void> addXp(int amount) async {
+    _prefs ??= await SharedPreferences.getInstance();
     if (amount <= 0) return;
     final current = state.value ?? const XpState();
     final next = current.copyWith(totalXp: current.totalXp + amount);
     state = AsyncData(next);
-    await _prefs.setInt(_kXpKey, next.totalXp);
+    await _prefs!.setInt(_kXpKey, next.totalXp);
+    // 1 coin per ~5 XP awarded (≈ score * 2 + small perfect bonus).
+    final coins = (amount / 5).round();
+    if (coins > 0) {
+      await ref.read(coinProvider.notifier).award(coins);
+    }
   }
 
   /// Computes the XP earned from a single quiz session.
@@ -107,8 +115,9 @@ class XpNotifier extends AsyncNotifier<XpState> {
 
   /// Replaces the total directly (used by backup-restore).
   Future<void> setTotalXp(int xp) async {
+    _prefs ??= await SharedPreferences.getInstance();
     final next = XpState(totalXp: xp.clamp(0, 999999));
     state = AsyncData(next);
-    await _prefs.setInt(_kXpKey, next.totalXp);
+    await _prefs!.setInt(_kXpKey, next.totalXp);
   }
 }

@@ -16,6 +16,7 @@ class QuizQuestion {
     this.flagUrl,
     this.lat,
     this.lng,
+    this.difficulty = 2,
   });
 
   /// Unique identifier for this question (e.g. 'sa', 'apple').
@@ -50,6 +51,11 @@ class QuizQuestion {
   /// Optional longitude representing the geographic center.
   final double? lng;
 
+  /// 1=easy, 2=medium, 3=hard. Defaults to 2 when source data lacks the
+  /// field. Used by adaptive ordering to bias the question pool toward the
+  /// kid's current EMA skill on the module.
+  final int difficulty;
+
   // ---------------------------------------------------------------------------
   // Serialisation helpers
   // ---------------------------------------------------------------------------
@@ -66,6 +72,7 @@ class QuizQuestion {
       flagUrl: json['flag_url'] as String?,
       lat: (json['lat'] as num?)?.toDouble(),
       lng: (json['lng'] as num?)?.toDouble(),
+      difficulty: (json['difficulty'] as num?)?.toInt() ?? 2,
     );
     assert(
       q.options.length >= 2,
@@ -75,17 +82,18 @@ class QuizQuestion {
   }
 
   Map<String, dynamic> toJson() => {
-        'id': id,
-        'question': question,
-        'options': options,
-        'correct_answer': correctAnswer,
-        'category': category,
-        'fun_fact': funFact,
-        if (imageUrl != null) 'image_url': imageUrl,
-        if (flagUrl != null) 'flag_url': flagUrl,
-        if (lat != null) 'lat': lat,
-        if (lng != null) 'lng': lng,
-      };
+    'id': id,
+    'question': question,
+    'options': options,
+    'correct_answer': correctAnswer,
+    'category': category,
+    'fun_fact': funFact,
+    if (imageUrl != null) 'image_url': imageUrl,
+    if (flagUrl != null) 'flag_url': flagUrl,
+    if (lat != null) 'lat': lat,
+    if (lng != null) 'lng': lng,
+    'difficulty': difficulty,
+  };
 
   // ---------------------------------------------------------------------------
   // Value equality & debugging
@@ -116,6 +124,7 @@ class QuizQuestion {
     double? lng,
     String? category,
     String? funFact,
+    int? difficulty,
   }) {
     return QuizQuestion(
       id: id ?? this.id,
@@ -128,6 +137,7 @@ class QuizQuestion {
       lng: lng ?? this.lng,
       category: category ?? this.category,
       funFact: funFact ?? this.funFact,
+      difficulty: difficulty ?? this.difficulty,
     );
   }
 }

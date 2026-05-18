@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "mg_001",
+    "category": "art",
+    "difficulty": 1,
+    "question": "What do we call a long, sliding sound made by gliding fingers across piano keys?",
+    "options": [
+      "A glissando",
+      "A staccato",
+      "A pizzicato",
+      "A drum roll"
+    ],
+    "correct_answer": "A glissando",
+    "question_ar": "ماذا نسمي الصوت الطويل المنزلق الناتج عن تمرير الأصابع على مفاتيح البيانو؟",
+    "options_ar": [
+      "الغليساندو",
+      "الستاكاتو",
+      "البيتزيكاتو",
+      "قرع الطبل"
+    ],
+    "correct_answer_ar": "الغليساندو",
+    "explanation": "A glissando is a smooth slide between notes, often heard on piano or harp.",
+    "explanation_ar": "الغليساندو هو انزلاق ناعم بين النغمات، يُسمع غالباً على البيانو أو القيثارة.",
+    "objective": "Identify expressive musical techniques.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_002",
+    "category": "history",
+    "difficulty": 1,
+    "question": "In which American city was jazz born in the early 1900s?",
+    "options": [
+      "New Orleans",
+      "Chicago",
+      "Los Angeles",
+      "Boston"
+    ],
+    "correct_answer": "New Orleans",
+    "question_ar": "في أي مدينة أمريكية وُلدت موسيقى الجاز في أوائل عام ١٩٠٠؟",
+    "options_ar": [
+      "نيو أورلينز",
+      "شيكاغو",
+      "لوس أنجلوس",
+      "بوسطن"
+    ],
+    "correct_answer_ar": "نيو أورلينز",
+    "explanation": "Jazz developed in New Orleans around 1900, blending African and European music.",
+    "explanation_ar": "تطورت موسيقى الجاز في نيو أورلينز حوالي عام ١٩٠٠، ممزوجةً بين الموسيقى الأفريقية والأوروبية.",
+    "objective": "Recall jazz origins.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_003",
+    "category": "culture",
+    "difficulty": 1,
+    "question": "Which traditional Arabic stringed instrument has a pear-shaped body and a short neck?",
+    "options": [
+      "The oud",
+      "The sitar",
+      "The koto",
+      "The banjo"
+    ],
+    "correct_answer": "The oud",
+    "question_ar": "أي آلة وترية عربية تقليدية لها جسم على شكل كمثرى ورقبة قصيرة؟",
+    "options_ar": [
+      "العود",
+      "السيتار",
+      "الكوتو",
+      "البانجو"
+    ],
+    "correct_answer_ar": "العود",
+    "explanation": "The oud is the king of Arabic instruments, with a deep, warm sound.",
+    "explanation_ar": "العود هو ملك الآلات العربية، وله صوت عميق ودافئ.",
+    "objective": "Recognize traditional Arab instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_004",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Hip-hop music began in which New York neighborhood in the 1970s?",
+    "options": [
+      "The South Bronx",
+      "Manhattan",
+      "Brooklyn Heights",
+      "Queens"
+    ],
+    "correct_answer": "The South Bronx",
+    "question_ar": "بدأت موسيقى الهيب هوب في أي حي من أحياء نيويورك في السبعينيات؟",
+    "options_ar": [
+      "ساوث برونكس",
+      "مانهاتن",
+      "بروكلين هايتس",
+      "كوينز"
+    ],
+    "correct_answer_ar": "ساوث برونكس",
+    "explanation": "Hip-hop emerged at block parties in the South Bronx around 1973.",
+    "explanation_ar": "ظهرت موسيقى الهيب هوب في حفلات الأحياء بساوث برونكس حوالي عام ١٩٧٣.",
+    "objective": "Identify origins of hip-hop.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_005",
+    "category": "culture",
+    "difficulty": 1,
+    "question": "Reggae music comes from which Caribbean island?",
+    "options": [
+      "Jamaica",
+      "Cuba",
+      "Haiti",
+      "Barbados"
+    ],
+    "correct_answer": "Jamaica",
+    "question_ar": "تأتي موسيقى الريغي من أي جزيرة كاريبية؟",
+    "options_ar": [
+      "جامايكا",
+      "كوبا",
+      "هايتي",
+      "باربادوس"
+    ],
+    "correct_answer_ar": "جامايكا",
+    "explanation": "Reggae developed in Jamaica in the late 1960s and is famous for its relaxed beat.",
+    "explanation_ar": "تطورت موسيقى الريغي في جامايكا في أواخر الستينيات، وتشتهر بإيقاعها الهادئ.",
+    "objective": "Connect genres to countries of origin.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_006",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What is a chord in music?",
+    "options": [
+      "Three or more notes played together",
+      "A single note",
+      "A type of drum",
+      "A song lyric"
+    ],
+    "correct_answer": "Three or more notes played together",
+    "question_ar": "ما هو الكورد (التآلف) في الموسيقى؟",
+    "options_ar": [
+      "ثلاث نغمات أو أكثر تُعزف معاً",
+      "نغمة واحدة فقط",
+      "نوع من الطبول",
+      "كلمات أغنية"
+    ],
+    "correct_answer_ar": "ثلاث نغمات أو أكثر تُعزف معاً",
+    "explanation": "A chord is a group of notes sounded together to make harmony.",
+    "explanation_ar": "الكورد مجموعة من النغمات تُعزف معاً لتكوين الانسجام.",
+    "objective": "Define basic music theory terms.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_007",
+    "category": "art",
+    "difficulty": 1,
+    "question": "What do we call the speed of a piece of music?",
+    "options": [
+      "Tempo",
+      "Pitch",
+      "Volume",
+      "Tone"
+    ],
+    "correct_answer": "Tempo",
+    "question_ar": "ماذا نسمي سرعة المقطوعة الموسيقية؟",
+    "options_ar": [
+      "التيمبو (السرعة)",
+      "الطبقة الصوتية",
+      "شدة الصوت",
+      "اللون الصوتي"
+    ],
+    "correct_answer_ar": "التيمبو (السرعة)",
+    "explanation": "Tempo is how fast or slow a piece of music is played.",
+    "explanation_ar": "التيمبو هو مدى سرعة أو بطء عزف المقطوعة الموسيقية.",
+    "objective": "Define tempo.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_008",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What does the Italian musical term 'allegro' mean?",
+    "options": [
+      "Fast and lively",
+      "Slow and sad",
+      "Very loud",
+      "Silent"
+    ],
+    "correct_answer": "Fast and lively",
+    "question_ar": "ماذا تعني الكلمة الموسيقية الإيطالية «أليجرو»؟",
+    "options_ar": [
+      "سريع ومفعم بالحيوية",
+      "بطيء وحزين",
+      "عالي جداً",
+      "صامت"
+    ],
+    "correct_answer_ar": "سريع ومفعم بالحيوية",
+    "explanation": "Allegro tells musicians to play in a fast, cheerful tempo.",
+    "explanation_ar": "تخبر «أليجرو» الموسيقيين بأن يعزفوا بسرعة وبطابع مبهج.",
+    "objective": "Interpret Italian tempo terms.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_009",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What does 'adagio' mean in music?",
+    "options": [
+      "Slow and graceful",
+      "Very fast",
+      "Loud and angry",
+      "Silent and still"
+    ],
+    "correct_answer": "Slow and graceful",
+    "question_ar": "ماذا تعني «أداجيو» في الموسيقى؟",
+    "options_ar": [
+      "بطيء ورقيق",
+      "سريع جداً",
+      "عالٍ وغاضب",
+      "صامت وساكن"
+    ],
+    "correct_answer_ar": "بطيء ورقيق",
+    "explanation": "Adagio is a slow, calm tempo, often used in beautiful melodies.",
+    "explanation_ar": "أداجيو هو إيقاع بطيء وهادئ، يُستخدم غالباً في الألحان الجميلة.",
+    "objective": "Interpret Italian tempo terms.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_010",
+    "category": "history",
+    "difficulty": 1,
+    "question": "Who composed the famous symphony 'Eine kleine Nachtmusik'?",
+    "options": [
+      "Wolfgang Amadeus Mozart",
+      "Ludwig van Beethoven",
+      "Johann Sebastian Bach",
+      "Antonio Vivaldi"
+    ],
+    "correct_answer": "Wolfgang Amadeus Mozart",
+    "question_ar": "من ألّف السيمفونية الشهيرة «موسيقى ليلية صغيرة»؟",
+    "options_ar": [
+      "فولفغانغ أماديوس موتسارت",
+      "لودفيغ فان بيتهوفن",
+      "يوهان سباستيان باخ",
+      "أنطونيو فيفالدي"
+    ],
+    "correct_answer_ar": "فولفغانغ أماديوس موتسارت",
+    "explanation": "Mozart wrote this lively serenade in 1787 — its name means 'a little night music'.",
+    "explanation_ar": "ألّف موتسارت هذه السيريناد المرحة عام ١٧٨٧، واسمها يعني «موسيقى ليلية صغيرة».",
+    "objective": "Match composers to famous works.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_011",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which composer wrote 'The Four Seasons'?",
+    "options": [
+      "Antonio Vivaldi",
+      "Frédéric Chopin",
+      "Joseph Haydn",
+      "Pyotr Tchaikovsky"
+    ],
+    "correct_answer": "Antonio Vivaldi",
+    "question_ar": "أي مؤلف موسيقي كتب «الفصول الأربعة»؟",
+    "options_ar": [
+      "أنطونيو فيفالدي",
+      "فريدريك شوبان",
+      "جوزيف هايدن",
+      "بيوتر تشايكوفسكي"
+    ],
+    "correct_answer_ar": "أنطونيو فيفالدي",
+    "explanation": "Vivaldi composed The Four Seasons around 1723 — four violin concertos for spring, summer, autumn and winter.",
+    "explanation_ar": "ألّف فيفالدي «الفصول الأربعة» حوالي عام ١٧٢٣، وهي أربع كونشرتوهات للكمان تمثل الفصول.",
+    "objective": "Identify Baroque composers.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_012",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which deaf composer wrote nine famous symphonies?",
+    "options": [
+      "Ludwig van Beethoven",
+      "Johann Strauss",
+      "Claude Debussy",
+      "Franz Schubert"
+    ],
+    "correct_answer": "Ludwig van Beethoven",
+    "question_ar": "أي مؤلف موسيقي أصمّ كتب تسع سيمفونيات شهيرة؟",
+    "options_ar": [
+      "لودفيغ فان بيتهوفن",
+      "يوهان شتراوس",
+      "كلود ديبوسي",
+      "فرانز شوبرت"
+    ],
+    "correct_answer_ar": "لودفيغ فان بيتهوفن",
+    "explanation": "Beethoven kept composing even after he lost his hearing — his 9th Symphony has the famous 'Ode to Joy'.",
+    "explanation_ar": "واصل بيتهوفن التأليف حتى بعد فقدانه السمع، وتحتوي سيمفونيته التاسعة على «نشيد الفرح» الشهير.",
+    "objective": "Recognize Beethoven's contribution.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_013",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What symbol on a music staff means 'high notes'?",
+    "options": [
+      "Treble clef",
+      "Bass clef",
+      "Sharp",
+      "Flat"
+    ],
+    "correct_answer": "Treble clef",
+    "question_ar": "ما الرمز على المدرج الموسيقي الذي يدل على «النغمات العالية»؟",
+    "options_ar": [
+      "مفتاح الصول",
+      "مفتاح الفا",
+      "علامة الدييز",
+      "علامة البيمول"
+    ],
+    "correct_answer_ar": "مفتاح الصول",
+    "explanation": "The treble clef (also called the G clef) marks the staff for higher-pitched notes.",
+    "explanation_ar": "مفتاح الصول يحدد المدرج للنغمات ذات الطبقة العالية.",
+    "objective": "Read music notation symbols.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_014",
+    "category": "art",
+    "difficulty": 2,
+    "question": "Which clef is used for low notes, like those of a tuba or bass?",
+    "options": [
+      "Bass clef",
+      "Treble clef",
+      "Tenor clef",
+      "Alto clef"
+    ],
+    "correct_answer": "Bass clef",
+    "question_ar": "أي مفتاح يُستخدم للنغمات المنخفضة، كالتوبا والباس؟",
+    "options_ar": [
+      "مفتاح الفا",
+      "مفتاح الصول",
+      "مفتاح التينور",
+      "مفتاح الألتو"
+    ],
+    "correct_answer_ar": "مفتاح الفا",
+    "explanation": "The bass clef (F clef) is for the lower-sounding instruments and singers.",
+    "explanation_ar": "مفتاح الفا للآلات والمغنين ذوي الأصوات المنخفضة.",
+    "objective": "Read music notation symbols.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_015",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "Which long-necked Arabic stringed instrument is plucked and has movable frets?",
+    "options": [
+      "The buzuq",
+      "The tabla",
+      "The ney",
+      "The qanun"
+    ],
+    "correct_answer": "The buzuq",
+    "question_ar": "أي آلة وترية عربية ذات رقبة طويلة تُنقر ولها دساتين متحركة؟",
+    "options_ar": [
+      "البزق",
+      "الطبلة",
+      "الناي",
+      "القانون"
+    ],
+    "correct_answer_ar": "البزق",
+    "explanation": "The buzuq is popular in Levantine folk music, with a bright, ringing sound.",
+    "explanation_ar": "البزق منتشر في الموسيقى الشعبية الشامية، وله صوت رنّان لامع.",
+    "objective": "Identify Arab folk instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_016",
+    "category": "culture",
+    "difficulty": 1,
+    "question": "Which reed flute is famous in Arabic and Sufi music?",
+    "options": [
+      "The ney",
+      "The harp",
+      "The trumpet",
+      "The clarinet"
+    ],
+    "correct_answer": "The ney",
+    "question_ar": "أي ناي قصبي يشتهر في الموسيقى العربية والصوفية؟",
+    "options_ar": [
+      "الناي",
+      "القيثارة",
+      "البوق",
+      "الكلارينيت"
+    ],
+    "correct_answer_ar": "الناي",
+    "explanation": "The ney is one of the oldest instruments still played, made from a hollow cane.",
+    "explanation_ar": "الناي من أقدم الآلات التي ما زالت تُعزف، ويُصنع من قصبة مجوّفة.",
+    "objective": "Identify Middle Eastern wind instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_017",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "The qanun is what type of Arabic instrument?",
+    "options": [
+      "A plucked zither with many strings",
+      "A drum",
+      "A reed flute",
+      "A horn"
+    ],
+    "correct_answer": "A plucked zither with many strings",
+    "question_ar": "القانون هو أي نوع من الآلات العربية؟",
+    "options_ar": [
+      "قيثار مسطّح يُنقر بأوتار عديدة",
+      "طبل",
+      "ناي قصبي",
+      "بوق"
+    ],
+    "correct_answer_ar": "قيثار مسطّح يُنقر بأوتار عديدة",
+    "explanation": "The qanun has up to 81 strings and a shimmering sound — its name means 'law' or 'rule'.",
+    "explanation_ar": "للقانون ما يصل إلى ٨١ وتراً وصوت متلألئ، واسمه يعني «القاعدة» أو «النظام».",
+    "objective": "Classify the qanun.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_018",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "What is 'Tarab' (طرب) in Arabic music?",
+    "options": [
+      "A deep emotional state caused by beautiful music",
+      "A type of drum",
+      "A musical scale",
+      "A dance step"
+    ],
+    "correct_answer": "A deep emotional state caused by beautiful music",
+    "question_ar": "ما هو «الطرب» في الموسيقى العربية؟",
+    "options_ar": [
+      "حالة وجدانية عميقة تسببها الموسيقى الجميلة",
+      "نوع من الطبول",
+      "سلم موسيقي",
+      "خطوة رقص"
+    ],
+    "correct_answer_ar": "حالة وجدانية عميقة تسببها الموسيقى الجميلة",
+    "explanation": "Tarab is the joy and emotion listeners feel when carried away by a singer or musician.",
+    "explanation_ar": "الطرب هو الفرح والانفعال الذي يشعر به المستمع حين تأخذه الموسيقى أو المغني.",
+    "objective": "Define cultural music concepts.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_019",
+    "category": "culture",
+    "difficulty": 3,
+    "question": "What is a 'maqam' (مقام) in Arabic music?",
+    "options": [
+      "A melodic mode that uses special scales",
+      "A type of dance",
+      "A wooden flute",
+      "A stringed instrument"
+    ],
+    "correct_answer": "A melodic mode that uses special scales",
+    "question_ar": "ما هو «المقام» في الموسيقى العربية؟",
+    "options_ar": [
+      "نمط لحني يستخدم سلالم خاصة",
+      "نوع من الرقص",
+      "ناي خشبي",
+      "آلة وترية"
+    ],
+    "correct_answer_ar": "نمط لحني يستخدم سلالم خاصة",
+    "explanation": "Maqamat are scales that give Arabic music its unique feeling — examples include Bayati and Hijaz.",
+    "explanation_ar": "المقامات هي سلالم تمنح الموسيقى العربية إحساسها المميز، ومنها البياتي والحجاز.",
+    "objective": "Explain Arabic modal music.",
+    "bloomLevel": "analyze"
+  },
+  {
+    "id": "mg_020",
+    "category": "culture",
+    "difficulty": 1,
+    "question": "Dabke (دبكة) is a popular line dance from which region?",
+    "options": [
+      "The Levant",
+      "South America",
+      "East Asia",
+      "Australia"
+    ],
+    "correct_answer": "The Levant",
+    "question_ar": "الدبكة رقصة جماعية شعبية من أي منطقة؟",
+    "options_ar": [
+      "بلاد الشام",
+      "أمريكا الجنوبية",
+      "شرق آسيا",
+      "أستراليا"
+    ],
+    "correct_answer_ar": "بلاد الشام",
+    "explanation": "Dabke is a joyful stomping line dance from Lebanon, Syria, Palestine and Jordan.",
+    "explanation_ar": "الدبكة رقصة صف مرحة بضرب الأقدام، من لبنان وسوريا وفلسطين والأردن.",
+    "objective": "Connect dances to regions.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_021",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "What is 'Khaleeji' (خليجي) music?",
+    "options": [
+      "Music from the Arabian Gulf countries",
+      "Music from North Africa",
+      "Music from Andalusia",
+      "Music from Persia"
+    ],
+    "correct_answer": "Music from the Arabian Gulf countries",
+    "question_ar": "ما هي الموسيقى «الخليجية»؟",
+    "options_ar": [
+      "موسيقى دول الخليج العربي",
+      "موسيقى شمال أفريقيا",
+      "موسيقى الأندلس",
+      "الموسيقى الفارسية"
+    ],
+    "correct_answer_ar": "موسيقى دول الخليج العربي",
+    "explanation": "Khaleeji music comes from Kuwait, Saudi Arabia, the UAE, Bahrain, Qatar and Oman, with rhythms like sawt and samri.",
+    "explanation_ar": "الموسيقى الخليجية من الكويت والسعودية والإمارات والبحرين وقطر وعُمان، ولها إيقاعات كالصوت والسامري.",
+    "objective": "Identify regional Arab styles.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_022",
+    "category": "culture",
+    "difficulty": 3,
+    "question": "What is 'Ataba' (عتابا) in Arab folk music?",
+    "options": [
+      "A poetic singing style with deep, longing emotion",
+      "A type of drum solo",
+      "A children's lullaby",
+      "A wedding instrument"
+    ],
+    "correct_answer": "A poetic singing style with deep, longing emotion",
+    "question_ar": "ما هي «العتابا» في الموسيقى الشعبية العربية؟",
+    "options_ar": [
+      "أسلوب غنائي شعري مفعم بالشوق العميق",
+      "منفرد على الطبل",
+      "تهويدة للأطفال",
+      "آلة عرس"
+    ],
+    "correct_answer_ar": "أسلوب غنائي شعري مفعم بالشوق العميق",
+    "explanation": "Ataba is a Levantine folk vocal art known for heartfelt poetry and a stretched, expressive vocal line.",
+    "explanation_ar": "العتابا فن غنائي شعبي شامي يُعرف بشعره العميق وخط صوتي ممدود معبّر.",
+    "objective": "Explore Levantine vocal traditions.",
+    "bloomLevel": "analyze"
+  },
+  {
+    "id": "mg_023",
+    "category": "culture",
+    "difficulty": 3,
+    "question": "What are 'Muwashshahat' (موشحات)?",
+    "options": [
+      "Andalusian-Arabic poetic songs in stanza form",
+      "A type of drum",
+      "Persian flute pieces",
+      "Egyptian pop songs"
+    ],
+    "correct_answer": "Andalusian-Arabic poetic songs in stanza form",
+    "question_ar": "ما هي «الموشحات»؟",
+    "options_ar": [
+      "أغانٍ شعرية عربية أندلسية على شكل مقاطع",
+      "نوع من الطبول",
+      "مقطوعات ناي فارسي",
+      "أغانٍ بوب مصرية"
+    ],
+    "correct_answer_ar": "أغانٍ شعرية عربية أندلسية على شكل مقاطع",
+    "explanation": "Muwashshahat are sophisticated sung poems that began in Al-Andalus around the 9th century.",
+    "explanation_ar": "الموشحات قصائد مغناة راقية بدأت في الأندلس حوالي القرن التاسع.",
+    "objective": "Trace Andalusian musical heritage.",
+    "bloomLevel": "analyze"
+  },
+  {
+    "id": "mg_024",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "Andalusi nuba is a classical music tradition from where?",
+    "options": [
+      "North Africa and Muslim Spain",
+      "India",
+      "Japan",
+      "Scandinavia"
+    ],
+    "correct_answer": "North Africa and Muslim Spain",
+    "question_ar": "النوبة الأندلسية تقليد موسيقي كلاسيكي من أين؟",
+    "options_ar": [
+      "شمال أفريقيا والأندلس",
+      "الهند",
+      "اليابان",
+      "إسكندنافيا"
+    ],
+    "correct_answer_ar": "شمال أفريقيا والأندلس",
+    "explanation": "Andalusi music traveled with Muslims and Jews from Spain to Morocco, Algeria and Tunisia.",
+    "explanation_ar": "انتقلت الموسيقى الأندلسية مع المسلمين واليهود من إسبانيا إلى المغرب والجزائر وتونس.",
+    "objective": "Trace musical migrations.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_025",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "Berber (Amazigh) music is rooted in which region of Africa?",
+    "options": [
+      "North Africa",
+      "South Africa",
+      "East Africa",
+      "Central Africa"
+    ],
+    "correct_answer": "North Africa",
+    "question_ar": "موسيقى الأمازيغ متجذّرة في أي منطقة من أفريقيا؟",
+    "options_ar": [
+      "شمال أفريقيا",
+      "جنوب أفريقيا",
+      "شرق أفريقيا",
+      "وسط أفريقيا"
+    ],
+    "correct_answer_ar": "شمال أفريقيا",
+    "explanation": "Amazigh peoples live across Morocco, Algeria, Libya and the Sahara, with rich drum and chant traditions.",
+    "explanation_ar": "يعيش الأمازيغ في المغرب والجزائر وليبيا والصحراء، ولهم تقاليد غنية بالطبول والإنشاد.",
+    "objective": "Connect cultures and music.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_026",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "Which long-necked stringed instrument is iconic in Persian and Turkish classical music?",
+    "options": [
+      "The tar",
+      "The banjo",
+      "The harmonica",
+      "The accordion"
+    ],
+    "correct_answer": "The tar",
+    "question_ar": "أي آلة وترية ذات رقبة طويلة تُعدّ أيقونة في الموسيقى الكلاسيكية الفارسية والتركية؟",
+    "options_ar": [
+      "التار",
+      "البانجو",
+      "الهارمونيكا",
+      "الأكورديون"
+    ],
+    "correct_answer_ar": "التار",
+    "explanation": "The tar has a hollow body shaped like a figure-eight and a bright, twangy tone.",
+    "explanation_ar": "للتار جسم مجوّف على شكل الرقم ثمانية وصوت رنّان لامع.",
+    "objective": "Identify Persian/Turkish instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_027",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "Which large stringed instrument is the heart of Indian classical music?",
+    "options": [
+      "The sitar",
+      "The oud",
+      "The harp",
+      "The guitar"
+    ],
+    "correct_answer": "The sitar",
+    "question_ar": "أي آلة وترية كبيرة تُعدّ قلب الموسيقى الهندية الكلاسيكية؟",
+    "options_ar": [
+      "السيتار",
+      "العود",
+      "القيثارة",
+      "الغيتار"
+    ],
+    "correct_answer_ar": "السيتار",
+    "explanation": "The sitar has long resonating strings beneath its main strings, giving its rich, ringing sound.",
+    "explanation_ar": "للسيتار أوتار رنين طويلة أسفل أوتاره الأساسية، ما يمنحه صوته الغني الرنّان.",
+    "objective": "Identify Indian instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_028",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "What pair of Indian hand drums plays the rhythms of Indian classical music?",
+    "options": [
+      "Tabla",
+      "Bagpipes",
+      "Maracas",
+      "Castanets"
+    ],
+    "correct_answer": "Tabla",
+    "question_ar": "أي زوج من الطبول اليدوية الهندية يعزف إيقاعات الموسيقى الهندية الكلاسيكية؟",
+    "options_ar": [
+      "الطبلة (تابلا)",
+      "مزمار القربة",
+      "الماراكاس",
+      "الكاستانيت"
+    ],
+    "correct_answer_ar": "الطبلة (تابلا)",
+    "explanation": "Tabla is a small pair of hand drums — one wooden, one metal — used across South Asia.",
+    "explanation_ar": "الطبلة (تابلا) زوج صغير من الطبول اليدوية، أحدهما خشبي والآخر معدني، تُستخدم في جنوب آسيا.",
+    "objective": "Recognize percussion instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_029",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "Which long Japanese stringed instrument is laid flat and plucked?",
+    "options": [
+      "The koto",
+      "The lute",
+      "The harp",
+      "The piano"
+    ],
+    "correct_answer": "The koto",
+    "question_ar": "أي آلة وترية يابانية طويلة توضع مسطحة وتُنقر؟",
+    "options_ar": [
+      "الكوتو",
+      "العود الأوروبي",
+      "القيثارة",
+      "البيانو"
+    ],
+    "correct_answer_ar": "الكوتو",
+    "explanation": "The koto is Japan's national instrument, with thirteen strings stretched over a long wooden body.",
+    "explanation_ar": "الكوتو الآلة الوطنية في اليابان، ولها ثلاثة عشر وتراً ممتدة على جسم خشبي طويل.",
+    "objective": "Identify Japanese instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_030",
+    "category": "culture",
+    "difficulty": 1,
+    "question": "The didgeridoo is a wind instrument from which culture?",
+    "options": [
+      "Aboriginal Australians",
+      "Inuit of Canada",
+      "Maori of New Zealand",
+      "Sami of Norway"
+    ],
+    "correct_answer": "Aboriginal Australians",
+    "question_ar": "الديدجريدو آلة هوائية من أي ثقافة؟",
+    "options_ar": [
+      "السكان الأصليون في أستراليا",
+      "الإنويت في كندا",
+      "الماوري في نيوزيلندا",
+      "السامي في النرويج"
+    ],
+    "correct_answer_ar": "السكان الأصليون في أستراليا",
+    "explanation": "The didgeridoo is one of the oldest wind instruments — a long hollow tube once made from termite-hollowed eucalyptus.",
+    "explanation_ar": "الديدجريدو من أقدم الآلات الهوائية، وهو أنبوب طويل مجوّف كان يُصنع من شجر الكينا الذي يجوّفه النمل الأبيض.",
+    "objective": "Identify Indigenous instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_031",
+    "category": "culture",
+    "difficulty": 1,
+    "question": "Bagpipes are most strongly associated with which European culture?",
+    "options": [
+      "Celtic (Scotland & Ireland)",
+      "Spanish flamenco",
+      "Norse Viking",
+      "Italian opera"
+    ],
+    "correct_answer": "Celtic (Scotland & Ireland)",
+    "question_ar": "مزمار القربة مرتبط بقوة بأي ثقافة أوروبية؟",
+    "options_ar": [
+      "السلتية (اسكتلندا وأيرلندا)",
+      "الفلامنكو الإسباني",
+      "الفايكنغ",
+      "الأوبرا الإيطالية"
+    ],
+    "correct_answer_ar": "السلتية (اسكتلندا وأيرلندا)",
+    "explanation": "Bagpipes use a bag of air to keep a continuous drone — a sound famous in Scottish and Irish folk music.",
+    "explanation_ar": "يستخدم مزمار القربة كيس هواء لإدامة طنين مستمر، وهو صوت مشهور في الموسيقى الشعبية الاسكتلندية والأيرلندية.",
+    "objective": "Identify European folk instruments.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_032",
+    "category": "art",
+    "difficulty": 1,
+    "question": "Which instrument is most strongly associated with jazz solos?",
+    "options": [
+      "The saxophone",
+      "The harp",
+      "The xylophone",
+      "The triangle"
+    ],
+    "correct_answer": "The saxophone",
+    "question_ar": "أي آلة ترتبط بقوة بمنفردات الجاز؟",
+    "options_ar": [
+      "الساكسفون",
+      "القيثارة",
+      "الزيلوفون",
+      "المثلث"
+    ],
+    "correct_answer_ar": "الساكسفون",
+    "explanation": "The saxophone became the voice of jazz in the early 20th century — smooth, powerful and expressive.",
+    "explanation_ar": "أصبح الساكسفون صوت الجاز في أوائل القرن العشرين، فهو ناعم وقوي ومعبّر.",
+    "objective": "Match instruments to genres.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_033",
+    "category": "art",
+    "difficulty": 1,
+    "question": "Which instrument is most associated with rock music?",
+    "options": [
+      "The electric guitar",
+      "The harpsichord",
+      "The accordion",
+      "The triangle"
+    ],
+    "correct_answer": "The electric guitar",
+    "question_ar": "أي آلة ترتبط أكثر بموسيقى الروك؟",
+    "options_ar": [
+      "الغيتار الكهربائي",
+      "الهاربسيكورد",
+      "الأكورديون",
+      "المثلث"
+    ],
+    "correct_answer_ar": "الغيتار الكهربائي",
+    "explanation": "The electric guitar, plugged into amplifiers, gives rock its loud, energetic sound.",
+    "explanation_ar": "الغيتار الكهربائي، الموصول بالمكبرات، يمنح الروك صوته العالي المفعم بالطاقة.",
+    "objective": "Match instruments to genres.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_034",
+    "category": "history",
+    "difficulty": 2,
+    "question": "K-pop is a popular music style that emerged in which country in the 1990s?",
+    "options": [
+      "South Korea",
+      "Japan",
+      "China",
+      "Vietnam"
+    ],
+    "correct_answer": "South Korea",
+    "question_ar": "الكي-بوب نمط موسيقي شعبي ظهر في أي بلد في التسعينيات؟",
+    "options_ar": [
+      "كوريا الجنوبية",
+      "اليابان",
+      "الصين",
+      "فيتنام"
+    ],
+    "correct_answer_ar": "كوريا الجنوبية",
+    "explanation": "K-pop began in South Korea in the early 1990s, mixing pop, dance, hip-hop and electronic music.",
+    "explanation_ar": "بدأ الكي-بوب في كوريا الجنوبية في أوائل التسعينيات، ممزوجاً بالبوب والرقص والهيب هوب والإلكترونية.",
+    "objective": "Recall origins of K-pop.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_035",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What does 'EDM' stand for in modern music?",
+    "options": [
+      "Electronic Dance Music",
+      "Easy Digital Music",
+      "Extra Drum Music",
+      "Echo Demo Music"
+    ],
+    "correct_answer": "Electronic Dance Music",
+    "question_ar": "ماذا تعني «EDM» في الموسيقى الحديثة؟",
+    "options_ar": [
+      "موسيقى الرقص الإلكترونية",
+      "موسيقى رقمية سهلة",
+      "موسيقى طبول إضافية",
+      "موسيقى عرض الصدى"
+    ],
+    "correct_answer_ar": "موسيقى الرقص الإلكترونية",
+    "explanation": "EDM is made mostly with computers and synthesizers, designed for dancing.",
+    "explanation_ar": "تُصنع موسيقى الـEDM في الغالب بالحواسيب والمركّبات الإلكترونية، وهي مخصصة للرقص.",
+    "objective": "Decode music abbreviations.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_036",
+    "category": "art",
+    "difficulty": 1,
+    "question": "Which Latin dance music has a fast beat and roots in Cuba?",
+    "options": [
+      "Salsa",
+      "Tango",
+      "Polka",
+      "Waltz"
+    ],
+    "correct_answer": "Salsa",
+    "question_ar": "أي موسيقى رقص لاتينية لها إيقاع سريع وجذور كوبية؟",
+    "options_ar": [
+      "السالسا",
+      "التانغو",
+      "البولكا",
+      "الفالس"
+    ],
+    "correct_answer_ar": "السالسا",
+    "explanation": "Salsa music blends Cuban rhythms with jazz, becoming popular in New York in the 1970s.",
+    "explanation_ar": "تمزج موسيقى السالسا الإيقاعات الكوبية بالجاز، وقد انتشرت في نيويورك في السبعينيات.",
+    "objective": "Identify Latin music genres.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_037",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which African-American genre, born from slave spirituals, became the foundation of jazz, R&B and rock?",
+    "options": [
+      "The blues",
+      "Country",
+      "Polka",
+      "Opera"
+    ],
+    "correct_answer": "The blues",
+    "question_ar": "أي نمط أفروأمريكي، وُلد من الترانيم الروحية للعبيد، أصبح أساس الجاز والـR&B والروك؟",
+    "options_ar": [
+      "البلوز",
+      "الكنتري",
+      "البولكا",
+      "الأوبرا"
+    ],
+    "correct_answer_ar": "البلوز",
+    "explanation": "The blues began in the American South in the late 1800s and shaped most modern Western music.",
+    "explanation_ar": "بدأ البلوز في جنوب الولايات المتحدة في أواخر القرن التاسع عشر وشكّل معظم الموسيقى الغربية الحديثة.",
+    "objective": "Trace musical lineage.",
+    "bloomLevel": "analyze"
+  },
+  {
+    "id": "mg_038",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which genre is closely tied to African-American churches and includes powerful singing about faith?",
+    "options": [
+      "Gospel",
+      "Heavy metal",
+      "Punk",
+      "Techno"
+    ],
+    "correct_answer": "Gospel",
+    "question_ar": "أي نمط مرتبط بشدة بالكنائس الأفروأمريكية ويتضمن غناءً قوياً عن الإيمان؟",
+    "options_ar": [
+      "الغوسبل",
+      "الهيفي ميتال",
+      "البانك",
+      "التكنو"
+    ],
+    "correct_answer_ar": "الغوسبل",
+    "explanation": "Gospel music grew from African-American spirituals and is sung with strong, joyful voices.",
+    "explanation_ar": "نشأت موسيقى الغوسبل من الترانيم الروحية الأفروأمريكية وتُغنّى بأصوات قوية ومبهجة.",
+    "objective": "Connect culture and genre.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_039",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What does 'R&B' stand for?",
+    "options": [
+      "Rhythm and Blues",
+      "Rock and Brass",
+      "Reggae and Beats",
+      "Rap and Ballad"
+    ],
+    "correct_answer": "Rhythm and Blues",
+    "question_ar": "ماذا تعني «R&B»؟",
+    "options_ar": [
+      "الإيقاع والبلوز",
+      "الروك والنحاسيات",
+      "الريغي والإيقاعات",
+      "الراب والبالاد"
+    ],
+    "correct_answer_ar": "الإيقاع والبلوز",
+    "explanation": "R&B blends bluesy feeling with strong beats — it grew from African-American music in the 1940s.",
+    "explanation_ar": "يمزج الـR&B إحساس البلوز مع إيقاعات قوية، ونشأ من الموسيقى الأفروأمريكية في الأربعينيات.",
+    "objective": "Decode genre acronyms.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_040",
+    "category": "art",
+    "difficulty": 1,
+    "question": "What is 'melody' in music?",
+    "options": [
+      "A line of single notes that makes the tune",
+      "Three notes played together",
+      "A drum pattern",
+      "A song's lyrics"
+    ],
+    "correct_answer": "A line of single notes that makes the tune",
+    "question_ar": "ما هو «اللحن» في الموسيقى؟",
+    "options_ar": [
+      "خط من نغمات مفردة يكوّن الأغنية",
+      "ثلاث نغمات معاً",
+      "نمط طبول",
+      "كلمات الأغنية"
+    ],
+    "correct_answer_ar": "خط من نغمات مفردة يكوّن الأغنية",
+    "explanation": "A melody is the part of a song you hum — a sequence of notes one after the other.",
+    "explanation_ar": "اللحن هو الجزء الذي تدندنه من الأغنية، تتابع نغمات واحدة بعد الأخرى.",
+    "objective": "Define melody.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_041",
+    "category": "art",
+    "difficulty": 1,
+    "question": "What is 'harmony' in music?",
+    "options": [
+      "Different notes played together that sound nice",
+      "A type of drum",
+      "How loud the song is",
+      "A musical instrument"
+    ],
+    "correct_answer": "Different notes played together that sound nice",
+    "question_ar": "ما هو «الانسجام» (الهارموني) في الموسيقى؟",
+    "options_ar": [
+      "نغمات مختلفة تُعزف معاً وتبدو جميلة",
+      "نوع من الطبول",
+      "شدة صوت الأغنية",
+      "آلة موسيقية"
+    ],
+    "correct_answer_ar": "نغمات مختلفة تُعزف معاً وتبدو جميلة",
+    "explanation": "Harmony happens when two or more notes sound together and blend pleasantly.",
+    "explanation_ar": "يحدث الانسجام حين تتزامن نغمتان أو أكثر معاً بشكل جميل.",
+    "objective": "Define harmony.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_042",
+    "category": "art",
+    "difficulty": 1,
+    "question": "What is 'rhythm' in music?",
+    "options": [
+      "The pattern of beats and timing",
+      "The colors of a song",
+      "The volume of the music",
+      "The instruments used"
+    ],
+    "correct_answer": "The pattern of beats and timing",
+    "question_ar": "ما هو «الإيقاع» في الموسيقى؟",
+    "options_ar": [
+      "نمط النبضات والتوقيت",
+      "ألوان الأغنية",
+      "شدة صوت الموسيقى",
+      "الآلات المستخدمة"
+    ],
+    "correct_answer_ar": "نمط النبضات والتوقيت",
+    "explanation": "Rhythm is what makes you tap your foot — it's the beat and timing of music.",
+    "explanation_ar": "الإيقاع هو ما يجعلك تضرب الأرض بقدمك، وهو نبض الموسيقى وتوقيتها.",
+    "objective": "Define rhythm.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_043",
+    "category": "art",
+    "difficulty": 1,
+    "question": "What are 'lyrics'?",
+    "options": [
+      "The words sung in a song",
+      "The musical notes",
+      "The dance steps",
+      "The album cover"
+    ],
+    "correct_answer": "The words sung in a song",
+    "question_ar": "ما هي «كلمات الأغنية»؟",
+    "options_ar": [
+      "الكلمات التي تُغنى في الأغنية",
+      "النوتات الموسيقية",
+      "خطوات الرقص",
+      "غلاف الألبوم"
+    ],
+    "correct_answer_ar": "الكلمات التي تُغنى في الأغنية",
+    "explanation": "Lyrics are the words a singer sings; melody is the tune that carries those words.",
+    "explanation_ar": "كلمات الأغنية هي الجمل التي يغنيها المؤدي، أما اللحن فهو النغم الذي يحملها.",
+    "objective": "Define lyrics.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_044",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What is an opera?",
+    "options": [
+      "A play that is mostly sung instead of spoken",
+      "A silent film",
+      "A short comic story",
+      "A type of dance"
+    ],
+    "correct_answer": "A play that is mostly sung instead of spoken",
+    "question_ar": "ما هي الأوبرا؟",
+    "options_ar": [
+      "مسرحية مغنّاة في معظمها بدلاً من النطق",
+      "فيلم صامت",
+      "قصة كوميدية قصيرة",
+      "نوع من الرقص"
+    ],
+    "correct_answer_ar": "مسرحية مغنّاة في معظمها بدلاً من النطق",
+    "explanation": "Opera combines acting, costumes and orchestra — singers tell stories with beautiful voices.",
+    "explanation_ar": "تجمع الأوبرا بين التمثيل والأزياء والأوركسترا، ويروي المغنون القصص بأصوات جميلة.",
+    "objective": "Define opera.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_045",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which musical, set in New York, retells Romeo and Juliet with rival gangs?",
+    "options": [
+      "West Side Story",
+      "The Lion King",
+      "Cats",
+      "Annie"
+    ],
+    "correct_answer": "West Side Story",
+    "question_ar": "أي مسرحية موسيقية، تدور أحداثها في نيويورك، تعيد سرد روميو وجولييت بعصابات متنافسة؟",
+    "options_ar": [
+      "وست سايد ستوري",
+      "الأسد الملك",
+      "كاتس",
+      "آني"
+    ],
+    "correct_answer_ar": "وست سايد ستوري",
+    "explanation": "West Side Story (1957) features music by Leonard Bernstein and famous songs like 'Maria' and 'America'.",
+    "explanation_ar": "وست سايد ستوري (١٩٥٧) موسيقاها لِليونارد برنشتاين، ومن أغانيها الشهيرة «ماريا» و«أمريكا».",
+    "objective": "Identify classic musicals.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_046",
+    "category": "history",
+    "difficulty": 1,
+    "question": "Before CDs and streaming, music was first recorded on what large round black disc?",
+    "options": [
+      "Vinyl record",
+      "Floppy disk",
+      "DVD",
+      "USB drive"
+    ],
+    "correct_answer": "Vinyl record",
+    "question_ar": "قبل الأقراص المضغوطة والبث، سُجّلت الموسيقى أولاً على أي قرص أسود مستدير كبير؟",
+    "options_ar": [
+      "أسطوانة الفينيل",
+      "القرص المرن",
+      "الـDVD",
+      "ذاكرة USB"
+    ],
+    "correct_answer_ar": "أسطوانة الفينيل",
+    "explanation": "Vinyl records appeared in the late 1800s and ruled music for decades — and they're loved again today.",
+    "explanation_ar": "ظهرت أسطوانات الفينيل في أواخر القرن التاسع عشر وسادت الموسيقى لعقود، وهي محبوبة من جديد اليوم.",
+    "objective": "Trace recording history.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_047",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which small plastic tape was the popular music format in the 1980s?",
+    "options": [
+      "The cassette tape",
+      "The vinyl record",
+      "The CD",
+      "The MP3 player"
+    ],
+    "correct_answer": "The cassette tape",
+    "question_ar": "أي شريط بلاستيكي صغير كان صيغة الموسيقى الشائعة في الثمانينيات؟",
+    "options_ar": [
+      "شريط الكاسيت",
+      "أسطوانة الفينيل",
+      "القرص المضغوط",
+      "مشغل MP٣"
+    ],
+    "correct_answer_ar": "شريط الكاسيت",
+    "explanation": "Cassette tapes let people record their own mixtapes and play music in cars and Walkmans.",
+    "explanation_ar": "أتاحت أشرطة الكاسيت للناس تسجيل خلطاتهم الخاصة وتشغيل الموسيقى في السيارات وأجهزة الووكمان.",
+    "objective": "Trace recording history.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_048",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which shiny disc replaced cassettes as the main music format in the 1990s?",
+    "options": [
+      "The compact disc (CD)",
+      "The vinyl record",
+      "The DVD",
+      "The Blu-ray"
+    ],
+    "correct_answer": "The compact disc (CD)",
+    "question_ar": "أي قرص لامع حلّ محل الكاسيت كصيغة موسيقى رئيسية في التسعينيات؟",
+    "options_ar": [
+      "القرص المضغوط (CD)",
+      "أسطوانة الفينيل",
+      "الـDVD",
+      "البلو-راي"
+    ],
+    "correct_answer_ar": "القرص المضغوط (CD)",
+    "explanation": "CDs use lasers to read digital music — clearer sound and no rewinding needed.",
+    "explanation_ar": "يستخدم القرص المضغوط الليزر لقراءة الموسيقى الرقمية، فالصوت أنقى ولا يحتاج لإعادة لفّ.",
+    "objective": "Trace recording history.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_049",
+    "category": "history",
+    "difficulty": 2,
+    "question": "What is 'streaming' music?",
+    "options": [
+      "Listening over the internet without downloading",
+      "Recording music with a microphone",
+      "Drawing on sheet music",
+      "Building an instrument"
+    ],
+    "correct_answer": "Listening over the internet without downloading",
+    "question_ar": "ما هو «بث» الموسيقى؟",
+    "options_ar": [
+      "الاستماع عبر الإنترنت دون تنزيل",
+      "تسجيل الموسيقى بالميكروفون",
+      "الرسم على النوتة الموسيقية",
+      "صنع آلة موسيقية"
+    ],
+    "correct_answer_ar": "الاستماع عبر الإنترنت دون تنزيل",
+    "explanation": "Streaming sends music to your phone or computer through the internet, song by song.",
+    "explanation_ar": "يرسل البث الموسيقى إلى هاتفك أو حاسوبك عبر الإنترنت، أغنية تلو الأخرى.",
+    "objective": "Explain modern listening tech.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_050",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What instrument family does the violin belong to?",
+    "options": [
+      "Strings",
+      "Brass",
+      "Woodwind",
+      "Percussion"
+    ],
+    "correct_answer": "Strings",
+    "question_ar": "إلى أي عائلة من الآلات ينتمي الكمان؟",
+    "options_ar": [
+      "الوتريات",
+      "النحاسيات",
+      "الخشبيات الهوائية",
+      "الإيقاعية"
+    ],
+    "correct_answer_ar": "الوتريات",
+    "explanation": "The violin has four strings played with a bow and is the highest member of the string family.",
+    "explanation_ar": "للكمان أربعة أوتار تُعزف بقوس، وهو أعلى أفراد عائلة الوتريات صوتاً.",
+    "objective": "Classify instruments by family.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_051",
+    "category": "art",
+    "difficulty": 2,
+    "question": "Which family does the trumpet belong to?",
+    "options": [
+      "Brass",
+      "Strings",
+      "Woodwind",
+      "Percussion"
+    ],
+    "correct_answer": "Brass",
+    "question_ar": "إلى أي عائلة ينتمي البوق (الترومبيت)؟",
+    "options_ar": [
+      "النحاسيات",
+      "الوتريات",
+      "الخشبيات الهوائية",
+      "الإيقاعية"
+    ],
+    "correct_answer_ar": "النحاسيات",
+    "explanation": "Brass instruments are made of metal and played by buzzing your lips into a mouthpiece.",
+    "explanation_ar": "الآلات النحاسية مصنوعة من المعدن وتُعزف بدفع الهواء عبر الشفتين في فوهتها.",
+    "objective": "Classify instruments by family.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_052",
+    "category": "art",
+    "difficulty": 2,
+    "question": "How many lines does a standard music staff have?",
+    "options": [
+      "5",
+      "3",
+      "7",
+      "10"
+    ],
+    "correct_answer": "5",
+    "question_ar": "كم خطاً يحتوي المدرج الموسيقي القياسي؟",
+    "options_ar": [
+      "٥",
+      "٣",
+      "٧",
+      "١٠"
+    ],
+    "correct_answer_ar": "٥",
+    "explanation": "Music is written on five horizontal lines and four spaces between them.",
+    "explanation_ar": "تُكتب الموسيقى على خمسة خطوط أفقية وأربعة فراغات بينها.",
+    "objective": "Read music notation.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_053",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What does a 'sharp' (#) sign do to a note?",
+    "options": [
+      "Raises it by a half step",
+      "Lowers it by a half step",
+      "Makes it louder",
+      "Makes it shorter"
+    ],
+    "correct_answer": "Raises it by a half step",
+    "question_ar": "ماذا تفعل علامة الدييز (#) بالنغمة؟",
+    "options_ar": [
+      "ترفعها نصف درجة",
+      "تخفضها نصف درجة",
+      "ترفع شدتها",
+      "تقصّرها"
+    ],
+    "correct_answer_ar": "ترفعها نصف درجة",
+    "explanation": "A sharp sign raises a note by a half-step on the keyboard or staff.",
+    "explanation_ar": "ترفع علامة الدييز النغمة نصف درجة على لوحة المفاتيح أو المدرج.",
+    "objective": "Use accidentals.",
+    "bloomLevel": "apply"
+  },
+  {
+    "id": "mg_054",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What does a 'flat' (b) sign do to a note?",
+    "options": [
+      "Lowers it by a half step",
+      "Raises it by a half step",
+      "Makes it silent",
+      "Makes it longer"
+    ],
+    "correct_answer": "Lowers it by a half step",
+    "question_ar": "ماذا تفعل علامة البيمول (b) بالنغمة؟",
+    "options_ar": [
+      "تخفضها نصف درجة",
+      "ترفعها نصف درجة",
+      "تجعلها صامتة",
+      "تطيل مدتها"
+    ],
+    "correct_answer_ar": "تخفضها نصف درجة",
+    "explanation": "A flat sign lowers a note by a half-step.",
+    "explanation_ar": "تخفض علامة البيمول النغمة نصف درجة.",
+    "objective": "Use accidentals.",
+    "bloomLevel": "apply"
+  },
+  {
+    "id": "mg_055",
+    "category": "art",
+    "difficulty": 1,
+    "question": "Which Italian word means 'softly'?",
+    "options": [
+      "Piano",
+      "Forte",
+      "Vivace",
+      "Largo"
+    ],
+    "correct_answer": "Piano",
+    "question_ar": "أي كلمة إيطالية تعني «بهدوء»؟",
+    "options_ar": [
+      "بيانو",
+      "فورتي",
+      "فيفاتشي",
+      "لارجو"
+    ],
+    "correct_answer_ar": "بيانو",
+    "explanation": "In music, 'piano' (p) means quiet — and gave the piano its name (originally 'pianoforte', soft-loud).",
+    "explanation_ar": "في الموسيقى تعني «بيانو» (p) الهدوء، ومنها جاء اسم آلة البيانو (أصلها «بيانوفورتي»: ناعم-قوي).",
+    "objective": "Interpret dynamics.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_056",
+    "category": "art",
+    "difficulty": 1,
+    "question": "Which Italian word means 'loud'?",
+    "options": [
+      "Forte",
+      "Piano",
+      "Adagio",
+      "Lento"
+    ],
+    "correct_answer": "Forte",
+    "question_ar": "أي كلمة إيطالية تعني «بصوت عالٍ»؟",
+    "options_ar": [
+      "فورتي",
+      "بيانو",
+      "أداجيو",
+      "لينتو"
+    ],
+    "correct_answer_ar": "فورتي",
+    "explanation": "Forte (f) tells musicians to play loudly and powerfully.",
+    "explanation_ar": "تخبر «فورتي» (f) الموسيقيين بأن يعزفوا بصوت عالٍ وقوي.",
+    "objective": "Interpret dynamics.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_057",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which composer wrote the Brandenburg Concertos and was the father of many musical sons?",
+    "options": [
+      "Johann Sebastian Bach",
+      "Wolfgang Amadeus Mozart",
+      "Franz Liszt",
+      "George Gershwin"
+    ],
+    "correct_answer": "Johann Sebastian Bach",
+    "question_ar": "أي مؤلف كتب «كونشرتوهات براندنبورغ» وكان والداً لعدة أبناء موسيقيين؟",
+    "options_ar": [
+      "يوهان سباستيان باخ",
+      "فولفغانغ أماديوس موتسارت",
+      "فرانز ليست",
+      "جورج جيرشوين"
+    ],
+    "correct_answer_ar": "يوهان سباستيان باخ",
+    "explanation": "Bach (1685-1750) composed in the Baroque period and wrote thousands of pieces of religious and instrumental music.",
+    "explanation_ar": "ألّف باخ (١٦٨٥–١٧٥٠) في حقبة الباروك وكتب آلاف المقطوعات الدينية والآلية.",
+    "objective": "Identify Baroque composers.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "mg_058",
+    "category": "art",
+    "difficulty": 2,
+    "question": "What is the difference between a major and minor key?",
+    "options": [
+      "Major often sounds happy and minor often sounds sad",
+      "Major is louder and minor is quieter",
+      "Major uses violins, minor uses pianos",
+      "There is no difference"
+    ],
+    "correct_answer": "Major often sounds happy and minor often sounds sad",
+    "question_ar": "ما الفرق بين السلم الكبير والسلم الصغير؟",
+    "options_ar": [
+      "الكبير يبدو فرحاً غالباً والصغير يبدو حزيناً غالباً",
+      "الكبير أعلى صوتاً والصغير أهدأ",
+      "الكبير للكمان والصغير للبيانو",
+      "لا يوجد فرق"
+    ],
+    "correct_answer_ar": "الكبير يبدو فرحاً غالباً والصغير يبدو حزيناً غالباً",
+    "explanation": "Major and minor refer to the pattern of notes in a scale, which gives a song its mood.",
+    "explanation_ar": "يشير الكبير والصغير إلى نمط النغمات في السلم الموسيقي، ما يمنح الأغنية مزاجها.",
+    "objective": "Compare scales.",
+    "bloomLevel": "analyze"
+  },
+  {
+    "id": "mg_059",
+    "category": "history",
+    "difficulty": 1,
+    "question": "Country music in the United States grew from the folk songs of which region?",
+    "options": [
+      "The Appalachian Mountains",
+      "The Great Plains",
+      "Hawaii",
+      "Alaska"
+    ],
+    "correct_answer": "The Appalachian Mountains",
+    "question_ar": "نشأت موسيقى الكنتري في الولايات المتحدة من الأغاني الشعبية لأي منطقة؟",
+    "options_ar": [
+      "جبال الأبلاش",
+      "السهول الكبرى",
+      "هاواي",
+      "ألاسكا"
+    ],
+    "correct_answer_ar": "جبال الأبلاش",
+    "explanation": "Early country music came from Appalachian folk traditions brought by Irish, Scottish, and English settlers.",
+    "explanation_ar": "جاءت موسيقى الكنتري المبكرة من تقاليد الأبلاش الشعبية التي جلبها المستوطنون الأيرلنديون والاسكتلنديون والإنجليز.",
+    "objective": "Trace folk roots.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "mg_060",
+    "category": "art",
+    "difficulty": 3,
+    "question": "If a song has 4 beats per measure with quarter notes getting one beat, what is its time signature?",
+    "options": [
+      "4/4",
+      "3/4",
+      "6/8",
+      "2/2"
+    ],
+    "correct_answer": "4/4",
+    "question_ar": "إذا كانت الأغنية فيها ٤ نبضات في كل قياس وكل نغمة بنصف-نصف تساوي نبضة، فما توقيعها الزمني؟",
+    "options_ar": [
+      "٤/٤",
+      "٣/٤",
+      "٦/٨",
+      "٢/٢"
+    ],
+    "correct_answer_ar": "٤/٤",
+    "explanation": "4/4 (called common time) is the most popular time signature in pop, rock and most modern music.",
+    "explanation_ar": "٤/٤ (ويسمى التوقيع الشائع) هو التوقيع الزمني الأكثر شيوعاً في البوب والروك ومعظم الموسيقى الحديثة.",
+    "objective": "Apply time signature concepts.",
+    "bloomLevel": "apply"
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "id": "lz_kuwait_country",
+    "title": "Kuwait, a Small Country with a Big Sea",
+    "title_ar": "الكويت، بلد صغير ببحر كبير",
+    "passage": "Kuwait is a country on the Arabian Gulf. Its capital is Kuwait City. The weather is very hot in summer and mild in winter. Long ago, the people of Kuwait were famous for pearl diving and for building strong ships called booms. Today, oil is the country's biggest export, but the sea is still part of daily life.",
+    "passage_ar": "الكويت دولة على الخليج العربي. عاصمتها مدينة الكويت. الطقس حار جداً في الصيف ومعتدل في الشتاء. قديماً، اشتهر أهل الكويت بصيد اللؤلؤ وبناء سفن قوية تُسمى البوم. اليوم، النفط هو أكبر صادرات البلاد، لكن البحر ما زال جزءاً من الحياة اليومية.",
+    "category": "Geography",
+    "questions": [
+      {
+        "q": "What body of water is Kuwait on?",
+        "q_ar": "على أي بحر تقع الكويت؟",
+        "options": ["The Red Sea", "The Arabian Gulf", "The Mediterranean Sea", "The Atlantic Ocean"],
+        "options_ar": ["البحر الأحمر", "الخليج العربي", "البحر المتوسط", "المحيط الأطلسي"],
+        "correct": "The Arabian Gulf",
+        "correct_ar": "الخليج العربي"
+      },
+      {
+        "q": "What were Kuwaiti people famous for long ago?",
+        "q_ar": "بماذا اشتهر أهل الكويت قديماً؟",
+        "options": ["Skiing", "Pearl diving", "Mountain climbing", "Wheat farming"],
+        "options_ar": ["التزلج", "صيد اللؤلؤ", "تسلق الجبال", "زراعة القمح"],
+        "correct": "Pearl diving",
+        "correct_ar": "صيد اللؤلؤ"
+      },
+      {
+        "q": "What is the biggest export today?",
+        "q_ar": "ما أكبر صادرات البلاد اليوم؟",
+        "options": ["Pearls", "Oil", "Wheat", "Fish"],
+        "options_ar": ["اللؤلؤ", "النفط", "القمح", "السمك"],
+        "correct": "Oil",
+        "correct_ar": "النفط"
+      }
+    ]
+  },
+  {
+    "id": "lz_gulf_region",
+    "title": "Our Gulf Neighbors",
+    "title_ar": "جيراننا في الخليج",
+    "passage": "The Arabian Gulf is shared by six countries: Kuwait, Saudi Arabia, Bahrain, Qatar, the United Arab Emirates, and Oman. They share a language, Arabic, and many traditions. Each country has its own famous food, its own dialect, and its own places worth visiting. Together they are part of a region called the Gulf Cooperation Council, or GCC.",
+    "passage_ar": "الخليج العربي تشترك فيه ست دول: الكويت والمملكة العربية السعودية والبحرين وقطر والإمارات العربية المتحدة وعُمان. تتشارك في اللغة العربية وكثير من العادات. لكل دولة طعامها الشهير ولهجتها الخاصة وأماكنها التي تستحق الزيارة. وهي معاً جزء من منطقة تُسمى مجلس التعاون الخليجي.",
+    "category": "Geography",
+    "questions": [
+      {
+        "q": "How many countries share the Arabian Gulf?",
+        "q_ar": "كم دولة تشترك في الخليج العربي؟",
+        "options": ["Four", "Five", "Six", "Seven"],
+        "options_ar": ["أربع", "خمس", "ست", "سبع"],
+        "correct": "Six",
+        "correct_ar": "ست"
+      },
+      {
+        "q": "What language do they share?",
+        "q_ar": "ما اللغة التي يتشاركون فيها؟",
+        "options": ["English", "Arabic", "French", "Spanish"],
+        "options_ar": ["الإنجليزية", "العربية", "الفرنسية", "الإسبانية"],
+        "correct": "Arabic",
+        "correct_ar": "العربية"
+      },
+      {
+        "q": "What does GCC stand for?",
+        "q_ar": "ماذا تعني مجلس التعاون الخليجي؟",
+        "options": ["Gulf Cooperation Council", "Global Coffee Council", "Great Camel Club", "Gulf Cooking Crew"],
+        "options_ar": ["مجلس التعاون الخليجي", "مجلس القهوة العالمي", "نادي الجمال الكبير", "فريق الطبخ الخليجي"],
+        "correct": "Gulf Cooperation Council",
+        "correct_ar": "مجلس التعاون الخليجي"
+      }
+    ]
+  },
+  {
+    "id": "lz_kindness_neighbor",
+    "title": "The Kind Neighbor",
+    "title_ar": "الجار اللطيف",
+    "passage": "Salem's new neighbor, Mr. Khaled, looked very serious. Salem was a little afraid of him. One windy day, the wind blew Salem's ball over the wall into Mr. Khaled's garden. Salem was scared to ring the bell, but he did. Mr. Khaled smiled, handed back the ball, and even invited Salem and his mother for dates and tea. Salem learned that you can't know someone from their face alone.",
+    "passage_ar": "كان جار سالم الجديد، الأستاذ خالد، يبدو جاداً جداً. خاف منه سالم قليلاً. في يوم عاصف، طارت كرة سالم فوق الجدار إلى حديقة الأستاذ خالد. خاف سالم من أن يطرق الباب، لكنه فعل. ابتسم الأستاذ خالد وأعاد له الكرة، بل دعا سالم وأمه لتناول التمر والشاي. تعلم سالم أنه لا يمكن معرفة الإنسان من شكله فقط.",
+    "category": "Values",
+    "questions": [
+      {
+        "q": "What did Salem first think of Mr. Khaled?",
+        "q_ar": "ماذا ظن سالم في البداية عن الأستاذ خالد؟",
+        "options": ["He was funny", "He looked serious and Salem was afraid", "He was a teacher", "He was his uncle"],
+        "options_ar": ["أنه مضحك", "أنه يبدو جاداً وخاف منه", "أنه معلم", "أنه عمه"],
+        "correct": "He looked serious and Salem was afraid",
+        "correct_ar": "أنه يبدو جاداً وخاف منه"
+      },
+      {
+        "q": "What did Mr. Khaled do when Salem rang the bell?",
+        "q_ar": "ماذا فعل الأستاذ خالد عندما طرق سالم الباب؟",
+        "options": ["He shouted", "He hid the ball", "He smiled and gave the ball back", "He called the police"],
+        "options_ar": ["صرخ", "أخفى الكرة", "ابتسم وأعاد الكرة", "اتصل بالشرطة"],
+        "correct": "He smiled and gave the ball back",
+        "correct_ar": "ابتسم وأعاد الكرة"
+      },
+      {
+        "q": "What is the lesson of the story?",
+        "q_ar": "ما درس القصة؟",
+        "options": ["Always lose your ball", "Don't judge a person by their face", "Walls are bad", "Tea is the best drink"],
+        "options_ar": ["اخسر كرتك دائماً", "لا تحكم على الإنسان من شكله", "الجدران سيئة", "الشاي أفضل مشروب"],
+        "correct": "Don't judge a person by their face",
+        "correct_ar": "لا تحكم على الإنسان من شكله"
+      }
+    ]
+  },
+  {
+    "id": "lz_honesty_change",
+    "title": "The Extra Coin",
+    "title_ar": "العملة الزائدة",
+    "passage": "Reem bought a sandwich from the corner shop. When she counted her change at home, she found one extra dinar — the shopkeeper had made a mistake. Her brother said, 'It's only one dinar, keep it.' But Reem walked back to the shop and gave it back. The shopkeeper thanked her and told her father later. Her father didn't reward her with money, but he hugged her tight and said, 'That is worth more than a hundred dinars.'",
+    "passage_ar": "اشترت ريم سندويتشاً من الدكان القريب. عندما عَدّت الباقي في البيت، وجدت ديناراً زائداً — فقد أخطأ صاحب الدكان. قال أخوها: «إنها دينار واحد فقط، احتفظي بها». لكن ريم رجعت إلى الدكان وأعادتها. شكرها صاحب الدكان وأخبر والدها لاحقاً. لم يكافئها والدها بمال، بل احتضنها بقوة وقال: «هذا أغلى من مائة دينار».",
+    "category": "Values",
+    "questions": [
+      {
+        "q": "What did Reem find when she counted her change?",
+        "q_ar": "ماذا وجدت ريم عندما عَدّت الباقي؟",
+        "options": ["A coin was missing", "An extra dinar", "A candy", "A receipt"],
+        "options_ar": ["نقصاناً في النقود", "ديناراً زائداً", "حلوى", "إيصالاً"],
+        "correct": "An extra dinar",
+        "correct_ar": "ديناراً زائداً"
+      },
+      {
+        "q": "What did her brother suggest?",
+        "q_ar": "ماذا اقترح أخوها؟",
+        "options": ["Tell the police", "Keep the extra dinar", "Buy more sandwiches", "Hide the money"],
+        "options_ar": ["إخبار الشرطة", "الاحتفاظ بالدينار الزائد", "شراء سندويتشات أخرى", "إخفاء النقود"],
+        "correct": "Keep the extra dinar",
+        "correct_ar": "الاحتفاظ بالدينار الزائد"
+      },
+      {
+        "q": "What did her father value most?",
+        "q_ar": "ماذا قَدّر والدها أكثر شيء؟",
+        "options": ["The dinar", "Her honesty", "The sandwich", "The shopkeeper"],
+        "options_ar": ["الدينار", "صدقها وأمانتها", "السندويتش", "صاحب الدكان"],
+        "correct": "Her honesty",
+        "correct_ar": "صدقها وأمانتها"
+      }
+    ]
+  },
+  {
+    "id": "lz_camel_desert",
+    "title": "The Camel: Ship of the Desert",
+    "title_ar": "الجمل: سفينة الصحراء",
+    "passage": "The camel is called the ship of the desert because it can carry people and goods across the sand for many days. Its long eyelashes keep sand out of its eyes. Its wide feet help it walk on soft sand without sinking. The hump on its back is not full of water — it is full of fat, which the camel turns into energy when food is hard to find. A healthy camel can go many days without drinking water.",
+    "passage_ar": "يُسمى الجمل سفينة الصحراء لأنه يستطيع حمل الناس والبضائع عبر الرمال لأيام كثيرة. رموشه الطويلة تحجب الرمل عن عينيه. أقدامه العريضة تساعده على المشي فوق الرمل الناعم دون أن يغوص. السنام على ظهره ليس مليئاً بالماء — بل مليء بالدهن، يحوّله الجمل إلى طاقة عند صعوبة إيجاد الطعام. الجمل السليم يستطيع البقاء أياماً كثيرة دون شرب الماء.",
+    "category": "Sciences",
+    "questions": [
+      {
+        "q": "Why is the camel called 'the ship of the desert'?",
+        "q_ar": "لماذا يُسمى الجمل «سفينة الصحراء»؟",
+        "options": ["It can float", "It carries people across sand for days", "It is blue", "It eats fish"],
+        "options_ar": ["لأنه يطفو", "لأنه يحمل الناس عبر الرمل لأيام", "لأنه أزرق", "لأنه يأكل السمك"],
+        "correct": "It carries people across sand for days",
+        "correct_ar": "لأنه يحمل الناس عبر الرمل لأيام"
+      },
+      {
+        "q": "What is inside the camel's hump?",
+        "q_ar": "ماذا يوجد داخل سنام الجمل؟",
+        "options": ["Water", "Fat", "Bones", "Sand"],
+        "options_ar": ["ماء", "دهن", "عظام", "رمل"],
+        "correct": "Fat",
+        "correct_ar": "دهن"
+      },
+      {
+        "q": "What helps the camel walk on soft sand?",
+        "q_ar": "ما الذي يساعد الجمل على المشي فوق الرمل الناعم؟",
+        "options": ["Long ears", "Short legs", "Wide feet", "Big teeth"],
+        "options_ar": ["آذان طويلة", "أرجل قصيرة", "أقدام عريضة", "أسنان كبيرة"],
+        "correct": "Wide feet",
+        "correct_ar": "أقدام عريضة"
+      }
+    ]
+  },
+  {
+    "id": "lz_plants_grow",
+    "title": "How Plants Grow",
+    "title_ar": "كيف تنمو النباتات",
+    "passage": "Every plant starts as a seed. A seed needs three things to wake up: water, warmth, and air. When the seed sprouts, a small root grows down into the soil to drink water and minerals. A stem grows up toward the light. Leaves open and catch sunlight, which the plant uses to make its own food in a process called photosynthesis. Without sunlight, plants cannot grow.",
+    "passage_ar": "كل نبتة تبدأ بذرة. تحتاج البذرة إلى ثلاثة أشياء حتى تستيقظ: الماء والدفء والهواء. عندما تنبت البذرة، ينمو جذر صغير في التربة ليشرب الماء والمعادن. تنمو ساق إلى الأعلى نحو الضوء. تنفتح الأوراق وتلتقط ضوء الشمس، ويستخدمه النبات لصنع غذائه في عملية تُسمى التركيب الضوئي. بدون ضوء الشمس، لا تستطيع النباتات النمو.",
+    "category": "Sciences",
+    "questions": [
+      {
+        "q": "What three things does a seed need to wake up?",
+        "q_ar": "ما الأشياء الثلاثة التي تحتاجها البذرة لتستيقظ؟",
+        "options": ["Snow, wind, salt", "Water, warmth, air", "Music, light, sand", "Honey, milk, oil"],
+        "options_ar": ["ثلج وريح وملح", "ماء ودفء وهواء", "موسيقى وضوء ورمل", "عسل وحليب وزيت"],
+        "correct": "Water, warmth, air",
+        "correct_ar": "ماء ودفء وهواء"
+      },
+      {
+        "q": "Which way does the root grow?",
+        "q_ar": "في أي اتجاه ينمو الجذر؟",
+        "options": ["Up toward the sky", "Down into the soil", "Sideways", "It does not grow"],
+        "options_ar": ["إلى الأعلى نحو السماء", "إلى الأسفل في التربة", "إلى الجانب", "لا ينمو"],
+        "correct": "Down into the soil",
+        "correct_ar": "إلى الأسفل في التربة"
+      },
+      {
+        "q": "What is the process plants use to make their food?",
+        "q_ar": "ما العملية التي يستخدمها النبات لصنع غذائه؟",
+        "options": ["Photosynthesis", "Digestion", "Evaporation", "Respiration"],
+        "options_ar": ["التركيب الضوئي", "الهضم", "التبخر", "التنفس"],
+        "correct": "Photosynthesis",
+        "correct_ar": "التركيب الضوئي"
+      }
+    ]
+  }
+]

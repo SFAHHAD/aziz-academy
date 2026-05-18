@@ -37,9 +37,7 @@ class _NetworkImageRetryState extends State<NetworkImageRetry> {
         return SizedBox(
           width: widget.width ?? 300,
           height: widget.height ?? 200,
-          child: const Center(
-            child: CircularProgressIndicator(),
-          ),
+          child: const Center(child: CircularProgressIndicator()),
         );
       },
       errorBuilder: (context, error, stack) {
@@ -50,7 +48,11 @@ class _NetworkImageRetryState extends State<NetworkImageRetry> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(Icons.wifi_off_rounded, size: 40, color: Colors.grey),
+                const Icon(
+                  Icons.wifi_off_rounded,
+                  size: 40,
+                  color: Colors.grey,
+                ),
                 const SizedBox(height: 8),
                 Text(
                   context.l10n.networkImageError,

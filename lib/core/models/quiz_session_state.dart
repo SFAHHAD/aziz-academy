@@ -31,15 +31,14 @@ class QuizSessionState {
 
   QuizQuestion? get currentQuestion =>
       status == QuizStatus.inProgress && currentIndex < questions.length
-          ? questions[currentIndex]
-          : null;
+      ? questions[currentIndex]
+      : null;
 
   int get totalQuestions => questions.length;
   int get answeredCount => currentIndex;
   double get progress =>
       totalQuestions == 0 ? 0 : currentIndex / totalQuestions;
-  double get scorePercent =>
-      totalQuestions == 0 ? 0 : score / totalQuestions;
+  double get scorePercent => totalQuestions == 0 ? 0 : score / totalQuestions;
   bool get isComplete => status == QuizStatus.complete;
   bool get isGameOver => livesRemaining <= 0;
 
@@ -62,8 +61,9 @@ class QuizSessionState {
       score: score ?? this.score,
       status: status ?? this.status,
       livesRemaining: livesRemaining ?? this.livesRemaining,
-      lastAnswerCorrect:
-          clearLastAnswer ? null : (lastAnswerCorrect ?? this.lastAnswerCorrect),
+      lastAnswerCorrect: clearLastAnswer
+          ? null
+          : (lastAnswerCorrect ?? this.lastAnswerCorrect),
     );
   }
 

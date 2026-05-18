@@ -1,10 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:aziz_academy/core/agents/event_bus.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
 import 'package:aziz_academy/core/models/quiz_difficulty.dart';
 import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
+import 'package:aziz_academy/core/providers/locale_provider.dart';
 import 'package:aziz_academy/core/providers/recap_arm_provider.dart';
+import 'package:aziz_academy/core/agents/learner_state.dart';
+import 'package:aziz_academy/core/utils/adaptive_order.dart';
 import 'package:aziz_academy/features/capitals/data/capitals_repository.dart';
 
 export 'package:aziz_academy/core/models/quiz_difficulty.dart';
@@ -43,9 +47,9 @@ final capitalsRepositoryProvider = Provider<CapitalsRepository>(
 /// ```
 final continentFilterProvider =
     NotifierProvider<ContinentFilterNotifier, String?>(
-  ContinentFilterNotifier.new,
-  name: 'continentFilterProvider',
-);
+      ContinentFilterNotifier.new,
+      name: 'continentFilterProvider',
+    );
 
 class ContinentFilterNotifier extends Notifier<String?> {
   @override
@@ -59,8 +63,7 @@ class ContinentFilterNotifier extends Notifier<String?> {
 // DIFFICULTY PROVIDER (capitals)
 // =============================================================================
 
-final difficultyProvider =
-    NotifierProvider<DifficultyNotifier, QuizDifficulty>(
+final difficultyProvider = NotifierProvider<DifficultyNotifier, QuizDifficulty>(
   DifficultyNotifier.new,
   name: 'difficultyProvider',
 );
@@ -71,7 +74,6 @@ class DifficultyNotifier extends Notifier<QuizDifficulty> {
 
   void set(QuizDifficulty d) => state = d;
 }
-
 
 // =============================================================================
 // 2. QUESTIONS PROVIDER
@@ -87,16 +89,16 @@ class DifficultyNotifier extends Notifier<QuizDifficulty> {
 /// ```
 final capitalsQuestionsProvider =
     AsyncNotifierProvider<CapitalsQuestionsNotifier, List<QuizQuestion>>(
-  CapitalsQuestionsNotifier.new,
-  name: 'capitalsQuestionsProvider',
-);
+      CapitalsQuestionsNotifier.new,
+      name: 'capitalsQuestionsProvider',
+    );
 
-class CapitalsQuestionsNotifier
-    extends AsyncNotifier<List<QuizQuestion>> {
+class CapitalsQuestionsNotifier extends AsyncNotifier<List<QuizQuestion>> {
   @override
   Future<List<QuizQuestion>> build() async {
     final repo = ref.read(capitalsRepositoryProvider);
-    return repo.loadQuestions();
+    final isArabic = ref.watch(localeProvider).value?.languageCode == 'ar';
+    return repo.loadQuestions(arabic: isArabic);
   }
 
   /// Reloads questions from disk (useful for hot-reload / testing).
@@ -104,7 +106,8 @@ class CapitalsQuestionsNotifier
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       final repo = ref.read(capitalsRepositoryProvider);
-      return repo.loadQuestions();
+      final isArabic = ref.read(localeProvider).value?.languageCode == 'ar';
+      return repo.loadQuestions(arabic: isArabic);
     });
   }
 }
@@ -112,7 +115,6 @@ class CapitalsQuestionsNotifier
 // QuizStatus and QuizSessionState are defined in
 // lib/core/models/quiz_session_state.dart and re-exported via this file's
 // imports for backward compatibility.
-
 
 // =============================================================================
 // 4. QUIZ SESSION PROVIDER
@@ -140,9 +142,9 @@ class CapitalsQuestionsNotifier
 /// ```
 final capitalsQuizProvider =
     AsyncNotifierProvider<CapitalsQuizNotifier, QuizSessionState>(
-  CapitalsQuizNotifier.new,
-  name: 'capitalsQuizProvider',
-);
+      CapitalsQuizNotifier.new,
+      name: 'capitalsQuizProvider',
+    );
 
 class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
   @override
@@ -155,19 +157,28 @@ class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
       questions = questions.where((q) => q.category == continent).toList();
     }
 
-    // Filter by difficulty — question difficulty is stored in its id-mapped
-    // QuizQuestion. We use the QuizQuestion.id to look up difficulty in the
-    // repository layer, but for now difficulty is encoded in the options count
-    // (options.length == 4 always) so we rely on a simple shuffled subset:
-    //   easy   → first 20%  questions sorted by difficulty ascending
-    //   medium → first 50%
-    //   hard   → all
-    // A better approach would be to surface `difficulty` on QuizQuestion itself.
+    // Adaptive ordering biases the pool toward the kid's EMA skill on this
+    // module before the user-selected difficulty crops the head of the list.
+    final adaptive =
+        ref.watch(appSettingsProvider).value?.adaptiveDifficulty ?? true;
+    if (adaptive) {
+      final skill =
+          ref.read(learnerStateProvider).value?.skillFor('capitals') ?? 0.5;
+      questions = adaptiveOrder<QuizQuestion>(
+        questions,
+        skill,
+        (q) => q.difficulty,
+      );
+    }
+
     final diff = ref.watch(difficultyProvider);
     if (diff != QuizDifficulty.hard) {
       final fraction = diff == QuizDifficulty.easy ? 0.20 : 0.50;
       final minQ = 8.clamp(1, questions.length);
-      final cap = ((questions.length * fraction).ceil()).clamp(minQ, questions.length);
+      final cap = ((questions.length * fraction).ceil()).clamp(
+        minQ,
+        questions.length,
+      );
       questions = questions.take(cap).toList();
     }
 
@@ -191,14 +202,25 @@ class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
       );
     }
 
-    return QuizSessionState(
+    final out = QuizSessionState(
       questions: List.of(questions)..shuffle(),
       currentIndex: 0,
       score: 0,
       livesRemaining: 3,
       status: QuizStatus.inProgress,
     );
+    EventBus.instance.emit(
+      LearningEvent(
+        type: LearningEventType.sessionStarted,
+        module: 'capitals',
+        timestamp: DateTime.now(),
+      ),
+    );
+    _lastQuestionStartedAt = DateTime.now();
+    return out;
   }
+
+  DateTime? _lastQuestionStartedAt;
 
   // ---------------------------------------------------------------------------
   // Actions — each mutates the current QuizSessionState synchronously.
@@ -218,11 +240,29 @@ class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
     final nextLives = isCorrect
         ? session.livesRemaining
         : (practice ? session.livesRemaining : session.livesRemaining - 1);
-    state = AsyncData(session.copyWith(
-      score: isCorrect ? session.score + 1 : session.score,
-      livesRemaining: nextLives,
-      lastAnswerCorrect: isCorrect,
-    ));
+
+    final lat = _lastQuestionStartedAt == null
+        ? 0
+        : DateTime.now().difference(_lastQuestionStartedAt!).inMilliseconds;
+    EventBus.instance.emit(
+      LearningEvent(
+        type: LearningEventType.questionAnswered,
+        module: 'capitals',
+        timestamp: DateTime.now(),
+        questionId: current.id,
+        category: current.category,
+        correct: isCorrect,
+        latencyMs: lat,
+      ),
+    );
+
+    state = AsyncData(
+      session.copyWith(
+        score: isCorrect ? session.score + 1 : session.score,
+        livesRemaining: nextLives,
+        lastAnswerCorrect: isCorrect,
+      ),
+    );
     return isCorrect;
   }
 
@@ -233,17 +273,30 @@ class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
 
     final nextIndex = session.currentIndex + 1;
     if (nextIndex >= session.totalQuestions) {
-      state = AsyncData(session.copyWith(
-        currentIndex: nextIndex,
-        status: QuizStatus.complete,
-        clearLastAnswer: true,
-      ));
+      EventBus.instance.emit(
+        LearningEvent(
+          type: LearningEventType.sessionEnded,
+          module: 'capitals',
+          timestamp: DateTime.now(),
+          score: session.score,
+        ),
+      );
+      state = AsyncData(
+        session.copyWith(
+          currentIndex: nextIndex,
+          status: QuizStatus.complete,
+          clearLastAnswer: true,
+        ),
+      );
     } else {
-      state = AsyncData(session.copyWith(
-        currentIndex: nextIndex,
-        status: QuizStatus.inProgress,
-        clearLastAnswer: true,
-      ));
+      _lastQuestionStartedAt = DateTime.now();
+      state = AsyncData(
+        session.copyWith(
+          currentIndex: nextIndex,
+          status: QuizStatus.inProgress,
+          clearLastAnswer: true,
+        ),
+      );
     }
   }
 
@@ -252,13 +305,15 @@ class CapitalsQuizNotifier extends AsyncNotifier<QuizSessionState> {
     final session = state.value;
     if (session == null) return;
 
-    state = AsyncData(session.copyWith(
-      questions: List.of(session.questions)..shuffle(),
-      currentIndex: 0,
-      score: 0,
-      livesRemaining: 3,
-      status: QuizStatus.inProgress,
-      clearLastAnswer: true,
-    ));
+    state = AsyncData(
+      session.copyWith(
+        questions: List.of(session.questions)..shuffle(),
+        currentIndex: 0,
+        score: 0,
+        livesRemaining: 3,
+        status: QuizStatus.inProgress,
+        clearLastAnswer: true,
+      ),
+    );
   }
 }
