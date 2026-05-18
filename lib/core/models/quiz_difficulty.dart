@@ -17,24 +17,18 @@ extension QuizDifficultyExt on QuizDifficulty {
 
   String get emoji {
     switch (this) {
-      case QuizDifficulty.easy:
-        return '🌱';
-      case QuizDifficulty.medium:
-        return '⚡';
-      case QuizDifficulty.hard:
-        return '🔥';
+      case QuizDifficulty.easy:   return '🌱';
+      case QuizDifficulty.medium: return '⚡';
+      case QuizDifficulty.hard:   return '🔥';
     }
   }
 
   /// Fraction of the question pool to use for this level.
   double get poolFraction {
     switch (this) {
-      case QuizDifficulty.easy:
-        return 0.20;
-      case QuizDifficulty.medium:
-        return 0.50;
-      case QuizDifficulty.hard:
-        return 1.00;
+      case QuizDifficulty.easy:   return 0.20;
+      case QuizDifficulty.medium: return 0.50;
+      case QuizDifficulty.hard:   return 1.00;
     }
   }
 }

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
@@ -11,7 +10,6 @@ import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
 
 // =============================================================================
 // Review Mode Screen
@@ -29,7 +27,6 @@ class _ReviewModeScreenState extends ConsumerState<ReviewModeScreen>
   String? _selectedAnswer;
   bool _answerRevealed = false;
   bool _completionSpoken = false;
-  Timer? _commitTimer;
 
   late final AnimationController _feedbackCtrl;
   late final Animation<double> _feedbackScale;
@@ -41,15 +38,12 @@ class _ReviewModeScreenState extends ConsumerState<ReviewModeScreen>
       vsync: this,
       duration: const Duration(milliseconds: 350),
     );
-    _feedbackScale = CurvedAnimation(
-      parent: _feedbackCtrl,
-      curve: Curves.elasticOut,
-    );
+    _feedbackScale =
+        CurvedAnimation(parent: _feedbackCtrl, curve: Curves.elasticOut);
   }
 
   @override
   void dispose() {
-    _commitTimer?.cancel();
     _feedbackCtrl.dispose();
     super.dispose();
   }
@@ -59,21 +53,12 @@ class _ReviewModeScreenState extends ConsumerState<ReviewModeScreen>
   void _onOptionTap(String choice, ReviewItem item) {
     if (_answerRevealed) return;
     final correct = ref.read(reviewModeProvider.notifier).answer(choice);
-    if (correct) {
-      HapticFeedback.lightImpact();
-    } else {
-      HapticFeedback.mediumImpact();
-    }
     // Fire-and-forget TTS: human feedback + correct answer in one utterance.
-    unawaited(
-      ref
-          .read(ttsServiceProvider)
-          .speakAnswerFeedback(
-            item.question.correctAnswer,
-            correct: correct,
-            srsItem: correct && item.entry.missCount == 1,
-          ),
-    );
+    unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
+      item.question.correctAnswer,
+      correct: correct,
+      srsItem: correct && item.entry.missCount == 1,
+    ));
     setState(() {
       _selectedAnswer = choice;
       _answerRevealed = true;
@@ -81,9 +66,7 @@ class _ReviewModeScreenState extends ConsumerState<ReviewModeScreen>
     _feedbackCtrl.forward(from: 0);
 
     // Persist SRS outcome after feedback window.
-    _commitTimer?.cancel();
-    _commitTimer = Timer(const Duration(milliseconds: 950), () async {
-      if (!mounted) return;
+    Future.delayed(const Duration(milliseconds: 950), () async {
       await ref
           .read(reviewModeProvider.notifier)
           .commitAnswer(item.entry, correct);
@@ -108,17 +91,15 @@ class _ReviewModeScreenState extends ConsumerState<ReviewModeScreen>
         loading: () => const Center(
           child: CircularProgressIndicator(color: AppColors.secondary),
         ),
-        error: (e, _) => _ErrorBody(message: l10n.quizLoadError),
+        error: (e, _) => _ErrorBody(message: e.toString()),
         data: (s) {
           if (s.isEmpty) return _EmptyBody(l10n: l10n);
           if (s.isComplete) {
             if (!_completionSpoken) {
               _completionSpoken = true;
-              HapticFeedback.heavyImpact();
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 if (mounted) {
-                  ref
-                      .read(ttsServiceProvider)
+                  ref.read(ttsServiceProvider)
                       .speakFeedback(TtsFeedbackType.reviewComplete);
                 }
               });
@@ -171,129 +152,124 @@ class _QuizBody extends StatelessWidget {
     final missCount = item.entry.missCount;
 
     return SafeArea(
-      child: CenteredBody(
-        child: Column(
-          children: [
-            // ── Header ───────────────────────────────────────────────────
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: () => context.go(AppRoutes.home),
-                    child: Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: AppColors.surfaceContainerLow,
-                      ),
-                      child: Icon(
-                        Directionality.of(context) == TextDirection.rtl
-                            ? Icons.arrow_forward_ios_rounded
-                            : Icons.arrow_back_ios_new_rounded,
-                        size: 18,
-                        color: AppColors.error,
-                      ),
+      child: Column(
+        children: [
+          // ── Header ───────────────────────────────────────────────────
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+            child: Row(
+              children: [
+                GestureDetector(
+                  onTap: () => context.go(AppRoutes.home),
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColors.surfaceContainerLow,
                     ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          l10n.reviewModeTitle,
-                          style: AppTextStyles.headingSmall.copyWith(
-                            color: AppColors.error,
-                          ),
-                        ),
-                        Text(
-                          l10n.reviewModeQuestionOf(
-                            state.currentIndex + 1 <= state.totalItems
-                                ? state.currentIndex + 1
-                                : state.totalItems,
-                            state.totalItems,
-                          ),
-                          style: AppTextStyles.caption.copyWith(
-                            color: AppColors.textMedium,
-                          ),
-                        ),
-                      ],
+                    child: Icon(
+                      Directionality.of(context) == TextDirection.rtl
+                          ? Icons.arrow_forward_ios_rounded
+                          : Icons.arrow_back_ios_new_rounded,
+                      size: 18,
+                      color: AppColors.error,
                     ),
-                  ),
-                  // Priority indicator (how many times missed)
-                  _PriorityBadge(missCount: missCount),
-                ],
-              ),
-            ),
-
-            // ── Progress bar ──────────────────────────────────────────────
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: LinearProgressIndicator(
-                  value: state.progress,
-                  minHeight: 6,
-                  backgroundColor: AppColors.surfaceContainerHighest,
-                  valueColor: const AlwaysStoppedAnimation<Color>(
-                    AppColors.error,
                   ),
                 ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        l10n.reviewModeTitle,
+                        style: AppTextStyles.headingSmall.copyWith(
+                          color: AppColors.error,
+                        ),
+                      ),
+                      Text(
+                        l10n.reviewModeQuestionOf(
+                          state.currentIndex + 1 <= state.totalItems
+                              ? state.currentIndex + 1
+                              : state.totalItems,
+                          state.totalItems,
+                        ),
+                        style: AppTextStyles.caption.copyWith(
+                          color: AppColors.textMedium,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // Priority indicator (how many times missed)
+                _PriorityBadge(missCount: missCount),
+              ],
+            ),
+          ),
+
+          // ── Progress bar ──────────────────────────────────────────────
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: LinearProgressIndicator(
+                value: state.progress,
+                minHeight: 6,
+                backgroundColor: AppColors.surfaceContainerHighest,
+                valueColor:
+                    const AlwaysStoppedAnimation<Color>(AppColors.error),
               ),
             ),
+          ),
 
-            const SizedBox(height: 12),
+          const SizedBox(height: 12),
 
-            // ── Question + options ────────────────────────────────────────
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                child: Column(
-                  children: [
-                    _QuestionCard(question: q, missCount: missCount),
-                    const SizedBox(height: 20),
-                    ...q.options.map(
-                      (opt) => Padding(
+          // ── Question + options ────────────────────────────────────────
+          Expanded(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+              child: Column(
+                children: [
+                  _QuestionCard(question: q, missCount: missCount),
+                  const SizedBox(height: 20),
+                  ...q.options.map((opt) => Padding(
                         padding: const EdgeInsets.only(bottom: 12),
                         child: _OptionButton(
                           text: opt,
                           isSelected: opt == selectedAnswer,
-                          isCorrect: answerRevealed && opt == q.correctAnswer,
-                          isWrong:
-                              answerRevealed &&
+                          isCorrect:
+                              answerRevealed && opt == q.correctAnswer,
+                          isWrong: answerRevealed &&
                               opt == selectedAnswer &&
                               opt != q.correctAnswer,
                           onTap: () => onOptionTap(opt, item),
                         ),
-                      ),
-                    ),
-                    if (answerRevealed) ...[
-                      const SizedBox(height: 8),
-                      ScaleTransition(
-                        scale: feedbackScale,
-                        child: Container(
-                          padding: const EdgeInsets.all(14),
-                          decoration: BoxDecoration(
-                            color: AppColors.surfaceContainerLow,
-                            borderRadius: BorderRadius.circular(16),
-                            border: Border.all(color: AppColors.divider),
-                          ),
-                          child: Text(
-                            q.funFact,
-                            style: AppTextStyles.bodyMedium,
-                            textAlign: TextAlign.center,
-                          ),
+                      )),
+                  if (answerRevealed) ...[
+                    const SizedBox(height: 8),
+                    ScaleTransition(
+                      scale: feedbackScale,
+                      child: Container(
+                        padding: const EdgeInsets.all(14),
+                        decoration: BoxDecoration(
+                          color: AppColors.surfaceContainerLow,
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(color: AppColors.divider),
+                        ),
+                        child: Text(
+                          q.funFact,
+                          style: AppTextStyles.bodyMedium,
+                          textAlign: TextAlign.center,
                         ),
                       ),
-                    ],
+                    ),
                   ],
-                ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -445,11 +421,8 @@ class _OptionButton extends StatelessWidget {
               ),
             ),
             if (isCorrect)
-              const Icon(
-                Icons.check_circle_rounded,
-                color: Color(0xFF66BB6A),
-                size: 22,
-              )
+              const Icon(Icons.check_circle_rounded,
+                  color: Color(0xFF66BB6A), size: 22)
             else if (isWrong)
               Icon(Icons.cancel_rounded, color: AppColors.error, size: 22),
           ],
@@ -473,10 +446,10 @@ class _PriorityBadge extends StatelessWidget {
     final flames = missCount >= 4
         ? '🔥🔥🔥'
         : missCount == 3
-        ? '🔥🔥'
-        : missCount == 2
-        ? '🔥'
-        : '📝';
+            ? '🔥🔥'
+            : missCount == 2
+                ? '🔥'
+                : '📝';
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       decoration: BoxDecoration(
@@ -510,11 +483,7 @@ class _ResultScreen extends StatelessWidget {
     final pct = state.totalItems == 0
         ? 0.0
         : state.correctCount / state.totalItems;
-    final emoji = pct >= 0.8
-        ? '🏆'
-        : pct >= 0.5
-        ? '⭐'
-        : '💪';
+    final emoji = pct >= 0.8 ? '🏆' : pct >= 0.5 ? '⭐' : '💪';
 
     return SafeArea(
       child: Center(
@@ -550,9 +519,7 @@ class _ResultScreen extends StatelessWidget {
                   children: [
                     Text(
                       l10n.reviewModeScore(
-                        state.correctCount,
-                        state.totalItems,
-                      ),
+                          state.correctCount, state.totalItems),
                       style: AppTextStyles.headingMedium.copyWith(
                         color: AppColors.textDark,
                       ),
@@ -652,10 +619,9 @@ class _ErrorBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        message,
-        style: AppTextStyles.bodyLarge.copyWith(color: AppColors.error),
-      ),
+      child: Text(message,
+          style:
+              AppTextStyles.bodyLarge.copyWith(color: AppColors.error)),
     );
   }
 }

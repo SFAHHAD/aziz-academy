@@ -34,18 +34,6 @@ extension BadgeIdStrings on AppLocalizations {
         return badge_grand_scholar_name;
       case BadgeId.allRounder:
         return badge_all_rounder_name;
-      case BadgeId.brainBoostBeginner:
-        return badge_brain_boost_beginner_name;
-      case BadgeId.brainBoostStreakMaster:
-        return badge_brain_boost_streak_master_name;
-      case BadgeId.brainBoostChampion:
-        return badge_brain_boost_champion_name;
-      case BadgeId.bossRushPerfect:
-        return badge_boss_rush_perfect_name;
-      case BadgeId.passPlayWinner:
-        return badge_pass_play_winner_name;
-      case BadgeId.tourneyChampion:
-        return badge_tourney_champion_name;
     }
   }
 
@@ -81,18 +69,6 @@ extension BadgeIdStrings on AppLocalizations {
         return badge_grand_scholar_desc;
       case BadgeId.allRounder:
         return badge_all_rounder_desc;
-      case BadgeId.brainBoostBeginner:
-        return badge_brain_boost_beginner_desc;
-      case BadgeId.brainBoostStreakMaster:
-        return badge_brain_boost_streak_master_desc;
-      case BadgeId.brainBoostChampion:
-        return badge_brain_boost_champion_desc;
-      case BadgeId.bossRushPerfect:
-        return badge_boss_rush_perfect_desc;
-      case BadgeId.passPlayWinner:
-        return badge_pass_play_winner_desc;
-      case BadgeId.tourneyChampion:
-        return badge_tourney_champion_desc;
     }
   }
 
@@ -128,18 +104,6 @@ extension BadgeIdStrings on AppLocalizations {
         return badge_grand_scholar_condition;
       case BadgeId.allRounder:
         return badge_all_rounder_condition;
-      case BadgeId.brainBoostBeginner:
-        return badge_brain_boost_beginner_condition;
-      case BadgeId.brainBoostStreakMaster:
-        return badge_brain_boost_streak_master_condition;
-      case BadgeId.brainBoostChampion:
-        return badge_brain_boost_champion_condition;
-      case BadgeId.bossRushPerfect:
-        return badge_boss_rush_perfect_condition;
-      case BadgeId.passPlayWinner:
-        return badge_pass_play_winner_condition;
-      case BadgeId.tourneyChampion:
-        return badge_tourney_champion_condition;
     }
   }
 }

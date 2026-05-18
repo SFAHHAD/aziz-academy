@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
@@ -19,12 +18,8 @@ import 'package:aziz_academy/core/providers/achievement_provider.dart';
 import 'package:aziz_academy/core/providers/xp_provider.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
-import 'package:aziz_academy/core/widgets/lifeline_bar.dart';
 import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
 import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
-import 'package:aziz_academy/core/widgets/tts_speaker_icon.dart';
-import 'package:aziz_academy/core/utils/digits.dart';
 
 import 'package:aziz_academy/l10n/app_localizations.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
@@ -37,7 +32,8 @@ class SciencesQuizScreen extends ConsumerStatefulWidget {
   const SciencesQuizScreen({super.key});
 
   @override
-  ConsumerState<SciencesQuizScreen> createState() => _SciencesQuizScreenState();
+  ConsumerState<SciencesQuizScreen> createState() =>
+      _SciencesQuizScreenState();
 }
 
 class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
@@ -46,13 +42,6 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
   String? _selectedOption;
   bool get _isRevealed => _selectedOption != null;
   bool _coPlayChoicesVisible = false;
-
-  // Lifeline state — reset every question.
-  bool _usedFiftyFifty = false;
-  bool _usedSkip = false;
-  bool _usedHint = false;
-  List<String> _hiddenOptions = const [];
-  String? _hintText;
 
   /// Controls the slide-up / fade-in of the fun-fact + Next button.
   late final AnimationController _revealCtrl;
@@ -85,28 +74,23 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
     if (session != null && session.currentQuestion != null) {
       final isCorrect = option == session.currentQuestion!.correctAnswer;
       if (isCorrect) {
-        HapticFeedback.lightImpact();
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
-        HapticFeedback.mediumImpact();
         ref.read(audioServiceProvider).playWrongSound();
       }
-      unawaited(
-        ref
-            .read(ttsServiceProvider)
-            .speakAnswerFeedback(
-              session.currentQuestion!.correctAnswer,
-              correct: isCorrect,
-            ),
-      );
+      unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
+        session.currentQuestion!.correctAnswer,
+        correct: isCorrect,
+      ));
     }
 
     ref.read(sciencesQuizProvider.notifier).submitAnswer(option);
     if (q != null && option.trim() != q.correctAnswer.trim()) {
       unawaited(
-        ref
-            .read(recapQueueProvider.notifier)
-            .recordWrong(RecapModule.sciences, q.id),
+        ref.read(recapQueueProvider.notifier).recordWrong(
+              RecapModule.sciences,
+              q.id,
+            ),
       );
     }
     setState(() => _selectedOption = option);
@@ -119,11 +103,6 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
     setState(() {
       _selectedOption = null;
       if (co) _coPlayChoicesVisible = false;
-      _usedFiftyFifty = false;
-      _usedSkip = false;
-      _usedHint = false;
-      _hiddenOptions = const [];
-      _hintText = null;
     });
     ref.read(sciencesQuizProvider.notifier).nextQuestion();
   }
@@ -134,32 +113,8 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
     setState(() {
       _selectedOption = null;
       _coPlayChoicesVisible = !co;
-      _usedFiftyFifty = false;
-      _usedSkip = false;
-      _usedHint = false;
-      _hiddenOptions = const [];
-      _hintText = null;
     });
     ref.read(sciencesQuizProvider.notifier).restart();
-  }
-
-  void _onFiftyFifty(List<String> hidden) {
-    setState(() {
-      _hiddenOptions = hidden;
-      _usedFiftyFifty = true;
-    });
-  }
-
-  void _onSkip() {
-    setState(() => _usedSkip = true);
-    _onNext();
-  }
-
-  void _onHint(String text) {
-    setState(() {
-      _hintText = text;
-      _usedHint = true;
-    });
   }
 
   // ---------------------------------------------------------------------------
@@ -170,115 +125,100 @@ class _SciencesQuizScreenState extends ConsumerState<SciencesQuizScreen>
   Widget build(BuildContext context) {
     final sessionAsync = ref.watch(sciencesQuizProvider);
 
-    ref.listen<AsyncValue<QuizSessionState>>(sciencesQuizProvider, (
-      prev,
-      next,
-    ) {
-      if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
-        final session = next.value!;
-        final practice =
-            ref.read(appSettingsProvider).value?.practiceMode ?? false;
-        if (!practice) {
-          ref
-              .read(achievementProvider.notifier)
-              .recordSciencesSession(
-                score: session.score,
-                livesRemaining: session.livesRemaining,
-              );
-          ref
-              .read(xpProvider.notifier)
-              .addXp(
-                XpNotifier.sessionXp(
+    ref.listen<AsyncValue<QuizSessionState>>(
+      sciencesQuizProvider,
+      (prev, next) {
+        if (next.value?.isComplete == true &&
+            prev?.value?.isComplete != true) {
+          final session = next.value!;
+          final practice =
+              ref.read(appSettingsProvider).value?.practiceMode ?? false;
+          if (!practice) {
+            ref.read(achievementProvider.notifier).recordSciencesSession(
                   score: session.score,
                   livesRemaining: session.livesRemaining,
-                ),
-              );
+                );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
+                );
+          }
+          ref.read(audioServiceProvider).playVictorySound();
+        } else if (next.value?.isGameOver == true &&
+                   prev?.value?.isGameOver != true) {
+          ref.read(audioServiceProvider).playWrongSound();
         }
-        HapticFeedback.heavyImpact();
-        ref.read(audioServiceProvider).playVictorySound();
-      } else if (next.value?.isGameOver == true &&
-          prev?.value?.isGameOver != true) {
-        ref.read(audioServiceProvider).playWrongSound();
-      }
-    });
+      },
+    );
 
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: CenteredBody(
-          child: sessionAsync.when(
-            loading: () => const _LoadingView(),
-            error: (e, st) => _ErrorView(onRetry: _onRestart),
-            data: (session) {
-              // Always render the quiz body; overlays appear on top as a Stack.
-              final coPlay = ref
-                  .watch(appSettingsProvider)
-                  .maybeWhen(data: (s) => s.coPlayMode, orElse: () => false);
-              final showChoices = !coPlay || _coPlayChoicesVisible;
-              final reducedMotion =
-                  ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
+        child: sessionAsync.when(
+          loading: () => const _LoadingView(),
+          error: (e, st) => _ErrorView(onRetry: _onRestart),
+          data: (session) {
+            // Always render the quiz body; overlays appear on top as a Stack.
+            final coPlay = ref.watch(appSettingsProvider).maybeWhen(
+                  data: (s) => s.coPlayMode,
+                  orElse: () => false,
+                );
+            final showChoices = !coPlay || _coPlayChoicesVisible;
+            final reducedMotion =
+                ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
 
-              final quizBody = session.currentQuestion != null
-                  ? _QuizBody(
-                      session: session,
-                      selectedOption: _selectedOption,
-                      isRevealed: _isRevealed,
-                      revealFade: _revealFade,
-                      revealSlide: _revealSlide,
-                      onAnswerTapped: _onAnswerTapped,
-                      onNext: _onNext,
-                      onBack: () => context.go(AppRoutes.home),
-                      coPlayMode: coPlay,
-                      showAnswerChoices: showChoices,
-                      onRevealChoices: () =>
-                          setState(() => _coPlayChoicesVisible = true),
-                      usedFiftyFifty: _usedFiftyFifty,
-                      usedSkip: _usedSkip,
-                      usedHint: _usedHint,
-                      hiddenOptions: _hiddenOptions,
-                      hintText: _hintText,
-                      onFiftyFifty: _onFiftyFifty,
-                      onSkip: _onSkip,
-                      onHint: _onHint,
-                    )
-                  : const ColoredBox(
-                      color: AppColors.background,
-                      child: SizedBox.expand(),
-                    );
+            final quizBody = session.currentQuestion != null
+                ? _QuizBody(
+                    session: session,
+                    selectedOption: _selectedOption,
+                    isRevealed: _isRevealed,
+                    revealFade: _revealFade,
+                    revealSlide: _revealSlide,
+                    onAnswerTapped: _onAnswerTapped,
+                    onNext: _onNext,
+                    onBack: () => context.go(AppRoutes.home),
+                    coPlayMode: coPlay,
+                    showAnswerChoices: showChoices,
+                    onRevealChoices: () =>
+                        setState(() => _coPlayChoicesVisible = true),
+                  )
+                : const ColoredBox(
+                    color: AppColors.background,
+                    child: SizedBox.expand(),
+                  );
 
-              if (!session.isComplete && !session.isGameOver) {
-                return quizBody;
-              }
+            if (!session.isComplete && !session.isGameOver) {
+              return quizBody;
+            }
 
-              // Show quiz body underneath + overlay on top
-              return Stack(
-                fit: StackFit.expand,
-                children: [
-                  quizBody,
-                  if (session.isComplete)
-                    VictoryOverlay(
-                      key: const ValueKey('victory'),
-                      session: session,
-                      title: context.l10n.victorySciencesTitle,
-                      shareModuleLabel: context.l10n.shareModuleSciences,
-                      reducedMotion: reducedMotion,
-                      coinsEarned:
-                          session.score * 5 + session.livesRemaining * 10,
-                      onPlayAgain: _onRestart,
-                      onBack: () => context.go(AppRoutes.home),
-                    ),
-                  if (session.isGameOver)
-                    GameOverOverlay(
-                      key: const ValueKey('gameover'),
-                      session: session,
-                      learningTip: session.currentQuestion?.funFact,
-                      onTryAgain: _onRestart,
-                      onBack: () => context.go(AppRoutes.home),
-                    ),
-                ],
-              );
-            },
-          ),
+            // Show quiz body underneath + overlay on top
+            return Stack(
+              fit: StackFit.expand,
+              children: [
+                quizBody,
+                if (session.isComplete)
+                  VictoryOverlay(
+                    key: const ValueKey('victory'),
+                    session: session,
+                    title: context.l10n.victorySciencesTitle,
+                    shareModuleLabel: context.l10n.shareModuleSciences,
+                    reducedMotion: reducedMotion,
+                    onPlayAgain: _onRestart,
+                    onBack: () => context.go(AppRoutes.home),
+                  ),
+                if (session.isGameOver)
+                  GameOverOverlay(
+                    key: const ValueKey('gameover'),
+                    session: session,
+                    learningTip: session.currentQuestion?.funFact,
+                    onTryAgain: _onRestart,
+                    onBack: () => context.go(AppRoutes.home),
+                  ),
+              ],
+            );
+          },
         ),
       ),
     );
@@ -302,14 +242,6 @@ class _QuizBody extends StatelessWidget {
     required this.coPlayMode,
     required this.showAnswerChoices,
     required this.onRevealChoices,
-    required this.usedFiftyFifty,
-    required this.usedSkip,
-    required this.usedHint,
-    required this.hiddenOptions,
-    required this.hintText,
-    required this.onFiftyFifty,
-    required this.onSkip,
-    required this.onHint,
   });
 
   final QuizSessionState session;
@@ -323,14 +255,6 @@ class _QuizBody extends StatelessWidget {
   final bool coPlayMode;
   final bool showAnswerChoices;
   final VoidCallback onRevealChoices;
-  final bool usedFiftyFifty;
-  final bool usedSkip;
-  final bool usedHint;
-  final List<String> hiddenOptions;
-  final String? hintText;
-  final void Function(List<String>) onFiftyFifty;
-  final VoidCallback onSkip;
-  final void Function(String) onHint;
 
   @override
   Widget build(BuildContext context) {
@@ -354,24 +278,9 @@ class _QuizBody extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(12, 4, 12, 8),
-                      child: LifelineBar(
-                        options: question.options,
-                        correctAnswer: question.correctAnswer,
-                        locked: isRevealed,
-                        usedFiftyFifty: usedFiftyFifty,
-                        usedSkip: usedSkip,
-                        usedHint: usedHint,
-                        onFiftyFifty: onFiftyFifty,
-                        onSkip: onSkip,
-                        onHint: onHint,
-                      ),
-                    ),
                     _QuestionDisplay(
                       question: question,
                       compact: shortViewport,
-                      hintText: hintText,
                     ),
                     const SizedBox(height: 12),
                     if (coPlayMode && !showAnswerChoices) ...[
@@ -402,7 +311,6 @@ class _QuizBody extends StatelessWidget {
                           selectedOption: selectedOption,
                           isRevealed: isRevealed,
                           onTap: onAnswerTapped,
-                          hiddenOptions: hiddenOptions,
                         ),
                       ),
                   ],
@@ -478,7 +386,6 @@ class _QuizHeader extends StatelessWidget {
                   label: 'Go back to home',
                   button: true,
                   child: IconButton(
-                    tooltip: context.l10n.commonBack,
                     icon: Icon(
                       isRtl
                           ? Icons.arrow_forward_ios_rounded
@@ -514,9 +421,8 @@ class _ScoreBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scoreText = localizeDigitsCtx(score, context);
     return Semantics(
-      label: '$label: $scoreText',
+      label: '$label: $score',
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
@@ -530,7 +436,7 @@ class _ScoreBadge extends StatelessWidget {
             const Text('✨', style: TextStyle(fontSize: 16)),
             const SizedBox(width: 4),
             Text(
-              scoreText,
+              '$score',
               style: AppTextStyles.bodyLarge.copyWith(
                 color: AppColors.primary,
                 fontWeight: FontWeight.w800,
@@ -552,13 +458,13 @@ class _HeartBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: '$label: ${localizeDigitsCtx(livesRemaining, context)}',
+      label: '$label: $livesRemaining',
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: List.generate(_maxLives, (i) {
           final filled = i < livesRemaining;
           return Padding(
-            padding: const EdgeInsetsDirectional.only(start: 4),
+            padding: const EdgeInsets.only(left: 4),
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 300),
               child: Icon(
@@ -582,8 +488,7 @@ class _ProgressBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label:
-          'Quiz progress: ${localizeDigitsCtx((progress * 100).toInt(), context)}%',
+      label: 'Quiz progress: ${(progress * 100).toInt()}%',
       child: TweenAnimationBuilder<double>(
         duration: const Duration(milliseconds: 400),
         curve: Curves.easeInOut,
@@ -604,20 +509,21 @@ class _ProgressBar extends StatelessWidget {
 // Question display
 // =============================================================================
 
-class _QuestionDisplay extends ConsumerWidget {
+class _QuestionDisplay extends StatelessWidget {
   const _QuestionDisplay({
     required this.question,
     this.compact = false,
-    this.hintText,
   });
   final QuizQuestion question;
   final bool compact;
-  final String? hintText;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: compact ? 4 : 8),
+      padding: EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: compact ? 4 : 8,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -630,39 +536,17 @@ class _QuestionDisplay extends ConsumerWidget {
               style: TextStyle(fontSize: compact ? 48 : 64),
             ),
           SizedBox(height: compact ? 10 : 16),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Semantics(
-                  header: true,
-                  child: Text(
-                    question.question,
-                    textAlign: TextAlign.center,
-                    style: AppTextStyles.headingLarge.copyWith(
-                      fontSize: compact ? 20 : 22,
-                      height: 1.4,
-                    ),
-                  ),
-                ),
-              ),
-              TtsSpeakerIcon(
-                text: question.question,
-                color: AppColors.primary,
-                tooltip: context.l10n.ttsButtonTooltip,
-              ),
-            ],
-          ),
-          if (hintText != null)
-            Padding(
-              padding: const EdgeInsetsDirectional.only(top: 8),
-              child: Text(
-                '💡 $hintText',
-                style: AppTextStyles.labelMedium.copyWith(
-                  color: AppColors.secondary,
-                ),
+          Semantics(
+            header: true,
+            child: Text(
+              question.question,
+              textAlign: TextAlign.center,
+              style: AppTextStyles.headingLarge.copyWith(
+                fontSize: compact ? 20 : 22,
+                height: 1.4,
               ),
             ),
+          ),
         ],
       ),
     );
@@ -679,14 +563,12 @@ class _AnswerGrid extends StatelessWidget {
     required this.selectedOption,
     required this.isRevealed,
     required this.onTap,
-    this.hiddenOptions = const [],
   });
 
   final QuizQuestion question;
   final String? selectedOption;
   final bool isRevealed;
   final void Function(String) onTap;
-  final List<String> hiddenOptions;
 
   @override
   Widget build(BuildContext context) {
@@ -704,19 +586,12 @@ class _AnswerGrid extends StatelessWidget {
           shrinkWrap: true,
           padding: EdgeInsets.zero,
           children: options.map((option) {
-            final hidden = hiddenOptions.contains(option);
-            return Opacity(
-              opacity: hidden ? 0.0 : 1.0,
-              child: IgnorePointer(
-                ignoring: hidden,
-                child: _AnswerCard(
-                  option: option,
-                  correctAnswer: question.correctAnswer,
-                  selectedOption: selectedOption,
-                  isRevealed: isRevealed,
-                  onTap: () => onTap(option),
-                ),
-              ),
+            return _AnswerCard(
+              option: option,
+              correctAnswer: question.correctAnswer,
+              selectedOption: selectedOption,
+              isRevealed: isRevealed,
+              onTap: () => onTap(option),
             );
           }).toList(),
         );
@@ -838,7 +713,10 @@ class _AnswerCardState extends State<_AnswerCard>
       builder: (context, child) {
         return Transform.translate(
           offset: Offset(_shake.value, 0),
-          child: Transform.scale(scale: _scale.value, child: child),
+          child: Transform.scale(
+            scale: _scale.value,
+            child: child,
+          ),
         );
       },
       child: Semantics(
@@ -867,10 +745,8 @@ class _AnswerCardState extends State<_AnswerCard>
               borderRadius: BorderRadius.circular(16),
               splashColor: AppColors.primary.withAlpha(30),
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 6,
-                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 child: Row(
                   children: [
                     Expanded(
@@ -935,6 +811,8 @@ class _NextButton extends StatelessWidget {
     );
   }
 }
+
+
 
 // =============================================================================
 // Loading / Error views
@@ -1082,3 +960,4 @@ class _ShimmerPlaceholderState extends State<_ShimmerPlaceholder>
     );
   }
 }
+

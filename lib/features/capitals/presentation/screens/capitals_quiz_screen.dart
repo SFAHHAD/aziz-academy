@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
@@ -19,12 +18,7 @@ import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
-import 'package:aziz_academy/core/widgets/lifeline_bar.dart';
 import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
-import 'package:aziz_academy/core/widgets/tts_speaker_icon.dart';
-import 'package:aziz_academy/core/utils/digits.dart';
-import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 import 'package:aziz_academy/l10n/app_localizations.dart';
 
@@ -36,7 +30,8 @@ class CapitalsQuizScreen extends ConsumerStatefulWidget {
   const CapitalsQuizScreen({super.key});
 
   @override
-  ConsumerState<CapitalsQuizScreen> createState() => _CapitalsQuizScreenState();
+  ConsumerState<CapitalsQuizScreen> createState() =>
+      _CapitalsQuizScreenState();
 }
 
 class _CapitalsQuizScreenState extends ConsumerState<CapitalsQuizScreen>
@@ -47,13 +42,6 @@ class _CapitalsQuizScreenState extends ConsumerState<CapitalsQuizScreen>
 
   /// Co-play: hide choices until the parent taps reveal (reset each question).
   bool _coPlayChoicesVisible = false;
-
-  // Lifeline state — reset every question.
-  bool _usedFiftyFifty = false;
-  bool _usedSkip = false;
-  bool _usedHint = false;
-  List<String> _hiddenOptions = const [];
-  String? _hintText;
 
   /// Controls the slide-up / fade-in of the fun-fact + Next button.
   late final AnimationController _revealCtrl;
@@ -86,28 +74,23 @@ class _CapitalsQuizScreenState extends ConsumerState<CapitalsQuizScreen>
     if (session != null && session.currentQuestion != null) {
       final isCorrect = option == session.currentQuestion!.correctAnswer;
       if (isCorrect) {
-        HapticFeedback.lightImpact();
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
-        HapticFeedback.mediumImpact();
         ref.read(audioServiceProvider).playWrongSound();
       }
-      unawaited(
-        ref
-            .read(ttsServiceProvider)
-            .speakAnswerFeedback(
-              session.currentQuestion!.correctAnswer,
-              correct: isCorrect,
-            ),
-      );
+      unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
+        session.currentQuestion!.correctAnswer,
+        correct: isCorrect,
+      ));
     }
 
     ref.read(capitalsQuizProvider.notifier).submitAnswer(option);
     if (q != null && option.trim() != q.correctAnswer.trim()) {
       unawaited(
-        ref
-            .read(recapQueueProvider.notifier)
-            .recordWrong(RecapModule.capitals, q.id),
+        ref.read(recapQueueProvider.notifier).recordWrong(
+              RecapModule.capitals,
+              q.id,
+            ),
       );
     }
     setState(() => _selectedOption = option);
@@ -120,11 +103,6 @@ class _CapitalsQuizScreenState extends ConsumerState<CapitalsQuizScreen>
     setState(() {
       _selectedOption = null;
       if (co) _coPlayChoicesVisible = false;
-      _usedFiftyFifty = false;
-      _usedSkip = false;
-      _usedHint = false;
-      _hiddenOptions = const [];
-      _hintText = null;
     });
     ref.read(capitalsQuizProvider.notifier).nextQuestion();
   }
@@ -135,32 +113,8 @@ class _CapitalsQuizScreenState extends ConsumerState<CapitalsQuizScreen>
     setState(() {
       _selectedOption = null;
       _coPlayChoicesVisible = !co;
-      _usedFiftyFifty = false;
-      _usedSkip = false;
-      _usedHint = false;
-      _hiddenOptions = const [];
-      _hintText = null;
     });
     ref.read(capitalsQuizProvider.notifier).restart();
-  }
-
-  void _onFiftyFifty(List<String> hidden) {
-    setState(() {
-      _hiddenOptions = hidden;
-      _usedFiftyFifty = true;
-    });
-  }
-
-  void _onSkip() {
-    setState(() => _usedSkip = true);
-    _onNext();
-  }
-
-  void _onHint(String text) {
-    setState(() {
-      _hintText = text;
-      _usedHint = true;
-    });
   }
 
   // ---------------------------------------------------------------------------
@@ -172,115 +126,100 @@ class _CapitalsQuizScreenState extends ConsumerState<CapitalsQuizScreen>
     final sessionAsync = ref.watch(capitalsQuizProvider);
 
     // Fire achievement recording and SFX exactly once when quiz completes.
-    ref.listen<AsyncValue<QuizSessionState>>(capitalsQuizProvider, (
-      prev,
-      next,
-    ) {
-      if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
-        final session = next.value!;
-        final practice =
-            ref.read(appSettingsProvider).value?.practiceMode ?? false;
-        if (!practice) {
-          ref
-              .read(achievementProvider.notifier)
-              .recordCapitalsSession(
-                score: session.score,
-                livesRemaining: session.livesRemaining,
-              );
-          ref
-              .read(xpProvider.notifier)
-              .addXp(
-                XpNotifier.sessionXp(
+    ref.listen<AsyncValue<QuizSessionState>>(
+      capitalsQuizProvider,
+      (prev, next) {
+        if (next.value?.isComplete == true &&
+            prev?.value?.isComplete != true) {
+          final session = next.value!;
+          final practice =
+              ref.read(appSettingsProvider).value?.practiceMode ?? false;
+          if (!practice) {
+            ref.read(achievementProvider.notifier).recordCapitalsSession(
                   score: session.score,
                   livesRemaining: session.livesRemaining,
-                ),
-              );
+                );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
+                );
+          }
+          ref.read(audioServiceProvider).playVictorySound();
+        } else if (next.value?.isGameOver == true &&
+                   prev?.value?.isGameOver != true) {
+          ref.read(audioServiceProvider).playWrongSound(); // Buzzer for game over
         }
-        HapticFeedback.heavyImpact();
-        ref.read(audioServiceProvider).playVictorySound();
-      } else if (next.value?.isGameOver == true &&
-          prev?.value?.isGameOver != true) {
-        ref.read(audioServiceProvider).playWrongSound(); // Buzzer for game over
-      }
-    });
+      },
+    );
 
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: CenteredBody(
-          child: sessionAsync.when(
-            loading: () => const _LoadingView(),
-            error: (e, st) => _ErrorView(onRetry: _onRestart),
-            data: (session) {
-              // Always render the quiz body; overlays appear on top as a Stack.
-              final coPlay = ref
-                  .watch(appSettingsProvider)
-                  .maybeWhen(data: (s) => s.coPlayMode, orElse: () => false);
-              final showChoices = !coPlay || _coPlayChoicesVisible;
-              final reducedMotion =
-                  ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
+        child: sessionAsync.when(
+          loading: () => const _LoadingView(),
+          error: (e, st) => _ErrorView(onRetry: _onRestart),
+          data: (session) {
+            // Always render the quiz body; overlays appear on top as a Stack.
+            final coPlay = ref.watch(appSettingsProvider).maybeWhen(
+                  data: (s) => s.coPlayMode,
+                  orElse: () => false,
+                );
+            final showChoices = !coPlay || _coPlayChoicesVisible;
+            final reducedMotion =
+                ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
 
-              final quizBody = session.currentQuestion != null
-                  ? _QuizBody(
-                      session: session,
-                      selectedOption: _selectedOption,
-                      isRevealed: _isRevealed,
-                      revealFade: _revealFade,
-                      revealSlide: _revealSlide,
-                      onAnswerTapped: _onAnswerTapped,
-                      onNext: _onNext,
-                      onBack: () => context.go(AppRoutes.home),
-                      coPlayMode: coPlay,
-                      showAnswerChoices: showChoices,
-                      onRevealChoices: () =>
-                          setState(() => _coPlayChoicesVisible = true),
-                      usedFiftyFifty: _usedFiftyFifty,
-                      usedSkip: _usedSkip,
-                      usedHint: _usedHint,
-                      hiddenOptions: _hiddenOptions,
-                      hintText: _hintText,
-                      onFiftyFifty: _onFiftyFifty,
-                      onSkip: _onSkip,
-                      onHint: _onHint,
-                    )
-                  : const ColoredBox(
-                      color: AppColors.background,
-                      child: SizedBox.expand(),
-                    );
+            final quizBody = session.currentQuestion != null
+                ? _QuizBody(
+                    session: session,
+                    selectedOption: _selectedOption,
+                    isRevealed: _isRevealed,
+                    revealFade: _revealFade,
+                    revealSlide: _revealSlide,
+                    onAnswerTapped: _onAnswerTapped,
+                    onNext: _onNext,
+                    onBack: () => context.go(AppRoutes.home),
+                    coPlayMode: coPlay,
+                    showAnswerChoices: showChoices,
+                    onRevealChoices: () =>
+                        setState(() => _coPlayChoicesVisible = true),
+                  )
+                : const ColoredBox(
+                    color: AppColors.background,
+                    child: SizedBox.expand(),
+                  );
 
-              if (!session.isComplete && !session.isGameOver) {
-                return quizBody;
-              }
+            if (!session.isComplete && !session.isGameOver) {
+              return quizBody;
+            }
 
-              // Show quiz body underneath + overlay on top
-              return Stack(
-                fit: StackFit.expand,
-                children: [
-                  quizBody,
-                  if (session.isComplete)
-                    VictoryOverlay(
-                      key: const ValueKey('victory'),
-                      session: session,
-                      title: context.l10n.capitalsVictoryTitle,
-                      shareModuleLabel: context.l10n.capitalsShareLabel,
-                      reducedMotion: reducedMotion,
-                      coinsEarned:
-                          session.score * 5 + session.livesRemaining * 10,
-                      onPlayAgain: _onRestart,
-                      onBack: () => context.go(AppRoutes.home),
-                    ),
-                  if (session.isGameOver)
-                    GameOverOverlay(
-                      key: const ValueKey('gameover'),
-                      session: session,
-                      learningTip: session.currentQuestion?.funFact,
-                      onTryAgain: _onRestart,
-                      onBack: () => context.go(AppRoutes.home),
-                    ),
-                ],
-              );
-            },
-          ),
+            // Show quiz body underneath + overlay on top
+            return Stack(
+              fit: StackFit.expand,
+              children: [
+                quizBody,
+                if (session.isComplete)
+                  VictoryOverlay(
+                    key: const ValueKey('victory'),
+                    session: session,
+                    title: 'بطل العواصم!',
+                    shareModuleLabel: 'جولة العواصم — أكاديمية عزيز',
+                    reducedMotion: reducedMotion,
+                    onPlayAgain: _onRestart,
+                    onBack: () => context.go(AppRoutes.home),
+                  ),
+                if (session.isGameOver)
+                  GameOverOverlay(
+                    key: const ValueKey('gameover'),
+                    session: session,
+                    learningTip: session.currentQuestion?.funFact,
+                    onTryAgain: _onRestart,
+                    onBack: () => context.go(AppRoutes.home),
+                  ),
+              ],
+            );
+          },
         ),
       ),
     );
@@ -304,14 +243,6 @@ class _QuizBody extends StatelessWidget {
     required this.coPlayMode,
     required this.showAnswerChoices,
     required this.onRevealChoices,
-    required this.usedFiftyFifty,
-    required this.usedSkip,
-    required this.usedHint,
-    required this.hiddenOptions,
-    required this.hintText,
-    required this.onFiftyFifty,
-    required this.onSkip,
-    required this.onHint,
   });
 
   final QuizSessionState session;
@@ -325,14 +256,6 @@ class _QuizBody extends StatelessWidget {
   final bool coPlayMode;
   final bool showAnswerChoices;
   final VoidCallback onRevealChoices;
-  final bool usedFiftyFifty;
-  final bool usedSkip;
-  final bool usedHint;
-  final List<String> hiddenOptions;
-  final String? hintText;
-  final void Function(List<String>) onFiftyFifty;
-  final VoidCallback onSkip;
-  final void Function(String) onHint;
 
   @override
   Widget build(BuildContext context) {
@@ -360,36 +283,21 @@ class _QuizBody extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(12, 4, 12, 8),
-                        child: LifelineBar(
-                          options: question.options,
-                          correctAnswer: question.correctAnswer,
-                          locked: isRevealed,
-                          usedFiftyFifty: usedFiftyFifty,
-                          usedSkip: usedSkip,
-                          usedHint: usedHint,
-                          onFiftyFifty: onFiftyFifty,
-                          onSkip: onSkip,
-                          onHint: onHint,
-                        ),
-                      ),
                       _QuestionDisplay(
                         question: question,
                         compact: shortViewport,
-                        hintText: hintText,
                       ),
                       const SizedBox(height: 12),
                       if (coPlayMode && !showAnswerChoices) ...[
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: Semantics(
-                            label: context.l10n.capitalsRevealChoices,
+                            label: 'إظهار خيارات الإجابة',
                             button: true,
                             child: ElevatedButton.icon(
                               onPressed: onRevealChoices,
                               icon: const Icon(Icons.visibility_rounded),
-                              label: Text(context.l10n.capitalsRevealChoices),
+                              label: const Text('اعرض خيارات الإجابة'),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppColors.secondary,
                                 foregroundColor: Colors.white,
@@ -408,7 +316,6 @@ class _QuizBody extends StatelessWidget {
                             selectedOption: selectedOption,
                             isRevealed: isRevealed,
                             onTap: onAnswerTapped,
-                            hiddenOptions: hiddenOptions,
                           ),
                         ),
                     ],
@@ -417,36 +324,35 @@ class _QuizBody extends StatelessWidget {
               ),
             ),
 
-            AnimatedSize(
-              duration: const Duration(milliseconds: 220),
-              curve: Curves.easeOutCubic,
-              alignment: Alignment.topCenter,
-              child: isRevealed
-                  ? SlideTransition(
-                      position: revealSlide,
-                      child: FadeTransition(
-                        opacity: revealFade,
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 4),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              QuizFunFactBar(
-                                funFact: question.funFact,
-                                wasWrong:
-                                    selectedOption != question.correctAnswer,
-                                correctAnswer: question.correctAnswer,
-                              ),
-                              const SizedBox(height: 10),
-                              _NextButton(onNext: onNext),
-                              const SizedBox(height: 12),
-                            ],
+        AnimatedSize(
+          duration: const Duration(milliseconds: 220),
+          curve: Curves.easeOutCubic,
+          alignment: Alignment.topCenter,
+          child: isRevealed
+              ? SlideTransition(
+                  position: revealSlide,
+                  child: FadeTransition(
+                    opacity: revealFade,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 4),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          QuizFunFactBar(
+                            funFact: question.funFact,
+                            wasWrong: selectedOption != question.correctAnswer,
+                            correctAnswer: question.correctAnswer,
                           ),
-                        ),
+                          const SizedBox(height: 10),
+                          _NextButton(onNext: onNext),
+                          const SizedBox(height: 12),
+                        ],
                       ),
-                    )
-                  : const SizedBox.shrink(),
-            ),
+                    ),
+                  ),
+                )
+              : const SizedBox.shrink(),
+        ),
           ],
         ),
       ),
@@ -485,7 +391,6 @@ class _QuizHeader extends StatelessWidget {
                   label: 'Go back to home',
                   button: true,
                   child: IconButton(
-                    tooltip: context.l10n.commonBack,
                     icon: Icon(
                       isRtl
                           ? Icons.arrow_forward_ios_rounded
@@ -521,9 +426,8 @@ class _ScoreBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scoreText = localizeDigitsCtx(score, context);
     return Semantics(
-      label: '$label: $scoreText',
+      label: '$label: $score',
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
@@ -537,7 +441,7 @@ class _ScoreBadge extends StatelessWidget {
             const Text('✨', style: TextStyle(fontSize: 16)),
             const SizedBox(width: 4),
             Text(
-              scoreText,
+              '$score',
               style: AppTextStyles.bodyLarge.copyWith(
                 color: AppColors.capitalsColor,
                 fontWeight: FontWeight.w800,
@@ -559,13 +463,13 @@ class _HeartBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: '$label: ${localizeDigitsCtx(livesRemaining, context)}',
+      label: '$label: $livesRemaining',
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: List.generate(_maxLives, (i) {
           final filled = i < livesRemaining;
           return Padding(
-            padding: const EdgeInsetsDirectional.only(start: 4),
+            padding: const EdgeInsets.only(left: 4),
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 300),
               child: Icon(
@@ -589,8 +493,7 @@ class _ProgressBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label:
-          'Quiz progress: ${localizeDigitsCtx((progress * 100).toInt(), context)}%',
+      label: 'Quiz progress: ${(progress * 100).toInt()}%',
       child: TweenAnimationBuilder<double>(
         duration: const Duration(milliseconds: 400),
         curve: Curves.easeInOut,
@@ -611,20 +514,21 @@ class _ProgressBar extends StatelessWidget {
 // Question display
 // =============================================================================
 
-class _QuestionDisplay extends ConsumerWidget {
+class _QuestionDisplay extends StatelessWidget {
   const _QuestionDisplay({
     required this.question,
     this.compact = false,
-    this.hintText,
   });
   final QuizQuestion question;
   final bool compact;
-  final String? hintText;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: compact ? 4 : 8),
+      padding: EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: compact ? 4 : 8,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -637,39 +541,17 @@ class _QuestionDisplay extends ConsumerWidget {
               style: TextStyle(fontSize: compact ? 48 : 64),
             ),
           SizedBox(height: compact ? 10 : 16),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Semantics(
-                  header: true,
-                  child: Text(
-                    question.question,
-                    textAlign: TextAlign.center,
-                    style: AppTextStyles.headingLarge.copyWith(
-                      fontSize: compact ? 20 : 22,
-                      height: 1.4,
-                    ),
-                  ),
-                ),
-              ),
-              TtsSpeakerIcon(
-                text: question.question,
-                color: AppColors.primary,
-                tooltip: context.l10n.ttsButtonTooltip,
-              ),
-            ],
-          ),
-          if (hintText != null)
-            Padding(
-              padding: const EdgeInsetsDirectional.only(top: 8),
-              child: Text(
-                '💡 $hintText',
-                style: AppTextStyles.labelMedium.copyWith(
-                  color: AppColors.secondary,
-                ),
+          Semantics(
+            header: true,
+            child: Text(
+              question.question,
+              textAlign: TextAlign.center,
+              style: AppTextStyles.headingLarge.copyWith(
+                fontSize: compact ? 20 : 22,
+                height: 1.4,
               ),
             ),
+          ),
         ],
       ),
     );
@@ -686,14 +568,12 @@ class _AnswerGrid extends StatelessWidget {
     required this.selectedOption,
     required this.isRevealed,
     required this.onTap,
-    this.hiddenOptions = const [],
   });
 
   final QuizQuestion question;
   final String? selectedOption;
   final bool isRevealed;
   final void Function(String) onTap;
-  final List<String> hiddenOptions;
 
   @override
   Widget build(BuildContext context) {
@@ -712,19 +592,12 @@ class _AnswerGrid extends StatelessWidget {
           shrinkWrap: true,
           padding: EdgeInsets.zero,
           children: options.map((option) {
-            final hidden = hiddenOptions.contains(option);
-            return Opacity(
-              opacity: hidden ? 0.0 : 1.0,
-              child: IgnorePointer(
-                ignoring: hidden,
-                child: _AnswerCard(
-                  option: option,
-                  correctAnswer: question.correctAnswer,
-                  selectedOption: selectedOption,
-                  isRevealed: isRevealed,
-                  onTap: () => onTap(option),
-                ),
-              ),
+            return _AnswerCard(
+              option: option,
+              correctAnswer: question.correctAnswer,
+              selectedOption: selectedOption,
+              isRevealed: isRevealed,
+              onTap: () => onTap(option),
             );
           }).toList(),
         );
@@ -846,7 +719,10 @@ class _AnswerCardState extends State<_AnswerCard>
       builder: (context, child) {
         return Transform.translate(
           offset: Offset(_shake.value, 0),
-          child: Transform.scale(scale: _scale.value, child: child),
+          child: Transform.scale(
+            scale: _scale.value,
+            child: child,
+          ),
         );
       },
       child: Semantics(
@@ -875,10 +751,8 @@ class _AnswerCardState extends State<_AnswerCard>
               borderRadius: BorderRadius.circular(16),
               splashColor: AppColors.capitalsColor.withAlpha(30),
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 6,
-                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 child: Row(
                   children: [
                     Expanded(
@@ -923,12 +797,12 @@ class _NextButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Semantics(
-        label: context.l10n.quizNextQuestion,
+        label: 'السؤال التالي',
         button: true,
         child: ElevatedButton.icon(
           onPressed: onNext,
           icon: const Text('🚀', style: TextStyle(fontSize: 20)),
-          label: Text(context.l10n.quizNextQuestion),
+          label: const Text('السؤال التالي'),
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.capitalsColor,
             foregroundColor: Colors.white,
@@ -943,6 +817,8 @@ class _NextButton extends StatelessWidget {
     );
   }
 }
+
+
 
 // =============================================================================
 // Loading / Error views
@@ -959,7 +835,7 @@ class _LoadingView extends StatelessWidget {
         children: [
           const CircularProgressIndicator(color: AppColors.capitalsColor),
           const SizedBox(height: 20),
-          Text(context.l10n.quizLoading, style: AppTextStyles.bodyLarge),
+          Text('جارٍ تحميل الاختبار…', style: AppTextStyles.bodyLarge),
         ],
       ),
     );
@@ -981,7 +857,7 @@ class _ErrorView extends StatelessWidget {
             const Text('😕', style: TextStyle(fontSize: 64)),
             const SizedBox(height: 16),
             Text(
-              context.l10n.quizLoadError,
+              'عذراً! تعذّر تحميل الاختبار.',
               style: AppTextStyles.headingMedium,
               textAlign: TextAlign.center,
             ),
@@ -989,7 +865,7 @@ class _ErrorView extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: onRetry,
               icon: const Icon(Icons.refresh_rounded),
-              label: Text(context.l10n.retryAction),
+              label: const Text('حاول مجدداً'),
             ),
           ],
         ),
@@ -1024,18 +900,14 @@ class _FlagImage extends StatelessWidget {
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
-        child: flagUrl.startsWith('assets/')
+        child: flagUrl.startsWith('assets/') 
             ? Image.asset(
                 flagUrl,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stack) => Container(
                   color: Colors.grey.shade200,
                   child: const Center(
-                    child: Icon(
-                      Icons.flag_rounded,
-                      size: 60,
-                      color: Colors.grey,
-                    ),
+                    child: Icon(Icons.flag_rounded, size: 60, color: Colors.grey),
                   ),
                 ),
               )
@@ -1050,11 +922,7 @@ class _FlagImage extends StatelessWidget {
                   return Container(
                     color: Colors.grey.shade200,
                     child: const Center(
-                      child: Icon(
-                        Icons.flag_rounded,
-                        size: 60,
-                        color: Colors.grey,
-                      ),
+                      child: Icon(Icons.flag_rounded, size: 60, color: Colors.grey),
                     ),
                   );
                 },
@@ -1109,3 +977,4 @@ class _ShimmerPlaceholderState extends State<_ShimmerPlaceholder>
     );
   }
 }
+

@@ -43,29 +43,29 @@
   },
   {
     "id": "sc_q2",
-    "question": "Which tiny part of the cell makes its energy?",
-    "question_ar": "ما الجزء الصغير في الخلية الذي يصنع طاقتها؟",
+    "question": "What is the powerhouse of the cell?",
+    "question_ar": "ما هي قوة الخلية؟",
     "options": [
-      "Mitochondria (cell battery)",
-      "Cell wall",
-      "Skin cell",
-      "Blood cell"
+      "Mitochondria",
+      "Nucleus",
+      "Ribosome",
+      "Endoplasmic Reticulum"
     ],
     "options_ar": [
-      "الميتوكوندريا (بطارية الخلية)",
-      "جدار الخلية",
-      "خلية الجلد",
-      "خلية الدم"
+      "الميتوكوندريا",
+      "نواة",
+      "الريبوسوم",
+      "الشبكة الإندوبلازمية"
     ],
-    "correct_answer": "Mitochondria (cell battery)",
-    "correct_answer_ar": "الميتوكوندريا (بطارية الخلية)",
+    "correct_answer": "Mitochondria",
+    "correct_answer_ar": "الميتوكوندريا",
     "category": "أحياء",
-    "difficulty": 3
+    "difficulty": 1
   },
   {
     "id": "sc_q3",
-    "question": "What gas do plants take in to make their food?",
-    "question_ar": "ما الغاز الذي تمتصه النباتات لتصنع غذاءها؟",
+    "question": "What gas do plants absorb during photosynthesis?",
+    "question_ar": "ما الغاز الذي تمتصه النباتات أثناء عملية التمثيل الضوئي؟",
     "options": [
       "Carbon Dioxide",
       "Oxygen",
@@ -85,8 +85,8 @@
   },
   {
     "id": "sc_q4",
-    "question": "Which famous scientist had wild hair and is known for E=mc²?",
-    "question_ar": "أي عالم مشهور بشعره الفوضوي ومعادلته E=mc²؟",
+    "question": "Which scientist proposed the theory of relativity?",
+    "question_ar": "من هو العالم الذي اقترح النظرية النسبية؟",
     "options": [
       "Albert Einstein",
       "Isaac Newton",
@@ -102,7 +102,7 @@
     "correct_answer": "Albert Einstein",
     "correct_answer_ar": "ألبرت أينشتاين",
     "category": "فيزياء",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "sc_q5",
@@ -136,13 +136,13 @@
       "196"
     ],
     "options_ar": [
-      "٢٠٦",
-      "٢٠١",
-      "٢١٠",
-      "١٩٦"
+      "206",
+      "201",
+      "210",
+      "196"
     ],
     "correct_answer": "206",
-    "correct_answer_ar": "٢٠٦",
+    "correct_answer_ar": "206",
     "category": "تشريح",
     "difficulty": 1
   },
@@ -199,20 +199,20 @@
       "200"
     ],
     "options_ar": [
-      "١٠٠",
-      "٥٠",
-      "١٥٠",
-      "٢٠٠"
+      "100",
+      "50",
+      "150",
+      "200"
     ],
     "correct_answer": "100",
-    "correct_answer_ar": "١٠٠",
+    "correct_answer_ar": "100",
     "category": "فيزياء",
     "difficulty": 1
   },
   {
     "id": "sc_q10",
-    "question": "Which organ pumps blood around your body?",
-    "question_ar": "ما العضو الذي يضخ الدم في جسمك؟",
+    "question": "What is the main organ of the cardiovascular system?",
+    "question_ar": "ما هو العضو الرئيسي في نظام القلب والأوعية الدموية؟",
     "options": [
       "Heart",
       "Lungs",
@@ -244,7 +244,7 @@
       "ذرة",
       "جزيء",
       "خلية",
-      "نسيج"
+      "منديل"
     ],
     "correct_answer": "Atom",
     "correct_answer_ar": "ذرة",
@@ -316,19 +316,19 @@
   },
   {
     "id": "sc_q15",
-    "question": "Which element is shown by the letter 'O'?",
-    "question_ar": "ما العنصر الذي يرمز له بالحرف \"O\"؟",
+    "question": "What element is denoted by 'O' on the periodic table?",
+    "question_ar": "ما هو العنصر الذي يرمز له بالحرف \"O\" في الجدول الدوري؟",
     "options": [
       "Oxygen",
-      "Iron",
-      "Gold",
-      "Salt"
+      "Osmium",
+      "Oganesson",
+      "Gold"
     ],
     "options_ar": [
       "الأكسجين",
-      "الحديد",
-      "الذهب",
-      "الملح"
+      "الأوزميوم",
+      "اوغانيسون",
+      "ذهب"
     ],
     "correct_answer": "Oxygen",
     "correct_answer_ar": "الأكسجين",
@@ -379,8 +379,8 @@
   },
   {
     "id": "sc_q18",
-    "question": "Which gas is the biggest part of Earth's air?",
-    "question_ar": "ما الغاز الذي يشكل أكبر جزء من هواء الأرض؟",
+    "question": "What is the most abundant gas in Earth's atmosphere?",
+    "question_ar": "ما هو الغاز الأكثر وفرة في الغلاف الجوي للأرض؟",
     "options": [
       "Nitrogen",
       "Oxygen",
@@ -421,8 +421,8 @@
   },
   {
     "id": "sc_q20",
-    "question": "Which part of the plant uses sunlight to make food?",
-    "question_ar": "أي جزء من النبات يستخدم ضوء الشمس ليصنع الغذاء؟",
+    "question": "What part of the plant conducts photosynthesis?",
+    "question_ar": "أي جزء من النبات يقوم بعملية البناء الضوئي؟",
     "options": [
       "Leaf",
       "Root",
@@ -430,20 +430,20 @@
       "Flower"
     ],
     "options_ar": [
-      "الورقة",
-      "الجذر",
-      "الساق",
-      "الزهرة"
+      "ورقة",
+      "جذر",
+      "ينبع",
+      "ورد"
     ],
     "correct_answer": "Leaf",
-    "correct_answer_ar": "الورقة",
+    "correct_answer_ar": "ورقة",
     "category": "أحياء",
     "difficulty": 2
   },
   {
     "id": "sc_q21",
-    "question": "About how fast does light travel in space?",
-    "question_ar": "ما السرعة التقريبية لانتقال الضوء في الفضاء؟",
+    "question": "What is the speed of light in a vacuum? (approx)",
+    "question_ar": "ما هي سرعة الضوء في الفراغ؟ (تقريبا)",
     "options": [
       "300,000 km/s",
       "150,000 km/s",
@@ -451,13 +451,13 @@
       "400,000 km/s"
     ],
     "options_ar": [
-      "٣٠٠,٠٠٠ كم/ثانية",
-      "١٥٠,٠٠٠ كم/ثانية",
-      "١٠٠٠ كم / ثانية",
-      "٤٠٠٠٠٠ كم / ثانية"
+      "300,000 كم/ثانية",
+      "150,000 كم/ثانية",
+      "1000 كم / ثانية",
+      "400000 كم / ثانية"
     ],
     "correct_answer": "300,000 km/s",
-    "correct_answer_ar": "٣٠٠,٠٠٠ كم/ثانية",
+    "correct_answer_ar": "300,000 كم/ثانية",
     "category": "فيزياء",
     "difficulty": 2
   },
@@ -514,13 +514,13 @@
       "12"
     ],
     "options_ar": [
-      "٨",
-      "٦",
-      "١٠",
-      "١٢"
+      "8",
+      "6",
+      "10",
+      "12"
     ],
     "correct_answer": "8",
-    "correct_answer_ar": "٨",
+    "correct_answer_ar": "8",
     "category": "أحياء",
     "difficulty": 2
   },
@@ -578,9 +578,9 @@
     ],
     "options_ar": [
       "Au",
-      "Ag",
-      "Gd",
-      "Go"
+      "حج",
+      "جي دي",
+      "يذهب"
     ],
     "correct_answer": "Au",
     "correct_answer_ar": "Au",
@@ -600,8 +600,8 @@
     "options_ar": [
       "الفهد",
       "الأسد",
-      "النمر",
-      "الحصان"
+      "الفهد",
+      "حصان"
     ],
     "correct_answer": "Cheetah",
     "correct_answer_ar": "الفهد",
@@ -766,13 +766,13 @@
       "6"
     ],
     "options_ar": [
-      "٤",
-      "٣",
-      "٥",
-      "٦"
+      "4",
+      "3",
+      "5",
+      "6"
     ],
     "correct_answer": "4",
-    "correct_answer_ar": "٤",
+    "correct_answer_ar": "4",
     "category": "فلك",
     "difficulty": 3
   },
@@ -788,9 +788,9 @@
     ],
     "options_ar": [
       "Fe",
-      "Ir",
-      "In",
-      "I"
+      "إير",
+      "في",
+      "أنا"
     ],
     "correct_answer": "Fe",
     "correct_answer_ar": "Fe",
@@ -832,7 +832,7 @@
       "فيتامين د",
       "فيتامين ج",
       "فيتامين أ",
-      "فيتامين ب١٢"
+      "فيتامين ب12"
     ],
     "correct_answer": "Vitamin D",
     "correct_answer_ar": "فيتامين د",
@@ -841,42 +841,42 @@
   },
   {
     "id": "sc_q40",
-    "question": "What protects Earth from the Sun's harmful rays?",
-    "question_ar": "ما الذي يحمي الأرض من أشعة الشمس الضارة؟",
+    "question": "What protects the Earth from harmful solar radiation?",
+    "question_ar": "ما الذي يحمي الأرض من الإشعاع الشمسي الضار؟",
     "options": [
-      "Ozone Layer (Earth's shield)",
+      "Ozone Layer",
       "Magnetic Field",
       "Clouds",
-      "Wind"
+      "Nitrogen"
     ],
     "options_ar": [
-      "طبقة الأوزون (درع الأرض)",
-      "المجال المغناطيسي",
+      "طبقة الأوزون",
+      "المجال المغنطيسي",
       "الغيوم",
-      "الرياح"
+      "نتروجين"
     ],
-    "correct_answer": "Ozone Layer (Earth's shield)",
-    "correct_answer_ar": "طبقة الأوزون (درع الأرض)",
+    "correct_answer": "Ozone Layer",
+    "correct_answer_ar": "طبقة الأوزون",
     "category": "جغرافيا حيوي",
     "difficulty": 3
   },
   {
     "id": "sc_q41",
-    "question": "Which tool measures how strong earthquakes are?",
-    "question_ar": "ما الأداة التي تقيس قوة الزلازل؟",
+    "question": "What instrument is used to measure earthquakes?",
+    "question_ar": "ما الأداة المستخدمة لقياس الزلازل؟",
     "options": [
-      "Seismograph (earthquake meter)",
-      "Clock",
+      "Seismograph",
+      "Barometer",
       "Thermometer",
-      "Ruler"
+      "Hygrometer"
     ],
     "options_ar": [
       "جهاز قياس الزلازل",
-      "الساعة",
+      "بارومتر",
       "ميزان الحرارة",
-      "المسطرة"
+      "مقياس الرطوبة"
     ],
-    "correct_answer": "Seismograph (earthquake meter)",
+    "correct_answer": "Seismograph",
     "correct_answer_ar": "جهاز قياس الزلازل",
     "category": "جيولوجيا",
     "difficulty": 3
@@ -904,29 +904,29 @@
   },
   {
     "id": "sc_q43",
-    "question": "What do we call the study of weather?",
-    "question_ar": "ماذا نسمي دراسة الطقس؟",
+    "question": "What is the study of weather called?",
+    "question_ar": "ماذا تسمى دراسة الطقس؟",
     "options": [
-      "Weather science",
-      "Rock study",
-      "Animal study",
-      "Plant study"
+      "Meteorology",
+      "Geology",
+      "Biology",
+      "Ecology"
     ],
     "options_ar": [
-      "علم الطقس (الأرصاد)",
-      "علم الصخور",
-      "علم الحيوان",
-      "علم النبات"
+      "الأرصاد الجوية",
+      "الجيولوجيا",
+      "علم الأحياء",
+      "علم البيئة"
     ],
-    "correct_answer": "Weather science",
-    "correct_answer_ar": "علم الطقس (الأرصاد)",
+    "correct_answer": "Meteorology",
+    "correct_answer_ar": "الأرصاد الجوية",
     "category": "علوم البيئة",
     "difficulty": 3
   },
   {
     "id": "sc_q44",
-    "question": "Which blood type can give blood to anyone?",
-    "question_ar": "أي فصيلة دم يمكنها التبرع لأي شخص؟",
+    "question": "Which blood type is the universal donor?",
+    "question_ar": "ما هي فصيلة الدم التي تعتبر المتبرع العالمي؟",
     "options": [
       "O Negative",
       "AB Positive",
@@ -934,13 +934,13 @@
       "B Negative"
     ],
     "options_ar": [
-      "O سالب",
-      "AB موجب",
-      "A موجب",
-      "B سالب"
+      "يا سلبي",
+      "AB إيجابي",
+      "إيجابي",
+      "ب سلبي"
     ],
     "correct_answer": "O Negative",
-    "correct_answer_ar": "O سالب",
+    "correct_answer_ar": "يا سلبي",
     "category": "طب",
     "difficulty": 3
   },
@@ -988,22 +988,22 @@
   },
   {
     "id": "sc_q47",
-    "question": "Which small part of the brain helps you keep your balance?",
-    "question_ar": "أي جزء صغير في الدماغ يساعدك على حفظ توازنك؟",
+    "question": "What part of the brain controls balance?",
+    "question_ar": "أي جزء من الدماغ يتحكم في التوازن؟",
     "options": [
-      "Cerebellum (little brain)",
-      "Heart",
-      "Stomach",
-      "Lungs"
+      "Cerebellum",
+      "Cerebrum",
+      "Brainstem",
+      "Thalamus"
     ],
     "options_ar": [
-      "المخيخ (الدماغ الصغير)",
-      "القلب",
-      "المعدة",
-      "الرئتان"
+      "المخيخ",
+      "المخ",
+      "جذع الدماغ",
+      "المهاد"
     ],
-    "correct_answer": "Cerebellum (little brain)",
-    "correct_answer_ar": "المخيخ (الدماغ الصغير)",
+    "correct_answer": "Cerebellum",
+    "correct_answer_ar": "المخيخ",
     "category": "تشريح",
     "difficulty": 3
   },
@@ -1040,1273 +1040,13 @@
     ],
     "options_ar": [
       "الكربون",
-      "الرصاص",
-      "الفضة",
-      "الحديد"
+      "يقود",
+      "فضي",
+      "حديد"
     ],
     "correct_answer": "Carbon",
     "correct_answer_ar": "الكربون",
     "category": "كيمياء",
     "difficulty": 3
-  },
-  {
-    "id": "sc_q50",
-    "question": "How many legs does a spider have?",
-    "question_ar": "كم عدد أرجل العنكبوت؟",
-    "options": [
-      "6",
-      "8",
-      "10",
-      "12"
-    ],
-    "options_ar": [
-      "٦",
-      "٨",
-      "١٠",
-      "١٢"
-    ],
-    "correct_answer": "8",
-    "correct_answer_ar": "٨",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q51",
-    "question": "Which planet is closest to the Sun?",
-    "question_ar": "ما الكوكب الأقرب إلى الشمس؟",
-    "options": [
-      "Venus",
-      "Mercury",
-      "Mars",
-      "Earth"
-    ],
-    "options_ar": [
-      "الزهرة",
-      "عطارد",
-      "المريخ",
-      "الأرض"
-    ],
-    "correct_answer": "Mercury",
-    "correct_answer_ar": "عطارد",
-    "category": "فلك",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q52",
-    "question": "What gas do plants give us when they make food?",
-    "question_ar": "ما الغاز الذي تعطينا إياه النباتات عند صنع غذائها؟",
-    "options": [
-      "Carbon Dioxide",
-      "Oxygen",
-      "Nitrogen",
-      "Hydrogen"
-    ],
-    "options_ar": [
-      "ثاني أكسيد الكربون",
-      "الأكسجين",
-      "النيتروجين",
-      "الهيدروجين"
-    ],
-    "correct_answer": "Oxygen",
-    "correct_answer_ar": "الأكسجين",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q53",
-    "question": "Which organ pumps blood through the body?",
-    "question_ar": "ما العضو الذي يضخ الدم في الجسم؟",
-    "options": [
-      "Lungs",
-      "Liver",
-      "Heart",
-      "Kidney"
-    ],
-    "options_ar": [
-      "الرئتان",
-      "الكبد",
-      "القلب",
-      "الكلية"
-    ],
-    "correct_answer": "Heart",
-    "correct_answer_ar": "القلب",
-    "category": "تشريح",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q54",
-    "question": "What is the closest star to Earth?",
-    "question_ar": "ما أقرب نجم إلى الأرض؟",
-    "options": [
-      "The Moon",
-      "The Sun",
-      "Sirius",
-      "Polaris"
-    ],
-    "options_ar": [
-      "القمر",
-      "الشمس",
-      "الشعرى اليمانية",
-      "النجم القطبي"
-    ],
-    "correct_answer": "The Sun",
-    "correct_answer_ar": "الشمس",
-    "category": "فلك",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q55",
-    "question": "How many chambers does the human heart have?",
-    "question_ar": "كم عدد حجرات قلب الإنسان؟",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "options_ar": [
-      "٢",
-      "٣",
-      "٤",
-      "٥"
-    ],
-    "correct_answer": "4",
-    "correct_answer_ar": "٤",
-    "category": "تشريح",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q56",
-    "question": "What scale tells us how strong an earthquake is?",
-    "question_ar": "ما المقياس الذي يخبرنا بقوة الزلزال؟",
-    "options": [
-      "Richter",
-      "Beaufort",
-      "Celsius",
-      "Mohs"
-    ],
-    "options_ar": [
-      "ريختر",
-      "بوفورت",
-      "سيلسيوس",
-      "موس"
-    ],
-    "correct_answer": "Richter",
-    "correct_answer_ar": "ريختر",
-    "category": "جيولوجيا",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q57",
-    "question": "Which animal is known as the king of the jungle?",
-    "question_ar": "أي حيوان يُعرف بملك الغابة؟",
-    "options": [
-      "Tiger",
-      "Lion",
-      "Elephant",
-      "Bear"
-    ],
-    "options_ar": [
-      "النمر",
-      "الأسد",
-      "الفيل",
-      "الدب"
-    ],
-    "correct_answer": "Lion",
-    "correct_answer_ar": "الأسد",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q58",
-    "question": "What is H2O commonly known as?",
-    "question_ar": "ماذا يُعرف H2O؟",
-    "options": [
-      "Salt",
-      "Water",
-      "Sugar",
-      "Oxygen"
-    ],
-    "options_ar": [
-      "الملح",
-      "الماء",
-      "السكر",
-      "الأكسجين"
-    ],
-    "correct_answer": "Water",
-    "correct_answer_ar": "الماء",
-    "category": "كيمياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q59",
-    "question": "Which sense does the tongue help with?",
-    "question_ar": "أي حاسة يساعد عليها اللسان؟",
-    "options": [
-      "Sight",
-      "Smell",
-      "Taste",
-      "Hearing"
-    ],
-    "options_ar": [
-      "البصر",
-      "الشم",
-      "التذوق",
-      "السمع"
-    ],
-    "correct_answer": "Taste",
-    "correct_answer_ar": "التذوق",
-    "category": "تشريح",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q60",
-    "question": "What galaxy do we live in?",
-    "question_ar": "في أي مجرة نعيش؟",
-    "options": [
-      "Andromeda",
-      "Milky Way",
-      "Triangulum",
-      "Sombrero"
-    ],
-    "options_ar": [
-      "أندروميدا",
-      "درب التبانة",
-      "المثلث",
-      "السومبريرو"
-    ],
-    "correct_answer": "Milky Way",
-    "correct_answer_ar": "درب التبانة",
-    "category": "فلك",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q61",
-    "question": "Which is the smallest unit of life?",
-    "question_ar": "ما أصغر وحدة في الحياة؟",
-    "options": [
-      "Atom",
-      "Cell",
-      "Tissue",
-      "Organ"
-    ],
-    "options_ar": [
-      "الذرة",
-      "الخلية",
-      "النسيج",
-      "العضو"
-    ],
-    "correct_answer": "Cell",
-    "correct_answer_ar": "الخلية",
-    "category": "أحياء",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q62",
-    "question": "Which gas do humans breathe in?",
-    "question_ar": "ما الغاز الذي يتنفسه الإنسان؟",
-    "options": [
-      "Carbon Dioxide",
-      "Hydrogen",
-      "Oxygen",
-      "Helium"
-    ],
-    "options_ar": [
-      "ثاني أكسيد الكربون",
-      "الهيدروجين",
-      "الأكسجين",
-      "الهيليوم"
-    ],
-    "correct_answer": "Oxygen",
-    "correct_answer_ar": "الأكسجين",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q63",
-    "question": "How long does Earth take to orbit the Sun?",
-    "question_ar": "كم تستغرق الأرض لتدور حول الشمس؟",
-    "options": [
-      "24 hours",
-      "30 days",
-      "365 days",
-      "100 years"
-    ],
-    "options_ar": [
-      "٢٤ ساعة",
-      "٣٠ يومًا",
-      "٣٦٥ يومًا",
-      "١٠٠ سنة"
-    ],
-    "correct_answer": "365 days",
-    "correct_answer_ar": "٣٦٥ يومًا",
-    "category": "فلك",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q64",
-    "question": "What part of the plant absorbs water?",
-    "question_ar": "أي جزء من النبتة يمتص الماء؟",
-    "options": [
-      "Leaves",
-      "Stem",
-      "Roots",
-      "Flowers"
-    ],
-    "options_ar": [
-      "الأوراق",
-      "الساق",
-      "الجذور",
-      "الأزهار"
-    ],
-    "correct_answer": "Roots",
-    "correct_answer_ar": "الجذور",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q65",
-    "question": "Which is the fastest land animal?",
-    "question_ar": "ما أسرع حيوان بري؟",
-    "options": [
-      "Lion",
-      "Cheetah",
-      "Horse",
-      "Dog"
-    ],
-    "options_ar": [
-      "الأسد",
-      "الفهد الصياد",
-      "الحصان",
-      "الكلب"
-    ],
-    "correct_answer": "Cheetah",
-    "correct_answer_ar": "الفهد الصياد",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q66",
-    "question": "Which planet is closest to the Sun?",
-    "question_ar": "ما أقرب كوكب إلى الشمس؟",
-    "options": [
-      "Venus",
-      "Earth",
-      "Mercury",
-      "Mars"
-    ],
-    "options_ar": [
-      "الزهرة",
-      "الأرض",
-      "عطارد",
-      "المريخ"
-    ],
-    "correct_answer": "Mercury",
-    "correct_answer_ar": "عطارد",
-    "category": "فلك",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q67",
-    "question": "What force pulls things toward Earth?",
-    "question_ar": "ما القوة التي تجذب الأشياء نحو الأرض؟",
-    "options": [
-      "Magnetism",
-      "Friction",
-      "Gravity",
-      "Electricity"
-    ],
-    "options_ar": [
-      "المغناطيسية",
-      "الاحتكاك",
-      "الجاذبية",
-      "الكهرباء"
-    ],
-    "correct_answer": "Gravity",
-    "correct_answer_ar": "الجاذبية",
-    "category": "فيزياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q68",
-    "question": "Which animal lays the largest egg?",
-    "question_ar": "أي حيوان يضع أكبر بيضة؟",
-    "options": [
-      "Eagle",
-      "Penguin",
-      "Ostrich",
-      "Chicken"
-    ],
-    "options_ar": [
-      "النسر",
-      "البطريق",
-      "النعامة",
-      "الدجاجة"
-    ],
-    "correct_answer": "Ostrich",
-    "correct_answer_ar": "النعامة",
-    "category": "أحياء",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q69",
-    "question": "Which body part filters blood?",
-    "question_ar": "أي جزء من الجسم يصفي الدم؟",
-    "options": [
-      "Heart",
-      "Lungs",
-      "Kidney",
-      "Brain"
-    ],
-    "options_ar": [
-      "القلب",
-      "الرئتان",
-      "الكلية",
-      "الدماغ"
-    ],
-    "correct_answer": "Kidney",
-    "correct_answer_ar": "الكلية",
-    "category": "تشريح",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q70",
-    "question": "When plants make their food, what do they put into the air?",
-    "question_ar": "عندما تصنع النباتات غذاءها، ماذا تطلق في الهواء؟",
-    "options": [
-      "Carbon Dioxide",
-      "Oxygen",
-      "Smoke",
-      "Hydrogen"
-    ],
-    "options_ar": [
-      "ثاني أكسيد الكربون",
-      "الأكسجين",
-      "الدخان",
-      "الهيدروجين"
-    ],
-    "correct_answer": "Oxygen",
-    "correct_answer_ar": "الأكسجين",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q71",
-    "question": "Which body of water is the saltiest in the world?",
-    "question_ar": "ما أكثر مسطح مائي ملوحةً في العالم؟",
-    "options": [
-      "Black Sea",
-      "Red Sea",
-      "Dead Sea",
-      "Caspian Sea"
-    ],
-    "options_ar": [
-      "البحر الأسود",
-      "البحر الأحمر",
-      "البحر الميت",
-      "بحر قزوين"
-    ],
-    "correct_answer": "Dead Sea",
-    "correct_answer_ar": "البحر الميت",
-    "category": "جيولوجيا",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q72",
-    "question": "What does a thermometer measure?",
-    "question_ar": "ماذا يقيس الترمومتر؟",
-    "options": [
-      "Weight",
-      "Speed",
-      "Temperature",
-      "Distance"
-    ],
-    "options_ar": [
-      "الوزن",
-      "السرعة",
-      "درجة الحرارة",
-      "المسافة"
-    ],
-    "correct_answer": "Temperature",
-    "correct_answer_ar": "درجة الحرارة",
-    "category": "فيزياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q73",
-    "question": "How many teeth does an adult human normally have?",
-    "question_ar": "كم عدد أسنان الإنسان البالغ عادة؟",
-    "options": [
-      "20",
-      "28",
-      "32",
-      "40"
-    ],
-    "options_ar": [
-      "٢٠",
-      "٢٨",
-      "٣٢",
-      "٤٠"
-    ],
-    "correct_answer": "32",
-    "correct_answer_ar": "٣٢",
-    "category": "تشريح",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q74",
-    "question": "Which insect produces honey?",
-    "question_ar": "أي حشرة تنتج العسل؟",
-    "options": [
-      "Butterfly",
-      "Bee",
-      "Ant",
-      "Fly"
-    ],
-    "options_ar": [
-      "الفراشة",
-      "النحلة",
-      "النملة",
-      "الذبابة"
-    ],
-    "correct_answer": "Bee",
-    "correct_answer_ar": "النحلة",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q75",
-    "question": "At what temperature does water freeze (in Celsius)?",
-    "question_ar": "عند أي درجة حرارة يتجمد الماء (مئوية)؟",
-    "options": [
-      "-10 °C",
-      "0 °C",
-      "5 °C",
-      "10 °C"
-    ],
-    "options_ar": [
-      "-١٠ °س",
-      "٠ °س",
-      "٥ °س",
-      "١٠ °س"
-    ],
-    "correct_answer": "0 °C",
-    "correct_answer_ar": "٠ °س",
-    "category": "فيزياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q76",
-    "question": "Which planet has prominent rings?",
-    "question_ar": "أي كوكب له حلقات بارزة؟",
-    "options": [
-      "Mars",
-      "Saturn",
-      "Earth",
-      "Mercury"
-    ],
-    "options_ar": [
-      "المريخ",
-      "زحل",
-      "الأرض",
-      "عطارد"
-    ],
-    "correct_answer": "Saturn",
-    "correct_answer_ar": "زحل",
-    "category": "فلك",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q77",
-    "question": "Which mammal can fly?",
-    "question_ar": "أي ثديي يستطيع الطيران؟",
-    "options": [
-      "Squirrel",
-      "Bat",
-      "Eagle",
-      "Penguin"
-    ],
-    "options_ar": [
-      "السنجاب",
-      "الخفاش",
-      "النسر",
-      "البطريق"
-    ],
-    "correct_answer": "Bat",
-    "correct_answer_ar": "الخفاش",
-    "category": "أحياء",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q78",
-    "question": "What is frozen water called?",
-    "question_ar": "ماذا يُسمى الماء المتجمد؟",
-    "options": [
-      "Steam",
-      "Ice",
-      "Vapor",
-      "Mist"
-    ],
-    "options_ar": [
-      "البخار",
-      "الثلج",
-      "البخار المائي",
-      "الضباب"
-    ],
-    "correct_answer": "Ice",
-    "correct_answer_ar": "الثلج",
-    "category": "فيزياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q79",
-    "question": "Which organ helps you think?",
-    "question_ar": "أي عضو يساعدك على التفكير؟",
-    "options": [
-      "Heart",
-      "Brain",
-      "Lungs",
-      "Liver"
-    ],
-    "options_ar": [
-      "القلب",
-      "الدماغ",
-      "الرئتان",
-      "الكبد"
-    ],
-    "correct_answer": "Brain",
-    "correct_answer_ar": "الدماغ",
-    "category": "تشريح",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q80",
-    "question": "Which energy source never runs out?",
-    "question_ar": "أي مصدر طاقة لا ينفد أبداً؟",
-    "options": [
-      "Coal",
-      "Oil",
-      "Solar",
-      "Natural Gas"
-    ],
-    "options_ar": [
-      "الفحم",
-      "النفط",
-      "الطاقة الشمسية",
-      "الغاز الطبيعي"
-    ],
-    "correct_answer": "Solar",
-    "correct_answer_ar": "الطاقة الشمسية",
-    "category": "علوم البيئة",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q81",
-    "question": "What do bees collect from flowers?",
-    "question_ar": "ماذا يجمع النحل من الأزهار؟",
-    "options": [
-      "Water",
-      "Nectar",
-      "Soil",
-      "Leaves"
-    ],
-    "options_ar": [
-      "الماء",
-      "الرحيق",
-      "التربة",
-      "الأوراق"
-    ],
-    "correct_answer": "Nectar",
-    "correct_answer_ar": "الرحيق",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q82",
-    "question": "What part of the eye controls how much light enters?",
-    "question_ar": "أي جزء من العين يتحكم بكمية الضوء الداخلة؟",
-    "options": [
-      "Retina",
-      "Cornea",
-      "Pupil",
-      "Lens"
-    ],
-    "options_ar": [
-      "الشبكية",
-      "القرنية",
-      "البؤبؤ",
-      "العدسة"
-    ],
-    "correct_answer": "Pupil",
-    "correct_answer_ar": "البؤبؤ",
-    "category": "تشريح",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q83",
-    "question": "Which is the largest desert in the world?",
-    "question_ar": "ما أكبر صحراء في العالم؟",
-    "options": [
-      "Sahara",
-      "Gobi",
-      "Antarctic",
-      "Arabian"
-    ],
-    "options_ar": [
-      "الصحراء الكبرى",
-      "صحراء غوبي",
-      "صحراء أنتاركتيكا",
-      "الربع الخالي"
-    ],
-    "correct_answer": "Antarctic",
-    "correct_answer_ar": "صحراء أنتاركتيكا",
-    "category": "جيولوجيا",
-    "difficulty": 3
-  },
-  {
-    "id": "sc_q84",
-    "question": "Who invented the light bulb?",
-    "question_ar": "من اخترع المصباح الكهربائي؟",
-    "options": [
-      "Newton",
-      "Edison",
-      "Einstein",
-      "Tesla"
-    ],
-    "options_ar": [
-      "نيوتن",
-      "إديسون",
-      "أينشتاين",
-      "تسلا"
-    ],
-    "correct_answer": "Edison",
-    "correct_answer_ar": "إديسون",
-    "category": "اختراعات",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q85",
-    "question": "Which animal is the largest on Earth?",
-    "question_ar": "ما أكبر حيوان على الأرض؟",
-    "options": [
-      "Elephant",
-      "Blue Whale",
-      "Giraffe",
-      "Shark"
-    ],
-    "options_ar": [
-      "الفيل",
-      "الحوت الأزرق",
-      "الزرافة",
-      "القرش"
-    ],
-    "correct_answer": "Blue Whale",
-    "correct_answer_ar": "الحوت الأزرق",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q86",
-    "question": "What is the chemical symbol for gold?",
-    "question_ar": "ما الرمز الكيميائي للذهب؟",
-    "options": [
-      "Go",
-      "Gd",
-      "Au",
-      "Ag"
-    ],
-    "options_ar": [
-      "Go",
-      "Gd",
-      "Au",
-      "Ag"
-    ],
-    "correct_answer": "Au",
-    "correct_answer_ar": "Au",
-    "category": "كيمياء",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q87",
-    "question": "Which dinosaur was a fierce predator with tiny arms?",
-    "question_ar": "أي ديناصور كان مفترسًا شرسًا بأذرع صغيرة؟",
-    "options": [
-      "Stegosaurus",
-      "Brachiosaurus",
-      "Tyrannosaurus Rex",
-      "Triceratops"
-    ],
-    "options_ar": [
-      "ستيغوصور",
-      "براكيوصور",
-      "تيرانوصور ركس",
-      "تريسيراتوبس"
-    ],
-    "correct_answer": "Tyrannosaurus Rex",
-    "correct_answer_ar": "تيرانوصور ركس",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q88",
-    "question": "What do we use to turn sunlight into electricity?",
-    "question_ar": "ماذا نستخدم لتحويل ضوء الشمس إلى كهرباء؟",
-    "options": [
-      "Coal",
-      "Solar panels",
-      "Wood",
-      "Oil"
-    ],
-    "options_ar": [
-      "الفحم",
-      "الألواح الشمسية",
-      "الخشب",
-      "النفط"
-    ],
-    "correct_answer": "Solar panels",
-    "correct_answer_ar": "الألواح الشمسية",
-    "category": "علوم البيئة",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q89",
-    "question": "Which sense organ detects sound?",
-    "question_ar": "أي عضو حسي يكتشف الصوت؟",
-    "options": [
-      "Eye",
-      "Nose",
-      "Ear",
-      "Skin"
-    ],
-    "options_ar": [
-      "العين",
-      "الأنف",
-      "الأذن",
-      "الجلد"
-    ],
-    "correct_answer": "Ear",
-    "correct_answer_ar": "الأذن",
-    "category": "تشريح",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q90",
-    "question": "Which word is a unit for measuring electric current?",
-    "question_ar": "أي كلمة هي وحدة لقياس التيار الكهربائي؟",
-    "options": [
-      "Volt",
-      "Watt",
-      "Ampere",
-      "Ohm"
-    ],
-    "options_ar": [
-      "فولت",
-      "واط",
-      "أمبير",
-      "أوم"
-    ],
-    "correct_answer": "Ampere",
-    "correct_answer_ar": "أمبير",
-    "category": "فيزياء",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q91",
-    "question": "Which tool measures the pressure of the air around us?",
-    "question_ar": "أي أداة تقيس ضغط الهواء من حولنا؟",
-    "options": [
-      "Thermometer (heat tool)",
-      "Barometer (air pressure tool)",
-      "Ruler",
-      "Clock"
-    ],
-    "options_ar": [
-      "الترمومتر (أداة الحرارة)",
-      "الباروميتر (أداة ضغط الهواء)",
-      "المسطرة",
-      "الساعة"
-    ],
-    "correct_answer": "Barometer (air pressure tool)",
-    "correct_answer_ar": "الباروميتر (أداة ضغط الهواء)",
-    "category": "أرصاد جوية",
-    "difficulty": 3
-  },
-  {
-    "id": "sc_q92",
-    "question": "Which vitamin do we get from sunlight?",
-    "question_ar": "أي فيتامين نحصل عليه من الشمس؟",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "options_ar": [
-      "أ",
-      "ب",
-      "ج",
-      "د"
-    ],
-    "correct_answer": "D",
-    "correct_answer_ar": "د",
-    "category": "طب",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q93",
-    "question": "Who developed the first effective polio vaccine?",
-    "question_ar": "من طوّر أول لقاح فعّال لشلل الأطفال؟",
-    "options": [
-      "Jonas Salk",
-      "Edward Jenner",
-      "Robert Koch",
-      "Joseph Lister"
-    ],
-    "options_ar": [
-      "جوناس سالك",
-      "إدوارد جينر",
-      "روبرت كوخ",
-      "جوزيف ليستر"
-    ],
-    "correct_answer": "Jonas Salk",
-    "correct_answer_ar": "جوناس سالك",
-    "category": "طب",
-    "difficulty": 3
-  },
-  {
-    "id": "sc_q94",
-    "question": "What do we call animals that eat only plants?",
-    "question_ar": "ماذا نسمي الحيوانات التي تأكل النباتات فقط؟",
-    "options": [
-      "Carnivores",
-      "Herbivores",
-      "Omnivores",
-      "Insectivores"
-    ],
-    "options_ar": [
-      "لاحمة",
-      "عاشبة",
-      "قارتة",
-      "آكلة الحشرات"
-    ],
-    "correct_answer": "Herbivores",
-    "correct_answer_ar": "عاشبة",
-    "category": "أحياء",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q95",
-    "question": "Which planet is known as the Earth's twin?",
-    "question_ar": "أي كوكب يُعرف بتوأم الأرض؟",
-    "options": [
-      "Mars",
-      "Venus",
-      "Mercury",
-      "Jupiter"
-    ],
-    "options_ar": [
-      "المريخ",
-      "الزهرة",
-      "عطارد",
-      "المشتري"
-    ],
-    "correct_answer": "Venus",
-    "correct_answer_ar": "الزهرة",
-    "category": "فلك",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q96",
-    "question": "What is solidified lava called?",
-    "question_ar": "ماذا تُسمى الحمم البركانية المتصلبة؟",
-    "options": [
-      "Magma",
-      "Rock",
-      "Crystal",
-      "Coal"
-    ],
-    "options_ar": [
-      "الصهارة",
-      "الصخر",
-      "البلورة",
-      "الفحم"
-    ],
-    "correct_answer": "Rock",
-    "correct_answer_ar": "الصخر",
-    "category": "جيولوجيا",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q97",
-    "question": "Which is a state of matter?",
-    "question_ar": "أي مما يلي حالة من حالات المادة؟",
-    "options": [
-      "Wood",
-      "Gas",
-      "Metal",
-      "Glass"
-    ],
-    "options_ar": [
-      "الخشب",
-      "الغاز",
-      "المعدن",
-      "الزجاج"
-    ],
-    "correct_answer": "Gas",
-    "correct_answer_ar": "الغاز",
-    "category": "كيمياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q98",
-    "question": "What do tadpoles grow into?",
-    "question_ar": "إلى ماذا تتحول صغار الضفدع (الشراغف)؟",
-    "options": [
-      "Fish",
-      "Frogs",
-      "Lizards",
-      "Snakes"
-    ],
-    "options_ar": [
-      "الأسماك",
-      "الضفادع",
-      "السحالي",
-      "الأفاعي"
-    ],
-    "correct_answer": "Frogs",
-    "correct_answer_ar": "الضفادع",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q99",
-    "question": "Which simple machine is a seesaw an example of?",
-    "question_ar": "الأرجوحة الخشبية مثال على أي آلة بسيطة؟",
-    "options": [
-      "Pulley",
-      "Lever",
-      "Wheel",
-      "Inclined Plane"
-    ],
-    "options_ar": [
-      "البكرة",
-      "الرافعة",
-      "العجلة",
-      "المستوى المائل"
-    ],
-    "correct_answer": "Lever",
-    "correct_answer_ar": "الرافعة",
-    "category": "فيزياء",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q100",
-    "question": "Which scientist organized the modern periodic table?",
-    "question_ar": "أي عالم نظّم الجدول الدوري الحديث للعناصر؟",
-    "options": [
-      "Niels Bohr",
-      "Dmitri Mendeleev",
-      "Marie Curie",
-      "Antoine Lavoisier"
-    ],
-    "options_ar": [
-      "نيلز بور",
-      "ديمتري مندليف",
-      "ماري كوري",
-      "أنطوان لافوازييه"
-    ],
-    "correct_answer": "Dmitri Mendeleev",
-    "correct_answer_ar": "ديمتري مندليف",
-    "category": "كيمياء",
-    "difficulty": 3
-  },
-  {
-    "id": "sc_q101",
-    "question": "Which animal has a pouch to carry its young?",
-    "question_ar": "أي حيوان لديه جراب يحمل صغاره؟",
-    "options": [
-      "Koala",
-      "Kangaroo",
-      "Lion",
-      "Wolf"
-    ],
-    "options_ar": [
-      "الكوالا",
-      "الكنغر",
-      "الأسد",
-      "الذئب"
-    ],
-    "correct_answer": "Kangaroo",
-    "correct_answer_ar": "الكنغر",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q102",
-    "question": "Which planet has the most moons?",
-    "question_ar": "أي كوكب لديه أكبر عدد من الأقمار؟",
-    "options": [
-      "Earth",
-      "Mars",
-      "Saturn",
-      "Jupiter"
-    ],
-    "options_ar": [
-      "الأرض",
-      "المريخ",
-      "زحل",
-      "المشتري"
-    ],
-    "correct_answer": "Saturn",
-    "correct_answer_ar": "زحل",
-    "category": "فلك",
-    "difficulty": 3
-  },
-  {
-    "id": "sc_q103",
-    "question": "What gives plants their green color?",
-    "question_ar": "ما الذي يعطي النباتات لونها الأخضر؟",
-    "options": [
-      "Oxygen",
-      "Chlorophyll (green plant color)",
-      "Sunlight",
-      "Water"
-    ],
-    "options_ar": [
-      "الأكسجين",
-      "الكلوروفيل (اللون الأخضر للنبات)",
-      "ضوء الشمس",
-      "الماء"
-    ],
-    "correct_answer": "Chlorophyll (green plant color)",
-    "correct_answer_ar": "الكلوروفيل (اللون الأخضر للنبات)",
-    "category": "أحياء",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q104",
-    "question": "Sound travels fastest through which medium?",
-    "question_ar": "ينتقل الصوت أسرع في أي وسط؟",
-    "options": [
-      "Vacuum",
-      "Air",
-      "Water",
-      "Steel"
-    ],
-    "options_ar": [
-      "الفراغ",
-      "الهواء",
-      "الماء",
-      "الفولاذ"
-    ],
-    "correct_answer": "Steel",
-    "correct_answer_ar": "الفولاذ",
-    "category": "فيزياء",
-    "difficulty": 3
-  },
-  {
-    "id": "sc_q105",
-    "question": "Which animal can change its color to blend in?",
-    "question_ar": "أي حيوان يمكنه تغيير لونه للاندماج مع المحيط؟",
-    "options": [
-      "Chameleon",
-      "Tiger",
-      "Wolf",
-      "Dolphin"
-    ],
-    "options_ar": [
-      "الحرباء",
-      "النمر",
-      "الذئب",
-      "الدلفين"
-    ],
-    "correct_answer": "Chameleon",
-    "correct_answer_ar": "الحرباء",
-    "category": "أحياء",
-    "difficulty": 1
-  },
-  {
-    "id": "sc_q106",
-    "question": "DNA is like a recipe book inside us. What does it store?",
-    "question_ar": "الحمض النووي (DNA) يشبه كتاب وصفات داخل أجسامنا. ماذا يخزن؟",
-    "options": [
-      "Energy",
-      "Water",
-      "Body instructions",
-      "Oxygen"
-    ],
-    "options_ar": [
-      "الطاقة",
-      "الماء",
-      "تعليمات الجسم",
-      "الأكسجين"
-    ],
-    "correct_answer": "Body instructions",
-    "correct_answer_ar": "تعليمات الجسم",
-    "category": "أحياء",
-    "difficulty": 3
-  },
-  {
-    "id": "sc_q107",
-    "question": "Which color of the rainbow has the longest light waves?",
-    "question_ar": "أي لون من ألوان قوس قزح له أطول موجات ضوئية؟",
-    "options": [
-      "Blue",
-      "Green",
-      "Red",
-      "Violet"
-    ],
-    "options_ar": [
-      "الأزرق",
-      "الأخضر",
-      "الأحمر",
-      "البنفسجي"
-    ],
-    "correct_answer": "Red",
-    "correct_answer_ar": "الأحمر",
-    "category": "فيزياء",
-    "difficulty": 3
-  },
-  {
-    "id": "sc_q108",
-    "question": "Which event in nature is measured by the Richter scale?",
-    "question_ar": "أي حدث طبيعي يُقاس بمقياس ريختر؟",
-    "options": [
-      "Storm",
-      "Strong wind",
-      "Earthquake",
-      "Flood"
-    ],
-    "options_ar": [
-      "العاصفة",
-      "الرياح القوية",
-      "الزلزال",
-      "الفيضان"
-    ],
-    "correct_answer": "Earthquake",
-    "correct_answer_ar": "الزلزال",
-    "category": "جيولوجيا",
-    "difficulty": 2
-  },
-  {
-    "id": "sc_q109",
-    "question": "Which is the smallest planet in our solar system?",
-    "question_ar": "ما أصغر كوكب في المجموعة الشمسية؟",
-    "options": [
-      "Mars",
-      "Mercury",
-      "Venus",
-      "Pluto"
-    ],
-    "options_ar": [
-      "المريخ",
-      "عطارد",
-      "الزهرة",
-      "بلوتو"
-    ],
-    "correct_answer": "Mercury",
-    "correct_answer_ar": "عطارد",
-    "category": "فلك",
-    "difficulty": 2
   }
 ]

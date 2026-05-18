@@ -82,9 +82,9 @@ Future<void> importLocalProgressFromFile(
   final bytes = await readPickedFileBytes(result.files.single);
   if (bytes == null) {
     if (context.mounted) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(l10n.backupReadFileError)));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.backupReadFileError)),
+      );
     }
     return;
   }
@@ -99,9 +99,9 @@ Future<void> importLocalProgressFromFile(
     map = decoded;
   } catch (_) {
     if (context.mounted) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(l10n.backupInvalidJson)));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.backupInvalidJson)),
+      );
     }
     return;
   }
@@ -115,8 +115,7 @@ Future<void> importLocalProgressFromFile(
   }
 
   if (!context.mounted) return;
-  final ok =
-      await showDialog<bool>(
+  final ok = await showDialog<bool>(
         context: context,
         builder: (ctx) {
           final d = ctx.l10n;
@@ -141,16 +140,16 @@ Future<void> importLocalProgressFromFile(
 
   if (!ok) return;
 
-  await ref
-      .read(achievementProvider.notifier)
-      .restoreFromBackup(Map<String, dynamic>.from(map['achievements'] as Map));
-  await ref
-      .read(recapQueueProvider.notifier)
-      .replaceQueueFromBackup(List<dynamic>.from(map['recapQueue'] as List));
+  await ref.read(achievementProvider.notifier).restoreFromBackup(
+        Map<String, dynamic>.from(map['achievements'] as Map),
+      );
+  await ref.read(recapQueueProvider.notifier).replaceQueueFromBackup(
+        List<dynamic>.from(map['recapQueue'] as List),
+      );
 
   if (context.mounted) {
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(l10n.backupSnackSuccess)));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(l10n.backupSnackSuccess)),
+    );
   }
 }

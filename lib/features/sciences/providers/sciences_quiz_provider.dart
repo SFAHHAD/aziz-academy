@@ -1,15 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:aziz_academy/core/agents/event_bus.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
 import 'package:aziz_academy/core/models/quiz_difficulty.dart';
 import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
-import 'package:aziz_academy/core/providers/locale_provider.dart';
 import 'package:aziz_academy/core/providers/recap_arm_provider.dart';
-import 'package:aziz_academy/core/providers/sciences_pool_provider.dart';
-import 'package:aziz_academy/core/agents/learner_state.dart';
-import 'package:aziz_academy/core/utils/adaptive_order.dart';
 import 'package:aziz_academy/features/sciences/data/sciences_repository.dart';
 
 final sciencesRepositoryProvider = Provider<SciencesRepository>(
@@ -19,37 +14,31 @@ final sciencesRepositoryProvider = Provider<SciencesRepository>(
 
 final sciencesQuestionsProvider =
     AsyncNotifierProvider<SciencesQuestionsNotifier, List<QuizQuestion>>(
-      SciencesQuestionsNotifier.new,
-      name: 'sciencesQuestionsProvider',
-    );
+  SciencesQuestionsNotifier.new,
+  name: 'sciencesQuestionsProvider',
+);
 
-class SciencesQuestionsNotifier extends AsyncNotifier<List<QuizQuestion>> {
+class SciencesQuestionsNotifier
+    extends AsyncNotifier<List<QuizQuestion>> {
   @override
   Future<List<QuizQuestion>> build() async {
-    // Read from session-cached pool — boss + sciences quiz + random quiz
-    // share the same entries list. Locale change reuses the cache.
-    final entries = await ref.watch(sciencesPoolProvider.future);
-    final isArabic = ref.watch(localeProvider).value?.languageCode == 'ar';
-    return entries.map((e) => e.toQuizQuestion(arabic: isArabic)).toList();
+    final repo = ref.read(sciencesRepositoryProvider);
+    return repo.loadQuestions();
   }
 }
 
 final sciencesQuizProvider =
     AsyncNotifierProvider<SciencesQuizNotifier, QuizSessionState>(
-      SciencesQuizNotifier.new,
-      name: 'sciencesQuizProvider',
-    );
+  SciencesQuizNotifier.new,
+  name: 'sciencesQuizProvider',
+);
 
 class SciencesCategoryFilterNotifier extends Notifier<String?> {
   @override
   String? build() => null;
   void setFilter(String? category) => state = category;
 }
-
-final categoryFilterProvider =
-    NotifierProvider<SciencesCategoryFilterNotifier, String?>(
-      SciencesCategoryFilterNotifier.new,
-    );
+final categoryFilterProvider = NotifierProvider<SciencesCategoryFilterNotifier, String?>(SciencesCategoryFilterNotifier.new);
 
 class SciencesDifficultyNotifier extends Notifier<QuizDifficulty> {
   @override
@@ -59,9 +48,9 @@ class SciencesDifficultyNotifier extends Notifier<QuizDifficulty> {
 
 final sciencesDifficultyProvider =
     NotifierProvider<SciencesDifficultyNotifier, QuizDifficulty>(
-      SciencesDifficultyNotifier.new,
-      name: 'sciencesDifficultyProvider',
-    );
+  SciencesDifficultyNotifier.new,
+  name: 'sciencesDifficultyProvider',
+);
 
 class SciencesQuizNotifier extends AsyncNotifier<QuizSessionState> {
   @override
@@ -74,25 +63,11 @@ class SciencesQuizNotifier extends AsyncNotifier<QuizSessionState> {
       filtered = questions.where((q) => q.category == category).toList();
     }
 
-    final adaptive =
-        ref.watch(appSettingsProvider).value?.adaptiveDifficulty ?? true;
-    if (adaptive) {
-      final skill =
-          ref.read(learnerStateProvider).value?.skillFor('sciences') ?? 0.5;
-      filtered = adaptiveOrder<QuizQuestion>(
-        filtered,
-        skill,
-        (q) => q.difficulty,
-      );
-    }
-
     final diff = ref.watch(sciencesDifficultyProvider);
     if (diff != QuizDifficulty.hard) {
       final minQ = 8.clamp(1, filtered.length);
-      final cap = ((filtered.length * diff.poolFraction).ceil()).clamp(
-        minQ,
-        filtered.length,
-      );
+      final cap = ((filtered.length * diff.poolFraction).ceil())
+          .clamp(minQ, filtered.length);
       filtered = filtered.take(cap).toList();
     }
 
@@ -115,25 +90,14 @@ class SciencesQuizNotifier extends AsyncNotifier<QuizSessionState> {
       );
     }
 
-    final out = QuizSessionState(
+    return QuizSessionState(
       questions: List.of(filtered)..shuffle(),
       currentIndex: 0,
       score: 0,
       livesRemaining: 3,
       status: QuizStatus.inProgress,
     );
-    EventBus.instance.emit(
-      LearningEvent(
-        type: LearningEventType.sessionStarted,
-        module: 'sciences',
-        timestamp: DateTime.now(),
-      ),
-    );
-    _lastQuestionStartedAt = DateTime.now();
-    return out;
   }
-
-  DateTime? _lastQuestionStartedAt;
 
   bool submitAnswer(String answer) {
     final current = state.value?.currentQuestion;
@@ -145,29 +109,11 @@ class SciencesQuizNotifier extends AsyncNotifier<QuizSessionState> {
     final nextLives = isCorrect
         ? session.livesRemaining
         : (practice ? session.livesRemaining : session.livesRemaining - 1);
-
-    final lat = _lastQuestionStartedAt == null
-        ? 0
-        : DateTime.now().difference(_lastQuestionStartedAt!).inMilliseconds;
-    EventBus.instance.emit(
-      LearningEvent(
-        type: LearningEventType.questionAnswered,
-        module: 'sciences',
-        timestamp: DateTime.now(),
-        questionId: current.id,
-        category: current.category,
-        correct: isCorrect,
-        latencyMs: lat,
-      ),
-    );
-
-    state = AsyncData(
-      session.copyWith(
-        score: isCorrect ? session.score + 1 : session.score,
-        livesRemaining: nextLives,
-        lastAnswerCorrect: isCorrect,
-      ),
-    );
+    state = AsyncData(session.copyWith(
+      score: isCorrect ? session.score + 1 : session.score,
+      livesRemaining: nextLives,
+      lastAnswerCorrect: isCorrect,
+    ));
     return isCorrect;
   }
 
@@ -177,30 +123,17 @@ class SciencesQuizNotifier extends AsyncNotifier<QuizSessionState> {
 
     final nextIndex = session.currentIndex + 1;
     if (nextIndex >= session.totalQuestions) {
-      EventBus.instance.emit(
-        LearningEvent(
-          type: LearningEventType.sessionEnded,
-          module: 'sciences',
-          timestamp: DateTime.now(),
-          score: session.score,
-        ),
-      );
-      state = AsyncData(
-        session.copyWith(
-          currentIndex: nextIndex,
-          status: QuizStatus.complete,
-          clearLastAnswer: true,
-        ),
-      );
+      state = AsyncData(session.copyWith(
+        currentIndex: nextIndex,
+        status: QuizStatus.complete,
+        clearLastAnswer: true,
+      ));
     } else {
-      _lastQuestionStartedAt = DateTime.now();
-      state = AsyncData(
-        session.copyWith(
-          currentIndex: nextIndex,
-          status: QuizStatus.inProgress,
-          clearLastAnswer: true,
-        ),
-      );
+      state = AsyncData(session.copyWith(
+        currentIndex: nextIndex,
+        status: QuizStatus.inProgress,
+        clearLastAnswer: true,
+      ));
     }
   }
 
@@ -208,15 +141,13 @@ class SciencesQuizNotifier extends AsyncNotifier<QuizSessionState> {
     final session = state.value;
     if (session == null) return;
 
-    state = AsyncData(
-      session.copyWith(
-        questions: List.of(session.questions)..shuffle(),
-        currentIndex: 0,
-        score: 0,
-        livesRemaining: 3,
-        status: QuizStatus.inProgress,
-        clearLastAnswer: true,
-      ),
-    );
+    state = AsyncData(session.copyWith(
+      questions: List.of(session.questions)..shuffle(),
+      currentIndex: 0,
+      score: 0,
+      livesRemaining: 3,
+      status: QuizStatus.inProgress,
+      clearLastAnswer: true,
+    ));
   }
 }

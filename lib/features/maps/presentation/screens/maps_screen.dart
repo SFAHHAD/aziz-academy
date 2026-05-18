@@ -12,9 +12,6 @@ import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
-import 'package:aziz_academy/core/utils/digits.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
-import 'package:aziz_academy/core/widgets/tts_speaker_icon.dart';
 import 'package:aziz_academy/features/maps/providers/maps_quiz_provider.dart';
 import 'package:aziz_academy/features/maps/presentation/widgets/real_interactive_map.dart';
 
@@ -28,11 +25,10 @@ class MapsScreen extends ConsumerStatefulWidget {
   ConsumerState<MapsScreen> createState() => _MapsScreenState();
 }
 
-class _MapsScreenState extends ConsumerState<MapsScreen>
-    with SingleTickerProviderStateMixin {
+class _MapsScreenState extends ConsumerState<MapsScreen> with SingleTickerProviderStateMixin {
   late AnimationController _fadeController;
   late Animation<double> _fadeAnim;
-
+  
   bool _showIntro = true;
 
   @override
@@ -68,9 +64,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
           }
           return _buildQuiz(context, state);
         },
-        loading: () => const Center(
-          child: CircularProgressIndicator(color: AppColors.primary),
-        ),
+        loading: () => const Center(child: CircularProgressIndicator(color: AppColors.primary)),
         error: (e, st) => Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -112,7 +106,6 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
             child: Image.asset(
               'assets/images/map_bg.png', // Fallback or global bg
               fit: BoxFit.cover,
-              excludeFromSemantics: true,
               errorBuilder: (context, error, stackTrace) => const SizedBox(),
             ),
           ),
@@ -123,87 +116,70 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
               constraints: const BoxConstraints(maxWidth: 640),
               child: Column(
                 children: [
-                  _buildTopBar(),
-                  const Spacer(),
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 24),
-                    padding: const EdgeInsets.all(32),
-                    decoration: BoxDecoration(
-                      color: AppColors.surface,
-                      borderRadius: BorderRadius.circular(24),
-                      border: Border.all(
-                        color: AppColors.mapsColor.withValues(alpha: 0.3),
-                        width: 1,
+              _buildTopBar(),
+              const Spacer(),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 24),
+                padding: const EdgeInsets.all(32),
+                decoration: BoxDecoration(
+                  color: AppColors.surface,
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(color: AppColors.mapsColor.withValues(alpha:0.3), width: 1),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.mapsColor.withValues(alpha:0.1),
+                      blurRadius: 30,
+                      spreadRadius: 0,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: AppColors.mapsColor.withValues(alpha:0.1),
+                        shape: BoxShape.circle,
                       ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.mapsColor.withValues(alpha: 0.1),
-                          blurRadius: 30,
-                          spreadRadius: 0,
-                        ),
-                      ],
+                      child: const Text('🧭', style: TextStyle(fontSize: 48)),
                     ),
-                    child: Column(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                            color: AppColors.mapsColor.withValues(alpha: 0.1),
-                            shape: BoxShape.circle,
-                          ),
-                          child: const Text(
-                            '🧭',
-                            style: TextStyle(fontSize: 48),
-                          ),
-                        ),
-                        const SizedBox(height: 24),
-                        Text(
-                          context.l10n.mapsIntroTitle,
-                          style: AppTextStyles.headingLarge.copyWith(
-                            color: AppColors.mapsColor,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        Text(
-                          context.l10n.mapsIntroBody,
-                          textAlign: TextAlign.center,
-                          style: AppTextStyles.bodyMedium.copyWith(
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        const SizedBox(height: 32),
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() => _showIntro = false);
-                            _fadeController.forward();
-                            ref.read(audioServiceProvider).startBgm();
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.mapsColor,
-                            foregroundColor: AppColors.surface,
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 48,
-                              vertical: 16,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            elevation: 8,
-                            shadowColor: AppColors.mapsColor.withValues(
-                              alpha: 0.5,
-                            ),
-                          ),
-                          child: Text(
-                            context.l10n.mapsIntroStart,
-                            style: AppTextStyles.headingSmall.copyWith(
-                              color: AppColors.surface,
-                            ),
-                          ),
-                        ),
-                      ],
+                    const SizedBox(height: 24),
+                    Text(
+                      'مستكشف الخرائط',
+                      style: AppTextStyles.headingLarge.copyWith(color: AppColors.mapsColor),
                     ),
-                  ),
-                  const Spacer(flex: 2),
+                    const SizedBox(height: 12),
+                    Text(
+                      'أوجد الدول بناءً على مواقعها الجغرافية. هل أنت مستعد للتحدي؟',
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.bodyMedium.copyWith(color: AppColors.primary),
+                    ),
+                    const SizedBox(height: 32),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() => _showIntro = false);
+                        _fadeController.forward();
+                        ref.read(audioServiceProvider).startBgm();
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.mapsColor,
+                        foregroundColor: AppColors.surface,
+                        padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        elevation: 8,
+                        shadowColor: AppColors.mapsColor.withValues(alpha:0.5),
+                      ),
+                      child: Text(
+                        'ابدأ الاستكشاف',
+                        style: AppTextStyles.headingSmall.copyWith(color: AppColors.surface),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Spacer(flex: 2),
                 ],
               ),
             ),
@@ -220,7 +196,6 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            tooltip: context.l10n.commonBack,
             onPressed: () => context.go(AppRoutes.home),
             icon: Icon(
               Directionality.of(context) == TextDirection.rtl
@@ -235,9 +210,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
           ),
           Text(
             '🧭 الجغرافيا',
-            style: AppTextStyles.headingMedium.copyWith(
-              color: AppColors.mapsColor,
-            ),
+            style: AppTextStyles.headingMedium.copyWith(color: AppColors.mapsColor),
           ),
           const SizedBox(width: 48),
         ],
@@ -248,144 +221,102 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
   Widget _buildQuiz(BuildContext context, QuizSessionState state) {
     if (state.questions.isEmpty) return const SizedBox();
     final q = state.currentQuestion!;
-
+    
     return SafeArea(
-      child: CenteredBody(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          child: Column(
-            children: [
-              _buildQuizHeader(state),
-              const SizedBox(height: 20),
-              Expanded(
-                child: RealInteractiveMap(
-                  targetLat: q.lat ?? 0.0,
-                  targetLng: q.lng ?? 0.0,
-                ),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 640),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Column(
+              children: [
+            _buildQuizHeader(state),
+            const SizedBox(height: 20),
+            Expanded(
+              child: RealInteractiveMap(
+                targetLat: q.lat ?? 0.0,
+                targetLng: q.lng ?? 0.0,
               ),
-              const SizedBox(height: 20),
-              FadeTransition(
-                opacity: _fadeAnim,
-                child: Container(
-                  padding: const EdgeInsets.all(24),
-                  decoration: BoxDecoration(
-                    color: AppColors.surface,
-                    borderRadius: BorderRadius.circular(24),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.1),
-                        blurRadius: 20,
-                        offset: const Offset(0, 10),
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              q.question,
-                              style: AppTextStyles.headingMedium,
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          TtsSpeakerIcon(
-                            text: q.question,
-                            color: AppColors.primary,
-                            tooltip: context.l10n.ttsButtonTooltip,
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 24),
-                      ...q.options.map(
-                        (opt) => Padding(
-                          padding: const EdgeInsets.only(bottom: 12),
-                          child: _OptionButton(
-                            text: opt,
-                            color: AppColors.mapsColor,
-                            onTap: () {
+            ),
+            const SizedBox(height: 20),
+            FadeTransition(
+              opacity: _fadeAnim,
+              child: Container(
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(
+                  color: AppColors.surface,
+                  borderRadius: BorderRadius.circular(24),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha:0.1),
+                      blurRadius: 20,
+                      offset: const Offset(0, 10),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      q.question,
+                      style: AppTextStyles.headingMedium,
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 24),
+                    ...q.options.map((opt) => Padding(
+                      padding: const EdgeInsets.only(bottom: 12),
+                      child: _OptionButton(
+                        text: opt,
+                        color: AppColors.mapsColor,
+                        onTap: () {
+                          ref.read(mapsQuizProvider.notifier).submitAnswer(opt);
+                          if (opt == q.correctAnswer) {
+                            ref.read(audioServiceProvider).playCorrectSound();
+                            _showFeedbackDialog(context, true, q.correctAnswer, q.funFact, () {
+                              ref.read(mapsQuizProvider.notifier).nextQuestion();
+                            });
+                          } else {
+                            ref.read(audioServiceProvider).playWrongSound();
+                            final practice = ref
+                                    .read(appSettingsProvider)
+                                    .value
+                                    ?.practiceMode ??
+                                false;
+                            if (!practice) {
                               ref
-                                  .read(mapsQuizProvider.notifier)
-                                  .submitAnswer(opt);
-                              if (opt == q.correctAnswer) {
-                                ref
-                                    .read(audioServiceProvider)
-                                    .playCorrectSound();
-                                _showFeedbackDialog(
-                                  context,
-                                  true,
-                                  q.correctAnswer,
-                                  q.funFact,
-                                  () {
-                                    ref
-                                        .read(mapsQuizProvider.notifier)
-                                        .nextQuestion();
-                                  },
-                                );
-                              } else {
-                                ref.read(audioServiceProvider).playWrongSound();
-                                final practice =
-                                    ref
-                                        .read(appSettingsProvider)
-                                        .value
-                                        ?.practiceMode ??
-                                    false;
-                                if (!practice) {
-                                  ref
-                                      .read(recapQueueProvider.notifier)
-                                      .recordWrong(RecapModule.maps, q.id);
-                                }
-                                _showFeedbackDialog(
-                                  context,
-                                  false,
-                                  q.correctAnswer,
-                                  '',
-                                  () {
-                                    ref
-                                        .read(mapsQuizProvider.notifier)
-                                        .nextQuestion();
-                                  },
-                                );
-                              }
-                            },
-                          ),
-                        ),
+                                  .read(recapQueueProvider.notifier)
+                                  .recordWrong(RecapModule.maps, q.id);
+                            }
+                            _showFeedbackDialog(context, false, q.correctAnswer, '', () {
+                              ref.read(mapsQuizProvider.notifier).nextQuestion();
+                            });
+                          }
+                        },
                       ),
-                    ],
-                  ),
+                    )),
+                  ],
                 ),
               ),
-              const SizedBox(height: 20),
-            ],
+            ),
+            const SizedBox(height: 20),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 
-  void _showFeedbackDialog(
-    BuildContext context,
-    bool isCorrect,
-    String correctAnswer,
-    String funFact,
-    VoidCallback onNext,
-  ) {
+  void _showFeedbackDialog(BuildContext context, bool isCorrect, String correctAnswer, String funFact, VoidCallback onNext) {
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (context) {
         return AlertDialog(
           backgroundColor: AppColors.surface,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           title: Text(
-            isCorrect
-                ? context.l10n.mapsCorrectTitle
-                : context.l10n.mapsIncorrectTitle,
+            isCorrect ? '✅ إجابة صحيحة!' : '❌ إجابة خاطئة',
             style: AppTextStyles.headingMedium.copyWith(
               color: isCorrect ? AppColors.success : AppColors.error,
             ),
@@ -395,19 +326,17 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                context.l10n.mapsAnswerReveal(correctAnswer),
+                'الدولة هي: $correctAnswer',
                 style: AppTextStyles.bodyLarge,
               ),
               if (isCorrect && funFact.isNotEmpty) ...[
                 const SizedBox(height: 12),
                 Text(
                   funFact,
-                  style: AppTextStyles.bodyMedium.copyWith(
-                    color: AppColors.primary,
-                  ),
+                  style: AppTextStyles.bodyMedium.copyWith(color: AppColors.primary),
                   textAlign: TextAlign.center,
                 ),
-              ],
+              ]
             ],
           ),
           actionsAlignment: MainAxisAlignment.center,
@@ -420,14 +349,9 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.mapsColor,
                 foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               ),
-              child: Text(
-                context.l10n.quizNextQuestion,
-                style: AppTextStyles.headingSmall,
-              ),
+              child: Text('السؤال التالي', style: AppTextStyles.headingSmall),
             ),
           ],
         );
@@ -441,8 +365,8 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
       children: [
         IconButton(
           onPressed: () {
-            ref.read(audioServiceProvider).stopBgm();
-            context.go(AppRoutes.home);
+             ref.read(audioServiceProvider).stopBgm();
+             context.go(AppRoutes.home);
           },
           icon: const Icon(Icons.close, color: AppColors.primary),
           style: IconButton.styleFrom(
@@ -455,26 +379,20 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: AppColors.mapsColor.withValues(alpha: 0.3),
-            ),
+            border: Border.all(color: AppColors.mapsColor.withValues(alpha:0.3)),
           ),
           child: Text(
-            '${localizeDigitsCtx(state.currentIndex + 1, context)} / ${localizeDigitsCtx(state.questions.length, context)}',
-            style: AppTextStyles.headingSmall.copyWith(
-              color: AppColors.mapsColor,
-            ),
+            '${state.currentIndex + 1} / ${state.questions.length}',
+            style: AppTextStyles.headingSmall.copyWith(color: AppColors.mapsColor),
           ),
         ),
         Row(
           mainAxisSize: MainAxisSize.min,
           children: List.generate(3, (index) {
             return Padding(
-              padding: const EdgeInsetsDirectional.only(start: 4),
+              padding: const EdgeInsets.only(left: 4),
               child: Icon(
-                index < state.livesRemaining
-                    ? Icons.favorite
-                    : Icons.favorite_border,
+                index < state.livesRemaining ? Icons.favorite : Icons.favorite_border,
                 color: AppColors.error,
                 size: 24,
               ),
@@ -487,96 +405,85 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
 
   Widget _buildResults(BuildContext context, QuizSessionState state) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (state.score > 0) {
-        ref.read(audioServiceProvider).playVictorySound();
-      } else {
-        ref.read(audioServiceProvider).playWrongSound();
-      }
+       if (state.score > 0) {
+         ref.read(audioServiceProvider).playVictorySound();
+       } else {
+         ref.read(audioServiceProvider).playWrongSound();
+       }
     });
-
+    
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 640),
         child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 24),
-          padding: const EdgeInsets.all(32),
-          decoration: BoxDecoration(
-            color: AppColors.surface,
-            borderRadius: BorderRadius.circular(32),
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.mapsColor.withValues(alpha: 0.2),
-                blurRadius: 40,
-                offset: const Offset(0, 10),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('🎉', style: TextStyle(fontSize: 64)),
-              const SizedBox(height: 24),
-              Text(
-                context.l10n.mapsGameOverTitle,
-                style: AppTextStyles.headingLarge,
-              ),
-              const SizedBox(height: 12),
-              Text(
-                context.l10n.mapsScore(localizeDigitsCtx(state.score, context)),
-                style: AppTextStyles.headingMedium.copyWith(
-                  color: AppColors.mapsColor,
-                ),
-              ),
-              const SizedBox(height: 48),
-              Row(
-                children: [
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        ref.read(audioServiceProvider).stopBgm();
-                        context.go(AppRoutes.home);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.surface,
-                        foregroundColor: AppColors.primary,
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                          side: BorderSide(color: AppColors.divider),
-                        ),
-                      ),
-                      child: Text(
-                        context.l10n.homeButton,
-                        style: AppTextStyles.headingSmall,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        setState(() => _showIntro = true);
-                        ref.read(mapsQuizProvider.notifier).reset();
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.mapsColor,
-                        foregroundColor: AppColors.surface,
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                      ),
-                      child: Text(
-                        context.l10n.retryAction,
-                        style: AppTextStyles.headingSmall,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+        margin: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.all(32),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(32),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.mapsColor.withValues(alpha:0.2),
+              blurRadius: 40,
+              offset: const Offset(0, 10),
+            ),
+          ],
         ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('🎉', style: TextStyle(fontSize: 64)),
+            const SizedBox(height: 24),
+            Text('انتهى التحدي!', style: AppTextStyles.headingLarge),
+            const SizedBox(height: 12),
+            Text(
+              'نتيجتك: ${state.score}',
+              style: AppTextStyles.headingMedium.copyWith(color: AppColors.mapsColor),
+            ),
+            const SizedBox(height: 48),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      ref.read(audioServiceProvider).stopBgm();
+                      context.go(AppRoutes.home);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.surface,
+                      foregroundColor: AppColors.primary,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                        side: BorderSide(color: AppColors.divider),
+                      ),
+                    ),
+                    child: Text('الرئيسية', style: AppTextStyles.headingSmall),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      setState(() => _showIntro = true);
+                      ref.read(mapsQuizProvider.notifier).reset();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.mapsColor,
+                      foregroundColor: AppColors.surface,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: Text('إعادة المحاولة', style: AppTextStyles.headingSmall),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
       ),
     );
   }
@@ -601,8 +508,8 @@ class _OptionButton extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(16),
-        splashColor: color.withValues(alpha: 0.1),
-        highlightColor: color.withValues(alpha: 0.05),
+        splashColor: color.withValues(alpha:0.1),
+        highlightColor: color.withValues(alpha:0.05),
         child: Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(vertical: 16),

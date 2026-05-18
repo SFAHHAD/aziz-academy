@@ -9,8 +9,7 @@ import 'package:aziz_academy/core/providers/achievement_provider.dart';
 import 'package:aziz_academy/features/capitals/providers/capitals_provider.dart';
 import 'package:aziz_academy/features/capitals/presentation/screens/capitals_quiz_screen.dart';
 import 'package:aziz_academy/core/widgets/difficulty_row.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
-import 'package:aziz_academy/core/l10n/context_ext.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /// Entry point for the Capitals module.
 class CapitalsScreen extends ConsumerWidget {
@@ -68,44 +67,47 @@ class _CapitalsIntroScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: CenteredBody(
-          wide: true,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              _IntroHeader(),
-              Expanded(
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      _HeroCard(
-                        questionsAsync: questionsAsync,
-                        bestStars: bestStars,
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+            _IntroHeader(),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _HeroCard(
+                      questionsAsync: questionsAsync,
+                      bestStars: bestStars,
+                    ),
+                    const SizedBox(height: 28),
+                    Text(
+                      'أو اختر قارة',
+                      style: AppTextStyles.bodyMedium.copyWith(
+                        color: AppColors.textMedium,
+                        fontSize: 13,
                       ),
-                      const SizedBox(height: 28),
-                      Text(
-                        'أو اختر قارة',
-                        style: AppTextStyles.bodyMedium.copyWith(
-                          color: AppColors.textMedium,
-                          fontSize: 13,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 16),
-                      _ContinentGrid(
-                        questionsAsync: questionsAsync,
-                        continentEmojis: _continentEmojis,
-                        continentColors: _continentColors,
-                        continentAr: _continentAr,
-                      ),
-                      const SizedBox(height: 32),
-                    ],
-                  ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 16),
+                    _ContinentGrid(
+                      questionsAsync: questionsAsync,
+                      continentEmojis: _continentEmojis,
+                      continentColors: _continentColors,
+                      continentAr: _continentAr,
+                    ),
+                    const SizedBox(height: 32),
+                  ],
                 ),
               ),
-            ],
+            ),
+              ],
+            ),
           ),
         ),
       ),
@@ -127,7 +129,6 @@ class _IntroHeader extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-            tooltip: context.l10n.commonBack,
             icon: Icon(
               isRtl
                   ? Icons.arrow_forward_ios_rounded
@@ -174,7 +175,10 @@ class _IntroHeader extends StatelessWidget {
 // =============================================================================
 
 class _HeroCard extends ConsumerWidget {
-  const _HeroCard({required this.questionsAsync, required this.bestStars});
+  const _HeroCard({
+    required this.questionsAsync,
+    required this.bestStars,
+  });
 
   final AsyncValue<List<dynamic>> questionsAsync;
   final int bestStars;
@@ -270,32 +274,34 @@ class _HeroCard extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 6),
-          Text(
-            '$total سؤال • 3 حياة • اربح حتى ⭐⭐⭐',
-            style: AppTextStyles.caption.copyWith(
-              color: AppColors.secondary.withAlpha(200),
-            ),
-          ),
-          const SizedBox(height: 18),
-          DifficultyRow(
-            value: ref.watch(difficultyProvider),
-            onChanged: (d) => ref.read(difficultyProvider.notifier).set(d),
-            accentColor: AppColors.capitalsColor,
-          ),
-          const SizedBox(height: 18),
-          // Gold gradient CTA button
-          GestureDetector(
-            onTap: total > 0
-                ? () {
-                    ref.read(continentFilterProvider.notifier).clear();
-                    context.go(AppRoutes.capitalsQuiz);
-                  }
-                : null,
+            Text(
+                    '$total سؤال • 3 حياة • اربح حتى ⭐⭐⭐',
+                    style: AppTextStyles.caption.copyWith(
+                      color: AppColors.secondary.withAlpha(200),
+                    ),
+                  ),
+                  const SizedBox(height: 18),
+                  DifficultyRow(
+                    value: ref.watch(difficultyProvider),
+                    onChanged: (d) => ref.read(difficultyProvider.notifier).set(d),
+                    accentColor: AppColors.capitalsColor,
+                  ),
+                  const SizedBox(height: 18),
+                  // Gold gradient CTA button
+                  GestureDetector(
+                    onTap: total > 0
+                        ? () {
+                            ref.read(continentFilterProvider.notifier).clear();
+                            context.go(AppRoutes.capitalsQuiz);
+                          }
+                        : null,
             child: Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 16),
               decoration: BoxDecoration(
-                gradient: total > 0 ? AppColors.goldGradient : null,
+                gradient: total > 0
+                    ? AppColors.goldGradient
+                    : null,
                 color: total > 0 ? null : AppColors.surfaceContainerHighest,
                 borderRadius: BorderRadius.circular(50),
                 boxShadow: total > 0
@@ -315,14 +321,12 @@ class _HeroCard extends ConsumerWidget {
                   const SizedBox(width: 10),
                   Text(
                     'العب جميع الدول',
-                    style: TextStyle(
-                      fontFamily: 'Cairo',
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                       color: total > 0
                           ? const Color(0xFF0A1628)
                           : AppColors.textMedium,
-                      fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                     ),
                   ),
                 ],
@@ -417,7 +421,10 @@ class _ContinentChip extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surfaceContainerLow,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: color.withAlpha(80), width: 1),
+            border: Border.all(
+              color: color.withAlpha(80),
+              width: 1,
+            ),
             boxShadow: [
               BoxShadow(
                 color: color.withAlpha(30),

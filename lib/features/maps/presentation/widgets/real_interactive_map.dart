@@ -29,8 +29,8 @@ class _RealInteractiveMapState extends State<RealInteractiveMap>
   // allocated mid-flight — this eliminates the AnimationController leak.
   late final AnimationController _moveController;
   late final Animation<double> _moveAnimation;
-  final _latTween = Tween<double>(begin: 0, end: 0);
-  final _lngTween = Tween<double>(begin: 0, end: 0);
+  final _latTween  = Tween<double>(begin: 0, end: 0);
+  final _lngTween  = Tween<double>(begin: 0, end: 0);
   final _zoomTween = Tween<double>(begin: 4, end: 4);
 
   @override
@@ -77,13 +77,13 @@ class _RealInteractiveMapState extends State<RealInteractiveMap>
     // Update tween endpoints from the map's current camera position.
     _latTween
       ..begin = _mapController.camera.center.latitude
-      ..end = dest.latitude;
+      ..end   = dest.latitude;
     _lngTween
       ..begin = _mapController.camera.center.longitude
-      ..end = dest.longitude;
+      ..end   = dest.longitude;
     _zoomTween
       ..begin = _mapController.camera.zoom
-      ..end = destZoom;
+      ..end   = destZoom;
 
     // Interrupt any in-progress animation and start from the updated values.
     _moveController
@@ -100,7 +100,7 @@ class _RealInteractiveMapState extends State<RealInteractiveMap>
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
+            color: Colors.black.withValues(alpha:0.3),
             blurRadius: 15,
             spreadRadius: 2,
           ),
@@ -111,11 +111,11 @@ class _RealInteractiveMapState extends State<RealInteractiveMap>
         child: FlutterMap(
           mapController: _mapController,
           options: MapOptions(
-            initialCenter: LatLng(widget.targetLat, widget.targetLng),
-            initialZoom: 4.0,
-            interactionOptions: const InteractionOptions(
-              flags: InteractiveFlag.pinchZoom | InteractiveFlag.drag,
-            ),
+             initialCenter: LatLng(widget.targetLat, widget.targetLng),
+             initialZoom: 4.0,
+             interactionOptions: const InteractionOptions(
+               flags: InteractiveFlag.pinchZoom | InteractiveFlag.drag,
+             ),
           ),
           children: [
             TileLayer(
@@ -137,7 +137,10 @@ class _RealInteractiveMapState extends State<RealInteractiveMap>
                     duration: const Duration(seconds: 1),
                     curve: Curves.elasticOut,
                     builder: (context, val, child) {
-                      return Transform.scale(scale: val, child: child);
+                      return Transform.scale(
+                        scale: val,
+                        child: child,
+                      );
                     },
                     child: PinWidget(),
                   ),
@@ -166,7 +169,7 @@ class PinWidget extends StatelessWidget {
             shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
-                color: AppColors.error.withValues(alpha: 0.6),
+                color: AppColors.error.withValues(alpha:0.6),
                 blurRadius: 12,
                 spreadRadius: 4,
               ),

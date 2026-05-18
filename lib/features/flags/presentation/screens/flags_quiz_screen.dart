@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
@@ -13,19 +12,15 @@ import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/providers/recap_queue_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
-import 'package:aziz_academy/core/widgets/lifeline_bar.dart';
 import 'package:aziz_academy/core/widgets/network_image_retry.dart';
 import 'package:aziz_academy/core/widgets/quiz_fun_fact_bar.dart';
 import 'package:aziz_academy/core/widgets/quiz_narrow_content.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
-import 'package:aziz_academy/core/widgets/tts_speaker_icon.dart';
 import 'package:aziz_academy/features/flags/providers/flags_quiz_provider.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/victory_overlay.dart';
 import 'package:aziz_academy/features/capitals/presentation/widgets/game_over_overlay.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
 import 'package:aziz_academy/core/providers/xp_provider.dart';
-import 'package:aziz_academy/core/utils/digits.dart';
 
 class FlagsQuizScreen extends ConsumerStatefulWidget {
   const FlagsQuizScreen({super.key});
@@ -39,13 +34,6 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
   String? _selectedOption;
   bool get _isRevealed => _selectedOption != null;
   bool _coPlayChoicesVisible = false;
-
-  // Lifeline state — flags use only 50/50 + Skip; hint is disabled (the
-  // answer text is the country name itself, so a masked-letters hint trivially
-  // gives it away).
-  bool _usedFiftyFifty = false;
-  bool _usedSkip = false;
-  List<String> _hiddenOptions = const [];
 
   late final AnimationController _revealCtrl;
 
@@ -70,20 +58,14 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
     if (session != null && session.currentQuestion != null) {
       final isCorrect = option == session.currentQuestion!.correctAnswer;
       if (isCorrect) {
-        HapticFeedback.lightImpact();
         ref.read(audioServiceProvider).playCorrectSound();
       } else {
-        HapticFeedback.mediumImpact();
         ref.read(audioServiceProvider).playWrongSound();
       }
-      unawaited(
-        ref
-            .read(ttsServiceProvider)
-            .speakAnswerFeedback(
-              session.currentQuestion!.correctAnswer,
-              correct: isCorrect,
-            ),
-      );
+      unawaited(ref.read(ttsServiceProvider).speakAnswerFeedback(
+        session.currentQuestion!.correctAnswer,
+        correct: isCorrect,
+      ));
 
       // Prefetch next question's flag during the feedback delay.
       final nextIdx = session.currentIndex + 1;
@@ -98,9 +80,10 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
     ref.read(flagsQuizProvider.notifier).submitAnswer(option);
     if (q != null && option.trim() != q.correctAnswer.trim()) {
       unawaited(
-        ref
-            .read(recapQueueProvider.notifier)
-            .recordWrong(RecapModule.flags, q.id),
+        ref.read(recapQueueProvider.notifier).recordWrong(
+              RecapModule.flags,
+              q.id,
+            ),
       );
     }
     setState(() => _selectedOption = option);
@@ -113,9 +96,6 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
     setState(() {
       _selectedOption = null;
       if (co) _coPlayChoicesVisible = false;
-      _usedFiftyFifty = false;
-      _usedSkip = false;
-      _hiddenOptions = const [];
     });
     ref.read(flagsQuizProvider.notifier).nextQuestion();
   }
@@ -126,57 +106,39 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
     setState(() {
       _selectedOption = null;
       _coPlayChoicesVisible = !co;
-      _usedFiftyFifty = false;
-      _usedSkip = false;
-      _hiddenOptions = const [];
     });
     ref.read(flagsQuizProvider.notifier).restart();
-  }
-
-  void _onFiftyFifty(List<String> hidden) {
-    setState(() {
-      _hiddenOptions = hidden;
-      _usedFiftyFifty = true;
-    });
-  }
-
-  void _onSkip() {
-    setState(() => _usedSkip = true);
-    _onNext();
   }
 
   @override
   Widget build(BuildContext context) {
     final sessionAsync = ref.watch(flagsQuizProvider);
 
-    ref.listen<AsyncValue<QuizSessionState>>(flagsQuizProvider, (prev, next) {
-      if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
-        final session = next.value!;
-        final practice =
-            ref.read(appSettingsProvider).value?.practiceMode ?? false;
-        if (!practice) {
-          ref
-              .read(achievementProvider.notifier)
-              .recordFlagsSession(
-                score: session.score,
-                livesRemaining: session.livesRemaining,
-              );
-          ref
-              .read(xpProvider.notifier)
-              .addXp(
-                XpNotifier.sessionXp(
+    ref.listen<AsyncValue<QuizSessionState>>(
+      flagsQuizProvider,
+      (prev, next) {
+        if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
+          final session = next.value!;
+          final practice =
+              ref.read(appSettingsProvider).value?.practiceMode ?? false;
+          if (!practice) {
+            ref.read(achievementProvider.notifier).recordFlagsSession(
                   score: session.score,
                   livesRemaining: session.livesRemaining,
-                ),
-              );
+                );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
+                );
+          }
+          ref.read(audioServiceProvider).playVictorySound();
+        } else if (next.value?.isGameOver == true && prev?.value?.isGameOver != true) {
+          ref.read(audioServiceProvider).playWrongSound();
         }
-        HapticFeedback.heavyImpact();
-        ref.read(audioServiceProvider).playVictorySound();
-      } else if (next.value?.isGameOver == true &&
-          prev?.value?.isGameOver != true) {
-        ref.read(audioServiceProvider).playWrongSound();
-      }
-    });
+      },
+    );
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -192,7 +154,6 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
                 title: context.l10n.victoryFlagsTitle,
                 shareModuleLabel: context.l10n.shareModuleFlags,
                 reducedMotion: reducedMotion,
-                coinsEarned: session.score * 5 + session.livesRemaining * 10,
                 onPlayAgain: _onRestart,
                 onBack: () => context.go(AppRoutes.home),
               );
@@ -209,220 +170,161 @@ class _FlagsQuizScreenState extends ConsumerState<FlagsQuizScreen>
             final question = session.currentQuestion;
             if (question == null) return const SizedBox.shrink();
 
-            final coPlay = ref
-                .watch(appSettingsProvider)
-                .maybeWhen(data: (s) => s.coPlayMode, orElse: () => false);
+            final coPlay = ref.watch(appSettingsProvider).maybeWhen(
+                  data: (s) => s.coPlayMode,
+                  orElse: () => false,
+                );
             final showChoices = !coPlay || _coPlayChoicesVisible;
 
-            return CenteredBody(
-              child: QuizNarrowContent(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        top: 8,
-                        right: 16,
-                        left: 16,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          TtsSpeakerIcon(
-                            text: question.question,
-                            color: AppColors.primary,
-                            tooltip: context.l10n.ttsButtonTooltip,
+            return QuizNarrowContent(
+              child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 8, right: 16),
+                    child: IconButton(
+                      icon: const Icon(Icons.close, color: AppColors.textMedium),
+                      onPressed: () {
+                        if (context.canPop()) {
+                          context.pop();
+                        } else {
+                          context.go(AppRoutes.home);
+                        }
+                      },
+                    ),
+                  ),
+                ),
+                _Header(
+                  score: session.score,
+                  lives: session.livesRemaining,
+                  currentIndex: session.currentIndex,
+                  total: session.totalQuestions,
+                ),
+                Expanded(
+                  child: SingleChildScrollView(
+                    physics: const ClampingScrollPhysics(),
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 16,
+                            horizontal: 16,
                           ),
-                          IconButton(
-                            icon: const Icon(
-                              Icons.close,
-                              color: AppColors.textMedium,
-                            ),
-                            onPressed: () {
-                              if (context.canPop()) {
-                                context.pop();
-                              } else {
-                                context.go(AppRoutes.home);
-                              }
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
-                    _Header(
-                      score: session.score,
-                      lives: session.livesRemaining,
-                      currentIndex: session.currentIndex,
-                      total: session.totalQuestions,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
-                      child: LifelineBar(
-                        options: question.options,
-                        correctAnswer: question.correctAnswer,
-                        locked: _isRevealed,
-                        usedFiftyFifty: _usedFiftyFifty,
-                        usedSkip: _usedSkip,
-                        usedHint: true, // hint disabled for flags
-                        onFiftyFifty: _onFiftyFifty,
-                        onSkip: _onSkip,
-                        onHint: (_) {},
-                      ),
-                    ),
-                    Expanded(
-                      child: SingleChildScrollView(
-                        physics: const ClampingScrollPhysics(),
-                        padding: const EdgeInsets.only(bottom: 8),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 16,
-                                horizontal: 16,
-                              ),
-                              child: Center(
-                                child: Container(
-                                  constraints: const BoxConstraints(
-                                    maxHeight: 200,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(16),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black.withAlpha(25),
-                                        blurRadius: 10,
-                                        offset: const Offset(0, 5),
-                                      ),
-                                    ],
-                                    border: Border.all(
-                                      color: Colors.white,
-                                      width: 4,
-                                    ),
-                                  ),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(12),
-                                    child: _HDFlagRenderer(
-                                      flagUrl: question.flagUrl!,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            if (coPlay && !showChoices) ...[
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 20,
-                                ),
-                                child: ElevatedButton.icon(
-                                  onPressed: () => setState(
-                                    () => _coPlayChoicesVisible = true,
-                                  ),
-                                  icon: const Icon(Icons.visibility_rounded),
-                                  label: Text(context.l10n.coPlayRevealChoices),
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: AppColors.secondary,
-                                    foregroundColor: AppColors.surface,
-                                    minimumSize: const Size(
-                                      double.infinity,
-                                      52,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(height: 8),
-                            ],
-                            if (showChoices)
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 20,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
-                                  children: question.options.map((opt) {
-                                    final hidden = _hiddenOptions.contains(opt);
-                                    return Padding(
-                                      padding: const EdgeInsets.only(bottom: 8),
-                                      child: Opacity(
-                                        opacity: hidden ? 0.0 : 1.0,
-                                        child: IgnorePointer(
-                                          ignoring: hidden,
-                                          child: _OptionButton(
-                                            text: opt,
-                                            isRevealed: _isRevealed,
-                                            isSelected: _selectedOption == opt,
-                                            isCorrectOption:
-                                                opt == question.correctAnswer,
-                                            onTap: () {
-                                              if (!_isRevealed) {
-                                                _onAnswerTapped(opt);
-                                              }
-                                            },
-                                          ),
-                                        ),
-                                      ),
-                                    );
-                                  }).toList(),
-                                ),
-                              ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    AnimatedSize(
-                      duration: const Duration(milliseconds: 220),
-                      curve: Curves.easeOutCubic,
-                      alignment: Alignment.topCenter,
-                      child: _isRevealed
-                          ? Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                              child: Column(
-                                children: [
-                                  QuizFunFactBar(
-                                    funFact: question.funFact,
-                                    wasWrong:
-                                        _selectedOption !=
-                                        question.correctAnswer,
-                                    correctAnswer: question.correctAnswer,
-                                  ),
-                                  const SizedBox(height: 12),
-                                  ElevatedButton(
-                                    onPressed: _onNext,
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: AppColors.secondary,
-                                      foregroundColor: AppColors.surface,
-                                      padding: const EdgeInsets.symmetric(
-                                        vertical: 16,
-                                      ),
-                                      minimumSize: const Size(
-                                        double.infinity,
-                                        52,
-                                      ),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(16),
-                                      ),
-                                    ),
-                                    child: Text(
-                                      context.l10n.nextAction,
-                                      style: AppTextStyles.bodyLarge.copyWith(
-                                        color: AppColors.surface,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
+                          child: Center(
+                            child: Container(
+                              constraints: const BoxConstraints(maxHeight: 200),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withAlpha(25),
+                                    blurRadius: 10,
+                                    offset: const Offset(0, 5),
                                   ),
                                 ],
+                                border: Border.all(color: Colors.white, width: 4),
                               ),
-                            )
-                          : const SizedBox.shrink(),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: _HDFlagRenderer(flagUrl: question.flagUrl!),
+                              ),
+                            ),
+                          ),
+                        ),
+                        if (coPlay && !showChoices) ...[
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: ElevatedButton.icon(
+                              onPressed: () =>
+                                  setState(() => _coPlayChoicesVisible = true),
+                              icon: const Icon(Icons.visibility_rounded),
+                              label: Text(context.l10n.coPlayRevealChoices),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: AppColors.secondary,
+                                foregroundColor: AppColors.surface,
+                                minimumSize: const Size(double.infinity, 52),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                        ],
+                        if (showChoices)
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: question.options.map((opt) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 8),
+                                  child: _OptionButton(
+                                    text: opt,
+                                    isRevealed: _isRevealed,
+                                    isSelected: _selectedOption == opt,
+                                    isCorrectOption:
+                                        opt == question.correctAnswer,
+                                    onTap: () {
+                                      if (!_isRevealed) _onAnswerTapped(opt);
+                                    },
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
-              ),
+                AnimatedSize(
+                  duration: const Duration(milliseconds: 220),
+                  curve: Curves.easeOutCubic,
+                  alignment: Alignment.topCenter,
+                  child: _isRevealed
+                      ? Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                          child: Column(
+                            children: [
+                              QuizFunFactBar(
+                                funFact: question.funFact,
+                                wasWrong:
+                                    _selectedOption != question.correctAnswer,
+                                correctAnswer: question.correctAnswer,
+                              ),
+                              const SizedBox(height: 12),
+                              ElevatedButton(
+                                onPressed: _onNext,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.secondary,
+                                  foregroundColor: AppColors.surface,
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 16),
+                                  minimumSize: const Size(double.infinity, 52),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
+                                child: Text(
+                                  context.l10n.nextAction,
+                                  style: AppTextStyles.bodyLarge.copyWith(
+                                    color: AppColors.surface,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      : const SizedBox.shrink(),
+                ),
+              ],
+            ),
             );
           },
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (e, _) => Center(child: Text(context.l10n.quizLoadError)),
+          error: (e, _) => Center(child: Text('Error: $e')),
         ),
       ),
     );
@@ -460,10 +362,8 @@ class _Header extends StatelessWidget {
             ),
           ),
           Text(
-            '${localizeDigitsCtx(currentIndex + 1, context)} / ${localizeDigitsCtx(total, context)}',
-            style: AppTextStyles.bodyLarge.copyWith(
-              color: AppColors.textMedium,
-            ),
+            '${currentIndex + 1} / $total',
+            style: AppTextStyles.bodyLarge.copyWith(color: AppColors.textMedium),
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -472,7 +372,7 @@ class _Header extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             child: Text(
-              '⭐ ${localizeDigitsCtx(score, context)}',
+              '⭐ $score',
               style: AppTextStyles.headingMedium.copyWith(
                 color: AppColors.primary,
                 fontSize: 18,

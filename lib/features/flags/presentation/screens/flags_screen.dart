@@ -7,10 +7,7 @@ import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/features/flags/providers/flags_quiz_provider.dart';
 import 'package:aziz_academy/core/widgets/difficulty_row.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
-import 'package:aziz_academy/core/utils/digits.dart';
-import 'package:aziz_academy/core/l10n/context_ext.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class FlagsScreen extends ConsumerWidget {
   const FlagsScreen({super.key});
 
@@ -54,53 +51,52 @@ class _FlagsIntroScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: CenteredBody(
-          wide: true,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              _IntroHeader(),
-              Expanded(
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      _HeroCard(questionsAsync: questionsAsync),
-                      const SizedBox(height: 18),
-                      Consumer(
-                        builder: (context, ref, _) {
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _IntroHeader(),
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _HeroCard(questionsAsync: questionsAsync),
+                        const SizedBox(height: 18),
+                        Consumer(builder: (context, ref, _) {
                           return DifficultyRow(
                             value: ref.watch(flagsDifficultyProvider),
-                            onChanged: (d) => ref
-                                .read(flagsDifficultyProvider.notifier)
-                                .set(d),
+                            onChanged: (d) => ref.read(flagsDifficultyProvider.notifier).set(d),
                             accentColor: AppColors.error,
                           );
-                        },
-                      ),
-                      const SizedBox(height: 18),
-                      Text(
-                        'أو اختر قارة',
-                        style: AppTextStyles.bodyMedium.copyWith(
-                          color: AppColors.textMedium,
-                          fontSize: 13,
+                        }),
+                        const SizedBox(height: 18),
+                        Text(
+                          'أو اختر قارة',
+                          style: AppTextStyles.bodyMedium.copyWith(
+                            color: AppColors.textMedium,
+                            fontSize: 13,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 16),
-                      _ContinentGrid(
-                        questionsAsync: questionsAsync,
-                        continentEmojis: _continentEmojis,
-                        continentColors: _continentColors,
-                        continentAr: _continentAr,
-                      ),
-                      const SizedBox(height: 24),
-                    ],
+                        const SizedBox(height: 16),
+                        _ContinentGrid(
+                          questionsAsync: questionsAsync,
+                          continentEmojis: _continentEmojis,
+                          continentColors: _continentColors,
+                          continentAr: _continentAr,
+                        ),
+                        const SizedBox(height: 24),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -117,7 +113,6 @@ class _IntroHeader extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            tooltip: context.l10n.commonBack,
             icon: Icon(
               Directionality.of(context) == TextDirection.rtl
                   ? Icons.arrow_forward_ios_rounded
@@ -128,9 +123,7 @@ class _IntroHeader extends ConsumerWidget {
           ),
           Text(
             'تحدي الأعلام',
-            style: AppTextStyles.headingMedium.copyWith(
-              color: AppColors.secondary,
-            ),
+            style: AppTextStyles.headingMedium.copyWith(color: AppColors.secondary),
           ),
           const SizedBox(width: 48), // Balance spacing
         ],
@@ -179,24 +172,20 @@ class _HeroCard extends ConsumerWidget {
                     children: [
                       Text(
                         'تحدي جميع أعلام العالم',
-                        style: TextStyle(
-                          fontFamily: 'Cairo',
+                        style: GoogleFonts.cairo(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: AppColors.surface,
                           height: 1.2,
-                          fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                         ),
                       ),
                       const SizedBox(height: 8),
                       questionsAsync.when(
                         data: (q) => Text(
-                          '${localizeDigitsCtx(q.length, context)} علم',
-                          style: TextStyle(
-                            fontFamily: 'Cairo',
+                          '${q.length} علم',
+                          style: GoogleFonts.cairo(
                             fontSize: 14,
                             color: AppColors.surface.withAlpha(200),
-                            fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -243,7 +232,13 @@ class _ContinentGrid extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return questionsAsync.when(
       data: (questions) {
-        final continents = ['Asia', 'Africa', 'Europe', 'Americas', 'Oceania'];
+        final continents = [
+          'Asia',
+          'Africa',
+          'Europe',
+          'Americas',
+          'Oceania'
+        ];
 
         return GridView.builder(
           shrinkWrap: true,
@@ -271,7 +266,7 @@ class _ContinentGrid extends ConsumerWidget {
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (e, _) => Center(child: Text(context.l10n.errorLoadingRegions)),
+      error: (e, _) => const Center(child: Text('Error loading regions')),
     );
   }
 }
@@ -310,9 +305,7 @@ class _ContinentCard extends ConsumerWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: () {
-            ref
-                .read(flagsContinentFilterProvider.notifier)
-                .setFilter(continentCode);
+            ref.read(flagsContinentFilterProvider.notifier).setFilter(continentCode);
             context.push(AppRoutes.flagsQuiz);
           },
           borderRadius: BorderRadius.circular(20),
@@ -323,22 +316,18 @@ class _ContinentCard extends ConsumerWidget {
               const SizedBox(height: 8),
               Text(
                 title,
-                style: TextStyle(
-                  fontFamily: 'Cairo',
+                style: GoogleFonts.cairo(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: AppColors.primary,
-                  fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                 ),
               ),
               Text(
-                '${localizeDigitsCtx(count, context)} علم',
-                style: TextStyle(
-                  fontFamily: 'Cairo',
+                '$count علم',
+                style: GoogleFonts.cairo(
                   fontSize: 12,
                   color: AppColors.textMedium,
                   fontWeight: FontWeight.bold,
-                  fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                 ),
               ),
             ],

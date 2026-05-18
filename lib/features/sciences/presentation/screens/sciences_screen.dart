@@ -8,7 +8,7 @@ import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/features/sciences/providers/sciences_quiz_provider.dart';
 import 'package:aziz_academy/core/widgets/difficulty_row.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 /// Entry point for the Sciences module.
@@ -57,60 +57,60 @@ class _SciencesIntroScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final questionsAsync = ref.watch(sciencesQuestionsProvider);
-    final bestStars = ref.watch(achievementProvider).value?.sciencesStars ?? 0;
+    final bestStars =
+        ref.watch(achievementProvider).value?.sciencesStars ?? 0;
 
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: CenteredBody(
-          wide: true,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              _IntroHeader(),
-              Expanded(
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      _HeroCard(
-                        questionsAsync: questionsAsync,
-                        bestStars: bestStars,
-                      ),
-                      const SizedBox(height: 18),
-                      Consumer(
-                        builder: (context, ref, _) {
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _IntroHeader(),
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _HeroCard(
+                          questionsAsync: questionsAsync,
+                          bestStars: bestStars,
+                        ),
+                        const SizedBox(height: 18),
+                        Consumer(builder: (context, ref, _) {
                           return DifficultyRow(
                             value: ref.watch(sciencesDifficultyProvider),
-                            onChanged: (d) => ref
-                                .read(sciencesDifficultyProvider.notifier)
-                                .set(d),
+                            onChanged: (d) => ref.read(sciencesDifficultyProvider.notifier).set(d),
                             accentColor: const Color(0xFFC47AC0),
                           );
-                        },
-                      ),
-                      const SizedBox(height: 18),
-                      Text(
-                        context.l10n.sciencesOrChooseCategory,
-                        style: AppTextStyles.bodyMedium.copyWith(
-                          color: AppColors.textMedium,
-                          fontSize: 13,
+                        }),
+                        const SizedBox(height: 18),
+                        Text(
+                          context.l10n.sciencesOrChooseCategory,
+                          style: AppTextStyles.bodyMedium.copyWith(
+                            color: AppColors.textMedium,
+                            fontSize: 13,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 16),
-                      _CategoryGrid(
-                        questionsAsync: questionsAsync,
-                        categoryEmojis: _categoryEmojis,
-                        categoryColors: _categoryColors,
-                      ),
-                      const SizedBox(height: 24),
-                    ],
+                        const SizedBox(height: 16),
+                        _CategoryGrid(
+                          questionsAsync: questionsAsync,
+                          categoryEmojis: _categoryEmojis,
+                          categoryColors: _categoryColors,
+                        ),
+                        const SizedBox(height: 24),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -127,7 +127,6 @@ class _IntroHeader extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            tooltip: context.l10n.commonBack,
             icon: Icon(
               Directionality.of(context) == TextDirection.rtl
                   ? Icons.arrow_forward_ios_rounded
@@ -138,9 +137,7 @@ class _IntroHeader extends ConsumerWidget {
           ),
           Text(
             context.l10n.sciencesScreenTitle,
-            style: AppTextStyles.headingMedium.copyWith(
-              color: AppColors.secondary,
-            ),
+            style: AppTextStyles.headingMedium.copyWith(color: AppColors.secondary),
           ),
           const SizedBox(width: 48), // Balance spacing
         ],
@@ -150,7 +147,10 @@ class _IntroHeader extends ConsumerWidget {
 }
 
 class _HeroCard extends ConsumerWidget {
-  const _HeroCard({required this.questionsAsync, required this.bestStars});
+  const _HeroCard({
+    required this.questionsAsync,
+    required this.bestStars,
+  });
 
   final AsyncValue<List<QuizQuestion>> questionsAsync;
   final int bestStars;
@@ -187,34 +187,27 @@ class _HeroCard extends ConsumerWidget {
                     children: [
                       Text(
                         context.l10n.sciencesStartFull,
-                        style: TextStyle(
-                          fontFamily: 'Cairo',
+                        style: GoogleFonts.cairo(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: AppColors.surface,
                           height: 1.2,
-                          fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                         ),
                       ),
                       const SizedBox(height: 8),
                       questionsAsync.when(
                         data: (q) => Text(
                           context.l10n.sciencesComprehensiveCount(q.length),
-                          style: TextStyle(
-                            fontFamily: 'Cairo',
+                          style: GoogleFonts.cairo(
                             fontSize: 14,
                             color: AppColors.surface.withAlpha(200),
-                            fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                         loading: () => const SizedBox(
                           height: 14,
                           width: 14,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                            color: Colors.white,
-                          ),
+                          child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
                         ),
                         error: (e, _) => const SizedBox(),
                       ),
@@ -290,9 +283,7 @@ class _CategoryGrid extends ConsumerWidget {
           },
         );
       },
-      loading: () => const Center(
-        child: CircularProgressIndicator(color: AppColors.primary),
-      ),
+      loading: () => const Center(child: CircularProgressIndicator(color: AppColors.primary)),
       error: (e, trace) => Center(child: Text(context.l10n.quizLoadingError)),
     );
   }
@@ -353,12 +344,10 @@ class _CategoryItemCard extends ConsumerWidget {
                 const Spacer(),
                 Text(
                   category,
-                  style: TextStyle(
-                    fontFamily: 'Cairo',
+                  style: GoogleFonts.cairo(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
-                    fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                   ),
                   textAlign: TextAlign.center,
                   maxLines: 1,
@@ -366,12 +355,10 @@ class _CategoryItemCard extends ConsumerWidget {
                 ),
                 Text(
                   context.l10n.sciencesCategoryCount(count),
-                  style: TextStyle(
-                    fontFamily: 'Cairo',
+                  style: GoogleFonts.cairo(
                     fontSize: 12,
                     color: AppColors.textMedium,
                     fontWeight: FontWeight.bold,
-                    fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                   ),
                 ),
               ],

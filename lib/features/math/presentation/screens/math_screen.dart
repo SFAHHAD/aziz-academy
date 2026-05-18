@@ -6,7 +6,7 @@ import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/features/math/providers/math_quiz_provider.dart';
 import 'package:aziz_academy/core/widgets/difficulty_row.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 class MathScreen extends ConsumerWidget {
@@ -14,10 +14,10 @@ class MathScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // Unlike Capitals or Flags, we always show the intro first
+    // Unlike Capitals or Flags, we always show the intro first 
     // unless they specifically launch a quiz session. For simplicity
     // we use a boolean flag or rely on routing explicitly `/math/quiz`.
-
+    
     return const _MathIntroScreen();
   }
 }
@@ -44,67 +44,66 @@ class _MathIntroScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: CenteredBody(
-          wide: true,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              _IntroHeader(),
-              Expanded(
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      _HeroCard(),
-                      const SizedBox(height: 18),
-                      Consumer(
-                        builder: (context, ref, _) {
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _IntroHeader(),
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _HeroCard(),
+                        const SizedBox(height: 18),
+                        Consumer(builder: (context, ref, _) {
                           return DifficultyRow(
                             value: ref.watch(mathDifficultyProvider),
-                            onChanged: (d) => ref
-                                .read(mathDifficultyProvider.notifier)
-                                .set(d),
+                            onChanged: (d) => ref.read(mathDifficultyProvider.notifier).set(d),
                             accentColor: const Color(0xFF2C63B3),
                           );
-                        },
-                      ),
-                      const SizedBox(height: 18),
-                      Text(
-                        context.l10n.mathOrChooseOperation,
-                        style: AppTextStyles.bodyMedium.copyWith(
-                          color: AppColors.textMedium,
-                          fontSize: 13,
+                        }),
+                        const SizedBox(height: 18),
+                        Text(
+                          context.l10n.mathOrChooseOperation,
+                          style: AppTextStyles.bodyMedium.copyWith(
+                            color: AppColors.textMedium,
+                            fontSize: 13,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 16),
-                      GridView.builder(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithMaxCrossAxisExtent(
-                              maxCrossAxisExtent: 280,
-                              mainAxisExtent: 140,
-                              mainAxisSpacing: 16,
-                              crossAxisSpacing: 16,
-                            ),
-                        itemCount: MathOperation.values.length,
-                        itemBuilder: (context, index) {
-                          final op = MathOperation.values[index];
-                          return _OperationCard(
-                            operation: op,
-                            title: _operations[op]!,
-                            color: _opColors[op]!,
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 24),
-                    ],
+                        const SizedBox(height: 16),
+                        GridView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate:
+                              const SliverGridDelegateWithMaxCrossAxisExtent(
+                            maxCrossAxisExtent: 280,
+                            mainAxisExtent: 140,
+                            mainAxisSpacing: 16,
+                            crossAxisSpacing: 16,
+                          ),
+                          itemCount: MathOperation.values.length,
+                          itemBuilder: (context, index) {
+                            final op = MathOperation.values[index];
+                            return _OperationCard(
+                              operation: op,
+                              title: _operations[op]!,
+                              color: _opColors[op]!,
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 24),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -121,7 +120,6 @@ class _IntroHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            tooltip: context.l10n.commonBack,
             icon: Icon(
               Directionality.of(context) == TextDirection.rtl
                   ? Icons.arrow_forward_ios_rounded
@@ -132,9 +130,7 @@ class _IntroHeader extends StatelessWidget {
           ),
           Text(
             context.l10n.mathScreenTitle,
-            style: AppTextStyles.headingMedium.copyWith(
-              color: AppColors.secondary,
-            ),
+            style: AppTextStyles.headingMedium.copyWith(color: AppColors.secondary),
           ),
           const SizedBox(width: 48), // Balance spacing
         ],
@@ -180,23 +176,19 @@ class _HeroCard extends ConsumerWidget {
                     children: [
                       Text(
                         context.l10n.mathStartFull,
-                        style: TextStyle(
-                          fontFamily: 'Cairo',
+                        style: GoogleFonts.cairo(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: AppColors.surface,
                           height: 1.2,
-                          fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                         ),
                       ),
                       const SizedBox(height: 8),
                       Text(
                         'أسئلة متنوعة لا نهائية!',
-                        style: TextStyle(
-                          fontFamily: 'Cairo',
+                        style: GoogleFonts.cairo(
                           fontSize: 14,
                           color: AppColors.surface.withAlpha(200),
-                          fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -270,23 +262,17 @@ class _OperationCard extends ConsumerWidget {
                 child: Center(
                   child: Text(
                     title.split(' ').last, // Extacts (+), (-), (x)
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: color,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 24, color: color, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
               const SizedBox(height: 8),
               Text(
                 title.split(' ').first, // Extracts "الجمع"
-                style: TextStyle(
-                  fontFamily: 'Cairo',
+                style: GoogleFonts.cairo(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: AppColors.primary,
-                  fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
                 ),
               ),
             ],

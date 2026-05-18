@@ -2,13 +2,11 @@ import 'dart:convert';
 import 'dart:math' as math;
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:aziz_academy/core/agents/event_bus.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
 import 'package:aziz_academy/core/models/quiz_difficulty.dart';
 import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
-import 'package:aziz_academy/core/providers/locale_provider.dart';
 import 'package:aziz_academy/core/providers/recap_arm_provider.dart';
 
 enum MathOperation { addition, subtraction, multiplication, division }
@@ -18,11 +16,7 @@ class MathOperationFilterNotifier extends Notifier<MathOperation?> {
   MathOperation? build() => null;
   void setFilter(MathOperation? op) => state = op;
 }
-
-final mathOperationProvider =
-    NotifierProvider<MathOperationFilterNotifier, MathOperation?>(
-      MathOperationFilterNotifier.new,
-    );
+final mathOperationProvider = NotifierProvider<MathOperationFilterNotifier, MathOperation?>(MathOperationFilterNotifier.new);
 
 class MathDifficultyNotifier extends Notifier<QuizDifficulty> {
   @override
@@ -32,15 +26,15 @@ class MathDifficultyNotifier extends Notifier<QuizDifficulty> {
 
 final mathDifficultyProvider =
     NotifierProvider<MathDifficultyNotifier, QuizDifficulty>(
-      MathDifficultyNotifier.new,
-      name: 'mathDifficultyProvider',
-    );
+  MathDifficultyNotifier.new,
+  name: 'mathDifficultyProvider',
+);
 
 final mathQuizProvider =
     AsyncNotifierProvider<MathQuizNotifier, QuizSessionState>(
-      MathQuizNotifier.new,
-      name: 'mathQuizProvider',
-    );
+  MathQuizNotifier.new,
+  name: 'mathQuizProvider',
+);
 
 class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
   @override
@@ -71,78 +65,40 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
           status: QuizStatus.complete,
         );
       }
-      final out = QuizSessionState(
+      return QuizSessionState(
         questions: List.of(questions)..shuffle(),
         currentIndex: 0,
         score: 0,
         livesRemaining: 3,
         status: QuizStatus.inProgress,
       );
-      EventBus.instance.emit(
-        LearningEvent(
-          type: LearningEventType.sessionStarted,
-          module: 'math',
-          timestamp: DateTime.now(),
-        ),
-      );
-      _lastQuestionStartedAt = DateTime.now();
-      return out;
     }
 
     final operation = ref.watch(mathOperationProvider);
     final diff = ref.watch(mathDifficultyProvider);
-    final isArabic = ref.watch(localeProvider).value?.languageCode == 'ar';
-    final count = diff == QuizDifficulty.easy
-        ? 5
-        : (diff == QuizDifficulty.medium ? 10 : 15);
-    final questions = _generateQuestions(
-      operation,
-      count: count,
-      difficulty: diff,
-      arabic: isArabic,
-    );
+    final count =
+        diff == QuizDifficulty.easy ? 5 : (diff == QuizDifficulty.medium ? 10 : 15);
+    final questions = _generateQuestions(operation, count: count, difficulty: diff);
 
-    final out = QuizSessionState(
+    return QuizSessionState(
       questions: questions,
       currentIndex: 0,
       score: 0,
       livesRemaining: 3,
       status: QuizStatus.inProgress,
     );
-    EventBus.instance.emit(
-      LearningEvent(
-        type: LearningEventType.sessionStarted,
-        module: 'math',
-        timestamp: DateTime.now(),
-      ),
-    );
-    _lastQuestionStartedAt = DateTime.now();
-    return out;
   }
 
-  DateTime? _lastQuestionStartedAt;
-
-  List<QuizQuestion> _generateQuestions(
-    MathOperation? opFilter, {
-    required int count,
-    QuizDifficulty difficulty = QuizDifficulty.medium,
-    bool arabic = true,
-  }) {
+  List<QuizQuestion> _generateQuestions(MathOperation? opFilter, {required int count, QuizDifficulty difficulty = QuizDifficulty.medium}) {
     final random = math.Random();
     List<QuizQuestion> generated = [];
 
     // Number ranges per difficulty
-    final addMax = difficulty == QuizDifficulty.easy
-        ? 10
-        : (difficulty == QuizDifficulty.medium ? 40 : 99);
-    final mulMax = difficulty == QuizDifficulty.easy
-        ? 5
-        : (difficulty == QuizDifficulty.medium ? 10 : 15);
+    final addMax  = difficulty == QuizDifficulty.easy ? 10 : (difficulty == QuizDifficulty.medium ? 40 : 99);
+    final mulMax  = difficulty == QuizDifficulty.easy ? 5  : (difficulty == QuizDifficulty.medium ? 10 : 15);
 
     for (var i = 0; i < count; i++) {
-      final op =
-          opFilter ??
-          MathOperation.values[random.nextInt(MathOperation.values.length)];
+      final op = opFilter ?? MathOperation.values[random.nextInt(MathOperation.values.length)];
       int a, b, answer;
       String operatorStr;
 
@@ -185,53 +141,30 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
         }
       }
 
-      final allOptions = [
-        ...wrongOptions.map((e) => e.toString()),
-        answer.toString(),
-      ]..shuffle(random);
+      final allOptions = [...wrongOptions.map((e) => e.toString()), answer.toString()]..shuffle(random);
 
-      String categoryStr = _getOpCategoryStr(op, arabic: arabic);
+      String categoryStr = _getOpCategoryStr(op);
 
       generated.add(
         QuizQuestion(
           id: 'math_${op.name}_$i',
-          question: arabic
-              ? '$a $operatorStr $b = ؟'
-              : '$a $operatorStr $b = ?',
+          question: '$a $operatorStr $b = ؟',
           options: allOptions,
           correctAnswer: answer.toString(),
           category: categoryStr,
-          funFact: arabic
-              ? 'عمل رائع! الإجابة الصحيحة هي $answer.'
-              : 'Great job! The correct answer is $answer.',
+          funFact: 'عمل رائع! الإجابة الصحيحة هي $answer.',
         ),
       );
     }
     return generated;
   }
 
-  String _getOpCategoryStr(MathOperation op, {bool arabic = true}) {
-    if (arabic) {
-      switch (op) {
-        case MathOperation.addition:
-          return 'الجمع';
-        case MathOperation.subtraction:
-          return 'الطرح';
-        case MathOperation.multiplication:
-          return 'الضرب';
-        case MathOperation.division:
-          return 'القسمة';
-      }
-    }
+  String _getOpCategoryStr(MathOperation op) {
     switch (op) {
-      case MathOperation.addition:
-        return 'Addition';
-      case MathOperation.subtraction:
-        return 'Subtraction';
-      case MathOperation.multiplication:
-        return 'Multiplication';
-      case MathOperation.division:
-        return 'Division';
+      case MathOperation.addition: return 'الجمع';
+      case MathOperation.subtraction: return 'الطرح';
+      case MathOperation.multiplication: return 'الضرب';
+      case MathOperation.division: return 'القسمة';
     }
   }
 
@@ -245,29 +178,11 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
     final nextLives = isCorrect
         ? session.livesRemaining
         : (practice ? session.livesRemaining : session.livesRemaining - 1);
-
-    final lat = _lastQuestionStartedAt == null
-        ? 0
-        : DateTime.now().difference(_lastQuestionStartedAt!).inMilliseconds;
-    EventBus.instance.emit(
-      LearningEvent(
-        type: LearningEventType.questionAnswered,
-        module: 'math',
-        timestamp: DateTime.now(),
-        questionId: current.id,
-        category: current.category,
-        correct: isCorrect,
-        latencyMs: lat,
-      ),
-    );
-
-    state = AsyncData(
-      session.copyWith(
-        score: isCorrect ? session.score + 1 : session.score,
-        livesRemaining: nextLives,
-        lastAnswerCorrect: isCorrect,
-      ),
-    );
+    state = AsyncData(session.copyWith(
+      score: isCorrect ? session.score + 1 : session.score,
+      livesRemaining: nextLives,
+      lastAnswerCorrect: isCorrect,
+    ));
     return isCorrect;
   }
 
@@ -277,55 +192,32 @@ class MathQuizNotifier extends AsyncNotifier<QuizSessionState> {
 
     final nextIndex = session.currentIndex + 1;
     if (nextIndex >= session.totalQuestions) {
-      EventBus.instance.emit(
-        LearningEvent(
-          type: LearningEventType.sessionEnded,
-          module: 'math',
-          timestamp: DateTime.now(),
-          score: session.score,
-        ),
-      );
-      state = AsyncData(
-        session.copyWith(
-          currentIndex: nextIndex,
-          status: QuizStatus.complete,
-          clearLastAnswer: true,
-        ),
-      );
+      state = AsyncData(session.copyWith(
+        currentIndex: nextIndex,
+        status: QuizStatus.complete,
+        clearLastAnswer: true,
+      ));
     } else {
-      _lastQuestionStartedAt = DateTime.now();
-      state = AsyncData(
-        session.copyWith(
-          currentIndex: nextIndex,
-          status: QuizStatus.inProgress,
-          clearLastAnswer: true,
-        ),
-      );
+      state = AsyncData(session.copyWith(
+        currentIndex: nextIndex,
+        status: QuizStatus.inProgress,
+        clearLastAnswer: true,
+      ));
     }
   }
 
   void restart() {
     final operation = ref.read(mathOperationProvider);
     final diff = ref.read(mathDifficultyProvider);
-    final isArabic = ref.read(localeProvider).value?.languageCode == 'ar';
-    final count = diff == QuizDifficulty.easy
-        ? 5
-        : (diff == QuizDifficulty.medium ? 10 : 15);
-    final newQuestions = _generateQuestions(
-      operation,
-      count: count,
-      difficulty: diff,
-      arabic: isArabic,
-    );
-
-    state = AsyncData(
-      QuizSessionState(
-        questions: newQuestions,
-        currentIndex: 0,
-        score: 0,
-        livesRemaining: 3,
-        status: QuizStatus.inProgress,
-      ),
-    );
+    final count = diff == QuizDifficulty.easy ? 5 : (diff == QuizDifficulty.medium ? 10 : 15);
+    final newQuestions = _generateQuestions(operation, count: count, difficulty: diff);
+    
+    state = AsyncData(QuizSessionState(
+      questions: newQuestions,
+      currentIndex: 0,
+      score: 0,
+      livesRemaining: 3,
+      status: QuizStatus.inProgress,
+    ));
   }
 }

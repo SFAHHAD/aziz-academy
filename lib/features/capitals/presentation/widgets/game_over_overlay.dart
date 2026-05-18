@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
@@ -24,7 +23,6 @@ class GameOverOverlay extends StatefulWidget {
   final QuizSessionState session;
   final VoidCallback onTryAgain;
   final VoidCallback onBack;
-
   /// Shown when available (e.g. fun fact for the last question).
   final String? learningTip;
 
@@ -119,10 +117,7 @@ class _GameOverOverlayState extends State<GameOverOverlay>
             child: SlideTransition(
               position: _slide,
               child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 28,
-                  vertical: 40,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 40),
                 child: ConstrainedBox(
                   constraints: BoxConstraints(maxWidth: isTablet ? 480 : 360),
                   child: Container(
@@ -209,7 +204,7 @@ class _GameOverOverlayState extends State<GameOverOverlay>
                         TextButton.icon(
                           onPressed: widget.onBack,
                           icon: const Icon(Icons.home_rounded, size: 20),
-                          label: Text(context.l10n.quizBackToMenu),
+                          label: const Text('العودة للقائمة'),
                           style: TextButton.styleFrom(
                             foregroundColor: AppColors.textMedium,
                             minimumSize: const Size(double.infinity, 48),
@@ -269,8 +264,10 @@ class _HeartRefillSection extends StatelessWidget {
                 child: AnimatedSwitcher(
                   duration: const Duration(milliseconds: 350),
                   switchInCurve: Curves.elasticOut,
-                  transitionBuilder: (child, anim) =>
-                      ScaleTransition(scale: anim, child: child),
+                  transitionBuilder: (child, anim) => ScaleTransition(
+                    scale: anim,
+                    child: child,
+                  ),
                   child: Icon(
                     filled
                         ? Icons.favorite_rounded
@@ -323,7 +320,7 @@ class _GameOverScorePill extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(context.l10n.quizRoundScore, style: AppTextStyles.caption),
+              Text('نقاط هذه الجولة', style: AppTextStyles.caption),
               const SizedBox(height: 2),
               Row(
                 children: [
@@ -382,10 +379,9 @@ class _PulsingButtonState extends State<_PulsingButton>
       vsync: this,
       duration: const Duration(milliseconds: 900),
     );
-    _pulse = Tween<double>(
-      begin: 1.0,
-      end: 1.06,
-    ).animate(CurvedAnimation(parent: _pulseCtrl, curve: Curves.easeInOut));
+    _pulse = Tween<double>(begin: 1.0, end: 1.06).animate(
+      CurvedAnimation(parent: _pulseCtrl, curve: Curves.easeInOut),
+    );
   }
 
   @override
@@ -417,9 +413,7 @@ class _PulsingButtonState extends State<_PulsingButton>
         child: ElevatedButton(
           onPressed: widget.onPressed,
           style: ElevatedButton.styleFrom(
-            backgroundColor: widget.isPulsing
-                ? AppColors.success
-                : AppColors.primary,
+            backgroundColor: widget.isPulsing ? AppColors.success : AppColors.primary,
             foregroundColor: Colors.white,
             minimumSize: const Size(double.infinity, 56),
             textStyle: AppTextStyles.labelLarge,

@@ -55,31 +55,3 @@ ios/ExportOptions-ci.plist
 
 # Symbolication / obfuscation (if used)
 app.*.symbols
-
-# --- Local temp media (intermediate recordings / downloads at repo root) ---
-/temp_*.mp3
-/temp_*.wav
-/temp_*.m4a
-/temp_*.mp4
-
-# --- Local web build archives at root ---
-/AzizAcademy_WebBuild*.zip
-
-# --- Local scratch / scan / analyzer output at root ---
-/analyze.txt
-/analyze_output.txt
-/build.txt
-/build_log.txt
-/emoji_scan.txt
-/machine_analyze.txt
-/machine_analyze_utf8.txt
-/router_paths.txt
-/sitemap_paths.txt
-/New Text Document.txt
-
-# --- Local Lighthouse / profiling reports ---
-/lighthouse-report.html
-/lighthouse-report.json
-
-# --- Flutter test result caches ---
-/.flutter-test-results/

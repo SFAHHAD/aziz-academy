@@ -4,6 +4,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:aziz_academy/core/models/quiz_question.dart';
 
+// ---------------------------------------------------------------------------
+// Raw DTO — mirrors the shape of assets/data/capitals.json exactly.
+// ---------------------------------------------------------------------------
+
 class CapitalEntry {
   const CapitalEntry({
     required this.id,
@@ -58,43 +62,43 @@ class CapitalEntry {
     );
   }
 
-  QuizQuestion toQuizQuestion({required bool arabic}) {
+  /// Maps this raw entry to the shared [QuizQuestion] domain model.
+  QuizQuestion toQuizQuestion() {
+    // Rely exclusively on offline assets which have been upgraded to High Resolution
     final resolvedFlagUrl = flagAsset ?? 'assets/images/flags/$id.png';
-    final opts = arabic
-        ? List<String>.from(optionsAr)
-        : List<String>.from(options);
-    opts.shuffle(math.Random());
+
+    // Use Arabic options, shuffled randomly each time.
+    final shuffled = List<String>.from(optionsAr)..shuffle(math.Random());
+
     return QuizQuestion(
       id: id,
-      question: arabic
-          ? 'ما عاصمة $countryAr؟'
-          : 'What is the capital of $country?',
-      options: opts,
-      correctAnswer: arabic ? capitalAr : capital,
+      question: 'ما عاصمة $countryAr؟',
+      options: shuffled,
+      correctAnswer: capitalAr,
       category: continent,
       funFact: funFact,
       imageUrl: imageUrl,
       flagUrl: resolvedFlagUrl,
-      difficulty: difficulty,
     );
   }
 }
+
+// ---------------------------------------------------------------------------
+// Repository
+// ---------------------------------------------------------------------------
 
 class CapitalsRepository {
   const CapitalsRepository();
 
   static const _assetPath = 'assets/data/capitals.json';
 
-  Future<List<QuizQuestion>> loadQuestions({bool arabic = true}) async {
+  Future<List<QuizQuestion>> loadQuestions() async {
     try {
       final raw = await rootBundle.loadString(_assetPath);
       final List<dynamic> decoded = jsonDecode(raw) as List<dynamic>;
       return decoded
-          .map(
-            (e) => CapitalEntry.fromJson(
-              e as Map<String, dynamic>,
-            ).toQuizQuestion(arabic: arabic),
-          )
+          .map((e) => CapitalEntry.fromJson(e as Map<String, dynamic>)
+              .toQuizQuestion())
           .toList();
     } catch (e, st) {
       debugPrint('CapitalsRepository.loadQuestions failed: $e\n$st');

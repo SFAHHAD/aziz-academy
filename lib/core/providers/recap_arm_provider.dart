@@ -13,9 +13,8 @@ class RecapArm {
   List<String> get ids => entries.map((e) => e.questionId).toList();
 }
 
-final recapArmProvider = NotifierProvider<RecapArmNotifier, RecapArm?>(
-  RecapArmNotifier.new,
-);
+final recapArmProvider =
+    NotifierProvider<RecapArmNotifier, RecapArm?>(RecapArmNotifier.new);
 
 class RecapArmNotifier extends Notifier<RecapArm?> {
   @override

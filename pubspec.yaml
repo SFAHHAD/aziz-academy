@@ -1,5 +1,5 @@
 name: aziz_academy
-description: "Aziz Academy — bilingual (AR/EN) educational app for kids 6–12. 90+ activities across school subjects, brain games, and Islamic basics. No ads, no tracking, on-device only."
+description: "Aziz Academy — an interactive educational app for kids aged 8–12, covering world maps, capitals, and logos."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.1.113+118
+version: 1.0.0+4
 
 environment:
   sdk: ^3.11.1
@@ -31,12 +31,17 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
   flutter_localizations:
     sdk: flutter
   intl: ^0.20.2
   flutter_riverpod: ^3.3.1
   audioplayers: ^6.1.1
   go_router: ^17.1.0
+  flutter_svg: ^2.2.4
+  google_fonts: ^8.0.2
   confetti: ^0.8.0
   shared_preferences: ^2.5.3
   flutter_map: ^8.2.2
@@ -44,12 +49,9 @@ dependencies:
   dio_cache_interceptor: ^4.0.6
   latlong2: ^0.9.1
   flutter_tts: ^4.2.5
-  share_plus: ^12.0.2
-  path_provider: ^2.1.4
+  share_plus: ^10.1.4
   file_picker: ^11.0.2
   lottie: ^3.1.0
-  supabase_flutter: ^2.8.0
-  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
@@ -76,279 +78,8 @@ flutter:
     - assets/data/maps.json
     - assets/data/logos.json
     - assets/data/sciences.json
-    - assets/data/sciences_l2.json
-    - assets/data/sciences_l3.json
-    - assets/data/sciences_l4.json
-    - assets/data/sciences_l5.json
-    - assets/data/sciences_l6.json
-    - assets/data/iq.json
-    - assets/data/brain_boost.json
-    - assets/data/brain_boost_samples.json
-    - assets/data/brain_boost_spatial.json
-    - assets/data/brain_boost_memory.json
-    - assets/data/brain_boost_spatial_extra.json
-    - assets/data/brain_boost_memory_extra.json
-    - assets/data/brain_boost_patterns_extra.json
-    - assets/data/brain_boost_mental_math_extra.json
-    - assets/data/brain_boost_analogies_extra.json
-    - assets/data/brain_boost_logic_extra.json
-    - assets/data/brain_boost_patterns_extra2.json
-    - assets/data/brain_boost_mental_math_extra2.json
-    - assets/data/brain_boost_analogies_extra2.json
-    - assets/data/brain_boost_logic_extra2.json
-    - assets/data/brain_boost_analogies_extra3.json
-    - assets/data/brain_boost_patterns_extra3.json
-    - assets/data/brain_boost_logic_extra3.json
-    - assets/data/brain_boost_memory_extra2.json
-    - assets/data/brain_boost_mental_math_extra3.json
-    - assets/data/brain_boost_spatial_extra2.json
-    - assets/data/english_grammar.json
-    - assets/data/arabic_grammar.json
-    - assets/data/fiqh_basics.json
-    - assets/data/sirah_prophets.json
-    - assets/data/dua_memorization.json
-    - assets/data/hadith_memorization.json
-    - assets/data/asma_ul_husna_memorization.json
-    - assets/data/prophet_stories.json
-    - assets/data/salah_steps.json
-    - assets/data/tajweed_basics.json
-    - assets/data/wudu_steps.json
-    - assets/data/five_pillars.json
-    - assets/data/six_articles_of_faith.json
-    - assets/data/asma_ul_husna.json
-    - assets/data/hadith_kids.json
-    - assets/data/islamic_history.json
-    - assets/data/financial_literacy.json
-    - assets/data/health_body.json
-    - assets/data/environment_sustainability.json
-    - assets/data/coding_for_kids.json
-    - assets/data/art_culture.json
-    - assets/data/sports_games.json
-    - assets/data/chemistry_deep.json
-    - assets/data/astronomy_space.json
-    - assets/data/famous_inventions.json
-    - assets/data/world_history.json
-    - assets/data/riddles_puzzles.json
-    - assets/data/plants_botany.json
-    - assets/data/cooking_nutrition.json
-    - assets/data/music_instruments.json
-    - assets/data/quran_prophet_stories.json
-    - assets/data/arabic_poetry_literature.json
-    - assets/data/dinosaurs_prehistoric.json
-    - assets/data/weather_natural_phenomena.json
-    - assets/data/body_anatomy.json
-    - assets/data/kuwait_heritage.json
-    - assets/data/sign_language.json
-    - assets/data/world_mythology.json
-    - assets/data/oceanography.json
-    - assets/data/logic_critical_thinking.json
-    - assets/data/architecture_marvels.json
-    - assets/data/famous_experiments.json
-    - assets/data/chess_fundamentals.json
-    - assets/data/first_aid_basics.json
-    - assets/data/rivers_lakes.json
-    - assets/data/periodic_elements.json
-    - assets/data/cybersecurity_kids.json
-    - assets/data/clouds_atmosphere.json
-    - assets/data/famous_scientists_deep.json
-    - assets/data/emotional_intelligence.json
-    - assets/data/inventions_antiquity.json
-    - assets/data/quran_sciences.json
-    - assets/data/entrepreneurship_kids.json
-    - assets/data/maps_cartography.json
-    - assets/data/robotics_ai_kids.json
-    - assets/data/modern_tech_basics.json
-    - assets/data/human_brain.json
-    - assets/data/climate_change_kids.json
-    - assets/data/optical_illusions_vision.json
-    - assets/data/insects_bugs.json
-    - assets/data/female_scholars_pioneers.json
-    - assets/data/ancient_egypt.json
-    - assets/data/volcanoes_earthquakes.json
-    - assets/data/microbes_cells.json
-    - assets/data/maritime_exploration.json
-    - assets/data/telescopes_discoveries.json
-    - assets/data/money_trade_history.json
-    - assets/data/calligraphy_writing.json
-    - assets/data/mountains_peaks.json
-    - assets/data/codes_ciphers.json
-    - assets/data/ancient_mesopotamia.json
-    - assets/data/deserts_world.json
-    - assets/data/aviation_history.json
-    - assets/data/medicine_pioneers.json
-    - assets/data/ancient_china.json
-    - assets/data/famous_mathematicians.json
-    - assets/data/african_civilizations.json
-    - assets/data/time_clocks.json
-    - assets/data/photography.json
-    - assets/data/forests_biomes.json
-    - assets/data/famous_battles.json
-    - assets/data/olympic_games.json
-    - assets/data/cars_engineering.json
-    - assets/data/languages_world.json
-    - assets/data/ancient_india.json
-    - assets/data/bridges_tunnels.json
-    - assets/data/treaties_diplomacy.json
-    - assets/data/sleep_dreams.json
-    - assets/data/trains_railways.json
-    - assets/data/renaissance_art.json
-    - assets/data/submarines_ocean_tech.json
-    - assets/data/wildlife_conservation.json
-    - assets/data/simple_machines.json
-    - assets/data/music_genres.json
-    - assets/data/internet_history.json
-    - assets/data/modern_inventions.json
-    - assets/data/economics_basics.json
-    - assets/data/famous_mosques.json
-    - assets/data/marine_biology.json
-    - assets/data/ancient_greece.json
-    - assets/data/polar_regions.json
-    - assets/data/gemstones_minerals.json
-    - assets/data/world_festivals.json
-    - assets/data/famous_lighthouses.json
-    - assets/data/egyptian_pharaohs.json
-    - assets/data/fairy_tales_world.json
-    - assets/data/famous_libraries.json
-    - assets/data/beekeeping_pollinators.json
-    - assets/data/classical_composers.json
-    - assets/data/famous_universities.json
-    - assets/data/currencies_history.json
-    - assets/data/famous_stadiums.json
-    - assets/data/famous_castles.json
-    - assets/data/tea_coffee_history.json
-    - assets/data/spice_trade.json
-    - assets/data/renewable_energy.json
-    - assets/data/famous_mountaineers.json
-    - assets/data/chocolate_history.json
-    - assets/data/famous_architects.json
-    - assets/data/birds_of_prey.json
-    - assets/data/magnets_electromagnetism.json
-    - assets/data/iconic_trees_world.json
-    - assets/data/anatomy_senses.json
-    - assets/data/toys_history.json
-    - assets/data/roman_empire.json
-    - assets/data/vikings_norse.json
-    - assets/data/hajj_umrah.json
-    - assets/data/ottoman_empire.json
-    - assets/data/mesoamerica_civilizations.json
-    - assets/data/salah_prayer.json
-    - assets/data/mughal_empire.json
-    - assets/data/computer_pioneers.json
-    - assets/data/sound_acoustics.json
-    - assets/data/mongolian_empire.json
-    - assets/data/sahaba_companions.json
-    - assets/data/famous_detectives_lit.json
-    - assets/data/famous_disasters_history.json
-    - assets/data/the_imams_madhabs.json
-    - assets/data/famous_authors_kids.json
-    - assets/data/black_holes_cosmology.json
-    - assets/data/stars_life_cycle.json
-    - assets/data/constellations_stories.json
-    - assets/data/famous_modern_cities.json
-    - assets/data/famous_pirates_real.json
-    - assets/data/famous_modern_chefs.json
-    - assets/data/dna_genes_basics.json
-    - assets/data/plate_tectonics_deep.json
-    - assets/data/world_records_guinness.json
-    - assets/data/whales_dolphins_deep.json
-    - assets/data/famous_modern_athletes.json
-    - assets/data/islamic_calendar_months.json
-    - assets/data/famous_volcanoes_deep.json
-    - assets/data/periodic_table_basics.json
-    - assets/data/sharks_world_deep.json
-    - assets/data/famous_bridges_world.json
-    - assets/data/robots_ai_history.json
-    - assets/data/insects_world.json
-    - assets/data/big_cats_world.json
-    - assets/data/famous_castles_world.json
-    - assets/data/currency_money_history.json
-    - assets/data/famous_skyscrapers.json
-    - assets/data/mythological_creatures.json
-    - assets/data/automobile_history.json
-    - assets/data/famous_museums_world.json
-    - assets/data/birds_world.json
-    - assets/data/frogs_amphibians.json
-    - assets/data/comic_book_heroes.json
-    - assets/data/cold_war_spies.json
-    - assets/data/unesco_heritage_sites.json
-    - assets/data/penguins_world_deep.json
-    - assets/data/coral_reefs_world.json
-    - assets/data/snakes_world.json
-    - assets/data/spiders_arachnids.json
-    - assets/data/famous_caves_world.json
-    - assets/data/movies_cinema_history.json
-    - assets/data/famous_photographers.json
-    - assets/data/famous_beaches.json
-    - assets/data/famous_foods_world.json
-    - assets/data/famous_roads_routes.json
-    - assets/data/famous_ships_boats.json
-    - assets/data/famous_magicians.json
-    - assets/data/famous_walls.json
-    - assets/data/famous_hotels.json
-    - assets/data/famous_comets.json
-    - assets/data/antarctic_explorers.json
-    - assets/data/famous_statues.json
-    - assets/data/famous_operas_musicals.json
-    - assets/data/famous_aquariums_zoos.json
-    - assets/data/famous_fossils.json
-    - assets/data/famous_diamonds.json
-    - assets/data/famous_plays.json
-    - assets/data/famous_dancers_ballet.json
-    - assets/data/famous_national_parks.json
-    - assets/data/famous_animals_history.json
-    - assets/data/famous_music_festivals.json
-    - assets/data/famous_painters.json
-    - assets/data/famous_astronauts.json
-    - assets/data/famous_logos.json
-    - assets/data/famous_inventors.json
-    - assets/data/famous_theme_parks.json
-    - assets/data/famous_video_games.json
-    - assets/data/famous_tennis_players.json
-    - assets/data/famous_cartoons.json
-    - assets/data/famous_aircraft_spacecraft.json
-    - assets/data/famous_programming_languages.json
-    - assets/data/famous_childrens_tv.json
-    - assets/data/famous_pets_history.json
-    - assets/data/famous_f1_drivers.json
-    - assets/data/famous_chess_players.json
-    - assets/data/famous_galaxies_cosmic.json
-    - assets/data/famous_palaces_world.json
-    - assets/data/famous_boxers.json
-    - assets/data/famous_game_consoles.json
-    - assets/data/general_quiz.json
-    - assets/data/learning_zone.json
-    - assets/data/learning_zone_extra.json
-    - assets/data/learning_zone_extra2.json
-    - assets/data/learning_zone_extra3.json
-    - assets/data/spelling.json
-    - assets/data/spelling_extra.json
-    - assets/data/math_word_problems.json
-    - assets/data/math_word_problems_gcc.json
-    - assets/data/vocabulary.json
-    - assets/data/quran_short_surahs.json
-    - assets/data/landmarks.json
-    - assets/data/historical_figures.json
-    - assets/data/animals_nature.json
-    - assets/data/geography.json
     - assets/images/
     - assets/images/flags/
     - assets/images/logos/
-    - assets/images/emojis/
     - assets/audio/
-    - assets/audio/hadith/
-    - assets/audio/azkar/
-    - assets/audio/names/
-    - assets/audio/dua/
-    - assets/audio/tajweed/
     - assets/lottie/
-
-  fonts:
-    - family: Cairo
-      fonts:
-        - asset: assets/fonts/Cairo-Regular.ttf
-    - family: Amiri
-      fonts:
-        - asset: assets/fonts/Amiri-Regular.ttf
-    - family: NotoColorEmoji
-      fonts:
-        - asset: assets/fonts/NotoColorEmoji.ttf

@@ -1,4 +1,4 @@
-﻿name: Flutter CI
+name: Flutter CI
 
 on:
   push:
@@ -15,35 +15,19 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
-          # Pin to the version used locally (March 2026 stable).
-          # Bump when you upgrade local Flutter intentionally so CI keeps parity.
-          flutter-version: "3.41.4"
           cache: true
 
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Version consistency
-        # Guards against pubspec.yaml drifting from the hardcoded
-        # _kAppVersion constants in the splash / about / admin screens.
-        run: python3 scripts/audit_version_consistency.py
-
-      - name: Content audits (fonts + sitemap routes)
-        # Note: audit_islamic_audio.py has a write side-effect
-        # (regenerates islamic_audio_registry.dart). Run it locally;
-        # not in CI to keep the run hermetic.
-        run: |
-          python3 scripts/audit_font_coverage.py
-          python3 scripts/audit_sitemap_routes.py
-
       - name: Analyze
-        # Note: NOT using --fatal-infos --fatal-warnings here yet.
-        # The codebase is too large to enforce that today; flip it on
-        # one lint at a time per AUDIT_PLAN.md Phase 3.4.
-        run: flutter analyze
+        run: flutter analyze --fatal-infos --fatal-warnings
 
       - name: Test
         run: flutter test
 
       - name: Build web (release, JavaScript)
         run: flutter build web --release
+
+      - name: Build web (release, WebAssembly)
+        run: flutter build web --release --wasm

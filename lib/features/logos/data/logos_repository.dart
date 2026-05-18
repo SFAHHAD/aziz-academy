@@ -4,6 +4,10 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/painting.dart' show Color;
 import 'package:aziz_academy/core/models/quiz_question.dart';
 
+// ---------------------------------------------------------------------------
+// DTO — mirrors logos.json shape exactly.
+// ---------------------------------------------------------------------------
+
 class LogoEntry {
   const LogoEntry({
     required this.id,
@@ -22,7 +26,7 @@ class LogoEntry {
   final String id;
   final String brand;
   final String brandAr;
-  final String logoUrl;
+  final String logoUrl;        // Network URL from clearbit / logo.dev CDN
   final Color brandColor;
   final List<String> options;
   final List<String> optionsAr;
@@ -33,8 +37,13 @@ class LogoEntry {
 
   factory LogoEntry.fromJson(Map<String, dynamic> json) {
     final hex = (json['brand_color'] as String).replaceFirst('#', 'FF');
-    final logoUrl =
-        json['logo_asset'] as String? ?? (json['logo_url'] as String?) ?? '';
+
+    // Prefer bundled assets; fall back to network URL when present in JSON.
+    final logoUrl = json['logo_asset'] as String? ??
+        (json['logo_url'] as String?) ??
+        '';
+
+    // Support Arabic options, fall back to English
     final optionsAr = json['options_ar'] != null
         ? List<String>.from(json['options_ar'] as List)
         : List<String>.from(json['options'] as List);
@@ -49,45 +58,48 @@ class LogoEntry {
       optionsAr: optionsAr,
       correctAnswer: json['correct_answer'] as String,
       correctAnswerAr:
-          json['correct_answer_ar'] as String? ??
-          json['correct_answer'] as String,
+          json['correct_answer_ar'] as String? ?? json['correct_answer'] as String,
       category: json['category'] as String,
       difficulty: json['difficulty'] as int,
     );
   }
 
-  QuizQuestion toQuizQuestion({required bool arabic}) {
-    final opts = arabic
-        ? List<String>.from(optionsAr)
-        : List<String>.from(options);
-    opts.shuffle(math.Random());
+  /// Maps to [QuizQuestion]:
+  ///  • question  = Arabic brand name (shown in reveal)
+  ///  • imageUrl  = network logo URL
+  ///  • options   = Arabic options, shuffled
+  ///  • correctAnswer = Arabic brand name
+  QuizQuestion toQuizQuestion() {
+    // Shuffle Arabic options randomly each time.
+    final shuffled = List<String>.from(optionsAr)..shuffle(math.Random());
+
     return QuizQuestion(
       id: id,
-      question: arabic ? brandAr : brand,
-      options: opts,
-      correctAnswer: arabic ? correctAnswerAr : correctAnswer,
+      question: brandAr,               // Arabic brand name for reveal
+      options: shuffled,
+      correctAnswer: correctAnswerAr,  // Arabic correct answer to match options
       category: category,
-      funFact: id,
-      imageUrl: logoUrl,
-      difficulty: difficulty,
+      funFact: id,                      // reuse funFact to carry the l10n key
+      imageUrl: logoUrl,                // CDN URL — loaded with Image.network
     );
   }
 }
+
+// ---------------------------------------------------------------------------
+// Repository
+// ---------------------------------------------------------------------------
 
 class LogosRepository {
   const LogosRepository();
 
   static const _assetPath = 'assets/data/logos.json';
 
-  Future<List<QuizQuestion>> loadQuestions({bool arabic = true}) async {
+  Future<List<QuizQuestion>> loadQuestions() async {
     final raw = await rootBundle.loadString(_assetPath);
     final List<dynamic> decoded = jsonDecode(raw) as List<dynamic>;
     return decoded
-        .map(
-          (e) => LogoEntry.fromJson(
-            e as Map<String, dynamic>,
-          ).toQuizQuestion(arabic: arabic),
-        )
+        .map((e) =>
+            LogoEntry.fromJson(e as Map<String, dynamic>).toQuizQuestion())
         .toList();
   }
 }

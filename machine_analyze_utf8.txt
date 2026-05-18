@@ -1,0 +1,25 @@
+﻿
+warning - Duplicate import - lib\features\capitals\presentation\screens\capitals_quiz_screen.dart:14:8 - duplicate_import
+   info - Unnecessary use of multiple underscores - lib\features\capitals\presentation\screens\capitals_quiz_screen.dart:869:20 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\features\home\home_screen.dart:213:35 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\features\home\home_screen.dart:213:39 - unnecessary_underscores
+warning - Duplicate import - lib\features\logos\presentation\screens\logos_screen.dart:14:8 - duplicate_import
+warning - Unused import: 'package:aziz_academy/core/providers/achievement_provider.dart' - lib\features\maps\presentation\screens\maps_screen.dart:7:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:88:65 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:91:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:102:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:133:58 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:202:43 - deprecated_member_use
+warning - Dead code - lib\features\maps\presentation\screens\maps_screen.dart:226:91 - dead_code
+warning - The left operand can't be null, so the right operand is never executed - lib\features\maps\presentation\screens\maps_screen.dart:226:94 - dead_null_aware_expression
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:321:59 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:363:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:447:28 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\screens\maps_screen.dart:448:31 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\widgets\real_interactive_map.dart:70:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\maps\presentation\widgets\real_interactive_map.dart:136:40 - deprecated_member_use
+warning - Unused import: 'package:aziz_academy/core/providers/achievement_provider.dart' - lib\features\sciences\presentation\screens\sciences_quiz_screen.dart:12:8 - unused_import
+warning - Duplicate import - lib\features\sciences\presentation\screens\sciences_quiz_screen.dart:14:8 - duplicate_import
+warning - The value of the local variable 'session' isn't used - lib\features\sciences\presentation\screens\sciences_quiz_screen.dart:101:17 - unused_local_variable
+   info - Unnecessary use of multiple underscores - lib\features\sciences\presentation\screens\sciences_quiz_screen.dart:866:20 - unnecessary_underscores
+

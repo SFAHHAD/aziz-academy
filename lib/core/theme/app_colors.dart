@@ -48,37 +48,38 @@ abstract final class AppColors {
   static const Color surfaceCardDark = surfaceContainer;
 
   // ── Module colours ──────────────────────────────────────────────────────────
-  static const Color mapsColor = Color(0xFF00C896); // Teal
-  static const Color capitalsColor = Color(0xFF00E5FF); // Star Blue
-  static const Color logosColor = Color(0xFFB07FE8); // Soft purple
+  static const Color mapsColor = Color(0xFF00C896);      // Teal
+  static const Color capitalsColor = Color(0xFF00E5FF);  // Star Blue
+  static const Color logosColor = Color(0xFFB07FE8);     // Soft purple
 
   // ── Status ──────────────────────────────────────────────────────────────────
   static const Color success = Color(0xFF00C896); // Teal
-  static const Color error = Color(0xFFFF3D3D); // Crimson Red
+  static const Color error   = Color(0xFFFF3D3D); // Crimson Red
   static const Color warning = Color(0xFFE9C349); // Keep warning gold
 
   // ── Text ────────────────────────────────────────────────────────────────────
-  static const Color textDark = Color(0xFFE0F4FF); // pale star blue
-  static const Color textMedium = Color(0xFFA5C9E5); // muted
-  static const Color textLight = Color(0xFFFFFFFF); // pure white
-  static const Color textGold = Color(
-    0xFF00E5FF,
-  ); // using star blue here for contrast
+  static const Color textDark   = Color(0xFFE0F4FF); // pale star blue 
+  static const Color textMedium = Color(0xFFA5C9E5); // muted 
+  static const Color textLight  = Color(0xFFFFFFFF); // pure white
+  static const Color textGold   = Color(0xFF00E5FF); // using star blue here for contrast
 
   // ── Misc ─────────────────────────────────────────────────────────────────────
-  static const Color divider = Color(0xFF225091);
-  static const Color outline = Color(0xFF6B9FE4);
+  static const Color divider  = Color(0xFF225091);
+  static const Color outline  = Color(0xFF6B9FE4);
   static const Color disabled = Color(0xFF3B4F72);
 
   // ── Glass helpers ─────────────────────────────────────────────────────────────
   /// Semi-transparent surface for glassmorphic cards (60% opacity).
-  static Color get glassFill => surfaceContainerHighest.withAlpha(153); // 60%
+  static Color get glassFill =>
+      surfaceContainerHighest.withAlpha(153); // 60%
 
   /// Ghost border for glass cards.
-  static Color get glassBorder => const Color(0xFF8DC0F3).withAlpha(38); // 15%
+  static Color get glassBorder =>
+      const Color(0xFF8DC0F3).withAlpha(38); // 15%
 
   /// Subtle glow for active/hover states.
-  static Color get goldGlow => const Color(0xFF00E5FF).withAlpha(40);
+  static Color get goldGlow =>
+      const Color(0xFF00E5FF).withAlpha(40);
 
   // ── Gradient helpers ─────────────────────────────────────────────────────────
   static const LinearGradient navyGradient = LinearGradient(
@@ -89,7 +90,7 @@ abstract final class AppColors {
 
   /// 135° Star Blue/Teal shimmer — used on primary CTAs.
   static const LinearGradient goldGradient = LinearGradient(
-    begin: Alignment(0.7, -0.7), // ~135°
+    begin: Alignment(0.7, -0.7),   // ~135°
     end: Alignment(-0.7, 0.7),
     colors: [Color(0xFF00E5FF), Color(0xFF00C896)],
   );

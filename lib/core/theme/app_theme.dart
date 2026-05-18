@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 /// The single ThemeData factory for Aziz Academy.
@@ -24,27 +25,11 @@ abstract final class AppTheme {
   }) {
     final baseText = ThemeData.dark().textTheme;
 
-    // Cairo is bundled in assets/fonts and registered in pubspec.yaml. Apply
-    // it to every text style via apply(fontFamily: ...) — covers Arabic and
-    // Latin in one face and avoids any runtime CDN font fetch.
-    //
-    // NotoColorEmoji is also bundled locally as a fallback so we never reach
-    // out to fonts.gstatic.com to fetch emoji glyphs at runtime. Without
-    // this, Flutter web auto-fetches Noto Color Emoji from gstatic on first
-    // emoji render — that fails for users behind firewalls / ad blockers /
-    // CSP-cached browsers and traps the renderer in a requestAnimationFrame
-    // retry loop. Local font = bulletproof.
-    // Fallback chain (order matters): Cairo → Amiri → NotoColorEmoji.
-    // - Cairo: covers basic Arabic + Latin (700cp).
-    // - Amiri: full Arabic Presentation Forms (ﷺ ligature) + Latin Extended
-    //   Additional (ḥ ʿ used in transliteration). Without Amiri, those chars
-    //   trigger CanvasKit's "Could not find Noto fonts" warning, which loops
-    //   in requestAnimationFrame and locks rendering.
-    // - NotoColorEmoji: COLRv1 vector emoji (CBDT bitmap fails in CanvasKit).
-    final textTheme = baseText.apply(
-      fontFamily: 'Cairo',
-      fontFamilyFallback: ['Amiri', 'NotoColorEmoji'],
-    );
+    // Cairo is the primary font: it covers Arabic + Latin natively, so Arabic
+    // text renders correctly throughout the app without per-widget overrides.
+    // PlusJakartaSans overrides remain available for individual Latin-heavy
+    // display widgets via GoogleFonts.plusJakartaSans(...).
+    final textTheme = GoogleFonts.cairoTextTheme(baseText);
 
     final colorScheme = ColorScheme(
       brightness: Brightness.dark,
@@ -146,7 +131,10 @@ abstract final class AppTheme {
           foregroundColor: AppColors.primaryNavy,
           minimumSize: const Size(56, 56),
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
-          textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+          textStyle: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w700,
+          ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50), // Pill shape
           ),
@@ -156,7 +144,9 @@ abstract final class AppTheme {
       cardTheme: CardThemeData(
         color: AppColors.surfaceContainer,
         elevation: 0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
         margin: EdgeInsets.zero,
       ),
       dividerTheme: const DividerThemeData(

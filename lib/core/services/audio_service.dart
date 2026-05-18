@@ -11,7 +11,7 @@ final audioServiceProvider = Provider<AudioService>((ref) {
 class AudioService {
   final AudioPlayer _bgmPlayer = AudioPlayer();
   final AudioPlayer _sfxPlayer = AudioPlayer();
-
+  
   bool _isMuted = false;
 
   AudioService() {

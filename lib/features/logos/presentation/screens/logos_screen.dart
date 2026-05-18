@@ -13,12 +13,9 @@ import 'package:aziz_academy/core/providers/achievement_provider.dart';
 import 'package:aziz_academy/core/providers/xp_provider.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/services/audio_service.dart';
-import 'package:aziz_academy/core/widgets/responsive.dart';
-import 'package:aziz_academy/core/widgets/tts_speaker_icon.dart';
 
 import 'package:aziz_academy/l10n/app_localizations.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
-import 'package:aziz_academy/core/utils/digits.dart';
 
 // ---------------------------------------------------------------------------
 // Helper: looks up a brand key (e.g. 'youtube') and returns fact/desc strings.
@@ -27,63 +24,37 @@ import 'package:aziz_academy/core/utils/digits.dart';
 extension _BrandL10n on AppLocalizations {
   String brandDesc(String id) {
     switch (id) {
-      case 'youtube':
-        return brand_youtube_desc;
-      case 'apple':
-        return brand_apple_desc;
-      case 'lego':
-        return brand_lego_desc;
-      case 'nasa':
-        return brand_nasa_desc;
-      case 'nike':
-        return brand_nike_desc;
-      case 'mcdonalds':
-        return brand_mcdonalds_desc;
-      case 'google':
-        return brand_google_desc;
-      case 'amazon':
-        return brand_amazon_desc;
-      case 'twitter':
-        return brand_twitter_desc;
-      case 'facebook':
-        return brand_facebook_desc;
-      case 'instagram':
-        return brand_instagram_desc;
-      case 'netflix':
-        return brand_netflix_desc;
-      default:
-        return id;
+      case 'youtube':   return brand_youtube_desc;
+      case 'apple':     return brand_apple_desc;
+      case 'lego':      return brand_lego_desc;
+      case 'nasa':      return brand_nasa_desc;
+      case 'nike':      return brand_nike_desc;
+      case 'mcdonalds': return brand_mcdonalds_desc;
+      case 'google':    return brand_google_desc;
+      case 'amazon':    return brand_amazon_desc;
+      case 'twitter':   return brand_twitter_desc;
+      case 'facebook':  return brand_facebook_desc;
+      case 'instagram': return brand_instagram_desc;
+      case 'netflix':   return brand_netflix_desc;
+      default:          return id;
     }
   }
 
   String brandFact(String id) {
     switch (id) {
-      case 'youtube':
-        return brand_youtube_fact;
-      case 'apple':
-        return brand_apple_fact;
-      case 'lego':
-        return brand_lego_fact;
-      case 'nasa':
-        return brand_nasa_fact;
-      case 'nike':
-        return brand_nike_fact;
-      case 'mcdonalds':
-        return brand_mcdonalds_fact;
-      case 'google':
-        return brand_google_fact;
-      case 'amazon':
-        return brand_amazon_fact;
-      case 'twitter':
-        return brand_twitter_fact;
-      case 'facebook':
-        return brand_facebook_fact;
-      case 'instagram':
-        return brand_instagram_fact;
-      case 'netflix':
-        return brand_netflix_fact;
-      default:
-        return '';
+      case 'youtube':   return brand_youtube_fact;
+      case 'apple':     return brand_apple_fact;
+      case 'lego':      return brand_lego_fact;
+      case 'nasa':      return brand_nasa_fact;
+      case 'nike':      return brand_nike_fact;
+      case 'mcdonalds': return brand_mcdonalds_fact;
+      case 'google':    return brand_google_fact;
+      case 'amazon':    return brand_amazon_fact;
+      case 'twitter':   return brand_twitter_fact;
+      case 'facebook':  return brand_facebook_fact;
+      case 'instagram': return brand_instagram_fact;
+      case 'netflix':   return brand_netflix_fact;
+      default:          return '';
     }
   }
 }
@@ -101,40 +72,40 @@ class LogosScreen extends ConsumerWidget {
     final l10n = AppLocalizations.of(context)!;
 
     // Fire achievement recording and SFX exactly once when quiz completes.
-    ref.listen<AsyncValue<QuizSessionState>>(logosQuizProvider, (prev, next) {
-      if (next.value?.isComplete == true && prev?.value?.isComplete != true) {
-        final session = next.value!;
-        final practice =
-            ref.read(appSettingsProvider).value?.practiceMode ?? false;
-        if (!practice) {
-          ref
-              .read(achievementProvider.notifier)
-              .recordLogosSession(
-                score: session.score,
-                livesRemaining: session.livesRemaining,
-              );
-          ref
-              .read(xpProvider.notifier)
-              .addXp(
-                XpNotifier.sessionXp(
+    ref.listen<AsyncValue<QuizSessionState>>(
+      logosQuizProvider,
+      (prev, next) {
+        if (next.value?.isComplete == true &&
+            prev?.value?.isComplete != true) {
+          final session = next.value!;
+          final practice =
+              ref.read(appSettingsProvider).value?.practiceMode ?? false;
+          if (!practice) {
+            ref.read(achievementProvider.notifier).recordLogosSession(
                   score: session.score,
                   livesRemaining: session.livesRemaining,
-                ),
-              );
+                );
+            ref.read(xpProvider.notifier).addXp(
+                  XpNotifier.sessionXp(
+                    score: session.score,
+                    livesRemaining: session.livesRemaining,
+                  ),
+                );
+          }
+          ref.read(audioServiceProvider).playVictorySound();
+        } else if (next.value?.isGameOver == true &&
+                   prev?.value?.isGameOver != true) {
+          ref.read(audioServiceProvider).playWrongSound(); // Buzzer for game over
         }
-        ref.read(audioServiceProvider).playVictorySound();
-      } else if (next.value?.isGameOver == true &&
-          prev?.value?.isGameOver != true) {
-        ref.read(audioServiceProvider).playWrongSound(); // Buzzer for game over
-      }
-    });
+      },
+    );
 
     final reducedMotion =
         ref.watch(appSettingsProvider).value?.reducedMotion ?? false;
 
     return sessionAsync.when(
       loading: () => const _LoadingView(),
-      error: (e, _) => _ErrorView(error: context.l10n.quizLoadError),
+      error: (e, _) => _ErrorView(error: e.toString()),
       data: (session) {
         if (session.isGameOver) {
           return Scaffold(
@@ -153,8 +124,8 @@ class LogosScreen extends ConsumerWidget {
               title: context.l10n.victoryLogosTitle,
               shareModuleLabel: context.l10n.shareModuleLogos,
               reducedMotion: reducedMotion,
-              coinsEarned: session.score * 5 + session.livesRemaining * 10,
-              onPlayAgain: () => ref.read(logosQuizProvider.notifier).restart(),
+              onPlayAgain: () =>
+                  ref.read(logosQuizProvider.notifier).restart(),
               onBack: () => context.go(AppRoutes.home),
             ),
           );
@@ -222,15 +193,15 @@ class _QuizViewState extends ConsumerState<_QuizView>
 
   @override
   void dispose() {
-    _revealCtrl.removeStatusListener(_onRevealStatus);
     _revealCtrl.dispose();
     super.dispose();
   }
 
   void _handleAnswer(String answer) {
     if (_answered) return;
-    final isCorrect = ref.read(logosQuizProvider.notifier).submitAnswer(answer);
-
+    final isCorrect =
+        ref.read(logosQuizProvider.notifier).submitAnswer(answer);
+        
     if (isCorrect) {
       ref.read(audioServiceProvider).playCorrectSound();
     } else {
@@ -266,64 +237,53 @@ class _QuizViewState extends ConsumerState<_QuizView>
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: CenteredBody(
-          child: Column(
-            children: [
-              // ── Header ─────────────────────────────────────────────────
-              _LogosHeader(
-                title: l10n.logoQuizTitle,
-                session: widget.session,
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 640),
+            child: Column(
+              children: [
+            // ── Header ─────────────────────────────────────────────────
+            _LogosHeader(
+              title: l10n.logoQuizTitle,
+              session: widget.session,
+              revealCtrl: _revealCtrl,
+            ),
+
+            // ── Logo puzzle card ────────────────────────────────────────
+            Expanded(
+              flex: 5,
+              child: _LogoPuzzleCard(
+                logoAsset: q.imageUrl ?? '',
                 revealCtrl: _revealCtrl,
-              ),
-
-              // ── Logo puzzle card ────────────────────────────────────────
-              Expanded(
-                flex: 5,
-                child: Stack(
-                  children: [
-                    _LogoPuzzleCard(
-                      logoAsset: q.imageUrl ?? '',
-                      revealCtrl: _revealCtrl,
-                      answered: _answered,
-                      brandName: q.question,
-                      isCorrect: _lastCorrect,
-                    ),
-                    if (_answered)
-                      Positioned(
-                        top: 8,
-                        right: 8,
-                        child: TtsSpeakerIcon(
-                          text: q.question,
-                          color: AppColors.primary,
-                          tooltip: context.l10n.ttsButtonTooltip,
-                        ),
-                      ),
-                  ],
-                ),
-              ),
-
-              // ── 2×2 Answer grid ─────────────────────────────────────────
-              _OptionsGrid(
-                options: q.options,
-                correctAnswer: q.correctAnswer,
                 answered: _answered,
-                onAnswer: _handleAnswer,
+                brandName: q.question, // question field holds brand name
+                isCorrect: _lastCorrect,
               ),
+            ),
 
-              // ── Knowledge card (post-answer) / Next button ───────────────
-              AnimatedSwitcher(
-                duration: const Duration(milliseconds: 400),
-                child: _answered
-                    ? _KnowledgeCard(
-                        key: const ValueKey('knowledge'),
-                        brandId: q.funFact, // funFact holds brand id for l10n
-                        l10n: l10n,
-                        onNext: _next,
-                        isCorrect: _lastCorrect ?? false,
-                      )
-                    : const SizedBox(key: ValueKey('empty'), height: 16),
-              ),
-            ],
+            // ── 2×2 Answer grid ─────────────────────────────────────────
+            _OptionsGrid(
+              options: q.options,
+              correctAnswer: q.correctAnswer,
+              answered: _answered,
+              onAnswer: _handleAnswer,
+            ),
+
+            // ── Knowledge card (post-answer) / Next button ───────────────
+            AnimatedSwitcher(
+              duration: const Duration(milliseconds: 400),
+              child: _answered
+                  ? _KnowledgeCard(
+                      key: const ValueKey('knowledge'),
+                      brandId: q.funFact, // funFact holds brand id for l10n
+                      l10n: l10n,
+                      onNext: _next,
+                      isCorrect: _lastCorrect ?? false,
+                    )
+                  : const SizedBox(key: ValueKey('empty'), height: 16),
+            ),
+              ],
+            ),
           ),
         ),
       ),
@@ -355,7 +315,6 @@ class _LogosHeader extends StatelessWidget {
           Row(
             children: [
               IconButton(
-                tooltip: context.l10n.commonBack,
                 icon: Icon(
                   Directionality.of(context) == TextDirection.rtl
                       ? Icons.arrow_forward_ios_rounded
@@ -367,10 +326,8 @@ class _LogosHeader extends StatelessWidget {
               ),
               Text(
                 title,
-                style: AppTextStyles.headingMedium.copyWith(
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
+                style: AppTextStyles.headingMedium
+                    .copyWith(color: Colors.white, fontSize: 18),
               ),
               const Spacer(),
               // Hearts
@@ -409,7 +366,7 @@ class _LogosHeader extends StatelessWidget {
 
 class _TimerRing extends AnimatedWidget {
   const _TimerRing({required AnimationController controller})
-    : super(listenable: controller);
+      : super(listenable: controller);
 
   @override
   Widget build(BuildContext context) {
@@ -418,8 +375,8 @@ class _TimerRing extends AnimatedWidget {
     final color = ctrl.value < 0.66
         ? AppColors.capitalsColor
         : ctrl.value < 0.88
-        ? Colors.orange
-        : AppColors.error;
+            ? Colors.orange
+            : AppColors.error;
     return SizedBox(
       width: 36,
       height: 36,
@@ -433,7 +390,7 @@ class _TimerRing extends AnimatedWidget {
             color: color,
           ),
           Text(
-            localizeDigitsCtx(remaining, context),
+            '$remaining',
             style: AppTextStyles.caption.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.w700,
@@ -527,10 +484,8 @@ class _LogoPuzzleCard extends StatelessWidget {
                 top: 12,
                 right: 12,
                 child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 6,
-                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
                     color: (isCorrect! ? AppColors.success : AppColors.error)
                         .withAlpha(220),
@@ -547,9 +502,8 @@ class _LogoPuzzleCard extends StatelessWidget {
                       const SizedBox(width: 4),
                       Text(
                         brandName,
-                        style: AppTextStyles.labelMedium.copyWith(
-                          color: Colors.white,
-                        ),
+                        style: AppTextStyles.labelMedium
+                            .copyWith(color: Colors.white),
                       ),
                     ],
                   ),
@@ -570,27 +524,20 @@ class _LogoImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (logoAsset.isEmpty) {
-      return const Icon(
-        Icons.image_not_supported,
-        size: 80,
-        color: Colors.grey,
-      );
+      return const Icon(Icons.image_not_supported, size: 80, color: Colors.grey);
     }
     if (logoAsset.startsWith('assets/')) {
       return Image.asset(
         logoAsset,
         fit: BoxFit.contain,
-        errorBuilder: (_, _, _) => const Icon(
-          Icons.broken_image_outlined,
-          size: 60,
-          color: Colors.grey,
-        ),
+        errorBuilder: (_, __, ___) =>
+            const Icon(Icons.broken_image_outlined, size: 60, color: Colors.grey),
       );
     }
     return Image.network(
       logoAsset,
       fit: BoxFit.contain,
-      errorBuilder: (_, _, _) =>
+      errorBuilder: (_, __, ___) =>
           const Icon(Icons.broken_image_outlined, size: 60, color: Colors.grey),
     );
   }
@@ -684,9 +631,8 @@ class _KnowledgeCard extends StatelessWidget {
         color: AppColors.surfaceContainer,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: (isCorrect ? AppColors.success : AppColors.error).withAlpha(
-            120,
-          ),
+          color: (isCorrect ? AppColors.success : AppColors.error)
+              .withAlpha(120),
           width: 1.5,
         ),
       ),
@@ -707,10 +653,8 @@ class _KnowledgeCard extends StatelessWidget {
               const Spacer(),
               // Brand description chip
               Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 4,
-                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
                   color: AppColors.capitalsColor.withAlpha(30),
                   borderRadius: BorderRadius.circular(12),
@@ -727,10 +671,8 @@ class _KnowledgeCard extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             l10n.brandFact(brandId),
-            style: AppTextStyles.bodyMedium.copyWith(
-              color: Colors.white70,
-              height: 1.4,
-            ),
+            style: AppTextStyles.bodyMedium
+                .copyWith(color: Colors.white70, height: 1.4),
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
           ),
@@ -746,10 +688,9 @@ class _KnowledgeCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(14),
                 ),
               ),
-              child: Text(
-                l10n.nextQuestion,
-                style: AppTextStyles.labelMedium.copyWith(color: Colors.white),
-              ),
+              child: Text(l10n.nextQuestion,
+                  style: AppTextStyles.labelMedium
+                      .copyWith(color: Colors.white)),
             ),
           ),
         ],

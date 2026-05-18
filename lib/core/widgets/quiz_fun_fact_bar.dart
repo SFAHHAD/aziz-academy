@@ -31,9 +31,7 @@ class QuizFunFactBar extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (wasWrong &&
-                correctAnswer != null &&
-                correctAnswer!.isNotEmpty) ...[
+            if (wasWrong && correctAnswer != null && correctAnswer!.isNotEmpty) ...[
               Text(
                 '${l10n.funFactCorrectPrefix} $correctAnswer',
                 style: AppTextStyles.bodyMedium.copyWith(
