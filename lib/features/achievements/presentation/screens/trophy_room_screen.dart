@@ -8,8 +8,12 @@ import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/l10n/badge_l10n.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/providers/achievement_provider.dart';
+import 'package:aziz_academy/core/utils/digits.dart';
 import 'package:aziz_academy/core/widgets/celebration_overlay.dart';
+import 'package:aziz_academy/core/widgets/responsive.dart';
+import 'package:aziz_academy/core/widgets/skeleton.dart';
 import 'package:aziz_academy/features/achievements/presentation/screens/badge_detail_screen.dart';
+import 'package:aziz_academy/core/widgets/kid_emoji.dart';
 
 // =============================================================================
 // TROPHY ROOM SCREEN (Premium Restored Design + Insights)
@@ -32,8 +36,9 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
   void initState() {
     super.initState();
     _cardAnimCtrl = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 1200))
-      ..forward();
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    )..forward();
   }
 
   @override
@@ -60,8 +65,15 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
       }
     });
 
+    final isArabicCert = Localizations.localeOf(context).languageCode == 'ar';
     return Scaffold(
       backgroundColor: AppColors.background,
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => context.push(AppRoutes.certificate),
+        icon: KidEmoji.named('scroll', size: 18),
+        label: Text(isArabicCert ? 'الشهادة' : 'Certificate'),
+        backgroundColor: AppColors.secondary,
+      ),
       body: Stack(
         children: [
           // Background Gradient (Premium depth)
@@ -79,65 +91,71 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
               ),
             ),
           ),
-          
+
           SafeArea(
-            child: achievementAsync.when(
-              loading: () => const Center(
-                  child: CircularProgressIndicator(color: AppColors.secondary)),
-              error: (e, st) => Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(24),
-                  child: Text(
-                    context.l10n.trophyLoadError,
-                    textAlign: TextAlign.center,
-                    style: AppTextStyles.bodyLarge.copyWith(
-                      color: AppColors.textMedium,
+            child: CenteredBody(
+              wide: true,
+              child: achievementAsync.when(
+                loading: () => Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: SkeletonList(count: 6),
+                ),
+                error: (e, st) => Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: Text(
+                      context.l10n.trophyLoadError,
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.bodyLarge.copyWith(
+                        color: AppColors.textMedium,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              data: (state) {
-                final unlocked = state.unlockedBadges;
-                final n = unlocked.length;
-                final total = allBadges.length;
+                data: (state) {
+                  final unlocked = state.unlockedBadges;
+                  final n = unlocked.length;
+                  final total = allBadges.length;
 
-                return CustomScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  slivers: [
-                    _buildSliverAppBar(context, n, isRtl),
-                    SliverToBoxAdapter(
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 8, 20, 8),
-                        child: _TrophyProgressStrip(
-                          unlocked: n,
-                          total: total,
-                        ),
-                      ),
-                    ),
-                    SliverToBoxAdapter(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: Text(
-                          context.l10n.trophyTapHint,
-                          textAlign: TextAlign.center,
-                          style: AppTextStyles.labelMedium.copyWith(
-                            color: AppColors.textMedium.withAlpha(200),
+                  return CustomScrollView(
+                    physics: const BouncingScrollPhysics(),
+                    slivers: [
+                      _buildSliverAppBar(context, n, isRtl),
+                      SliverToBoxAdapter(
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 8, 20, 8),
+                          child: _TrophyProgressStrip(
+                            unlocked: n,
+                            total: total,
                           ),
                         ),
                       ),
-                    ),
-                    SliverPadding(
-                      padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
-                      sliver: SliverGrid(
-                        gridDelegate:
-                            const SliverGridDelegateWithMaxCrossAxisExtent(
-                          maxCrossAxisExtent: 200,
-                          mainAxisSpacing: 18,
-                          crossAxisSpacing: 18,
-                          childAspectRatio: 0.78,
+                      SliverToBoxAdapter(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
+                          child: Text(
+                            context.l10n.trophyTapHint,
+                            textAlign: TextAlign.center,
+                            style: AppTextStyles.labelMedium.copyWith(
+                              color: AppColors.textMedium.withAlpha(200),
+                            ),
+                          ),
                         ),
-                        delegate: SliverChildBuilderDelegate(
-                          (context, index) {
+                      ),
+                      SliverPadding(
+                        padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
+                        sliver: SliverGrid(
+                          gridDelegate:
+                              const SliverGridDelegateWithMaxCrossAxisExtent(
+                                maxCrossAxisExtent: 200,
+                                mainAxisSpacing: 18,
+                                crossAxisSpacing: 18,
+                                childAspectRatio: 0.78,
+                              ),
+                          delegate: SliverChildBuilderDelegate((
+                            context,
+                            index,
+                          ) {
                             final badge = allBadges[index];
                             final isUnlocked = unlocked.contains(badge.id);
 
@@ -148,14 +166,17 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                               animCtrl: _cardAnimCtrl,
                               onTap: () => Navigator.of(context).push(
                                 PageRouteBuilder(
-                                  transitionDuration:
-                                      const Duration(milliseconds: 450),
-                                  reverseTransitionDuration:
-                                      const Duration(milliseconds: 350),
-                                  pageBuilder: (ctx, a1, a2) => BadgeDetailScreen(
-                                    badge: badge,
-                                    isUnlocked: isUnlocked,
+                                  transitionDuration: const Duration(
+                                    milliseconds: 450,
                                   ),
+                                  reverseTransitionDuration: const Duration(
+                                    milliseconds: 350,
+                                  ),
+                                  pageBuilder: (ctx, a1, a2) =>
+                                      BadgeDetailScreen(
+                                        badge: badge,
+                                        isUnlocked: isUnlocked,
+                                      ),
                                   transitionsBuilder: (ctx, anim, a2, child) {
                                     return FadeTransition(
                                       opacity: anim,
@@ -165,15 +186,14 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                                 ),
                               ),
                             );
-                          },
-                          childCount: allBadges.length,
+                          }, childCount: allBadges.length),
                         ),
                       ),
-                    ),
-                    const SliverToBoxAdapter(child: SizedBox(height: 60)),
-                  ],
-                );
-              },
+                      const SliverToBoxAdapter(child: SizedBox(height: 60)),
+                    ],
+                  );
+                },
+              ),
             ),
           ),
           // ── CelebrationOverlay (above all Stack children) ─────────────
@@ -192,7 +212,10 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
   }
 
   Widget _buildSliverAppBar(
-      BuildContext context, int unlockedCount, bool isRtl) {
+    BuildContext context,
+    int unlockedCount,
+    bool isRtl,
+  ) {
     final h = MediaQuery.sizeOf(context).height;
     final expanded = h < 700 ? 220.0 : 260.0;
     return SliverAppBar(
@@ -209,6 +232,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
             color: AppColors.surfaceContainerLow.withAlpha(150),
           ),
           child: IconButton(
+            tooltip: context.l10n.commonBack,
             icon: Icon(
               isRtl
                   ? Icons.arrow_forward_ios_rounded
@@ -234,12 +258,24 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
             Positioned(
               top: 24,
               right: 32,
-              child: Text('✨', style: TextStyle(fontSize: 22, color: AppColors.secondary.withAlpha(120))),
+              child: Text(
+                '✨',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: AppColors.secondary.withAlpha(120),
+                ),
+              ),
             ),
             Positioned(
               bottom: 48,
               left: 28,
-              child: Text('⭐', style: TextStyle(fontSize: 18, color: AppColors.secondary.withAlpha(100))),
+              child: Text(
+                '⭐',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: AppColors.secondary.withAlpha(100),
+                ),
+              ),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -259,8 +295,8 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                       ),
                     ],
                   ),
-                  child: const Center(
-                    child: Text('🏆', style: TextStyle(fontSize: 46)),
+                  child: Center(
+                    child: KidEmoji.named('trophy', size: 46),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -279,18 +315,25 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                 ),
                 const SizedBox(height: 10),
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 8,
+                  ),
                   decoration: BoxDecoration(
                     color: AppColors.secondary.withAlpha(28),
                     borderRadius: BorderRadius.circular(22),
-                    border:
-                        Border.all(color: AppColors.secondary.withAlpha(90)),
+                    border: Border.all(
+                      color: AppColors.secondary.withAlpha(90),
+                    ),
                   ),
                   child: Text(
-                    context.l10n.trophyBadgeCount(unlockedCount, allBadges.length),
-                    style: AppTextStyles.labelLarge
-                        .copyWith(color: AppColors.secondary),
+                    context.l10n.trophyBadgeCount(
+                      unlockedCount,
+                      allBadges.length,
+                    ),
+                    style: AppTextStyles.labelLarge.copyWith(
+                      color: AppColors.secondary,
+                    ),
                   ),
                 ),
               ],
@@ -303,7 +346,10 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
 
   // ignore: unused_element
   void _showBadgeCondition(
-      BuildContext context, BadgeDefinition badge, bool isUnlocked) {
+    BuildContext context,
+    BadgeDefinition badge,
+    bool isUnlocked,
+  ) {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -317,9 +363,11 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(32),
             border: Border.all(
-                color:
-                    isUnlocked ? badge.color : AppColors.surfaceContainerHighest,
-                width: 2),
+              color: isUnlocked
+                  ? badge.color
+                  : AppColors.surfaceContainerHighest,
+              width: 2,
+            ),
             boxShadow: [
               BoxShadow(
                 color: isUnlocked
@@ -342,17 +390,17 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                       ? badge.color.withAlpha(30)
                       : AppColors.surfaceContainerHighest,
                   border: Border.all(
-                      color: isUnlocked ? badge.color : Colors.grey, width: 4),
+                    color: isUnlocked ? badge.color : Colors.grey,
+                    width: 4,
+                  ),
                 ),
                 child: Center(
                   child: isUnlocked
-                      ? Text(
-                          badge.emoji,
-                          style: const TextStyle(fontSize: 56),
-                        )
+                      ? Text(badge.emoji, style: const TextStyle(fontSize: 56))
                       : ColorFiltered(
-                          colorFilter:
-                              const ColorFilter.matrix(_kBadgeGrayscaleMatrix),
+                          colorFilter: const ColorFilter.matrix(
+                            _kBadgeGrayscaleMatrix,
+                          ),
                           child: Opacity(
                             opacity: 0.55,
                             child: Text(
@@ -378,8 +426,9 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                 isUnlocked
                     ? l10n.badgeSubtitle(badge.id)
                     : l10n.trophyLockedHint,
-                style: AppTextStyles.bodyMedium
-                    .copyWith(color: AppColors.textMedium),
+                style: AppTextStyles.bodyMedium.copyWith(
+                  color: AppColors.textMedium,
+                ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 32),
@@ -390,9 +439,10 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                   color: AppColors.background.withAlpha(150),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                      color: isUnlocked
-                          ? badge.color.withAlpha(80)
-                          : AppColors.divider),
+                    color: isUnlocked
+                        ? badge.color.withAlpha(80)
+                        : AppColors.divider,
+                  ),
                 ),
                 child: Column(
                   children: [
@@ -400,20 +450,19 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                            isUnlocked
-                                ? Icons.verified_rounded
-                                : Icons.info_outline_rounded,
-                            color: isUnlocked ? badge.color : AppColors.primary,
-                            size: 24),
+                          isUnlocked
+                              ? Icons.verified_rounded
+                              : Icons.info_outline_rounded,
+                          color: isUnlocked ? badge.color : AppColors.primary,
+                          size: 24,
+                        ),
                         const SizedBox(width: 8),
                         Text(
                           isUnlocked
                               ? l10n.trophyAchievementDone
                               : l10n.trophyHowToEarnBadge,
                           style: AppTextStyles.headingSmall.copyWith(
-                            color: isUnlocked
-                                ? badge.color
-                                : AppColors.primary,
+                            color: isUnlocked ? badge.color : AppColors.primary,
                           ),
                         ),
                       ],
@@ -422,7 +471,9 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                     Text(
                       l10n.badgeCondition(badge.id),
                       style: AppTextStyles.bodyLarge.copyWith(
-                          height: 1.5, color: AppColors.textDark),
+                        height: 1.5,
+                        color: AppColors.textDark,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -440,11 +491,15 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
                     elevation: 10,
                     shadowColor: AppColors.secondary.withAlpha(100),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
-                  child: Text(l10n.trophyOk,
-                      style: AppTextStyles.headingMedium
-                          .copyWith(color: AppColors.background)),
+                  child: Text(
+                    l10n.trophyOk,
+                    style: AppTextStyles.headingMedium.copyWith(
+                      color: AppColors.background,
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -460,10 +515,7 @@ class _TrophyRoomScreenState extends ConsumerState<TrophyRoomScreen>
 // -----------------------------------------------------------------------------
 
 class _TrophyProgressStrip extends StatelessWidget {
-  const _TrophyProgressStrip({
-    required this.unlocked,
-    required this.total,
-  });
+  const _TrophyProgressStrip({required this.unlocked, required this.total});
 
   final int unlocked;
   final int total;
@@ -507,7 +559,7 @@ class _TrophyProgressStrip extends StatelessWidget {
                 ),
               ),
               Text(
-                '$unlocked / $total',
+                '${localizeDigitsCtx(unlocked, context)} / ${localizeDigitsCtx(total, context)}',
                 style: AppTextStyles.labelLarge.copyWith(
                   color: AppColors.secondary,
                   fontWeight: FontWeight.w800,
@@ -522,7 +574,9 @@ class _TrophyProgressStrip extends StatelessWidget {
               value: p,
               minHeight: 10,
               backgroundColor: AppColors.divider.withAlpha(120),
-              valueColor: const AlwaysStoppedAnimation<Color>(AppColors.secondary),
+              valueColor: const AlwaysStoppedAnimation<Color>(
+                AppColors.secondary,
+              ),
             ),
           ),
         ],
@@ -537,10 +591,26 @@ class _TrophyProgressStrip extends StatelessWidget {
 
 /// Standard luminance weights → grayscale (locked badges look like earned, but faded).
 const List<double> _kBadgeGrayscaleMatrix = <double>[
-  0.2126, 0.7152, 0.0722, 0, 0,
-  0.2126, 0.7152, 0.0722, 0, 0,
-  0.2126, 0.7152, 0.0722, 0, 0,
-  0, 0, 0, 1, 0,
+  0.2126,
+  0.7152,
+  0.0722,
+  0,
+  0,
+  0.2126,
+  0.7152,
+  0.0722,
+  0,
+  0,
+  0.2126,
+  0.7152,
+  0.0722,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
 ];
 
 class _AnimatedBadgeCard extends StatelessWidget {
@@ -563,15 +633,27 @@ class _AnimatedBadgeCard extends StatelessWidget {
     final l10n = context.l10n;
     // Staggered fade in + slide up
     final delay = (index * 0.1).clamp(0.0, 1.0);
-    final slideAnim = Tween<Offset>(
-            begin: const Offset(0, 0.4), end: Offset.zero)
-        .animate(CurvedAnimation(
+    final slideAnim =
+        Tween<Offset>(begin: const Offset(0, 0.4), end: Offset.zero).animate(
+          CurvedAnimation(
             parent: animCtrl,
-            curve: Interval(delay, math.min(1.0, delay + 0.5),
-                curve: Curves.easeOutCubic)));
-    final fadeAnim = Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+            curve: Interval(
+              delay,
+              math.min(1.0, delay + 0.5),
+              curve: Curves.easeOutCubic,
+            ),
+          ),
+        );
+    final fadeAnim = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
         parent: animCtrl,
-        curve: Interval(delay, math.min(1.0, delay + 0.5), curve: Curves.easeOut)));
+        curve: Interval(
+          delay,
+          math.min(1.0, delay + 0.5),
+          curve: Curves.easeOut,
+        ),
+      ),
+    );
 
     return FadeTransition(
       opacity: fadeAnim,
@@ -605,14 +687,14 @@ class _AnimatedBadgeCard extends StatelessWidget {
                         color: badge.color.withAlpha(50),
                         blurRadius: 30,
                         offset: const Offset(0, 10),
-                      )
+                      ),
                     ]
                   : [
                       BoxShadow(
                         color: Colors.black.withAlpha(20),
                         blurRadius: 10,
                         offset: const Offset(0, 5),
-                      )
+                      ),
                     ],
             ),
             child: Center(
@@ -649,7 +731,7 @@ class _AnimatedBadgeCard extends StatelessWidget {
                                 color: badge.color.withAlpha(80),
                                 blurRadius: 20,
                                 spreadRadius: 5,
-                              )
+                              ),
                             ]
                           : [
                               BoxShadow(
@@ -677,7 +759,8 @@ class _AnimatedBadgeCard extends StatelessWidget {
                               )
                             : ColorFiltered(
                                 colorFilter: const ColorFilter.matrix(
-                                    _kBadgeGrayscaleMatrix),
+                                  _kBadgeGrayscaleMatrix,
+                                ),
                                 child: Opacity(
                                   opacity: 0.5,
                                   child: Text(
@@ -703,8 +786,9 @@ class _AnimatedBadgeCard extends StatelessWidget {
                             maxLines: 2,
                           )
                         : ColorFiltered(
-                            colorFilter:
-                                const ColorFilter.matrix(_kBadgeGrayscaleMatrix),
+                            colorFilter: const ColorFilter.matrix(
+                              _kBadgeGrayscaleMatrix,
+                            ),
                             child: Opacity(
                               opacity: 0.5,
                               child: Text(

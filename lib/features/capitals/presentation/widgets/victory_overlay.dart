@@ -2,9 +2,11 @@ import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
+import 'package:aziz_academy/core/widgets/coin_countup_chip.dart';
 
 /// Full-screen overlay when the player completes the quiz with lives remaining.
 class VictoryOverlay extends StatefulWidget {
@@ -13,21 +15,23 @@ class VictoryOverlay extends StatefulWidget {
     required this.session,
     required this.onPlayAgain,
     required this.onBack,
-    this.title = 'أحسنت يا بطل!',
-    this.subtitle = 'أتممت الاختبار بتفوق! 🎉',
+    this.title = 'Well done, champion!',
+    this.subtitle,
     this.reducedMotion = false,
     this.enableShare = true,
-    this.shareModuleLabel = 'أكاديمية عزيز',
+    this.shareModuleLabel = 'Aziz Academy',
+    this.coinsEarned = 0,
   });
 
   final QuizSessionState session;
   final VoidCallback onPlayAgain;
   final VoidCallback onBack;
   final String title;
-  final String subtitle;
+  final String? subtitle;
   final bool reducedMotion;
   final bool enableShare;
   final String shareModuleLabel;
+  final int coinsEarned;
 
   static int starsFor(int livesRemaining) => livesRemaining.clamp(0, 3);
 
@@ -57,10 +61,10 @@ class _VictoryOverlayState extends State<VictoryOverlay>
     )..forward();
 
     _fade = CurvedAnimation(parent: _entryCtrl, curve: Curves.easeOut);
-    _scale = Tween<double>(begin: widget.reducedMotion ? 1.0 : 0.82, end: 1.0)
-        .animate(
-      CurvedAnimation(parent: _entryCtrl, curve: Curves.easeOutBack),
-    );
+    _scale = Tween<double>(
+      begin: widget.reducedMotion ? 1.0 : 0.82,
+      end: 1.0,
+    ).animate(CurvedAnimation(parent: _entryCtrl, curve: Curves.easeOutBack));
   }
 
   @override
@@ -75,9 +79,15 @@ class _VictoryOverlayState extends State<VictoryOverlay>
       (widget.session.totalQuestions - widget.session.score).clamp(0, 999);
 
   Future<void> _onShare() async {
-    final text =
-        '${widget.shareModuleLabel}\n${widget.session.score}/${widget.session.totalQuestions} إجابات صحيحة • $_wrong خطأ\nنجوم: $_stars/3 ⭐';
-    await Share.share(text);
+    if (!mounted) return;
+    final body = context.l10n.victoryShareBody(
+      widget.session.score,
+      widget.session.totalQuestions,
+      _wrong,
+      _stars,
+    );
+    final text = '${widget.shareModuleLabel}\n$body';
+    await SharePlus.instance.share(ShareParams(text: text));
   }
 
   @override
@@ -128,8 +138,10 @@ class _VictoryOverlayState extends State<VictoryOverlay>
             child: ScaleTransition(
               scale: _scale,
               child: SingleChildScrollView(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 28, vertical: 40),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 28,
+                  vertical: 40,
+                ),
                 child: ConstrainedBox(
                   constraints: BoxConstraints(maxWidth: isTablet ? 480 : 360),
                   child: Container(
@@ -160,7 +172,7 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          widget.subtitle,
+                          widget.subtitle ?? context.l10n.victoryDefaultSubtitle,
                           style: AppTextStyles.bodyMedium.copyWith(
                             color: AppColors.textMedium,
                           ),
@@ -168,9 +180,19 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                         ),
                         const SizedBox(height: 24),
                         _ScorePill(session: widget.session),
+                        if (widget.coinsEarned > 0) ...[
+                          const SizedBox(height: 14),
+                          CoinCountUpChip(
+                            coinsEarned: widget.coinsEarned,
+                            reducedMotion: widget.reducedMotion,
+                          ),
+                        ],
                         const SizedBox(height: 12),
                         Text(
-                          'صحيح: ${widget.session.score}  •  خطأ: $_wrong',
+                          context.l10n.victoryScoreLine(
+                            widget.session.score,
+                            _wrong,
+                          ),
                           style: AppTextStyles.bodyMedium.copyWith(
                             color: AppColors.textMedium,
                             fontWeight: FontWeight.w600,
@@ -181,7 +203,7 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                         _StarRow(stars: _stars),
                         const SizedBox(height: 8),
                         Text(
-                          _starLabel(_stars),
+                          _starLabel(context, _stars),
                           style: AppTextStyles.bodyMedium.copyWith(
                             color: AppColors.textMedium,
                           ),
@@ -189,7 +211,7 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                         const SizedBox(height: 28),
                         if (widget.enableShare) ...[
                           _ActionButton(
-                            label: 'مشاركة الإنجاز',
+                            label: context.l10n.victoryShareAchievement,
                             icon: Icons.ios_share_rounded,
                             backgroundColor: AppColors.secondary,
                             onPressed: _onShare,
@@ -197,14 +219,14 @@ class _VictoryOverlayState extends State<VictoryOverlay>
                           const SizedBox(height: 12),
                         ],
                         _ActionButton(
-                          label: 'العب مجدداً',
+                          label: context.l10n.victoryPlayAgain,
                           icon: Icons.refresh_rounded,
                           backgroundColor: AppColors.primary,
                           onPressed: widget.onPlayAgain,
                         ),
                         const SizedBox(height: 12),
                         _ActionButton(
-                          label: 'العودة للقائمة',
+                          label: context.l10n.quizBackToMenu,
                           icon: Icons.home_rounded,
                           backgroundColor: Colors.transparent,
                           foregroundColor: AppColors.textDark,
@@ -226,14 +248,15 @@ class _VictoryOverlayState extends State<VictoryOverlay>
     );
   }
 
-  String _starLabel(int stars) {
+  String _starLabel(BuildContext context, int stars) {
+    final l10n = context.l10n;
     switch (stars) {
       case 3:
-        return '⚡ إتقان تام! صفر أخطاء!';
+        return l10n.victoryStarsPerfect;
       case 2:
-        return '👍 ممتاز! شبه مثالي!';
+        return l10n.victoryStarsExcellent;
       default:
-        return '✅ أحسنت! واصل التدريب!';
+        return l10n.victoryStarsGood;
     }
   }
 }
@@ -342,8 +365,9 @@ class _ActionButton extends StatelessWidget {
             backgroundColor: backgroundColor,
             foregroundColor: foregroundColor,
             minimumSize: const Size(double.infinity, 56),
-            textStyle:
-                AppTextStyles.labelLarge.copyWith(color: foregroundColor),
+            textStyle: AppTextStyles.labelLarge.copyWith(
+              color: foregroundColor,
+            ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
               side: side,

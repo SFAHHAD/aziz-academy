@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Internal-only routes — these never show up in search results.
+# (The app is SPA-rewritten, so anything under /x9k2-* still serves
+# the public bundle, but indexing it adds noise.)
+Disallow: /x9k2-admin-portal
+Disallow: /x9k2-console-v2
+Disallow: /x9k2-diag-test
+Disallow: /diag.html
+Disallow: /widget-gallery
+
+Sitemap: https://aziz-academy.com/sitemap.xml

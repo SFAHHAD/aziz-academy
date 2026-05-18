@@ -16,19 +16,10 @@ void main() {
     });
 
     test('unlocks academyStar only when all other badges are present', () {
-      const partial = AchievementState(
-        unlockedBadges: {
-          BadgeId.capitalsExplorer,
-          BadgeId.capitalsExpert,
-          BadgeId.mapMaster,
-          BadgeId.logoDetective,
-          BadgeId.logoHunter,
-          BadgeId.triviaTitan,
-          BadgeId.scienceGenius,
-          BadgeId.mathChampion,
-          BadgeId.perfectScholar,
-        },
-      );
+      // Pre-seed every other badge so the prerequisite chain for academyStar
+      // is satisfied. Whenever a new BadgeId is added, this set must grow.
+      final all = BadgeId.values.toSet()..remove(BadgeId.academyStar);
+      final partial = AchievementState(unlockedBadges: all);
       final out = applyBadgeUnlocks(partial);
       expect(out.unlockedBadges, contains(BadgeId.academyStar));
     });

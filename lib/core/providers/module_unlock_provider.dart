@@ -64,11 +64,14 @@ final moduleUnlockProvider = Provider<ModuleUnlocks>((ref) {
     capitals: true,
     flags: true,
     maps: true,
-    logos: level >= ModuleUnlocks.logosRequiredLevel ||
+    logos:
+        level >= ModuleUnlocks.logosRequiredLevel ||
         ach.capitalsCompleted >= ModuleUnlocks.logosCapitalsRequired,
-    math: level >= ModuleUnlocks.mathRequiredLevel ||
+    math:
+        level >= ModuleUnlocks.mathRequiredLevel ||
         ach.flagsCompleted >= ModuleUnlocks.mathFlagsRequired,
-    sciences: level >= ModuleUnlocks.sciencesRequiredLevel ||
+    sciences:
+        level >= ModuleUnlocks.sciencesRequiredLevel ||
         ach.flagsCompleted >= ModuleUnlocks.sciencesFlagsRequired,
   );
 });

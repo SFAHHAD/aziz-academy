@@ -56,8 +56,7 @@ class DifficultyRow extends StatelessWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(d.emoji,
-                            style: const TextStyle(fontSize: 16)),
+                        Text(d.emoji, style: const TextStyle(fontSize: 16)),
                         const SizedBox(height: 2),
                         Text(
                           d.label(l10n),

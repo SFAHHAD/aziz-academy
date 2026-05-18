@@ -1,0 +1,1503 @@
+[
+  {
+    "id": "sah_001",
+    "category": "general",
+    "difficulty": 1,
+    "question": "Who is called a Sahabi?",
+    "options": [
+      "A Muslim who met the Prophet Muhammad ﷺ alive and died in faith",
+      "Any Muslim scholar from the past",
+      "A relative of the Prophet ﷺ only",
+      "A leader of a Muslim country"
+    ],
+    "correct_answer": "A Muslim who met the Prophet Muhammad ﷺ alive and died in faith",
+    "question_ar": "مَن يُسمَّى الصحابيّ؟",
+    "options_ar": [
+      "مسلمٌ لقي النبيَّ ﷺ حيًّا ومات على الإيمان",
+      "أيُّ عالمٍ مسلمٍ من الماضي",
+      "قريبٌ للنبيِّ ﷺ فقط",
+      "زعيمُ دولةٍ مسلمة"
+    ],
+    "correct_answer_ar": "مسلمٌ لقي النبيَّ ﷺ حيًّا ومات على الإيمان",
+    "explanation": "A Sahabi is a Muslim who met the Prophet Muhammad ﷺ during his lifetime and died as a believer.",
+    "explanation_ar": "الصحابيُّ هو مسلمٌ لقي النبيَّ ﷺ في حياته ومات وهو مؤمن.",
+    "objective": "Define the term Sahabi correctly.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_002",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Who was the first Caliph after the Prophet Muhammad ﷺ?",
+    "options": [
+      "Abu Bakr al-Siddiq رضي الله عنه",
+      "Umar ibn al-Khattab رضي الله عنه",
+      "Uthman ibn Affan رضي الله عنه",
+      "Ali ibn Abi Talib رضي الله عنه"
+    ],
+    "correct_answer": "Abu Bakr al-Siddiq رضي الله عنه",
+    "question_ar": "مَن كان أوّلَ خليفةٍ بعد النبيّ ﷺ؟",
+    "options_ar": [
+      "أبو بكر الصدّيق رضي الله عنه",
+      "عمر بن الخطّاب رضي الله عنه",
+      "عثمان بن عفّان رضي الله عنه",
+      "عليّ بن أبي طالب رضي الله عنه"
+    ],
+    "correct_answer_ar": "أبو بكر الصدّيق رضي الله عنه",
+    "explanation": "Abu Bakr al-Siddiq رضي الله عنه became the first Rightly Guided Caliph after the Prophet's passing.",
+    "explanation_ar": "أبو بكر الصدّيق رضي الله عنه كان أوّلَ الخلفاء الراشدين بعد وفاة النبيّ ﷺ.",
+    "objective": "Identify the first Rightly Guided Caliph.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_003",
+    "category": "history",
+    "difficulty": 2,
+    "question": "What does the title 'al-Siddiq' mean for Abu Bakr رضي الله عنه?",
+    "options": [
+      "The Truthful",
+      "The Brave",
+      "The Wealthy",
+      "The Quiet"
+    ],
+    "correct_answer": "The Truthful",
+    "question_ar": "ماذا يعني لقبُ \"الصدّيق\" لأبي بكر رضي الله عنه؟",
+    "options_ar": [
+      "الصادقُ المُصدِّق",
+      "الشجاع",
+      "الغنيّ",
+      "الهادئ"
+    ],
+    "correct_answer_ar": "الصادقُ المُصدِّق",
+    "explanation": "Abu Bakr was called al-Siddiq because he always believed and confirmed the truth of the Prophet ﷺ.",
+    "explanation_ar": "لُقِّب أبو بكر بالصدّيق لأنّه كان دائمَ التصديق بالنبيّ ﷺ.",
+    "objective": "Explain the meaning of the title al-Siddiq.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_004",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Where did Abu Bakr رضي الله عنه hide with the Prophet ﷺ during the Hijra?",
+    "options": [
+      "Cave of Thawr",
+      "Cave of Hira",
+      "A house in Mecca",
+      "Mount Uhud"
+    ],
+    "correct_answer": "Cave of Thawr",
+    "question_ar": "أين اختبأ أبو بكر رضي الله عنه مع النبيّ ﷺ في الهجرة؟",
+    "options_ar": [
+      "غارُ ثور",
+      "غارُ حِراء",
+      "بيتٌ في مكّة",
+      "جبلُ أُحُد"
+    ],
+    "correct_answer_ar": "غارُ ثور",
+    "explanation": "During the Hijra, the Prophet ﷺ and Abu Bakr رضي الله عنه took shelter in the Cave of Thawr.",
+    "explanation_ar": "في الهجرة احتمى النبيّ ﷺ وأبو بكر رضي الله عنه في غارِ ثور.",
+    "objective": "Recall the cave used during the Hijra.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_005",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Which great task did Abu Bakr رضي الله عنه order for the first time?",
+    "options": [
+      "The first compilation of the Quran into one collection",
+      "Building Masjid al-Aqsa",
+      "Translating the Quran into Persian",
+      "Opening the first school"
+    ],
+    "correct_answer": "The first compilation of the Quran into one collection",
+    "question_ar": "أيَّ عملٍ عظيمٍ أمر به أبو بكر رضي الله عنه أوّلَ مرّة؟",
+    "options_ar": [
+      "أوّلُ جمعٍ للقرآن في مصحفٍ واحد",
+      "بناءُ المسجد الأقصى",
+      "ترجمةُ القرآن إلى الفارسيّة",
+      "فتحُ أوّلِ مدرسة"
+    ],
+    "correct_answer_ar": "أوّلُ جمعٍ للقرآن في مصحفٍ واحد",
+    "explanation": "Abu Bakr رضي الله عنه ordered the first compilation of the Quran in one written collection.",
+    "explanation_ar": "أمر أبو بكر رضي الله عنه بأوّلِ جمعٍ للقرآن في مصحفٍ واحد.",
+    "objective": "Connect Abu Bakr to the first Quran compilation.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_006",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Who was the second Rightly Guided Caliph?",
+    "options": [
+      "Umar ibn al-Khattab رضي الله عنه",
+      "Abu Bakr al-Siddiq رضي الله عنه",
+      "Uthman ibn Affan رضي الله عنه",
+      "Khalid ibn al-Walid رضي الله عنه"
+    ],
+    "correct_answer": "Umar ibn al-Khattab رضي الله عنه",
+    "question_ar": "مَن كان الخليفةَ الراشدَ الثاني؟",
+    "options_ar": [
+      "عمر بن الخطّاب رضي الله عنه",
+      "أبو بكر الصدّيق رضي الله عنه",
+      "عثمان بن عفّان رضي الله عنه",
+      "خالد بن الوليد رضي الله عنه"
+    ],
+    "correct_answer_ar": "عمر بن الخطّاب رضي الله عنه",
+    "explanation": "Umar ibn al-Khattab رضي الله عنه became the second Caliph after Abu Bakr رضي الله عنه.",
+    "explanation_ar": "عمر بن الخطّاب رضي الله عنه أصبح الخليفةَ الثاني بعد أبي بكر رضي الله عنه.",
+    "objective": "Identify the second Rightly Guided Caliph.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_007",
+    "category": "history",
+    "difficulty": 2,
+    "question": "What does the title 'al-Faruq' mean for Umar رضي الله عنه?",
+    "options": [
+      "The one who distinguishes truth from falsehood",
+      "The one who collects books",
+      "The one who builds mosques",
+      "The one who feeds the poor"
+    ],
+    "correct_answer": "The one who distinguishes truth from falsehood",
+    "question_ar": "ماذا يعني لقبُ \"الفاروق\" لعمر رضي الله عنه؟",
+    "options_ar": [
+      "الذي يُفرِّق بين الحقّ والباطل",
+      "الذي يجمعُ الكتب",
+      "الذي يبني المساجد",
+      "الذي يُطعمُ الفقراء"
+    ],
+    "correct_answer_ar": "الذي يُفرِّق بين الحقّ والباطل",
+    "explanation": "Umar رضي الله عنه was called al-Faruq because he clearly distinguished truth from falsehood.",
+    "explanation_ar": "سُمِّي عمر رضي الله عنه بالفاروق لأنّه فرّق بين الحقّ والباطل.",
+    "objective": "Explain the meaning of al-Faruq.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_008",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "Which calendar began during Umar's caliphate رضي الله عنه?",
+    "options": [
+      "The Hijri calendar",
+      "The Roman calendar",
+      "The Greek calendar",
+      "The Persian calendar"
+    ],
+    "correct_answer": "The Hijri calendar",
+    "question_ar": "أيُّ تقويمٍ بدأ في خلافة عمر رضي الله عنه؟",
+    "options_ar": [
+      "التقويمُ الهجريّ",
+      "التقويمُ الرومانيّ",
+      "التقويمُ اليونانيّ",
+      "التقويمُ الفارسيّ"
+    ],
+    "correct_answer_ar": "التقويمُ الهجريّ",
+    "explanation": "The Hijri (Islamic) calendar was officially started during the reign of Umar رضي الله عنه.",
+    "explanation_ar": "بدأ التقويمُ الهجريُّ رسميًّا في خلافة عمر رضي الله عنه.",
+    "objective": "Connect the Hijri calendar to Umar's caliphate.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_009",
+    "category": "history",
+    "difficulty": 3,
+    "question": "Which lands did the Muslim state expand to under Umar رضي الله عنه?",
+    "options": [
+      "Persia, Egypt, and the Levant",
+      "China and India only",
+      "Spain and France",
+      "Africa south of the Sahara"
+    ],
+    "correct_answer": "Persia, Egypt, and the Levant",
+    "question_ar": "إلى أيّ بلادٍ امتدّت الدولةُ الإسلاميّة في عهد عمر رضي الله عنه؟",
+    "options_ar": [
+      "فارس ومصر والشام",
+      "الصينُ والهندُ فقط",
+      "إسبانيا وفرنسا",
+      "أفريقيا جنوبَ الصحراء"
+    ],
+    "correct_answer_ar": "فارس ومصر والشام",
+    "explanation": "Under Umar رضي الله عنه, the Muslim state expanded into Persia, Egypt, and the Levant (al-Sham).",
+    "explanation_ar": "في عهد عمر رضي الله عنه امتدّت الدولةُ إلى فارس ومصر والشام.",
+    "objective": "Identify regions opened during Umar's caliphate.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_010",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Who was the third Rightly Guided Caliph?",
+    "options": [
+      "Uthman ibn Affan رضي الله عنه",
+      "Umar ibn al-Khattab رضي الله عنه",
+      "Ali ibn Abi Talib رضي الله عنه",
+      "Talhah ibn Ubaydullah رضي الله عنه"
+    ],
+    "correct_answer": "Uthman ibn Affan رضي الله عنه",
+    "question_ar": "مَن كان الخليفةَ الراشدَ الثالث؟",
+    "options_ar": [
+      "عثمان بن عفّان رضي الله عنه",
+      "عمر بن الخطّاب رضي الله عنه",
+      "عليّ بن أبي طالب رضي الله عنه",
+      "طلحةُ بنُ عبيدِ الله رضي الله عنه"
+    ],
+    "correct_answer_ar": "عثمان بن عفّان رضي الله عنه",
+    "explanation": "Uthman ibn Affan رضي الله عنه was the third Rightly Guided Caliph.",
+    "explanation_ar": "عثمان بن عفّان رضي الله عنه هو الخليفةُ الراشدُ الثالث.",
+    "objective": "Identify the third Rightly Guided Caliph.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_011",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Why was Uthman رضي الله عنه called Dhul-Nurayn (the one with two lights)?",
+    "options": [
+      "He married two of the Prophet's daughters",
+      "He owned two big lamps",
+      "He led two big armies",
+      "He memorized two books"
+    ],
+    "correct_answer": "He married two of the Prophet's daughters",
+    "question_ar": "لماذا لُقِّب عثمان رضي الله عنه بذي النّورَين؟",
+    "options_ar": [
+      "تزوَّج اثنتَين من بنات النبيّ ﷺ",
+      "ملك مصباحَين كبيرَين",
+      "قاد جيشَين عظيمَين",
+      "حفظ كتابَين"
+    ],
+    "correct_answer_ar": "تزوَّج اثنتَين من بنات النبيّ ﷺ",
+    "explanation": "Uthman رضي الله عنه married Ruqayyah and then Umm Kulthum, daughters of the Prophet ﷺ, so he was called Dhul-Nurayn.",
+    "explanation_ar": "تزوَّج عثمان رضي الله عنه رقيّةَ ثمَّ أمَّ كلثوم بنتَي النبيّ ﷺ فلُقِّب بذي النّورَين.",
+    "objective": "Explain the meaning of Dhul-Nurayn.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_012",
+    "category": "culture",
+    "difficulty": 2,
+    "question": "Which great Quran-related work did Uthman رضي الله عنه complete?",
+    "options": [
+      "Compiling the official Mushaf (Uthmanic codex)",
+      "Writing the first dictionary",
+      "Translating the Quran into Greek",
+      "Inventing Arabic letters"
+    ],
+    "correct_answer": "Compiling the official Mushaf (Uthmanic codex)",
+    "question_ar": "أيَّ عملٍ عظيمٍ أنجز عثمان رضي الله عنه في القرآن؟",
+    "options_ar": [
+      "جمعُ المصحف الرسميّ (المصحف العثمانيّ)",
+      "كتابةُ أوّلِ معجم",
+      "ترجمةُ القرآن إلى اليونانيّة",
+      "اختراعُ الحروف العربيّة"
+    ],
+    "correct_answer_ar": "جمعُ المصحف الرسميّ (المصحف العثمانيّ)",
+    "explanation": "Uthman رضي الله عنه produced the official Mushaf, known as the Uthmanic codex, used by Muslims today.",
+    "explanation_ar": "جمَع عثمان رضي الله عنه المصحفَ الرسميَّ المعروفَ بالمصحف العثمانيّ الذي يستخدمه المسلمون اليوم.",
+    "objective": "Connect Uthman to the official Mushaf.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_013",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Who was the fourth Rightly Guided Caliph?",
+    "options": [
+      "Ali ibn Abi Talib رضي الله عنه",
+      "Uthman ibn Affan رضي الله عنه",
+      "Sa'd ibn Abi Waqqas رضي الله عنه",
+      "Zayd ibn Thabit رضي الله عنه"
+    ],
+    "correct_answer": "Ali ibn Abi Talib رضي الله عنه",
+    "question_ar": "مَن كان الخليفةَ الراشدَ الرابع؟",
+    "options_ar": [
+      "عليّ بن أبي طالب رضي الله عنه",
+      "عثمان بن عفّان رضي الله عنه",
+      "سعد بن أبي وقّاص رضي الله عنه",
+      "زيد بن ثابت رضي الله عنه"
+    ],
+    "correct_answer_ar": "عليّ بن أبي طالب رضي الله عنه",
+    "explanation": "Ali ibn Abi Talib رضي الله عنه was the fourth and last of the Rightly Guided Caliphs.",
+    "explanation_ar": "عليّ بن أبي طالب رضي الله عنه رابعُ الخلفاء الراشدين وآخرُهم.",
+    "objective": "Identify the fourth Rightly Guided Caliph.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_014",
+    "category": "history",
+    "difficulty": 2,
+    "question": "What was Ali's relationship رضي الله عنه to the Prophet ﷺ?",
+    "options": [
+      "Cousin and son-in-law",
+      "Brother",
+      "Father",
+      "Uncle"
+    ],
+    "correct_answer": "Cousin and son-in-law",
+    "question_ar": "ما صلةُ عليّ رضي الله عنه بالنبيّ ﷺ؟",
+    "options_ar": [
+      "ابنُ عمِّه وزوجُ ابنته",
+      "أخوه",
+      "والدُه",
+      "عمُّه"
+    ],
+    "correct_answer_ar": "ابنُ عمِّه وزوجُ ابنته",
+    "explanation": "Ali رضي الله عنه was the Prophet's cousin and married his daughter Fatima رضي الله عنها.",
+    "explanation_ar": "عليٌّ رضي الله عنه هو ابنُ عمِّ النبيّ ﷺ وتزوَّج ابنتَه فاطمةَ رضي الله عنها.",
+    "objective": "Identify Ali's family link to the Prophet.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_015",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Ali ibn Abi Talib رضي الله عنه is known as which of these?",
+    "options": [
+      "The first male child to accept Islam",
+      "The first muezzin",
+      "The first scribe of revelation",
+      "The first general of Islam"
+    ],
+    "correct_answer": "The first male child to accept Islam",
+    "question_ar": "بأيّ شيءٍ اشتُهر عليّ بن أبي طالب رضي الله عنه ممّا يلي؟",
+    "options_ar": [
+      "أوّلُ صبيٍّ ذكَرٍ أسلم",
+      "أوّلُ مؤذِّن",
+      "أوّلُ كاتبٍ للوحي",
+      "أوّلُ قائدٍ للمسلمين"
+    ],
+    "correct_answer_ar": "أوّلُ صبيٍّ ذكَرٍ أسلم",
+    "explanation": "Ali رضي الله عنه accepted Islam as a young boy around age ten, becoming the first male child to do so.",
+    "explanation_ar": "أسلم عليّ رضي الله عنه وهو صغيرٌ نحوَ العاشرة فكان أوّلَ صبيٍّ ذكَرٍ يُسلم.",
+    "objective": "Recall a unique honor of Ali رضي الله عنه.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_016",
+    "category": "general",
+    "difficulty": 2,
+    "question": "How many Sahaba did the Prophet ﷺ promise Paradise in their lifetime, in the famous narration?",
+    "options": [
+      "Ten",
+      "Five",
+      "Twelve",
+      "Twenty"
+    ],
+    "correct_answer": "Ten",
+    "question_ar": "كم عددُ الصحابة الذين بشَّرهم النبيّ ﷺ بالجنّة في حياتهم في الحديث المشهور؟",
+    "options_ar": [
+      "عشرة",
+      "خمسة",
+      "اثنا عشر",
+      "عشرون"
+    ],
+    "correct_answer_ar": "عشرة",
+    "explanation": "They are called al-Asharah al-Mubasharun: the ten Companions promised Paradise during their lifetime.",
+    "explanation_ar": "هم العشرةُ المُبشَّرون بالجنّة الذين بشَّرهم النبيّ ﷺ بها في حياتهم.",
+    "objective": "Recall the number of Companions promised Paradise.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_017",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which Sahabi was titled 'Amin al-Ummah' (Trustee of the Ummah)?",
+    "options": [
+      "Abu Ubaydah ibn al-Jarrah رضي الله عنه",
+      "Abu Hurayrah رضي الله عنه",
+      "Salman al-Farisi رضي الله عنه",
+      "Hamza ibn Abd al-Muttalib رضي الله عنه"
+    ],
+    "correct_answer": "Abu Ubaydah ibn al-Jarrah رضي الله عنه",
+    "question_ar": "أيُّ صحابيٍّ لُقِّب بأمين الأمّة؟",
+    "options_ar": [
+      "أبو عبيدة بن الجرّاح رضي الله عنه",
+      "أبو هريرة رضي الله عنه",
+      "سلمان الفارسيّ رضي الله عنه",
+      "حمزةُ بنُ عبد المطّلب رضي الله عنه"
+    ],
+    "correct_answer_ar": "أبو عبيدة بن الجرّاح رضي الله عنه",
+    "explanation": "The Prophet ﷺ called Abu Ubaydah ibn al-Jarrah رضي الله عنه the 'Trustee of this Ummah'.",
+    "explanation_ar": "سمَّاه النبيّ ﷺ أمينَ هذه الأمّة، وهو أبو عبيدة بن الجرّاح رضي الله عنه.",
+    "objective": "Match the title 'Amin al-Ummah' to the correct Companion.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_018",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which Companion's mother went on a hunger strike trying to make him leave Islam?",
+    "options": [
+      "Sa'd ibn Abi Waqqas رضي الله عنه",
+      "Talhah ibn Ubaydullah رضي الله عنه",
+      "Sa'id ibn Zayd رضي الله عنه",
+      "Zubayr ibn al-Awwam رضي الله عنه"
+    ],
+    "correct_answer": "Sa'd ibn Abi Waqqas رضي الله عنه",
+    "question_ar": "أيُّ صحابيٍّ امتنعت أمُّه عن الطعام لتُرغمَه على ترك الإسلام؟",
+    "options_ar": [
+      "سعد بن أبي وقّاص رضي الله عنه",
+      "طلحةُ بنُ عبيدِ الله رضي الله عنه",
+      "سعيد بن زيد رضي الله عنه",
+      "الزّبير بن العوّام رضي الله عنه"
+    ],
+    "correct_answer_ar": "سعد بن أبي وقّاص رضي الله عنه",
+    "explanation": "Sa'd ibn Abi Waqqas رضي الله عنه stayed firm in Islam even when his mother refused to eat to pressure him.",
+    "explanation_ar": "ثبت سعد بن أبي وقّاص رضي الله عنه على إسلامه رغم إضراب أمِّه عن الطعام.",
+    "objective": "Recall a famous test of Sa'd ibn Abi Waqqas.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_019",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which Sahabi became wealthy from honest trade and gave huge charity in the early Muslim community?",
+    "options": [
+      "Abdul-Rahman ibn Awf رضي الله عنه",
+      "Bilal ibn Rabah رضي الله عنه",
+      "Anas ibn Malik رضي الله عنه",
+      "Mu'adh ibn Jabal رضي الله عنه"
+    ],
+    "correct_answer": "Abdul-Rahman ibn Awf رضي الله عنه",
+    "question_ar": "أيُّ صحابيٍّ صار غنيًّا من تجارةٍ حلالٍ وأنفق كثيرًا في الصدقة في صدر الإسلام؟",
+    "options_ar": [
+      "عبد الرحمن بن عوف رضي الله عنه",
+      "بلال بن رباح رضي الله عنه",
+      "أنس بن مالك رضي الله عنه",
+      "مُعاذ بن جبل رضي الله عنه"
+    ],
+    "correct_answer_ar": "عبد الرحمن بن عوف رضي الله عنه",
+    "explanation": "Abdul-Rahman ibn Awf رضي الله عنه gained wealth through halal trade and gave generous charity.",
+    "explanation_ar": "كسب عبد الرحمن بن عوف رضي الله عنه ماله من تجارةٍ حلالٍ وأنفق كثيرًا في سبيل الله.",
+    "objective": "Identify the generous merchant Sahabi.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_020",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Who was the first wife of the Prophet ﷺ and the first to accept Islam?",
+    "options": [
+      "Khadijah bint Khuwaylid رضي الله عنها",
+      "Aisha bint Abi Bakr رضي الله عنها",
+      "Hafsa bint Umar رضي الله عنها",
+      "Umm Salama رضي الله عنها"
+    ],
+    "correct_answer": "Khadijah bint Khuwaylid رضي الله عنها",
+    "question_ar": "مَن كانت أوّلَ زوجةٍ للنبيّ ﷺ وأوّلَ من أسلم؟",
+    "options_ar": [
+      "خديجة بنت خويلد رضي الله عنها",
+      "عائشة بنت أبي بكر رضي الله عنها",
+      "حفصة بنت عمر رضي الله عنها",
+      "أمُّ سلمة رضي الله عنها"
+    ],
+    "correct_answer_ar": "خديجة بنت خويلد رضي الله عنها",
+    "explanation": "Khadijah رضي الله عنها was the Prophet's first wife and the first person to accept Islam.",
+    "explanation_ar": "خديجة رضي الله عنها أوّلُ زوجاتِ النبيّ ﷺ وأوّلُ من آمن به.",
+    "objective": "Identify Khadijah as the first wife and first Muslim.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_021",
+    "category": "history",
+    "difficulty": 2,
+    "question": "How did Khadijah رضي الله عنها help the Prophet ﷺ early on?",
+    "options": [
+      "She supported him with comfort and her wealth during persecution",
+      "She led an army to defend him",
+      "She built the first mosque",
+      "She translated his words into Arabic"
+    ],
+    "correct_answer": "She supported him with comfort and her wealth during persecution",
+    "question_ar": "كيف ساعدت خديجة رضي الله عنها النبيّ ﷺ في بداية الدعوة؟",
+    "options_ar": [
+      "آزَرَته بالكلمة الطيّبة وبمالها أثناء الأذى",
+      "قادت جيشًا للدفاع عنه",
+      "بنت أوّلَ مسجد",
+      "ترجَمت كلامَه إلى العربيّة"
+    ],
+    "correct_answer_ar": "آزَرَته بالكلمة الطيّبة وبمالها أثناء الأذى",
+    "explanation": "Khadijah رضي الله عنها comforted the Prophet ﷺ and spent her wealth supporting Islam in its early days.",
+    "explanation_ar": "آزرت خديجة رضي الله عنها النبيَّ ﷺ بكلامها الطيّب وأنفقت مالها في نُصرة الإسلام أوّلَ أمره.",
+    "objective": "Explain Khadijah's role of support.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_022",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which wife of the Prophet ﷺ narrated thousands of hadiths and was known for sharp memory?",
+    "options": [
+      "Aisha bint Abi Bakr رضي الله عنها",
+      "Sawda bint Zam'a رضي الله عنها",
+      "Maymunah bint al-Harith رضي الله عنها",
+      "Juwayriya رضي الله عنها"
+    ],
+    "correct_answer": "Aisha bint Abi Bakr رضي الله عنها",
+    "question_ar": "أيُّ زوجاتِ النبيّ ﷺ روَت آلافَ الأحاديث واشتُهرت بقوّة الحفظ؟",
+    "options_ar": [
+      "عائشة بنت أبي بكر رضي الله عنها",
+      "سودة بنت زمعة رضي الله عنها",
+      "ميمونة بنت الحارث رضي الله عنها",
+      "جويرية رضي الله عنها"
+    ],
+    "correct_answer_ar": "عائشة بنت أبي بكر رضي الله عنها",
+    "explanation": "Aisha رضي الله عنها was a great scholar with sharp memory and narrated thousands of hadiths.",
+    "explanation_ar": "كانت عائشة رضي الله عنها عالمةً قويّةَ الحفظ روَت آلافَ الأحاديث.",
+    "objective": "Identify the wife famous for hadith narration.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_023",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which mother of the believers kept the first manuscript of the Quran?",
+    "options": [
+      "Hafsa bint Umar رضي الله عنها",
+      "Zaynab bint Jahsh رضي الله عنها",
+      "Umm Habibah رضي الله عنها",
+      "Safiyyah bint Huyayy رضي الله عنها"
+    ],
+    "correct_answer": "Hafsa bint Umar رضي الله عنها",
+    "question_ar": "أيُّ أمّهات المؤمنين احتفظت بأوّل نسخةٍ مكتوبةٍ من القرآن؟",
+    "options_ar": [
+      "حفصة بنت عمر رضي الله عنها",
+      "زينب بنت جحش رضي الله عنها",
+      "أمُّ حبيبة رضي الله عنها",
+      "صفيّة بنت حُيَيّ رضي الله عنها"
+    ],
+    "correct_answer_ar": "حفصة بنت عمر رضي الله عنها",
+    "explanation": "Hafsa رضي الله عنها kept the first written compilation of the Quran in her care.",
+    "explanation_ar": "حفظت حفصة رضي الله عنها أوّلَ نسخةٍ مكتوبةٍ من القرآن.",
+    "objective": "Match the manuscript to its keeper.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_024",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which mother of the believers was called 'Mother of the Poor' (Umm al-Masakin)?",
+    "options": [
+      "Zaynab bint Khuzayma رضي الله عنها",
+      "Aisha رضي الله عنها",
+      "Hafsa رضي الله عنها",
+      "Khadijah رضي الله عنها"
+    ],
+    "correct_answer": "Zaynab bint Khuzayma رضي الله عنها",
+    "question_ar": "أيُّ أمّهات المؤمنين لُقِّبت بأمّ المساكين؟",
+    "options_ar": [
+      "زينب بنت خُزَيمة رضي الله عنها",
+      "عائشة رضي الله عنها",
+      "حفصة رضي الله عنها",
+      "خديجة رضي الله عنها"
+    ],
+    "correct_answer_ar": "زينب بنت خُزَيمة رضي الله عنها",
+    "explanation": "Zaynab bint Khuzayma رضي الله عنها was called 'Mother of the Poor' for her great kindness to the needy.",
+    "explanation_ar": "لُقِّبت زينب بنت خُزَيمة رضي الله عنها بأمّ المساكين لكثرة إحسانها للفقراء.",
+    "objective": "Match the title 'Mother of the Poor' to the correct wife.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_025",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Safiyyah bint Huyayy رضي الله عنها descended from which prophet?",
+    "options": [
+      "Aaron عليه السلام (Harun)",
+      "Jonah عليه السلام (Yunus)",
+      "Solomon عليه السلام (Sulayman)",
+      "Job عليه السلام (Ayyub)"
+    ],
+    "correct_answer": "Aaron عليه السلام (Harun)",
+    "question_ar": "صفيّة بنت حُيَيّ رضي الله عنها من نسلِ أيِّ نبيٍّ؟",
+    "options_ar": [
+      "هارون عليه السلام",
+      "يونس عليه السلام",
+      "سليمان عليه السلام",
+      "أيّوب عليه السلام"
+    ],
+    "correct_answer_ar": "هارون عليه السلام",
+    "explanation": "Safiyyah رضي الله عنها was Jewish before Islam and from the lineage of Prophet Aaron عليه السلام.",
+    "explanation_ar": "كانت صفيّة رضي الله عنها يهوديّةً قبل إسلامها ومن نسل النبيّ هارون عليه السلام.",
+    "objective": "Recall the lineage of Safiyyah رضي الله عنها.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_026",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Mariya the Copt رضي الله عنها was the mother of which child of the Prophet ﷺ?",
+    "options": [
+      "Ibrahim",
+      "Hasan",
+      "Husayn",
+      "Qasim"
+    ],
+    "correct_answer": "Ibrahim",
+    "question_ar": "ماريّة القبطيّة رضي الله عنها أمُّ أيِّ ولدٍ للنبيّ ﷺ؟",
+    "options_ar": [
+      "إبراهيم",
+      "الحسن",
+      "الحسين",
+      "القاسم"
+    ],
+    "correct_answer_ar": "إبراهيم",
+    "explanation": "Mariya the Copt رضي الله عنها, gifted by the ruler of Egypt, was the mother of the Prophet's son Ibrahim.",
+    "explanation_ar": "ماريّة القبطيّة رضي الله عنها التي أهداها حاكمُ مصر هي أمُّ ابنِ النبيّ ﷺ إبراهيم.",
+    "objective": "Identify the mother of Ibrahim ibn Muhammad.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_027",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Who was the youngest daughter of the Prophet ﷺ?",
+    "options": [
+      "Fatima رضي الله عنها",
+      "Zaynab رضي الله عنها",
+      "Ruqayyah رضي الله عنها",
+      "Umm Kulthum رضي الله عنها"
+    ],
+    "correct_answer": "Fatima رضي الله عنها",
+    "question_ar": "مَن أصغرُ بناتِ النبيّ ﷺ؟",
+    "options_ar": [
+      "فاطمة رضي الله عنها",
+      "زينب رضي الله عنها",
+      "رقيّة رضي الله عنها",
+      "أمُّ كلثوم رضي الله عنها"
+    ],
+    "correct_answer_ar": "فاطمة رضي الله عنها",
+    "explanation": "Fatima رضي الله عنها was the youngest daughter of the Prophet ﷺ and married Ali رضي الله عنه.",
+    "explanation_ar": "فاطمة رضي الله عنها أصغرُ بنات النبيّ ﷺ، تزوَّجها عليّ رضي الله عنه.",
+    "objective": "Identify the youngest daughter of the Prophet.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_028",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Who were the two beloved grandsons of the Prophet ﷺ?",
+    "options": [
+      "Hasan and Husayn رضي الله عنهما",
+      "Anas and Zayd رضي الله عنهما",
+      "Bilal and Suhayb رضي الله عنهما",
+      "Mu'adh and Talha رضي الله عنهما"
+    ],
+    "correct_answer": "Hasan and Husayn رضي الله عنهما",
+    "question_ar": "مَن سِبطا النبيّ ﷺ المحبوبان؟",
+    "options_ar": [
+      "الحسن والحسين رضي الله عنهما",
+      "أنس وزيد رضي الله عنهما",
+      "بلال وصهيب رضي الله عنهما",
+      "معاذ وطلحة رضي الله عنهما"
+    ],
+    "correct_answer_ar": "الحسن والحسين رضي الله عنهما",
+    "explanation": "Hasan and Husayn رضي الله عنهما, sons of Ali and Fatima رضي الله عنهما, were the Prophet's beloved grandsons.",
+    "explanation_ar": "الحسن والحسين رضي الله عنهما ابنا عليٍّ وفاطمةَ رضي الله عنهما، وهما سِبطا النبيّ ﷺ.",
+    "objective": "Identify the Prophet's grandsons.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_029",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Where was Husayn ibn Ali رضي الله عنه martyred?",
+    "options": [
+      "Karbala",
+      "Mecca",
+      "Damascus",
+      "Cairo"
+    ],
+    "correct_answer": "Karbala",
+    "question_ar": "أين استُشهد الحسين بن عليّ رضي الله عنه؟",
+    "options_ar": [
+      "كربلاء",
+      "مكّة",
+      "دمشق",
+      "القاهرة"
+    ],
+    "correct_answer_ar": "كربلاء",
+    "explanation": "Husayn ibn Ali رضي الله عنه was martyred at Karbala in the year ٦٨٠ CE / ٦١ AH.",
+    "explanation_ar": "استُشهد الحسين بن عليّ رضي الله عنه في كربلاء عام ٦٨٠م الموافق ٦١هـ.",
+    "objective": "Identify the place of martyrdom of Husayn رضي الله عنه.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_030",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Who was the first muezzin of Islam?",
+    "options": [
+      "Bilal ibn Rabah رضي الله عنه",
+      "Suhayb al-Rumi رضي الله عنه",
+      "Anas ibn Malik رضي الله عنه",
+      "Salman al-Farisi رضي الله عنه"
+    ],
+    "correct_answer": "Bilal ibn Rabah رضي الله عنه",
+    "question_ar": "مَن أوّلُ مؤذّنٍ في الإسلام؟",
+    "options_ar": [
+      "بلال بن رباح رضي الله عنه",
+      "صهيب الروميّ رضي الله عنه",
+      "أنس بن مالك رضي الله عنه",
+      "سلمان الفارسيّ رضي الله عنه"
+    ],
+    "correct_answer_ar": "بلال بن رباح رضي الله عنه",
+    "explanation": "Bilal ibn Rabah رضي الله عنه was the first muezzin of Islam, with a beautiful strong voice.",
+    "explanation_ar": "بلال بن رباح رضي الله عنه أوّلُ مؤذّنٍ في الإسلام، وكان حسنَ الصوت.",
+    "objective": "Identify the first muezzin of Islam.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_031",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Bilal ibn Rabah رضي الله عنه repeated which word under torture in Mecca?",
+    "options": [
+      "Ahad, Ahad (One, One)",
+      "Al-Hamdulillah",
+      "Bismillah",
+      "Astaghfirullah"
+    ],
+    "correct_answer": "Ahad, Ahad (One, One)",
+    "question_ar": "أيَّ كلمةٍ كان يُردِّدها بلالٌ رضي الله عنه تحت العذاب في مكّة؟",
+    "options_ar": [
+      "أحدٌ أحد",
+      "الحمدُ لله",
+      "بسم الله",
+      "أستغفرُ الله"
+    ],
+    "correct_answer_ar": "أحدٌ أحد",
+    "explanation": "While being tortured, Bilal رضي الله عنه kept saying 'Ahad, Ahad' to declare Allah's oneness.",
+    "explanation_ar": "كان بلالٌ رضي الله عنه يُردِّد \"أحدٌ أحد\" تحت التعذيب إعلانًا بتوحيد الله.",
+    "objective": "Recall Bilal's word of faith under persecution.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_032",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Who freed Bilal رضي الله عنه from slavery?",
+    "options": [
+      "Abu Bakr al-Siddiq رضي الله عنه",
+      "Umar ibn al-Khattab رضي الله عنه",
+      "Uthman ibn Affan رضي الله عنه",
+      "Hamza ibn Abd al-Muttalib رضي الله عنه"
+    ],
+    "correct_answer": "Abu Bakr al-Siddiq رضي الله عنه",
+    "question_ar": "مَن الذي أعتق بلالًا رضي الله عنه من الرّقّ؟",
+    "options_ar": [
+      "أبو بكر الصدّيق رضي الله عنه",
+      "عمر بن الخطّاب رضي الله عنه",
+      "عثمان بن عفّان رضي الله عنه",
+      "حمزةُ بنُ عبد المطّلب رضي الله عنه"
+    ],
+    "correct_answer_ar": "أبو بكر الصدّيق رضي الله عنه",
+    "explanation": "Abu Bakr رضي الله عنه bought Bilal رضي الله عنه and set him free for the sake of Allah.",
+    "explanation_ar": "اشترى أبو بكر رضي الله عنه بلالًا رضي الله عنه وأعتقه لله.",
+    "objective": "Connect Abu Bakr to freeing Bilal.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_033",
+    "category": "people",
+    "difficulty": 1,
+    "question": "Which Sahabi was called 'The Sword of Allah' (Sayf Allah al-Maslul)?",
+    "options": [
+      "Khalid ibn al-Walid رضي الله عنه",
+      "Hamza ibn Abd al-Muttalib رضي الله عنه",
+      "Sa'd ibn Abi Waqqas رضي الله عنه",
+      "Zubayr ibn al-Awwam رضي الله عنه"
+    ],
+    "correct_answer": "Khalid ibn al-Walid رضي الله عنه",
+    "question_ar": "أيُّ صحابيٍّ لُقِّب بسيف الله المسلول؟",
+    "options_ar": [
+      "خالد بن الوليد رضي الله عنه",
+      "حمزةُ بنُ عبد المطّلب رضي الله عنه",
+      "سعد بن أبي وقّاص رضي الله عنه",
+      "الزّبير بن العوّام رضي الله عنه"
+    ],
+    "correct_answer_ar": "خالد بن الوليد رضي الله عنه",
+    "explanation": "The Prophet ﷺ named Khalid ibn al-Walid رضي الله عنه the 'Sword of Allah'.",
+    "explanation_ar": "سمَّى النبيّ ﷺ خالدَ بنَ الوليد رضي الله عنه سيفَ الله المسلول.",
+    "objective": "Match the title to Khalid رضي الله عنه.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_034",
+    "category": "history",
+    "difficulty": 2,
+    "question": "Khalid ibn al-Walid رضي الله عنه helped lead the conquest of which region?",
+    "options": [
+      "The Levant (al-Sham)",
+      "Andalusia (Spain)",
+      "India",
+      "Greece"
+    ],
+    "correct_answer": "The Levant (al-Sham)",
+    "question_ar": "ساهم خالد بن الوليد رضي الله عنه في فتح أيِّ منطقة؟",
+    "options_ar": [
+      "بلاد الشام",
+      "الأندلس",
+      "الهند",
+      "اليونان"
+    ],
+    "correct_answer_ar": "بلاد الشام",
+    "explanation": "Khalid رضي الله عنه played a major role in the conquest of the Levant (al-Sham).",
+    "explanation_ar": "كان لخالد رضي الله عنه دورٌ كبيرٌ في فتح بلاد الشام.",
+    "objective": "Connect Khalid to the conquest of al-Sham.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_035",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Who was titled 'Tarjuman al-Quran' (Interpreter of the Quran)?",
+    "options": [
+      "Abdullah ibn Abbas رضي الله عنه",
+      "Abdullah ibn Umar رضي الله عنه",
+      "Abdullah ibn Mas'ud رضي الله عنه",
+      "Anas ibn Malik رضي الله عنه"
+    ],
+    "correct_answer": "Abdullah ibn Abbas رضي الله عنه",
+    "question_ar": "مَن لُقِّب بترجمان القرآن؟",
+    "options_ar": [
+      "عبد الله بن عبّاس رضي الله عنه",
+      "عبد الله بن عمر رضي الله عنه",
+      "عبد الله بن مسعود رضي الله عنه",
+      "أنس بن مالك رضي الله عنه"
+    ],
+    "correct_answer_ar": "عبد الله بن عبّاس رضي الله عنه",
+    "explanation": "Abdullah ibn Abbas رضي الله عنه was called Tarjuman al-Quran for his deep understanding of its meanings.",
+    "explanation_ar": "لُقِّب عبد الله بن عبّاس رضي الله عنه بترجمان القرآن لعمق فهمه لمعانيه.",
+    "objective": "Match the title to Ibn Abbas رضي الله عنه.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_036",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which Sahabi narrated the most hadiths?",
+    "options": [
+      "Abu Hurayrah رضي الله عنه",
+      "Anas ibn Malik رضي الله عنه",
+      "Ibn Umar رضي الله عنه",
+      "Aisha رضي الله عنها"
+    ],
+    "correct_answer": "Abu Hurayrah رضي الله عنه",
+    "question_ar": "أيُّ صحابيٍّ روى أكثر الأحاديث؟",
+    "options_ar": [
+      "أبو هريرة رضي الله عنه",
+      "أنس بن مالك رضي الله عنه",
+      "ابن عمر رضي الله عنه",
+      "عائشة رضي الله عنها"
+    ],
+    "correct_answer_ar": "أبو هريرة رضي الله عنه",
+    "explanation": "Abu Hurayrah رضي الله عنه, known as 'Father of the Cat', narrated about ٥٬٣٧٤ hadiths.",
+    "explanation_ar": "أبو هريرة رضي الله عنه، صاحبُ الهريرة، روى نحوَ ٥٬٣٧٤ حديثًا.",
+    "objective": "Identify the top hadith narrator.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_037",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Who suggested digging the trench at the Battle of Khandaq?",
+    "options": [
+      "Salman al-Farisi رضي الله عنه",
+      "Suhayb al-Rumi رضي الله عنه",
+      "Mu'adh ibn Jabal رضي الله عنه",
+      "Bilal ibn Rabah رضي الله عنه"
+    ],
+    "correct_answer": "Salman al-Farisi رضي الله عنه",
+    "question_ar": "مَن اقترح حفرَ الخندق في غزوة الخندق؟",
+    "options_ar": [
+      "سلمان الفارسيّ رضي الله عنه",
+      "صهيب الروميّ رضي الله عنه",
+      "معاذ بن جبل رضي الله عنه",
+      "بلال بن رباح رضي الله عنه"
+    ],
+    "correct_answer_ar": "سلمان الفارسيّ رضي الله عنه",
+    "explanation": "Salman al-Farisi رضي الله عنه, the Persian Companion, suggested digging the trench at Khandaq.",
+    "explanation_ar": "اقترح سلمان الفارسيّ رضي الله عنه حفرَ الخندق في غزوة الخندق.",
+    "objective": "Connect Salman to the trench idea.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_038",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which Sahabi was sent by the Prophet ﷺ to teach Islam in Yemen?",
+    "options": [
+      "Mu'adh ibn Jabal رضي الله عنه",
+      "Anas ibn Malik رضي الله عنه",
+      "Zayd ibn Thabit رضي الله عنه",
+      "Bilal ibn Rabah رضي الله عنه"
+    ],
+    "correct_answer": "Mu'adh ibn Jabal رضي الله عنه",
+    "question_ar": "أيَّ صحابيٍّ أرسل النبيّ ﷺ إلى اليمن ليعلِّم الناس الإسلام؟",
+    "options_ar": [
+      "معاذ بن جبل رضي الله عنه",
+      "أنس بن مالك رضي الله عنه",
+      "زيد بن ثابت رضي الله عنه",
+      "بلال بن رباح رضي الله عنه"
+    ],
+    "correct_answer_ar": "معاذ بن جبل رضي الله عنه",
+    "explanation": "The Prophet ﷺ sent Mu'adh ibn Jabal رضي الله عنه to Yemen as a teacher and judge.",
+    "explanation_ar": "أرسل النبيّ ﷺ معاذَ بنَ جبلٍ رضي الله عنه إلى اليمن معلِّمًا وقاضيًا.",
+    "objective": "Identify the Companion sent to Yemen.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_039",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Anas ibn Malik رضي الله عنه served the Prophet ﷺ for how many years?",
+    "options": [
+      "About ١٠ years",
+      "About ٢ years",
+      "About ٣٠ years",
+      "About ٥ years"
+    ],
+    "correct_answer": "About ١٠ years",
+    "question_ar": "كم سنةً خدم أنس بن مالك رضي الله عنه النبيَّ ﷺ؟",
+    "options_ar": [
+      "نحوَ ١٠ سنوات",
+      "نحوَ ٢ من السنوات",
+      "نحوَ ٣٠ سنة",
+      "نحوَ ٥ سنوات"
+    ],
+    "correct_answer_ar": "نحوَ ١٠ سنوات",
+    "explanation": "Anas ibn Malik رضي الله عنه began serving the Prophet ﷺ around age ١٠ and continued for about ١٠ years.",
+    "explanation_ar": "بدأ أنس بن مالك رضي الله عنه خدمةَ النبيّ ﷺ نحوَ سنّ العاشرة واستمرّ نحوَ ١٠ سنوات.",
+    "objective": "Recall Anas's service period.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_040",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which Sahabi was a famous scribe of revelation and helped compile the Quran?",
+    "options": [
+      "Zayd ibn Thabit رضي الله عنه",
+      "Abu Hurayrah رضي الله عنه",
+      "Salman al-Farisi رضي الله عنه",
+      "Suhayb al-Rumi رضي الله عنه"
+    ],
+    "correct_answer": "Zayd ibn Thabit رضي الله عنه",
+    "question_ar": "أيُّ صحابيٍّ كان كاتبًا مشهورًا للوحي وأسهم في جمع القرآن؟",
+    "options_ar": [
+      "زيد بن ثابت رضي الله عنه",
+      "أبو هريرة رضي الله عنه",
+      "سلمان الفارسيّ رضي الله عنه",
+      "صهيب الروميّ رضي الله عنه"
+    ],
+    "correct_answer_ar": "زيد بن ثابت رضي الله عنه",
+    "explanation": "Zayd ibn Thabit رضي الله عنه was a scribe of revelation and led the compilation of the Quran.",
+    "explanation_ar": "زيد بن ثابت رضي الله عنه كان من كتّاب الوحي وأشرف على جمع القرآن.",
+    "objective": "Identify Zayd ibn Thabit's main role.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_041",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Hamza ibn Abd al-Muttalib رضي الله عنه was famously titled what?",
+    "options": [
+      "Lion of Allah (Asad Allah)",
+      "Trustee of the Ummah",
+      "Father of the Cat",
+      "The Greek"
+    ],
+    "correct_answer": "Lion of Allah (Asad Allah)",
+    "question_ar": "بأيِّ لقبٍ اشتُهر حمزةُ بنُ عبد المطّلب رضي الله عنه؟",
+    "options_ar": [
+      "أسدُ الله",
+      "أمين الأمّة",
+      "صاحب الهريرة",
+      "الروميّ"
+    ],
+    "correct_answer_ar": "أسدُ الله",
+    "explanation": "Hamza رضي الله عنه, the Prophet's uncle, was called the Lion of Allah for his courage in battle.",
+    "explanation_ar": "حمزةُ رضي الله عنه عمُّ النبيّ ﷺ سُمِّي أسدَ الله لشجاعته في القتال.",
+    "objective": "Match the title to Hamza رضي الله عنه.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_042",
+    "category": "history",
+    "difficulty": 2,
+    "question": "In which battle was Hamza رضي الله عنه martyred?",
+    "options": [
+      "Uhud",
+      "Badr",
+      "Khandaq",
+      "Tabuk"
+    ],
+    "correct_answer": "Uhud",
+    "question_ar": "في أيّ غزوةٍ استُشهد حمزةُ رضي الله عنه؟",
+    "options_ar": [
+      "أُحُد",
+      "بدر",
+      "الخندق",
+      "تبوك"
+    ],
+    "correct_answer_ar": "أُحُد",
+    "explanation": "Hamza رضي الله عنه was martyred at the Battle of Uhud in ٣ AH / ٦٢٥ CE.",
+    "explanation_ar": "استُشهد حمزةُ رضي الله عنه في غزوة أُحُد سنة ٣هـ الموافق ٦٢٥م.",
+    "objective": "Connect Hamza to the Battle of Uhud.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_043",
+    "category": "people",
+    "difficulty": 3,
+    "question": "Ja'far ibn Abi Talib رضي الله عنه was titled 'Dhul-Janahayn' (the two-winged) because…",
+    "options": [
+      "Allah will grant him two wings to fly in Paradise",
+      "He could climb mountains very fast",
+      "He invented two wings of cloth",
+      "He led two armies at once"
+    ],
+    "correct_answer": "Allah will grant him two wings to fly in Paradise",
+    "question_ar": "لُقِّب جعفر بن أبي طالب رضي الله عنه بذي الجناحَين لأنّه…",
+    "options_ar": [
+      "يُعطيه اللهُ في الجنّة جناحَين يطير بهما",
+      "كان يصعد الجبال بسرعة",
+      "اخترع جناحَين من القماش",
+      "قاد جيشَين في وقتٍ واحد"
+    ],
+    "correct_answer_ar": "يُعطيه اللهُ في الجنّة جناحَين يطير بهما",
+    "explanation": "Ja'far رضي الله عنه was martyred at Mu'tah; the Prophet ﷺ said Allah replaced his arms with two wings in Paradise.",
+    "explanation_ar": "استُشهد جعفر رضي الله عنه في مؤتة، وأخبر النبيّ ﷺ أنّ الله أبدله جناحَين يطير بهما في الجنّة.",
+    "objective": "Explain the meaning of Dhul-Janahayn.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_044",
+    "category": "people",
+    "difficulty": 3,
+    "question": "Which person protected the Prophet ﷺ as his uncle but is not counted as a Sahabi?",
+    "options": [
+      "Abu Talib",
+      "Abdul-Muttalib",
+      "Abu Bakr",
+      "Hamza"
+    ],
+    "correct_answer": "Abu Talib",
+    "question_ar": "مَن حَمى النبيَّ ﷺ بصفته عمَّه ولكنّه لا يُعدُّ من الصحابة؟",
+    "options_ar": [
+      "أبو طالب",
+      "عبد المطّلب",
+      "أبو بكر",
+      "حمزة"
+    ],
+    "correct_answer_ar": "أبو طالب",
+    "explanation": "Abu Talib protected the Prophet ﷺ in Mecca but did not openly accept Islam, so he is not counted as a Sahabi.",
+    "explanation_ar": "حمى أبو طالبٍ النبيَّ ﷺ في مكّة لكنّه لم يُعلن إسلامه، فلا يُعدُّ من الصحابة.",
+    "objective": "Distinguish Abu Talib from the Sahaba.",
+    "bloomLevel": "analyze"
+  },
+  {
+    "id": "sah_045",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Who was the grandfather of the Prophet ﷺ who raised him as a child?",
+    "options": [
+      "Abdul-Muttalib",
+      "Abu Talib",
+      "Abdullah",
+      "Hashim"
+    ],
+    "correct_answer": "Abdul-Muttalib",
+    "question_ar": "مَن جدُّ النبيّ ﷺ الذي رعاه في صغره؟",
+    "options_ar": [
+      "عبد المطّلب",
+      "أبو طالب",
+      "عبد الله",
+      "هاشم"
+    ],
+    "correct_answer_ar": "عبد المطّلب",
+    "explanation": "Abdul-Muttalib was the Prophet's grandfather and cared for him after the death of his mother.",
+    "explanation_ar": "عبد المطّلب جدُّ النبيّ ﷺ كَفَله بعد وفاة أمّه.",
+    "objective": "Identify the Prophet's grandfather.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_046",
+    "category": "general",
+    "difficulty": 2,
+    "question": "What is the difference between Muhajirun and Ansar?",
+    "options": [
+      "Muhajirun migrated from Mecca, Ansar were the Muslims of Medina who helped them",
+      "Muhajirun were soldiers, Ansar were poets",
+      "Muhajirun were children, Ansar were elders",
+      "Muhajirun were Persians, Ansar were Arabs"
+    ],
+    "correct_answer": "Muhajirun migrated from Mecca, Ansar were the Muslims of Medina who helped them",
+    "question_ar": "ما الفرقُ بين المهاجرين والأنصار؟",
+    "options_ar": [
+      "المهاجرون هاجروا من مكّة، والأنصار مسلمو المدينة الذين نَصَروهم",
+      "المهاجرون جنود، والأنصار شعراء",
+      "المهاجرون أطفال، والأنصار شيوخ",
+      "المهاجرون فُرس، والأنصار عرب"
+    ],
+    "correct_answer_ar": "المهاجرون هاجروا من مكّة، والأنصار مسلمو المدينة الذين نَصَروهم",
+    "explanation": "Muhajirun left Mecca for Medina; Ansar are the people of Medina who helped and welcomed them.",
+    "explanation_ar": "المهاجرون تركوا مكّة إلى المدينة، والأنصار أهل المدينة الذين نصروهم وآووهم.",
+    "objective": "Distinguish Muhajirun from Ansar.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_047",
+    "category": "history",
+    "difficulty": 2,
+    "question": "What did the Prophet ﷺ do to unite Muhajirun and Ansar in Medina?",
+    "options": [
+      "He paired them as brothers (mu'akhah)",
+      "He gave them new names",
+      "He sent them all to war",
+      "He moved them to one tribe"
+    ],
+    "correct_answer": "He paired them as brothers (mu'akhah)",
+    "question_ar": "ماذا فعل النبيّ ﷺ ليجمعَ بين المهاجرين والأنصار في المدينة؟",
+    "options_ar": [
+      "آخى بينهم في المؤاخاة",
+      "أعطاهم أسماءً جديدة",
+      "أرسلهم جميعًا إلى الحرب",
+      "نَقَلهم إلى قبيلةٍ واحدة"
+    ],
+    "correct_answer_ar": "آخى بينهم في المؤاخاة",
+    "explanation": "The Prophet ﷺ paired each Muhajir with an Ansari as brothers in faith — this is called mu'akhah.",
+    "explanation_ar": "آخى النبيّ ﷺ بين كلّ مهاجرٍ وأنصاريٍّ، وهذه هي المؤاخاة.",
+    "objective": "Explain the mu'akhah event.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_048",
+    "category": "history",
+    "difficulty": 2,
+    "question": "How many Muslims fought at the Battle of Badr?",
+    "options": [
+      "About ٣١٣",
+      "About ١٬٠٠٠",
+      "About ١٠٬٠٠٠",
+      "About ٥٠"
+    ],
+    "correct_answer": "About ٣١٣",
+    "question_ar": "كم كان عددُ المسلمين في غزوة بدر؟",
+    "options_ar": [
+      "نحوَ ٣١٣",
+      "نحوَ ١٬٠٠٠",
+      "نحوَ ١٠٬٠٠٠",
+      "نحوَ ٥٠"
+    ],
+    "correct_answer_ar": "نحوَ ٣١٣",
+    "explanation": "About ٣١٣ Muslims faced around ١٬٠٠٠ Quraysh fighters at Badr in ٢ AH / ٦٢٤ CE, and Allah granted them victory.",
+    "explanation_ar": "واجه نحوَ ٣١٣ مسلمًا قرابةَ ١٬٠٠٠ من قريش في بدر سنة ٢هـ الموافق ٦٢٤م ونصرهم الله.",
+    "objective": "Recall the number of Muslims at Badr.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_049",
+    "category": "history",
+    "difficulty": 3,
+    "question": "What is a key lesson the Sahaba learned from the Battle of Uhud?",
+    "options": [
+      "The importance of obeying the Prophet's instructions",
+      "Not to ride horses",
+      "To avoid praying in groups",
+      "Not to make treaties"
+    ],
+    "correct_answer": "The importance of obeying the Prophet's instructions",
+    "question_ar": "ما الدرسُ المهمُّ الذي تعلَّمه الصحابة من غزوة أُحُد؟",
+    "options_ar": [
+      "أهمّيّةُ طاعة أوامر النبيّ ﷺ",
+      "ألّا يركبوا الخيل",
+      "تجنّبُ صلاة الجماعة",
+      "تركُ المعاهدات"
+    ],
+    "correct_answer_ar": "أهمّيّةُ طاعة أوامر النبيّ ﷺ",
+    "explanation": "At Uhud, when some archers left their post, the Muslims faced hardship — teaching the value of obedience.",
+    "explanation_ar": "في أُحُد لمَّا ترك بعض الرماة مواقعهم أصاب المسلمين أذى، وفي ذلك درسٌ عظيمٌ في الطاعة.",
+    "objective": "Analyze the lesson of Uhud.",
+    "bloomLevel": "analyze"
+  },
+  {
+    "id": "sah_050",
+    "category": "history",
+    "difficulty": 2,
+    "question": "When did the Muslim conquest of Mecca take place?",
+    "options": [
+      "٨ AH / ٦٣٠ CE",
+      "٢ AH / ٦٢٤ CE",
+      "٥ AH / ٦٢٧ CE",
+      "١٠ AH / ٦٣٢ CE"
+    ],
+    "correct_answer": "٨ AH / ٦٣٠ CE",
+    "question_ar": "متى وقع فتحُ مكّة؟",
+    "options_ar": [
+      "٨هـ الموافق ٦٣٠م",
+      "٢هـ الموافق ٦٢٤م",
+      "٥هـ الموافق ٦٢٧م",
+      "١٠هـ الموافق ٦٣٢م"
+    ],
+    "correct_answer_ar": "٨هـ الموافق ٦٣٠م",
+    "explanation": "Mecca was peacefully entered by the Muslims in ٨ AH (٦٣٠ CE), and the Prophet ﷺ forgave its people.",
+    "explanation_ar": "دخل المسلمون مكّةَ سِلمًا سنة ٨هـ الموافق ٦٣٠م، وعفا النبيّ ﷺ عن أهلها.",
+    "objective": "Recall the date of the conquest of Mecca.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_051",
+    "category": "history",
+    "difficulty": 3,
+    "question": "What is the Treaty of Hudaybiyya?",
+    "options": [
+      "A peace agreement between the Muslims and Quraysh in ٦ AH",
+      "A trade contract with Persia",
+      "A wedding agreement",
+      "A document of slavery"
+    ],
+    "correct_answer": "A peace agreement between the Muslims and Quraysh in ٦ AH",
+    "question_ar": "ما صلحُ الحديبية؟",
+    "options_ar": [
+      "اتّفاقُ سلامٍ بين المسلمين وقريش سنة ٦هـ",
+      "عقدُ تجارةٍ مع فارس",
+      "اتّفاقُ زواج",
+      "وثيقةُ رِقّ"
+    ],
+    "correct_answer_ar": "اتّفاقُ سلامٍ بين المسلمين وقريش سنة ٦هـ",
+    "explanation": "The Treaty of Hudaybiyya in ٦ AH / ٦٢٨ CE brought peace and was a great victory for Islam.",
+    "explanation_ar": "صلحُ الحديبية سنة ٦هـ الموافق ٦٢٨م جلب السلامَ وكان فتحًا عظيمًا للإسلام.",
+    "objective": "Define the Treaty of Hudaybiyya.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_052",
+    "category": "history",
+    "difficulty": 2,
+    "question": "When did the Farewell Pilgrimage (Hajjat al-Wada') take place?",
+    "options": [
+      "١٠ AH / ٦٣٢ CE",
+      "٨ AH / ٦٣٠ CE",
+      "٦ AH / ٦٢٨ CE",
+      "٢ AH / ٦٢٤ CE"
+    ],
+    "correct_answer": "١٠ AH / ٦٣٢ CE",
+    "question_ar": "متى أدّى النبيّ ﷺ حجّةَ الوداع؟",
+    "options_ar": [
+      "١٠هـ الموافق ٦٣٢م",
+      "٨هـ الموافق ٦٣٠م",
+      "٦هـ الموافق ٦٢٨م",
+      "٢هـ الموافق ٦٢٤م"
+    ],
+    "correct_answer_ar": "١٠هـ الموافق ٦٣٢م",
+    "explanation": "The Farewell Pilgrimage took place in ١٠ AH / ٦٣٢ CE, where the Prophet ﷺ gave his famous final sermon.",
+    "explanation_ar": "كانت حجّةُ الوداع سنة ١٠هـ الموافق ٦٣٢م، وفيها ألقى النبيّ ﷺ خطبتَه المشهورة.",
+    "objective": "Recall the year of Hajjat al-Wada'.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_053",
+    "category": "history",
+    "difficulty": 3,
+    "question": "What is 'Bi'r Ma'una' famous for in Sahaba history?",
+    "options": [
+      "About ٧٠ Quran-memorizing Sahaba were killed there",
+      "It was the first mosque in Medina",
+      "It was a market for charity",
+      "It was a school for poetry"
+    ],
+    "correct_answer": "About ٧٠ Quran-memorizing Sahaba were killed there",
+    "question_ar": "بمَ اشتُهرت بئر معونة في تاريخ الصحابة؟",
+    "options_ar": [
+      "قُتل فيها نحوَ ٧٠ من حُفّاظ القرآن من الصحابة",
+      "أوّلُ مسجدٍ في المدينة",
+      "سوقٌ للصدقة",
+      "مدرسةٌ للشعر"
+    ],
+    "correct_answer_ar": "قُتل فيها نحوَ ٧٠ من حُفّاظ القرآن من الصحابة",
+    "explanation": "At Bi'r Ma'una, about ٧٠ Sahaba who memorized the Quran were martyred — a very sad day.",
+    "explanation_ar": "في بئر معونة استُشهد نحوَ ٧٠ من حُفّاظ القرآن من الصحابة، وكان يومًا حزينًا.",
+    "objective": "Recall the tragedy of Bi'r Ma'una.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_054",
+    "category": "general",
+    "difficulty": 2,
+    "question": "What did the Sahaba do after the Prophet ﷺ passed away?",
+    "options": [
+      "They spread Islam to many lands and taught the Quran and Sunnah",
+      "They stayed only in Medina forever",
+      "They stopped praying",
+      "They burned all books"
+    ],
+    "correct_answer": "They spread Islam to many lands and taught the Quran and Sunnah",
+    "question_ar": "ماذا فعل الصحابةُ بعد وفاة النبيّ ﷺ؟",
+    "options_ar": [
+      "نشروا الإسلامَ في بلادٍ كثيرة وعلَّموا الناسَ القرآنَ والسنّة",
+      "بقوا في المدينة فقط للأبد",
+      "تركوا الصلاة",
+      "أحرقوا الكتب"
+    ],
+    "correct_answer_ar": "نشروا الإسلامَ في بلادٍ كثيرة وعلَّموا الناسَ القرآنَ والسنّة",
+    "explanation": "The Sahaba carried Islam to many lands, teaching the Quran, the Sunnah and good manners.",
+    "explanation_ar": "حمل الصحابةُ الإسلامَ إلى بلادٍ كثيرة فعلَّموا الناسَ القرآنَ والسنّةَ والأخلاقَ الحسنة.",
+    "objective": "Understand the role of the Sahaba after the Prophet.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_055",
+    "category": "history",
+    "difficulty": 3,
+    "question": "What were the Ridda Wars during Abu Bakr's caliphate رضي الله عنه?",
+    "options": [
+      "Battles to bring back tribes that left Islam after the Prophet's death",
+      "Battles between Sahaba over money",
+      "Battles with India",
+      "Wars about food prices"
+    ],
+    "correct_answer": "Battles to bring back tribes that left Islam after the Prophet's death",
+    "question_ar": "ما حروبُ الردّة في خلافة أبي بكر رضي الله عنه؟",
+    "options_ar": [
+      "معاركُ لإرجاع القبائل التي تركت الإسلام بعد وفاة النبيّ ﷺ",
+      "خلافاتُ الصحابة على المال",
+      "حروبٌ مع الهند",
+      "نزاعٌ على أسعار الطعام"
+    ],
+    "correct_answer_ar": "معاركُ لإرجاع القبائل التي تركت الإسلام بعد وفاة النبيّ ﷺ",
+    "explanation": "Abu Bakr رضي الله عنه fought the Ridda Wars to restore the unity of the Muslim community.",
+    "explanation_ar": "خاض أبو بكر رضي الله عنه حروبَ الردّة لإعادة وحدة المسلمين.",
+    "objective": "Define the Ridda Wars.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_056",
+    "category": "people",
+    "difficulty": 2,
+    "question": "Which Companion said 'I learned ٧٠ surahs from the lips of the Prophet ﷺ'?",
+    "options": [
+      "Abdullah ibn Mas'ud رضي الله عنه",
+      "Anas ibn Malik رضي الله عنه",
+      "Suhayb al-Rumi رضي الله عنه",
+      "Salman al-Farisi رضي الله عنه"
+    ],
+    "correct_answer": "Abdullah ibn Mas'ud رضي الله عنه",
+    "question_ar": "أيُّ صحابيٍّ قال: \"أخذتُ ٧٠ سورةً من فِي رسول الله ﷺ\"؟",
+    "options_ar": [
+      "عبد الله بن مسعود رضي الله عنه",
+      "أنس بن مالك رضي الله عنه",
+      "صهيب الروميّ رضي الله عنه",
+      "سلمان الفارسيّ رضي الله عنه"
+    ],
+    "correct_answer_ar": "عبد الله بن مسعود رضي الله عنه",
+    "explanation": "Abdullah ibn Mas'ud رضي الله عنه was a great Quran teacher who learned ٧٠ surahs directly from the Prophet ﷺ.",
+    "explanation_ar": "عبد الله بن مسعود رضي الله عنه كان معلِّمًا كبيرًا للقرآن، أخذ ٧٠ سورةً مباشرةً من النبيّ ﷺ.",
+    "objective": "Identify Ibn Mas'ud and his Quran learning.",
+    "bloomLevel": "remember"
+  },
+  {
+    "id": "sah_057",
+    "category": "people",
+    "difficulty": 3,
+    "question": "What does Suhayb's title 'al-Rumi' tell us about him رضي الله عنه?",
+    "options": [
+      "He had a Roman / Byzantine background",
+      "He was born in India",
+      "He was from Yemen",
+      "He was from Africa"
+    ],
+    "correct_answer": "He had a Roman / Byzantine background",
+    "question_ar": "ماذا يدلُّ لقبُ \"الروميّ\" لصهيبٍ رضي الله عنه؟",
+    "options_ar": [
+      "أنّ له أصلًا روميًّا (بيزنطيًّا)",
+      "أنّه من الهند",
+      "أنّه من اليمن",
+      "أنّه من أفريقيا"
+    ],
+    "correct_answer_ar": "أنّ له أصلًا روميًّا (بيزنطيًّا)",
+    "explanation": "Suhayb رضي الله عنه grew up among the Byzantines, so he was called al-Rumi.",
+    "explanation_ar": "نشأ صهيب رضي الله عنه في بلاد الروم فلُقِّب بالروميّ.",
+    "objective": "Analyze the meaning of the nisba al-Rumi.",
+    "bloomLevel": "analyze"
+  },
+  {
+    "id": "sah_058",
+    "category": "people",
+    "difficulty": 3,
+    "question": "Why is Abdullah ibn Umar رضي الله عنه important in Islamic knowledge?",
+    "options": [
+      "He was a major narrator and very careful follower of the Sunnah",
+      "He invented the Arabic alphabet",
+      "He led every Muslim battle",
+      "He wrote the first Arabic poem"
+    ],
+    "correct_answer": "He was a major narrator and very careful follower of the Sunnah",
+    "question_ar": "لماذا يُعدُّ عبد الله بن عمر رضي الله عنه مهمًّا في العلم الإسلاميّ؟",
+    "options_ar": [
+      "كان من كبار الرواة وأشدّ الناس اتّباعًا للسنّة",
+      "اخترع الحروفَ العربيّة",
+      "قاد كلَّ المعارك",
+      "كتب أوّلَ قصيدةٍ عربيّة"
+    ],
+    "correct_answer_ar": "كان من كبار الرواة وأشدّ الناس اتّباعًا للسنّة",
+    "explanation": "Abdullah ibn Umar رضي الله عنه narrated many hadiths and was famous for closely following the Sunnah.",
+    "explanation_ar": "روى عبد الله بن عمر رضي الله عنه أحاديثَ كثيرة، واشتُهر بشدّة اتّباعه للسنّة.",
+    "objective": "Explain Ibn Umar's importance in hadith.",
+    "bloomLevel": "understand"
+  },
+  {
+    "id": "sah_059",
+    "category": "culture",
+    "difficulty": 3,
+    "question": "If we want to follow the example of the Sahaba today, what should we do?",
+    "options": [
+      "Learn the Quran and Sunnah and act with honesty, patience and kindness",
+      "Wear only white clothes",
+      "Refuse to study any other knowledge",
+      "Stay silent always"
+    ],
+    "correct_answer": "Learn the Quran and Sunnah and act with honesty, patience and kindness",
+    "question_ar": "إذا أردنا أن نقتديَ بالصحابة اليوم، فماذا نفعل؟",
+    "options_ar": [
+      "نتعلَّم القرآن والسنّة ونعمل بالصدق والصبر والرحمة",
+      "نلبس الأبيضَ فقط",
+      "نمتنع عن أيّ علمٍ آخر",
+      "نسكت دائمًا"
+    ],
+    "correct_answer_ar": "نتعلَّم القرآن والسنّة ونعمل بالصدق والصبر والرحمة",
+    "explanation": "Following the Sahaba means learning the Quran and Sunnah and showing good character every day.",
+    "explanation_ar": "الاقتداءُ بالصحابة يكون بتعلُّم القرآن والسنّة والتحلّي بالأخلاق الحسنة كلَّ يوم.",
+    "objective": "Apply the example of the Sahaba to daily life.",
+    "bloomLevel": "apply",
+    "explanation_extra": ""
+  },
+  {
+    "id": "sah_060",
+    "category": "general",
+    "difficulty": 3,
+    "question": "Which of these is the BEST description of how to respect the Sahaba?",
+    "options": [
+      "Love them, learn from their lives, and ask Allah to be pleased with them",
+      "Talk badly about some of them",
+      "Forget their stories",
+      "Pray to them instead of Allah"
+    ],
+    "correct_answer": "Love them, learn from their lives, and ask Allah to be pleased with them",
+    "question_ar": "أيُّ ما يلي أفضلُ وصفٍ لاحترام الصحابة؟",
+    "options_ar": [
+      "نُحبُّهم ونتعلَّم من سِيَرهم ونسأل اللهَ أن يرضى عنهم",
+      "نتكلَّم بسوءٍ عن بعضهم",
+      "ننسى قصصَهم",
+      "ندعوهم من دون الله"
+    ],
+    "correct_answer_ar": "نُحبُّهم ونتعلَّم من سِيَرهم ونسأل اللهَ أن يرضى عنهم",
+    "explanation": "We respect the Sahaba by loving them, learning from their stories and saying رضي الله عنهم.",
+    "explanation_ar": "نحترم الصحابةَ بحبّهم والتعلُّم من سِيَرهم وقولِ رضي الله عنهم.",
+    "objective": "Analyze the correct attitude towards the Sahaba.",
+    "bloomLevel": "analyze"
+  }
+]

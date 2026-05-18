@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "stt_001",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which giant copper statue stands in New York Harbor as a symbol of freedom?",
+    "question_ar": "ما التمثال النحاسي العملاق الذي يقف في ميناء نيويورك رمزا للحرية؟",
+    "options": [
+      "The Statue of Liberty",
+      "Christ the Redeemer",
+      "The Sphinx",
+      "The Little Mermaid"
+    ],
+    "options_ar": [
+      "تمثال الحرية",
+      "تمثال المسيح الفادي",
+      "أبو الهول",
+      "حورية البحر الصغيرة"
+    ],
+    "correct_answer": "The Statue of Liberty",
+    "correct_answer_ar": "تمثال الحرية",
+    "explanation": "The Statue of Liberty stands on Liberty Island in New York Harbor and is a famous symbol of freedom.",
+    "explanation_ar": "يقف تمثال الحرية على جزيرة الحرية في ميناء نيويورك وهو رمز شهير للحرية.",
+    "image": ""
+  },
+  {
+    "id": "stt_002",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which country gave the Statue of Liberty as a gift to the United States?",
+    "question_ar": "أي دولة أهدت تمثال الحرية للولايات المتحدة؟",
+    "options": [
+      "France",
+      "England",
+      "Italy",
+      "Spain"
+    ],
+    "options_ar": [
+      "فرنسا",
+      "إنجلترا",
+      "إيطاليا",
+      "إسبانيا"
+    ],
+    "correct_answer": "France",
+    "correct_answer_ar": "فرنسا",
+    "explanation": "The Statue of Liberty was a gift from the people of France to the United States in 1886.",
+    "explanation_ar": "كان تمثال الحرية هدية من شعب فرنسا للولايات المتحدة عام ١٨٨٦.",
+    "image": ""
+  },
+  {
+    "id": "stt_003",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "On which mountain does the giant statue of Christ the Redeemer stand in Rio de Janeiro?",
+    "question_ar": "على أي جبل يقف تمثال المسيح الفادي العملاق في ريو دي جانيرو؟",
+    "options": [
+      "Mount Corcovado",
+      "Mount Fuji",
+      "Mount Everest",
+      "Mount Kilimanjaro"
+    ],
+    "options_ar": [
+      "جبل كوركوفادو",
+      "جبل فوجي",
+      "جبل إفرست",
+      "جبل كليمنجارو"
+    ],
+    "correct_answer": "Mount Corcovado",
+    "correct_answer_ar": "جبل كوركوفادو",
+    "explanation": "Christ the Redeemer stands on top of Mount Corcovado, about 700 meters above Rio de Janeiro.",
+    "explanation_ar": "يقف تمثال المسيح الفادي على قمة جبل كوركوفادو على ارتفاع نحو ٧٠٠ متر فوق ريو دي جانيرو.",
+    "image": ""
+  },
+  {
+    "id": "stt_004",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which ancient Egyptian statue has the body of a lion and the head of a human?",
+    "question_ar": "أي تمثال مصري قديم له جسد أسد ورأس إنسان؟",
+    "options": [
+      "The Great Sphinx of Giza",
+      "The Statue of Ramses",
+      "The Statue of Anubis",
+      "The Statue of Horus"
+    ],
+    "options_ar": [
+      "تمثال أبو الهول العظيم في الجيزة",
+      "تمثال رمسيس",
+      "تمثال أنوبيس",
+      "تمثال حورس"
+    ],
+    "correct_answer": "The Great Sphinx of Giza",
+    "correct_answer_ar": "تمثال أبو الهول العظيم في الجيزة",
+    "explanation": "The Great Sphinx of Giza has the body of a lion and the head of a human and stands near the pyramids.",
+    "explanation_ar": "لتمثال أبو الهول في الجيزة جسد أسد ورأس إنسان ويقف بجوار الأهرامات.",
+    "image": ""
+  },
+  {
+    "id": "stt_005",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which statue holds a torch high in one hand and a tablet in the other?",
+    "question_ar": "أي تمثال يحمل شعلة مرفوعة بيد ولوحا باليد الأخرى؟",
+    "options": [
+      "The Statue of Liberty",
+      "The Statue of David",
+      "The Thinker",
+      "The Little Mermaid"
+    ],
+    "options_ar": [
+      "تمثال الحرية",
+      "تمثال داود",
+      "المفكر",
+      "حورية البحر الصغيرة"
+    ],
+    "correct_answer": "The Statue of Liberty",
+    "correct_answer_ar": "تمثال الحرية",
+    "explanation": "The Statue of Liberty holds a torch in her right hand and a tablet of law in her left.",
+    "explanation_ar": "يحمل تمثال الحرية شعلة بيده اليمنى ولوح قوانين بيده اليسرى.",
+    "image": ""
+  },
+  {
+    "id": "stt_006",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What color is the Statue of Liberty today?",
+    "question_ar": "ما لون تمثال الحرية اليوم؟",
+    "options": [
+      "Green",
+      "Brown",
+      "Gold",
+      "White"
+    ],
+    "options_ar": [
+      "أخضر",
+      "بني",
+      "ذهبي",
+      "أبيض"
+    ],
+    "correct_answer": "Green",
+    "correct_answer_ar": "أخضر",
+    "explanation": "The copper of the statue turned green over time as it reacted with air and water.",
+    "explanation_ar": "تحول النحاس في التمثال إلى الأخضر مع الوقت بسبب تفاعله مع الهواء والماء.",
+    "image": ""
+  },
+  {
+    "id": "stt_007",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "On which island in the Pacific Ocean are the giant Moai head statues found?",
+    "question_ar": "على أي جزيرة في المحيط الهادئ توجد تماثيل الموآي العملاقة؟",
+    "options": [
+      "Easter Island",
+      "Hawaii",
+      "Bali",
+      "Fiji"
+    ],
+    "options_ar": [
+      "جزيرة الفصح",
+      "هاواي",
+      "بالي",
+      "فيجي"
+    ],
+    "correct_answer": "Easter Island",
+    "correct_answer_ar": "جزيرة الفصح",
+    "explanation": "The Moai are nearly 900 huge stone statues carved by the Rapa Nui people of Easter Island.",
+    "explanation_ar": "تماثيل الموآي قرابة ٩٠٠ تمثال حجري ضخم نحته شعب رابا نوي في جزيرة الفصح.",
+    "image": ""
+  },
+  {
+    "id": "stt_008",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which famous statue stands by the harbor in Copenhagen and is based on a fairy tale?",
+    "question_ar": "أي تمثال شهير يقف عند ميناء كوبنهاجن وهو مأخوذ من حكاية خيالية؟",
+    "options": [
+      "The Little Mermaid",
+      "Manneken Pis",
+      "The Lion of Lucerne",
+      "Atlas"
+    ],
+    "options_ar": [
+      "حورية البحر الصغيرة",
+      "مانيكين بيس",
+      "أسد لوسيرن",
+      "أطلس"
+    ],
+    "correct_answer": "The Little Mermaid",
+    "correct_answer_ar": "حورية البحر الصغيرة",
+    "explanation": "The Little Mermaid statue in Copenhagen is based on a fairy tale by Hans Christian Andersen.",
+    "explanation_ar": "تمثال حورية البحر الصغيرة في كوبنهاجن مأخوذ من حكاية للكاتب هانس كريستيان أندرسن.",
+    "image": ""
+  },
+  {
+    "id": "stt_009",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which mountain in the United States shows the faces of four presidents carved into rock?",
+    "question_ar": "أي جبل في الولايات المتحدة يظهر وجوه أربعة رؤساء منحوتة في الصخر؟",
+    "options": [
+      "Mount Rushmore",
+      "Mount Saint Helens",
+      "Pikes Peak",
+      "Mount Whitney"
+    ],
+    "options_ar": [
+      "جبل رشمور",
+      "جبل سانت هيلين",
+      "قمة بايكس",
+      "جبل ويتني"
+    ],
+    "correct_answer": "Mount Rushmore",
+    "correct_answer_ar": "جبل رشمور",
+    "explanation": "Mount Rushmore shows the faces of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln.",
+    "explanation_ar": "يظهر جبل رشمور وجوه جورج واشنطن وتوماس جيفرسون وثيودور روزفلت وأبراهام لينكولن.",
+    "image": ""
+  },
+  {
+    "id": "stt_010",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which famous Italian statue by Michelangelo shows a young man holding a sling?",
+    "question_ar": "أي تمثال إيطالي شهير لمايكل أنجلو يصور شابا يحمل مقلاعا؟",
+    "options": [
+      "The Statue of David",
+      "The Pieta",
+      "The Thinker",
+      "Venus de Milo"
+    ],
+    "options_ar": [
+      "تمثال داود",
+      "تمثال البييتا",
+      "المفكر",
+      "فينوس دي ميلو"
+    ],
+    "correct_answer": "The Statue of David",
+    "correct_answer_ar": "تمثال داود",
+    "explanation": "Michelangelo's marble statue of David in Florence shows the young hero before fighting Goliath.",
+    "explanation_ar": "يصور تمثال داود الرخامي لمايكل أنجلو في فلورنسا البطل الصغير قبل قتاله جالوت.",
+    "image": ""
+  },
+  {
+    "id": "stt_011",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which famous bronze statue in Rio de Janeiro has its arms stretched wide open?",
+    "question_ar": "أي تمثال برونزي شهير في ريو دي جانيرو يفرد ذراعيه بشكل واسع؟",
+    "options": [
+      "Christ the Redeemer",
+      "The Statue of Liberty",
+      "Atlas",
+      "The Little Mermaid"
+    ],
+    "options_ar": [
+      "تمثال المسيح الفادي",
+      "تمثال الحرية",
+      "أطلس",
+      "حورية البحر الصغيرة"
+    ],
+    "correct_answer": "Christ the Redeemer",
+    "correct_answer_ar": "تمثال المسيح الفادي",
+    "explanation": "Christ the Redeemer stands with arms stretched wide above Rio and was completed in 1931.",
+    "explanation_ar": "يقف تمثال المسيح الفادي بذراعين ممدودتين فوق ريو وقد اكتمل عام ١٩٣١.",
+    "image": ""
+  },
+  {
+    "id": "stt_012",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What kind of animal sits beside the pyramids in the Great Sphinx statue?",
+    "question_ar": "أي حيوان يجلس بجانب الأهرامات في تمثال أبو الهول العظيم؟",
+    "options": [
+      "A lion",
+      "A camel",
+      "A horse",
+      "A dog"
+    ],
+    "options_ar": [
+      "أسد",
+      "جمل",
+      "حصان",
+      "كلب"
+    ],
+    "correct_answer": "A lion",
+    "correct_answer_ar": "أسد",
+    "explanation": "The Great Sphinx has the body of a lion lying down with a human face on top.",
+    "explanation_ar": "لتمثال أبو الهول جسد أسد رابض ووجه إنسان فوقه.",
+    "image": ""
+  },
+  {
+    "id": "stt_013",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which giant Buddha statue in Hong Kong sits on top of a hill on Lantau Island?",
+    "question_ar": "أي تمثال بوذا عملاق في هونغ كونغ يجلس على قمة تل في جزيرة لانتاو؟",
+    "options": [
+      "The Tian Tan Buddha",
+      "The Leshan Buddha",
+      "The Kamakura Buddha",
+      "The Spring Temple Buddha"
+    ],
+    "options_ar": [
+      "بوذا تيان تان",
+      "بوذا ليشان",
+      "بوذا كاماكورا",
+      "بوذا معبد الربيع"
+    ],
+    "correct_answer": "The Tian Tan Buddha",
+    "correct_answer_ar": "بوذا تيان تان",
+    "explanation": "The Tian Tan Buddha is a 34 meter bronze statue completed in 1993 on Lantau Island.",
+    "explanation_ar": "بوذا تيان تان تمثال برونزي بطول ٣٤ مترا اكتمل عام ١٩٩٣ في جزيرة لانتاو.",
+    "image": ""
+  },
+  {
+    "id": "stt_014",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which famous statue in front of Wall Street shows a powerful charging bull?",
+    "question_ar": "أي تمثال شهير أمام وول ستريت يصور ثورا هائجا قويا؟",
+    "options": [
+      "The Charging Bull",
+      "The Fearless Girl",
+      "Atlas",
+      "The Thinker"
+    ],
+    "options_ar": [
+      "الثور الهائج",
+      "الفتاة الشجاعة",
+      "أطلس",
+      "المفكر"
+    ],
+    "correct_answer": "The Charging Bull",
+    "correct_answer_ar": "الثور الهائج",
+    "explanation": "The Charging Bull is a bronze sculpture by Arturo Di Modica placed near Wall Street in 1989.",
+    "explanation_ar": "الثور الهائج تمثال برونزي للنحات أرتورو دي موديكا وضع قرب وول ستريت عام ١٩٨٩.",
+    "image": ""
+  },
+  {
+    "id": "stt_015",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which little statue of a boy is a beloved symbol of the city of Brussels?",
+    "question_ar": "أي تمثال صغير لصبي يعد رمزا محبوبا لمدينة بروكسل؟",
+    "options": [
+      "Manneken Pis",
+      "The Thinker",
+      "Atlas",
+      "The Little Mermaid"
+    ],
+    "options_ar": [
+      "مانيكين بيس",
+      "المفكر",
+      "أطلس",
+      "حورية البحر الصغيرة"
+    ],
+    "correct_answer": "Manneken Pis",
+    "correct_answer_ar": "مانيكين بيس",
+    "explanation": "Manneken Pis is a tiny bronze fountain statue of a boy that has stood in Brussels since 1619.",
+    "explanation_ar": "مانيكين بيس تمثال نافورة برونزي صغير لصبي يقف في بروكسل منذ عام ١٦١٩.",
+    "image": ""
+  },
+  {
+    "id": "stt_016",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which famous half-fish, half-lion statue is the symbol of Singapore?",
+    "question_ar": "أي تمثال شهير نصفه سمكة ونصفه أسد يعد رمزا لسنغافورة؟",
+    "options": [
+      "The Merlion",
+      "The Sphinx",
+      "The Lion of Lucerne",
+      "Atlas"
+    ],
+    "options_ar": [
+      "الميرليون",
+      "أبو الهول",
+      "أسد لوسيرن",
+      "أطلس"
+    ],
+    "correct_answer": "The Merlion",
+    "correct_answer_ar": "الميرليون",
+    "explanation": "The Merlion has the head of a lion and the body of a fish and was unveiled in Singapore in 1972.",
+    "explanation_ar": "للميرليون رأس أسد وجسد سمكة وقد كشف عنه في سنغافورة عام ١٩٧٢.",
+    "image": ""
+  },
+  {
+    "id": "stt_017",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What does the Statue of Liberty wear on her head?",
+    "question_ar": "ماذا يرتدي تمثال الحرية على رأسه؟",
+    "options": [
+      "A crown with seven spikes",
+      "A king's crown",
+      "A hat",
+      "A helmet"
+    ],
+    "options_ar": [
+      "تاج بسبعة أشواك",
+      "تاج ملك",
+      "قبعة",
+      "خوذة"
+    ],
+    "correct_answer": "A crown with seven spikes",
+    "correct_answer_ar": "تاج بسبعة أشواك",
+    "explanation": "The seven spikes on Liberty's crown stand for the seven continents and the seven seas.",
+    "explanation_ar": "تمثل الأشواك السبع في تاج الحرية القارات السبع والبحار السبعة.",
+    "image": ""
+  },
+  {
+    "id": "stt_018",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which French sculptor made the bronze statue called The Thinker?",
+    "question_ar": "أي نحات فرنسي صنع التمثال البرونزي المسمى المفكر؟",
+    "options": [
+      "Auguste Rodin",
+      "Pablo Picasso",
+      "Claude Monet",
+      "Henri Matisse"
+    ],
+    "options_ar": [
+      "أوغست رودان",
+      "بابلو بيكاسو",
+      "كلود مونيه",
+      "هنري ماتيس"
+    ],
+    "correct_answer": "Auguste Rodin",
+    "correct_answer_ar": "أوغست رودان",
+    "explanation": "Auguste Rodin is the French sculptor who created The Thinker around 1904.",
+    "explanation_ar": "أوغست رودان هو النحات الفرنسي الذي أبدع تمثال المفكر نحو عام ١٩٠٤.",
+    "image": ""
+  },
+  {
+    "id": "stt_019",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which famous statue of a sitting man rests inside the Lincoln Memorial in Washington?",
+    "question_ar": "أي تمثال شهير لرجل جالس يستقر داخل نصب لينكولن التذكاري في واشنطن؟",
+    "options": [
+      "Abraham Lincoln",
+      "George Washington",
+      "Thomas Jefferson",
+      "Theodore Roosevelt"
+    ],
+    "options_ar": [
+      "أبراهام لينكولن",
+      "جورج واشنطن",
+      "توماس جيفرسون",
+      "ثيودور روزفلت"
+    ],
+    "correct_answer": "Abraham Lincoln",
+    "correct_answer_ar": "أبراهام لينكولن",
+    "explanation": "The Lincoln Memorial holds a giant marble seated statue of President Abraham Lincoln.",
+    "explanation_ar": "يضم نصب لينكولن التذكاري تمثالا رخاميا ضخما للرئيس أبراهام لينكولن وهو جالس.",
+    "image": ""
+  },
+  {
+    "id": "stt_020",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which giant Buddha statue in Japan sits outdoors and is more than 13 meters tall?",
+    "question_ar": "أي تمثال بوذا عملاق في اليابان يجلس في الهواء الطلق ويزيد ارتفاعه عن ١٣ مترا؟",
+    "options": [
+      "The Great Buddha of Kamakura",
+      "The Tian Tan Buddha",
+      "The Ushiku Daibutsu",
+      "The Spring Temple Buddha"
+    ],
+    "options_ar": [
+      "بوذا كاماكورا العظيم",
+      "بوذا تيان تان",
+      "أوشيكو دايبوتسو",
+      "بوذا معبد الربيع"
+    ],
+    "correct_answer": "The Great Buddha of Kamakura",
+    "correct_answer_ar": "بوذا كاماكورا العظيم",
+    "explanation": "The Great Buddha of Kamakura is a bronze seated Buddha 13.35 meters tall, dating from the 13th century.",
+    "explanation_ar": "بوذا كاماكورا العظيم تمثال برونزي جالس بطول ١٣٫٣٥ مترا يعود للقرن الثالث عشر.",
+    "image": ""
+  },
+  {
+    "id": "stt_021",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which 4 meter bronze lion is carved into a cliff in Switzerland in memory of fallen soldiers?",
+    "question_ar": "أي أسد برونزي بطول ٤ أمتار منحوت في صخرة بسويسرا تخليدا لجنود سقطوا في المعركة؟",
+    "options": [
+      "The Lion of Lucerne",
+      "The Lion of Babylon",
+      "The Iron Lion of Cangzhou",
+      "The Sphinx"
+    ],
+    "options_ar": [
+      "أسد لوسيرن",
+      "أسد بابل",
+      "الأسد الحديدي في تشانغتشو",
+      "أبو الهول"
+    ],
+    "correct_answer": "The Lion of Lucerne",
+    "correct_answer_ar": "أسد لوسيرن",
+    "explanation": "The Lion of Lucerne is a stone lion carved by Bertel Thorvaldsen in 1821 to honor fallen Swiss guards.",
+    "explanation_ar": "أسد لوسيرن أسد حجري نحته بيرتل ثورفالدسن عام ١٨٢١ تخليدا للحرس السويسري الذين سقطوا.",
+    "image": ""
+  },
+  {
+    "id": "stt_022",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which famous tall statue holds a torch shaped like a flame at the very top?",
+    "question_ar": "أي تمثال طويل شهير يحمل شعلة على شكل لهب في أعلاه؟",
+    "options": [
+      "The Statue of Liberty",
+      "Christ the Redeemer",
+      "The Statue of David",
+      "The Discus Thrower"
+    ],
+    "options_ar": [
+      "تمثال الحرية",
+      "تمثال المسيح الفادي",
+      "تمثال داود",
+      "رامي القرص"
+    ],
+    "correct_answer": "The Statue of Liberty",
+    "correct_answer_ar": "تمثال الحرية",
+    "explanation": "The Statue of Liberty's torch shines as a beacon of freedom held high above New York Harbor.",
+    "explanation_ar": "تتألق شعلة تمثال الحرية كمنارة للحرية مرفوعة عاليا فوق ميناء نيويورك.",
+    "image": ""
+  },
+  {
+    "id": "stt_023",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Roughly how tall is the Statue of Liberty including her pedestal?",
+    "question_ar": "كم يبلغ ارتفاع تمثال الحرية تقريبا بما في ذلك قاعدته؟",
+    "options": [
+      "About 93 meters",
+      "About 30 meters",
+      "About 200 meters",
+      "About 500 meters"
+    ],
+    "options_ar": [
+      "نحو ٩٣ مترا",
+      "نحو ٣٠ مترا",
+      "نحو ٢٠٠ متر",
+      "نحو ٥٠٠ متر"
+    ],
+    "correct_answer": "About 93 meters",
+    "correct_answer_ar": "نحو ٩٣ مترا",
+    "explanation": "From the ground up to the torch, the Statue of Liberty stands about 93 meters tall.",
+    "explanation_ar": "من الأرض حتى الشعلة يبلغ ارتفاع تمثال الحرية نحو ٩٣ مترا.",
+    "image": ""
+  },
+  {
+    "id": "stt_024",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "In what year was the Statue of Liberty officially dedicated?",
+    "question_ar": "في أي عام افتتح تمثال الحرية رسميا؟",
+    "options": [
+      "1886",
+      "1776",
+      "1900",
+      "1950"
+    ],
+    "options_ar": [
+      "١٨٨٦",
+      "١٧٧٦",
+      "١٩٠٠",
+      "١٩٥٠"
+    ],
+    "correct_answer": "1886",
+    "correct_answer_ar": "١٨٨٦",
+    "explanation": "The Statue of Liberty was dedicated on October 28, 1886, in New York Harbor.",
+    "explanation_ar": "افتتح تمثال الحرية في ٢٨ أكتوبر ١٨٨٦ في ميناء نيويورك.",
+    "image": ""
+  },
+  {
+    "id": "stt_025",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which French sculptor designed the Statue of Liberty?",
+    "question_ar": "أي نحات فرنسي صمم تمثال الحرية؟",
+    "options": [
+      "Frédéric-Auguste Bartholdi",
+      "Auguste Rodin",
+      "Paul Landowski",
+      "Daniel Chester French"
+    ],
+    "options_ar": [
+      "فريدريك أوغست بارتولدي",
+      "أوغست رودان",
+      "بول لاندوفسكي",
+      "دانيال تشستر فرنش"
+    ],
+    "correct_answer": "Frédéric-Auguste Bartholdi",
+    "correct_answer_ar": "فريدريك أوغست بارتولدي",
+    "explanation": "Frédéric-Auguste Bartholdi designed the statue, and the date on its tablet reads July 4, 1776.",
+    "explanation_ar": "صمم فريدريك أوغست بارتولدي التمثال والتاريخ المنقوش على لوحه هو ٤ يوليو ١٧٧٦.",
+    "image": ""
+  },
+  {
+    "id": "stt_026",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which famous engineer built the iron skeleton inside the Statue of Liberty?",
+    "question_ar": "أي مهندس شهير بنى الهيكل الحديدي داخل تمثال الحرية؟",
+    "options": [
+      "Gustave Eiffel",
+      "Thomas Edison",
+      "Leonardo da Vinci",
+      "Isambard Kingdom Brunel"
+    ],
+    "options_ar": [
+      "غوستاف إيفل",
+      "توماس إديسون",
+      "ليوناردو دافنشي",
+      "إيزامبارد كينغدوم برونيل"
+    ],
+    "correct_answer": "Gustave Eiffel",
+    "correct_answer_ar": "غوستاف إيفل",
+    "explanation": "Gustave Eiffel, who later built the Eiffel Tower, designed the iron framework inside Liberty.",
+    "explanation_ar": "صمم غوستاف إيفل الذي بنى لاحقا برج إيفل الهيكل الحديدي داخل تمثال الحرية.",
+    "image": ""
+  },
+  {
+    "id": "stt_027",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "About how tall is the Christ the Redeemer statue in Rio?",
+    "question_ar": "كم يبلغ ارتفاع تمثال المسيح الفادي في ريو تقريبا؟",
+    "options": [
+      "About 38 meters",
+      "About 10 meters",
+      "About 100 meters",
+      "About 200 meters"
+    ],
+    "options_ar": [
+      "نحو ٣٨ مترا",
+      "نحو ١٠ أمتار",
+      "نحو ١٠٠ متر",
+      "نحو ٢٠٠ متر"
+    ],
+    "correct_answer": "About 38 meters",
+    "correct_answer_ar": "نحو ٣٨ مترا",
+    "explanation": "Christ the Redeemer stands about 38 meters tall including its base on Mount Corcovado.",
+    "explanation_ar": "يبلغ ارتفاع تمثال المسيح الفادي نحو ٣٨ مترا مع القاعدة على جبل كوركوفادو.",
+    "image": ""
+  },
+  {
+    "id": "stt_028",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which French sculptor made the statue Christ the Redeemer?",
+    "question_ar": "أي نحات فرنسي صنع تمثال المسيح الفادي؟",
+    "options": [
+      "Paul Landowski",
+      "Auguste Rodin",
+      "Frédéric-Auguste Bartholdi",
+      "Bertel Thorvaldsen"
+    ],
+    "options_ar": [
+      "بول لاندوفسكي",
+      "أوغست رودان",
+      "فريدريك أوغست بارتولدي",
+      "بيرتل ثورفالدسن"
+    ],
+    "correct_answer": "Paul Landowski",
+    "correct_answer_ar": "بول لاندوفسكي",
+    "explanation": "The French sculptor Paul Landowski sculpted Christ the Redeemer with help from Brazilian engineer Heitor da Silva Costa.",
+    "explanation_ar": "نحت الفرنسي بول لاندوفسكي تمثال المسيح الفادي بمساعدة المهندس البرازيلي هايتور دا سيلفا كوستا.",
+    "image": ""
+  },
+  {
+    "id": "stt_029",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Where is the world's tallest statue, the Statue of Unity, located?",
+    "question_ar": "أين يقع أطول تمثال في العالم، تمثال الوحدة؟",
+    "options": [
+      "India",
+      "China",
+      "Brazil",
+      "Russia"
+    ],
+    "options_ar": [
+      "الهند",
+      "الصين",
+      "البرازيل",
+      "روسيا"
+    ],
+    "correct_answer": "India",
+    "correct_answer_ar": "الهند",
+    "explanation": "The 182 meter Statue of Unity in Gujarat, India, was unveiled in 2018 and shows leader Sardar Patel.",
+    "explanation_ar": "كشف عن تمثال الوحدة بطول ١٨٢ مترا في ولاية غوجارات بالهند عام ٢٠١٨ ويصور الزعيم سردار باتيل.",
+    "image": ""
+  },
+  {
+    "id": "stt_030",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "About how tall is the Statue of Unity in India?",
+    "question_ar": "كم يبلغ ارتفاع تمثال الوحدة في الهند تقريبا؟",
+    "options": [
+      "About 182 meters",
+      "About 50 meters",
+      "About 100 meters",
+      "About 300 meters"
+    ],
+    "options_ar": [
+      "نحو ١٨٢ مترا",
+      "نحو ٥٠ مترا",
+      "نحو ١٠٠ متر",
+      "نحو ٣٠٠ متر"
+    ],
+    "correct_answer": "About 182 meters",
+    "correct_answer_ar": "نحو ١٨٢ مترا",
+    "explanation": "The Statue of Unity rises about 182 meters tall, making it the tallest statue in the world.",
+    "explanation_ar": "يرتفع تمثال الوحدة نحو ١٨٢ مترا وهو أطول تمثال في العالم.",
+    "image": ""
+  },
+  {
+    "id": "stt_031",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "In what country can you find the Spring Temple Buddha, one of the tallest statues in the world?",
+    "question_ar": "في أي دولة يوجد تمثال بوذا معبد الربيع، أحد أطول التماثيل في العالم؟",
+    "options": [
+      "China",
+      "Japan",
+      "Thailand",
+      "India"
+    ],
+    "options_ar": [
+      "الصين",
+      "اليابان",
+      "تايلاند",
+      "الهند"
+    ],
+    "correct_answer": "China",
+    "correct_answer_ar": "الصين",
+    "explanation": "The 128 meter Spring Temple Buddha in Henan, China, was completed in 2008.",
+    "explanation_ar": "اكتمل بوذا معبد الربيع بطول ١٢٨ مترا في هينان بالصين عام ٢٠٠٨.",
+    "image": ""
+  },
+  {
+    "id": "stt_032",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which giant Buddha statue is carved into a cliff above the rivers of Leshan in China?",
+    "question_ar": "أي تمثال بوذا عملاق منحوت في صخرة فوق أنهار ليشان في الصين؟",
+    "options": [
+      "The Leshan Giant Buddha",
+      "The Spring Temple Buddha",
+      "The Tian Tan Buddha",
+      "The Kamakura Buddha"
+    ],
+    "options_ar": [
+      "بوذا ليشان العملاق",
+      "بوذا معبد الربيع",
+      "بوذا تيان تان",
+      "بوذا كاماكورا"
+    ],
+    "correct_answer": "The Leshan Giant Buddha",
+    "correct_answer_ar": "بوذا ليشان العملاق",
+    "explanation": "The Leshan Giant Buddha is 71 meters tall and was carved out of a cliff in the 8th century.",
+    "explanation_ar": "بوذا ليشان العملاق يبلغ ارتفاعه ٧١ مترا ونحت من جبل صخري في القرن الثامن.",
+    "image": ""
+  },
+  {
+    "id": "stt_033",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which famous Greek statue of a goddess with no arms is displayed in the Louvre?",
+    "question_ar": "أي تمثال يوناني شهير لربة بلا ذراعين معروض في متحف اللوفر؟",
+    "options": [
+      "Venus de Milo",
+      "The Discus Thrower",
+      "Winged Victory of Samothrace",
+      "Laocoön and His Sons"
+    ],
+    "options_ar": [
+      "فينوس دي ميلو",
+      "رامي القرص",
+      "نصر سامو ثراس المجنح",
+      "لاوكون وأولاده"
+    ],
+    "correct_answer": "Venus de Milo",
+    "correct_answer_ar": "فينوس دي ميلو",
+    "explanation": "Venus de Milo is an ancient Greek marble statue from about 130 BCE displayed at the Louvre.",
+    "explanation_ar": "فينوس دي ميلو تمثال يوناني قديم من الرخام يعود لنحو ١٣٠ قبل الميلاد ومعروض في اللوفر.",
+    "image": ""
+  },
+  {
+    "id": "stt_034",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which winged Greek statue stands at the top of a grand staircase in the Louvre?",
+    "question_ar": "أي تمثال يوناني مجنح يقف في أعلى درج كبير في متحف اللوفر؟",
+    "options": [
+      "Winged Victory of Samothrace",
+      "Venus de Milo",
+      "Laocoön and His Sons",
+      "Augustus of Prima Porta"
+    ],
+    "options_ar": [
+      "نصر سامو ثراس المجنح",
+      "فينوس دي ميلو",
+      "لاوكون وأولاده",
+      "أوغسطس بريما بورتا"
+    ],
+    "correct_answer": "Winged Victory of Samothrace",
+    "correct_answer_ar": "نصر سامو ثراس المجنح",
+    "explanation": "The Winged Victory of Samothrace is a Greek marble statue of the goddess Nike from about 190 BCE.",
+    "explanation_ar": "نصر سامو ثراس المجنح تمثال يوناني رخامي للربة نايكي يعود لنحو ١٩٠ قبل الميلاد.",
+    "image": ""
+  },
+  {
+    "id": "stt_035",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which famous bronze statue made by Auguste Rodin shows two lovers embracing?",
+    "question_ar": "أي تمثال برونزي شهير صنعه أوغست رودان يصور حبيبين متعانقين؟",
+    "options": [
+      "The Kiss",
+      "The Thinker",
+      "The Discus Thrower",
+      "Atlas"
+    ],
+    "options_ar": [
+      "القبلة",
+      "المفكر",
+      "رامي القرص",
+      "أطلس"
+    ],
+    "correct_answer": "The Kiss",
+    "correct_answer_ar": "القبلة",
+    "explanation": "Auguste Rodin's sculpture The Kiss shows two lovers embracing and is one of his most famous works.",
+    "explanation_ar": "تمثال القبلة لأوغست رودان يصور حبيبين متعانقين وهو من أشهر أعماله.",
+    "image": ""
+  },
+  {
+    "id": "stt_036",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which Greek statue shows an athlete about to throw a discus in a graceful pose?",
+    "question_ar": "أي تمثال يوناني يصور رياضيا يستعد لرمي قرص في وضع رشيق؟",
+    "options": [
+      "The Discus Thrower (Discobolus)",
+      "Venus de Milo",
+      "Laocoön and His Sons",
+      "The Thinker"
+    ],
+    "options_ar": [
+      "رامي القرص ديسكوبولوس",
+      "فينوس دي ميلو",
+      "لاوكون وأولاده",
+      "المفكر"
+    ],
+    "correct_answer": "The Discus Thrower (Discobolus)",
+    "correct_answer_ar": "رامي القرص ديسكوبولوس",
+    "explanation": "The Discus Thrower or Discobolus was made by the Greek sculptor Myron in the 5th century BCE.",
+    "explanation_ar": "رامي القرص أو ديسكوبولوس صنعه النحات اليوناني ميرون في القرن الخامس قبل الميلاد.",
+    "image": ""
+  },
+  {
+    "id": "stt_037",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "About how many soldier figures make up the Terracotta Army discovered in China?",
+    "question_ar": "كم عدد جنود جيش الطين الذي اكتشف في الصين تقريبا؟",
+    "options": [
+      "About 8,000",
+      "About 100",
+      "About 500",
+      "About 50,000"
+    ],
+    "options_ar": [
+      "نحو ٨٠٠٠",
+      "نحو ١٠٠",
+      "نحو ٥٠٠",
+      "نحو ٥٠٠٠٠"
+    ],
+    "correct_answer": "About 8,000",
+    "correct_answer_ar": "نحو ٨٠٠٠",
+    "explanation": "The Terracotta Army contains about 8,000 clay soldiers buried with Emperor Qin Shi Huang around 210 BCE.",
+    "explanation_ar": "يضم جيش الطين نحو ٨٠٠٠ جندي طيني دفنوا مع الإمبراطور تشين شي هوانغ نحو ٢١٠ قبل الميلاد.",
+    "image": ""
+  },
+  {
+    "id": "stt_038",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "In which Chinese city were the Terracotta Army figures discovered in 1974?",
+    "question_ar": "في أي مدينة صينية اكتشفت تماثيل جيش الطين عام ١٩٧٤؟",
+    "options": [
+      "Xi'an",
+      "Beijing",
+      "Shanghai",
+      "Chengdu"
+    ],
+    "options_ar": [
+      "شيآن",
+      "بكين",
+      "شنغهاي",
+      "تشنغدو"
+    ],
+    "correct_answer": "Xi'an",
+    "correct_answer_ar": "شيآن",
+    "explanation": "Farmers digging a well in Xi'an in 1974 found the buried Terracotta Army of Emperor Qin Shi Huang.",
+    "explanation_ar": "اكتشف فلاحون يحفرون بئرا في شيآن عام ١٩٧٤ جيش الطين المدفون للإمبراطور تشين شي هوانغ.",
+    "image": ""
+  },
+  {
+    "id": "stt_039",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which two giant Buddha statues carved into cliffs were destroyed by the Taliban in 2001?",
+    "question_ar": "أي تمثالين عملاقين لبوذا كانا منحوتين في الصخر ودمرتهما طالبان عام ٢٠٠١؟",
+    "options": [
+      "The Bamiyan Buddhas",
+      "The Leshan Buddhas",
+      "The Yungang Buddhas",
+      "The Ushiku Buddhas"
+    ],
+    "options_ar": [
+      "تماثيل بوذا في باميان",
+      "تماثيل بوذا في ليشان",
+      "تماثيل بوذا في يونغانغ",
+      "تماثيل بوذا في أوشيكو"
+    ],
+    "correct_answer": "The Bamiyan Buddhas",
+    "correct_answer_ar": "تماثيل بوذا في باميان",
+    "explanation": "The two giant Buddhas of Bamiyan in Afghanistan were dynamited by the Taliban in March 2001.",
+    "explanation_ar": "تمثالا بوذا الضخمان في باميان بأفغانستان فجرتهما طالبان بالديناميت في مارس ٢٠٠١.",
+    "image": ""
+  },
+  {
+    "id": "stt_040",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which giant statue of a man holding the sky stands at Rockefeller Center in New York?",
+    "question_ar": "أي تمثال عملاق لرجل يحمل السماء يقف في مركز روكفلر في نيويورك؟",
+    "options": [
+      "Atlas",
+      "Hercules",
+      "Zeus",
+      "Apollo"
+    ],
+    "options_ar": [
+      "أطلس",
+      "هرقل",
+      "زيوس",
+      "أبولو"
+    ],
+    "correct_answer": "Atlas",
+    "correct_answer_ar": "أطلس",
+    "explanation": "The bronze Atlas at Rockefeller Center was sculpted by Lee Lawrie and unveiled in 1937.",
+    "explanation_ar": "تمثال أطلس البرونزي في مركز روكفلر نحته لي لوري وكشف عنه عام ١٩٣٧.",
+    "image": ""
+  },
+  {
+    "id": "stt_041",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which famous small bronze statue of a girl stood facing the Charging Bull in New York?",
+    "question_ar": "أي تمثال برونزي صغير شهير لفتاة وقف يواجه ثور وول ستريت الهائج في نيويورك؟",
+    "options": [
+      "Fearless Girl",
+      "Manneken Pis",
+      "The Little Mermaid",
+      "Venus de Milo"
+    ],
+    "options_ar": [
+      "الفتاة الشجاعة",
+      "مانيكين بيس",
+      "حورية البحر الصغيرة",
+      "فينوس دي ميلو"
+    ],
+    "correct_answer": "Fearless Girl",
+    "correct_answer_ar": "الفتاة الشجاعة",
+    "explanation": "Sculptor Kristen Visbal placed the Fearless Girl facing the Charging Bull in 2017.",
+    "explanation_ar": "وضعت النحاتة كريستن فيسبال تمثال الفتاة الشجاعة أمام الثور الهائج عام ٢٠١٧.",
+    "image": ""
+  },
+  {
+    "id": "stt_042",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "About how tall are the carved presidential faces on Mount Rushmore?",
+    "question_ar": "كم يبلغ ارتفاع وجوه الرؤساء المنحوتة في جبل رشمور تقريبا؟",
+    "options": [
+      "About 18 meters",
+      "About 5 meters",
+      "About 50 meters",
+      "About 100 meters"
+    ],
+    "options_ar": [
+      "نحو ١٨ مترا",
+      "نحو ٥ أمتار",
+      "نحو ٥٠ مترا",
+      "نحو ١٠٠ متر"
+    ],
+    "correct_answer": "About 18 meters",
+    "correct_answer_ar": "نحو ١٨ مترا",
+    "explanation": "Each presidential face on Mount Rushmore is roughly 18 meters or 60 feet tall.",
+    "explanation_ar": "يبلغ ارتفاع كل وجه رئاسي في جبل رشمور نحو ١٨ مترا أو ٦٠ قدما.",
+    "image": ""
+  },
+  {
+    "id": "stt_043",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which sculptor led the carving of the four faces on Mount Rushmore?",
+    "question_ar": "أي نحات قاد نحت الوجوه الأربعة على جبل رشمور؟",
+    "options": [
+      "Gutzon Borglum",
+      "Auguste Rodin",
+      "Michelangelo",
+      "Daniel Chester French"
+    ],
+    "options_ar": [
+      "غوتزون بورغلوم",
+      "أوغست رودان",
+      "مايكل أنجلو",
+      "دانيال تشستر فرنش"
+    ],
+    "correct_answer": "Gutzon Borglum",
+    "correct_answer_ar": "غوتزون بورغلوم",
+    "explanation": "Gutzon Borglum and his team carved Mount Rushmore between 1927 and 1941 in South Dakota.",
+    "explanation_ar": "نحت غوتزون بورغلوم وفريقه جبل رشمور بين عامي ١٩٢٧ و١٩٤١ في ولاية ساوث داكوتا.",
+    "image": ""
+  },
+  {
+    "id": "stt_044",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which 85 meter tall statue of a woman with a sword honors the Battle of Stalingrad?",
+    "question_ar": "أي تمثال بطول ٨٥ مترا لامرأة تحمل سيفا يخلد ذكرى معركة ستالينغراد؟",
+    "options": [
+      "The Motherland Calls",
+      "The Statue of Liberty",
+      "The Statue of Unity",
+      "Christ the Redeemer"
+    ],
+    "options_ar": [
+      "الوطن الأم يدعو",
+      "تمثال الحرية",
+      "تمثال الوحدة",
+      "تمثال المسيح الفادي"
+    ],
+    "correct_answer": "The Motherland Calls",
+    "correct_answer_ar": "الوطن الأم يدعو",
+    "explanation": "The Motherland Calls in Volgograd, Russia, was completed in 1967 and honors World War II soldiers.",
+    "explanation_ar": "تمثال الوطن الأم يدعو في فولغوغراد بروسيا اكتمل عام ١٩٦٧ ويخلد جنود الحرب العالمية الثانية.",
+    "image": ""
+  },
+  {
+    "id": "stt_045",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which giant equestrian statue in Mongolia honors the famous warrior Genghis Khan?",
+    "question_ar": "أي تمثال فروسية عملاق في منغوليا يخلد المحارب الشهير جنكيز خان؟",
+    "options": [
+      "The Genghis Khan Equestrian Statue",
+      "The Marcus Aurelius Equestrian Statue",
+      "The Statue of David",
+      "Atlas"
+    ],
+    "options_ar": [
+      "تمثال جنكيز خان فارسا",
+      "تمثال ماركوس أوريليوس فارسا",
+      "تمثال داود",
+      "أطلس"
+    ],
+    "correct_answer": "The Genghis Khan Equestrian Statue",
+    "correct_answer_ar": "تمثال جنكيز خان فارسا",
+    "explanation": "The Genghis Khan Equestrian Statue is a 40 meter steel statue completed near Ulaanbaatar in 2008.",
+    "explanation_ar": "تمثال جنكيز خان الفارس تمثال فولاذي بطول ٤٠ مترا اكتمل قرب أولان باتور عام ٢٠٠٨.",
+    "image": ""
+  },
+  {
+    "id": "stt_046",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which Italian Renaissance artist sculpted both the Statue of David and the Pieta?",
+    "question_ar": "أي فنان إيطالي من عصر النهضة نحت تمثال داود وتمثال البييتا معا؟",
+    "options": [
+      "Michelangelo",
+      "Leonardo da Vinci",
+      "Raphael",
+      "Donatello"
+    ],
+    "options_ar": [
+      "مايكل أنجلو",
+      "ليوناردو دافنشي",
+      "رافائيل",
+      "دوناتيلو"
+    ],
+    "correct_answer": "Michelangelo",
+    "correct_answer_ar": "مايكل أنجلو",
+    "explanation": "Michelangelo carved both the Pieta around 1499 and the Statue of David between 1501 and 1504.",
+    "explanation_ar": "نحت مايكل أنجلو كلا من البييتا نحو عام ١٤٩٩ وتمثال داود بين عامي ١٥٠١ و١٥٠٤.",
+    "image": ""
+  },
+  {
+    "id": "stt_047",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What is the name of the sonnet engraved on the Statue of Liberty's pedestal?",
+    "question_ar": "ما اسم القصيدة المنقوشة على قاعدة تمثال الحرية؟",
+    "options": [
+      "The New Colossus",
+      "Ozymandias",
+      "The Raven",
+      "Paradise Lost"
+    ],
+    "options_ar": [
+      "العملاق الجديد",
+      "أوزيمانديوس",
+      "الغراب",
+      "الفردوس المفقود"
+    ],
+    "correct_answer": "The New Colossus",
+    "correct_answer_ar": "العملاق الجديد",
+    "explanation": "Emma Lazarus wrote the sonnet The New Colossus in 1883 and it is engraved on the pedestal.",
+    "explanation_ar": "كتبت إيما لازاروس قصيدة العملاق الجديد عام ١٨٨٣ وهي منقوشة على قاعدة التمثال.",
+    "image": ""
+  },
+  {
+    "id": "stt_048",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which famous ancient bronze statue of a sun god, one of the Seven Wonders of the Ancient World, fell during an earthquake?",
+    "question_ar": "أي تمثال برونزي قديم شهير لإله الشمس من عجائب الدنيا السبع القديمة سقط في زلزال؟",
+    "options": [
+      "The Colossus of Rhodes",
+      "The Statue of Zeus at Olympia",
+      "The Lighthouse of Alexandria",
+      "The Great Sphinx"
+    ],
+    "options_ar": [
+      "تمثال رودس العملاق",
+      "تمثال زيوس في أولمبيا",
+      "منارة الإسكندرية",
+      "أبو الهول"
+    ],
+    "correct_answer": "The Colossus of Rhodes",
+    "correct_answer_ar": "تمثال رودس العملاق",
+    "explanation": "The 33 meter Colossus of Rhodes was built around 280 BCE and toppled by an earthquake in 226 BCE.",
+    "explanation_ar": "بني تمثال رودس العملاق بطول ٣٣ مترا نحو عام ٢٨٠ قبل الميلاد وأسقطه زلزال عام ٢٢٦ قبل الميلاد.",
+    "image": ""
+  },
+  {
+    "id": "stt_049",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which ancient Egyptian pharaoh is believed to have ordered the building of the Great Sphinx of Giza?",
+    "question_ar": "أي فرعون مصري قديم يعتقد أنه أمر ببناء أبو الهول العظيم في الجيزة؟",
+    "options": [
+      "Khafre",
+      "Tutankhamun",
+      "Ramses II",
+      "Cleopatra"
+    ],
+    "options_ar": [
+      "خفرع",
+      "توت عنخ آمون",
+      "رمسيس الثاني",
+      "كليوباترا"
+    ],
+    "correct_answer": "Khafre",
+    "correct_answer_ar": "خفرع",
+    "explanation": "Most scholars believe Pharaoh Khafre of the 4th dynasty ordered the Sphinx around 2500 BCE.",
+    "explanation_ar": "يعتقد معظم العلماء أن الفرعون خفرع من الأسرة الرابعة أمر ببناء أبو الهول نحو عام ٢٥٠٠ قبل الميلاد.",
+    "image": ""
+  },
+  {
+    "id": "stt_050",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which giant carved heads of stone, made by the Olmec people, were found in southern Mexico?",
+    "question_ar": "أي رؤوس حجرية ضخمة منحوتة صنعها شعب الأولمك ووجدت في جنوب المكسيك؟",
+    "options": [
+      "The Olmec colossal heads",
+      "The Moai of Easter Island",
+      "The Bayon faces of Cambodia",
+      "The Buddha heads of Ayutthaya"
+    ],
+    "options_ar": [
+      "رؤوس الأولمك العملاقة",
+      "تماثيل موآي في جزيرة الفصح",
+      "وجوه بايون في كمبوديا",
+      "رؤوس بوذا في أيوتايا"
+    ],
+    "correct_answer": "The Olmec colossal heads",
+    "correct_answer_ar": "رؤوس الأولمك العملاقة",
+    "explanation": "The Olmec colossal heads are huge basalt heads carved in southern Mexico starting around 1500 BCE.",
+    "explanation_ar": "رؤوس الأولمك العملاقة رؤوس بازلتية ضخمة نحتت في جنوب المكسيك بدءا من نحو ١٥٠٠ قبل الميلاد.",
+    "image": ""
+  },
+  {
+    "id": "stt_051",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which old bronze equestrian statue stands on top of the Capitoline Hill in Rome?",
+    "question_ar": "أي تمثال فروسية برونزي قديم يقف على قمة تلة الكابيتولين في روما؟",
+    "options": [
+      "Marcus Aurelius",
+      "Augustus",
+      "Constantine",
+      "Julius Caesar"
+    ],
+    "options_ar": [
+      "ماركوس أوريليوس",
+      "أوغسطس",
+      "قسطنطين",
+      "يوليوس قيصر"
+    ],
+    "correct_answer": "Marcus Aurelius",
+    "correct_answer_ar": "ماركوس أوريليوس",
+    "explanation": "The bronze equestrian statue of Roman emperor Marcus Aurelius dates from about 175 CE.",
+    "explanation_ar": "يعود تمثال الفروسية البرونزي للإمبراطور الروماني ماركوس أوريليوس إلى نحو عام ١٧٥ ميلاديا.",
+    "image": ""
+  },
+  {
+    "id": "stt_052",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which Roman column is carved with a long spiral of scenes about the emperor's wars?",
+    "question_ar": "أي عمود روماني منحوت بشريط حلزوني طويل يصور حروب الإمبراطور؟",
+    "options": [
+      "Trajan's Column",
+      "The Column of Marcus Aurelius",
+      "The Column of Constantine",
+      "The Antonine Column"
+    ],
+    "options_ar": [
+      "عمود تراجان",
+      "عمود ماركوس أوريليوس",
+      "عمود قسطنطين",
+      "العمود الأنطوني"
+    ],
+    "correct_answer": "Trajan's Column",
+    "correct_answer_ar": "عمود تراجان",
+    "explanation": "Trajan's Column was completed in Rome in 113 CE and shows scenes from the emperor's Dacian wars.",
+    "explanation_ar": "اكتمل عمود تراجان في روما عام ١١٣ ميلاديا ويصور مشاهد من حروب الإمبراطور في داقيا.",
+    "image": ""
+  },
+  {
+    "id": "stt_053",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which tiny ancient stone figure of a woman, about 11 cm tall, is around 25,000 years old?",
+    "question_ar": "أي تمثال حجري قديم صغير لامرأة بطول نحو ١١ سنتمترا يبلغ عمره نحو ٢٥٠٠٠ عام؟",
+    "options": [
+      "The Venus of Willendorf",
+      "The Venus de Milo",
+      "The Statue of Liberty",
+      "The Pieta"
+    ],
+    "options_ar": [
+      "فينوس فيلندورف",
+      "فينوس دي ميلو",
+      "تمثال الحرية",
+      "البييتا"
+    ],
+    "correct_answer": "The Venus of Willendorf",
+    "correct_answer_ar": "فينوس فيلندورف",
+    "explanation": "The Venus of Willendorf is an 11 cm limestone figurine found in Austria and is about 25,000 years old.",
+    "explanation_ar": "فينوس فيلندورف تمثال صغير من الحجر الجيري بطول ١١ سنتمترا وجد في النمسا وعمره نحو ٢٥٠٠٠ عام.",
+    "image": ""
+  },
+  {
+    "id": "stt_054",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which 1440 bronze statue by Donatello in Florence shows a young David standing over Goliath's head?",
+    "question_ar": "أي تمثال برونزي من عام ١٤٤٠ لدوناتيلو في فلورنسا يصور داود الصغير يقف فوق رأس جالوت؟",
+    "options": [
+      "The Bronze David",
+      "The Marble David",
+      "The Pieta",
+      "Augustus of Prima Porta"
+    ],
+    "options_ar": [
+      "داود البرونزي",
+      "داود الرخامي",
+      "البييتا",
+      "أوغسطس بريما بورتا"
+    ],
+    "correct_answer": "The Bronze David",
+    "correct_answer_ar": "داود البرونزي",
+    "explanation": "Donatello's Bronze David, made around 1440, is one of the first life-size nude statues since ancient times.",
+    "explanation_ar": "داود البرونزي لدوناتيلو الذي صنع نحو عام ١٤٤٠ هو أحد أوائل التماثيل العارية بالحجم الطبيعي منذ العصور القديمة.",
+    "image": ""
+  },
+  {
+    "id": "stt_055",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Roughly how many Moai statues stand on Easter Island in total?",
+    "question_ar": "كم عدد تماثيل الموآي القائمة في جزيرة الفصح تقريبا؟",
+    "options": [
+      "About 887",
+      "About 50",
+      "About 200",
+      "About 5,000"
+    ],
+    "options_ar": [
+      "نحو ٨٨٧",
+      "نحو ٥٠",
+      "نحو ٢٠٠",
+      "نحو ٥٠٠٠"
+    ],
+    "correct_answer": "About 887",
+    "correct_answer_ar": "نحو ٨٨٧",
+    "explanation": "Researchers count about 887 Moai statues on Easter Island, with the tallest known as El Gigante.",
+    "explanation_ar": "أحصى الباحثون نحو ٨٨٧ تمثالا من الموآي في جزيرة الفصح، وأطولها يعرف باسم الجبار.",
+    "image": ""
+  },
+  {
+    "id": "stt_056",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which ongoing memorial in the Black Hills of South Dakota honors a Lakota leader?",
+    "question_ar": "أي نصب تذكاري لا يزال قيد النحت في تلال الأسود الشمالية بساوث داكوتا يخلد زعيم لاكوتا؟",
+    "options": [
+      "Crazy Horse Memorial",
+      "Mount Rushmore",
+      "The Lincoln Memorial",
+      "The Jefferson Memorial"
+    ],
+    "options_ar": [
+      "نصب كرايزي هورس التذكاري",
+      "جبل رشمور",
+      "نصب لينكولن التذكاري",
+      "نصب جيفرسون التذكاري"
+    ],
+    "correct_answer": "Crazy Horse Memorial",
+    "correct_answer_ar": "نصب كرايزي هورس التذكاري",
+    "explanation": "Sculptor Korczak Ziolkowski began the Crazy Horse Memorial in 1948 and the carving still continues today.",
+    "explanation_ar": "بدأ النحات كورتشاك زيولكوفسكي نصب كرايزي هورس عام ١٩٤٨ وما زال النحت مستمرا حتى اليوم.",
+    "image": ""
+  },
+  {
+    "id": "stt_057",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which ancient bronze lion in China, cast in the year 953, is considered the oldest large cast-iron statue?",
+    "question_ar": "أي أسد برونزي قديم في الصين سبك عام ٩٥٣ يعد أقدم تمثال ضخم مسبوك من الحديد؟",
+    "options": [
+      "The Iron Lion of Cangzhou",
+      "The Lion of Lucerne",
+      "The Lion of Babylon",
+      "The Lions of Delos"
+    ],
+    "options_ar": [
+      "الأسد الحديدي في تشانغتشو",
+      "أسد لوسيرن",
+      "أسد بابل",
+      "أسود ديلوس"
+    ],
+    "correct_answer": "The Iron Lion of Cangzhou",
+    "correct_answer_ar": "الأسد الحديدي في تشانغتشو",
+    "explanation": "The Iron Lion of Cangzhou was cast in the year 953 and is one of the oldest surviving cast-iron statues.",
+    "explanation_ar": "سبك الأسد الحديدي في تشانغتشو عام ٩٥٣ وهو من أقدم التماثيل المسبوكة من الحديد التي وصلتنا.",
+    "image": ""
+  },
+  {
+    "id": "stt_058",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which famous Roman fountain holds large statues including the sea god Oceanus?",
+    "question_ar": "أي نافورة رومانية شهيرة تضم تماثيل كبيرة منها إله البحر أوقيانوس؟",
+    "options": [
+      "The Trevi Fountain",
+      "The Diana Fountain",
+      "The Fountain of Neptune",
+      "The Latona Fountain"
+    ],
+    "options_ar": [
+      "نافورة تريفي",
+      "نافورة ديانا",
+      "نافورة نبتون",
+      "نافورة لاتونا"
+    ],
+    "correct_answer": "The Trevi Fountain",
+    "correct_answer_ar": "نافورة تريفي",
+    "explanation": "Pietro Bracci finished the central statue of Oceanus on the Trevi Fountain in Rome in 1762.",
+    "explanation_ar": "أنهى بييترو براتشي تمثال أوقيانوس المركزي في نافورة تريفي بروما عام ١٧٦٢.",
+    "image": ""
+  },
+  {
+    "id": "stt_059",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which ancient Greek sculpture in the Vatican shows a priest and his sons fighting sea serpents?",
+    "question_ar": "أي تمثال يوناني قديم في الفاتيكان يصور كاهنا وأولاده يصارعون أفاعي بحرية؟",
+    "options": [
+      "Laocoön and His Sons",
+      "Augustus of Prima Porta",
+      "Apollo Belvedere",
+      "The Discobolus"
+    ],
+    "options_ar": [
+      "لاوكون وأولاده",
+      "أوغسطس بريما بورتا",
+      "أبولو بلفيدير",
+      "ديسكوبولوس رامي القرص"
+    ],
+    "correct_answer": "Laocoön and His Sons",
+    "correct_answer_ar": "لاوكون وأولاده",
+    "explanation": "Laocoön and His Sons is a marble sculpture from about the 1st century BCE displayed in the Vatican.",
+    "explanation_ar": "تمثال لاوكون وأولاده تمثال رخامي يعود لنحو القرن الأول قبل الميلاد ومعروض في الفاتيكان.",
+    "image": ""
+  },
+  {
+    "id": "stt_060",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Roughly how heavy is the layer of soapstone tiles covering the Christ the Redeemer statue?",
+    "question_ar": "كم يبلغ وزن طبقة بلاطات حجر الصابون التي تغطي تمثال المسيح الفادي تقريبا؟",
+    "options": [
+      "About 700 kilograms",
+      "About 70 kilograms",
+      "About 7 tonnes",
+      "About 70 tonnes"
+    ],
+    "options_ar": [
+      "نحو ٧٠٠ كيلوغرام",
+      "نحو ٧٠ كيلوغراما",
+      "نحو ٧ أطنان",
+      "نحو ٧٠ طنا"
+    ],
+    "correct_answer": "About 700 kilograms",
+    "correct_answer_ar": "نحو ٧٠٠ كيلوغرام",
+    "explanation": "The outer surface of Christ the Redeemer is covered with about 700 kilograms of soapstone tiles.",
+    "explanation_ar": "السطح الخارجي لتمثال المسيح الفادي مغطى بنحو ٧٠٠ كيلوغرام من بلاطات حجر الصابون.",
+    "image": ""
+  }
+]

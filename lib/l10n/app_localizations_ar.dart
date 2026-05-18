@@ -54,7 +54,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get heartsRefilled => '❤️ تمت تعبئة الأرواح!';
 
   @override
-  String get tryAgainNow => 'حاول الآن ←';
+  String get tryAgainNow => 'حاول الآن «';
 
   @override
   String get readyLetsGo => 'جاهز! هيا بنا 🚀';
@@ -134,7 +134,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'NASA تعني \'الإدارة الوطنية للطيران والفضاء\'. تأسست عام 1958 وبعد 11 سنة فقط أوصلت البشر إلى سطح القمر!';
 
   @override
-  String get brand_nike_desc => 'أكبر علامة ملاب挺 رياضية في العالم';
+  String get brand_nike_desc => 'أكبر علامة ملابس رياضية في العالم';
 
   @override
   String get brand_nike_fact =>
@@ -145,7 +145,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get brand_mcdonalds_fact =>
-      'يخدم McDonald\'s نحو 69 مليون شخص يوميّاً! القوسين الذهبيان أكثر انتشاراً من أي رمز آخر في العالم.';
+      'يخدم McDonald\'s نحو 69 مليون شخص يوميّاً! القوسان الذهبيان أكثر انتشاراً من أي رمز آخر في العالم.';
 
   @override
   String get brand_google_desc => 'محرك البحث الذي يعرف تقريباً كل شيء';
@@ -691,7 +691,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String reviewModeMastered(int count) {
-    return '$count سؤال تم إتقانه ✓';
+    return '$count سؤال تم إتقانه';
   }
 
   @override
@@ -814,4 +814,551 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get badge_all_rounder_condition =>
       'أتمم اختباراً واحداً على الأقل في كل وحدة: العواصم والأعلام والشعارات والرياضيات والعلوم';
+
+  @override
+  String get badge_brain_boost_beginner_name => 'مبتدئ تنشيط الذهن';
+
+  @override
+  String get badge_brain_boost_beginner_desc => 'بدأت تدريب عقلك — استمر!';
+
+  @override
+  String get badge_brain_boost_beginner_condition =>
+      'أكمل أول تحدي يومي في تنشيط الذهن';
+
+  @override
+  String get badge_brain_boost_streak_master_name => 'بطل المواظبة';
+
+  @override
+  String get badge_brain_boost_streak_master_desc =>
+      'تدريب يومي لمدة 7 أيام متتالية!';
+
+  @override
+  String get badge_brain_boost_streak_master_condition =>
+      'حقق سلسلة 7 أيام في تنشيط الذهن';
+
+  @override
+  String get badge_brain_boost_champion_name => 'بطل تنشيط الذهن';
+
+  @override
+  String get badge_brain_boost_champion_desc => 'جولة بطولة كاملة بدون أخطاء!';
+
+  @override
+  String get badge_brain_boost_champion_condition =>
+      'احصل على 12/12 في وضع البطولة لتنشيط الذهن';
+
+  @override
+  String get badge_boss_rush_perfect_name => 'قاهر التنين';
+
+  @override
+  String get badge_boss_rush_perfect_desc => '12 إجابة صحيحة في سباق الزعماء!';
+
+  @override
+  String get badge_boss_rush_perfect_condition =>
+      'احصل على 12/12 في سباق الزعماء';
+
+  @override
+  String get badge_pass_play_winner_name => 'بطل وضع لاعبَين';
+
+  @override
+  String get badge_pass_play_winner_desc => 'فزت في 3 مباريات لاعبَين!';
+
+  @override
+  String get badge_pass_play_winner_condition =>
+      'افز في 3 مباريات في وضع لاعبَين';
+
+  @override
+  String get badge_tourney_champion_name => 'بطل الأسبوع';
+
+  @override
+  String get badge_tourney_champion_desc => 'المركز الأول في بطولة الأسبوع!';
+
+  @override
+  String get badge_tourney_champion_condition =>
+      'احصل على المركز الأول في بطولة الأسبوع';
+
+  @override
+  String get blitzTitle => 'تحدي البرق';
+
+  @override
+  String get blitzDescription =>
+      '٦٠ ثانية. أكبر عدد من الإجابات الصحيحة. أسئلة من جميع الأقسام.';
+
+  @override
+  String blitzBest(int score) {
+    return 'أفضل نتيجة: $score';
+  }
+
+  @override
+  String get blitzStartButton => 'ابدأ التحدي';
+
+  @override
+  String get blitzScoreLabel => 'النقاط';
+
+  @override
+  String get blitzStreakLabel => 'متتالية';
+
+  @override
+  String get blitzNewBest => 'رقم قياسي جديد!';
+
+  @override
+  String get blitzTimesUp => 'انتهى الوقت!';
+
+  @override
+  String blitzBestStreak(int streak) {
+    return 'أطول متتالية: $streak';
+  }
+
+  @override
+  String get blitzPlayAgain => 'العب مرة أخرى';
+
+  @override
+  String get blitzHome => 'الرئيسية';
+
+  @override
+  String get blitzCardSubtitle => '٦٠ ثانية. نقاط مكثفة من كل الأقسام';
+
+  @override
+  String get iqTitle => 'تنمية الذكاء';
+
+  @override
+  String get iqHeroStartFull => 'ابدأ التحدي الكامل';
+
+  @override
+  String get brainBoostDisclaimerTitle => 'عن قسم تنمية الذكاء';
+
+  @override
+  String get brainBoostDisclaimerBody =>
+      'هذا القسم وسيلة ممتعة لممارسة التفكير المنطقي — وليس اختبار ذكاء حقيقياً. جميع النتائج تبقى على هذا الجهاز فقط، ولا تُقارن أبداً بأي طفل آخر.';
+
+  @override
+  String get brainBoostDisclaimerOk => 'فهمت';
+
+  @override
+  String get iqOrChooseCategory => 'أو اختر مجالاً';
+
+  @override
+  String get iqLoadError => 'تعذّر تحميل الأسئلة.';
+
+  @override
+  String iqComprehensiveCount(int count) {
+    return '$count سؤال شامل';
+  }
+
+  @override
+  String iqCategoryCount(int count) {
+    return '$count سؤال';
+  }
+
+  @override
+  String get iqVictoryTitle => 'بطل الذكاء!';
+
+  @override
+  String get iqShareLabel => 'تحدي الذكاء — أكاديمية عزيز';
+
+  @override
+  String get iqScoreLabel => 'النقاط';
+
+  @override
+  String get iqRevealChoices => 'إظهار الخيارات';
+
+  @override
+  String get iqNextQuestion => 'السؤال التالي';
+
+  @override
+  String get iqLoading => 'جارٍ تحميل أسئلة الذكاء...';
+
+  @override
+  String get iqLoadFailed => 'تعذّر تحميل الأسئلة';
+
+  @override
+  String get iqCardSubtitle => 'أنماط وحساب وتشابه ومنطق';
+
+  @override
+  String get generalQuizTitle => 'معلومات عامة';
+
+  @override
+  String get generalQuizHeroStartFull => 'ابدأ التحدي العام الكامل';
+
+  @override
+  String get generalQuizOrChooseCategory => 'أو اختر مجالاً';
+
+  @override
+  String get generalQuizLoadError => 'تعذّر تحميل الأسئلة.';
+
+  @override
+  String generalQuizCount(int count) {
+    return '$count سؤال';
+  }
+
+  @override
+  String get generalQuizVictoryTitle => 'بطل المعرفة!';
+
+  @override
+  String get generalQuizShareLabel => 'تحدي المعرفة العامة — أكاديمية عزيز';
+
+  @override
+  String get generalQuizRevealChoices => 'إظهار الخيارات';
+
+  @override
+  String get generalQuizNextQuestion => 'السؤال التالي';
+
+  @override
+  String get generalQuizLoading => 'جارٍ تحميل الأسئلة...';
+
+  @override
+  String get generalQuizLoadFailed => 'تعذّر تحميل الأسئلة';
+
+  @override
+  String get generalQuizCardSubtitle => 'جغرافيا، إسلامية، عربية، رياضيات';
+
+  @override
+  String get capitalsVictoryTitle => 'بطل العواصم!';
+
+  @override
+  String get capitalsShareLabel => 'جولة العواصم — أكاديمية عزيز';
+
+  @override
+  String homeLogosLockHint(int level, int count) {
+    return 'المستوى $level أو $count اختبارات عواصم';
+  }
+
+  @override
+  String homeSciencesLockHint(int level, int count) {
+    return 'المستوى $level أو $count اختبارات أعلام';
+  }
+
+  @override
+  String homeMathLockHint(int level, int count) {
+    return 'المستوى $level أو $count اختبارات أعلام';
+  }
+
+  @override
+  String get lifelineFiftyFifty => '50/50';
+
+  @override
+  String get lifelineSkip => 'تخطّي';
+
+  @override
+  String get lifelineHint => 'تلميح';
+
+  @override
+  String get lifelineNotEnoughCoins =>
+      'عملاتك لا تكفي. اكتسب المزيد بالإجابات الصحيحة!';
+
+  @override
+  String get coinsLabel => 'العملات';
+
+  @override
+  String get onboardingTitle1 => 'اختر موضوعاً';
+
+  @override
+  String get onboardingBody1 =>
+      'اختر وحدة من الشاشة الرئيسية — العواصم، العلوم، الذكاء، الرياضيات، والمزيد.';
+
+  @override
+  String get onboardingTitle2 => 'اكسب نجوماً وعملات';
+
+  @override
+  String get onboardingBody2 =>
+      'أجب بصواب لتكسب نقاط الخبرة والنجوم والعملات، واستخدم العملات لشراء وسائل مساعدة.';
+
+  @override
+  String get onboardingTitle3 => 'حافظ على سلسلة يومية';
+
+  @override
+  String get onboardingBody3 =>
+      'العب يوميًا لتحافظ على سلسلتك — كل سلسلة تجلب مكافآت أكبر!';
+
+  @override
+  String get onboardingSkip => 'تخطّي';
+
+  @override
+  String get onboardingNext => 'التالي';
+
+  @override
+  String get onboardingGotIt => 'هيا نلعب!';
+
+  @override
+  String get survivalTitle => 'وضع البقاء';
+
+  @override
+  String get survivalIntro => 'حياة واحدة. أسئلة لا تنتهي. إلى أين تصل؟';
+
+  @override
+  String get survivalBest => 'الأفضل';
+
+  @override
+  String get survivalStart => 'ابدأ التحدي';
+
+  @override
+  String get survivalNewBest => 'رقم قياسي جديد!';
+
+  @override
+  String get survivalGameOver => 'انتهت اللعبة';
+
+  @override
+  String get survivalReward => 'عملة مكتسبة';
+
+  @override
+  String get homeButton => 'الرئيسية';
+
+  @override
+  String get bossTitle => 'جولة الزعيم';
+
+  @override
+  String get bossIntro => '٥ أسئلة صعبة. حياة واحدة. مكافأة ثلاثية!';
+
+  @override
+  String get bossStart => 'واجه الزعيم';
+
+  @override
+  String get bossWin => 'هزمت الزعيم!';
+
+  @override
+  String get bossLoss => 'الزعيم انتصر هذه المرة';
+
+  @override
+  String get homeSurvivalTitle => 'البقاء';
+
+  @override
+  String get homeSurvivalSubtitle => 'حياة واحدة. أسئلة لا تنتهي.';
+
+  @override
+  String get homeBossTitle => 'جولة الزعيم';
+
+  @override
+  String get homeBossSubtitle => '٥ أسئلة صعبة. مكافأة ثلاثية.';
+
+  @override
+  String get errorLoadingRegions => 'تعذّر تحميل المناطق';
+
+  @override
+  String get settingsDyslexiaFriendlyFont => 'خط ملائم لعسر القراءة';
+
+  @override
+  String get settingsDyslexiaFriendlyFontDesc =>
+      'استخدام تباعد بنمط OpenDyslexic';
+
+  @override
+  String get settingsLargerText => 'نص أكبر';
+
+  @override
+  String get settingsLargerTextDesc => 'أحرف أكبر في كامل التطبيق';
+
+  @override
+  String get settingsShorterRounds => 'جولات أقصر';
+
+  @override
+  String get settingsShorterRoundsDesc => 'افتراضي: ٣ أسئلة لكل جولة';
+
+  @override
+  String get settingsLightTheme => 'سمة فاتحة';
+
+  @override
+  String get settingsLightThemeDesc => 'تبديل التطبيق بأكمله إلى المظهر الفاتح';
+
+  @override
+  String get settingsReadAloud => 'قراءة الأسئلة بصوت عالٍ';
+
+  @override
+  String get ttsButtonTooltip => 'اقرأ بصوت عالٍ';
+
+  @override
+  String get commonBack => 'رجوع';
+
+  @override
+  String get parentArea => 'ركن الأهل';
+
+  @override
+  String get parentDashboard => 'لوحة الأهل';
+
+  @override
+  String get parentResetProfile => 'إعادة تعيين الملف';
+
+  @override
+  String get parentResetProfileDescription =>
+      'تمحو جميع بيانات التعلّم على الجهاز: النجوم، النقاط، العملات، تقديرات المهارة، الأخطاء، المفضلة، وعناصر المتجر. لا يمكن التراجع.';
+
+  @override
+  String get parentResetEverything => 'إعادة تعيين كل شيء';
+
+  @override
+  String get parentResetConfirmTitle => 'إعادة تعيين جميع البيانات؟';
+
+  @override
+  String get parentResetConfirmBody =>
+      'سيؤدي هذا إلى حذف كل شيء مخزّن على هذا الجهاز نهائياً. هل أنت متأكد؟';
+
+  @override
+  String get parentResetConfirmYes => 'نعم، أعد التعيين';
+
+  @override
+  String get parentResetSuccess => 'تمت إعادة تعيين الملف.';
+
+  @override
+  String get parentThisWeek => 'هذا الأسبوع';
+
+  @override
+  String get parentSkillByTopic => 'المهارة حسب الموضوع';
+
+  @override
+  String get shopNotEnoughCoins => 'ما عندك عملات كافية بعد — كمّل لعب!';
+
+  @override
+  String get shopEquipped => 'مُجهّز';
+
+  @override
+  String get shopEquip => 'تجهيز';
+
+  @override
+  String surpriseGoingTo(String destination) {
+    return '🎲 سنذهب إلى $destination!';
+  }
+
+  @override
+  String get iqComebackSnack => 'لقد تحسّنت! نجحت هذه المرة.';
+
+  @override
+  String get feedbackThanks => 'تم استلام ملاحظتك. شكرًا!';
+
+  @override
+  String parentGatePrompt(int a, int b) {
+    return 'حلّ السؤال للدخول:  $a + $b = ؟';
+  }
+
+  @override
+  String get parentGateUnlock => 'فتح';
+
+  @override
+  String get parentGateTryAgain => 'حاول مرة أخرى';
+
+  @override
+  String get parentStuckHeading => 'أين يتعثّر';
+
+  @override
+  String parentStuckRow(String module, String category, int count) {
+    return '• $module — $category ($count أخطاء)';
+  }
+
+  @override
+  String get parentPrivacyHeading => 'الخصوصية';
+
+  @override
+  String get parentPrivacyNote =>
+      'كل بيانات التعلّم المعروضة هنا تبقى على هذا الجهاز فقط. لا يتم رفع أي شيء. يمكنك إعادة التعيين من الإعدادات « إعادة تعيين الملف.';
+
+  @override
+  String get mapsIntroTitle => 'مستكشف الخرائط';
+
+  @override
+  String get mapsIntroBody =>
+      'أوجد الدول بناءً على مواقعها الجغرافية. هل أنت مستعد للتحدي؟';
+
+  @override
+  String get mapsIntroStart => 'ابدأ الاستكشاف';
+
+  @override
+  String get mapsCorrectTitle => '✅ إجابة صحيحة!';
+
+  @override
+  String get mapsIncorrectTitle => '❌ إجابة خاطئة';
+
+  @override
+  String mapsAnswerReveal(String country) {
+    return 'الدولة هي: $country';
+  }
+
+  @override
+  String get quizNextQuestion => 'السؤال التالي';
+
+  @override
+  String get quizLoading => 'جارٍ تحميل الاختبار…';
+
+  @override
+  String get quizBackToMenu => 'العودة للقائمة';
+
+  @override
+  String get quizRoundScore => 'نقاط هذه الجولة';
+
+  @override
+  String get capitalsRevealChoices => 'اعرض خيارات الإجابة';
+
+  @override
+  String get madrasatiRestart => 'إعادة';
+
+  @override
+  String get madrasatiHome => 'مدرستي';
+
+  @override
+  String get quizShowResult => 'عرض النتيجة';
+
+  @override
+  String madrasatiResultScore(String score, String total) {
+    return 'النتيجة: $score / $total';
+  }
+
+  @override
+  String get victoryDefaultSubtitle => 'أتممت الاختبار بتفوق! 🎉';
+
+  @override
+  String victoryScoreLine(int score, int wrong) {
+    return 'صحيح: $score  •  خطأ: $wrong';
+  }
+
+  @override
+  String get victoryStarsPerfect => '⚡ إتقان تام! صفر أخطاء!';
+
+  @override
+  String get victoryStarsExcellent => '👍 ممتاز! شبه مثالي!';
+
+  @override
+  String get victoryStarsGood => '✅ أحسنت! واصل التدريب!';
+
+  @override
+  String get victoryShareAchievement => 'مشاركة الإنجاز';
+
+  @override
+  String victoryShareBody(int score, int total, int wrong, int stars) {
+    return '$score/$total إجابات صحيحة  •  $wrong خطأ\nنجوم: $stars/3 ⭐';
+  }
+
+  @override
+  String get certificateShareText => 'شهادة من أكاديمية عزيز 🌟';
+
+  @override
+  String get progressReportShareText => 'تقرير تقدُّم — أكاديمية عزيز';
+
+  @override
+  String get onboardingDefaultName => 'صديق';
+
+  @override
+  String levelLabel(String n) {
+    return 'المستوى $n';
+  }
+
+  @override
+  String levelXpProgress(String current, String needed) {
+    return '$current / $needed نقطة';
+  }
+
+  @override
+  String levelMaxXp(String total) {
+    return '$total نقطة';
+  }
+
+  @override
+  String get levelMaxBanner => 'أعلى مستوى!';
+
+  @override
+  String levelNextInfo(String n, String total) {
+    return 'التالي: المستوى $n  •  المجموع $total نقطة';
+  }
+
+  @override
+  String get mapsGameOverTitle => 'انتهى التحدي!';
+
+  @override
+  String mapsScore(String score) {
+    return 'نتيجتك: $score';
+  }
 }

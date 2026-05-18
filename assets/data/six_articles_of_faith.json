@@ -1,0 +1,68 @@
+[
+  {
+    "id": "f1_allah",
+    "n": 1,
+    "name": "Belief in Allah",
+    "name_ar": "الإيمان بالله",
+    "what": "Believing that Allah is One, has no partner, and has no children or parents. He created everything and is the only one we worship.",
+    "what_ar": "نؤمن بأن الله واحد، لا شريك له، ولم يلد ولم يولد. خلق كل شيء، وهو وحده المستحق للعبادة.",
+    "verse": "Say: He is Allah, the One. (Surah Al-Ikhlas)",
+    "verse_ar": "قُلْ هُوَ اللَّهُ أَحَدٌ (سورة الإخلاص)",
+    "icon": "☝️"
+  },
+  {
+    "id": "f2_angels",
+    "n": 2,
+    "name": "Belief in the Angels",
+    "name_ar": "الإيمان بالملائكة",
+    "what": "Allah created the angels from light. They obey Allah perfectly and never disobey. Examples: Jibreel (brings revelation), Mikail (rain), Israfil (will blow the trumpet on the Last Day).",
+    "what_ar": "خلق الله الملائكة من نور، يطيعون الله دائماً ولا يعصونه. منهم: جبريل (الوحي)، وميكائيل (المطر)، وإسرافيل (نفخ الصور).",
+    "verse": "And to Allah prostrates whatever is in the heavens and whatever is on the earth, and the angels too. (Surah An-Nahl)",
+    "verse_ar": "وَلِلَّهِ يَسْجُدُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَالْمَلَائِكَةُ",
+    "icon": "👼"
+  },
+  {
+    "id": "f3_books",
+    "n": 3,
+    "name": "Belief in the Books",
+    "name_ar": "الإيمان بالكتب",
+    "what": "Allah sent down books to guide humanity: the Torah to Musa, the Zabur to Dawud, the Injil to 'Isa, and the Qur'an to Muhammad ﷺ. The Qur'an is the final and protected book.",
+    "what_ar": "أنزل الله كتباً لهداية الناس: التوراة لموسى، والزبور لداود، والإنجيل لعيسى، والقرآن لمحمد ﷺ. والقرآن هو الكتاب الأخير المحفوظ.",
+    "verse": "Indeed, it is We who sent down the Reminder, and indeed, We will preserve it. (Surah Al-Hijr)",
+    "verse_ar": "إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ",
+    "icon": "📜"
+  },
+  {
+    "id": "f4_messengers",
+    "n": 4,
+    "name": "Belief in the Messengers",
+    "name_ar": "الإيمان بالرسل",
+    "what": "Allah sent many prophets and messengers to teach people the truth. The first was Adam, the last is Muhammad ﷺ. We love and respect them all.",
+    "what_ar": "أرسل الله الأنبياء والرسل ليعلّموا الناس الحق. أوّلهم آدم، وخاتمهم محمد ﷺ. نحبهم ونحترمهم جميعاً.",
+    "verse": "Muhammad is the Messenger of Allah and the seal of the prophets. (Surah Al-Ahzab)",
+    "verse_ar": "مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ اللَّهِ وَخَاتَمَ النَّبِيِّينَ",
+    "icon": "📿"
+  },
+  {
+    "id": "f5_lastday",
+    "n": 5,
+    "name": "Belief in the Last Day",
+    "name_ar": "الإيمان باليوم الآخر",
+    "what": "One day this world will end. Allah will resurrect everyone, weigh their deeds, and reward the good with Jannah (Paradise) and judge those who chose evil.",
+    "what_ar": "ستنتهي هذه الدنيا يوماً. سيبعث الله الناس جميعاً ويحاسبهم على أعمالهم، فيكافئ المحسنين بالجنة ويحاسب من اختار الشر.",
+    "verse": "Every soul will taste death. And only on the Day of Judgement will you be given your full reward. (Surah Al-Imran)",
+    "verse_ar": "كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ ۗ وَإِنَّمَا تُوَفَّوْنَ أُجُورَكُمْ يَوْمَ الْقِيَامَةِ",
+    "icon": "🌅"
+  },
+  {
+    "id": "f6_qadar",
+    "n": 6,
+    "name": "Belief in Qadar (divine decree)",
+    "name_ar": "الإيمان بالقدر",
+    "what": "Everything happens by Allah's knowledge and will — the good and the difficult. We do our best, trust Allah's plan, and know that nothing happens by accident.",
+    "what_ar": "كل ما يحدث يقع بعلم الله ومشيئته — الخير والابتلاء. نبذل الجهد، ونتوكل على تدبير الله، ولا شيء يحدث صدفة.",
+    "verse": "No misfortune strikes except by Allah's permission. (Surah At-Taghabun)",
+    "verse_ar": "مَا أَصَابَ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ اللَّهِ",
+    "icon": "🌙"
+  }
+]

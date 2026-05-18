@@ -1,0 +1,13 @@
+Contact: mailto:s.fahhad@gmail.com
+Expires: 2027-05-08T00:00:00.000Z
+Preferred-Languages: en, ar
+Canonical: https://aziz-academy.com/.well-known/security.txt
+Policy: https://aziz-academy.com/privacy
+
+# Aziz Academy is a privacy-first, no-backend, no-PII Flutter web app
+# for kids 6-12. There is no server-side state, no user accounts,
+# and no data collected from users. If you find a security or privacy
+# issue, please email the contact above. Thank you for your responsible
+# disclosure.
+#
+# A Q8 Vision production - q8vision.com

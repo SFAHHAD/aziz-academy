@@ -6,6 +6,9 @@ import 'package:aziz_academy/core/models/school_models.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
+import 'package:aziz_academy/core/utils/digits.dart';
+import 'package:aziz_academy/core/widgets/responsive.dart';
+import 'package:aziz_academy/core/l10n/context_ext.dart';
 
 // =============================================================================
 // مدرستي — main screen
@@ -54,12 +57,15 @@ class _MadrasatiScreenState extends State<MadrasatiScreen> {
       child: Scaffold(
         backgroundColor: AppColors.background,
         body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              _TopBar(title: _title, onBack: _pop),
-              Expanded(child: _buildBody()),
-            ],
+          child: CenteredBody(
+            wide: true,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _TopBar(title: _title, onBack: _pop),
+                Expanded(child: _buildBody()),
+              ],
+            ),
           ),
         ),
       ),
@@ -101,9 +107,12 @@ class _TopBar extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
+            tooltip: context.l10n.commonBack,
             onPressed: onBack,
-            icon: const Icon(Icons.arrow_back_ios_new_rounded,
-                color: AppColors.textDark),
+            icon: const Icon(
+              Icons.arrow_back_ios_new_rounded,
+              color: AppColors.textDark,
+            ),
           ),
           const SizedBox(width: 4),
           Expanded(
@@ -179,10 +188,7 @@ class _StageCard extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                stage.color.withAlpha(200),
-                stage.color.withAlpha(130),
-              ],
+              colors: [stage.color.withAlpha(200), stage.color.withAlpha(130)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -214,7 +220,7 @@ class _StageCard extends StatelessWidget {
                     Text(
                       isEmpty
                           ? 'قريباً ...'
-                          : '${stage.grades.length} صف دراسي',
+                          : '${localizeDigitsCtx(stage.grades.length, context)} صف دراسي',
                       style: AppTextStyles.bodyMedium.copyWith(
                         color: Colors.white.withAlpha(200),
                         fontSize: 13,
@@ -224,8 +230,11 @@ class _StageCard extends StatelessWidget {
                 ),
               ),
               if (!isEmpty)
-                const Icon(Icons.chevron_right_rounded,
-                    color: Colors.white, size: 28),
+                const Icon(
+                  Icons.chevron_right_rounded,
+                  color: Colors.white,
+                  size: 28,
+                ),
             ],
           ),
         ),
@@ -263,10 +272,11 @@ class _GradeView extends StatelessWidget {
 }
 
 class _GradeCard extends StatelessWidget {
-  const _GradeCard(
-      {required this.grade,
-      required this.stageColor,
-      required this.onTap});
+  const _GradeCard({
+    required this.grade,
+    required this.stageColor,
+    required this.onTap,
+  });
 
   final SchoolGrade grade;
   final Color stageColor;
@@ -282,8 +292,7 @@ class _GradeCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.surfaceContainerLow,
           borderRadius: BorderRadius.circular(18),
-          border:
-              Border.all(color: stageColor.withAlpha(80)),
+          border: Border.all(color: stageColor.withAlpha(80)),
         ),
         child: Row(
           children: [
@@ -296,7 +305,13 @@ class _GradeCard extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  '${madrasatiStages.indexWhere((s) => s.grades.contains(grade)) + 1}',
+                  localizeDigitsCtx(
+                    madrasatiStages.indexWhere(
+                          (s) => s.grades.contains(grade),
+                        ) +
+                        1,
+                    context,
+                  ),
                   style: TextStyle(
                     color: stageColor,
                     fontWeight: FontWeight.w900,
@@ -319,7 +334,7 @@ class _GradeCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    '$subjectCount مادة دراسية',
+                    '${localizeDigitsCtx(subjectCount, context)} مادة دراسية',
                     style: AppTextStyles.bodyMedium.copyWith(
                       color: AppColors.textMedium,
                       fontSize: 13,
@@ -361,9 +376,7 @@ class _SubjectView extends StatelessWidget {
         final subject = grade.subjects[i];
         return _SubjectCard(
           subject: subject,
-          onTap: subject.chapters.isEmpty
-              ? null
-              : () => onSubject(subject),
+          onTap: subject.chapters.isEmpty ? null : () => onSubject(subject),
         );
       },
     );
@@ -419,7 +432,9 @@ class _SubjectCard extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                locked ? 'قريباً' : '${subject.totalQuestions} سؤال',
+                locked
+                    ? 'قريباً'
+                    : '${localizeDigitsCtx(subject.totalQuestions, context)} سؤال',
                 style: AppTextStyles.bodyMedium.copyWith(
                   color: subject.color,
                   fontSize: 11,
@@ -451,11 +466,7 @@ class _ChapterView extends StatelessWidget {
       separatorBuilder: (context, i) => const SizedBox(height: 12),
       itemBuilder: (context, i) {
         final chapter = subject.chapters[i];
-        return _ChapterCard(
-          chapter: chapter,
-          subject: subject,
-          index: i + 1,
-        );
+        return _ChapterCard(chapter: chapter, subject: subject, index: i + 1);
       },
     );
   }
@@ -481,15 +492,15 @@ class _ChapterCard extends StatelessWidget {
     return GestureDetector(
       onTap: chapter.hasContent
           ? () => context.push(
-                AppRoutes.schoolQuiz,
-                extra: _SchoolQuizArgs(
-                  chapterName: chapter.name,
-                  subjectName: subject.name,
-                  subjectEmoji: subject.emoji,
-                  color: subject.color,
-                  questions: questions,
-                ),
-              )
+              AppRoutes.schoolQuiz,
+              extra: _SchoolQuizArgs(
+                chapterName: chapter.name,
+                subjectName: subject.name,
+                subjectEmoji: subject.emoji,
+                color: subject.color,
+                questions: questions,
+              ),
+            )
           : null,
       child: Opacity(
         opacity: chapter.hasContent ? 1.0 : 0.5,
@@ -511,7 +522,7 @@ class _ChapterCard extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    '$index',
+                    localizeDigitsCtx(index, context),
                     style: TextStyle(
                       color: subject.color,
                       fontWeight: FontWeight.w900,
@@ -550,8 +561,11 @@ class _ChapterCard extends StatelessWidget {
                 ),
               ),
               if (chapter.hasContent)
-                Icon(Icons.play_circle_filled_rounded,
-                    color: subject.color, size: 30),
+                Icon(
+                  Icons.play_circle_filled_rounded,
+                  color: subject.color,
+                  size: 30,
+                ),
             ],
           ),
         ),

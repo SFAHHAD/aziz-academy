@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "sci_l6_001",
+    "question": "In protein synthesis, what is the first major step that happens inside the nucleus?",
+    "question_ar": "في تصنيع البروتين، ما أوّل خطوة كبرى تحدث داخل النواة؟",
+    "options": [
+      "Transcription of DNA into messenger RNA",
+      "Translation of RNA into protein",
+      "Folding of the protein into a shape",
+      "Splitting the cell in two"
+    ],
+    "options_ar": [
+      "نسخ الحمض النووي إلى حمض نووي ريبوزي رسول",
+      "ترجمة الحمض الريبوزي إلى بروتين",
+      "طي البروتين ليأخذ شكله",
+      "انقسام الخلية إلى خليتين"
+    ],
+    "correct_answer": "Transcription of DNA into messenger RNA",
+    "correct_answer_ar": "نسخ الحمض النووي إلى حمض نووي ريبوزي رسول",
+    "difficulty": 5,
+    "fun_fact": "Transcription happens in the nucleus, but translation moves out to the ribosomes — like writing a recipe in one room and cooking it in another.",
+    "fun_fact_ar": "يحدث النسخ في النواة، أمّا الترجمة فتنتقل إلى الريبوسومات، وكأنّك تكتب الوصفة في غرفة وتطبخها في أخرى.",
+    "category": "Biology — Protein Synthesis",
+    "category_ar": "أحياء — تصنيع البروتين"
+  },
+  {
+    "id": "sci_l6_002",
+    "question": "During translation at the ribosome, what reads the messenger RNA codons?",
+    "question_ar": "خلال الترجمة في الريبوسوم، ما الذي يقرأ شيفرات الحمض الريبوزي الرسول؟",
+    "options": [
+      "Transfer RNA carrying amino acids",
+      "Mitochondria carrying sugar",
+      "DNA helicase enzyme",
+      "Cell membrane proteins"
+    ],
+    "options_ar": [
+      "الحمض الريبوزي الناقل الذي يحمل الأحماض الأمينية",
+      "الميتوكوندريا التي تحمل السكر",
+      "إنزيم هيليكاز الحمض النووي",
+      "بروتينات غشاء الخلية"
+    ],
+    "correct_answer": "Transfer RNA carrying amino acids",
+    "correct_answer_ar": "الحمض الريبوزي الناقل الذي يحمل الأحماض الأمينية",
+    "difficulty": 5,
+    "fun_fact": "Each transfer RNA matches a three-letter codon and drops off the matching amino acid like a delivery scooter.",
+    "fun_fact_ar": "يطابق كل حمض ريبوزي ناقل شيفرة من ثلاثة أحرف ويسلّم الحمض الأميني المناسب كأنّه سكوتر توصيل.",
+    "category": "Biology — Protein Synthesis",
+    "category_ar": "أحياء — تصنيع البروتين"
+  },
+  {
+    "id": "sci_l6_003",
+    "question": "When your body senses you are too hot, what kind of feedback loop kicks in to cool you down by sweating?",
+    "question_ar": "حين يستشعر جسمك أنّك حارّ جدًا، أيّ نوع من حلقات التغذية الراجعة يبدأ ليبرّدك بالتعرّق؟",
+    "options": [
+      "A negative feedback loop",
+      "A positive feedback loop",
+      "A frozen feedback loop",
+      "No loop at all"
+    ],
+    "options_ar": [
+      "حلقة تغذية راجعة سالبة",
+      "حلقة تغذية راجعة موجبة",
+      "حلقة تغذية راجعة متجمّدة",
+      "لا توجد حلقة أصلًا"
+    ],
+    "correct_answer": "A negative feedback loop",
+    "correct_answer_ar": "حلقة تغذية راجعة سالبة",
+    "difficulty": 5,
+    "fun_fact": "Negative feedback pushes your body back toward a set point — kind of like a thermostat saying 'stop, we're cool enough now.'",
+    "fun_fact_ar": "تعيد التغذية الراجعة السالبة الجسم إلى نقطة الاتزان، كأنّ مُنظّم الحرارة يقول: «توقّف، أصبحنا باردين بما يكفي».",
+    "category": "Biology — Homeostasis",
+    "category_ar": "أحياء — الاتزان الداخلي"
+  },
+  {
+    "id": "sci_l6_004",
+    "question": "ATP releases energy when one of its phosphate groups is removed. What does ATP turn into right after that?",
+    "question_ar": "يطلق جزيء ATP الطاقة عند نزع إحدى مجموعات الفوسفات منه. ماذا يصبح ATP مباشرةً بعد ذلك؟",
+    "options": [
+      "ADP plus a free phosphate",
+      "Pure water",
+      "A new DNA strand",
+      "Glucose sugar"
+    ],
+    "options_ar": [
+      "ADP مع فوسفات حر",
+      "ماء نقي",
+      "خيط جديد من الحمض النووي",
+      "سكر الجلوكوز"
+    ],
+    "correct_answer": "ADP plus a free phosphate",
+    "correct_answer_ar": "ADP مع فوسفات حر",
+    "difficulty": 5,
+    "fun_fact": "Your cells recycle ATP and ADP back and forth millions of times a day — energy is rented, not bought.",
+    "fun_fact_ar": "تعيد خلاياك تدوير ATP وADP ذهابًا وإيابًا ملايين المرات يوميًا، فالطاقة مستأجرة لا مُشترَاة.",
+    "category": "Biology — Cellular Energy",
+    "category_ar": "أحياء — طاقة الخلية"
+  },
+  {
+    "id": "sci_l6_005",
+    "question": "In Darwin's natural selection, what gives an animal a better chance of passing on its genes?",
+    "question_ar": "في الانتقاء الطبيعي لداروين، ما الذي يمنح الحيوان فرصةً أفضل لتمرير جيناته؟",
+    "options": [
+      "A trait that helps it survive and reproduce in its environment",
+      "A trait that simply looks pretty",
+      "Wishing very hard for it",
+      "Eating more than other animals"
+    ],
+    "options_ar": [
+      "صفة تساعده على البقاء والتكاثر في بيئته",
+      "صفة جميلة المظهر فقط",
+      "تمنّي ذلك بشدّة",
+      "أن يأكل أكثر من غيره"
+    ],
+    "correct_answer": "A trait that helps it survive and reproduce in its environment",
+    "correct_answer_ar": "صفة تساعده على البقاء والتكاثر في بيئته",
+    "difficulty": 5,
+    "fun_fact": "Natural selection isn't about being the strongest — it's about being the best fit for your specific environment.",
+    "fun_fact_ar": "الانتقاء الطبيعي ليس عن الأقوى، بل عن الأنسب لبيئته بالذات.",
+    "category": "Biology — Evolution",
+    "category_ar": "أحياء — التطوّر"
+  },
+  {
+    "id": "sci_l6_006",
+    "question": "Speciation happens when one population splits and changes so much that the groups can no longer do what?",
+    "question_ar": "يحدث الانتواع حين تنقسم مجموعة واحدة وتتغيّر كثيرًا حتى تصبح المجموعتان غير قادرتين على ماذا؟",
+    "options": [
+      "Successfully breed with each other",
+      "See sunlight",
+      "Drink the same water",
+      "Live on land"
+    ],
+    "options_ar": [
+      "التزاوج بنجاح فيما بينها",
+      "رؤية ضوء الشمس",
+      "شرب الماء نفسه",
+      "العيش على اليابسة"
+    ],
+    "correct_answer": "Successfully breed with each other",
+    "correct_answer_ar": "التزاوج بنجاح فيما بينها",
+    "difficulty": 5,
+    "fun_fact": "A mountain range or a new river can isolate animals long enough that, generations later, they become brand-new species.",
+    "fun_fact_ar": "قد تعزل سلسلة جبال أو نهر جديد الحيوانات مدّةً طويلة بحيث تصبح بعد أجيال أنواعًا جديدة تمامًا.",
+    "category": "Biology — Evolution",
+    "category_ar": "أحياء — التطوّر"
+  },
+  {
+    "id": "sci_l6_007",
+    "question": "Why does each digestive enzyme usually work on only one type of food molecule?",
+    "question_ar": "لماذا يعمل كلّ إنزيم هضمي عادةً على نوع واحد فقط من جزيئات الغذاء؟",
+    "options": [
+      "Its shape only fits a specific molecule, like a key in a lock",
+      "It tastes that food and refuses others",
+      "It is too lazy to try other molecules",
+      "It changes color based on the food"
+    ],
+    "options_ar": [
+      "شكله يناسب جزيئًا معيّنًا كالمفتاح في القفل",
+      "يتذوّق ذلك الطعام ويرفض غيره",
+      "كسلان جدًا ليجرّب جزيئات أخرى",
+      "يغيّر لونه حسب الطعام"
+    ],
+    "correct_answer": "Its shape only fits a specific molecule, like a key in a lock",
+    "correct_answer_ar": "شكله يناسب جزيئًا معيّنًا كالمفتاح في القفل",
+    "difficulty": 5,
+    "fun_fact": "This is called the lock-and-key model — and if the enzyme's shape gets ruined by heat, the lock won't open anymore.",
+    "fun_fact_ar": "يُسمّى ذلك نموذج القفل والمفتاح، فإذا أتلفت الحرارة شكل الإنزيم لم يعد القفل يُفتح.",
+    "category": "Biology — Digestion",
+    "category_ar": "أحياء — الهضم"
+  },
+  {
+    "id": "sci_l6_008",
+    "question": "What causes a neuron to fire an electrical action potential?",
+    "question_ar": "ما الذي يجعل العصبون يطلق جهد فعل كهربائيًا؟",
+    "options": [
+      "A sudden rush of sodium ions into the cell",
+      "A drop in body temperature",
+      "Eating a sweet snack",
+      "Moving the muscles slowly"
+    ],
+    "options_ar": [
+      "اندفاع مفاجئ لأيونات الصوديوم إلى داخل الخلية",
+      "هبوط في درجة حرارة الجسم",
+      "تناول وجبة خفيفة حلوة",
+      "تحريك العضلات ببطء"
+    ],
+    "correct_answer": "A sudden rush of sodium ions into the cell",
+    "correct_answer_ar": "اندفاع مفاجئ لأيونات الصوديوم إلى داخل الخلية",
+    "difficulty": 5,
+    "fun_fact": "Each spark zips along the neuron at speeds that can reach hundreds of kilometres per hour — your nerves are tiny race tracks.",
+    "fun_fact_ar": "تنطلق الشرارة على طول العصبون بسرعات قد تبلغ مئات الكيلومترات في الساعة، فأعصابك حلبات سباق صغيرة.",
+    "category": "Biology — Nervous System",
+    "category_ar": "أحياء — الجهاز العصبي"
+  },
+  {
+    "id": "sci_l6_009",
+    "question": "A high biodiversity index means an ecosystem has what?",
+    "question_ar": "يعني مؤشر التنوّع الحيوي العالي أنّ النظام البيئي يمتلك ماذا؟",
+    "options": [
+      "Many different species living together",
+      "Only one species filling the whole place",
+      "No living things at all",
+      "Just rocks and water"
+    ],
+    "options_ar": [
+      "أنواعًا كثيرة مختلفة تعيش معًا",
+      "نوعًا واحدًا فقط يملأ المكان بأكمله",
+      "لا كائنات حيّة إطلاقًا",
+      "صخورًا وماءً فقط"
+    ],
+    "correct_answer": "Many different species living together",
+    "correct_answer_ar": "أنواعًا كثيرة مختلفة تعيش معًا",
+    "difficulty": 5,
+    "fun_fact": "Coral reefs and rainforests have some of the highest biodiversity on Earth, even though they cover small areas.",
+    "fun_fact_ar": "تمتلك الشعاب المرجانية والغابات المطيرة أعلى تنوّع حيوي على الأرض رغم صغر مساحتها.",
+    "category": "Biology — Ecology",
+    "category_ar": "أحياء — البيئة"
+  },
+  {
+    "id": "sci_l6_010",
+    "question": "How does a warmer climate hurt many cold-water fish species?",
+    "question_ar": "كيف يضرّ المناخ الأدفأ بكثير من أنواع أسماك المياه الباردة؟",
+    "options": [
+      "Warmer water holds less oxygen for them to breathe",
+      "It makes them grow extra fins",
+      "It turns them into birds",
+      "It makes the water taste sweeter"
+    ],
+    "options_ar": [
+      "الماء الأدفأ يحمل أكسجينًا أقلّ كي تتنفّس",
+      "يجعلها تنبت زعانف إضافية",
+      "يحوّلها إلى طيور",
+      "يجعل طعم الماء أحلى"
+    ],
+    "correct_answer": "Warmer water holds less oxygen for them to breathe",
+    "correct_answer_ar": "الماء الأدفأ يحمل أكسجينًا أقلّ كي تتنفّس",
+    "difficulty": 5,
+    "fun_fact": "That's why climate change pushes some fish toward cooler, deeper water — they're literally chasing oxygen.",
+    "fun_fact_ar": "لذلك يدفع تغيّر المناخ بعض الأسماك نحو مياه أبرد وأعمق، فهي تطارد الأكسجين حرفيًّا.",
+    "category": "Biology — Climate Impact",
+    "category_ar": "أحياء — أثر المناخ"
+  },
+  {
+    "id": "sci_l6_011",
+    "question": "The Arab physician Ibn al-Nafis discovered which kind of blood circulation centuries before Europe did?",
+    "question_ar": "اكتشف الطبيب العربي ابن النفيس أيّ نوع من الدورة الدموية قبل قرون من اكتشافها في أوروبا؟",
+    "options": [
+      "The pulmonary circulation between heart and lungs",
+      "The journey of blood to fingernails only",
+      "Blood flowing backwards from feet to head",
+      "Blood that becomes air inside the brain"
+    ],
+    "options_ar": [
+      "الدورة الدموية الرئوية بين القلب والرئتين",
+      "رحلة الدم إلى أظافر اليد فقط",
+      "تدفّق الدم بالعكس من القدمين إلى الرأس",
+      "دم يتحوّل إلى هواء داخل الدماغ"
+    ],
+    "correct_answer": "The pulmonary circulation between heart and lungs",
+    "correct_answer_ar": "الدورة الدموية الرئوية بين القلب والرئتين",
+    "difficulty": 5,
+    "fun_fact": "Ibn al-Nafis described the lung circuit around the year six hundred and fifty after the Hijra — a huge medical leap.",
+    "fun_fact_ar": "وصف ابن النفيس الدورة الرئوية نحو عام ستمائة وخمسين للهجرة، وكانت قفزة طبية هائلة.",
+    "category": "Biology — Circulation",
+    "category_ar": "أحياء — الدورة الدموية"
+  },
+  {
+    "id": "sci_l6_012",
+    "question": "Ibn Sina (Avicenna) wrote a famous medical encyclopedia. What was its title?",
+    "question_ar": "كتب ابن سينا موسوعةً طبية شهيرة. ما عنوانها؟",
+    "options": [
+      "The Canon of Medicine",
+      "The Book of Stars",
+      "The Atlas of Plants",
+      "The Garden of Numbers"
+    ],
+    "options_ar": [
+      "القانون في الطب",
+      "كتاب النجوم",
+      "أطلس النباتات",
+      "حديقة الأعداد"
+    ],
+    "correct_answer": "The Canon of Medicine",
+    "correct_answer_ar": "القانون في الطب",
+    "difficulty": 5,
+    "fun_fact": "The Canon was used in European medical schools for over five hundred years after Ibn Sina's death.",
+    "fun_fact_ar": "استُخدم القانون في كليات الطب الأوروبية لأكثر من خمسمئة سنة بعد وفاة ابن سينا.",
+    "category": "Biology — History of Medicine",
+    "category_ar": "أحياء — تاريخ الطب"
+  },
+  {
+    "id": "sci_l6_013",
+    "question": "In an atom, the s orbital is shaped like what?",
+    "question_ar": "في الذرّة، يشبه المدار s شكل ماذا؟",
+    "options": [
+      "A sphere around the nucleus",
+      "A flat dinner plate",
+      "A long straight pencil",
+      "A cube with sharp corners"
+    ],
+    "options_ar": [
+      "كرة حول النواة",
+      "صحن عشاء مسطّح",
+      "قلم مستقيم طويل",
+      "مكعّب بزوايا حادّة"
+    ],
+    "correct_answer": "A sphere around the nucleus",
+    "correct_answer_ar": "كرة حول النواة",
+    "difficulty": 5,
+    "fun_fact": "Orbitals are not little tracks — they are clouds of probability where an electron is most likely to be found.",
+    "fun_fact_ar": "المدارات ليست مسارات صغيرة، بل سُحب احتمال يُرجَّح أن يوجد فيها الإلكترون.",
+    "category": "Chemistry — Atomic Orbitals",
+    "category_ar": "كيمياء — المدارات الذرّية"
+  },
+  {
+    "id": "sci_l6_014",
+    "question": "How many electrons can a single p orbital lobe set hold in total?",
+    "question_ar": "كم إلكترونًا يمكن أن تستوعب مجموعة فصوص مدار p بأكملها؟",
+    "options": [
+      "Six electrons across three p orbitals",
+      "Only one electron",
+      "Twelve electrons",
+      "Twenty electrons"
+    ],
+    "options_ar": [
+      "ستة إلكترونات موزّعة على ثلاثة مدارات p",
+      "إلكترون واحد فقط",
+      "اثنا عشر إلكترونًا",
+      "عشرون إلكترونًا"
+    ],
+    "correct_answer": "Six electrons across three p orbitals",
+    "correct_answer_ar": "ستة إلكترونات موزّعة على ثلاثة مدارات p",
+    "difficulty": 5,
+    "fun_fact": "Each p orbital looks like a dumbbell, and the three of them point along three different directions in space.",
+    "fun_fact_ar": "يشبه كلّ مدار p شكل الدمبل، وتشير المدارات الثلاثة إلى ثلاثة اتجاهات مختلفة في الفضاء.",
+    "category": "Chemistry — Atomic Orbitals",
+    "category_ar": "كيمياء — المدارات الذرّية"
+  },
+  {
+    "id": "sci_l6_015",
+    "question": "In a redox reaction, the substance that loses electrons is doing what?",
+    "question_ar": "في تفاعل الأكسدة والاختزال، المادّة التي تفقد الإلكترونات تقوم بماذا؟",
+    "options": [
+      "Getting oxidized",
+      "Getting reduced",
+      "Getting frozen",
+      "Getting evaporated"
+    ],
+    "options_ar": [
+      "تتأكسد",
+      "تُختزل",
+      "تتجمّد",
+      "تتبخّر"
+    ],
+    "correct_answer": "Getting oxidized",
+    "correct_answer_ar": "تتأكسد",
+    "difficulty": 5,
+    "fun_fact": "A handy memory trick is OIL RIG: Oxidation Is Loss, Reduction Is Gain — of electrons.",
+    "fun_fact_ar": "حيلة جميلة للتذكّر بالإنجليزية OIL RIG: الأكسدة فقدان والاختزال اكتساب للإلكترونات.",
+    "category": "Chemistry — Redox",
+    "category_ar": "كيمياء — أكسدة واختزال"
+  },
+  {
+    "id": "sci_l6_016",
+    "question": "Le Chatelier's principle says that if you push a chemical equilibrium with more pressure, it tends to do what?",
+    "question_ar": "ينصّ مبدأ لوشاتلييه على أنّك إن دفعت الاتزان الكيميائي بضغط أكبر، فإنّه يميل إلى ماذا؟",
+    "options": [
+      "Shift toward the side with fewer gas molecules",
+      "Stop completely forever",
+      "Make a brand-new element",
+      "Turn into pure light"
+    ],
+    "options_ar": [
+      "الانزياح نحو الجانب الذي يحوي عدد جزيئات غازية أقلّ",
+      "التوقّف تمامًا إلى الأبد",
+      "تكوين عنصر جديد كليًّا",
+      "التحوّل إلى ضوء خالص"
+    ],
+    "correct_answer": "Shift toward the side with fewer gas molecules",
+    "correct_answer_ar": "الانزياح نحو الجانب الذي يحوي عدد جزيئات غازية أقلّ",
+    "difficulty": 5,
+    "fun_fact": "It's like crowding a bus — molecules move toward the side with more empty seats to relieve the squeeze.",
+    "fun_fact_ar": "الأمر يشبه ازدحام حافلة، فتنتقل الجزيئات إلى الجهة ذات المقاعد الأكثر فراغًا لتخفيف الضغط.",
+    "category": "Chemistry — Equilibrium",
+    "category_ar": "كيمياء — الاتزان"
+  },
+  {
+    "id": "sci_l6_017",
+    "question": "Which factor will usually NOT speed up a chemical reaction?",
+    "question_ar": "أيّ عامل لن يسرّع التفاعل الكيميائي عادةً؟",
+    "options": [
+      "Cooling the mixture down a lot",
+      "Adding a catalyst",
+      "Crushing solids into powder",
+      "Increasing the concentration"
+    ],
+    "options_ar": [
+      "تبريد المخلوط كثيرًا",
+      "إضافة عامل محفّز",
+      "سحق المواد الصلبة إلى مسحوق",
+      "زيادة التركيز"
+    ],
+    "correct_answer": "Cooling the mixture down a lot",
+    "correct_answer_ar": "تبريد المخلوط كثيرًا",
+    "difficulty": 5,
+    "fun_fact": "Cold molecules move slower and collide less, so reactions slow to a crawl — that's why we keep food in the fridge.",
+    "fun_fact_ar": "تتحرّك الجزيئات الباردة ببطء وتتصادم أقلّ، فيتباطأ التفاعل، ولذلك نحفظ الطعام في الثلاجة.",
+    "category": "Chemistry — Reaction Rates",
+    "category_ar": "كيمياء — سرعة التفاعل"
+  },
+  {
+    "id": "sci_l6_018",
+    "question": "What is a polymer?",
+    "question_ar": "ما البوليمر؟",
+    "options": [
+      "A long chain made of many repeating monomer units",
+      "A single tiny atom standing alone",
+      "A type of metal magnet",
+      "A noble gas with a smell"
+    ],
+    "options_ar": [
+      "سلسلة طويلة مكوّنة من وحدات مونومر متكرّرة",
+      "ذرّة صغيرة واحدة بمفردها",
+      "نوع من المغناطيسات المعدنية",
+      "غاز نبيل ذو رائحة"
+    ],
+    "correct_answer": "A long chain made of many repeating monomer units",
+    "correct_answer_ar": "سلسلة طويلة مكوّنة من وحدات مونومر متكرّرة",
+    "difficulty": 5,
+    "fun_fact": "Plastics, proteins, DNA and even spider silk are all polymers — nature loves stitching small pieces into long ropes.",
+    "fun_fact_ar": "البلاستيك والبروتينات والحمض النووي وحتى خيط العنكبوت كلّها بوليمرات، فالطبيعة تعشق خياطة قطع صغيرة في حبال طويلة.",
+    "category": "Chemistry — Polymers",
+    "category_ar": "كيمياء — البوليمرات"
+  },
+  {
+    "id": "sci_l6_019",
+    "question": "Why does water have such a strangely high boiling point for a tiny molecule?",
+    "question_ar": "لماذا يمتلك الماء درجة غليان مرتفعة بشكل غريب لجزيء صغير؟",
+    "options": [
+      "Hydrogen bonds hold its molecules tightly together",
+      "Water atoms are made of pure metal",
+      "The Sun heats it from the inside",
+      "Water molecules have wings"
+    ],
+    "options_ar": [
+      "الروابط الهيدروجينية تربط جزيئاته بإحكام",
+      "ذرّات الماء مصنوعة من معدن خالص",
+      "تسخّنه الشمس من الداخل",
+      "جزيئات الماء لها أجنحة"
+    ],
+    "correct_answer": "Hydrogen bonds hold its molecules tightly together",
+    "correct_answer_ar": "الروابط الهيدروجينية تربط جزيئاته بإحكام",
+    "difficulty": 5,
+    "fun_fact": "Without hydrogen bonding, water (H2O) would boil far below room temperature and life as we know it could not exist.",
+    "fun_fact_ar": "لولا الرابطة الهيدروجينية لغلى الماء (H2O) في درجة أقلّ بكثير من حرارة الغرفة ولما وُجدت الحياة كما نعرفها.",
+    "category": "Chemistry — Intermolecular Forces",
+    "category_ar": "كيمياء — القوى بين الجزيئية"
+  },
+  {
+    "id": "sci_l6_020",
+    "question": "Molarity is a way to measure what?",
+    "question_ar": "المولارية وسيلة لقياس ماذا؟",
+    "options": [
+      "How concentrated a solution is",
+      "How heavy a single atom is",
+      "How loud a reaction sounds",
+      "How tall a flame grows"
+    ],
+    "options_ar": [
+      "مدى تركيز المحلول",
+      "كتلة الذرّة الواحدة",
+      "علوّ صوت التفاعل",
+      "ارتفاع لهب المحلول"
+    ],
+    "correct_answer": "How concentrated a solution is",
+    "correct_answer_ar": "مدى تركيز المحلول",
+    "difficulty": 5,
+    "fun_fact": "Molarity counts how many moles of a solute are dissolved in one litre of solution — it's chemistry's version of 'how strong is the juice.'",
+    "fun_fact_ar": "تَعدّ المولارية عدد مولات المذاب الذائب في لتر من المحلول، فهي طريقة الكيمياء لقول «ما مدى تركيز العصير».",
+    "category": "Chemistry — Solutions",
+    "category_ar": "كيمياء — المحاليل"
+  },
+  {
+    "id": "sci_l6_021",
+    "question": "Which functional group makes a molecule an alcohol?",
+    "question_ar": "أيّ مجموعة وظيفية تجعل الجزيء كحولًا؟",
+    "options": [
+      "The hydroxyl group, written as -OH",
+      "A pure iron atom",
+      "A noble gas pocket",
+      "A sodium chloride cube"
+    ],
+    "options_ar": [
+      "مجموعة الهيدروكسيل المكتوبة -OH",
+      "ذرّة حديد نقية",
+      "جيب من غاز نبيل",
+      "مكعّب من كلوريد الصوديوم"
+    ],
+    "correct_answer": "The hydroxyl group, written as -OH",
+    "correct_answer_ar": "مجموعة الهيدروكسيل المكتوبة -OH",
+    "difficulty": 5,
+    "fun_fact": "The Arab alchemist Jabir ibn Hayyan worked with distillation centuries before modern chemistry — many alcohol techniques trace back to him.",
+    "fun_fact_ar": "عمل الكيميائي العربي جابر بن حيان على التقطير قبل قرون من الكيمياء الحديثة، وكثير من تقنيات الكحول تعود إليه.",
+    "category": "Chemistry — Organic Functional Groups",
+    "category_ar": "كيمياء — المجموعات الوظيفية العضوية"
+  },
+  {
+    "id": "sci_l6_022",
+    "question": "Which functional group, written -COOH, is found in vinegar and citrus fruits?",
+    "question_ar": "أيّ مجموعة وظيفية تُكتب -COOH وتوجد في الخلّ والفواكه الحمضية؟",
+    "options": [
+      "The carboxyl group",
+      "The amine group",
+      "The sodium group",
+      "The neon group"
+    ],
+    "options_ar": [
+      "مجموعة الكربوكسيل",
+      "مجموعة الأمين",
+      "مجموعة الصوديوم",
+      "مجموعة النيون"
+    ],
+    "correct_answer": "The carboxyl group",
+    "correct_answer_ar": "مجموعة الكربوكسيل",
+    "difficulty": 5,
+    "fun_fact": "Carboxylic acids give lemons their sharp tang and vinegar its bite — that's the -COOH at work.",
+    "fun_fact_ar": "تمنح الأحماض الكربوكسيلية الليمونَ حدّته والخلَّ لذعَه، وذلك بفعل المجموعة -COOH.",
+    "category": "Chemistry — Organic Functional Groups",
+    "category_ar": "كيمياء — المجموعات الوظيفية العضوية"
+  },
+  {
+    "id": "sci_l6_023",
+    "question": "An amine functional group is built around which atom?",
+    "question_ar": "تُبنى المجموعة الوظيفية الأمين حول أيّ ذرّة؟",
+    "options": [
+      "Nitrogen, written as -NH2",
+      "Pure helium",
+      "Solid gold",
+      "Liquid mercury"
+    ],
+    "options_ar": [
+      "النيتروجين المكتوب -NH2",
+      "هيليوم نقي",
+      "ذهب صلب",
+      "زئبق سائل"
+    ],
+    "correct_answer": "Nitrogen, written as -NH2",
+    "correct_answer_ar": "النيتروجين المكتوب -NH2",
+    "difficulty": 5,
+    "fun_fact": "Amino acids — the building blocks of every protein in your body — get their name because they carry an amine group.",
+    "fun_fact_ar": "الأحماض الأمينية، وهي وحدات بناء البروتينات في جسمك، أُخذ اسمها لأنّها تحمل مجموعة أمين.",
+    "category": "Chemistry — Organic Functional Groups",
+    "category_ar": "كيمياء — المجموعات الوظيفية العضوية"
+  },
+  {
+    "id": "sci_l6_024",
+    "question": "The conservation of momentum says that in a closed collision the total momentum does what?",
+    "question_ar": "يقول قانون حفظ كمية الحركة إنّ كمية الحركة الكلية في تصادم مغلق تفعل ماذا؟",
+    "options": [
+      "Stays the same before and after",
+      "Doubles every time",
+      "Disappears immediately",
+      "Becomes light energy only"
+    ],
+    "options_ar": [
+      "تبقى نفسها قبل التصادم وبعده",
+      "تتضاعف في كلّ مرّة",
+      "تختفي فورًا",
+      "تتحوّل إلى طاقة ضوئية فقط"
+    ],
+    "correct_answer": "Stays the same before and after",
+    "correct_answer_ar": "تبقى نفسها قبل التصادم وبعده",
+    "difficulty": 5,
+    "fun_fact": "Momentum equals mass times velocity (p=mv). Even when objects bounce or stick, the total p is preserved.",
+    "fun_fact_ar": "كمية الحركة تساوي الكتلة مضروبة بالسرعة (p=mv)، وحتى عند الارتداد أو الالتصاق تبقى الكمية الكلية محفوظة.",
+    "category": "Physics — Momentum",
+    "category_ar": "فيزياء — كمية الحركة"
+  },
+  {
+    "id": "sci_l6_025",
+    "question": "When you throw a ball at an angle, ignoring air, what shape does its path trace?",
+    "question_ar": "حين ترمي كرة بزاوية وتتجاهل الهواء، أيّ شكل يرسمه مسارها؟",
+    "options": [
+      "A parabola curve",
+      "A perfect square",
+      "A straight horizontal line",
+      "A spiral going up forever"
+    ],
+    "options_ar": [
+      "منحنى قطع مكافئ",
+      "مربّع تامّ",
+      "خط أفقي مستقيم",
+      "حلزون يصعد إلى الأبد"
+    ],
+    "correct_answer": "A parabola curve",
+    "correct_answer_ar": "منحنى قطع مكافئ",
+    "difficulty": 5,
+    "fun_fact": "Gravity pulls down at the same steady rate while the ball moves sideways, and that combination creates the parabola.",
+    "fun_fact_ar": "تسحب الجاذبية الكرة إلى الأسفل بمعدّل ثابت بينما تتحرّك جانبيًا، فتنشأ من ذلك صورة القطع المكافئ.",
+    "category": "Physics — Projectile Motion",
+    "category_ar": "فيزياء — حركة المقذوفات"
+  },
+  {
+    "id": "sci_l6_026",
+    "question": "A pendulum that swings back and forth in a small angle is an example of what?",
+    "question_ar": "البندول الذي يتأرجح ذهابًا وإيابًا بزاوية صغيرة مثال على ماذا؟",
+    "options": [
+      "Simple harmonic motion",
+      "A nuclear reaction",
+      "Black hole formation",
+      "Photosynthesis"
+    ],
+    "options_ar": [
+      "حركة توافقية بسيطة",
+      "تفاعل نووي",
+      "تكوّن ثقب أسود",
+      "البناء الضوئي"
+    ],
+    "correct_answer": "Simple harmonic motion",
+    "correct_answer_ar": "حركة توافقية بسيطة",
+    "difficulty": 5,
+    "fun_fact": "A spring bouncing up and down also follows simple harmonic motion — same maths, same beautiful curve.",
+    "fun_fact_ar": "النابض الذي يهتزّ صعودًا وهبوطًا يتبع أيضًا الحركة التوافقية البسيطة بنفس المعادلات والمنحنى الجميل.",
+    "category": "Physics — Oscillations",
+    "category_ar": "فيزياء — الاهتزازات"
+  },
+  {
+    "id": "sci_l6_027",
+    "question": "Which of these is part of the electromagnetic spectrum?",
+    "question_ar": "أيّ ممّا يلي جزء من الطيف الكهرومغناطيسي؟",
+    "options": [
+      "Radio waves and X-rays",
+      "Sound waves only",
+      "Ocean waves only",
+      "Earthquake waves only"
+    ],
+    "options_ar": [
+      "موجات الراديو والأشعة السينية",
+      "الموجات الصوتية فقط",
+      "أمواج المحيط فقط",
+      "موجات الزلازل فقط"
+    ],
+    "correct_answer": "Radio waves and X-rays",
+    "correct_answer_ar": "موجات الراديو والأشعة السينية",
+    "difficulty": 5,
+    "fun_fact": "Visible light is just one tiny stripe in the electromagnetic rainbow — radio, microwaves, infrared, ultraviolet, X-rays and gamma rays are all the same family.",
+    "fun_fact_ar": "الضوء المرئي مجرّد شريط صغير من قوس قزح كهرومغناطيسي يضمّ الراديو والميكروويف والأشعة تحت الحمراء وفوق البنفسجية والسينية وغاما.",
+    "category": "Physics — Electromagnetic Spectrum",
+    "category_ar": "فيزياء — الطيف الكهرومغناطيسي"
+  },
+  {
+    "id": "sci_l6_028",
+    "question": "Snell's law describes which behaviour of light?",
+    "question_ar": "يصف قانون سنل أيّ سلوك للضوء؟",
+    "options": [
+      "How light bends as it passes between two materials",
+      "How sound becomes louder underwater",
+      "How magnets attract metal",
+      "How fire chooses its colour"
+    ],
+    "options_ar": [
+      "كيف ينكسر الضوء عند مروره بين مادّتين",
+      "كيف يصبح الصوت أعلى تحت الماء",
+      "كيف تجذب المغناطيسات المعدن",
+      "كيف تختار النار لونها"
+    ],
+    "correct_answer": "How light bends as it passes between two materials",
+    "correct_answer_ar": "كيف ينكسر الضوء عند مروره بين مادّتين",
+    "difficulty": 5,
+    "fun_fact": "Muslim scholar Ibn al-Haytham studied refraction in his Book of Optics centuries before Snell — modern optics rests on his shoulders.",
+    "fun_fact_ar": "درس العالم المسلم ابن الهيثم الانكسار في كتاب المناظر قبل سنل بقرون، فالبصريات الحديثة تقف على كتفيه.",
+    "category": "Physics — Optics",
+    "category_ar": "فيزياء — البصريات"
+  },
+  {
+    "id": "sci_l6_029",
+    "question": "Why does it take so much energy to boil water compared to many other liquids?",
+    "question_ar": "لماذا يحتاج الماء طاقةً كبيرة ليغلي مقارنة بكثير من السوائل الأخرى؟",
+    "options": [
+      "Water has a very high specific heat capacity",
+      "Water is heavier than steel",
+      "Water is full of magnets",
+      "Water reflects all heat away"
+    ],
+    "options_ar": [
+      "للماء سعة حرارية نوعية عالية جدًا",
+      "الماء أثقل من الفولاذ",
+      "الماء مليء بالمغناطيسات",
+      "الماء يعكس كلّ الحرارة"
+    ],
+    "correct_answer": "Water has a very high specific heat capacity",
+    "correct_answer_ar": "للماء سعة حرارية نوعية عالية جدًا",
+    "difficulty": 5,
+    "fun_fact": "That high heat capacity is why oceans warm and cool slowly — they buffer Earth's whole climate.",
+    "fun_fact_ar": "هذه السعة الحرارية العالية هي سبب تسخّن المحيطات وبرودها ببطء، فتُوازن مناخ الأرض كلّه.",
+    "category": "Physics — Thermal Properties",
+    "category_ar": "فيزياء — الخواصّ الحرارية"
+  },
+  {
+    "id": "sci_l6_030",
+    "question": "The ideal gas law (PV=nRT) tells us that if you keep the temperature steady and squeeze a gas, its pressure does what?",
+    "question_ar": "يخبرنا قانون الغاز المثالي (PV=nRT) أنّك إذا ثبّتّ درجة الحرارة وضغطت الغاز، فإنّ ضغطه يفعل ماذا؟",
+    "options": [
+      "Goes up as the volume goes down",
+      "Stays exactly the same",
+      "Drops to zero immediately",
+      "Becomes negative"
+    ],
+    "options_ar": [
+      "يرتفع كلّما قلّ الحجم",
+      "يبقى ثابتًا تمامًا",
+      "يهبط إلى الصفر فورًا",
+      "يصبح سالبًا"
+    ],
+    "correct_answer": "Goes up as the volume goes down",
+    "correct_answer_ar": "يرتفع كلّما قلّ الحجم",
+    "difficulty": 5,
+    "fun_fact": "Squeeze a balloon and you pack the same gas into a smaller space — the molecules hit the walls more often, so pressure rises.",
+    "fun_fact_ar": "اضغط بالونًا فتحشر الغاز نفسه في حيّز أصغر، فتصطدم جزيئاته بالجدران أكثر فيرتفع الضغط.",
+    "category": "Physics — Gas Laws",
+    "category_ar": "فيزياء — قوانين الغازات"
+  },
+  {
+    "id": "sci_l6_031",
+    "question": "In a perfectly elastic collision between two billiard balls, what is conserved?",
+    "question_ar": "في تصادم مرن تمامًا بين كرتي بلياردو، ما الذي يُحفظ؟",
+    "options": [
+      "Both kinetic energy and momentum",
+      "Only the colour of the balls",
+      "Only the noise they make",
+      "Nothing at all"
+    ],
+    "options_ar": [
+      "الطاقة الحركية وكمية الحركة معًا",
+      "لون الكرات فقط",
+      "الضجيج الذي تصدره فقط",
+      "لا شيء على الإطلاق"
+    ],
+    "correct_answer": "Both kinetic energy and momentum",
+    "correct_answer_ar": "الطاقة الحركية وكمية الحركة معًا",
+    "difficulty": 5,
+    "fun_fact": "Real billiard balls are almost — but not quite — elastic; a tiny bit of energy turns into the click sound and heat.",
+    "fun_fact_ar": "كرات البلياردو الحقيقية مرنة تقريبًا لا تمامًا، إذ تتحوّل قطرة من الطاقة إلى صوت الطقطقة والحرارة.",
+    "category": "Physics — Energy Conservation",
+    "category_ar": "فيزياء — حفظ الطاقة"
+  },
+  {
+    "id": "sci_l6_032",
+    "question": "In an inelastic collision where two cars stick together, what is NOT conserved?",
+    "question_ar": "في التصادم غير المرن حيث تلتصق سيّارتان، ما الذي لا يُحفظ؟",
+    "options": [
+      "Kinetic energy",
+      "Total momentum",
+      "Total mass",
+      "Total electric charge"
+    ],
+    "options_ar": [
+      "الطاقة الحركية",
+      "كمية الحركة الكلية",
+      "الكتلة الكلية",
+      "الشحنة الكهربائية الكلية"
+    ],
+    "correct_answer": "Kinetic energy",
+    "correct_answer_ar": "الطاقة الحركية",
+    "difficulty": 5,
+    "fun_fact": "The lost kinetic energy doesn't vanish — it turns into crumpled metal, heat and sound, all forms of energy too.",
+    "fun_fact_ar": "الطاقة الحركية المفقودة لا تختفي، بل تتحوّل إلى معدن متجعّد وحرارة وصوت، وكلّها أشكال للطاقة أيضًا.",
+    "category": "Physics — Energy Conservation",
+    "category_ar": "فيزياء — حفظ الطاقة"
+  },
+  {
+    "id": "sci_l6_033",
+    "question": "Newton's second law is famously written as which equation?",
+    "question_ar": "يُكتب قانون نيوتن الثاني بالمعادلة الشهيرة الآتية:",
+    "options": [
+      "F=ma",
+      "E=mc²",
+      "V=IR",
+      "PV=nRT"
+    ],
+    "options_ar": [
+      "F=ma",
+      "E=mc²",
+      "V=IR",
+      "PV=nRT"
+    ],
+    "correct_answer": "F=ma",
+    "correct_answer_ar": "F=ma",
+    "difficulty": 5,
+    "fun_fact": "Force equals mass times acceleration — push something heavier with the same force and it speeds up less.",
+    "fun_fact_ar": "القوّة تساوي الكتلة في التسارع، فإذا دفعت جسمًا أثقل بالقوّة نفسها تسارع أقلّ.",
+    "category": "Physics — Newton's Laws",
+    "category_ar": "فيزياء — قوانين نيوتن"
+  },
+  {
+    "id": "sci_l6_034",
+    "question": "Why does a galaxy's light shift toward the red end of the spectrum?",
+    "question_ar": "لماذا ينزاح ضوء المجرّة نحو الطرف الأحمر من الطيف؟",
+    "options": [
+      "The galaxy is moving away from us",
+      "The galaxy is shrinking",
+      "It is being painted red by dust",
+      "Stars cool to red as a galaxy ages"
+    ],
+    "options_ar": [
+      "المجرّة تبتعد عنّا",
+      "المجرّة تتقلّص",
+      "يُطلى ضوؤها أحمر بالغبار",
+      "تبرد النجوم إلى الأحمر مع تقدّم عمر المجرّة"
+    ],
+    "correct_answer": "The galaxy is moving away from us",
+    "correct_answer_ar": "المجرّة تبتعد عنّا",
+    "difficulty": 5,
+    "fun_fact": "Edwin Hubble used redshift to show that almost all galaxies are speeding away from each other — the universe is expanding.",
+    "fun_fact_ar": "استخدم إدوين هابل الانزياح الأحمر ليُظهر أنّ المجرّات كلّها تقريبًا تبتعد عن بعضها، فالكون يتمدّد.",
+    "category": "Earth & Space — Cosmology",
+    "category_ar": "الأرض والفضاء — علم الكون"
+  },
+  {
+    "id": "sci_l6_035",
+    "question": "When an ambulance speeds toward you, its siren sounds higher in pitch. This is called what?",
+    "question_ar": "حين تتجه إليك سيّارة إسعاف بسرعة، يبدو صوت صفّارتها أعلى. ماذا يُسمّى ذلك؟",
+    "options": [
+      "The Doppler effect",
+      "The greenhouse effect",
+      "The placebo effect",
+      "The mirror effect"
+    ],
+    "options_ar": [
+      "تأثير دوبلر",
+      "تأثير الاحتباس الحراري",
+      "تأثير الإيهام",
+      "تأثير المرآة"
+    ],
+    "correct_answer": "The Doppler effect",
+    "correct_answer_ar": "تأثير دوبلر",
+    "difficulty": 5,
+    "fun_fact": "The same effect on light waves is what produces the redshift astronomers use to map the universe.",
+    "fun_fact_ar": "التأثير نفسه على موجات الضوء هو ما ينتج الانزياح الأحمر الذي يستخدمه الفلكيون لرسم خريطة الكون.",
+    "category": "Earth & Space — Doppler",
+    "category_ar": "الأرض والفضاء — دوبلر"
+  },
+  {
+    "id": "sci_l6_036",
+    "question": "According to the Big Bang model, the universe began how?",
+    "question_ar": "وفقًا لنموذج الانفجار العظيم، كيف بدأ الكون؟",
+    "options": [
+      "From an extremely hot, dense point that expanded",
+      "As a giant cold rock that exploded",
+      "As a cloud of pure cheese",
+      "From an old galaxy that shrank"
+    ],
+    "options_ar": [
+      "من نقطة بالغة الحرارة والكثافة ثمّ تمدّدت",
+      "صخرة باردة عملاقة انفجرت",
+      "سحابة من الجبن الخالص",
+      "مجرّة قديمة تقلّصت"
+    ],
+    "correct_answer": "From an extremely hot, dense point that expanded",
+    "correct_answer_ar": "من نقطة بالغة الحرارة والكثافة ثمّ تمدّدت",
+    "difficulty": 5,
+    "fun_fact": "The faint cosmic microwave background you can pick up with a radio telescope is the leftover whisper of that first heat.",
+    "fun_fact_ar": "الإشعاع الكوني الميكروي الخافت الذي يلتقطه التلسكوب الراديوي هو همسٌ متبقٍّ من تلك الحرارة الأولى.",
+    "category": "Earth & Space — Big Bang",
+    "category_ar": "الأرض والفضاء — الانفجار العظيم"
+  },
+  {
+    "id": "sci_l6_037",
+    "question": "Astronomers think most of the universe is made of mysterious dark matter. Why do they believe it exists?",
+    "question_ar": "يعتقد الفلكيون أنّ معظم الكون يتكوّن من مادّة مظلمة غامضة. لماذا يؤمنون بوجودها؟",
+    "options": [
+      "Galaxies spin faster than visible matter alone can explain",
+      "It glows pink in telescopes",
+      "Spacecraft brought back samples of it",
+      "It makes a humming sound from space"
+    ],
+    "options_ar": [
+      "تدور المجرّات أسرع ممّا تستطيع المادّة المرئية وحدها تفسيره",
+      "تتوهّج بلون وردي في التلسكوبات",
+      "أحضرت المركبات الفضائية عيّنات منها",
+      "تصدر طنينًا من الفضاء"
+    ],
+    "correct_answer": "Galaxies spin faster than visible matter alone can explain",
+    "correct_answer_ar": "تدور المجرّات أسرع ممّا تستطيع المادّة المرئية وحدها تفسيره",
+    "difficulty": 5,
+    "fun_fact": "Dark matter doesn't shine, but its gravity is so strong that without it galaxies would fly apart.",
+    "fun_fact_ar": "لا تشعّ المادّة المظلمة، لكنّ جاذبيّتها قويّة جدًا، ولولاها لتفكّكت المجرّات.",
+    "category": "Earth & Space — Dark Matter",
+    "category_ar": "الأرض والفضاء — المادّة المظلمة"
+  },
+  {
+    "id": "sci_l6_038",
+    "question": "Stars shine because of which process happening in their cores?",
+    "question_ar": "تتلألأ النجوم بسبب أيّ عملية تجري في نواتها؟",
+    "options": [
+      "Nuclear fusion of hydrogen into helium",
+      "Burning of wood and paper",
+      "Friction from passing comets",
+      "Lightning from giant clouds"
+    ],
+    "options_ar": [
+      "اندماج نووي يحوّل الهيدروجين إلى هيليوم",
+      "احتراق الخشب والورق",
+      "احتكاك من مرور المذنبات",
+      "برق من سحب عملاقة"
+    ],
+    "correct_answer": "Nuclear fusion of hydrogen into helium",
+    "correct_answer_ar": "اندماج نووي يحوّل الهيدروجين إلى هيليوم",
+    "difficulty": 5,
+    "fun_fact": "Almost every atom in your body except hydrogen was forged inside an ancient star — you really are made of stardust.",
+    "fun_fact_ar": "تقريبًا كلّ ذرّة في جسمك ما عدا الهيدروجين تشكّلت داخل نجم قديم، فأنت حقًا من غبار النجوم.",
+    "category": "Earth & Space — Stellar Nucleosynthesis",
+    "category_ar": "الأرض والفضاء — تخليق النجوم النووي"
+  },
+  {
+    "id": "sci_l6_039",
+    "question": "A type II supernova happens when which kind of star runs out of fuel?",
+    "question_ar": "يحدث المستعر الأعظم من النوع الثاني عند نفاد وقود أيّ نوع من النجوم؟",
+    "options": [
+      "A massive star much heavier than the Sun",
+      "A small comet",
+      "A planet like Earth",
+      "A cool brown dwarf"
+    ],
+    "options_ar": [
+      "نجم ضخم أثقل من الشمس بكثير",
+      "مذنّب صغير",
+      "كوكب مثل الأرض",
+      "قزم بنّي بارد"
+    ],
+    "correct_answer": "A massive star much heavier than the Sun",
+    "correct_answer_ar": "نجم ضخم أثقل من الشمس بكثير",
+    "difficulty": 5,
+    "fun_fact": "Type Ia supernovae, by contrast, come from white dwarfs that steal too much matter from a partner star.",
+    "fun_fact_ar": "أمّا المستعر الأعظم من النوع Ia فيأتي من قزم أبيض يسرق كثيرًا من المادّة من نجم شريك.",
+    "category": "Earth & Space — Supernovae",
+    "category_ar": "الأرض والفضاء — المستعرات العظمى"
+  },
+  {
+    "id": "sci_l6_040",
+    "question": "The thermohaline circulation is a giant ocean conveyor belt driven by differences in what?",
+    "question_ar": "الدوران الحراري الملحي حزام ناقل ضخم في المحيط مدفوع بالاختلاف في ماذا؟",
+    "options": [
+      "Temperature and saltiness of seawater",
+      "Colour of the seabed",
+      "Number of fish in each region",
+      "Brightness of moonlight"
+    ],
+    "options_ar": [
+      "حرارة ماء البحر وملوحته",
+      "لون قاع البحر",
+      "عدد الأسماك في كلّ منطقة",
+      "سطوع ضوء القمر"
+    ],
+    "correct_answer": "Temperature and saltiness of seawater",
+    "correct_answer_ar": "حرارة ماء البحر وملوحته",
+    "difficulty": 5,
+    "fun_fact": "Cold, salty water near the poles sinks and pulls warmer water along — it can take a single drop a thousand years to make the loop.",
+    "fun_fact_ar": "يغوص الماء البارد المالح قرب القطبين ويسحب معه ماءً أدفأ، وقد تستغرق قطرة واحدة ألف سنة لتُكمل الدورة.",
+    "category": "Earth & Space — Ocean Currents",
+    "category_ar": "الأرض والفضاء — تيارات المحيط"
+  },
+  {
+    "id": "sci_l6_041",
+    "question": "The Coriolis effect curves winds and ocean currents because of what?",
+    "question_ar": "ينحرف تأثير كوريوليس بالرياح وتيارات المحيط بسبب ماذا؟",
+    "options": [
+      "Earth's rotation on its axis",
+      "The Moon's gravity only",
+      "Volcanic eruptions",
+      "Magnetic fields in clouds"
+    ],
+    "options_ar": [
+      "دوران الأرض حول محورها",
+      "جاذبية القمر فقط",
+      "الانفجارات البركانية",
+      "مجالات مغناطيسية في السحب"
+    ],
+    "correct_answer": "Earth's rotation on its axis",
+    "correct_answer_ar": "دوران الأرض حول محورها",
+    "difficulty": 5,
+    "fun_fact": "In the Northern Hemisphere the Coriolis effect bends winds to the right; in the Southern Hemisphere, to the left.",
+    "fun_fact_ar": "في نصف الكرة الشمالي ينحرف تأثير كوريوليس بالرياح إلى اليمين، وفي النصف الجنوبي إلى اليسار.",
+    "category": "Earth & Space — Coriolis",
+    "category_ar": "الأرض والفضاء — كوريوليس"
+  },
+  {
+    "id": "sci_l6_042",
+    "question": "The Muslim astronomer Al-Battani is famous for refining which kind of measurements?",
+    "question_ar": "اشتُهر الفلكي المسلم البتّاني بتدقيق أيّ نوع من القياسات؟",
+    "options": [
+      "Trigonometric astronomy and the length of the solar year",
+      "The depth of the deepest oceans",
+      "The thickness of cloud layers",
+      "The age of dinosaurs"
+    ],
+    "options_ar": [
+      "علم الفلك المثلثي وطول السنة الشمسية",
+      "عمق أعمق المحيطات",
+      "سُمك طبقات السحب",
+      "عمر الديناصورات"
+    ],
+    "correct_answer": "Trigonometric astronomy and the length of the solar year",
+    "correct_answer_ar": "علم الفلك المثلثي وطول السنة الشمسية",
+    "difficulty": 5,
+    "fun_fact": "Al-Battani's measurements were so precise that European astronomers used them for hundreds of years.",
+    "fun_fact_ar": "كانت قياسات البتّاني دقيقة جدًا حتى استعملها الفلكيون الأوروبيون مئات السنين.",
+    "category": "Earth & Space — Islamic Astronomy",
+    "category_ar": "الأرض والفضاء — الفلك الإسلامي"
+  },
+  {
+    "id": "sci_l6_043",
+    "question": "Al-Khwarizmi gave us the word 'algorithm.' Why does that matter for science today?",
+    "question_ar": "أعطانا الخوارزمي كلمة «خوارزمية». لماذا يهمّ هذا للعلم اليوم؟",
+    "options": [
+      "Algorithms power computers, simulations and data analysis",
+      "It is just a fun bedtime word",
+      "It only matters in art classes",
+      "It refers to a type of cloud"
+    ],
+    "options_ar": [
+      "الخوارزميات تشغّل الحواسيب والمحاكاة وتحليل البيانات",
+      "مجرّد كلمة طريفة قبل النوم",
+      "تخصّ حصص الفنّ فقط",
+      "تشير إلى نوع من السحب"
+    ],
+    "correct_answer": "Algorithms power computers, simulations and data analysis",
+    "correct_answer_ar": "الخوارزميات تشغّل الحواسيب والمحاكاة وتحليل البيانات",
+    "difficulty": 5,
+    "fun_fact": "Every search you make and every weather forecast you watch runs on algorithms — a word born from Al-Khwarizmi's name.",
+    "fun_fact_ar": "كلّ بحث تجريه وكلّ نشرة جوية تشاهدها يعمل بخوارزميات، وهي كلمة وُلدت من اسم الخوارزمي.",
+    "category": "Earth & Space — Computational Science",
+    "category_ar": "الأرض والفضاء — العلوم الحاسوبية"
+  },
+  {
+    "id": "sci_l6_044",
+    "question": "What does the codon AUG usually signal during translation?",
+    "question_ar": "ماذا تعني الشيفرة AUG عادةً خلال الترجمة؟",
+    "options": [
+      "Start the protein chain with methionine",
+      "Stop the protein chain right away",
+      "Erase the messenger RNA",
+      "Copy the DNA in reverse"
+    ],
+    "options_ar": [
+      "ابدأ سلسلة البروتين بالميثيونين",
+      "أوقف سلسلة البروتين فورًا",
+      "امحُ الحمض الريبوزي الرسول",
+      "انسخ الحمض النووي بالعكس"
+    ],
+    "correct_answer": "Start the protein chain with methionine",
+    "correct_answer_ar": "ابدأ سلسلة البروتين بالميثيونين",
+    "difficulty": 5,
+    "fun_fact": "Almost every protein in life on Earth begins with the same amino acid — methionine — like a universal opening word.",
+    "fun_fact_ar": "تبدأ معظم البروتينات في الكائنات الحيّة على الأرض بالحمض الأميني نفسه، الميثيونين، وكأنّه كلمة افتتاحية كونية.",
+    "category": "Biology — Protein Synthesis",
+    "category_ar": "أحياء — تصنيع البروتين"
+  },
+  {
+    "id": "sci_l6_045",
+    "question": "Childbirth contractions get stronger as labour goes on. What kind of feedback loop is that?",
+    "question_ar": "تزداد انقباضات الولادة قوّةً مع تقدّم المخاض. أيّ نوع من حلقات التغذية الراجعة يكون ذلك؟",
+    "options": [
+      "A positive feedback loop",
+      "A negative feedback loop",
+      "A frozen loop",
+      "A magnetic loop"
+    ],
+    "options_ar": [
+      "حلقة تغذية راجعة موجبة",
+      "حلقة تغذية راجعة سالبة",
+      "حلقة متجمّدة",
+      "حلقة مغناطيسية"
+    ],
+    "correct_answer": "A positive feedback loop",
+    "correct_answer_ar": "حلقة تغذية راجعة موجبة",
+    "difficulty": 5,
+    "fun_fact": "Positive feedback amplifies the original signal — useful for events that need to be finished quickly, like blood clotting.",
+    "fun_fact_ar": "تضخّم التغذية الراجعة الموجبة الإشارة الأصلية، وهي مفيدة لأحداث تحتاج إلى إنهاء سريع كتجلّط الدم.",
+    "category": "Biology — Homeostasis",
+    "category_ar": "أحياء — الاتزان الداخلي"
+  },
+  {
+    "id": "sci_l6_046",
+    "question": "Mitochondria make ATP through which overall process?",
+    "question_ar": "تصنع الميتوكوندريا جزيء ATP عبر أيّ عملية شاملة؟",
+    "options": [
+      "Aerobic cellular respiration using oxygen",
+      "Photosynthesis using sunlight",
+      "Magnetic charging from Earth",
+      "Pure chemical luck"
+    ],
+    "options_ar": [
+      "التنفس الخلوي الهوائي باستخدام الأكسجين",
+      "البناء الضوئي باستخدام أشعّة الشمس",
+      "شحن مغناطيسي من الأرض",
+      "حظّ كيميائي محض"
+    ],
+    "correct_answer": "Aerobic cellular respiration using oxygen",
+    "correct_answer_ar": "التنفس الخلوي الهوائي باستخدام الأكسجين",
+    "difficulty": 5,
+    "fun_fact": "Each mitochondrion has its own little ring of DNA, hinting they were once independent bacteria long, long ago.",
+    "fun_fact_ar": "تمتلك كلّ ميتوكوندريا حلقتها الصغيرة من الحمض النووي، ممّا يلمّح إلى أنّها كانت يومًا بكتيريا مستقلّة قبل دهور.",
+    "category": "Biology — Cellular Energy",
+    "category_ar": "أحياء — طاقة الخلية"
+  },
+  {
+    "id": "sci_l6_047",
+    "question": "Which scientist first organised the periodic table by atomic number, with reactive metals on the left?",
+    "question_ar": "أيّ عالم رتّب الجدول الدوري أوّلًا حسب العدد الذرّي ووضع الفلزّات التفاعلية على اليسار؟",
+    "options": [
+      "Dmitri Mendeleev (later refined by Moseley)",
+      "Isaac Newton",
+      "Marie Curie",
+      "Galileo Galilei"
+    ],
+    "options_ar": [
+      "ديمتري مندلييف (ثمّ نقّحه موزلي لاحقًا)",
+      "إسحاق نيوتن",
+      "ماري كوري",
+      "غاليليو غاليلي"
+    ],
+    "correct_answer": "Dmitri Mendeleev (later refined by Moseley)",
+    "correct_answer_ar": "ديمتري مندلييف (ثمّ نقّحه موزلي لاحقًا)",
+    "difficulty": 5,
+    "fun_fact": "Mendeleev left blanks in his table for elements no one had found yet — and he was right; they were discovered later.",
+    "fun_fact_ar": "ترك مندلييف فراغات في جدوله لعناصر لم يعثر عليها أحد بعد، وقد كان مصيبًا، إذ اكتُشفت لاحقًا.",
+    "category": "Chemistry — Periodic Table",
+    "category_ar": "كيمياء — الجدول الدوري"
+  },
+  {
+    "id": "sci_l6_048",
+    "question": "When iron rusts in moist air to form Fe2O3, the iron atoms are doing what?",
+    "question_ar": "حين يصدأ الحديد في الهواء الرطب مكوّنًا Fe2O3، فإنّ ذرّات الحديد تفعل ماذا؟",
+    "options": [
+      "Losing electrons to oxygen, which means they get oxidized",
+      "Eating the oxygen and getting cooler",
+      "Turning into pure water",
+      "Becoming a noble gas"
+    ],
+    "options_ar": [
+      "تفقد إلكترونات إلى الأكسجين، أي تتأكسد",
+      "تأكل الأكسجين وتزداد برودة",
+      "تتحوّل إلى ماء نقي",
+      "تصبح غازًا نبيلًا"
+    ],
+    "correct_answer": "Losing electrons to oxygen, which means they get oxidized",
+    "correct_answer_ar": "تفقد إلكترونات إلى الأكسجين، أي تتأكسد",
+    "difficulty": 5,
+    "fun_fact": "Rust expands and flakes off, exposing fresh iron underneath — that's why an unprotected iron bridge keeps rusting deeper.",
+    "fun_fact_ar": "يتمدّد الصدأ ويتقشّر فيكشف عن حديد جديد تحته، ولذلك يستمرّ صدأ الجسر الحديدي غير المحمي في التعمّق.",
+    "category": "Chemistry — Redox",
+    "category_ar": "كيمياء — أكسدة واختزال"
+  },
+  {
+    "id": "sci_l6_049",
+    "question": "Which intermolecular force is the strongest among the following?",
+    "question_ar": "أيّ قوّة بين جزيئية هي الأقوى ممّا يلي؟",
+    "options": [
+      "Hydrogen bonding",
+      "Weak dispersion forces",
+      "Tiny gravity between atoms",
+      "Static from a balloon"
+    ],
+    "options_ar": [
+      "الرابطة الهيدروجينية",
+      "قوى التشتّت الضعيفة",
+      "جاذبية صغيرة بين الذرّات",
+      "كهرباء ساكنة من بالون"
+    ],
+    "correct_answer": "Hydrogen bonding",
+    "correct_answer_ar": "الرابطة الهيدروجينية",
+    "difficulty": 5,
+    "fun_fact": "Hydrogen bonds also zip the two strands of DNA together — strong enough to hold the helix, gentle enough to unzip when needed.",
+    "fun_fact_ar": "تربط الروابط الهيدروجينية أيضًا خيطَي الحمض النووي معًا، فهي قوية بما يكفي لتثبيت اللولب ولينة بما يكفي لفكّه عند الحاجة.",
+    "category": "Chemistry — Intermolecular Forces",
+    "category_ar": "كيمياء — القوى بين الجزيئية"
+  },
+  {
+    "id": "sci_l6_050",
+    "question": "Adding a catalyst to a reaction does what?",
+    "question_ar": "إضافة عامل محفّز إلى التفاعل تفعل ماذا؟",
+    "options": [
+      "Lowers the activation energy without being used up",
+      "Adds extra mass to the products",
+      "Replaces the reactants",
+      "Stops the reaction forever"
+    ],
+    "options_ar": [
+      "تخفض طاقة التنشيط دون أن يُستهلك المحفّز",
+      "تضيف كتلة زائدة إلى النواتج",
+      "تستبدل بالمواد المتفاعلة",
+      "توقف التفاعل إلى الأبد"
+    ],
+    "correct_answer": "Lowers the activation energy without being used up",
+    "correct_answer_ar": "تخفض طاقة التنشيط دون أن يُستهلك المحفّز",
+    "difficulty": 5,
+    "fun_fact": "Enzymes in your body are biological catalysts — without them, breaking down lunch could take days.",
+    "fun_fact_ar": "الإنزيمات في جسمك محفّزات حيوية، ولولاها لاستغرق هضم وجبتك أيامًا.",
+    "category": "Chemistry — Reaction Rates",
+    "category_ar": "كيمياء — سرعة التفاعل"
+  },
+  {
+    "id": "sci_l6_051",
+    "question": "The work-energy theorem says the net work done on an object equals its change in what?",
+    "question_ar": "تقول مبرهنة الشغل والطاقة إنّ صافي الشغل المبذول على الجسم يساوي تغيّر ماذا فيه؟",
+    "options": [
+      "Kinetic energy",
+      "Mass",
+      "Electric charge",
+      "Colour"
+    ],
+    "options_ar": [
+      "الطاقة الحركية",
+      "الكتلة",
+      "الشحنة الكهربائية",
+      "اللون"
+    ],
+    "correct_answer": "Kinetic energy",
+    "correct_answer_ar": "الطاقة الحركية",
+    "difficulty": 5,
+    "fun_fact": "Push a shopping cart harder over the same distance and it gains more speed — that's the theorem in action.",
+    "fun_fact_ar": "ادفع عربة التسوّق بقوّة أكبر على المسافة نفسها فتكتسب سرعة أعلى، وهذه المبرهنة عملًا.",
+    "category": "Physics — Work and Energy",
+    "category_ar": "فيزياء — الشغل والطاقة"
+  },
+  {
+    "id": "sci_l6_052",
+    "question": "Ohm's law links voltage, current and resistance. Which formula expresses it?",
+    "question_ar": "يربط قانون أوم بين الجهد والتيار والمقاومة. أيّ صيغة تعبّر عنه؟",
+    "options": [
+      "V=IR",
+      "F=ma",
+      "E=mc²",
+      "PV=nRT"
+    ],
+    "options_ar": [
+      "V=IR",
+      "F=ma",
+      "E=mc²",
+      "PV=nRT"
+    ],
+    "correct_answer": "V=IR",
+    "correct_answer_ar": "V=IR",
+    "difficulty": 5,
+    "fun_fact": "Higher resistance, like a thinner wire, slows the current down for the same voltage — like a narrower hose.",
+    "fun_fact_ar": "تبطئ المقاومة العالية، مثل سلك أرقّ، التيارَ عند الجهد نفسه، تمامًا كخرطوم أضيق.",
+    "category": "Physics — Electricity",
+    "category_ar": "فيزياء — الكهرباء"
+  },
+  {
+    "id": "sci_l6_053",
+    "question": "Total internal reflection in fibre-optic cables happens because light hits the boundary at what kind of angle?",
+    "question_ar": "يحدث الانعكاس الكلي الداخلي في الألياف البصرية لأنّ الضوء يصطدم بالحدّ بزاوية من أيّ نوع؟",
+    "options": [
+      "An angle larger than the critical angle",
+      "Exactly zero degrees",
+      "A negative angle",
+      "Any angle at all"
+    ],
+    "options_ar": [
+      "زاوية أكبر من الزاوية الحرجة",
+      "صفر درجة بالضبط",
+      "زاوية سالبة",
+      "أيّ زاوية على الإطلاق"
+    ],
+    "correct_answer": "An angle larger than the critical angle",
+    "correct_answer_ar": "زاوية أكبر من الزاوية الحرجة",
+    "difficulty": 5,
+    "fun_fact": "That's how the internet runs across oceans — light bounces along glass fibres without leaking out.",
+    "fun_fact_ar": "هكذا يعبر الإنترنت المحيطات، إذ يرتدّ الضوء داخل ألياف زجاجية دون أن يتسرّب إلى الخارج.",
+    "category": "Physics — Optics",
+    "category_ar": "فيزياء — البصريات"
+  },
+  {
+    "id": "sci_l6_054",
+    "question": "Why does the night sky look mostly dark even with billions of stars?",
+    "question_ar": "لماذا تبدو السماء ليلًا مظلمة في أغلبها مع وجود مليارات النجوم؟",
+    "options": [
+      "The universe is expanding and finite in age, so distant light hasn't reached us yet",
+      "The Sun absorbs all night light",
+      "Stars only shine during the day",
+      "Earth's atmosphere swallows starlight"
+    ],
+    "options_ar": [
+      "الكون يتمدّد وعمره محدود، فلم يصلنا ضوء النجوم البعيدة بعد",
+      "تمتصّ الشمس كلّ ضوء الليل",
+      "تتلألأ النجوم نهارًا فقط",
+      "يبتلع الغلاف الجوي للأرض ضوء النجوم"
+    ],
+    "correct_answer": "The universe is expanding and finite in age, so distant light hasn't reached us yet",
+    "correct_answer_ar": "الكون يتمدّد وعمره محدود، فلم يصلنا ضوء النجوم البعيدة بعد",
+    "difficulty": 5,
+    "fun_fact": "This puzzle is called Olbers' paradox — the dark night sky is itself evidence that the universe had a beginning.",
+    "fun_fact_ar": "تسمّى هذه الحيرة مفارقة أولبرز، فظلام السماء الليلية دليل بحدّ ذاته على أنّ للكون بداية.",
+    "category": "Earth & Space — Cosmology",
+    "category_ar": "الأرض والفضاء — علم الكون"
+  },
+  {
+    "id": "sci_l6_055",
+    "question": "What surprising thing happens to time, according to Einstein, as you move faster?",
+    "question_ar": "ماذا يحدث للزمن وفقًا لأينشتاين بطريقة مدهشة عندما تتحرّك أسرع؟",
+    "options": [
+      "Time runs slightly slower for you compared to a friend at rest",
+      "Time stops for everyone at once",
+      "Time runs backwards",
+      "Time becomes a smell"
+    ],
+    "options_ar": [
+      "يجري الزمن أبطأ قليلًا لك مقارنةً بصديق ساكن",
+      "يتوقّف الزمن للجميع دفعةً واحدة",
+      "يجري الزمن إلى الخلف",
+      "يصبح الزمن رائحة"
+    ],
+    "correct_answer": "Time runs slightly slower for you compared to a friend at rest",
+    "correct_answer_ar": "يجري الزمن أبطأ قليلًا لك مقارنةً بصديق ساكن",
+    "difficulty": 5,
+    "fun_fact": "GPS satellites have to correct for this tiny time difference — without Einstein's relativity, your map would drift far off.",
+    "fun_fact_ar": "تضبط أقمار GPS هذا الفارق الزمني الضئيل، ولولا نسبية أينشتاين لانحرفت خريطتك بشكل كبير.",
+    "category": "Physics — Relativity",
+    "category_ar": "فيزياء — النسبية"
+  },
+  {
+    "id": "sci_l6_056",
+    "question": "When a bicycle pump heats up as you compress the air, that warmth comes from what?",
+    "question_ar": "حين تسخن مضخّة الدراجة عند ضغطك للهواء، فمن أين تأتي هذه الحرارة؟",
+    "options": [
+      "Work done on the gas turning into thermal energy",
+      "Cold air leaking inwards",
+      "Sunlight focused by the metal",
+      "Friction with sound waves"
+    ],
+    "options_ar": [
+      "تحوّل الشغل المبذول على الغاز إلى طاقة حرارية",
+      "تسرّب هواء بارد إلى الداخل",
+      "تركيز ضوء الشمس بالمعدن",
+      "احتكاك مع موجات الصوت"
+    ],
+    "correct_answer": "Work done on the gas turning into thermal energy",
+    "correct_answer_ar": "تحوّل الشغل المبذول على الغاز إلى طاقة حرارية",
+    "difficulty": 5,
+    "fun_fact": "It's the first law of thermodynamics in your hand: energy doesn't disappear, it just changes outfits.",
+    "fun_fact_ar": "إنّه القانون الأوّل للديناميكا الحرارية بين يديك: الطاقة لا تختفي بل تغيّر شكلها فحسب.",
+    "category": "Physics — Thermodynamics",
+    "category_ar": "فيزياء — الديناميكا الحرارية"
+  },
+  {
+    "id": "sci_l6_057",
+    "question": "What does the famous equation E=mc² tell us?",
+    "question_ar": "ماذا تخبرنا المعادلة الشهيرة E=mc²؟",
+    "options": [
+      "Mass and energy are two forms of the same thing",
+      "Energy is always exactly zero",
+      "Mass is heavier than light by definition",
+      "Speed is the only thing in physics"
+    ],
+    "options_ar": [
+      "الكتلة والطاقة شكلان لشيء واحد",
+      "الطاقة تساوي صفرًا دائمًا",
+      "الكتلة أثقل من الضوء بالتعريف",
+      "السرعة هي الشيء الوحيد في الفيزياء"
+    ],
+    "correct_answer": "Mass and energy are two forms of the same thing",
+    "correct_answer_ar": "الكتلة والطاقة شكلان لشيء واحد",
+    "difficulty": 5,
+    "fun_fact": "Even a tiny pinch of mass can become a huge amount of energy because the speed of light is squared in the formula.",
+    "fun_fact_ar": "قبضة صغيرة جدًا من الكتلة قد تتحوّل إلى طاقة هائلة، لأنّ سرعة الضوء مرفوعة إلى التربيع في الصيغة.",
+    "category": "Physics — Relativity",
+    "category_ar": "فيزياء — النسبية"
+  },
+  {
+    "id": "sci_l6_058",
+    "question": "If a star like our Sun runs out of fuel, what does it most likely become?",
+    "question_ar": "إن نفد وقود نجم مثل شمسنا، فما الذي يصبح عليه على الأرجح؟",
+    "options": [
+      "A white dwarf surrounded by a planetary nebula",
+      "A black hole instantly",
+      "A new red giant forever",
+      "A young blue star"
+    ],
+    "options_ar": [
+      "قزم أبيض محاط بسديم كوكبي",
+      "ثقب أسود فوريًّا",
+      "عملاق أحمر جديد إلى الأبد",
+      "نجم أزرق فتيّ"
+    ],
+    "correct_answer": "A white dwarf surrounded by a planetary nebula",
+    "correct_answer_ar": "قزم أبيض محاط بسديم كوكبي",
+    "difficulty": 5,
+    "fun_fact": "Our Sun has roughly five billion years of fuel left before it puffs off its outer layers and shrinks into a glowing ember.",
+    "fun_fact_ar": "للشمس نحو خمسة مليارات سنة من الوقود قبل أن تنفث طبقاتها الخارجية وتتقلّص إلى جمرة متوهّجة.",
+    "category": "Earth & Space — Stellar Evolution",
+    "category_ar": "الأرض والفضاء — تطوّر النجوم"
+  },
+  {
+    "id": "sci_l6_059",
+    "question": "The amino acid sequence of a protein is encoded in DNA. If a single base mutates, what may happen?",
+    "question_ar": "تُرمَّز سلسلة الأحماض الأمينية للبروتين في الحمض النووي. إن تطفّرت قاعدة واحدة، فماذا قد يحدث؟",
+    "options": [
+      "The protein may fold differently or stop working",
+      "The whole cell instantly disappears",
+      "Gravity in the body reverses",
+      "The cell becomes a magnet"
+    ],
+    "options_ar": [
+      "قد يطوي البروتين بشكل مختلف أو يتوقّف عن العمل",
+      "تختفي الخلية كلّها فورًا",
+      "تنعكس جاذبية الجسم",
+      "تصبح الخلية مغناطيسًا"
+    ],
+    "correct_answer": "The protein may fold differently or stop working",
+    "correct_answer_ar": "قد يطوي البروتين بشكل مختلف أو يتوقّف عن العمل",
+    "difficulty": 5,
+    "fun_fact": "Sickle-cell trait comes from changing just one DNA letter in the haemoglobin gene — a tiny edit, big effect.",
+    "fun_fact_ar": "تأتي صفة الخلية المنجلية من تغيير حرف واحد فقط في جين الهيموغلوبين، تعديل صغير بأثر كبير.",
+    "category": "Biology — Genetics",
+    "category_ar": "أحياء — وراثة"
+  },
+  {
+    "id": "sci_l6_060",
+    "question": "Why do scientists believe most of the universe's energy is 'dark energy'?",
+    "question_ar": "لماذا يعتقد العلماء أنّ معظم طاقة الكون هي «طاقة مظلمة»؟",
+    "options": [
+      "The expansion of the universe is speeding up, not slowing down",
+      "Telescopes have photographed it directly",
+      "It is the colour of midnight",
+      "Astronauts brought back samples"
+    ],
+    "options_ar": [
+      "يتسارع تمدّد الكون بدلًا من أن يتباطأ",
+      "صوّرتها التلسكوبات مباشرةً",
+      "لها لون منتصف الليل",
+      "أحضر روّاد الفضاء عيّنات منها"
+    ],
+    "correct_answer": "The expansion of the universe is speeding up, not slowing down",
+    "correct_answer_ar": "يتسارع تمدّد الكون بدلًا من أن يتباطأ",
+    "difficulty": 5,
+    "fun_fact": "Dark energy is the leading explanation for that surprise acceleration — an invisible push spreading the cosmos outward.",
+    "fun_fact_ar": "الطاقة المظلمة هي التفسير الرائد لهذا التسارع المفاجئ، دفعة غير مرئية تنشر الكون إلى الخارج.",
+    "category": "Earth & Space — Dark Energy",
+    "category_ar": "الأرض والفضاء — الطاقة المظلمة"
+  }
+]

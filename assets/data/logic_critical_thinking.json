@@ -1,0 +1,1562 @@
+[
+  {
+    "id": "lc_001",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 1,
+    "question": "If it rains, the ground gets wet. It is raining. What follows?",
+    "question_ar": "إذا أمطرت، تبتل الأرض. إنها تمطر. ماذا يتبع؟",
+    "options": [
+      "The ground is wet",
+      "The ground is dry",
+      "It will not rain",
+      "The sun is shining"
+    ],
+    "options_ar": [
+      "الأرض مبتلة",
+      "الأرض جافة",
+      "لن تمطر",
+      "الشمس مشرقة"
+    ],
+    "correct_answer": "The ground is wet",
+    "correct_answer_ar": "الأرض مبتلة",
+    "fun_fact": "This is called modus ponens: if P then Q, P, so Q.",
+    "fun_fact_ar": "يسمى هذا قياس الإثبات: إذا كان (ب) فإن (ج)، تحقق (ب)، إذن (ج).",
+    "objective": "Apply modus ponens with an if-then statement.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_002",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 2,
+    "question": "Statement: 'If a shape is a square, it has four sides.' What is the contrapositive?",
+    "question_ar": "العبارة: «إذا كان الشكل مربعاً، فله أربعة أضلاع.» ما هو عكس النقيض؟",
+    "options": [
+      "If a shape does not have four sides, it is not a square",
+      "If a shape has four sides, it is a square",
+      "If a shape is not a square, it does not have four sides",
+      "All four-sided shapes are squares"
+    ],
+    "options_ar": [
+      "إذا لم يكن للشكل أربعة أضلاع، فهو ليس مربعاً",
+      "إذا كان للشكل أربعة أضلاع، فهو مربع",
+      "إذا لم يكن الشكل مربعاً، فليس له أربعة أضلاع",
+      "كل الأشكال ذات الأربعة أضلاع مربعات"
+    ],
+    "correct_answer": "If a shape does not have four sides, it is not a square",
+    "correct_answer_ar": "إذا لم يكن للشكل أربعة أضلاع، فهو ليس مربعاً",
+    "fun_fact": "The contrapositive flips and negates both parts — and is always logically equivalent to the original.",
+    "fun_fact_ar": "عكس النقيض يقلب الطرفين وينفيهما — وهو دائماً مكافئ منطقياً للعبارة الأصلية.",
+    "objective": "Identify the contrapositive of an if-then statement.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_003",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 2,
+    "question": "Statement: 'If you study, you will pass.' What is the inverse?",
+    "question_ar": "العبارة: «إذا درست، ستنجح.» ما هو العكس؟",
+    "options": [
+      "If you do not study, you will not pass",
+      "If you pass, you studied",
+      "If you do not pass, you did not study",
+      "Studying is the only way to pass"
+    ],
+    "options_ar": [
+      "إذا لم تدرس، لن تنجح",
+      "إذا نجحت، فقد درست",
+      "إذا لم تنجح، فلم تدرس",
+      "الدراسة هي الطريقة الوحيدة للنجاح"
+    ],
+    "correct_answer": "If you do not study, you will not pass",
+    "correct_answer_ar": "إذا لم تدرس، لن تنجح",
+    "fun_fact": "The inverse negates both parts but does not flip them. It is NOT logically equivalent to the original.",
+    "fun_fact_ar": "العكس ينفي الطرفين دون قلبهما، وهو ليس مكافئاً منطقياً للأصل.",
+    "objective": "Distinguish the inverse from converse and contrapositive.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_004",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 1,
+    "question": "All birds have feathers. A robin is a bird. Therefore...?",
+    "question_ar": "كل الطيور لها ريش. أبو الحناء طائر. إذن...؟",
+    "options": [
+      "A robin has feathers",
+      "All feathered things are robins",
+      "A robin cannot fly",
+      "Some birds have no feathers"
+    ],
+    "options_ar": [
+      "لأبي الحناء ريش",
+      "كل ذي الريش أبو حناء",
+      "أبو الحناء لا يطير",
+      "بعض الطيور بلا ريش"
+    ],
+    "correct_answer": "A robin has feathers",
+    "correct_answer_ar": "لأبي الحناء ريش",
+    "fun_fact": "This is a classic syllogism: all A are B, X is A, so X is B.",
+    "fun_fact_ar": "هذا قياس منطقي تقليدي: كل (أ) هو (ب)، (س) هو (أ)، إذن (س) هو (ب).",
+    "objective": "Complete a basic categorical syllogism.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_005",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 2,
+    "question": "What is the negation of: 'All dogs bark'?",
+    "question_ar": "ما هو نفي العبارة: «كل الكلاب تنبح»؟",
+    "options": [
+      "Some dogs do not bark",
+      "No dogs bark",
+      "All dogs do not bark",
+      "Some dogs bark"
+    ],
+    "options_ar": [
+      "بعض الكلاب لا تنبح",
+      "لا كلب ينبح",
+      "كل الكلاب لا تنبح",
+      "بعض الكلاب تنبح"
+    ],
+    "correct_answer": "Some dogs do not bark",
+    "correct_answer_ar": "بعض الكلاب لا تنبح",
+    "fun_fact": "To disprove 'all', you only need ONE counter-example — that's why the negation is 'some do not'.",
+    "fun_fact_ar": "لإبطال «الكل» يكفي مثال مضاد واحد — لذا فإن النفي هو «بعض لا».",
+    "objective": "Negate a universal statement correctly.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_006",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 2,
+    "question": "If today is Friday, then tomorrow is Saturday. Tomorrow is NOT Saturday. What follows?",
+    "question_ar": "إذا كان اليوم الجمعة، فإن غداً السبت. غداً ليس السبت. ماذا يتبع؟",
+    "options": [
+      "Today is not Friday",
+      "Today is Friday",
+      "It is the weekend",
+      "Tomorrow is Sunday"
+    ],
+    "options_ar": [
+      "اليوم ليس الجمعة",
+      "اليوم الجمعة",
+      "إنها عطلة نهاية الأسبوع",
+      "غداً الأحد"
+    ],
+    "correct_answer": "Today is not Friday",
+    "correct_answer_ar": "اليوم ليس الجمعة",
+    "fun_fact": "This is modus tollens: if P then Q, not Q, so not P.",
+    "fun_fact_ar": "يسمى هذا قياس الرفع: إذا كان (ب) فإن (ج)، ليس (ج)، إذن ليس (ب).",
+    "objective": "Apply modus tollens (denying the consequent).",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_007",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 3,
+    "question": "Some musicians play piano. All pianists read sheet music. What MUST be true?",
+    "question_ar": "بعض الموسيقيين يعزفون البيانو. كل عازفي البيانو يقرؤون النوتة. ما الذي يجب أن يكون صحيحاً؟",
+    "options": [
+      "Some musicians read sheet music",
+      "All musicians read sheet music",
+      "Only pianists are musicians",
+      "Reading music makes you a musician"
+    ],
+    "options_ar": [
+      "بعض الموسيقيين يقرؤون النوتة",
+      "كل الموسيقيين يقرؤون النوتة",
+      "عازفو البيانو فقط هم الموسيقيون",
+      "قراءة النوتة تجعلك موسيقياً"
+    ],
+    "correct_answer": "Some musicians read sheet music",
+    "correct_answer_ar": "بعض الموسيقيين يقرؤون النوتة",
+    "fun_fact": "Chain the premises: some musicians are pianists, and pianists read music — so some musicians read music.",
+    "fun_fact_ar": "اربط المقدمتين: بعض الموسيقيين عازفو بيانو، وعازفو البيانو يقرؤون النوتة — إذن بعض الموسيقيين يقرؤون النوتة.",
+    "objective": "Chain a particular and universal premise into a valid conclusion.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_008",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 2,
+    "question": "Statement: 'If x is a triangle, x has 3 sides.' Which is the converse?",
+    "question_ar": "العبارة: «إذا كان (س) مثلثاً، فله ثلاثة أضلاع.» ما هو العكس البسيط؟",
+    "options": [
+      "If x has 3 sides, x is a triangle",
+      "If x is not a triangle, x has no 3 sides",
+      "If x has no 3 sides, x is not a triangle",
+      "x is a triangle and has 3 sides"
+    ],
+    "options_ar": [
+      "إذا كان لـ(س) ثلاثة أضلاع، فهو مثلث",
+      "إذا لم يكن (س) مثلثاً، فليس له ثلاثة أضلاع",
+      "إذا لم يكن لـ(س) ثلاثة أضلاع، فهو ليس مثلثاً",
+      "(س) مثلث وله ثلاثة أضلاع"
+    ],
+    "correct_answer": "If x has 3 sides, x is a triangle",
+    "correct_answer_ar": "إذا كان لـ(س) ثلاثة أضلاع، فهو مثلث",
+    "fun_fact": "Here the converse happens to be true, but in general the converse of a true statement is NOT automatically true.",
+    "fun_fact_ar": "هنا العكس صحيح بالصدفة، لكن عكس العبارة الصحيحة ليس بالضرورة صحيحاً دائماً.",
+    "objective": "Identify the converse of an if-then statement.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_009",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 1,
+    "question": "If 'No fish are mammals' is true, which MUST also be true?",
+    "question_ar": "إذا كانت «لا توجد أسماك من الثدييات» صحيحة، فأيها يجب أن يكون صحيحاً أيضاً؟",
+    "options": [
+      "No mammals are fish",
+      "Some fish are mammals",
+      "All mammals are fish",
+      "Only fish are not mammals"
+    ],
+    "options_ar": [
+      "لا توجد ثدييات من الأسماك",
+      "بعض الأسماك ثدييات",
+      "كل الثدييات أسماك",
+      "الأسماك فقط ليست ثدييات"
+    ],
+    "correct_answer": "No mammals are fish",
+    "correct_answer_ar": "لا توجد ثدييات من الأسماك",
+    "fun_fact": "Universal negative statements ('No A are B') are symmetric: they convert without changing meaning.",
+    "fun_fact_ar": "العبارة السالبة الكلية («لا (أ) هو (ب)») متماثلة: يمكن قلبها دون أن يتغير معناها.",
+    "objective": "Recognize valid conversion of a universal negative.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_010",
+    "category": "Logical Reasoning",
+    "category_ar": "التفكير المنطقي",
+    "difficulty": 3,
+    "question": "Premise: 'Whoever lies cannot be trusted.' Sami can be trusted. What follows?",
+    "question_ar": "المقدمة: «كل من يكذب لا يمكن الوثوق به.» سامي يمكن الوثوق به. ماذا يتبع؟",
+    "options": [
+      "Sami does not lie",
+      "Sami lies sometimes",
+      "Some liars can be trusted",
+      "Trust requires honesty proof"
+    ],
+    "options_ar": [
+      "سامي لا يكذب",
+      "سامي يكذب أحياناً",
+      "بعض الكاذبين يمكن الوثوق بهم",
+      "الثقة تتطلب إثبات الصدق"
+    ],
+    "correct_answer": "Sami does not lie",
+    "correct_answer_ar": "سامي لا يكذب",
+    "fun_fact": "Apply the contrapositive: if (lies -> untrustworthy), then (trustworthy -> not lying).",
+    "fun_fact_ar": "طبق عكس النقيض: إذا (يكذب <- غير موثوق)، فإن (موثوق <- لا يكذب).",
+    "objective": "Use the contrapositive to draw a conclusion.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_011",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 1,
+    "question": "'Don't listen to her idea about saving water — she's only ten years old!' This is which fallacy?",
+    "question_ar": "«لا تسمع لفكرتها عن توفير الماء — هي فقط في العاشرة!» ما هي هذه المغالطة؟",
+    "options": [
+      "Ad hominem",
+      "Strawman",
+      "False dilemma",
+      "Slippery slope"
+    ],
+    "options_ar": [
+      "مهاجمة الشخص",
+      "رجل القش",
+      "المعضلة الزائفة",
+      "المنحدر الزلق"
+    ],
+    "correct_answer": "Ad hominem",
+    "correct_answer_ar": "مهاجمة الشخص",
+    "fun_fact": "Ad hominem attacks the person, not the argument. A good idea stands on its own — regardless of who said it.",
+    "fun_fact_ar": "مهاجمة الشخص تهاجم القائل لا الفكرة. الفكرة الجيدة تثبت بنفسها بغضّ النظر عن قائلها.",
+    "objective": "Identify ad hominem (attacking the person).",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_012",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 2,
+    "question": "Ali says 'We should eat less candy.' Lina replies: 'So you want to ban ALL desserts forever?!' This fallacy is...?",
+    "question_ar": "قال علي: «يجب أن نأكل حلوى أقل.» ردّت لينا: «إذن تريد حظر كل الحلويات للأبد؟!» ما هي هذه المغالطة؟",
+    "options": [
+      "Strawman",
+      "Ad hominem",
+      "Appeal to popularity",
+      "Circular reasoning"
+    ],
+    "options_ar": [
+      "رجل القش",
+      "مهاجمة الشخص",
+      "الاحتكام للأغلبية",
+      "المصادرة على المطلوب"
+    ],
+    "correct_answer": "Strawman",
+    "correct_answer_ar": "رجل القش",
+    "fun_fact": "A strawman replaces your real argument with a weaker, easier-to-attack version of it.",
+    "fun_fact_ar": "مغالطة رجل القش تستبدل حجتك الحقيقية بصورة أضعف منها يسهل مهاجمتها.",
+    "objective": "Identify the strawman fallacy.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_013",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 1,
+    "question": "'You either love football, or you don't love sports at all.' Which fallacy?",
+    "question_ar": "«إما أن تحب كرة القدم، وإما أنك لا تحب الرياضة إطلاقاً.» ما المغالطة؟",
+    "options": [
+      "False dilemma",
+      "Slippery slope",
+      "Ad hominem",
+      "Hasty generalization"
+    ],
+    "options_ar": [
+      "المعضلة الزائفة",
+      "المنحدر الزلق",
+      "مهاجمة الشخص",
+      "التعميم المتسرع"
+    ],
+    "correct_answer": "False dilemma",
+    "correct_answer_ar": "المعضلة الزائفة",
+    "fun_fact": "False dilemma pretends there are only two options when in reality there are many — like swimming, running, judo, and more.",
+    "fun_fact_ar": "المعضلة الزائفة تتظاهر بأن الخيارات اثنان فقط، بينما في الواقع خيارات كثيرة كالسباحة والجري والجودو وغيرها.",
+    "objective": "Identify a false dilemma (false either/or).",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_014",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 2,
+    "question": "'If we let kids stay up 10 minutes later, soon they'll never sleep, then they'll fail school, then ruin their lives!' Which fallacy?",
+    "question_ar": "«إذا سمحنا للأطفال بالسهر عشر دقائق إضافية، فلن يناموا أبداً، ثم سيرسبون، ثم تدمَّر حياتهم!» ما المغالطة؟",
+    "options": [
+      "Slippery slope",
+      "Strawman",
+      "False cause",
+      "Appeal to popularity"
+    ],
+    "options_ar": [
+      "المنحدر الزلق",
+      "رجل القش",
+      "السبب الزائف",
+      "الاحتكام للأغلبية"
+    ],
+    "correct_answer": "Slippery slope",
+    "correct_answer_ar": "المنحدر الزلق",
+    "fun_fact": "Slippery slope claims one small step inevitably leads to disaster — without proof of each link in the chain.",
+    "fun_fact_ar": "المنحدر الزلق يدّعي أن خطوة صغيرة تؤدي حتماً إلى كارثة — دون إثبات كل حلقة في السلسلة.",
+    "objective": "Identify the slippery slope fallacy.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_015",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 1,
+    "question": "'Everyone in our class likes this game, so it must be the best game ever.' Which fallacy?",
+    "question_ar": "«كل من في فصلنا يحب هذه اللعبة، إذن هي أفضل لعبة على الإطلاق.» ما المغالطة؟",
+    "options": [
+      "Appeal to popularity",
+      "Circular reasoning",
+      "Ad hominem",
+      "False dilemma"
+    ],
+    "options_ar": [
+      "الاحتكام للأغلبية",
+      "المصادرة على المطلوب",
+      "مهاجمة الشخص",
+      "المعضلة الزائفة"
+    ],
+    "correct_answer": "Appeal to popularity",
+    "correct_answer_ar": "الاحتكام للأغلبية",
+    "fun_fact": "Just because many people believe something doesn't make it true — people once believed the Earth was flat!",
+    "fun_fact_ar": "كثرة المؤمنين بشيء لا تجعله صحيحاً — اعتقد الناس يوماً أن الأرض مسطحة!",
+    "objective": "Identify the appeal to popularity (bandwagon).",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_016",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 2,
+    "question": "'I met two rude tourists from that country, so people there are all rude.' Which fallacy?",
+    "question_ar": "«قابلت سائحَين فظَّين من تلك الدولة، إذن كل أهلها فظون.» ما المغالطة؟",
+    "options": [
+      "Hasty generalization",
+      "False cause",
+      "Slippery slope",
+      "Strawman"
+    ],
+    "options_ar": [
+      "التعميم المتسرع",
+      "السبب الزائف",
+      "المنحدر الزلق",
+      "رجل القش"
+    ],
+    "correct_answer": "Hasty generalization",
+    "correct_answer_ar": "التعميم المتسرع",
+    "fun_fact": "Two examples is far too small a sample to judge millions of people. Good thinkers wait for solid evidence.",
+    "fun_fact_ar": "مثالان لا يكفيان للحكم على ملايين الناس. المفكر الجيد ينتظر دليلاً كافياً.",
+    "objective": "Identify hasty generalization from a small sample.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_017",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 3,
+    "question": "'This book is the best because it says so on the cover, and we know it's the best.' Which fallacy?",
+    "question_ar": "«هذا الكتاب الأفضل لأن غلافه يقول ذلك، ونحن نعلم أنه الأفضل.» ما المغالطة؟",
+    "options": [
+      "Circular reasoning",
+      "Appeal to popularity",
+      "False dilemma",
+      "Ad hominem"
+    ],
+    "options_ar": [
+      "المصادرة على المطلوب",
+      "الاحتكام للأغلبية",
+      "المعضلة الزائفة",
+      "مهاجمة الشخص"
+    ],
+    "correct_answer": "Circular reasoning",
+    "correct_answer_ar": "المصادرة على المطلوب",
+    "fun_fact": "Circular reasoning uses the conclusion as its own evidence. It just goes in circles without proving anything.",
+    "fun_fact_ar": "المصادرة على المطلوب تستخدم النتيجة دليلاً على نفسها، فتدور في حلقة دون أن تثبت شيئاً.",
+    "objective": "Identify circular reasoning (begging the question).",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_018",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 2,
+    "question": "'I wore my lucky socks and my team won — the socks must have caused the win!' Which fallacy?",
+    "question_ar": "«لبست جواربي المحظوظة وفاز فريقي — لا بد أن الجوارب هي سبب الفوز!» ما المغالطة؟",
+    "options": [
+      "False cause",
+      "Strawman",
+      "Hasty generalization",
+      "Appeal to popularity"
+    ],
+    "options_ar": [
+      "السبب الزائف",
+      "رجل القش",
+      "التعميم المتسرع",
+      "الاحتكام للأغلبية"
+    ],
+    "correct_answer": "False cause",
+    "correct_answer_ar": "السبب الزائف",
+    "fun_fact": "Two events happening together does not mean one caused the other. Correlation is not causation.",
+    "fun_fact_ar": "تَزامن حدثين لا يعني أن أحدهما سبب الآخر. الارتباط ليس سببية.",
+    "objective": "Distinguish correlation from causation (false cause).",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_019",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 2,
+    "question": "Which question helps you SPOT a fallacy in an argument?",
+    "question_ar": "أي سؤال يساعدك على اكتشاف مغالطة في حجة ما؟",
+    "options": [
+      "Does the conclusion really follow from the evidence?",
+      "Does it sound confident?",
+      "Do many people agree?",
+      "Is the speaker famous?"
+    ],
+    "options_ar": [
+      "هل النتيجة تتبع فعلاً من الدليل؟",
+      "هل تبدو واثقة؟",
+      "هل يوافق كثيرون؟",
+      "هل المتحدث مشهور؟"
+    ],
+    "correct_answer": "Does the conclusion really follow from the evidence?",
+    "correct_answer_ar": "هل النتيجة تتبع فعلاً من الدليل؟",
+    "fun_fact": "Critical thinkers ask whether the evidence actually supports the conclusion — not how confident or popular it sounds.",
+    "fun_fact_ar": "المفكر الناقد يسأل إن كان الدليل فعلاً يدعم النتيجة، لا عن مدى الثقة أو الشهرة في طرحها.",
+    "objective": "Apply a question to detect logical fallacies.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_020",
+    "category": "Common Fallacies",
+    "category_ar": "المغالطات الشائعة",
+    "difficulty": 3,
+    "question": "'You can't trust the doctor's advice because she got a parking ticket once.' Which fallacy?",
+    "question_ar": "«لا يمكنك الثقة بنصيحة الطبيبة لأنها حصلت على مخالفة وقوف مرة.» ما المغالطة؟",
+    "options": [
+      "Ad hominem",
+      "Slippery slope",
+      "False dilemma",
+      "Circular reasoning"
+    ],
+    "options_ar": [
+      "مهاجمة الشخص",
+      "المنحدر الزلق",
+      "المعضلة الزائفة",
+      "المصادرة على المطلوب"
+    ],
+    "correct_answer": "Ad hominem",
+    "correct_answer_ar": "مهاجمة الشخص",
+    "fun_fact": "An unrelated personal flaw doesn't make a doctor's medical advice wrong. Judge the claim on its merits.",
+    "fun_fact_ar": "خطأ شخصي لا علاقة له بالموضوع لا يجعل نصيحة الطبيبة خاطئة. احكم على الفكرة بذاتها.",
+    "objective": "Recognize ad hominem with irrelevant personal attack.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_021",
+    "category": "Truth Tables Basics",
+    "category_ar": "أساسيات جداول الصدق",
+    "difficulty": 1,
+    "question": "In logic, 'A AND B' is true only when...?",
+    "question_ar": "في المنطق، عبارة «(أ) و(ب)» تكون صحيحة فقط عندما...؟",
+    "options": [
+      "Both A and B are true",
+      "At least one of A or B is true",
+      "Only A is true",
+      "Both are false"
+    ],
+    "options_ar": [
+      "(أ) و(ب) كلاهما صحيح",
+      "واحد منهما على الأقل صحيح",
+      "(أ) فقط صحيح",
+      "كلاهما خاطئ"
+    ],
+    "correct_answer": "Both A and B are true",
+    "correct_answer_ar": "(أ) و(ب) كلاهما صحيح",
+    "fun_fact": "AND is strict — every part must be true. 'I have a pencil AND paper' fails if either is missing.",
+    "fun_fact_ar": "العطف (و) صارم — يجب صحّة كل طرف. عبارة «معي قلم وورقة» تفشل إذا غاب أحدهما.",
+    "objective": "Apply the truth condition for logical AND.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_022",
+    "category": "Truth Tables Basics",
+    "category_ar": "أساسيات جداول الصدق",
+    "difficulty": 1,
+    "question": "'A OR B' (inclusive OR) is true when...?",
+    "question_ar": "العبارة «(أ) أو (ب)» (الأو الشاملة) صحيحة عندما...؟",
+    "options": [
+      "At least one of A or B is true",
+      "Both must be true",
+      "Both must be false",
+      "Exactly one is true"
+    ],
+    "options_ar": [
+      "واحد منهما على الأقل صحيح",
+      "يجب أن يكون كلاهما صحيحاً",
+      "يجب أن يكون كلاهما خاطئاً",
+      "واحد فقط منهما صحيح"
+    ],
+    "correct_answer": "At least one of A or B is true",
+    "correct_answer_ar": "واحد منهما على الأقل صحيح",
+    "fun_fact": "Inclusive OR means at least one — or both. Like saying 'we'll bring juice OR water' — both is fine.",
+    "fun_fact_ar": "الأو الشاملة تعني واحداً على الأقل — أو كليهما. كقولك «سنحضر عصيراً أو ماءً» — وكليهما مقبول.",
+    "objective": "Apply the truth condition for inclusive OR.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_023",
+    "category": "Truth Tables Basics",
+    "category_ar": "أساسيات جداول الصدق",
+    "difficulty": 1,
+    "question": "If A is TRUE, what is 'NOT A'?",
+    "question_ar": "إذا كانت (أ) صحيحة، فما قيمة «نفي (أ)»؟",
+    "options": [
+      "False",
+      "True",
+      "Unknown",
+      "Both true and false"
+    ],
+    "options_ar": [
+      "خاطئة",
+      "صحيحة",
+      "مجهولة",
+      "صحيحة وخاطئة"
+    ],
+    "correct_answer": "False",
+    "correct_answer_ar": "خاطئة",
+    "fun_fact": "NOT simply flips the truth value. NOT(true) becomes false; NOT(false) becomes true.",
+    "fun_fact_ar": "النفي يقلب القيمة فقط. نفي الصواب يصير خطأً، ونفي الخطأ يصير صواباً.",
+    "objective": "Apply the truth condition for NOT.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_024",
+    "category": "Truth Tables Basics",
+    "category_ar": "أساسيات جداول الصدق",
+    "difficulty": 2,
+    "question": "'A XOR B' (exclusive OR) is true when...?",
+    "question_ar": "العبارة «(أ) أو الحصرية (ب)» صحيحة عندما...؟",
+    "options": [
+      "Exactly one of A or B is true",
+      "Both are true",
+      "Both are false",
+      "At least one is true"
+    ],
+    "options_ar": [
+      "واحد فقط منهما صحيح",
+      "كلاهما صحيح",
+      "كلاهما خاطئ",
+      "واحد على الأقل صحيح"
+    ],
+    "correct_answer": "Exactly one of A or B is true",
+    "correct_answer_ar": "واحد فقط منهما صحيح",
+    "fun_fact": "Exclusive OR means 'one or the other, but NOT both'. Like 'You can have cake XOR ice cream' — pick one only.",
+    "fun_fact_ar": "الأو الحصرية تعني «هذا أو ذاك، وليس كليهما». كأن تقول «لك كعكة أو آيس كريم» — اختر واحداً فقط.",
+    "objective": "Apply the truth condition for XOR.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_025",
+    "category": "Truth Tables Basics",
+    "category_ar": "أساسيات جداول الصدق",
+    "difficulty": 2,
+    "question": "If A = TRUE and B = FALSE, what is (A AND B)?",
+    "question_ar": "إذا كانت (أ) صحيحة و(ب) خاطئة، فما قيمة «(أ) و(ب)»؟",
+    "options": [
+      "False",
+      "True",
+      "Both",
+      "Cannot tell"
+    ],
+    "options_ar": [
+      "خاطئة",
+      "صحيحة",
+      "كلاهما",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "False",
+    "correct_answer_ar": "خاطئة",
+    "fun_fact": "AND requires every input to be true. One false input makes the whole AND false.",
+    "fun_fact_ar": "العطف يتطلب صدق كل المُدخلات. مُدخل واحد خاطئ يجعل العطف بأكمله خاطئاً.",
+    "objective": "Evaluate AND with mixed truth values.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_026",
+    "category": "Truth Tables Basics",
+    "category_ar": "أساسيات جداول الصدق",
+    "difficulty": 3,
+    "question": "If A = FALSE and B = TRUE, what is NOT(A OR B)?",
+    "question_ar": "إذا كانت (أ) خاطئة و(ب) صحيحة، فما قيمة «نفي ((أ) أو (ب))»؟",
+    "options": [
+      "False",
+      "True",
+      "Unknown",
+      "Same as A"
+    ],
+    "options_ar": [
+      "خاطئة",
+      "صحيحة",
+      "مجهولة",
+      "نفس قيمة (أ)"
+    ],
+    "correct_answer": "False",
+    "correct_answer_ar": "خاطئة",
+    "fun_fact": "First evaluate inside: A OR B = true. Then negate: NOT true = false. Order of operations matters.",
+    "fun_fact_ar": "احسب الداخل أولاً: (أ) أو (ب) = صحيحة. ثم انفِها: نفي الصحيح = خطأ. ترتيب العمليات مهم.",
+    "objective": "Evaluate a compound expression with NOT and OR.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_027",
+    "category": "Set Theory",
+    "category_ar": "نظرية المجموعات",
+    "difficulty": 1,
+    "question": "What is the INTERSECTION of {1, 2, 3} and {2, 3, 4}?",
+    "question_ar": "ما هو تقاطع المجموعتين {١، ٢، ٣} و{٢، ٣، ٤}؟",
+    "options": [
+      "{2, 3}",
+      "{1, 2, 3, 4}",
+      "{1, 4}",
+      "{ }"
+    ],
+    "options_ar": [
+      "{٢، ٣}",
+      "{١، ٢، ٣، ٤}",
+      "{١، ٤}",
+      "{ }"
+    ],
+    "correct_answer": "{2, 3}",
+    "correct_answer_ar": "{٢، ٣}",
+    "fun_fact": "Intersection means elements in BOTH sets — like the overlap in a Venn diagram.",
+    "fun_fact_ar": "التقاطع يعني العناصر الموجودة في المجموعتين معاً — كمنطقة التداخل في مخطط فِن.",
+    "objective": "Compute the intersection of two finite sets.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_028",
+    "category": "Set Theory",
+    "category_ar": "نظرية المجموعات",
+    "difficulty": 1,
+    "question": "What is the UNION of {a, b} and {b, c}?",
+    "question_ar": "ما هو اتحاد المجموعتين {أ، ب} و{ب، ج}؟",
+    "options": [
+      "{a, b, c}",
+      "{b}",
+      "{a, c}",
+      "{a, b, b, c}"
+    ],
+    "options_ar": [
+      "{أ، ب، ج}",
+      "{ب}",
+      "{أ، ج}",
+      "{أ، ب، ب، ج}"
+    ],
+    "correct_answer": "{a, b, c}",
+    "correct_answer_ar": "{أ، ب، ج}",
+    "fun_fact": "Union combines all unique elements from both sets. Duplicates are counted only once.",
+    "fun_fact_ar": "الاتحاد يجمع كل العناصر الفريدة من المجموعتين. العنصر المتكرر يُحسب مرة واحدة فقط.",
+    "objective": "Compute the union of two finite sets.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_029",
+    "category": "Set Theory",
+    "category_ar": "نظرية المجموعات",
+    "difficulty": 2,
+    "question": "Set A = {students who play football}. Set B = {students who play chess}. The middle of the Venn diagram represents...?",
+    "question_ar": "المجموعة (أ) = {الطلاب الذين يلعبون كرة قدم}. المجموعة (ب) = {الطلاب الذين يلعبون شطرنج}. منتصف مخطط فِن يمثل...؟",
+    "options": [
+      "Students who play BOTH football and chess",
+      "Students who play only football",
+      "Students who play only chess",
+      "Students who play neither"
+    ],
+    "options_ar": [
+      "الطلاب الذين يلعبون كرة قدم وشطرنج معاً",
+      "الذين يلعبون كرة قدم فقط",
+      "الذين يلعبون شطرنج فقط",
+      "الذين لا يلعبون أيّاً منهما"
+    ],
+    "correct_answer": "Students who play BOTH football and chess",
+    "correct_answer_ar": "الطلاب الذين يلعبون كرة قدم وشطرنج معاً",
+    "fun_fact": "The center overlap of a Venn diagram = the intersection = members shared by both groups.",
+    "fun_fact_ar": "منطقة التداخل المركزية في مخطط فِن = التقاطع = الأعضاء المشتركون بين المجموعتين.",
+    "objective": "Interpret the overlap region of a Venn diagram.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_030",
+    "category": "Set Theory",
+    "category_ar": "نظرية المجموعات",
+    "difficulty": 2,
+    "question": "Is {2, 4} a SUBSET of {1, 2, 3, 4, 5}?",
+    "question_ar": "هل {٢، ٤} مجموعة جزئية من {١، ٢، ٣، ٤، ٥}؟",
+    "options": [
+      "Yes — every element of the first is in the second",
+      "No — they are different sets",
+      "Only if we add more elements",
+      "Subsets must be equal"
+    ],
+    "options_ar": [
+      "نعم — كل عنصر من الأولى موجود في الثانية",
+      "لا — هما مجموعتان مختلفتان",
+      "فقط إذا أضفنا عناصر أكثر",
+      "يجب أن تتساوى المجموعات الجزئية"
+    ],
+    "correct_answer": "Yes — every element of the first is in the second",
+    "correct_answer_ar": "نعم — كل عنصر من الأولى موجود في الثانية",
+    "fun_fact": "A subset just needs every one of its elements to also be in the larger set — they don't have to be equal.",
+    "fun_fact_ar": "المجموعة الجزئية تكفي بأن تكون كل عناصرها داخل المجموعة الأكبر، دون اشتراط التساوي.",
+    "objective": "Recognize a subset relationship.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_031",
+    "category": "Set Theory",
+    "category_ar": "نظرية المجموعات",
+    "difficulty": 3,
+    "question": "20 kids like pizza, 15 like burgers, 8 like BOTH. How many like pizza OR burgers?",
+    "question_ar": "٢٠ طفلاً يحبون البيتزا، ١٥ يحبون البرغر، ٨ يحبون الاثنين. كم طفلاً يحب البيتزا أو البرغر؟",
+    "options": [
+      "27",
+      "35",
+      "23",
+      "43"
+    ],
+    "options_ar": [
+      "٢٧",
+      "٣٥",
+      "٢٣",
+      "٤٣"
+    ],
+    "correct_answer": "27",
+    "correct_answer_ar": "٢٧",
+    "fun_fact": "Use the inclusion-exclusion rule: |A  union  B| = |A| + |B| − |A  intersection  B| = 20 + 15 − 8 = 27.",
+    "fun_fact_ar": "استخدم قاعدة الشمول والاستبعاد: |أ  union  ب| = |أ| + |ب| − |أ  intersection  ب| = ٢٠ + ١٥ − ٨ = ٢٧.",
+    "objective": "Apply inclusion-exclusion to count a union.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_032",
+    "category": "Set Theory",
+    "category_ar": "نظرية المجموعات",
+    "difficulty": 1,
+    "question": "Two sets have NO elements in common. Their intersection is...?",
+    "question_ar": "مجموعتان لا تشتركان في أي عنصر. تقاطعهما هو...؟",
+    "options": [
+      "The empty set { }",
+      "Their union",
+      "Equal to the larger set",
+      "Always one element"
+    ],
+    "options_ar": [
+      "المجموعة الخالية { }",
+      "اتحادهما",
+      "المجموعة الأكبر",
+      "عنصر واحد دائماً"
+    ],
+    "correct_answer": "The empty set { }",
+    "correct_answer_ar": "المجموعة الخالية { }",
+    "fun_fact": "When two sets share nothing, we call them 'disjoint' and their intersection is the empty set.",
+    "fun_fact_ar": "إذا لم تشترك المجموعتان في عنصر، تسميان «منفصلتين»، وتقاطعهما هو المجموعة الخالية.",
+    "objective": "Identify disjoint sets and the empty intersection.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_033",
+    "category": "Probability & Reasoning",
+    "category_ar": "الاحتمالات والاستدلال",
+    "difficulty": 1,
+    "question": "You flip a fair coin. The chance of HEADS is...?",
+    "question_ar": "ترمي عملة عادلة. احتمال ظهور الصورة هو...؟",
+    "options": [
+      "About 50%",
+      "100%",
+      "0%",
+      "75%"
+    ],
+    "options_ar": [
+      "نحو ٥٠٪",
+      "١٠٠٪",
+      "٠٪",
+      "٧٥٪"
+    ],
+    "correct_answer": "About 50%",
+    "correct_answer_ar": "نحو ٥٠٪",
+    "fun_fact": "A fair coin has 2 equally likely sides, so each is 1 out of 2 = 50%.",
+    "fun_fact_ar": "العملة العادلة لها وجهان متساويا الاحتمال، فاحتمال كل وجه واحد من اثنين = ٥٠٪.",
+    "objective": "Compute probability of a fair coin flip.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_034",
+    "category": "Probability & Reasoning",
+    "category_ar": "الاحتمالات والاستدلال",
+    "difficulty": 2,
+    "question": "You flip heads twice in a row. What is the probability of heads on the NEXT flip?",
+    "question_ar": "ظهرت الصورة مرتين متتاليتين. ما احتمال ظهور الصورة في الرمية التالية؟",
+    "options": [
+      "Still 50% — flips are independent",
+      "Higher than 50% because of streak",
+      "Lower than 50% — must even out",
+      "Cannot be calculated"
+    ],
+    "options_ar": [
+      "لا يزال ٥٠٪ — الرميات مستقلة",
+      "أعلى من ٥٠٪ بسبب التتابع",
+      "أقل من ٥٠٪ لتعديل الميزان",
+      "لا يمكن حسابه"
+    ],
+    "correct_answer": "Still 50% — flips are independent",
+    "correct_answer_ar": "لا يزال ٥٠٪ — الرميات مستقلة",
+    "fun_fact": "The coin has no memory! This is called the 'Gambler's Fallacy' — believing past flips change future ones.",
+    "fun_fact_ar": "العملة بلا ذاكرة! يُسمى هذا «مغالطة المُقامِر» — الاعتقاد بأن الرميات السابقة تؤثر في القادمة.",
+    "objective": "Apply independence of repeated trials.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_035",
+    "category": "Probability & Reasoning",
+    "category_ar": "الاحتمالات والاستدلال",
+    "difficulty": 1,
+    "question": "Which event is IMPOSSIBLE?",
+    "question_ar": "أيّ حدث هو مستحيل؟",
+    "options": [
+      "Rolling a 7 on a normal 6-sided die",
+      "Rolling a 3 on a normal 6-sided die",
+      "Rolling an even number",
+      "Rolling a number less than 7"
+    ],
+    "options_ar": [
+      "الحصول على ٧ بنرد عادي ذي ٦ أوجه",
+      "الحصول على ٣ بنرد عادي ذي ٦ أوجه",
+      "الحصول على عدد زوجي",
+      "الحصول على عدد أقل من ٧"
+    ],
+    "correct_answer": "Rolling a 7 on a normal 6-sided die",
+    "correct_answer_ar": "الحصول على ٧ بنرد عادي ذي ٦ أوجه",
+    "fun_fact": "An impossible event has probability 0. A certain event has probability 1.",
+    "fun_fact_ar": "الحدث المستحيل احتماله صفر. الحدث المؤكد احتماله واحد.",
+    "objective": "Identify an impossible event.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_036",
+    "category": "Probability & Reasoning",
+    "category_ar": "الاحتمالات والاستدلال",
+    "difficulty": 2,
+    "question": "A bag has 8 red and 2 blue marbles. Drawing red is...?",
+    "question_ar": "كيس فيه ٨ كرات حمراء و٢ زرقاء. سحب الحمراء...؟",
+    "options": [
+      "Likely",
+      "Certain",
+      "Impossible",
+      "Unlikely"
+    ],
+    "options_ar": [
+      "مرجَّح",
+      "مؤكد",
+      "مستحيل",
+      "غير مرجَّح"
+    ],
+    "correct_answer": "Likely",
+    "correct_answer_ar": "مرجَّح",
+    "fun_fact": "8 out of 10 means 80% — likely, but not certain. There's still a 20% chance of blue.",
+    "fun_fact_ar": "٨ من ١٠ يعني ٨٠٪ — مرجَّح، لكنه ليس مؤكداً. لا يزال هناك ٢٠٪ احتمال للزرقاء.",
+    "objective": "Classify event likelihood from counts.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_037",
+    "category": "Probability & Reasoning",
+    "category_ar": "الاحتمالات والاستدلال",
+    "difficulty": 3,
+    "question": "A game: win 10 dinars 1 time in 5, otherwise win 0. What is your expected win per play?",
+    "question_ar": "لعبة: تربح ١٠ دنانير مرة في كل ٥ محاولات، وإلا فلا شيء. ما متوسط ربحك في كل محاولة؟",
+    "options": [
+      "2 dinars",
+      "10 dinars",
+      "5 dinars",
+      "0 dinars"
+    ],
+    "options_ar": [
+      "٢ دينار",
+      "١٠ دنانير",
+      "٥ دنانير",
+      "٠ دينار"
+    ],
+    "correct_answer": "2 dinars",
+    "correct_answer_ar": "٢ دينار",
+    "fun_fact": "Expected value = (probability × payoff). 1/5 × 10 = 2 dinars on average per play.",
+    "fun_fact_ar": "القيمة المتوقعة = الاحتمال × المكسب. ١/٥ × ١٠ = ٢ دينار في المتوسط لكل محاولة.",
+    "objective": "Calculate simple expected value.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_038",
+    "category": "Probability & Reasoning",
+    "category_ar": "الاحتمالات والاستدلال",
+    "difficulty": 2,
+    "question": "Tomorrow the sun will rise. This event is...?",
+    "question_ar": "ستشرق الشمس غداً. هذا الحدث...؟",
+    "options": [
+      "Certain",
+      "Likely",
+      "Unlikely",
+      "Impossible"
+    ],
+    "options_ar": [
+      "مؤكد",
+      "مرجَّح",
+      "غير مرجَّح",
+      "مستحيل"
+    ],
+    "correct_answer": "Certain",
+    "correct_answer_ar": "مؤكد",
+    "fun_fact": "Some events are practically certain because they happen by natural law every day.",
+    "fun_fact_ar": "بعض الأحداث شبه مؤكدة لأنها تتكرر بسنّة الكون كل يوم.",
+    "objective": "Classify a near-certain event.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_039",
+    "category": "Critical Reading",
+    "category_ar": "القراءة الناقدة",
+    "difficulty": 1,
+    "question": "When reading an article, the MAIN IDEA is...?",
+    "question_ar": "عند قراءة مقال، الفكرة الرئيسية هي...؟",
+    "options": [
+      "The most important point the author makes",
+      "The first sentence",
+      "Any colorful detail",
+      "The longest paragraph"
+    ],
+    "options_ar": [
+      "أهم نقطة يطرحها الكاتب",
+      "الجملة الأولى",
+      "أي تفصيل جذّاب",
+      "أطول فقرة"
+    ],
+    "correct_answer": "The most important point the author makes",
+    "correct_answer_ar": "أهم نقطة يطرحها الكاتب",
+    "fun_fact": "The main idea is what the whole text is really about — usually supported by everything else.",
+    "fun_fact_ar": "الفكرة الرئيسية هي ما يدور حوله النص فعلاً — وكل ما سواها يدعمها عادةً.",
+    "objective": "Define the main idea of a text.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_040",
+    "category": "Critical Reading",
+    "category_ar": "القراءة الناقدة",
+    "difficulty": 1,
+    "question": "Which is a FACT, not an opinion?",
+    "question_ar": "أيها حقيقة وليست رأياً؟",
+    "options": [
+      "Water boils at 100 degrees Celsius at sea level",
+      "Chocolate is the best flavor",
+      "Summer is the most fun season",
+      "Cats are cuter than dogs"
+    ],
+    "options_ar": [
+      "الماء يغلي عند ١٠٠ درجة مئوية عند مستوى سطح البحر",
+      "الشوكولاتة أفضل نكهة",
+      "الصيف أمتع الفصول",
+      "القطط أجمل من الكلاب"
+    ],
+    "correct_answer": "Water boils at 100 degrees Celsius at sea level",
+    "correct_answer_ar": "الماء يغلي عند ١٠٠ درجة مئوية عند مستوى سطح البحر",
+    "fun_fact": "Facts can be checked and proven. Opinions describe what someone thinks, feels, or prefers.",
+    "fun_fact_ar": "الحقائق يمكن التحقق منها وإثباتها. الآراء تعبّر عن رأي شخص ما أو شعوره أو تفضيله.",
+    "objective": "Distinguish fact from opinion.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_041",
+    "category": "Critical Reading",
+    "category_ar": "القراءة الناقدة",
+    "difficulty": 2,
+    "question": "An author writes a piece to convince you to recycle more. The author's PURPOSE is to...?",
+    "question_ar": "يكتب كاتب نصاً ليقنعك بإعادة التدوير أكثر. غرض الكاتب هو...؟",
+    "options": [
+      "Persuade",
+      "Entertain",
+      "Tell a joke",
+      "Sell candy"
+    ],
+    "options_ar": [
+      "إقناع",
+      "تسلية",
+      "إلقاء نكتة",
+      "بيع حلوى"
+    ],
+    "correct_answer": "Persuade",
+    "correct_answer_ar": "إقناع",
+    "fun_fact": "Authors often write to inform, entertain, persuade, or describe — knowing the purpose helps you read smarter.",
+    "fun_fact_ar": "يكتب المؤلفون عادةً للإخبار أو التسلية أو الإقناع أو الوصف — ومعرفة الغرض تجعل قراءتك أذكى.",
+    "objective": "Identify the author's purpose.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_042",
+    "category": "Critical Reading",
+    "category_ar": "القراءة الناقدة",
+    "difficulty": 2,
+    "question": "Claim: 'Reading helps the brain grow.' Which is the BEST supporting evidence?",
+    "question_ar": "ادعاء: «القراءة تنمّي الدماغ.» أيها أفضل دليل داعم؟",
+    "options": [
+      "A study scanning brains of regular readers vs non-readers",
+      "My grandmother says so",
+      "Books look nice on shelves",
+      "Reading takes a long time"
+    ],
+    "options_ar": [
+      "دراسة تفحص أدمغة قارئين منتظمين مقابل غير قارئين",
+      "جدّتي تقول ذلك",
+      "الكتب تبدو جميلة على الرفوف",
+      "القراءة تستغرق وقتاً طويلاً"
+    ],
+    "correct_answer": "A study scanning brains of regular readers vs non-readers",
+    "correct_answer_ar": "دراسة تفحص أدمغة قارئين منتظمين مقابل غير قارئين",
+    "fun_fact": "Strong evidence is testable, comparable, and based on observation — not personal preference.",
+    "fun_fact_ar": "الدليل القوي قابل للاختبار والمقارنة ومبني على ملاحظة — لا على تفضيل شخصي.",
+    "objective": "Choose the strongest supporting evidence.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_043",
+    "category": "Critical Reading",
+    "category_ar": "القراءة الناقدة",
+    "difficulty": 2,
+    "question": "Which sentence is an OPINION?",
+    "question_ar": "أيّ جملة تعبّر عن رأي؟",
+    "options": [
+      "Football is more exciting than chess",
+      "A football match has two halves",
+      "Chess uses 64 squares",
+      "The 2022 World Cup was held in Qatar"
+    ],
+    "options_ar": [
+      "كرة القدم أمتع من الشطرنج",
+      "مباراة كرة القدم لها شوطان",
+      "الشطرنج يستخدم ٦٤ مربعاً",
+      "أُقيم كأس العالم ٢٠٢٢ في قطر"
+    ],
+    "correct_answer": "Football is more exciting than chess",
+    "correct_answer_ar": "كرة القدم أمتع من الشطرنج",
+    "fun_fact": "Words like 'best', 'most exciting', 'cutest' usually signal an opinion, not a fact.",
+    "fun_fact_ar": "كلمات مثل «الأفضل» و«الأمتع» و«الأجمل» تدل عادةً على رأي لا على حقيقة.",
+    "objective": "Identify opinion-signal language.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_044",
+    "category": "Critical Reading",
+    "category_ar": "القراءة الناقدة",
+    "difficulty": 3,
+    "question": "A passage describes lions hunting. The author writes 'the magnificent kings of the savanna'. This phrase shows...?",
+    "question_ar": "نصّ يصف صيد الأسود، ويكتب المؤلف «ملوك السافانا المهيبون». هذه العبارة تُظهر...؟",
+    "options": [
+      "The author's positive viewpoint",
+      "A neutral fact",
+      "A scientific measurement",
+      "A direct quote from a lion"
+    ],
+    "options_ar": [
+      "وجهة نظر إيجابية للمؤلف",
+      "حقيقة محايدة",
+      "قياساً علمياً",
+      "اقتباساً مباشراً من أسد"
+    ],
+    "correct_answer": "The author's positive viewpoint",
+    "correct_answer_ar": "وجهة نظر إيجابية للمؤلف",
+    "fun_fact": "Word choice reveals tone. 'Magnificent kings' shows admiration, not just neutral information.",
+    "fun_fact_ar": "اختيار الكلمات يكشف النبرة. «الملوك المهيبون» تُظهر إعجاباً، لا مجرد معلومة محايدة.",
+    "objective": "Detect author tone via word choice.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_045",
+    "category": "Critical Reading",
+    "category_ar": "القراءة الناقدة",
+    "difficulty": 1,
+    "question": "Before believing a strong claim, a critical reader should...?",
+    "question_ar": "قبل تصديق ادعاء قوي، على القارئ الناقد أن...؟",
+    "options": [
+      "Look for evidence and check the source",
+      "Believe it if it feels right",
+      "Believe it if many people share it",
+      "Believe it if it sounds confident"
+    ],
+    "options_ar": [
+      "يبحث عن دليل ويتحقق من المصدر",
+      "يصدّقه إذا شعر بصحته",
+      "يصدّقه إذا شاركه كثيرون",
+      "يصدّقه إذا بدا واثقاً"
+    ],
+    "correct_answer": "Look for evidence and check the source",
+    "correct_answer_ar": "يبحث عن دليل ويتحقق من المصدر",
+    "fun_fact": "Confidence and popularity are not proof. Evidence and reliable sources are what matter.",
+    "fun_fact_ar": "الثقة والشهرة ليستا دليلاً. الدليل والمصدر الموثوق هما ما يهمّ.",
+    "objective": "Apply a verification habit before believing claims.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_046",
+    "category": "Critical Reading",
+    "category_ar": "القراءة الناقدة",
+    "difficulty": 2,
+    "question": "A story about a hero is meant mostly to...?",
+    "question_ar": "قصة عن بطل غرضها الأساسي أن...؟",
+    "options": [
+      "Entertain or inspire",
+      "Sell soap",
+      "Report weather",
+      "Teach math formulas"
+    ],
+    "options_ar": [
+      "تُسلّي أو تُلهم",
+      "تبيع صابوناً",
+      "تنقل الطقس",
+      "تشرح صيغاً رياضية"
+    ],
+    "correct_answer": "Entertain or inspire",
+    "correct_answer_ar": "تُسلّي أو تُلهم",
+    "fun_fact": "Hero stories often aim to entertain or inspire courage, kindness, and good values.",
+    "fun_fact_ar": "قصص الأبطال تهدف غالباً إلى التسلية أو إلهام الشجاعة والإحسان والقيم الكريمة.",
+    "objective": "Match a text type with its primary purpose.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_047",
+    "category": "Source Evaluation",
+    "category_ar": "تقييم المصادر",
+    "difficulty": 1,
+    "question": "Which is a PRIMARY source?",
+    "question_ar": "أيّ من هذه مصدر أوّليّ؟",
+    "options": [
+      "An astronaut's own diary from a mission",
+      "A textbook summarizing space history",
+      "An article about the diary",
+      "A teacher's lesson notes"
+    ],
+    "options_ar": [
+      "مذكّرات رائدة فضاء بقلمها من المهمة نفسها",
+      "كتاب مدرسي يلخّص تاريخ الفضاء",
+      "مقال يتحدث عن المذكّرات",
+      "ملاحظات درس لمعلم"
+    ],
+    "correct_answer": "An astronaut's own diary from a mission",
+    "correct_answer_ar": "مذكّرات رائدة فضاء بقلمها من المهمة نفسها",
+    "fun_fact": "Primary sources come straight from the person who experienced or made the thing — like diaries, photos, and original documents.",
+    "fun_fact_ar": "المصادر الأوّليّة تأتي مباشرة من شاهد أو صانع — كالمذكّرات والصور والوثائق الأصلية.",
+    "objective": "Distinguish primary from secondary sources.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_048",
+    "category": "Source Evaluation",
+    "category_ar": "تقييم المصادر",
+    "difficulty": 2,
+    "question": "A SECONDARY source is one that...?",
+    "question_ar": "المصدر الثانوي هو الذي...؟",
+    "options": [
+      "Discusses or interprets primary sources",
+      "Was written first",
+      "Is always wrong",
+      "Has no information"
+    ],
+    "options_ar": [
+      "يناقش المصادر الأوّليّة أو يفسّرها",
+      "كُتب أولاً",
+      "خاطئ دائماً",
+      "لا يحتوي معلومات"
+    ],
+    "correct_answer": "Discusses or interprets primary sources",
+    "correct_answer_ar": "يناقش المصادر الأوّليّة أو يفسّرها",
+    "fun_fact": "Encyclopedias, textbooks, and biographies are typical secondary sources — they explain what primary sources show.",
+    "fun_fact_ar": "الموسوعات والكتب المدرسية والسير الذاتية مصادر ثانوية عادةً — تشرح ما تكشفه المصادر الأوّليّة.",
+    "objective": "Define a secondary source.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_049",
+    "category": "Source Evaluation",
+    "category_ar": "تقييم المصادر",
+    "difficulty": 2,
+    "question": "Why does BIAS matter when evaluating a source?",
+    "question_ar": "لماذا يهمّ التحيّز عند تقييم مصدر؟",
+    "options": [
+      "It can twist what facts are shown or hidden",
+      "It always makes things funny",
+      "It increases the word count",
+      "It makes a source longer"
+    ],
+    "options_ar": [
+      "قد يشوّه الحقائق المعروضة أو المخفية",
+      "يجعل الأمور مسلية دائماً",
+      "يزيد عدد الكلمات",
+      "يجعل المصدر أطول"
+    ],
+    "correct_answer": "It can twist what facts are shown or hidden",
+    "correct_answer_ar": "قد يشوّه الحقائق المعروضة أو المخفية",
+    "fun_fact": "Even truthful sources can mislead by choosing which facts to highlight. Smart readers compare multiple sources.",
+    "fun_fact_ar": "حتى المصادر الصادقة قد تضلّل باختيار ما تُبرزه من الحقائق. القارئ الذكي يقارن بين عدة مصادر.",
+    "objective": "Explain why bias affects reliability.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_050",
+    "category": "Source Evaluation",
+    "category_ar": "تقييم المصادر",
+    "difficulty": 3,
+    "question": "PEER REVIEW means...?",
+    "question_ar": "مراجعة الأقران تعني...؟",
+    "options": [
+      "Other experts check the work before it is published",
+      "Friends comment on social media",
+      "The author reviews their own work",
+      "Anyone online votes on it"
+    ],
+    "options_ar": [
+      "يتفحّص خبراء آخرون العمل قبل نشره",
+      "يعلّق الأصدقاء عبر التواصل الاجتماعي",
+      "يراجع المؤلف عمله بنفسه",
+      "يصوّت الناس على الإنترنت"
+    ],
+    "correct_answer": "Other experts check the work before it is published",
+    "correct_answer_ar": "يتفحّص خبراء آخرون العمل قبل نشره",
+    "fun_fact": "Peer review filters out errors and weak research before a study reaches the public. It's a key quality check in science.",
+    "fun_fact_ar": "مراجعة الأقران تنقّي الأخطاء والبحوث الضعيفة قبل أن تصل للعموم، وهي ضمان جودة أساسي في العلم.",
+    "objective": "Define peer review and its function.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_051",
+    "category": "Source Evaluation",
+    "category_ar": "تقييم المصادر",
+    "difficulty": 1,
+    "question": "Before sharing an exciting news headline, a careful person should...?",
+    "question_ar": "قبل مشاركة خبر مثير، على الشخص الحريص أن...؟",
+    "options": [
+      "Fact-check it from a trusted source",
+      "Share it quickly to be first",
+      "Add a scarier title",
+      "Trust the photo blindly"
+    ],
+    "options_ar": [
+      "يتحقق من صحته من مصدر موثوق",
+      "يشاركه بسرعة ليسبق الجميع",
+      "يضيف عنواناً أكثر إثارة",
+      "يثق بالصورة دون تفكير"
+    ],
+    "correct_answer": "Fact-check it from a trusted source",
+    "correct_answer_ar": "يتحقق من صحته من مصدر موثوق",
+    "fun_fact": "Sharing false news — even by accident — can hurt people. Islam praises the one who verifies before speaking (تَبَيَّنُوا).",
+    "fun_fact_ar": "مشاركة خبر كاذب — ولو خطأً — قد تؤذي الناس. ويثني الإسلام على من يتثبّت قبل أن يتكلّم (تَبَيَّنُوا).",
+    "objective": "Adopt fact-checking habit before sharing.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_052",
+    "category": "Source Evaluation",
+    "category_ar": "تقييم المصادر",
+    "difficulty": 2,
+    "question": "Which of these is the MOST reliable source for science facts?",
+    "question_ar": "أيّ هذه المصادر أكثرها موثوقية للحقائق العلمية؟",
+    "options": [
+      "A peer-reviewed scientific journal",
+      "A random social media post",
+      "An anonymous forum comment",
+      "A funny meme"
+    ],
+    "options_ar": [
+      "مجلة علمية محكَّمة",
+      "منشور عشوائي على التواصل الاجتماعي",
+      "تعليق مجهول في منتدى",
+      "صورة طريفة"
+    ],
+    "correct_answer": "A peer-reviewed scientific journal",
+    "correct_answer_ar": "مجلة علمية محكَّمة",
+    "fun_fact": "Reliable sources are checked, traceable, and written by qualified people in the field.",
+    "fun_fact_ar": "المصادر الموثوقة مدقَّقة، يمكن تتبّعها، وكتبها مختصون في المجال.",
+    "objective": "Rank source reliability.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_053",
+    "category": "Decision Making",
+    "category_ar": "اتخاذ القرار",
+    "difficulty": 1,
+    "question": "A pros-and-cons list helps you...?",
+    "question_ar": "قائمة الإيجابيات والسلبيات تساعدك على...؟",
+    "options": [
+      "See both good and bad sides before deciding",
+      "Make decisions faster without thinking",
+      "Avoid making any decision",
+      "Win every argument"
+    ],
+    "options_ar": [
+      "رؤية الجوانب الجيدة والسيئة قبل القرار",
+      "اتخاذ قرارات سريعة دون تفكير",
+      "تجنّب أي قرار",
+      "الانتصار في كل نقاش"
+    ],
+    "correct_answer": "See both good and bad sides before deciding",
+    "correct_answer_ar": "رؤية الجوانب الجيدة والسيئة قبل القرار",
+    "fun_fact": "Writing pros and cons forces you to think clearly instead of just following emotions.",
+    "fun_fact_ar": "كتابة الإيجابيات والسلبيات تجبرك على التفكير بوضوح بدل اتباع المشاعر.",
+    "objective": "Explain the purpose of pros-and-cons analysis.",
+    "bloom_level": "remember"
+  },
+  {
+    "id": "lc_054",
+    "category": "Decision Making",
+    "category_ar": "اتخاذ القرار",
+    "difficulty": 2,
+    "question": "You already paid for a movie ticket but the movie is boring. The 'sunk cost' fallacy says you should...?",
+    "question_ar": "دفعت ثمن تذكرة فيلم لكن الفيلم ممل. مغالطة «التكلفة الغارقة» تجعلك تعتقد أنك يجب أن...؟",
+    "options": [
+      "Stay because you already paid (this is the trap)",
+      "Leave and use your time better",
+      "Demand a refund",
+      "Buy more tickets"
+    ],
+    "options_ar": [
+      "تبقى لأنك دفعت (وهذا هو الفخ)",
+      "تخرج وتستثمر وقتك",
+      "تطلب استرداد المال",
+      "تشتري تذاكر أخرى"
+    ],
+    "correct_answer": "Stay because you already paid (this is the trap)",
+    "correct_answer_ar": "تبقى لأنك دفعت (وهذا هو الفخ)",
+    "fun_fact": "Sunk costs are gone whether you stay or leave. Smart deciders look only at FUTURE benefit, not past spending.",
+    "fun_fact_ar": "التكلفة الغارقة ضائعة سواء بقيت أم خرجت. صانع القرار الذكي ينظر للفائدة القادمة، لا للإنفاق الماضي.",
+    "objective": "Recognize the sunk cost fallacy.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_055",
+    "category": "Decision Making",
+    "category_ar": "اتخاذ القرار",
+    "difficulty": 2,
+    "question": "OPPORTUNITY COST means...?",
+    "question_ar": "تكلفة الفرصة البديلة تعني...؟",
+    "options": [
+      "What you give up by choosing one option over another",
+      "The price of the chosen option",
+      "Money you save in the bank",
+      "How much fun something is"
+    ],
+    "options_ar": [
+      "ما تتنازل عنه باختيار خيار بدل آخر",
+      "سعر الخيار الذي اخترته",
+      "المال الذي ادّخرته",
+      "كم هو ممتع الشيء"
+    ],
+    "correct_answer": "What you give up by choosing one option over another",
+    "correct_answer_ar": "ما تتنازل عنه باختيار خيار بدل آخر",
+    "fun_fact": "If you spend an hour on games, the opportunity cost might be the reading or sport you skipped.",
+    "fun_fact_ar": "إن قضيت ساعة على الألعاب، فتكلفة الفرصة قد تكون قراءةً أو رياضةً فاتتك.",
+    "objective": "Define opportunity cost.",
+    "bloom_level": "understand"
+  },
+  {
+    "id": "lc_056",
+    "category": "Decision Making",
+    "category_ar": "اتخاذ القرار",
+    "difficulty": 1,
+    "question": "Someone says something that makes you very angry. The wisest first step is to...?",
+    "question_ar": "قال أحدهم شيئاً أغضبك جداً. أحكم خطوة أولى هي أن...؟",
+    "options": [
+      "Pause, breathe, and think before reacting",
+      "Shout immediately",
+      "Send a long angry message",
+      "Promise revenge"
+    ],
+    "options_ar": [
+      "تتوقف وتتنفس وتفكر قبل أن ترد",
+      "تصرخ فوراً",
+      "ترسل رسالة غاضبة طويلة",
+      "تَعِد بالانتقام"
+    ],
+    "correct_answer": "Pause, breathe, and think before reacting",
+    "correct_answer_ar": "تتوقف وتتنفس وتفكر قبل أن ترد",
+    "fun_fact": "The Prophet ﷺ taught that الأناة (calm patience) is loved by Allah. Pausing protects you from words you'd regret.",
+    "fun_fact_ar": "علّم النبي ﷺ أن الأناة من الخصال التي يحبها الله. التوقف يحميك من كلام تندم عليه.",
+    "objective": "Apply الأناة (pause) before reacting in anger.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_057",
+    "category": "Decision Making",
+    "category_ar": "اتخاذ القرار",
+    "difficulty": 3,
+    "question": "Two paths: Path A gives 50 dinars now. Path B gives 80 dinars in a month. Which path should you weigh based on your real NEED?",
+    "question_ar": "طريقان: الأول يعطيك ٥٠ ديناراً الآن، والثاني يعطيك ٨٠ ديناراً بعد شهر. أيّ طريق توازنه بناءً على حاجتك الحقيقية؟",
+    "options": [
+      "Either — depends on whether you need money now or can wait",
+      "Always Path A — money now is always best",
+      "Always Path B — bigger numbers always win",
+      "Neither — never accept money"
+    ],
+    "options_ar": [
+      "أيّهما — حسب حاجتك للمال الآن أو قدرتك على الانتظار",
+      "الأول دائماً — النقد الفوري أفضل دائماً",
+      "الثاني دائماً — الأرقام الأكبر تفوز دائماً",
+      "لا شيء — لا تقبل المال أبداً"
+    ],
+    "correct_answer": "Either — depends on whether you need money now or can wait",
+    "correct_answer_ar": "أيّهما — حسب حاجتك للمال الآن أو قدرتك على الانتظار",
+    "fun_fact": "Good decisions weigh time, need, and risk together — not just the biggest number on paper.",
+    "fun_fact_ar": "القرار الجيد يوازن بين الوقت والحاجة والمخاطرة معاً — لا الرقم الأكبر فقط.",
+    "objective": "Weigh time vs amount in a decision.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_058",
+    "category": "Decision Making",
+    "category_ar": "اتخاذ القرار",
+    "difficulty": 2,
+    "question": "Before a hard decision, asking 'What's the WORST that could happen?' helps you...?",
+    "question_ar": "قبل قرار صعب، سؤالك «ما أسوأ ما قد يحدث؟» يساعدك على...?",
+    "options": [
+      "Plan for risks and feel calmer",
+      "Become more afraid",
+      "Avoid all decisions forever",
+      "Forget the question"
+    ],
+    "options_ar": [
+      "التخطيط للمخاطر والشعور بالهدوء",
+      "ازدياد خوفك",
+      "تجنّب كل قرار للأبد",
+      "نسيان السؤال"
+    ],
+    "correct_answer": "Plan for risks and feel calmer",
+    "correct_answer_ar": "التخطيط للمخاطر والشعور بالهدوء",
+    "fun_fact": "Imagining the worst case prepares your mind. Often the worst is much smaller than your fear suggested.",
+    "fun_fact_ar": "تخيّل أسوأ السيناريوهات يُهيّئ عقلك. وكثيراً ما يكون الواقع أهون من خوفك.",
+    "objective": "Use worst-case analysis to manage risk.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_059",
+    "category": "Decision Making",
+    "category_ar": "اتخاذ القرار",
+    "difficulty": 2,
+    "question": "Your friend pressures you to do something that feels wrong. The wise decision is to...?",
+    "question_ar": "يضغط عليك صديقك لتفعل شيئاً تشعر أنه خطأ. القرار الحكيم هو أن...؟",
+    "options": [
+      "Pause, think about consequences, and respectfully say no",
+      "Do it just to please him",
+      "Lash out angrily",
+      "Run away forever"
+    ],
+    "options_ar": [
+      "تتمهل وتفكر في العواقب وترفض باحترام",
+      "تفعله فقط لإرضائه",
+      "تثور غاضباً",
+      "تهرب للأبد"
+    ],
+    "correct_answer": "Pause, think about consequences, and respectfully say no",
+    "correct_answer_ar": "تتمهل وتفكر في العواقب وترفض باحترام",
+    "fun_fact": "Saying no kindly is a real skill. Patience and good thinking protect both you and your friendship.",
+    "fun_fact_ar": "الرفض اللبق مهارة حقيقية. الصبر وحُسن التفكير يحميانك ويحفظان صداقتك.",
+    "objective": "Apply pause-and-consider to peer pressure.",
+    "bloom_level": "apply"
+  },
+  {
+    "id": "lc_060",
+    "category": "Decision Making",
+    "category_ar": "اتخاذ القرار",
+    "difficulty": 3,
+    "question": "After a big decision, the BEST habit is to...?",
+    "question_ar": "بعد قرار كبير، أفضل عادة هي أن...؟",
+    "options": [
+      "Reflect on what worked and what to improve",
+      "Forget everything immediately",
+      "Blame other people",
+      "Never decide again"
+    ],
+    "options_ar": [
+      "تتأمل ما نجح وما يحتاج تحسيناً",
+      "تنسى كل شيء فوراً",
+      "تلوم الآخرين",
+      "لا تقرر مرة أخرى"
+    ],
+    "correct_answer": "Reflect on what worked and what to improve",
+    "correct_answer_ar": "تتأمل ما نجح وما يحتاج تحسيناً",
+    "fun_fact": "Reflection turns every decision — even mistakes — into a lesson. That's how thinkers grow over time.",
+    "fun_fact_ar": "التأمل يحوّل كل قرار — حتى الأخطاء — إلى درس. وبهذا ينمو المفكرون مع الزمن.",
+    "objective": "Apply post-decision reflection for growth.",
+    "bloom_level": "apply"
+  }
+]

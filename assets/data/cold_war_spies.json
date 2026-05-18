@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "cws_001",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What was the Cold War?",
+    "question_ar": "ما هي الحرب الباردة؟",
+    "options": [
+      "A long rivalry between the US and USSR without direct combat",
+      "A war fought entirely with snowballs",
+      "A battle in the Arctic Ocean",
+      "A trade fair between Europe and Asia"
+    ],
+    "options_ar": [
+      "تنافس طويل بين الولايات المتحدة والاتحاد السوفيتي دون قتال مباشر",
+      "حرب خيضت بكرات الثلج فقط",
+      "معركة في المحيط المتجمد الشمالي",
+      "معرض تجاري بين أوروبا وآسيا"
+    ],
+    "correct_answer": "A long rivalry between the US and USSR without direct combat",
+    "correct_answer_ar": "تنافس طويل بين الولايات المتحدة والاتحاد السوفيتي دون قتال مباشر",
+    "explanation": "The Cold War (about 1947 to 1991) was a long political and military rivalry between the United States and the Soviet Union. The two superpowers never fought each other directly.",
+    "explanation_ar": "كانت الحرب الباردة (حوالي ١٩٤٧ إلى ١٩٩١) تنافسًا سياسيًا وعسكريًا طويلًا بين الولايات المتحدة والاتحاد السوفيتي. لم تتقاتل القوتان العظميان بشكل مباشر أبدًا.",
+    "image": ""
+  },
+  {
+    "id": "cws_002",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Who said the famous phrase 'Iron Curtain' in 1946?",
+    "question_ar": "من قال عبارة 'الستار الحديدي' الشهيرة عام ١٩٤٦؟",
+    "options": [
+      "Winston Churchill",
+      "Joseph Stalin",
+      "Harry Truman",
+      "Charles de Gaulle"
+    ],
+    "options_ar": [
+      "ونستون تشرشل",
+      "جوزيف ستالين",
+      "هاري ترومان",
+      "شارل ديغول"
+    ],
+    "correct_answer": "Winston Churchill",
+    "correct_answer_ar": "ونستون تشرشل",
+    "explanation": "British leader Winston Churchill used the phrase 'Iron Curtain' in a 1946 speech to describe how the Soviet Union was separating Eastern Europe from the West.",
+    "explanation_ar": "استخدم الزعيم البريطاني ونستون تشرشل عبارة 'الستار الحديدي' في خطاب عام ١٩٤٦ لوصف كيف كان الاتحاد السوفيتي يفصل أوروبا الشرقية عن الغرب.",
+    "image": ""
+  },
+  {
+    "id": "cws_003",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "In what year did the Berlin Wall fall?",
+    "question_ar": "في أي عام سقط جدار برلين؟",
+    "options": [
+      "1989",
+      "1985",
+      "1991",
+      "1979"
+    ],
+    "options_ar": [
+      "١٩٨٩",
+      "١٩٨٥",
+      "١٩٩١",
+      "١٩٧٩"
+    ],
+    "correct_answer": "1989",
+    "correct_answer_ar": "١٩٨٩",
+    "explanation": "The Berlin Wall fell on November 9, 1989. People from East and West Berlin celebrated together as the wall came down.",
+    "explanation_ar": "سقط جدار برلين في ٩ نوفمبر ١٩٨٩. احتفل الناس من برلين الشرقية والغربية معًا عند سقوط الجدار.",
+    "image": ""
+  },
+  {
+    "id": "cws_004",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "When was the Berlin Wall built?",
+    "question_ar": "متى بُني جدار برلين؟",
+    "options": [
+      "1961",
+      "1945",
+      "1972",
+      "1955"
+    ],
+    "options_ar": [
+      "١٩٦١",
+      "١٩٤٥",
+      "١٩٧٢",
+      "١٩٥٥"
+    ],
+    "correct_answer": "1961",
+    "correct_answer_ar": "١٩٦١",
+    "explanation": "The Berlin Wall was built in 1961 by East Germany to stop people from leaving to the West. It stood for 28 years.",
+    "explanation_ar": "بُني جدار برلين عام ١٩٦١ من قبل ألمانيا الشرقية لمنع الناس من المغادرة إلى الغرب. وقف لمدة ٢٨ عامًا.",
+    "image": ""
+  },
+  {
+    "id": "cws_005",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What was Sputnik 1?",
+    "question_ar": "ما هو سبوتنيك ١؟",
+    "options": [
+      "The first satellite ever launched into space",
+      "A Soviet submarine",
+      "A famous Russian spy",
+      "A new type of rocket fuel"
+    ],
+    "options_ar": [
+      "أول قمر صناعي يُطلق إلى الفضاء على الإطلاق",
+      "غواصة سوفيتية",
+      "جاسوس روسي شهير",
+      "نوع جديد من وقود الصواريخ"
+    ],
+    "correct_answer": "The first satellite ever launched into space",
+    "correct_answer_ar": "أول قمر صناعي يُطلق إلى الفضاء على الإطلاق",
+    "explanation": "The Soviet Union launched Sputnik 1 on October 4, 1957. It was the first artificial satellite and started the Space Race.",
+    "explanation_ar": "أطلق الاتحاد السوفيتي سبوتنيك ١ في ٤ أكتوبر ١٩٥٧. كان أول قمر صناعي وبدأ سباق الفضاء.",
+    "image": ""
+  },
+  {
+    "id": "cws_006",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Who was the first human in space?",
+    "question_ar": "من هو أول إنسان في الفضاء؟",
+    "options": [
+      "Yuri Gagarin",
+      "Neil Armstrong",
+      "John Glenn",
+      "Buzz Aldrin"
+    ],
+    "options_ar": [
+      "يوري غاغارين",
+      "نيل أرمسترونغ",
+      "جون غلين",
+      "باز ألدرين"
+    ],
+    "correct_answer": "Yuri Gagarin",
+    "correct_answer_ar": "يوري غاغارين",
+    "explanation": "Soviet cosmonaut Yuri Gagarin became the first human in space on April 12, 1961. He orbited Earth aboard Vostok 1.",
+    "explanation_ar": "أصبح رائد الفضاء السوفيتي يوري غاغارين أول إنسان في الفضاء في ١٢ أبريل ١٩٦١. دار حول الأرض على متن فوستوك ١.",
+    "image": ""
+  },
+  {
+    "id": "cws_007",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which mission first landed humans on the Moon?",
+    "question_ar": "أي مهمة أوصلت البشر إلى القمر لأول مرة؟",
+    "options": [
+      "Apollo 11",
+      "Apollo 8",
+      "Gemini 5",
+      "Mercury 7"
+    ],
+    "options_ar": [
+      "أبولو ١١",
+      "أبولو ٨",
+      "جيميني ٥",
+      "ميركوري ٧"
+    ],
+    "correct_answer": "Apollo 11",
+    "correct_answer_ar": "أبولو ١١",
+    "explanation": "On July 20, 1969, NASA's Apollo 11 mission landed the first humans on the Moon. The US won the Space Race.",
+    "explanation_ar": "في ٢٠ يوليو ١٩٦٩، أنزلت مهمة أبولو ١١ التابعة لناسا أول إنسان على سطح القمر. فازت الولايات المتحدة بسباق الفضاء.",
+    "image": ""
+  },
+  {
+    "id": "cws_008",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What is NATO?",
+    "question_ar": "ما هو حلف الناتو؟",
+    "options": [
+      "A US-led military alliance",
+      "A Soviet space program",
+      "A famous spy agency",
+      "A Cold War-era ship"
+    ],
+    "options_ar": [
+      "تحالف عسكري بقيادة الولايات المتحدة",
+      "برنامج فضاء سوفيتي",
+      "وكالة جاسوسية شهيرة",
+      "سفينة من حقبة الحرب الباردة"
+    ],
+    "correct_answer": "A US-led military alliance",
+    "correct_answer_ar": "تحالف عسكري بقيادة الولايات المتحدة",
+    "explanation": "NATO (North Atlantic Treaty Organization) was formed in 1949 as a defensive alliance led by the United States.",
+    "explanation_ar": "تأسس حلف الناتو (منظمة حلف شمال الأطلسي) عام ١٩٤٩ كتحالف دفاعي بقيادة الولايات المتحدة.",
+    "image": ""
+  },
+  {
+    "id": "cws_009",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What was the Warsaw Pact?",
+    "question_ar": "ما هو حلف وارسو؟",
+    "options": [
+      "A Soviet-led military alliance",
+      "A trade agreement in Asia",
+      "A US space treaty",
+      "A peace deal with China"
+    ],
+    "options_ar": [
+      "تحالف عسكري بقيادة سوفيتية",
+      "اتفاقية تجارية في آسيا",
+      "معاهدة فضاء أمريكية",
+      "اتفاقية سلام مع الصين"
+    ],
+    "correct_answer": "A Soviet-led military alliance",
+    "correct_answer_ar": "تحالف عسكري بقيادة سوفيتية",
+    "explanation": "The Warsaw Pact was formed in 1955 as a military alliance led by the Soviet Union. It was the rival of NATO.",
+    "explanation_ar": "تأسس حلف وارسو عام ١٩٥٥ كتحالف عسكري بقيادة الاتحاد السوفيتي. كان منافسًا لحلف الناتو.",
+    "image": ""
+  },
+  {
+    "id": "cws_010",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Who was the leader of the Soviet Union from 1985 until its end?",
+    "question_ar": "من كان زعيم الاتحاد السوفيتي من ١٩٨٥ حتى نهايته؟",
+    "options": [
+      "Mikhail Gorbachev",
+      "Joseph Stalin",
+      "Vladimir Lenin",
+      "Leonid Brezhnev"
+    ],
+    "options_ar": [
+      "ميخائيل غورباتشوف",
+      "جوزيف ستالين",
+      "فلاديمير لينين",
+      "ليونيد بريجنيف"
+    ],
+    "correct_answer": "Mikhail Gorbachev",
+    "correct_answer_ar": "ميخائيل غورباتشوف",
+    "explanation": "Mikhail Gorbachev led the Soviet Union from 1985 to 1991. He introduced reforms called glasnost and perestroika.",
+    "explanation_ar": "قاد ميخائيل غورباتشوف الاتحاد السوفيتي من ١٩٨٥ إلى ١٩٩١. قدم إصلاحات تسمى الغلاسنوست والبيريسترويكا.",
+    "image": ""
+  },
+  {
+    "id": "cws_011",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Who was the US president from 1981 to 1989?",
+    "question_ar": "من كان رئيس الولايات المتحدة من ١٩٨١ إلى ١٩٨٩؟",
+    "options": [
+      "Ronald Reagan",
+      "Jimmy Carter",
+      "George H. W. Bush",
+      "Bill Clinton"
+    ],
+    "options_ar": [
+      "رونالد ريغان",
+      "جيمي كارتر",
+      "جورج بوش الأب",
+      "بيل كلينتون"
+    ],
+    "correct_answer": "Ronald Reagan",
+    "correct_answer_ar": "رونالد ريغان",
+    "explanation": "Ronald Reagan was the US president from 1981 to 1989. He played a big role in the final years of the Cold War.",
+    "explanation_ar": "كان رونالد ريغان رئيسًا للولايات المتحدة من ١٩٨١ إلى ١٩٨٩. لعب دورًا كبيرًا في السنوات الأخيرة من الحرب الباردة.",
+    "image": ""
+  },
+  {
+    "id": "cws_012",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What does CIA stand for?",
+    "question_ar": "ماذا يعني اختصار CIA؟",
+    "options": [
+      "Central Intelligence Agency",
+      "Cold International Alliance",
+      "Common Intelligence Army",
+      "Central Investigation Authority"
+    ],
+    "options_ar": [
+      "وكالة المخابرات المركزية الأمريكية",
+      "التحالف البارد الدولي",
+      "الجيش الاستخباراتي المشترك",
+      "هيئة التحقيق المركزية"
+    ],
+    "correct_answer": "Central Intelligence Agency",
+    "correct_answer_ar": "وكالة المخابرات المركزية الأمريكية",
+    "explanation": "The CIA (Central Intelligence Agency) is the United States foreign intelligence agency. It was founded in 1947.",
+    "explanation_ar": "وكالة المخابرات المركزية (CIA) هي وكالة الاستخبارات الخارجية للولايات المتحدة. تأسست عام ١٩٤٧.",
+    "image": ""
+  },
+  {
+    "id": "cws_013",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What was the KGB?",
+    "question_ar": "ما هي الكي جي بي؟",
+    "options": [
+      "The Soviet Union's main intelligence agency",
+      "A Soviet rocket program",
+      "A US spy plane",
+      "An East German factory"
+    ],
+    "options_ar": [
+      "وكالة الاستخبارات الرئيسية للاتحاد السوفيتي",
+      "برنامج صواريخ سوفيتي",
+      "طائرة تجسس أمريكية",
+      "مصنع ألماني شرقي"
+    ],
+    "correct_answer": "The Soviet Union's main intelligence agency",
+    "correct_answer_ar": "وكالة الاستخبارات الرئيسية للاتحاد السوفيتي",
+    "explanation": "The KGB was the main intelligence agency of the Soviet Union from 1954 to 1991. After the USSR ended, it was replaced by the FSB and SVR.",
+    "explanation_ar": "كانت الكي جي بي وكالة الاستخبارات الرئيسية للاتحاد السوفيتي من ١٩٥٤ إلى ١٩٩١. بعد انتهاء الاتحاد السوفيتي، حلت محلها FSB و SVR.",
+    "image": ""
+  },
+  {
+    "id": "cws_014",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which country does the spy agency MI6 belong to?",
+    "question_ar": "إلى أي دولة تنتمي وكالة الجاسوسية إم آي ٦؟",
+    "options": [
+      "United Kingdom",
+      "United States",
+      "France",
+      "Germany"
+    ],
+    "options_ar": [
+      "المملكة المتحدة",
+      "الولايات المتحدة",
+      "فرنسا",
+      "ألمانيا"
+    ],
+    "correct_answer": "United Kingdom",
+    "correct_answer_ar": "المملكة المتحدة",
+    "explanation": "MI6 is the United Kingdom's foreign intelligence service. The fictional spy James Bond works for MI6.",
+    "explanation_ar": "إم آي ٦ هي جهاز الاستخبارات الخارجية للمملكة المتحدة. الجاسوس الخيالي جيمس بوند يعمل لصالح إم آي ٦.",
+    "image": ""
+  },
+  {
+    "id": "cws_015",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Who is the famous fictional British spy created by Ian Fleming?",
+    "question_ar": "من هو الجاسوس البريطاني الخيالي الشهير الذي ابتكره إيان فليمنغ؟",
+    "options": [
+      "James Bond",
+      "George Smiley",
+      "Jason Bourne",
+      "Ethan Hunt"
+    ],
+    "options_ar": [
+      "جيمس بوند",
+      "جورج سمايلي",
+      "جيسون بورن",
+      "إيثان هانت"
+    ],
+    "correct_answer": "James Bond",
+    "correct_answer_ar": "جيمس بوند",
+    "explanation": "James Bond is a fictional MI6 agent created by author Ian Fleming. The first novel 'Casino Royale' came out in 1953.",
+    "explanation_ar": "جيمس بوند عميل خيالي في إم آي ٦ ابتكره الكاتب إيان فليمنغ. صدرت أول رواية 'كازينو رويال' عام ١٩٥٣.",
+    "image": ""
+  },
+  {
+    "id": "cws_016",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What is Israel's intelligence agency called?",
+    "question_ar": "ما اسم جهاز الاستخبارات الإسرائيلي؟",
+    "options": [
+      "Mossad",
+      "MI6",
+      "KGB",
+      "CIA"
+    ],
+    "options_ar": [
+      "الموساد",
+      "إم آي ٦",
+      "كي جي بي",
+      "سي آي إيه"
+    ],
+    "correct_answer": "Mossad",
+    "correct_answer_ar": "الموساد",
+    "explanation": "Mossad is the foreign intelligence service of Israel. It is one of the most well-known spy agencies in the world.",
+    "explanation_ar": "الموساد هو جهاز الاستخبارات الخارجية لإسرائيل. وهو من أشهر أجهزة الاستخبارات في العالم.",
+    "image": ""
+  },
+  {
+    "id": "cws_017",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What is a 'code name' for a spy?",
+    "question_ar": "ما هو 'الاسم الرمزي' للجاسوس؟",
+    "options": [
+      "A secret name to hide their real identity",
+      "A pet's name",
+      "A language only spies speak",
+      "A computer password"
+    ],
+    "options_ar": [
+      "اسم سري لإخفاء هويتهم الحقيقية",
+      "اسم حيوان أليف",
+      "لغة لا يتحدث بها سوى الجواسيس",
+      "كلمة سر للحاسوب"
+    ],
+    "correct_answer": "A secret name to hide their real identity",
+    "correct_answer_ar": "اسم سري لإخفاء هويتهم الحقيقية",
+    "explanation": "Spies often use code names to hide their real identity, so others won't know who they really are.",
+    "explanation_ar": "يستخدم الجواسيس غالبًا أسماء رمزية لإخفاء هويتهم الحقيقية، حتى لا يعرف الآخرون من هم فعلًا.",
+    "image": ""
+  },
+  {
+    "id": "cws_018",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What is a 'dead drop' in spy work?",
+    "question_ar": "ما هو 'الإسقاط الميت' في عمل الجاسوسية؟",
+    "options": [
+      "A secret place to leave messages without meeting",
+      "A type of explosive",
+      "A failed mission",
+      "A spy's vacation"
+    ],
+    "options_ar": [
+      "مكان سري لترك الرسائل دون لقاء",
+      "نوع من المتفجرات",
+      "مهمة فاشلة",
+      "إجازة الجاسوس"
+    ],
+    "correct_answer": "A secret place to leave messages without meeting",
+    "correct_answer_ar": "مكان سري لترك الرسائل دون لقاء",
+    "explanation": "A 'dead drop' is a hidden spot where one spy leaves a message or item, and another spy picks it up later. They never meet.",
+    "explanation_ar": "'الإسقاط الميت' هو مكان مخفي يترك فيه جاسوس رسالة أو شيئًا، ويأخذه جاسوس آخر لاحقًا. لا يلتقون أبدًا.",
+    "image": ""
+  },
+  {
+    "id": "cws_019",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "When did the Soviet Union officially end?",
+    "question_ar": "متى انتهى الاتحاد السوفيتي رسميًا؟",
+    "options": [
+      "1991",
+      "1989",
+      "1985",
+      "2000"
+    ],
+    "options_ar": [
+      "١٩٩١",
+      "١٩٨٩",
+      "١٩٨٥",
+      "٢٠٠٠"
+    ],
+    "correct_answer": "1991",
+    "correct_answer_ar": "١٩٩١",
+    "explanation": "The Soviet Union officially ended on December 25, 1991. This is also seen as the end of the Cold War.",
+    "explanation_ar": "انتهى الاتحاد السوفيتي رسميًا في ٢٥ ديسمبر ١٩٩١. ويعتبر هذا أيضًا نهاية الحرب الباردة.",
+    "image": ""
+  },
+  {
+    "id": "cws_020",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Who became the first president of Russia after the Soviet Union ended?",
+    "question_ar": "من أصبح أول رئيس لروسيا بعد انتهاء الاتحاد السوفيتي؟",
+    "options": [
+      "Boris Yeltsin",
+      "Vladimir Putin",
+      "Mikhail Gorbachev",
+      "Dmitry Medvedev"
+    ],
+    "options_ar": [
+      "بوريس يلتسين",
+      "فلاديمير بوتين",
+      "ميخائيل غورباتشوف",
+      "دميتري ميدفيديف"
+    ],
+    "correct_answer": "Boris Yeltsin",
+    "correct_answer_ar": "بوريس يلتسين",
+    "explanation": "Boris Yeltsin became the first president of the new Russian Federation when the Soviet Union ended in December 1991.",
+    "explanation_ar": "أصبح بوريس يلتسين أول رئيس للاتحاد الروسي الجديد عندما انتهى الاتحاد السوفيتي في ديسمبر ١٩٩١.",
+    "image": ""
+  },
+  {
+    "id": "cws_021",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What does MI5 do for the United Kingdom?",
+    "question_ar": "ماذا تفعل إم آي ٥ للمملكة المتحدة؟",
+    "options": [
+      "Domestic security inside the UK",
+      "Spying in foreign countries",
+      "Running the British Navy",
+      "Building weapons"
+    ],
+    "options_ar": [
+      "الأمن الداخلي داخل المملكة المتحدة",
+      "التجسس في الدول الأجنبية",
+      "إدارة البحرية البريطانية",
+      "بناء الأسلحة"
+    ],
+    "correct_answer": "Domestic security inside the UK",
+    "correct_answer_ar": "الأمن الداخلي داخل المملكة المتحدة",
+    "explanation": "MI5 is the United Kingdom's domestic security service. MI6 handles foreign spying, while MI5 protects within the UK.",
+    "explanation_ar": "إم آي ٥ هو جهاز الأمن الداخلي للمملكة المتحدة. تتولى إم آي ٦ التجسس الخارجي، بينما تحمي إم آي ٥ داخل المملكة المتحدة.",
+    "image": ""
+  },
+  {
+    "id": "cws_022",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What does NSA stand for in the United States?",
+    "question_ar": "ماذا يعني اختصار NSA في الولايات المتحدة؟",
+    "options": [
+      "National Security Agency",
+      "Northern Spy Authority",
+      "National Space Administration",
+      "New Science Academy"
+    ],
+    "options_ar": [
+      "وكالة الأمن القومي",
+      "هيئة التجسس الشمالية",
+      "إدارة الفضاء الوطنية",
+      "أكاديمية العلوم الجديدة"
+    ],
+    "correct_answer": "National Security Agency",
+    "correct_answer_ar": "وكالة الأمن القومي",
+    "explanation": "The NSA (National Security Agency) is a US intelligence agency that focuses on signals intelligence, like phone and computer messages.",
+    "explanation_ar": "وكالة الأمن القومي (NSA) هي وكالة استخبارات أمريكية تركز على استخبارات الإشارات، مثل رسائل الهاتف والحاسوب.",
+    "image": ""
+  },
+  {
+    "id": "cws_023",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What was the Marshall Plan?",
+    "question_ar": "ما هي خطة مارشال؟",
+    "options": [
+      "US aid to rebuild Western Europe after WWII",
+      "A Soviet plan to take over Africa",
+      "A spy mission in Asia",
+      "A famous space mission"
+    ],
+    "options_ar": [
+      "مساعدات أمريكية لإعادة بناء أوروبا الغربية بعد الحرب العالمية الثانية",
+      "خطة سوفيتية للسيطرة على أفريقيا",
+      "مهمة تجسس في آسيا",
+      "مهمة فضائية شهيرة"
+    ],
+    "correct_answer": "US aid to rebuild Western Europe after WWII",
+    "correct_answer_ar": "مساعدات أمريكية لإعادة بناء أوروبا الغربية بعد الحرب العالمية الثانية",
+    "explanation": "The Marshall Plan, started in 1948, gave about 13 billion dollars in US aid to help Western Europe rebuild after World War II.",
+    "explanation_ar": "خطة مارشال، التي بدأت عام ١٩٤٨، قدمت حوالي ١٣ مليار دولار من المساعدات الأمريكية لمساعدة أوروبا الغربية على إعادة البناء بعد الحرب العالمية الثانية.",
+    "image": ""
+  },
+  {
+    "id": "cws_024",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What was the Berlin Airlift in 1948-1949?",
+    "question_ar": "ما هو الجسر الجوي البرليني في ١٩٤٨-١٩٤٩؟",
+    "options": [
+      "US planes flew supplies to West Berlin during a Soviet blockade",
+      "Soviet jets bombed Berlin",
+      "A new airport opened in Berlin",
+      "An air show for German children"
+    ],
+    "options_ar": [
+      "طائرات أمريكية نقلت إمدادات إلى برلين الغربية خلال حصار سوفيتي",
+      "طائرات سوفيتية قصفت برلين",
+      "افتتاح مطار جديد في برلين",
+      "عرض جوي للأطفال الألمان"
+    ],
+    "correct_answer": "US planes flew supplies to West Berlin during a Soviet blockade",
+    "correct_answer_ar": "طائرات أمريكية نقلت إمدادات إلى برلين الغربية خلال حصار سوفيتي",
+    "explanation": "When the Soviet Union blocked roads to West Berlin in 1948, the United States and allies flew in food and supplies for almost a year.",
+    "explanation_ar": "عندما أغلق الاتحاد السوفيتي الطرق إلى برلين الغربية عام ١٩٤٨، نقلت الولايات المتحدة وحلفاؤها الطعام والإمدادات جوًا لمدة عام تقريبًا.",
+    "image": ""
+  },
+  {
+    "id": "cws_025",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What was the Cuban Missile Crisis?",
+    "question_ar": "ما هي أزمة الصواريخ الكوبية؟",
+    "options": [
+      "A 13-day standoff in October 1962, the closest the world came to nuclear war",
+      "A baseball tournament in Cuba",
+      "A Soviet rocket launch from Moscow",
+      "A small earthquake in Havana"
+    ],
+    "options_ar": [
+      "مواجهة استمرت ١٣ يومًا في أكتوبر ١٩٦٢، أقرب ما اقترب العالم من حرب نووية",
+      "بطولة بيسبول في كوبا",
+      "إطلاق صاروخ سوفيتي من موسكو",
+      "زلزال صغير في هافانا"
+    ],
+    "correct_answer": "A 13-day standoff in October 1962, the closest the world came to nuclear war",
+    "correct_answer_ar": "مواجهة استمرت ١٣ يومًا في أكتوبر ١٩٦٢، أقرب ما اقترب العالم من حرب نووية",
+    "explanation": "In October 1962, the US discovered Soviet missiles in Cuba. After 13 tense days, the Soviets agreed to remove the missiles.",
+    "explanation_ar": "في أكتوبر ١٩٦٢، اكتشفت الولايات المتحدة صواريخ سوفيتية في كوبا. بعد ١٣ يومًا متوترًا، وافق السوفييت على إزالة الصواريخ.",
+    "image": ""
+  },
+  {
+    "id": "cws_026",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who was the US pilot whose U-2 spy plane was shot down over the Soviet Union in 1960?",
+    "question_ar": "من هو الطيار الأمريكي الذي أُسقطت طائرته الجاسوسية يو-٢ فوق الاتحاد السوفيتي عام ١٩٦٠؟",
+    "options": [
+      "Francis Gary Powers",
+      "Charles Lindbergh",
+      "John Glenn",
+      "Chuck Yeager"
+    ],
+    "options_ar": [
+      "فرانسيس غاري باورز",
+      "تشارلز ليندبيرغ",
+      "جون غلين",
+      "تشاك ييغر"
+    ],
+    "correct_answer": "Francis Gary Powers",
+    "correct_answer_ar": "فرانسيس غاري باورز",
+    "explanation": "In 1960, the Soviet Union shot down a US U-2 spy plane piloted by Francis Gary Powers. He was captured and later traded back home.",
+    "explanation_ar": "في عام ١٩٦٠، أسقط الاتحاد السوفيتي طائرة تجسس أمريكية من طراز يو-٢ يقودها فرانسيس غاري باورز. تم أسره وأُعيد لاحقًا في صفقة تبادل.",
+    "image": ""
+  },
+  {
+    "id": "cws_027",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "When was the Korean War fought?",
+    "question_ar": "متى خيضت الحرب الكورية؟",
+    "options": [
+      "1950 to 1953",
+      "1939 to 1945",
+      "1965 to 1972",
+      "1980 to 1988"
+    ],
+    "options_ar": [
+      "١٩٥٠ إلى ١٩٥٣",
+      "١٩٣٩ إلى ١٩٤٥",
+      "١٩٦٥ إلى ١٩٧٢",
+      "١٩٨٠ إلى ١٩٨٨"
+    ],
+    "correct_answer": "1950 to 1953",
+    "correct_answer_ar": "١٩٥٠ إلى ١٩٥٣",
+    "explanation": "The Korean War took place from 1950 to 1953. It split the country into North Korea and South Korea.",
+    "explanation_ar": "وقعت الحرب الكورية من ١٩٥٠ إلى ١٩٥٣. وقسمت البلاد إلى كوريا الشمالية وكوريا الجنوبية.",
+    "image": ""
+  },
+  {
+    "id": "cws_028",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "When did the Vietnam War take place?",
+    "question_ar": "متى وقعت حرب فيتنام؟",
+    "options": [
+      "1955 to 1975",
+      "1939 to 1945",
+      "1980 to 1990",
+      "1914 to 1918"
+    ],
+    "options_ar": [
+      "١٩٥٥ إلى ١٩٧٥",
+      "١٩٣٩ إلى ١٩٤٥",
+      "١٩٨٠ إلى ١٩٩٠",
+      "١٩١٤ إلى ١٩١٨"
+    ],
+    "correct_answer": "1955 to 1975",
+    "correct_answer_ar": "١٩٥٥ إلى ١٩٧٥",
+    "explanation": "The Vietnam War lasted from 1955 to 1975. It was one of the most famous Cold War conflicts.",
+    "explanation_ar": "استمرت حرب فيتنام من ١٩٥٥ إلى ١٩٧٥. كانت من أشهر صراعات الحرب الباردة.",
+    "image": ""
+  },
+  {
+    "id": "cws_029",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Where did Reagan say 'Tear down this wall' in 1987?",
+    "question_ar": "أين قال ريغان عبارة 'اهدم هذا الجدار' عام ١٩٨٧؟",
+    "options": [
+      "At the Brandenburg Gate in Berlin",
+      "At the United Nations in New York",
+      "On the White House lawn",
+      "At the Kremlin in Moscow"
+    ],
+    "options_ar": [
+      "عند بوابة براندنبورغ في برلين",
+      "في الأمم المتحدة في نيويورك",
+      "في حديقة البيت الأبيض",
+      "في الكرملين في موسكو"
+    ],
+    "correct_answer": "At the Brandenburg Gate in Berlin",
+    "correct_answer_ar": "عند بوابة براندنبورغ في برلين",
+    "explanation": "In 1987, US President Ronald Reagan stood at the Brandenburg Gate in Berlin and asked Soviet leader Gorbachev to 'tear down this wall'.",
+    "explanation_ar": "في عام ١٩٨٧، وقف الرئيس الأمريكي رونالد ريغان عند بوابة براندنبورغ في برلين وطلب من الزعيم السوفيتي غورباتشوف 'هدم هذا الجدار'.",
+    "image": ""
+  },
+  {
+    "id": "cws_030",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who said 'Ich bin ein Berliner' in 1963?",
+    "question_ar": "من قال 'أنا برليني' عام ١٩٦٣؟",
+    "options": [
+      "John F. Kennedy",
+      "Ronald Reagan",
+      "Richard Nixon",
+      "Lyndon B. Johnson"
+    ],
+    "options_ar": [
+      "جون إف كينيدي",
+      "رونالد ريغان",
+      "ريتشارد نيكسون",
+      "ليندون جونسون"
+    ],
+    "correct_answer": "John F. Kennedy",
+    "correct_answer_ar": "جون إف كينيدي",
+    "explanation": "US President John F. Kennedy said 'Ich bin ein Berliner' (I am a Berliner) in 1963 to support the people of West Berlin.",
+    "explanation_ar": "قال الرئيس الأمريكي جون إف كينيدي 'أنا برليني' عام ١٩٦٣ دعمًا لسكان برلين الغربية.",
+    "image": ""
+  },
+  {
+    "id": "cws_031",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What was the Bay of Pigs invasion in April 1961?",
+    "question_ar": "ما هو غزو خليج الخنازير في أبريل ١٩٦١؟",
+    "options": [
+      "A failed US-backed attempt to overthrow Cuba's leader",
+      "A Soviet attack on Florida",
+      "A trade war with Mexico",
+      "A US space launch"
+    ],
+    "options_ar": [
+      "محاولة فاشلة بدعم أمريكي للإطاحة بزعيم كوبا",
+      "هجوم سوفيتي على فلوريدا",
+      "حرب تجارية مع المكسيك",
+      "إطلاق فضائي أمريكي"
+    ],
+    "correct_answer": "A failed US-backed attempt to overthrow Cuba's leader",
+    "correct_answer_ar": "محاولة فاشلة بدعم أمريكي للإطاحة بزعيم كوبا",
+    "explanation": "In April 1961, Cuban exiles backed by the US tried to invade Cuba at the Bay of Pigs. The mission failed quickly.",
+    "explanation_ar": "في أبريل ١٩٦١، حاول المنفيون الكوبيون بدعم أمريكي غزو كوبا في خليج الخنازير. فشلت المهمة بسرعة.",
+    "image": ""
+  },
+  {
+    "id": "cws_032",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who was the Soviet leader from 1953 to 1964 and famously banged his shoe at the UN?",
+    "question_ar": "من كان الزعيم السوفيتي من ١٩٥٣ إلى ١٩٦٤ والذي ضرب بحذائه الشهير في الأمم المتحدة؟",
+    "options": [
+      "Nikita Khrushchev",
+      "Joseph Stalin",
+      "Leonid Brezhnev",
+      "Mikhail Gorbachev"
+    ],
+    "options_ar": [
+      "نيكيتا خروتشوف",
+      "جوزيف ستالين",
+      "ليونيد بريجنيف",
+      "ميخائيل غورباتشوف"
+    ],
+    "correct_answer": "Nikita Khrushchev",
+    "correct_answer_ar": "نيكيتا خروتشوف",
+    "explanation": "Nikita Khrushchev led the Soviet Union from 1953 to 1964. People still remember his shoe-banging moment at the UN in 1960.",
+    "explanation_ar": "قاد نيكيتا خروتشوف الاتحاد السوفيتي من ١٩٥٣ إلى ١٩٦٤. لا يزال الناس يتذكرون لحظة ضربه بالحذاء في الأمم المتحدة عام ١٩٦٠.",
+    "image": ""
+  },
+  {
+    "id": "cws_033",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who led the Soviet Union until his death in 1953?",
+    "question_ar": "من قاد الاتحاد السوفيتي حتى وفاته عام ١٩٥٣؟",
+    "options": [
+      "Joseph Stalin",
+      "Vladimir Lenin",
+      "Nikita Khrushchev",
+      "Boris Yeltsin"
+    ],
+    "options_ar": [
+      "جوزيف ستالين",
+      "فلاديمير لينين",
+      "نيكيتا خروتشوف",
+      "بوريس يلتسين"
+    ],
+    "correct_answer": "Joseph Stalin",
+    "correct_answer_ar": "جوزيف ستالين",
+    "explanation": "Joseph Stalin led the Soviet Union for many years until his death in 1953. The early Cold War years happened under his rule.",
+    "explanation_ar": "قاد جوزيف ستالين الاتحاد السوفيتي لسنوات عديدة حتى وفاته عام ١٩٥٣. وقعت سنوات الحرب الباردة الأولى في عهده.",
+    "image": ""
+  },
+  {
+    "id": "cws_034",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "When was US President John F. Kennedy assassinated?",
+    "question_ar": "متى اغتيل الرئيس الأمريكي جون إف كينيدي؟",
+    "options": [
+      "November 22, 1963",
+      "July 4, 1969",
+      "January 1, 1965",
+      "March 15, 1960"
+    ],
+    "options_ar": [
+      "٢٢ نوفمبر ١٩٦٣",
+      "٤ يوليو ١٩٦٩",
+      "١ يناير ١٩٦٥",
+      "١٥ مارس ١٩٦٠"
+    ],
+    "correct_answer": "November 22, 1963",
+    "correct_answer_ar": "٢٢ نوفمبر ١٩٦٣",
+    "explanation": "President John F. Kennedy was assassinated on November 22, 1963 in Dallas, Texas. He was the 35th US president.",
+    "explanation_ar": "اغتيل الرئيس جون إف كينيدي في ٢٢ نوفمبر ١٩٦٣ في دالاس بولاية تكساس. كان الرئيس الخامس والثلاثين للولايات المتحدة.",
+    "image": ""
+  },
+  {
+    "id": "cws_035",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What does 'glasnost' mean?",
+    "question_ar": "ماذا تعني كلمة 'غلاسنوست'؟",
+    "options": [
+      "Openness",
+      "Restructuring",
+      "Power",
+      "Secret"
+    ],
+    "options_ar": [
+      "الانفتاح",
+      "إعادة الهيكلة",
+      "القوة",
+      "السر"
+    ],
+    "correct_answer": "Openness",
+    "correct_answer_ar": "الانفتاح",
+    "explanation": "Glasnost is a Russian word that means 'openness'. Gorbachev used it to allow more free speech in the Soviet Union.",
+    "explanation_ar": "الغلاسنوست كلمة روسية تعني 'الانفتاح'. استخدمها غورباتشوف للسماح بمزيد من حرية التعبير في الاتحاد السوفيتي.",
+    "image": ""
+  },
+  {
+    "id": "cws_036",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What does 'perestroika' mean?",
+    "question_ar": "ماذا تعني كلمة 'بيريسترويكا'؟",
+    "options": [
+      "Restructuring",
+      "Openness",
+      "Freedom",
+      "War"
+    ],
+    "options_ar": [
+      "إعادة الهيكلة",
+      "الانفتاح",
+      "الحرية",
+      "الحرب"
+    ],
+    "correct_answer": "Restructuring",
+    "correct_answer_ar": "إعادة الهيكلة",
+    "explanation": "Perestroika means 'restructuring' in Russian. It was Gorbachev's plan to reform the Soviet economy and government.",
+    "explanation_ar": "تعني بيريسترويكا 'إعادة الهيكلة' بالروسية. كانت خطة غورباتشوف لإصلاح الاقتصاد والحكومة السوفيتية.",
+    "image": ""
+  },
+  {
+    "id": "cws_037",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who was the famous female dancer-spy executed in 1917 as a German spy?",
+    "question_ar": "من هي الراقصة الجاسوسة الشهيرة التي أُعدمت عام ١٩١٧ بتهمة التجسس لصالح ألمانيا؟",
+    "options": [
+      "Mata Hari",
+      "Ethel Rosenberg",
+      "Elizabeth Bentley",
+      "Aldrich Ames"
+    ],
+    "options_ar": [
+      "ماتا هاري",
+      "إثيل روزنبرغ",
+      "إليزابيث بنتلي",
+      "ألدريتش أيمز"
+    ],
+    "correct_answer": "Mata Hari",
+    "correct_answer_ar": "ماتا هاري",
+    "explanation": "Mata Hari was a Dutch dancer accused of spying for Germany during World War I. She was executed in 1917 in France.",
+    "explanation_ar": "ماتا هاري راقصة هولندية اتُّهمت بالتجسس لصالح ألمانيا خلال الحرب العالمية الأولى. أُعدمت عام ١٩١٧ في فرنسا.",
+    "image": ""
+  },
+  {
+    "id": "cws_038",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which famous spy ring spied for the Soviet Union from the United Kingdom?",
+    "question_ar": "أي حلقة جاسوسية شهيرة تجسست لصالح الاتحاد السوفيتي من المملكة المتحدة؟",
+    "options": [
+      "The Cambridge Five",
+      "The Boston Three",
+      "The Moscow Seven",
+      "The Oxford Pair"
+    ],
+    "options_ar": [
+      "خمسة كامبريدج",
+      "ثلاثة بوسطن",
+      "سبعة موسكو",
+      "ثنائي أكسفورد"
+    ],
+    "correct_answer": "The Cambridge Five",
+    "correct_answer_ar": "خمسة كامبريدج",
+    "explanation": "The Cambridge Five were British men, including Burgess, Maclean, Philby, Blunt, and Cairncross, who secretly spied for the Soviet Union.",
+    "explanation_ar": "خمسة كامبريدج كانوا رجالًا بريطانيين، من بينهم بيرغيس وماكلين وفيلبي وبلانت وكيرنكروس، تجسسوا سرًا لصالح الاتحاد السوفيتي.",
+    "image": ""
+  },
+  {
+    "id": "cws_039",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Where did the famous British spy Kim Philby flee to in 1963?",
+    "question_ar": "إلى أين فرّ الجاسوس البريطاني الشهير كيم فيلبي عام ١٩٦٣؟",
+    "options": [
+      "The Soviet Union",
+      "Australia",
+      "Canada",
+      "Japan"
+    ],
+    "options_ar": [
+      "الاتحاد السوفيتي",
+      "أستراليا",
+      "كندا",
+      "اليابان"
+    ],
+    "correct_answer": "The Soviet Union",
+    "correct_answer_ar": "الاتحاد السوفيتي",
+    "explanation": "Kim Philby was one of the Cambridge Five spies. In 1963, he fled to the Soviet Union and lived there until his death.",
+    "explanation_ar": "كان كيم فيلبي أحد جواسيس خمسة كامبريدج. في عام ١٩٦٣، فرّ إلى الاتحاد السوفيتي وعاش هناك حتى وفاته.",
+    "image": ""
+  },
+  {
+    "id": "cws_040",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who was Aldrich Ames?",
+    "question_ar": "من هو ألدريتش أيمز؟",
+    "options": [
+      "A CIA officer who secretly spied for the Soviets and was caught in 1994",
+      "A famous American astronaut",
+      "A Russian president",
+      "A British prime minister"
+    ],
+    "options_ar": [
+      "ضابط في وكالة المخابرات المركزية تجسس سرًا لصالح السوفييت وقُبض عليه عام ١٩٩٤",
+      "رائد فضاء أمريكي شهير",
+      "رئيس روسي",
+      "رئيس وزراء بريطاني"
+    ],
+    "correct_answer": "A CIA officer who secretly spied for the Soviets and was caught in 1994",
+    "correct_answer_ar": "ضابط في وكالة المخابرات المركزية تجسس سرًا لصالح السوفييت وقُبض عليه عام ١٩٩٤",
+    "explanation": "Aldrich Ames was a CIA officer who secretly worked for the KGB. He was caught in 1994 after years of spying.",
+    "explanation_ar": "كان ألدريتش أيمز ضابطًا في وكالة المخابرات المركزية يعمل سرًا لصالح الكي جي بي. قُبض عليه عام ١٩٩٤ بعد سنوات من التجسس.",
+    "image": ""
+  },
+  {
+    "id": "cws_041",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who was Robert Hanssen?",
+    "question_ar": "من هو روبرت هانسن؟",
+    "options": [
+      "An FBI agent who spied for the Soviets and was exposed in 2001",
+      "A British astronaut",
+      "An American president",
+      "A French scientist"
+    ],
+    "options_ar": [
+      "عميل في مكتب التحقيقات الفيدرالي تجسس لصالح السوفييت وكُشف أمره عام ٢٠٠١",
+      "رائد فضاء بريطاني",
+      "رئيس أمريكي",
+      "عالم فرنسي"
+    ],
+    "correct_answer": "An FBI agent who spied for the Soviets and was exposed in 2001",
+    "correct_answer_ar": "عميل في مكتب التحقيقات الفيدرالي تجسس لصالح السوفييت وكُشف أمره عام ٢٠٠١",
+    "explanation": "Robert Hanssen was an FBI agent who secretly sold US secrets to the Soviets and later the Russians. He was caught in 2001.",
+    "explanation_ar": "كان روبرت هانسن عميلًا في مكتب التحقيقات الفيدرالي يبيع سرًا أسرار الولايات المتحدة للسوفييت ثم للروس. قُبض عليه عام ٢٠٠١.",
+    "image": ""
+  },
+  {
+    "id": "cws_042",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What was the Velvet Revolution?",
+    "question_ar": "ما هي ثورة المخمل؟",
+    "options": [
+      "A peaceful 1989 revolution that ended communism in Czechoslovakia",
+      "A famous fashion show",
+      "A war in Africa",
+      "A space project"
+    ],
+    "options_ar": [
+      "ثورة سلمية عام ١٩٨٩ أنهت الشيوعية في تشيكوسلوفاكيا",
+      "عرض أزياء شهير",
+      "حرب في أفريقيا",
+      "مشروع فضائي"
+    ],
+    "correct_answer": "A peaceful 1989 revolution that ended communism in Czechoslovakia",
+    "correct_answer_ar": "ثورة سلمية عام ١٩٨٩ أنهت الشيوعية في تشيكوسلوفاكيا",
+    "explanation": "The Velvet Revolution in 1989 was a peaceful change that ended communist rule in Czechoslovakia, without major fighting.",
+    "explanation_ar": "كانت ثورة المخمل عام ١٩٨٩ تغييرًا سلميًا أنهى الحكم الشيوعي في تشيكوسلوفاكيا، دون قتال كبير.",
+    "image": ""
+  },
+  {
+    "id": "cws_043",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who was the leader of Poland's Solidarity movement?",
+    "question_ar": "من كان زعيم حركة التضامن البولندية؟",
+    "options": [
+      "Lech Walesa",
+      "Vaclav Havel",
+      "Boris Yeltsin",
+      "Helmut Kohl"
+    ],
+    "options_ar": [
+      "ليش فاونسا",
+      "فاتسلاف هافيل",
+      "بوريس يلتسين",
+      "هيلموت كول"
+    ],
+    "correct_answer": "Lech Walesa",
+    "correct_answer_ar": "ليش فاونسا",
+    "explanation": "Lech Walesa led Poland's Solidarity movement, a workers' union that helped end communism. He won the Nobel Peace Prize in 1983.",
+    "explanation_ar": "قاد ليش فاونسا حركة التضامن البولندية، وهي نقابة عمالية ساعدت في إنهاء الشيوعية. فاز بجائزة نوبل للسلام عام ١٩٨٣.",
+    "image": ""
+  },
+  {
+    "id": "cws_044",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What was the 'Star Wars' or Strategic Defense Initiative announced by Reagan in 1983?",
+    "question_ar": "ما هو 'حرب النجوم' أو مبادرة الدفاع الاستراتيجي التي أعلنها ريغان عام ١٩٨٣؟",
+    "options": [
+      "A US plan to build a missile defense in space",
+      "A Hollywood movie deal",
+      "A new American spaceship",
+      "A NATO submarine project"
+    ],
+    "options_ar": [
+      "خطة أمريكية لبناء دفاع صاروخي في الفضاء",
+      "صفقة فيلم هوليوودي",
+      "مركبة فضائية أمريكية جديدة",
+      "مشروع غواصة لحلف الناتو"
+    ],
+    "correct_answer": "A US plan to build a missile defense in space",
+    "correct_answer_ar": "خطة أمريكية لبناء دفاع صاروخي في الفضاء",
+    "explanation": "President Reagan announced the Strategic Defense Initiative (SDI) in 1983. People nicknamed it 'Star Wars' because it would use space-based defenses.",
+    "explanation_ar": "أعلن الرئيس ريغان مبادرة الدفاع الاستراتيجي (SDI) عام ١٩٨٣. أطلق عليها الناس اسم 'حرب النجوم' لأنها كانت ستستخدم دفاعات في الفضاء.",
+    "image": ""
+  },
+  {
+    "id": "cws_045",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which Olympics did the United States lead a boycott of?",
+    "question_ar": "أي ألعاب أولمبية قادت الولايات المتحدة مقاطعتها؟",
+    "options": [
+      "1980 Moscow Olympics",
+      "1984 Los Angeles Olympics",
+      "1988 Seoul Olympics",
+      "1976 Montreal Olympics"
+    ],
+    "options_ar": [
+      "أولمبياد موسكو ١٩٨٠",
+      "أولمبياد لوس أنجلوس ١٩٨٤",
+      "أولمبياد سيول ١٩٨٨",
+      "أولمبياد مونتريال ١٩٧٦"
+    ],
+    "correct_answer": "1980 Moscow Olympics",
+    "correct_answer_ar": "أولمبياد موسكو ١٩٨٠",
+    "explanation": "The US led a boycott of the 1980 Moscow Olympics. Four years later, the Soviet Union led a boycott of the 1984 Los Angeles Olympics.",
+    "explanation_ar": "قادت الولايات المتحدة مقاطعة أولمبياد موسكو ١٩٨٠. وبعد أربع سنوات، قاد الاتحاد السوفيتي مقاطعة أولمبياد لوس أنجلوس ١٩٨٤.",
+    "image": ""
+  },
+  {
+    "id": "cws_046",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What was the Hungarian Revolution of 1956?",
+    "question_ar": "ما هي الثورة الهنغارية عام ١٩٥٦؟",
+    "options": [
+      "A Hungarian uprising against Soviet control, crushed by the USSR",
+      "A music festival",
+      "A new Hungarian sport",
+      "A scientific discovery"
+    ],
+    "options_ar": [
+      "انتفاضة هنغارية ضد السيطرة السوفيتية، سحقها الاتحاد السوفيتي",
+      "مهرجان موسيقي",
+      "رياضة هنغارية جديدة",
+      "اكتشاف علمي"
+    ],
+    "correct_answer": "A Hungarian uprising against Soviet control, crushed by the USSR",
+    "correct_answer_ar": "انتفاضة هنغارية ضد السيطرة السوفيتية، سحقها الاتحاد السوفيتي",
+    "explanation": "In 1956, Hungarians rose up against Soviet control. Soviet tanks moved in and ended the revolution.",
+    "explanation_ar": "في عام ١٩٥٦، انتفض الهنغاريون ضد السيطرة السوفيتية. دخلت الدبابات السوفيتية وأنهت الثورة.",
+    "image": ""
+  },
+  {
+    "id": "cws_047",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What was the Truman Doctrine?",
+    "question_ar": "ما هو مبدأ ترومان؟",
+    "options": [
+      "A 1947 US policy to support countries threatened by communism",
+      "A US program to build moon rockets",
+      "A British rule about taxes",
+      "A French foreign aid plan"
+    ],
+    "options_ar": [
+      "سياسة أمريكية عام ١٩٤٧ لدعم الدول المهددة بالشيوعية",
+      "برنامج أمريكي لبناء صواريخ القمر",
+      "قاعدة بريطانية بشأن الضرائب",
+      "خطة مساعدات خارجية فرنسية"
+    ],
+    "correct_answer": "A 1947 US policy to support countries threatened by communism",
+    "correct_answer_ar": "سياسة أمريكية عام ١٩٤٧ لدعم الدول المهددة بالشيوعية",
+    "explanation": "The Truman Doctrine, announced in 1947, said the US would help countries that were threatened by communist takeovers.",
+    "explanation_ar": "نصّ مبدأ ترومان، الذي أُعلن عام ١٩٤٧، على أن الولايات المتحدة ستساعد الدول المهددة بالاستيلاء الشيوعي.",
+    "image": ""
+  },
+  {
+    "id": "cws_048",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What did MAD stand for during the Cold War?",
+    "question_ar": "ماذا يعني اختصار MAD خلال الحرب الباردة؟",
+    "options": [
+      "Mutually Assured Destruction",
+      "Major Atomic Defense",
+      "Massive American Doctrine",
+      "Modern Allied Decision"
+    ],
+    "options_ar": [
+      "الدمار المؤكد المتبادل",
+      "الدفاع الذري الكبير",
+      "المبدأ الأمريكي الضخم",
+      "القرار المتحالف الحديث"
+    ],
+    "correct_answer": "Mutually Assured Destruction",
+    "correct_answer_ar": "الدمار المؤكد المتبادل",
+    "explanation": "MAD stood for 'Mutually Assured Destruction'. It meant both sides had so many nuclear weapons that any war would destroy everyone.",
+    "explanation_ar": "كان MAD يعني 'الدمار المؤكد المتبادل'. كان يعني أن كلا الجانبين لديهما أسلحة نووية كثيرة لدرجة أن أي حرب ستدمر الجميع.",
+    "image": ""
+  },
+  {
+    "id": "cws_049",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What was the Stasi?",
+    "question_ar": "ما هي الشتازي؟",
+    "options": [
+      "The East German secret police",
+      "A Soviet space station",
+      "A US spy plane",
+      "A NATO base"
+    ],
+    "options_ar": [
+      "شرطة سرية ألمانية شرقية",
+      "محطة فضاء سوفيتية",
+      "طائرة تجسس أمريكية",
+      "قاعدة لحلف الناتو"
+    ],
+    "correct_answer": "The East German secret police",
+    "correct_answer_ar": "شرطة سرية ألمانية شرقية",
+    "explanation": "The Stasi was the secret police of East Germany. They watched citizens carefully and kept many files about them.",
+    "explanation_ar": "كانت الشتازي الشرطة السرية لألمانيا الشرقية. راقبوا المواطنين بدقة واحتفظوا بملفات كثيرة عنهم.",
+    "image": ""
+  },
+  {
+    "id": "cws_050",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What did SALT stand for in Cold War talks?",
+    "question_ar": "ماذا يعني اختصار SALT في محادثات الحرب الباردة؟",
+    "options": [
+      "Strategic Arms Limitation Talks",
+      "Soviet American Land Treaty",
+      "Special Allied Logistics Team",
+      "Space And Land Technology"
+    ],
+    "options_ar": [
+      "محادثات الحد من الأسلحة الاستراتيجية",
+      "معاهدة الأراضي السوفيتية الأمريكية",
+      "فريق اللوجستيات المتحالف الخاص",
+      "تكنولوجيا الفضاء والأرض"
+    ],
+    "correct_answer": "Strategic Arms Limitation Talks",
+    "correct_answer_ar": "محادثات الحد من الأسلحة الاستراتيجية",
+    "explanation": "SALT stood for 'Strategic Arms Limitation Talks'. The US and USSR met in the 1970s to limit the number of nuclear weapons each had.",
+    "explanation_ar": "كان SALT يعني 'محادثات الحد من الأسلحة الاستراتيجية'. التقت الولايات المتحدة والاتحاد السوفيتي في السبعينيات للحد من عدد الأسلحة النووية لدى كل منهما.",
+    "image": ""
+  },
+  {
+    "id": "cws_051",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What was the Prague Spring of 1968?",
+    "question_ar": "ما هو ربيع براغ عام ١٩٦٨؟",
+    "options": [
+      "A reform movement in Czechoslovakia ended by Soviet tanks",
+      "A festival held in Prague each spring",
+      "A famous spring of fresh water in Prague",
+      "A Soviet space launch"
+    ],
+    "options_ar": [
+      "حركة إصلاحية في تشيكوسلوفاكيا أنهتها الدبابات السوفيتية",
+      "مهرجان يقام في براغ كل ربيع",
+      "نبع مياه عذبة شهير في براغ",
+      "إطلاق فضائي سوفيتي"
+    ],
+    "correct_answer": "A reform movement in Czechoslovakia ended by Soviet tanks",
+    "correct_answer_ar": "حركة إصلاحية في تشيكوسلوفاكيا أنهتها الدبابات السوفيتية",
+    "explanation": "The Prague Spring of 1968 was a time of reform in Czechoslovakia. Soviet and Warsaw Pact troops ended it with an invasion.",
+    "explanation_ar": "كان ربيع براغ عام ١٩٦٨ وقت إصلاح في تشيكوسلوفاكيا. أنهته القوات السوفيتية وقوات حلف وارسو بغزو.",
+    "image": ""
+  },
+  {
+    "id": "cws_052",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What was the Suez Crisis of 1956 about?",
+    "question_ar": "حول ماذا كانت أزمة السويس عام ١٩٥٦؟",
+    "options": [
+      "A conflict over the Suez Canal in Egypt",
+      "A revolt in South America",
+      "A space race event",
+      "A tax dispute in Europe"
+    ],
+    "options_ar": [
+      "نزاع حول قناة السويس في مصر",
+      "ثورة في أمريكا الجنوبية",
+      "حدث في سباق الفضاء",
+      "نزاع ضريبي في أوروبا"
+    ],
+    "correct_answer": "A conflict over the Suez Canal in Egypt",
+    "correct_answer_ar": "نزاع حول قناة السويس في مصر",
+    "explanation": "The Suez Crisis in 1956 was about control of the Suez Canal in Egypt. The US and USSR both pushed for the conflict to end peacefully.",
+    "explanation_ar": "كانت أزمة السويس عام ١٩٥٦ بشأن السيطرة على قناة السويس في مصر. ضغطت كل من الولايات المتحدة والاتحاد السوفيتي لإنهاء النزاع سلميًا.",
+    "image": ""
+  },
+  {
+    "id": "cws_053",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which spies were executed in 1953 for passing atomic secrets to the USSR?",
+    "question_ar": "أي جواسيس أُعدموا عام ١٩٥٣ لتمريرهم أسرارًا ذرية إلى الاتحاد السوفيتي؟",
+    "options": [
+      "Julius and Ethel Rosenberg",
+      "John and Mary Smith",
+      "George and Anna Blake",
+      "Peter and Helen Kroger"
+    ],
+    "options_ar": [
+      "يوليوس وإثيل روزنبرغ",
+      "جون وماري سميث",
+      "جورج وآنا بليك",
+      "بيتر وهيلين كروغر"
+    ],
+    "correct_answer": "Julius and Ethel Rosenberg",
+    "correct_answer_ar": "يوليوس وإثيل روزنبرغ",
+    "explanation": "Julius and Ethel Rosenberg were a US couple convicted of giving atomic bomb secrets to the Soviet Union. They were executed in 1953.",
+    "explanation_ar": "كان يوليوس وإثيل روزنبرغ زوجين أمريكيين أُدينا بإعطاء أسرار القنبلة الذرية للاتحاد السوفيتي. أُعدما عام ١٩٥٣.",
+    "image": ""
+  },
+  {
+    "id": "cws_054",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Who was Klaus Fuchs?",
+    "question_ar": "من هو كلاوس فوكس؟",
+    "options": [
+      "A scientist who passed atomic secrets to the Soviet Union",
+      "A Russian general",
+      "An American president",
+      "A British astronaut"
+    ],
+    "options_ar": [
+      "عالم مرر أسرارًا ذرية إلى الاتحاد السوفيتي",
+      "جنرال روسي",
+      "رئيس أمريكي",
+      "رائد فضاء بريطاني"
+    ],
+    "correct_answer": "A scientist who passed atomic secrets to the Soviet Union",
+    "correct_answer_ar": "عالم مرر أسرارًا ذرية إلى الاتحاد السوفيتي",
+    "explanation": "Klaus Fuchs was a German-born scientist who worked on the atomic bomb in the West. He secretly gave nuclear secrets to the Soviet Union.",
+    "explanation_ar": "كان كلاوس فوكس عالمًا ألماني المولد عمل على القنبلة الذرية في الغرب. أعطى سرًا أسرارًا نووية للاتحاد السوفيتي.",
+    "image": ""
+  },
+  {
+    "id": "cws_055",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Where did Reagan and Gorbachev meet for a famous summit in 1986?",
+    "question_ar": "أين التقى ريغان وغورباتشوف في قمة شهيرة عام ١٩٨٦؟",
+    "options": [
+      "Reykjavik, Iceland",
+      "Berlin, Germany",
+      "Paris, France",
+      "Tokyo, Japan"
+    ],
+    "options_ar": [
+      "ريكيافيك، آيسلندا",
+      "برلين، ألمانيا",
+      "باريس، فرنسا",
+      "طوكيو، اليابان"
+    ],
+    "correct_answer": "Reykjavik, Iceland",
+    "correct_answer_ar": "ريكيافيك، آيسلندا",
+    "explanation": "Reagan and Gorbachev met at the Reykjavik Summit in Iceland in 1986. They discussed reducing nuclear weapons.",
+    "explanation_ar": "التقى ريغان وغورباتشوف في قمة ريكيافيك في آيسلندا عام ١٩٨٦. ناقشا تقليل الأسلحة النووية.",
+    "image": ""
+  },
+  {
+    "id": "cws_056",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What is a 'one-time pad' in spy work?",
+    "question_ar": "ما هو 'الدفتر مرة واحدة' في عمل التجسس؟",
+    "options": [
+      "A code system using a key used only once for each message",
+      "A small notebook for shopping lists",
+      "A type of radio antenna",
+      "A school exam"
+    ],
+    "options_ar": [
+      "نظام تشفير يستخدم مفتاحًا يُستعمل مرة واحدة فقط لكل رسالة",
+      "دفتر صغير لقوائم التسوق",
+      "نوع من هوائيات الراديو",
+      "اختبار مدرسي"
+    ],
+    "correct_answer": "A code system using a key used only once for each message",
+    "correct_answer_ar": "نظام تشفير يستخدم مفتاحًا يُستعمل مرة واحدة فقط لكل رسالة",
+    "explanation": "A one-time pad uses a list of random keys, where each key is used only once. If used correctly, the messages are nearly impossible to crack.",
+    "explanation_ar": "يستخدم الدفتر مرة واحدة قائمة من المفاتيح العشوائية، حيث يُستخدم كل مفتاح مرة واحدة فقط. إذا استُخدم بشكل صحيح، تصبح الرسائل شبه مستحيلة الكسر.",
+    "image": ""
+  },
+  {
+    "id": "cws_057",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What is a 'microdot' used for in spy work?",
+    "question_ar": "ما الذي يُستخدم له 'النقطة الدقيقة' في عمل الجاسوسية؟",
+    "options": [
+      "Hiding a tiny photo with a lot of information in a small dot",
+      "A type of radio signal",
+      "A spy-only food item",
+      "A new kind of car"
+    ],
+    "options_ar": [
+      "إخفاء صورة دقيقة جدًا بمعلومات كثيرة داخل نقطة صغيرة",
+      "نوع من إشارات الراديو",
+      "طعام خاص بالجواسيس",
+      "نوع جديد من السيارات"
+    ],
+    "correct_answer": "Hiding a tiny photo with a lot of information in a small dot",
+    "correct_answer_ar": "إخفاء صورة دقيقة جدًا بمعلومات كثيرة داخل نقطة صغيرة",
+    "explanation": "A microdot is a tiny photograph the size of a printed dot. Spies could hide a whole page of secrets in something that looks like a period.",
+    "explanation_ar": "النقطة الدقيقة هي صورة صغيرة جدًا بحجم نقطة مطبوعة. كان بإمكان الجواسيس إخفاء صفحة كاملة من الأسرار في شيء يشبه نقطة.",
+    "image": ""
+  },
+  {
+    "id": "cws_058",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Who wrote the spy novel 'Tinker Tailor Soldier Spy' featuring George Smiley?",
+    "question_ar": "من كتب رواية التجسس 'الجاسوس الذي جاء من البرد' بطولة جورج سمايلي؟",
+    "options": [
+      "John le Carré",
+      "Ian Fleming",
+      "Agatha Christie",
+      "Tom Clancy"
+    ],
+    "options_ar": [
+      "جون لو كاريه",
+      "إيان فليمنغ",
+      "أغاثا كريستي",
+      "توم كلانسي"
+    ],
+    "correct_answer": "John le Carré",
+    "correct_answer_ar": "جون لو كاريه",
+    "explanation": "John le Carré wrote 'Tinker Tailor Soldier Spy' in 1974. His character George Smiley is a thoughtful British spy who is very different from James Bond.",
+    "explanation_ar": "كتب جون لو كاريه 'الجاسوس الذي جاء من البرد' عام ١٩٧٤. شخصيته جورج سمايلي جاسوس بريطاني مفكر يختلف كثيرًا عن جيمس بوند.",
+    "image": ""
+  },
+  {
+    "id": "cws_059",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which actor played James Bond first in the 1962 film 'Dr. No'?",
+    "question_ar": "أي ممثل أدى دور جيمس بوند لأول مرة في فيلم 'دكتور نو' عام ١٩٦٢؟",
+    "options": [
+      "Sean Connery",
+      "Roger Moore",
+      "Daniel Craig",
+      "Pierce Brosnan"
+    ],
+    "options_ar": [
+      "شون كونري",
+      "روجر مور",
+      "دانيال كريغ",
+      "بيرس بروسنان"
+    ],
+    "correct_answer": "Sean Connery",
+    "correct_answer_ar": "شون كونري",
+    "explanation": "Scottish actor Sean Connery was the first to play James Bond on film, starting with 'Dr. No' in 1962.",
+    "explanation_ar": "كان الممثل الاسكتلندي شون كونري أول من أدى دور جيمس بوند في الأفلام، بدءًا من 'دكتور نو' عام ١٩٦٢.",
+    "image": ""
+  },
+  {
+    "id": "cws_060",
+    "type": "multiple_choice",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What machine did Britain famously use to break secret German codes in WWII, before the Cold War?",
+    "question_ar": "ما الآلة الشهيرة التي استخدمتها بريطانيا لكسر الشفرات الألمانية السرية في الحرب العالمية الثانية، قبل الحرب الباردة؟",
+    "options": [
+      "The Enigma machine (which Britain helped to crack)",
+      "A modern smartphone",
+      "A satellite radio",
+      "A simple typewriter"
+    ],
+    "options_ar": [
+      "آلة إنيغما (التي ساعدت بريطانيا على فك شفرتها)",
+      "هاتف ذكي حديث",
+      "راديو الأقمار الصناعية",
+      "آلة كاتبة بسيطة"
+    ],
+    "correct_answer": "The Enigma machine (which Britain helped to crack)",
+    "correct_answer_ar": "آلة إنيغما (التي ساعدت بريطانيا على فك شفرتها)",
+    "explanation": "The Germans used the Enigma machine in WWII to send secret messages. British codebreakers, including Alan Turing, helped crack its codes.",
+    "explanation_ar": "استخدم الألمان آلة إنيغما في الحرب العالمية الثانية لإرسال رسائل سرية. ساعد محللو الشفرات البريطانيون، ومنهم آلان تورنغ، في كسر شفراتها.",
+    "image": ""
+  }
+]

@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:aziz_academy/core/l10n/context_ext.dart';
@@ -7,6 +10,8 @@ import 'package:aziz_academy/core/providers/daily_challenge_provider.dart';
 import 'package:aziz_academy/core/router/app_router.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
+import 'package:aziz_academy/core/utils/digits.dart';
+import 'package:aziz_academy/core/widgets/responsive.dart';
 
 // =============================================================================
 // Daily Challenge Screen
@@ -25,6 +30,7 @@ class _DailyChallengeScreenState extends ConsumerState<DailyChallengeScreen>
   String? _selectedAnswer;
   bool _answerRevealed = false;
   int _xpAwarded = 0;
+  Timer? _advanceTimer;
 
   late final AnimationController _feedbackCtrl;
   late final Animation<double> _feedbackScale;
@@ -44,6 +50,7 @@ class _DailyChallengeScreenState extends ConsumerState<DailyChallengeScreen>
 
   @override
   void dispose() {
+    _advanceTimer?.cancel();
     _feedbackCtrl.dispose();
     super.dispose();
   }
@@ -52,6 +59,14 @@ class _DailyChallengeScreenState extends ConsumerState<DailyChallengeScreen>
 
   void _onOptionTap(String choice, DailyChallengeState s) {
     if (_answerRevealed) return;
+    final correctAnswer = s.currentQuestion?.correctAnswer;
+    if (correctAnswer != null) {
+      if (choice == correctAnswer) {
+        HapticFeedback.lightImpact();
+      } else {
+        HapticFeedback.mediumImpact();
+      }
+    }
     setState(() {
       _selectedAnswer = choice;
       _answerRevealed = true;
@@ -59,22 +74,27 @@ class _DailyChallengeScreenState extends ConsumerState<DailyChallengeScreen>
     _feedbackCtrl.forward(from: 0);
     ref.read(dailyChallengeProvider.notifier).answer(choice);
 
-    Future.delayed(const Duration(milliseconds: 900), _advance);
+    _advanceTimer?.cancel();
+    _advanceTimer = Timer(const Duration(milliseconds: 900), _advance);
   }
 
   void _advance() async {
     if (!mounted) return;
-    final s = ref.read(dailyChallengeProvider).value;
-    if (s == null) return;
 
     setState(() {
       _selectedAnswer = null;
       _answerRevealed = false;
     });
 
+    // Advance the underlying session AFTER clearing the reveal flags so the
+    // next question never renders alongside the previous answer's styling.
+    ref.read(dailyChallengeProvider.notifier).nextQuestion();
+    final s = ref.read(dailyChallengeProvider).value;
+    if (s == null) return;
+
     if (s.isComplete && !s.isCompleted) {
-      final xp =
-          await ref.read(dailyChallengeProvider.notifier).complete();
+      HapticFeedback.heavyImpact();
+      final xp = await ref.read(dailyChallengeProvider.notifier).complete();
       if (mounted) setState(() => _xpAwarded = xp);
     }
   }
@@ -93,8 +113,14 @@ class _DailyChallengeScreenState extends ConsumerState<DailyChallengeScreen>
           child: CircularProgressIndicator(color: AppColors.secondary),
         ),
         error: (e, _) => Center(
-          child: Text(e.toString(),
-              style: AppTextStyles.bodyLarge.copyWith(color: AppColors.error)),
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Text(
+              l10n.quizLoadError,
+              textAlign: TextAlign.center,
+              style: AppTextStyles.bodyLarge.copyWith(color: AppColors.error),
+            ),
+          ),
         ),
         data: (s) {
           if (s.isComplete) {
@@ -145,128 +171,133 @@ class _QuizBody extends StatelessWidget {
     if (q == null) return const SizedBox.shrink();
 
     return SafeArea(
-      child: Column(
-        children: [
-          // ── Header bar ────────────────────────────────────────────────
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
-            child: Row(
-              children: [
-                // Back arrow
-                GestureDetector(
-                  onTap: () => context.go(AppRoutes.home),
-                  child: Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.surfaceContainerLow,
-                    ),
-                    child: Icon(
-                      Directionality.of(context) == TextDirection.rtl
-                          ? Icons.arrow_forward_ios_rounded
-                          : Icons.arrow_back_ios_new_rounded,
-                      size: 18,
-                      color: AppColors.secondary,
+      child: CenteredBody(
+        wide: true,
+        child: Column(
+          children: [
+            // ── Header bar ────────────────────────────────────────────────
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+              child: Row(
+                children: [
+                  // Back arrow
+                  GestureDetector(
+                    onTap: () => context.go(AppRoutes.home),
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: AppColors.surfaceContainerLow,
+                      ),
+                      child: Icon(
+                        Directionality.of(context) == TextDirection.rtl
+                            ? Icons.arrow_forward_ios_rounded
+                            : Icons.arrow_back_ios_new_rounded,
+                        size: 18,
+                        color: AppColors.secondary,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(width: 12),
-                // Title + question counter
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        l10n.dailyChallengeTitle,
-                        style: AppTextStyles.headingSmall.copyWith(
-                          color: AppColors.secondary,
+                  const SizedBox(width: 12),
+                  // Title + question counter
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.dailyChallengeTitle,
+                          style: AppTextStyles.headingSmall.copyWith(
+                            color: AppColors.secondary,
+                          ),
                         ),
-                      ),
-                      Text(
-                        l10n.dailyChallengeQuestionOf(
-                          state.currentIndex + 1 <= state.totalQuestions
-                              ? state.currentIndex + 1
-                              : state.totalQuestions,
-                          state.totalQuestions,
+                        Text(
+                          l10n.dailyChallengeQuestionOf(
+                            state.currentIndex + 1 <= state.totalQuestions
+                                ? state.currentIndex + 1
+                                : state.totalQuestions,
+                            state.totalQuestions,
+                          ),
+                          style: AppTextStyles.caption.copyWith(
+                            color: AppColors.textMedium,
+                          ),
                         ),
-                        style: AppTextStyles.caption.copyWith(
-                          color: AppColors.textMedium,
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                // Lives
-                _LivesRow(lives: state.livesRemaining),
-              ],
-            ),
-          ),
-
-          // ── Progress bar ─────────────────────────────────────────────
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: LinearProgressIndicator(
-                value: state.progress,
-                minHeight: 6,
-                backgroundColor: AppColors.surfaceContainerHighest,
-                valueColor:
-                    const AlwaysStoppedAnimation<Color>(AppColors.secondary),
+                  // Lives
+                  _LivesRow(lives: state.livesRemaining),
+                ],
               ),
             ),
-          ),
 
-          const SizedBox(height: 12),
+            // ── Progress bar ─────────────────────────────────────────────
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: LinearProgressIndicator(
+                  value: state.progress,
+                  minHeight: 6,
+                  backgroundColor: AppColors.surfaceContainerHighest,
+                  valueColor: const AlwaysStoppedAnimation<Color>(
+                    AppColors.secondary,
+                  ),
+                ),
+              ),
+            ),
 
-          // ── Question card ─────────────────────────────────────────────
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-              child: Column(
-                children: [
-                  _QuestionCard(question: q),
-                  const SizedBox(height: 20),
-                  // ── Options ─────────────────────────────────────────
-                  ...q.options.map((opt) => Padding(
+            const SizedBox(height: 12),
+
+            // ── Question card ─────────────────────────────────────────────
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                child: Column(
+                  children: [
+                    _QuestionCard(question: q),
+                    const SizedBox(height: 20),
+                    // ── Options ─────────────────────────────────────────
+                    ...q.options.map(
+                      (opt) => Padding(
                         padding: const EdgeInsets.only(bottom: 12),
                         child: _OptionButton(
                           text: opt,
                           isSelected: opt == selectedAnswer,
                           isCorrect: answerRevealed && opt == q.correctAnswer,
-                          isWrong: answerRevealed &&
+                          isWrong:
+                              answerRevealed &&
                               opt == selectedAnswer &&
                               opt != q.correctAnswer,
                           onTap: () => onOptionTap(opt, state),
                         ),
-                      )),
-                  if (answerRevealed) ...[
-                    const SizedBox(height: 8),
-                    ScaleTransition(
-                      scale: feedbackScale,
-                      child: Container(
-                        padding: const EdgeInsets.all(14),
-                        decoration: BoxDecoration(
-                          color: AppColors.surfaceContainerLow,
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(
-                            color: AppColors.divider,
-                          ),
-                        ),
-                        child: Text(
-                          q.funFact,
-                          style: AppTextStyles.bodyMedium,
-                          textAlign: TextAlign.center,
-                        ),
                       ),
                     ),
+                    if (answerRevealed) ...[
+                      const SizedBox(height: 8),
+                      ScaleTransition(
+                        scale: feedbackScale,
+                        child: Container(
+                          padding: const EdgeInsets.all(14),
+                          decoration: BoxDecoration(
+                            color: AppColors.surfaceContainerLow,
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(color: AppColors.divider),
+                          ),
+                          child: Text(
+                            q.funFact,
+                            style: AppTextStyles.bodyMedium,
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ],
                   ],
-                ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -293,9 +324,7 @@ class _QuestionCard extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(28),
-        border: Border.all(
-          color: AppColors.secondary.withAlpha(60),
-        ),
+        border: Border.all(color: AppColors.secondary.withAlpha(60)),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -437,8 +466,11 @@ class _OptionButton extends StatelessWidget {
               ),
             ),
             if (isCorrect)
-              const Icon(Icons.check_circle_rounded,
-                  color: Color(0xFF66BB6A), size: 22)
+              const Icon(
+                Icons.check_circle_rounded,
+                color: Color(0xFF66BB6A),
+                size: 22,
+              )
             else if (isWrong)
               Icon(Icons.cancel_rounded, color: AppColors.error, size: 22),
           ],
@@ -464,7 +496,7 @@ class _LivesRow extends StatelessWidget {
       children: List.generate(
         3,
         (i) => Padding(
-          padding: const EdgeInsets.only(left: 4),
+          padding: const EdgeInsetsDirectional.only(start: 4),
           child: Icon(
             i < lives ? Icons.favorite_rounded : Icons.favorite_border_rounded,
             color: i < lives ? AppColors.error : AppColors.divider,
@@ -499,8 +531,8 @@ class _ResultScreen extends StatelessWidget {
     final emoji = percent >= 0.8
         ? '🏆'
         : percent >= 0.5
-            ? '⭐'
-            : '💪';
+        ? '⭐'
+        : '💪';
 
     return SafeArea(
       child: Center(
@@ -533,15 +565,15 @@ class _ResultScreen extends StatelessWidget {
                     end: Alignment.bottomRight,
                   ),
                   borderRadius: BorderRadius.circular(28),
-                  border: Border.all(
-                    color: AppColors.secondary.withAlpha(80),
-                  ),
+                  border: Border.all(color: AppColors.secondary.withAlpha(80)),
                 ),
                 child: Column(
                   children: [
                     Text(
                       l10n.dailyChallengeScore(
-                          state.score, state.totalQuestions),
+                        state.score,
+                        state.totalQuestions,
+                      ),
                       style: AppTextStyles.headingMedium.copyWith(
                         color: AppColors.textDark,
                       ),
@@ -552,7 +584,9 @@ class _ResultScreen extends StatelessWidget {
                     // XP earned
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 10),
+                        horizontal: 20,
+                        vertical: 10,
+                      ),
                       decoration: BoxDecoration(
                         color: AppColors.secondary.withAlpha(35),
                         borderRadius: BorderRadius.circular(20),
@@ -575,7 +609,9 @@ class _ResultScreen extends StatelessWidget {
                           const SizedBox(width: 8),
                           Container(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 8, vertical: 3),
+                              horizontal: 8,
+                              vertical: 3,
+                            ),
                             decoration: BoxDecoration(
                               color: AppColors.secondary,
                               borderRadius: BorderRadius.circular(10),
@@ -600,7 +636,8 @@ class _ResultScreen extends StatelessWidget {
                         final dur = DailyChallengeState.timeUntilReset();
                         final h = dur.inHours;
                         final m = dur.inMinutes % 60;
-                        final timeStr = '${h}h ${m}m';
+                        final timeStr =
+                            '${localizeDigitsCtx(h, ctx)}h ${localizeDigitsCtx(m, ctx)}m';
                         return Text(
                           l10n.dailyChallengeResetsIn(timeStr),
                           style: AppTextStyles.caption.copyWith(
@@ -635,6 +672,32 @@ class _ResultScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+              const SizedBox(height: 12),
+              // Secondary nudge — once the daily is done, the kid often wants
+              // "what's next?". Surface a couple of nearby activities so they
+              // don't bounce out to the home grid.
+              Builder(
+                builder: (ctx) {
+                  final isAr = Directionality.of(ctx) == TextDirection.rtl;
+                  return Wrap(
+                    alignment: WrapAlignment.center,
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      OutlinedButton.icon(
+                        onPressed: () => ctx.go(AppRoutes.randomQuiz),
+                        icon: const Icon(Icons.casino_rounded),
+                        label: Text(isAr ? 'اختبار عشوائي' : 'Random Quiz'),
+                      ),
+                      OutlinedButton.icon(
+                        onPressed: () => ctx.go(AppRoutes.blitz),
+                        icon: const Icon(Icons.bolt_rounded),
+                        label: Text(isAr ? 'الجولة الخاطفة' : 'Blitz'),
+                      ),
+                    ],
+                  );
+                },
               ),
             ],
           ),

@@ -1,0 +1,2162 @@
+[
+  {
+    "id": "bb_log_e_051",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Lina is 8 years old today. How old will she be on her next birthday?",
+    "question_ar": "عمر لينا اليوم ٨ سنوات. كم سيكون عمرها في عيد ميلادها القادم؟",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "7"
+    ],
+    "options_ar": [
+      "٩",
+      "٨",
+      "١٠",
+      "٧"
+    ],
+    "correct_answer": "9",
+    "correct_answer_ar": "٩",
+    "fun_fact": "Each birthday adds exactly one year, so 8 + 1 = 9.",
+    "fun_fact_ar": "كل عيد ميلاد يضيف سنة واحدة، فـ ٨ + ١ = ٩."
+  },
+  {
+    "id": "bb_log_e_052",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "If yesterday was Sunday, what is today?",
+    "question_ar": "إذا كان أمس الأحد، فما اليوم؟",
+    "options": [
+      "Monday",
+      "Sunday",
+      "Tuesday",
+      "Saturday"
+    ],
+    "options_ar": [
+      "الإثنين",
+      "الأحد",
+      "الثلاثاء",
+      "السبت"
+    ],
+    "correct_answer": "Monday",
+    "correct_answer_ar": "الإثنين",
+    "fun_fact": "The day right after Sunday is Monday.",
+    "fun_fact_ar": "اليوم الذي يلي الأحد مباشرة هو الإثنين."
+  },
+  {
+    "id": "bb_log_e_053",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Ahmed always tells the truth. Ahmed says \"the door is closed.\" Is the door closed?",
+    "question_ar": "أحمد يقول الصدق دائمًا. قال أحمد: \"الباب مغلق\". هل الباب مغلق؟",
+    "options": [
+      "Yes",
+      "No",
+      "Maybe",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "نعم",
+      "لا",
+      "ربما",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Yes",
+    "correct_answer_ar": "نعم",
+    "fun_fact": "A truth-teller's statements are always true.",
+    "fun_fact_ar": "قول الصادق دائمًا صحيح."
+  },
+  {
+    "id": "bb_log_e_054",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Sara needs a matching pair from a drawer with 5 red socks and 5 blue socks (only). What's the smallest number she must pull (without looking) to be sure of a matching pair?",
+    "question_ar": "تريد سارة زوجًا متطابقًا من درج فيه ٥ جوارب حمراء و ٥ زرقاء فقط. ما أقل عدد تسحبه (بدون نظر) لتضمن زوجًا متطابقًا؟",
+    "options": [
+      "3",
+      "2",
+      "5",
+      "10"
+    ],
+    "options_ar": [
+      "٣",
+      "٢",
+      "٥",
+      "١٠"
+    ],
+    "correct_answer": "3",
+    "correct_answer_ar": "٣",
+    "fun_fact": "Two socks could be different colors. The third must match one of them.",
+    "fun_fact_ar": "قد يكون أول جوربين بلونين مختلفين. الثالث لا بد أن يطابق أحدهما."
+  },
+  {
+    "id": "bb_log_e_055",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Lina was born exactly 3 years before Khalid. Lina is 10 now. How old is Khalid?",
+    "question_ar": "ولدت لينا قبل خالد بـ ٣ سنوات بالضبط. عمر لينا الآن ١٠. كم عمر خالد؟",
+    "options": [
+      "7",
+      "13",
+      "10",
+      "3"
+    ],
+    "options_ar": [
+      "٧",
+      "١٣",
+      "١٠",
+      "٣"
+    ],
+    "correct_answer": "7",
+    "correct_answer_ar": "٧",
+    "fun_fact": "Lina is older by 3 years, so Khalid is 10 - 3 = 7.",
+    "fun_fact_ar": "لينا أكبر بثلاث سنوات، فعمر خالد ١٠ - ٣ = ٧."
+  },
+  {
+    "id": "bb_log_e_056",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Three apples are shared equally between 3 friends. How many apples does each get?",
+    "question_ar": "تُقسَم ٣ تفاحات بالتساوي بين ٣ أصدقاء. كم يأخذ كل واحد؟",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "options_ar": [
+      "١",
+      "٢",
+      "٣",
+      "٠"
+    ],
+    "correct_answer": "1",
+    "correct_answer_ar": "١",
+    "fun_fact": "3 apples ÷ 3 friends = 1 apple each.",
+    "fun_fact_ar": "٣ تفاحات ÷ ٣ أصدقاء = تفاحة لكل واحد."
+  },
+  {
+    "id": "bb_log_e_057",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "School starts at 8:00. The math class is right after the start, lasting 1 hour. When does math end?",
+    "question_ar": "تبدأ المدرسة في الساعة ٨٫٠٠. درس الرياضيات يبدأ مباشرة وتستمر لساعة واحدة. متى ينتهي درس الرياضيات؟",
+    "options": [
+      "9:00",
+      "8:00",
+      "10:00",
+      "7:00"
+    ],
+    "options_ar": [
+      "٩٫٠٠",
+      "٨٫٠٠",
+      "١٠٫٠٠",
+      "٧٫٠٠"
+    ],
+    "correct_answer": "9:00",
+    "correct_answer_ar": "٩٫٠٠",
+    "fun_fact": "Add 1 hour to 8:00 to get the end time of 9:00.",
+    "fun_fact_ar": "نضيف ساعة إلى ٨٫٠٠ فيكون الانتهاء ٩٫٠٠."
+  },
+  {
+    "id": "bb_log_e_058",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Khalid only lies. Khalid says \"the cake is on the table.\" Where is the cake (according to logic)?",
+    "question_ar": "خالد يكذب فقط. قال خالد: \"الكعكة على الطاولة\". أين الكعكة (بحسب المنطق)؟",
+    "options": [
+      "Not on the table",
+      "On the table",
+      "In a tree",
+      "Eaten"
+    ],
+    "options_ar": [
+      "ليست على الطاولة",
+      "على الطاولة",
+      "في شجرة",
+      "أُكلت"
+    ],
+    "correct_answer": "Not on the table",
+    "correct_answer_ar": "ليست على الطاولة",
+    "fun_fact": "If a liar says X, then X is false — so the cake is NOT on the table.",
+    "fun_fact_ar": "إذا قال الكاذب شيئًا فهو غير صحيح — فالكعكة ليست على الطاولة."
+  },
+  {
+    "id": "bb_log_e_059",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "The cake was cut into 4 equal slices. Lina ate 1 slice. How many slices remain?",
+    "question_ar": "قُطِّعت الكعكة إلى ٤ شرائح متساوية. أكلت لينا شريحة واحدة. كم شريحة تبقى؟",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "options_ar": [
+      "٣",
+      "٢",
+      "٤",
+      "١"
+    ],
+    "correct_answer": "3",
+    "correct_answer_ar": "٣",
+    "fun_fact": "4 slices minus 1 eaten leaves 3 slices.",
+    "fun_fact_ar": "٤ شرائح ناقص ١ مأكولة = ٣ شرائح."
+  },
+  {
+    "id": "bb_log_e_060",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Sara, Lina, and Mona each wear one hat: red, blue, or green (different). Sara wears red. Lina wears blue. What color does Mona wear?",
+    "question_ar": "سارة ولينا ومنى ترتدي كل منهن قبعة: حمراء أو زرقاء أو خضراء (مختلفة). سارة ترتدي الحمراء. لينا ترتدي الزرقاء. ما لون قبعة منى؟",
+    "options": [
+      "Green",
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "options_ar": [
+      "خضراء",
+      "حمراء",
+      "زرقاء",
+      "صفراء"
+    ],
+    "correct_answer": "Green",
+    "correct_answer_ar": "خضراء",
+    "fun_fact": "Two colors are taken — only green is left for Mona.",
+    "fun_fact_ar": "أُخذ لونان — يتبقى الأخضر لمنى."
+  },
+  {
+    "id": "bb_log_e_061",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Today is Wednesday. What day will it be the day after tomorrow?",
+    "question_ar": "اليوم الأربعاء. ما اليوم بعد غدٍ؟",
+    "options": [
+      "Friday",
+      "Thursday",
+      "Saturday",
+      "Tuesday"
+    ],
+    "options_ar": [
+      "الجمعة",
+      "الخميس",
+      "السبت",
+      "الثلاثاء"
+    ],
+    "correct_answer": "Friday",
+    "correct_answer_ar": "الجمعة",
+    "fun_fact": "Wednesday + 2 days = Friday.",
+    "fun_fact_ar": "الأربعاء + يومان = الجمعة."
+  },
+  {
+    "id": "bb_log_e_062",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Two coins are on the table. Both come up heads or both come up tails. The first is heads. What is the second?",
+    "question_ar": "عملتان على الطاولة. كلتاهما تظهر الوجه أو كلتاهما تظهر الكتابة. الأولى الوجه. ما هي الثانية؟",
+    "options": [
+      "Heads",
+      "Tails",
+      "Edge",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "الوجه",
+      "الكتابة",
+      "الحافة",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Heads",
+    "correct_answer_ar": "الوجه",
+    "fun_fact": "The two must match. First is heads, so the second is heads.",
+    "fun_fact_ar": "الاثنتان متطابقتان. الأولى وجه، فالثانية وجه."
+  },
+  {
+    "id": "bb_log_e_063",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "A pencil is heavier than a feather. A book is heavier than the pencil. Which is heaviest?",
+    "question_ar": "القلم أثقل من الريشة. الكتاب أثقل من القلم. أيها الأثقل؟",
+    "options": [
+      "Book",
+      "Pencil",
+      "Feather",
+      "Same"
+    ],
+    "options_ar": [
+      "الكتاب",
+      "القلم",
+      "الريشة",
+      "متساوية"
+    ],
+    "correct_answer": "Book",
+    "correct_answer_ar": "الكتاب",
+    "fun_fact": "Book > Pencil > Feather, so the book is heaviest.",
+    "fun_fact_ar": "الكتاب > القلم > الريشة، فالكتاب الأثقل."
+  },
+  {
+    "id": "bb_log_e_064",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Yusuf put 6 marbles into 2 cups equally. How many marbles in each cup?",
+    "question_ar": "وضع يوسف ٦ بليات في كوبين بالتساوي. كم بلية في كل كوب؟",
+    "options": [
+      "3",
+      "2",
+      "6",
+      "4"
+    ],
+    "options_ar": [
+      "٣",
+      "٢",
+      "٦",
+      "٤"
+    ],
+    "correct_answer": "3",
+    "correct_answer_ar": "٣",
+    "fun_fact": "6 ÷ 2 = 3 marbles in each cup.",
+    "fun_fact_ar": "٦ ÷ ٢ = ٣ بليات في كل كوب."
+  },
+  {
+    "id": "bb_log_e_065",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Mona's birthday is exactly 5 days from today. Today is Monday. On what day is her birthday?",
+    "question_ar": "عيد ميلاد منى بعد ٥ أيام بالضبط من اليوم. اليوم الإثنين. في أي يوم عيد ميلادها؟",
+    "options": [
+      "Saturday",
+      "Sunday",
+      "Friday",
+      "Monday"
+    ],
+    "options_ar": [
+      "السبت",
+      "الأحد",
+      "الجمعة",
+      "الإثنين"
+    ],
+    "correct_answer": "Saturday",
+    "correct_answer_ar": "السبت",
+    "fun_fact": "Mon + 5 = Tue, Wed, Thu, Fri, Sat — birthday on Saturday.",
+    "fun_fact_ar": "الإثنين + ٥ = الثلاثاء، الأربعاء، الخميس، الجمعة، السبت — العيد السبت."
+  },
+  {
+    "id": "bb_log_e_066",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Today's class ends at 12:00. Lunch starts 30 minutes later. When does lunch start?",
+    "question_ar": "ينتهي درس اليوم في الساعة ١٢٫٠٠. يبدأ الغداء بعده بـ ٣٠ دقيقة. متى يبدأ الغداء؟",
+    "options": [
+      "12:30",
+      "11:30",
+      "12:00",
+      "1:00"
+    ],
+    "options_ar": [
+      "١٢٫٣٠",
+      "١١٫٣٠",
+      "١٢٫٠٠",
+      "١٫٠٠"
+    ],
+    "correct_answer": "12:30",
+    "correct_answer_ar": "١٢٫٣٠",
+    "fun_fact": "Add 30 minutes to 12:00 to get 12:30.",
+    "fun_fact_ar": "نضيف ٣٠ دقيقة إلى ١٢٫٠٠ فتكون النتيجة ١٢٫٣٠."
+  },
+  {
+    "id": "bb_log_e_067",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Three children share 6 cookies equally. How many does each receive?",
+    "question_ar": "ثلاثة أطفال يتقاسمون ٦ بسكويتات بالتساوي. كم يحصل كل واحد؟",
+    "options": [
+      "2",
+      "3",
+      "6",
+      "1"
+    ],
+    "options_ar": [
+      "٢",
+      "٣",
+      "٦",
+      "١"
+    ],
+    "correct_answer": "2",
+    "correct_answer_ar": "٢",
+    "fun_fact": "6 ÷ 3 = 2 cookies each — that's a fair share.",
+    "fun_fact_ar": "٦ ÷ ٣ = ٢ بسكويت لكل واحد — قسمة عادلة."
+  },
+  {
+    "id": "bb_log_e_068",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Nora has only 1-color crayons. She has 4 red and 0 of any other. What color is the crayon she picks?",
+    "question_ar": "عند نورة أقلام تلوين بلون واحد فقط. عندها ٤ حمراء و ٠ من أي لون آخر. ما لون القلم الذي تختاره؟",
+    "options": [
+      "Red",
+      "Blue",
+      "Green",
+      "Yellow"
+    ],
+    "options_ar": [
+      "أحمر",
+      "أزرق",
+      "أخضر",
+      "أصفر"
+    ],
+    "correct_answer": "Red",
+    "correct_answer_ar": "أحمر",
+    "fun_fact": "If only red crayons exist in her box, anything she picks is red.",
+    "fun_fact_ar": "إذا كانت كل الأقلام في علبتها حمراء فأي قلم تأخذه أحمر."
+  },
+  {
+    "id": "bb_log_e_069",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "The class voted: 9 students for the park trip, 4 for the museum, and 2 for the zoo. Which place wins?",
+    "question_ar": "صوّت الصف: ٩ طلاب للحديقة و ٤ للمتحف و ٢ لحديقة الحيوان. أي مكان فاز؟",
+    "options": [
+      "Park",
+      "Museum",
+      "Zoo",
+      "Tie"
+    ],
+    "options_ar": [
+      "الحديقة",
+      "المتحف",
+      "حديقة الحيوان",
+      "تعادل"
+    ],
+    "correct_answer": "Park",
+    "correct_answer_ar": "الحديقة",
+    "fun_fact": "9 is the highest count, so the park wins by majority.",
+    "fun_fact_ar": "٩ هو الأكثر، فالحديقة تفوز بالأغلبية."
+  },
+  {
+    "id": "bb_log_e_070",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Today is Friday. What day was it 2 days ago?",
+    "question_ar": "اليوم الجمعة. ما اليوم قبل يومين؟",
+    "options": [
+      "Wednesday",
+      "Thursday",
+      "Monday",
+      "Sunday"
+    ],
+    "options_ar": [
+      "الأربعاء",
+      "الخميس",
+      "الإثنين",
+      "الأحد"
+    ],
+    "correct_answer": "Wednesday",
+    "correct_answer_ar": "الأربعاء",
+    "fun_fact": "Friday minus 2 days = Wednesday.",
+    "fun_fact_ar": "الجمعة ناقص يومين = الأربعاء."
+  },
+  {
+    "id": "bb_log_e_071",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "The class has 3 boys and 5 girls. How many students are there total?",
+    "question_ar": "في الصف ٣ أولاد و ٥ بنات. كم العدد الكلي للطلاب؟",
+    "options": [
+      "8",
+      "5",
+      "7",
+      "9"
+    ],
+    "options_ar": [
+      "٨",
+      "٥",
+      "٧",
+      "٩"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "٨",
+    "fun_fact": "3 + 5 = 8 students.",
+    "fun_fact_ar": "٣ + ٥ = ٨ طلاب."
+  },
+  {
+    "id": "bb_log_e_072",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Yusuf has 2 dogs and his friend Ahmed has 3 dogs. How many dogs do they have together?",
+    "question_ar": "عند يوسف كلبان وعند صديقه أحمد ٣ كلاب. كم كلبًا عندهما معًا؟",
+    "options": [
+      "5",
+      "6",
+      "4",
+      "3"
+    ],
+    "options_ar": [
+      "٥",
+      "٦",
+      "٤",
+      "٣"
+    ],
+    "correct_answer": "5",
+    "correct_answer_ar": "٥",
+    "fun_fact": "2 + 3 = 5 dogs together.",
+    "fun_fact_ar": "٢ + ٣ = ٥ كلاب معًا."
+  },
+  {
+    "id": "bb_log_e_073",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Sara is wearing exactly one hat — either a sunhat or a wool hat. It is hot summer outside. The wool hat is too warm to wear, so she does not wear it today. What hat is she wearing?",
+    "question_ar": "ترتدي سارة قبعة واحدة بالضبط — إما قبعة شمس أو قبعة صوف. الجو حار في الصيف. قبعة الصوف دافئة جدًا، فلا ترتديها اليوم. ما القبعة التي ترتديها؟",
+    "options": [
+      "Sunhat",
+      "Wool hat",
+      "No hat",
+      "Cap"
+    ],
+    "options_ar": [
+      "قبعة شمس",
+      "قبعة صوف",
+      "لا قبعة",
+      "كاب"
+    ],
+    "correct_answer": "Sunhat",
+    "correct_answer_ar": "قبعة شمس",
+    "fun_fact": "Two choices, the wool one is ruled out — the sunhat remains.",
+    "fun_fact_ar": "خياران، استُبعدت الصوف — تتبقى قبعة الشمس."
+  },
+  {
+    "id": "bb_log_e_074",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "There are 4 chairs in a row. Lina sits on chair 1. Sara sits on chair 4. Mona sits on chair 2. Who sits on chair 3?",
+    "question_ar": "أربعة كراسي في صف. تجلس لينا على الكرسي ١. تجلس سارة على الكرسي ٤. تجلس منى على الكرسي ٢. مَن يجلس على الكرسي ٣ من بين الأربع: لينا، سارة، منى، نورة؟",
+    "options": [
+      "Nora",
+      "Lina",
+      "Sara",
+      "Mona"
+    ],
+    "options_ar": [
+      "نورة",
+      "لينا",
+      "سارة",
+      "منى"
+    ],
+    "correct_answer": "Nora",
+    "correct_answer_ar": "نورة",
+    "fun_fact": "Three girls have chairs 1, 2, and 4 — only Nora is left, so she takes chair 3.",
+    "fun_fact_ar": "ثلاث بنات أخذن الكراسي ١ و ٢ و ٤ — تتبقى نورة فتجلس على الكرسي ٣."
+  },
+  {
+    "id": "bb_log_e_075",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Khalid was 6 years old 2 years ago. How old is Khalid now?",
+    "question_ar": "كان عمر خالد ٦ سنوات قبل سنتين. كم عمره الآن؟",
+    "options": [
+      "8",
+      "6",
+      "4",
+      "10"
+    ],
+    "options_ar": [
+      "٨",
+      "٦",
+      "٤",
+      "١٠"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "٨",
+    "fun_fact": "6 + 2 = 8 years old now.",
+    "fun_fact_ar": "٦ + ٢ = ٨ سنوات الآن."
+  },
+  {
+    "id": "bb_log_e_076",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "If a card is red, it is either a heart or a diamond. Sara drew a red card that is not a diamond. What is it?",
+    "question_ar": "إذا كانت الورقة حمراء فهي إما قلب أو ديناري. سحبت سارة ورقة حمراء وليست ديناري. ما هي؟",
+    "options": [
+      "Heart",
+      "Diamond",
+      "Spade",
+      "Club"
+    ],
+    "options_ar": [
+      "قلب",
+      "ديناري",
+      "بستوني",
+      "سباتي"
+    ],
+    "correct_answer": "Heart",
+    "correct_answer_ar": "قلب",
+    "fun_fact": "Red means heart or diamond — eliminate diamond, the answer is heart.",
+    "fun_fact_ar": "الحمراء قلب أو ديناري — استبعاد الديناري يثبت أنها قلب."
+  },
+  {
+    "id": "bb_log_e_077",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Three friends step on a scale together. Lina is heavier than Mona. Mona is heavier than Sara. Who is the lightest of the three?",
+    "question_ar": "ثلاث صديقات يقفن على الميزان. لينا أثقل من منى. منى أثقل من سارة. من الأخف بين الثلاث؟",
+    "options": [
+      "Sara",
+      "Lina",
+      "Mona",
+      "Same"
+    ],
+    "options_ar": [
+      "سارة",
+      "لينا",
+      "منى",
+      "متساويات"
+    ],
+    "correct_answer": "Sara",
+    "correct_answer_ar": "سارة",
+    "fun_fact": "Lina > Mona > Sara — Sara is the lightest.",
+    "fun_fact_ar": "لينا > منى > سارة — سارة الأخف."
+  },
+  {
+    "id": "bb_log_e_078",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Today is Tuesday. Sara's pet bird Bobo eats every other day, starting today. Will Bobo eat tomorrow?",
+    "question_ar": "اليوم الثلاثاء. الطائر بوبو عند سارة يأكل كل يوم آخر، ابتداءً من اليوم. هل سيأكل بوبو غدًا؟",
+    "options": [
+      "No",
+      "Yes",
+      "Maybe",
+      "Always"
+    ],
+    "options_ar": [
+      "لا",
+      "نعم",
+      "ربما",
+      "دائمًا"
+    ],
+    "correct_answer": "No",
+    "correct_answer_ar": "لا",
+    "fun_fact": "If he eats today (Tue), he skips Wed and eats again Thu.",
+    "fun_fact_ar": "إذا أكل اليوم (الثلاثاء) فيتخطى الأربعاء ويأكل الخميس."
+  },
+  {
+    "id": "bb_log_e_079",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "Lina drew 1 card. The card is either spade or club. It's not a club. What is it?",
+    "question_ar": "سحبت لينا ورقة واحدة. الورقة إما بستوني أو سباتي. ليست سباتي. ما هي؟",
+    "options": [
+      "Spade",
+      "Club",
+      "Heart",
+      "Diamond"
+    ],
+    "options_ar": [
+      "بستوني",
+      "سباتي",
+      "قلب",
+      "ديناري"
+    ],
+    "correct_answer": "Spade",
+    "correct_answer_ar": "بستوني",
+    "fun_fact": "Two choices, club ruled out — so it's a spade.",
+    "fun_fact_ar": "خياران، استُبعد السباتي — فهي بستوني."
+  },
+  {
+    "id": "bb_log_e_080",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 1,
+    "question": "A small cake is cut into 8 equal slices for 8 friends. How many slices does each friend get for a fair share?",
+    "question_ar": "كعكة صغيرة قُطِّعت إلى ٨ شرائح متساوية لـ ٨ أصدقاء. كم شريحة يأخذ كل صديق ليكون التقسيم عادلًا؟",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "options_ar": [
+      "١",
+      "٢",
+      "٤",
+      "٨"
+    ],
+    "correct_answer": "1",
+    "correct_answer_ar": "١",
+    "fun_fact": "8 slices ÷ 8 friends = 1 slice each — a fair share.",
+    "fun_fact_ar": "٨ شرائح ÷ ٨ أصدقاء = شريحة لكل صديق — قسمة عادلة."
+  },
+  {
+    "id": "bb_log_m_051",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Two kids: one always tells the truth, one always lies. Lina says \"I always lie.\" Sara says \"Lina is the liar.\" Who is the truth-teller?",
+    "question_ar": "طفلان: واحدة تصدق دائمًا والأخرى تكذب دائمًا. تقول لينا: \"أنا أكذب دائمًا\". تقول سارة: \"لينا هي الكاذبة\". من الصادقة؟",
+    "options": [
+      "Sara",
+      "Lina",
+      "Both",
+      "Neither"
+    ],
+    "options_ar": [
+      "سارة",
+      "لينا",
+      "كلتاهما",
+      "لا أحد"
+    ],
+    "correct_answer": "Sara",
+    "correct_answer_ar": "سارة",
+    "fun_fact": "Lina's claim \"I always lie\" can't be true (a truth-teller wouldn't say it), so Lina is the liar — meaning Sara, who says so, tells the truth.",
+    "fun_fact_ar": "قول لينا \"أكذب دائمًا\" لا يمكن أن يكون صحيحًا (الصادقة لا تقولها)، فلينا هي الكاذبة — وسارة التي قالت ذلك صادقة."
+  },
+  {
+    "id": "bb_log_m_052",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Three coins of the same look. One is heavier; the other two weigh the same. With one balance weighing of two coins (one on each side), what result tells you the heavier coin is the third (un-weighed) coin?",
+    "question_ar": "ثلاث عملات متشابهة الشكل. واحدة أثقل والأخريان متساويتان. بوزن واحد على ميزان كفّتين (عملة في كل كفة)، ما النتيجة التي تخبرك أن العملة الأثقل هي الثالثة (غير الموزونة)؟",
+    "options": [
+      "The two pans balance",
+      "Left side falls",
+      "Right side falls",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "تتعادل الكفتان",
+      "تهبط الكفة اليسرى",
+      "تهبط الكفة اليمنى",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "The two pans balance",
+    "correct_answer_ar": "تتعادل الكفتان",
+    "fun_fact": "If the two on the scale balance, they are the equal coins — the heavier one is the third.",
+    "fun_fact_ar": "إذا تعادلت الكفتان فالعملتان متساويتان — والأثقل هي الثالثة."
+  },
+  {
+    "id": "bb_log_m_053",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Three friends — Sara, Lina, Mona — each have one pet (cat, dog, or fish, one each). Sara has the cat. Lina has the fish. What is Mona's pet?",
+    "question_ar": "ثلاث صديقات — سارة، لينا، منى — لكل منهن حيوان أليف (قط أو كلب أو سمكة، واحد لكل منهن). سارة لها القط. لينا لها السمكة. ما حيوان منى؟",
+    "options": [
+      "Dog",
+      "Cat",
+      "Fish",
+      "Bird"
+    ],
+    "options_ar": [
+      "كلب",
+      "قط",
+      "سمكة",
+      "طائر"
+    ],
+    "correct_answer": "Dog",
+    "correct_answer_ar": "كلب",
+    "fun_fact": "Sara has the cat, Lina has the fish — only the dog remains for Mona.",
+    "fun_fact_ar": "سارة لها القط، ولينا لها السمكة — يتبقى الكلب لمنى."
+  },
+  {
+    "id": "bb_log_m_054",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara is twice as old as Lina. Lina is 4. How old is Sara?",
+    "question_ar": "سارة عمرها ضعف عمر لينا. عمر لينا ٤. كم عمر سارة؟",
+    "options": [
+      "8",
+      "6",
+      "4",
+      "2"
+    ],
+    "options_ar": [
+      "٨",
+      "٦",
+      "٤",
+      "٢"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "٨",
+    "fun_fact": "2 × 4 = 8.",
+    "fun_fact_ar": "٢ × ٤ = ٨."
+  },
+  {
+    "id": "bb_log_m_055",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "A 3x3 grid has each row and each column with exactly one A, one B, and one C. Row 1: A is in column 1. Row 2: B is in column 1. What letter is in row 3, column 1?",
+    "question_ar": "شبكة ٣×٣ في كل صف وكل عمود حرف واحد فقط من A و B و C. الصف ١: A في العمود ١. الصف ٢: B في العمود ١. ما الحرف في الصف ٣، العمود ١؟",
+    "options": [
+      "C",
+      "A",
+      "B",
+      "Empty"
+    ],
+    "options_ar": [
+      "C",
+      "A",
+      "B",
+      "فارغ"
+    ],
+    "correct_answer": "C",
+    "correct_answer_ar": "C",
+    "fun_fact": "Column 1 already has A and B — the only letter left is C.",
+    "fun_fact_ar": "العمود ١ فيه A و B — يتبقى الحرف C."
+  },
+  {
+    "id": "bb_log_m_056",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara cuts a cake into 4 equal slices for 4 friends, fairly. Then 1 friend leaves. The 3 remaining friends share all 4 slices equally. How many slices does each get?",
+    "question_ar": "تقطع سارة كعكة إلى ٤ شرائح متساوية لـ ٤ أصدقاء بالتساوي. ثم يغادر صديق واحد. يتقاسم الثلاثة الباقون الشرائح الأربع كلها بالتساوي. كم شريحة يأخذ كل واحد؟",
+    "options": [
+      "4/3 of a slice",
+      "1 slice",
+      "2 slices",
+      "Half a slice"
+    ],
+    "options_ar": [
+      "٤/٣ شريحة",
+      "شريحة واحدة",
+      "شريحتان",
+      "نصف شريحة"
+    ],
+    "correct_answer": "4/3 of a slice",
+    "correct_answer_ar": "٤/٣ شريحة",
+    "fun_fact": "4 slices ÷ 3 friends = 4/3 slice each (just over one slice).",
+    "fun_fact_ar": "٤ شرائح ÷ ٣ أصدقاء = ٤/٣ لكل صديق (شريحة وزيادة)."
+  },
+  {
+    "id": "bb_log_m_057",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Today is Saturday. Mona's library book is due in 10 days. On what day will it be due?",
+    "question_ar": "اليوم السبت. كتاب منى من المكتبة موعد إرجاعه بعد ١٠ أيام. في أي يوم؟",
+    "options": [
+      "Tuesday",
+      "Monday",
+      "Wednesday",
+      "Saturday"
+    ],
+    "options_ar": [
+      "الثلاثاء",
+      "الإثنين",
+      "الأربعاء",
+      "السبت"
+    ],
+    "correct_answer": "Tuesday",
+    "correct_answer_ar": "الثلاثاء",
+    "fun_fact": "10 mod 7 = 3. Sat + 3 days = Tue.",
+    "fun_fact_ar": "١٠ تقسيم ٧ الباقي ٣. السبت + ٣ أيام = الثلاثاء."
+  },
+  {
+    "id": "bb_log_m_058",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara wears a hat she can't see. She knows the hat is either red or blue. Lina (who can see) says truthfully \"It is not red.\" What color is Sara's hat?",
+    "question_ar": "سارة ترتدي قبعة لا تراها. تعرف أن القبعة إما حمراء أو زرقاء. لينا (التي ترى) قالت بصدق: \"ليست حمراء\". ما لون قبعة سارة؟",
+    "options": [
+      "Blue",
+      "Red",
+      "Green",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "زرقاء",
+      "حمراء",
+      "خضراء",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Blue",
+    "correct_answer_ar": "زرقاء",
+    "fun_fact": "Two choices (red or blue), red ruled out by a truthful speaker — so blue.",
+    "fun_fact_ar": "خياران (حمراء أو زرقاء)، استبعد المتحدث الصادق الحمراء — فهي زرقاء."
+  },
+  {
+    "id": "bb_log_m_059",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "A class has 28 students. The teacher places them into reading groups of 6 students each. Must at least one group have fewer than 6?",
+    "question_ar": "في الصف ٢٨ طالبًا. توزعهم المعلمة في مجموعات قراءة، ٦ طلاب في كل مجموعة. هل لا بد أن تكون في مجموعة واحدة على الأقل أقل من ٦؟",
+    "options": [
+      "Yes",
+      "No",
+      "Maybe",
+      "Only sometimes"
+    ],
+    "options_ar": [
+      "نعم",
+      "لا",
+      "ربما",
+      "أحيانًا فقط"
+    ],
+    "correct_answer": "Yes",
+    "correct_answer_ar": "نعم",
+    "fun_fact": "28 ÷ 6 = 4 remainder 4 — 4 groups of 6 = 24, leaving 4 students for one short group.",
+    "fun_fact_ar": "٢٨ ÷ ٦ = ٤ والباقي ٤ — ٤ مجموعات × ٦ = ٢٤، فيتبقى ٤ طلاب في مجموعة ناقصة."
+  },
+  {
+    "id": "bb_log_m_060",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara was the 3rd one to enter the classroom. Lina entered right before Sara. How many people were in the room when Lina entered?",
+    "question_ar": "كانت سارة الثالثة في دخول الفصل. دخلت لينا قبل سارة مباشرة. كم شخصًا كانوا في الفصل عند دخول لينا؟",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "options_ar": [
+      "١",
+      "٢",
+      "٣",
+      "٠"
+    ],
+    "correct_answer": "1",
+    "correct_answer_ar": "١",
+    "fun_fact": "Lina was 2nd. When she entered, only the 1st person was already there.",
+    "fun_fact_ar": "لينا الثانية. عند دخولها كان الشخص الأول فقط في الفصل."
+  },
+  {
+    "id": "bb_log_m_061",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Khalid's age plus Yusuf's age is 20. Khalid is 12. How old is Yusuf?",
+    "question_ar": "مجموع عمر خالد ويوسف ٢٠. خالد ١٢. كم عمر يوسف؟",
+    "options": [
+      "8",
+      "12",
+      "20",
+      "10"
+    ],
+    "options_ar": [
+      "٨",
+      "١٢",
+      "٢٠",
+      "١٠"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "٨",
+    "fun_fact": "20 - 12 = 8.",
+    "fun_fact_ar": "٢٠ - ١٢ = ٨."
+  },
+  {
+    "id": "bb_log_m_062",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara is told that her hat is red, blue, or green (one color). The teacher says: \"Not red, not blue.\" What color is the hat?",
+    "question_ar": "أُخبرت سارة أن لون قبعتها أحمر أو أزرق أو أخضر (لون واحد). قال المعلم: \"ليست حمراء وليست زرقاء\". ما لون القبعة؟",
+    "options": [
+      "Green",
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "options_ar": [
+      "خضراء",
+      "حمراء",
+      "زرقاء",
+      "صفراء"
+    ],
+    "correct_answer": "Green",
+    "correct_answer_ar": "خضراء",
+    "fun_fact": "Three options, two ruled out — green is the only one left.",
+    "fun_fact_ar": "ثلاثة خيارات استُبعد منها اثنان — فالخيار المتبقي هو الأخضر."
+  },
+  {
+    "id": "bb_log_m_063",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "A deck has only 26 red cards (13 hearts, 13 diamonds). Sara draws one. Will the card definitely be red?",
+    "question_ar": "في رزمة ٢٦ ورقة حمراء فقط (١٣ قلب و ١٣ ديناري). تسحب سارة واحدة. هل ستكون الورقة حمراء حتمًا؟",
+    "options": [
+      "Yes",
+      "No",
+      "Maybe",
+      "Sometimes"
+    ],
+    "options_ar": [
+      "نعم",
+      "لا",
+      "ربما",
+      "أحيانًا"
+    ],
+    "correct_answer": "Yes",
+    "correct_answer_ar": "نعم",
+    "fun_fact": "Every card in the deck is red, so any draw is red.",
+    "fun_fact_ar": "كل ورقة في الرزمة حمراء، فأي ورقة مسحوبة حمراء."
+  },
+  {
+    "id": "bb_log_m_064",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Today is the 15th. Sara's birthday is on the 22nd of the same month. How many days from today until her birthday?",
+    "question_ar": "اليوم ١٥. عيد ميلاد سارة يوم ٢٢ من نفس الشهر. كم يومًا من اليوم إلى عيد ميلادها؟",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "22"
+    ],
+    "options_ar": [
+      "٧",
+      "٦",
+      "٨",
+      "٢٢"
+    ],
+    "correct_answer": "7",
+    "correct_answer_ar": "٧",
+    "fun_fact": "22 - 15 = 7 days.",
+    "fun_fact_ar": "٢٢ - ١٥ = ٧ أيام."
+  },
+  {
+    "id": "bb_log_m_065",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Lina reads page 50 today. She reads 10 more pages each day, no more, no less. On what page will she be after 3 more days?",
+    "question_ar": "تقرأ لينا اليوم الصفحة ٥٠. تقرأ ١٠ صفحات إضافية كل يوم، لا أكثر ولا أقل. على أي صفحة ستكون بعد ٣ أيام إضافية؟",
+    "options": [
+      "80",
+      "70",
+      "60",
+      "100"
+    ],
+    "options_ar": [
+      "٨٠",
+      "٧٠",
+      "٦٠",
+      "١٠٠"
+    ],
+    "correct_answer": "80",
+    "correct_answer_ar": "٨٠",
+    "fun_fact": "50 + 3 × 10 = 80.",
+    "fun_fact_ar": "٥٠ + ٣ × ١٠ = ٨٠."
+  },
+  {
+    "id": "bb_log_m_066",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara, Lina, Mona, Nora vote between two trips. 3 votes for park, 1 vote for zoo. Each girl votes once. Most votes wins. Where will they go?",
+    "question_ar": "تصوّت سارة ولينا ومنى ونورة بين رحلتين. ٣ أصوات للحديقة و ١ لحديقة الحيوان. كل واحدة تصوت مرة واحدة. الأكثر يفوز. إلى أين سيذهبن؟",
+    "options": [
+      "Park",
+      "Zoo",
+      "Tie",
+      "Neither"
+    ],
+    "options_ar": [
+      "الحديقة",
+      "حديقة الحيوان",
+      "تعادل",
+      "لا شيء"
+    ],
+    "correct_answer": "Park",
+    "correct_answer_ar": "الحديقة",
+    "fun_fact": "3 > 1, so the park wins by majority.",
+    "fun_fact_ar": "٣ > ١، فالحديقة تفوز بالأغلبية."
+  },
+  {
+    "id": "bb_log_m_067",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "A classroom has 4 rows and 5 columns of seats. How many seats total?",
+    "question_ar": "في الفصل ٤ صفوف و ٥ أعمدة من المقاعد. كم مقعدًا في المجموع؟",
+    "options": [
+      "20",
+      "9",
+      "15",
+      "25"
+    ],
+    "options_ar": [
+      "٢٠",
+      "٩",
+      "١٥",
+      "٢٥"
+    ],
+    "correct_answer": "20",
+    "correct_answer_ar": "٢٠",
+    "fun_fact": "4 × 5 = 20 seats.",
+    "fun_fact_ar": "٤ × ٥ = ٢٠ مقعدًا."
+  },
+  {
+    "id": "bb_log_m_068",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "If today is the 1st of a 30-day month, what date will it be 14 days later?",
+    "question_ar": "إذا كان اليوم ١ في شهر مكوّن من ٣٠ يومًا، ما التاريخ بعد ١٤ يومًا؟",
+    "options": [
+      "15",
+      "14",
+      "16",
+      "13"
+    ],
+    "options_ar": [
+      "١٥",
+      "١٤",
+      "١٦",
+      "١٣"
+    ],
+    "correct_answer": "15",
+    "correct_answer_ar": "١٥",
+    "fun_fact": "1 + 14 = 15.",
+    "fun_fact_ar": "١ + ١٤ = ١٥."
+  },
+  {
+    "id": "bb_log_m_069",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Three colored cups (red, blue, green) sit in a row. The red is to the left of the blue. The green is to the right of the blue. Which cup is in the middle?",
+    "question_ar": "ثلاثة أكواب ملونة (أحمر، أزرق، أخضر) في صف. الأحمر على يسار الأزرق. الأخضر على يمين الأزرق. أي كوب في الوسط؟",
+    "options": [
+      "Blue",
+      "Red",
+      "Green",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "الأزرق",
+      "الأحمر",
+      "الأخضر",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Blue",
+    "correct_answer_ar": "الأزرق",
+    "fun_fact": "Order: red — blue — green. Blue is in the middle.",
+    "fun_fact_ar": "الترتيب: أحمر — أزرق — أخضر. الأزرق في الوسط."
+  },
+  {
+    "id": "bb_log_m_070",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Khalid wears a hat. He is told that there are exactly 1 white and 2 black hats among him and 2 friends. He sees both friends wearing black hats. What color is his own hat?",
+    "question_ar": "يرتدي خالد قبعة. أُخبر أن هناك بالضبط ١ بيضاء و ٢ سوداء بينه وبين صديقَين. يرى صديقَيه يرتديان قبعتين سوداوين. ما لون قبعته؟",
+    "options": [
+      "White",
+      "Black",
+      "Red",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "بيضاء",
+      "سوداء",
+      "حمراء",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "White",
+    "correct_answer_ar": "بيضاء",
+    "fun_fact": "Both blacks are taken — only the white hat remains for Khalid.",
+    "fun_fact_ar": "السوداوان مأخوذتان — يتبقى البيضاء لخالد."
+  },
+  {
+    "id": "bb_log_m_071",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara picks a card from a regular deck. The card is a spade. Spades and clubs are black; hearts and diamonds are red. What color is her card?",
+    "question_ar": "تختار سارة ورقة من رزمة عادية. الورقة بستوني. البستوني والسباتي سوداء؛ القلب والديناري حمراء. ما لون ورقتها؟",
+    "options": [
+      "Black",
+      "Red",
+      "Green",
+      "Yellow"
+    ],
+    "options_ar": [
+      "سوداء",
+      "حمراء",
+      "خضراء",
+      "صفراء"
+    ],
+    "correct_answer": "Black",
+    "correct_answer_ar": "سوداء",
+    "fun_fact": "Spades are black — that's a fixed rule of the deck.",
+    "fun_fact_ar": "البستوني سوداء — هذه قاعدة ثابتة للرزمة."
+  },
+  {
+    "id": "bb_log_m_072",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "A pencil costs 2 coins. A notebook costs 5 coins. Lina buys 3 pencils and 1 notebook. How many coins does she pay?",
+    "question_ar": "القلم يكلف ٢ من العملات. الدفتر يكلف ٥. اشترت لينا ٣ أقلام ودفترًا. كم عملة دفعت؟",
+    "options": [
+      "11",
+      "10",
+      "12",
+      "7"
+    ],
+    "options_ar": [
+      "١١",
+      "١٠",
+      "١٢",
+      "٧"
+    ],
+    "correct_answer": "11",
+    "correct_answer_ar": "١١",
+    "fun_fact": "3 × 2 + 5 = 6 + 5 = 11 coins.",
+    "fun_fact_ar": "٣ × ٢ + ٥ = ٦ + ٥ = ١١ عملة."
+  },
+  {
+    "id": "bb_log_m_073",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara has 4 ribbons: 2 red and 2 blue. She picks 2 without looking. What is the smallest number she must pick to guarantee at least one red ribbon?",
+    "question_ar": "عند سارة ٤ شرائط: ٢ حمراء و ٢ زرقاء. تختار بدون نظر. ما أقل عدد يجب أن تأخذه لتضمن شريطًا أحمر واحدًا على الأقل؟",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "options_ar": [
+      "٣",
+      "٢",
+      "٤",
+      "١"
+    ],
+    "correct_answer": "3",
+    "correct_answer_ar": "٣",
+    "fun_fact": "First 2 could both be blue. The 3rd ribbon must be red — only 2 blues exist.",
+    "fun_fact_ar": "أول شريطين قد يكونان أزرقين. الثالث لا بد أن يكون أحمر — فلا يوجد سوى زرقاوين."
+  },
+  {
+    "id": "bb_log_m_074",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara always tells the truth. Lina always lies. They each say only one statement: Sara says \"the pen is in the bag.\" Lina says \"the pen is on the table.\" Where is the pen (assuming exactly one place is correct)?",
+    "question_ar": "سارة تصدق دائمًا. لينا تكذب دائمًا. كل منهما تقول جملة واحدة فقط: تقول سارة: \"القلم في الحقيبة\". تقول لينا: \"القلم على الطاولة\". أين القلم (بافتراض أن مكانًا واحدًا صحيح)؟",
+    "options": [
+      "In the bag",
+      "On the table",
+      "On the shelf",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "في الحقيبة",
+      "على الطاولة",
+      "على الرف",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "In the bag",
+    "correct_answer_ar": "في الحقيبة",
+    "fun_fact": "Sara is honest — believe her. Lina lies — discard her claim. The pen is in the bag.",
+    "fun_fact_ar": "سارة صادقة — صدّقها. لينا كاذبة — اطرح كلامها. القلم في الحقيبة."
+  },
+  {
+    "id": "bb_log_m_075",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "A 3x3 grid has each row and column containing exactly one X, one Y, one Z. Row 1 = X Y Z. Row 2 starts with Y. What is the second letter of row 2?",
+    "question_ar": "شبكة ٣×٣ في كل صف وعمود حرف واحد فقط من X و Y و Z. الصف ١ = X Y Z. الصف ٢ يبدأ بـ Y. ما الحرف الثاني في الصف ٢؟",
+    "options": [
+      "Z",
+      "X",
+      "Y",
+      "Empty"
+    ],
+    "options_ar": [
+      "Z",
+      "X",
+      "Y",
+      "فارغ"
+    ],
+    "correct_answer": "Z",
+    "correct_answer_ar": "Z",
+    "fun_fact": "Column 2 already has Y (row 1). Row 2 starts with Y, so column 2 of row 2 must be X or Z — but column 2 already has Y, leaving X or Z. Row 2 has Y already, so col-2 is X or Z. Column 2's row-1 is Y; for column 2 to contain all three letters, row 2 col-2 ≠ Y. The second letter must form a valid Latin-square row, giving Z.",
+    "fun_fact_ar": "العمود ٢ فيه Y (الصف ١). الصف ٢ يبدأ بـ Y، فالخانة الثانية ليست Y. لتكون الشبكة سليمة، الحرف الثاني في الصف ٢ هو Z."
+  },
+  {
+    "id": "bb_log_m_076",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Khalid finishes his homework after Sara. Sara finishes after Lina. Lina finishes at 5:00. Khalid does NOT finish at 5:00. Who finishes first?",
+    "question_ar": "ينهي خالد واجبه بعد سارة. سارة تنهي بعد لينا. لينا تنهي في الساعة ٥٫٠٠. خالد لا ينهي في ٥٫٠٠. من ينهي أولًا؟",
+    "options": [
+      "Lina",
+      "Sara",
+      "Khalid",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "لينا",
+      "سارة",
+      "خالد",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Lina",
+    "correct_answer_ar": "لينا",
+    "fun_fact": "Order: Lina before Sara before Khalid — Lina finishes first.",
+    "fun_fact_ar": "الترتيب: لينا قبل سارة قبل خالد — لينا الأولى."
+  },
+  {
+    "id": "bb_log_m_077",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Three cards lie face down. Exactly one is the King. Sara peeks at the first card — not the King. Lina peeks at the second — not the King. Where is the King?",
+    "question_ar": "ثلاث ورقات مقلوبة. واحدة فقط هي الملك. تنظر سارة للأولى — ليست الملك. تنظر لينا للثانية — ليست الملك. أين الملك؟",
+    "options": [
+      "Third card",
+      "First card",
+      "Second card",
+      "Not in the deck"
+    ],
+    "options_ar": [
+      "البطاقة الثالثة",
+      "البطاقة الأولى",
+      "البطاقة الثانية",
+      "ليست في الرزمة"
+    ],
+    "correct_answer": "Third card",
+    "correct_answer_ar": "البطاقة الثالثة",
+    "fun_fact": "Two cards ruled out — only the third can be the King.",
+    "fun_fact_ar": "استُبعدت ورقتان — فالملك في الثالثة."
+  },
+  {
+    "id": "bb_log_m_078",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Five children take turns reading aloud, one minute each, in order. They start at 9:00. When does child 4 start reading?",
+    "question_ar": "خمسة أطفال يقرؤون بصوت عالٍ بالتناوب، دقيقة واحدة لكل واحد بالترتيب. يبدؤون في الساعة ٩٫٠٠. متى يبدأ الطفل الرابع القراءة؟",
+    "options": [
+      "9:03",
+      "9:04",
+      "9:02",
+      "9:05"
+    ],
+    "options_ar": [
+      "٩٫٠٣",
+      "٩٫٠٤",
+      "٩٫٠٢",
+      "٩٫٠٥"
+    ],
+    "correct_answer": "9:03",
+    "correct_answer_ar": "٩٫٠٣",
+    "fun_fact": "3 minutes elapse before child 4 (kids 1, 2, 3 read first). So child 4 starts at 9:00 + 3 = 9:03.",
+    "fun_fact_ar": "تمر ٣ دقائق قبل الطفل الرابع (الأطفال ١ و ٢ و ٣ يقرؤون أولًا). فيبدأ الطفل الرابع في ٩٫٠٠ + ٣ = ٩٫٠٣."
+  },
+  {
+    "id": "bb_log_m_079",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "A school has 100 students. Each takes exactly one bus. There are 9 buses. Must at least one bus carry 12 or more students?",
+    "question_ar": "في مدرسة ١٠٠ طالب. كل طالب يركب حافلة واحدة. يوجد ٩ حافلات. هل لا بد أن تحمل حافلة واحدة على الأقل ١٢ طالبًا أو أكثر؟",
+    "options": [
+      "Yes",
+      "No",
+      "Maybe",
+      "Only sometimes"
+    ],
+    "options_ar": [
+      "نعم",
+      "لا",
+      "ربما",
+      "أحيانًا فقط"
+    ],
+    "correct_answer": "Yes",
+    "correct_answer_ar": "نعم",
+    "fun_fact": "If all 9 buses had at most 11, total would be 99 < 100 — at least one must have 12.",
+    "fun_fact_ar": "لو حملت كل حافلة ١١ كحد أقصى، لكان المجموع ٩٩ < ١٠٠ — فلا بد أن إحداها تحمل ١٢."
+  },
+  {
+    "id": "bb_log_m_080",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 2,
+    "question": "Sara is older than Khalid by exactly 5 years. In 3 years, Sara will be 14. How old is Khalid now?",
+    "question_ar": "سارة أكبر من خالد بـ ٥ سنوات بالضبط. بعد ٣ سنوات سيكون عمر سارة ١٤. كم عمر خالد الآن؟",
+    "options": [
+      "6",
+      "9",
+      "11",
+      "5"
+    ],
+    "options_ar": [
+      "٦",
+      "٩",
+      "١١",
+      "٥"
+    ],
+    "correct_answer": "6",
+    "correct_answer_ar": "٦",
+    "fun_fact": "Sara is now 14 - 3 = 11. Khalid is 5 years younger: 11 - 5 = 6.",
+    "fun_fact_ar": "سارة الآن ١٤ - ٣ = ١١. خالد أصغر بـ ٥ سنوات: ١١ - ٥ = ٦."
+  },
+  {
+    "id": "bb_log_h_051",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Two siblings: one always lies, one always tells the truth. Lina says \"My brother and I both tell the truth.\" Is Lina the truth-teller?",
+    "question_ar": "أخوان: واحد يكذب دائمًا والآخر يصدق دائمًا. تقول لينا: \"أنا وأخي كلانا نصدق\". هل لينا صادقة؟",
+    "options": [
+      "No",
+      "Yes",
+      "Maybe",
+      "Sometimes"
+    ],
+    "options_ar": [
+      "لا",
+      "نعم",
+      "ربما",
+      "أحيانًا"
+    ],
+    "correct_answer": "No",
+    "correct_answer_ar": "لا",
+    "fun_fact": "Exactly one of the two lies. Lina's claim that both tell truth is false, so Lina is the liar.",
+    "fun_fact_ar": "بالضبط واحد منهما كاذب. ادعاء لينا أن كليهما صادق غير صحيح، فلينا هي الكاذبة."
+  },
+  {
+    "id": "bb_log_h_052",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Sara, Lina, and Mona each have one pet (cat, dog, fish) and live in one house (red, blue, green). Sara has the cat. The fish lives in the blue house. Mona lives in the red house. Lina does NOT live in the green house. Where does the fish live's owner live? (i.e., who has the fish?)",
+    "question_ar": "سارة ولينا ومنى لكل منهن حيوان (قط، كلب، سمكة) وكل منهن في بيت (أحمر، أزرق، أخضر). سارة لها القط. السمكة في البيت الأزرق. منى تسكن البيت الأحمر. لينا لا تسكن البيت الأخضر. من تملك السمكة؟",
+    "options": [
+      "Lina",
+      "Sara",
+      "Mona",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "لينا",
+      "سارة",
+      "منى",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Lina",
+    "correct_answer_ar": "لينا",
+    "fun_fact": "Lina isn't in green and Mona is in red, so Lina is in blue. The fish lives in blue, so Lina owns the fish.",
+    "fun_fact_ar": "لينا ليست في الأخضر ومنى في الأحمر، فلينا في الأزرق. السمكة في الأزرق، فلينا تملك السمكة."
+  },
+  {
+    "id": "bb_log_h_053",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Three coins look identical. One is heavier; the other two weigh the same. Using a balance scale only ONCE, what is the safest method to FIND THE HEAVIER coin in every case?",
+    "question_ar": "ثلاث عملات متشابهة. واحدة أثقل والأخريان متساويتان. باستخدام ميزان كفّتين مرة واحدة فقط، ما الطريقة المضمونة لمعرفة العملة الأثقل في كل الحالات؟",
+    "options": [
+      "Weigh one against another; if balanced, the third is heavier",
+      "Weigh all three on one side",
+      "Don't weigh at all",
+      "Weigh two on each side"
+    ],
+    "options_ar": [
+      "نزن واحدة مقابل أخرى؛ إن تعادلتا فالثالثة هي الأثقل",
+      "نزن الثلاث على كفة واحدة",
+      "لا نزن أبدًا",
+      "نزن اثنتين على كل كفة"
+    ],
+    "correct_answer": "Weigh one against another; if balanced, the third is heavier",
+    "correct_answer_ar": "نزن واحدة مقابل أخرى؛ إن تعادلتا فالثالثة هي الأثقل",
+    "fun_fact": "If the pans balance, neither is the heavy one — so the third is. If a pan tips down, that side is the heavy coin.",
+    "fun_fact_ar": "إذا تعادلت الكفتان فلا واحدة منهما الأثقل — فالأثقل هي الثالثة. إذا هبطت كفة فالعملة في تلك الكفة هي الأثقل."
+  },
+  {
+    "id": "bb_log_h_054",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "If and only if a number is even, it is divisible by 2. The number 9 is not divisible by 2. Is 9 even?",
+    "question_ar": "العدد زوجي إذا — وفقط إذا — كان يقبل القسمة على ٢. العدد ٩ لا يقبل القسمة على ٢. هل ٩ زوجي؟",
+    "options": [
+      "No",
+      "Yes",
+      "Maybe",
+      "Sometimes"
+    ],
+    "options_ar": [
+      "لا",
+      "نعم",
+      "ربما",
+      "أحيانًا"
+    ],
+    "correct_answer": "No",
+    "correct_answer_ar": "لا",
+    "fun_fact": "Biconditional: even ↔ divisible by 2. Not divisible by 2 means not even.",
+    "fun_fact_ar": "تكافؤ: زوجي ↔ يقبل القسمة على ٢. لا يقبل القسمة على ٢ يعني ليس زوجيًا."
+  },
+  {
+    "id": "bb_log_h_055",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Sara had her birthday yesterday. She turned 9. Three years from today, how old will she be?",
+    "question_ar": "احتفلت سارة بعيد ميلادها أمس. صار عمرها ٩. بعد ٣ سنوات من اليوم، كم سيكون عمرها؟",
+    "options": [
+      "12",
+      "11",
+      "13",
+      "9"
+    ],
+    "options_ar": [
+      "١٢",
+      "١١",
+      "١٣",
+      "٩"
+    ],
+    "correct_answer": "12",
+    "correct_answer_ar": "١٢",
+    "fun_fact": "She is 9 today (yesterday's birthday counts). 9 + 3 = 12.",
+    "fun_fact_ar": "هي ٩ اليوم (عيد ميلاد الأمس). ٩ + ٣ = ١٢."
+  },
+  {
+    "id": "bb_log_h_056",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Three girls — Sara, Lina, Mona — each own a unique pet (cat, dog, bird) and a unique color shirt (red, blue, green). The cat owner wears red. Sara wears blue. Lina has a bird. Who has the cat?",
+    "question_ar": "ثلاث بنات — سارة، لينا، منى — لكل منهن حيوان فريد (قط، كلب، طائر) وقميص بلون فريد (أحمر، أزرق، أخضر). صاحبة القط ترتدي الأحمر. سارة ترتدي الأزرق. لينا لها طائر. من لها القط؟",
+    "options": [
+      "Mona",
+      "Sara",
+      "Lina",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "منى",
+      "سارة",
+      "لينا",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Mona",
+    "correct_answer_ar": "منى",
+    "fun_fact": "Sara wears blue (not red), so Sara isn't the cat owner. Lina has the bird. So Mona must own the cat.",
+    "fun_fact_ar": "سارة ترتدي الأزرق (ليس الأحمر)، فليست هي صاحبة القط. لينا عندها الطائر. إذن منى صاحبة القط."
+  },
+  {
+    "id": "bb_log_h_057",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Today is Monday the 1st of a 31-day month. What date will the third Monday after today be?",
+    "question_ar": "اليوم الإثنين الموافق ١ في شهر مكوّن من ٣١ يومًا. ما التاريخ الذي يوافقه ثالث إثنين بعد اليوم؟",
+    "options": [
+      "22nd",
+      "21st",
+      "8th",
+      "29th"
+    ],
+    "options_ar": [
+      "٢٢",
+      "٢١",
+      "٨",
+      "٢٩"
+    ],
+    "correct_answer": "22nd",
+    "correct_answer_ar": "٢٢",
+    "fun_fact": "Monday 1, 8, 15, 22 — the third Monday after the 1st is the 22nd (3 weeks later).",
+    "fun_fact_ar": "الإثنينات: ١، ٨، ١٥، ٢٢ — ثالث إثنين بعد ١ هو ٢٢ (بعد ٣ أسابيع)."
+  },
+  {
+    "id": "bb_log_h_058",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Sara reads 10 pages every day. Lina reads 8 pages every day. Today both start a 240-page book. After how many full days will Sara finish first?",
+    "question_ar": "تقرأ سارة ١٠ صفحات يوميًا. تقرأ لينا ٨ صفحات يوميًا. تبدآن اليوم كتابًا من ٢٤٠ صفحة. بعد كم يومًا كاملًا تنتهي سارة أولًا؟",
+    "options": [
+      "24",
+      "30",
+      "20",
+      "8"
+    ],
+    "options_ar": [
+      "٢٤",
+      "٣٠",
+      "٢٠",
+      "٨"
+    ],
+    "correct_answer": "24",
+    "correct_answer_ar": "٢٤",
+    "fun_fact": "Sara: 240 ÷ 10 = 24 days. Lina: 240 ÷ 8 = 30. Sara finishes first at day 24.",
+    "fun_fact_ar": "سارة: ٢٤٠ ÷ ١٠ = ٢٤ يومًا. لينا: ٢٤٠ ÷ ٨ = ٣٠. تنتهي سارة في اليوم ٢٤."
+  },
+  {
+    "id": "bb_log_h_059",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "If a card drawn from a deck is a heart, it is red. Sara's card is black. Is it a heart?",
+    "question_ar": "إذا كانت الورقة المسحوبة قلب فهي حمراء. ورقة سارة سوداء. هل هي قلب؟",
+    "options": [
+      "No",
+      "Yes",
+      "Maybe",
+      "Always"
+    ],
+    "options_ar": [
+      "لا",
+      "نعم",
+      "ربما",
+      "دائمًا"
+    ],
+    "correct_answer": "No",
+    "correct_answer_ar": "لا",
+    "fun_fact": "Contrapositive: heart -> red, so not red -> not a heart. Black means not red, so not a heart.",
+    "fun_fact_ar": "عكس النقيض: قلب <- حمراء، فليست حمراء <- ليست قلبًا. السوداء ليست حمراء، فهي ليست قلبًا."
+  },
+  {
+    "id": "bb_log_h_060",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Sara has a riddle: \"I am the day after the day before yesterday.\" If yesterday was Tuesday, what day is the riddle's answer?",
+    "question_ar": "لغز سارة: \"أنا اليوم الذي يلي يوم ما قبل أمس\". إذا كان أمس الثلاثاء، فما اليوم الذي يجيب عنه اللغز؟",
+    "options": [
+      "Tuesday",
+      "Monday",
+      "Wednesday",
+      "Sunday"
+    ],
+    "options_ar": [
+      "الثلاثاء",
+      "الإثنين",
+      "الأربعاء",
+      "الأحد"
+    ],
+    "correct_answer": "Tuesday",
+    "correct_answer_ar": "الثلاثاء",
+    "fun_fact": "Yesterday was Tue -> day before yesterday was Mon -> day after Mon = Tue.",
+    "fun_fact_ar": "أمس الثلاثاء <- ما قبل أمس الإثنين <- اليوم الذي يلي الإثنين هو الثلاثاء."
+  },
+  {
+    "id": "bb_log_h_061",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "A 3x3 Latin grid uses digits 1, 2, 3 — each row and column has one of each. Row 1 = 1, 2, 3. Row 2's first digit is 2. Row 2's third digit is 1. What is row 2's second digit?",
+    "question_ar": "شبكة لاتينية ٣×٣ بالأرقام ١ و ٢ و ٣ — في كل صف وعمود رقم واحد فقط. الصف ١ = ١، ٢، ٣. أول رقم في الصف ٢ هو ٢. ثالث رقم في الصف ٢ هو ١. ما الرقم الثاني في الصف ٢؟",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "Empty"
+    ],
+    "options_ar": [
+      "٣",
+      "١",
+      "٢",
+      "فارغ"
+    ],
+    "correct_answer": "3",
+    "correct_answer_ar": "٣",
+    "fun_fact": "Row 2 has 2 and 1 already — the missing digit is 3.",
+    "fun_fact_ar": "الصف ٢ فيه ٢ و ١ بالفعل — الرقم الناقص هو ٣."
+  },
+  {
+    "id": "bb_log_h_062",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "A bag has 10 cards: 5 red and 5 blue. You pick cards without looking. What is the smallest number you must pick to be sure of getting at least 1 red AND at least 1 blue?",
+    "question_ar": "في كيس ١٠ ورقات: ٥ حمراء و ٥ زرقاء. تختار بدون نظر. ما أقل عدد يجب أن تأخذه لتضمن ورقة حمراء واحدة على الأقل وورقة زرقاء واحدة على الأقل؟",
+    "options": [
+      "6",
+      "2",
+      "5",
+      "10"
+    ],
+    "options_ar": [
+      "٦",
+      "٢",
+      "٥",
+      "١٠"
+    ],
+    "correct_answer": "6",
+    "correct_answer_ar": "٦",
+    "fun_fact": "Worst case: 5 of one color first, then the 6th must be the other color.",
+    "fun_fact_ar": "أسوأ حالة: ٥ من لون واحد أولًا، فالسادسة لا بد أن تكون من اللون الآخر."
+  },
+  {
+    "id": "bb_log_h_063",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "If today is Friday and 100 days from today is what day?",
+    "question_ar": "إذا كان اليوم الجمعة، فما اليوم بعد ١٠٠ يوم؟",
+    "options": [
+      "Sunday",
+      "Friday",
+      "Saturday",
+      "Monday"
+    ],
+    "options_ar": [
+      "الأحد",
+      "الجمعة",
+      "السبت",
+      "الإثنين"
+    ],
+    "correct_answer": "Sunday",
+    "correct_answer_ar": "الأحد",
+    "fun_fact": "100 ÷ 7 = 14 weeks remainder 2. Friday + 2 = Sunday.",
+    "fun_fact_ar": "١٠٠ ÷ ٧ = ١٤ أسبوعًا والباقي ٢. الجمعة + ٢ = الأحد."
+  },
+  {
+    "id": "bb_log_h_064",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "There are 20 students. Each is born on one of 12 months. What is the smallest number of students that we can guarantee share the same month? (i.e., at least how many in some single month)?",
+    "question_ar": "في الصف ٢٠ طالبًا. كل طالب وُلد في شهر من ١٢ شهرًا. ما أقل عدد من الطلاب نضمن أنه يجتمع في شهر واحد؟",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "options_ar": [
+      "٢",
+      "٣",
+      "٤",
+      "١"
+    ],
+    "correct_answer": "2",
+    "correct_answer_ar": "٢",
+    "fun_fact": "20 in 12 months — by pigeonhole, at least one month has ≥ 2 students. But we cannot guarantee 3 (e.g., 8 months have 2 each = 16, plus 4 months with 1 each = 4, total 20).",
+    "fun_fact_ar": "٢٠ في ١٢ شهرًا — بمبدأ الحمام والأبراج، شهر واحد على الأقل فيه ٢ أو أكثر. لكن لا نضمن ٣ (مثل ٨ أشهر فيها ٢ و ٤ أشهر فيها ١، المجموع ٢٠)."
+  },
+  {
+    "id": "bb_log_h_065",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "A boat carries 1 person plus 1 item per trip across a river. Khalid must move a cat, a fish-bowl, and a bag of food. The cat eats the fish if alone with it. The cat ignores food. He starts with all three on the near bank. After his first round trip, what should be on the far bank to be safe?",
+    "question_ar": "قارب يحمل شخصًا واحدًا مع غرض واحد في كل عبور عبر النهر. على خالد نقل قط ووعاء سمك وكيس طعام. القط يأكل السمكة إذا تُرك معها. القط لا يهتم بالطعام. يبدأ والثلاثة على الضفة القريبة. بعد أول رحلة عبور وعودة، ما الذي يجب أن يكون على الضفة البعيدة لتكون الأمور آمنة؟",
+    "options": [
+      "The fish",
+      "The cat",
+      "The food",
+      "Nothing"
+    ],
+    "options_ar": [
+      "السمكة",
+      "القط",
+      "الطعام",
+      "لا شيء"
+    ],
+    "correct_answer": "The fish",
+    "correct_answer_ar": "السمكة",
+    "fun_fact": "Take the fish first to keep it safely apart from the cat. Then return alone to fetch the next item.",
+    "fun_fact_ar": "ينقل السمكة أولًا ليبعدها عن القط. ثم يعود وحده لإحضار التالي."
+  },
+  {
+    "id": "bb_log_h_066",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "A box has 5 white socks, 5 black socks, and 5 gray socks (15 total). You pick in the dark. What is the smallest number you must pick to guarantee a matching pair?",
+    "question_ar": "في صندوق ٥ جوارب بيضاء و ٥ سوداء و ٥ رمادية (المجموع ١٥). تختار في الظلام. ما أقل عدد يجب أن تأخذه لتضمن زوجًا متطابقًا؟",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "5"
+    ],
+    "options_ar": [
+      "٤",
+      "٣",
+      "٢",
+      "٥"
+    ],
+    "correct_answer": "4",
+    "correct_answer_ar": "٤",
+    "fun_fact": "After 3 you might have one of each color. The 4th must repeat — pigeonhole.",
+    "fun_fact_ar": "بعد ٣ قد يكون عندك واحد من كل لون. الرابع لا بد أن يكرر — مبدأ الحمام والأبراج."
+  },
+  {
+    "id": "bb_log_h_067",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Sara is older than Lina by 4 years. Mona is older than Lina by 2 years. Sara is 12. How old is Mona?",
+    "question_ar": "سارة أكبر من لينا بـ ٤ سنوات. منى أكبر من لينا بسنتين. سارة ١٢. كم عمر منى؟",
+    "options": [
+      "10",
+      "8",
+      "11",
+      "14"
+    ],
+    "options_ar": [
+      "١٠",
+      "٨",
+      "١١",
+      "١٤"
+    ],
+    "correct_answer": "10",
+    "correct_answer_ar": "١٠",
+    "fun_fact": "Sara 12, Lina = 12 - 4 = 8, Mona = 8 + 2 = 10.",
+    "fun_fact_ar": "سارة ١٢، لينا = ١٢ - ٤ = ٨، منى = ٨ + ٢ = ١٠."
+  },
+  {
+    "id": "bb_log_h_068",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Three children are voting (anonymously) yes/no. The vote passes with strictly more than half. Sara votes yes. Lina votes no. The vote passed. What did Mona vote?",
+    "question_ar": "ثلاثة أطفال يصوّتون (سرًا) بنعم أو لا. يمر التصويت بأكثر من النصف بدقة. سارة قالت نعم. لينا قالت لا. مرّ التصويت. ماذا قالت منى؟",
+    "options": [
+      "Yes",
+      "No",
+      "Abstain",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "نعم",
+      "لا",
+      "امتنعت",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Yes",
+    "correct_answer_ar": "نعم",
+    "fun_fact": "More than half of 3 = at least 2 yes votes. Sara was 1, so Mona must add the 2nd yes.",
+    "fun_fact_ar": "أكثر من نصف ٣ يعني ٢ نعم على الأقل. سارة قالت نعم، فمنى لا بد أن تضيف الثانية."
+  },
+  {
+    "id": "bb_log_h_069",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Three friends — Sara, Lina, Mona — each have a different favorite color (red, blue, green) and a different favorite fruit (apple, banana, pear). The red-lover likes apples. Sara likes blue and the pear. Lina doesn't like banana. Who likes the apple?",
+    "question_ar": "ثلاث صديقات — سارة، لينا، منى — لكل منهن لون مفضل (أحمر، أزرق، أخضر) وفاكهة مفضلة (تفاح، موز، إجاص). محبة الأحمر تحب التفاح. سارة تحب الأزرق والإجاص. لينا لا تحب الموز. من تحب التفاح؟",
+    "options": [
+      "Lina",
+      "Sara",
+      "Mona",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "لينا",
+      "سارة",
+      "منى",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Lina",
+    "correct_answer_ar": "لينا",
+    "fun_fact": "Sara has the pear. Lina doesn't like banana, so Lina likes the apple. Mona has the banana. Lina is the red-lover.",
+    "fun_fact_ar": "سارة تحب الإجاص. لينا لا تحب الموز، فلينا تحب التفاح. ومنى تحب الموز. لينا هي محبة الأحمر."
+  },
+  {
+    "id": "bb_log_h_070",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "If a child wears a hat, they sit indoors. Sara is outdoors. Did Sara wear a hat (under the rule)?",
+    "question_ar": "إذا كان الطفل يرتدي قبعة فهو يجلس داخل البيت. سارة خارج البيت. هل سارة ترتدي قبعة (بحسب القاعدة)؟",
+    "options": [
+      "No",
+      "Yes",
+      "Maybe",
+      "Always"
+    ],
+    "options_ar": [
+      "لا",
+      "نعم",
+      "ربما",
+      "دائمًا"
+    ],
+    "correct_answer": "No",
+    "correct_answer_ar": "لا",
+    "fun_fact": "Contrapositive: hat -> indoors. Outdoors -> no hat (under this rule).",
+    "fun_fact_ar": "عكس النقيض: قبعة <- داخل البيت. خارج البيت <- بدون قبعة (بحسب القاعدة)."
+  },
+  {
+    "id": "bb_log_h_071",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Five vote: yes/no. Yes wins with strictly more than half. We see 3 yes votes. Could the result depend on the last 2 voters?",
+    "question_ar": "خمسة يصوّتون نعم/لا. تفوز النعم بأكثر من النصف بدقة. نرى ٣ أصوات نعم. هل يمكن أن تتوقف النتيجة على آخر صوتين؟",
+    "options": [
+      "No, yes already wins",
+      "Yes, depends on rest",
+      "Only if tied",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "لا، نعم فازت بالفعل",
+      "نعم، تتوقف على الباقي",
+      "فقط إذا كان تعادل",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "No, yes already wins",
+    "correct_answer_ar": "لا، نعم فازت بالفعل",
+    "fun_fact": "More than half of 5 = at least 3. Yes already has 3 — the result is decided.",
+    "fun_fact_ar": "أكثر من نصف ٥ يعني ٣ على الأقل. نعم لديها ٣ بالفعل — النتيجة محسومة."
+  },
+  {
+    "id": "bb_log_h_072",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Sara and Khalid each draw 1 card from a deck (no replacement). Sara's card is even. The deck has equal even and odd. Will Khalid's card definitely be odd?",
+    "question_ar": "تسحب سارة وخالد كل منهما ورقة من رزمة (بدون إرجاع). ورقة سارة زوجية. الرزمة فيها عدد متساوٍ من الزوجي والفردي. هل ورقة خالد ستكون فردية حتمًا؟",
+    "options": [
+      "Not necessarily",
+      "Yes",
+      "No, never",
+      "Always"
+    ],
+    "options_ar": [
+      "ليس بالضرورة",
+      "نعم",
+      "لا، أبدًا",
+      "دائمًا"
+    ],
+    "correct_answer": "Not necessarily",
+    "correct_answer_ar": "ليس بالضرورة",
+    "fun_fact": "Khalid could draw any remaining card — many evens still remain. Parity isn't fixed.",
+    "fun_fact_ar": "خالد قد يسحب أي ورقة متبقية — لا يزال هناك زوجي. التكافؤ غير محدد."
+  },
+  {
+    "id": "bb_log_h_073",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Three coins look the same. One is fake (lighter); the others are real. With one balance weighing — say one coin against another — which result tells us the fake is among the two on the scale?",
+    "question_ar": "ثلاث عملات متشابهة. واحدة مزيفة (أخف) والأخريان حقيقيتان. بوزن واحد على ميزان كفّتين — عملة في كل كفة — أي نتيجة تخبرنا أن المزيفة بين العملتين على الميزان؟",
+    "options": [
+      "The pans don't balance",
+      "The pans balance",
+      "Both pans break",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "لا تتعادل الكفتان",
+      "تتعادل الكفتان",
+      "تنكسر الكفتان",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "The pans don't balance",
+    "correct_answer_ar": "لا تتعادل الكفتان",
+    "fun_fact": "If they don't balance, the lighter pan holds the fake. If they balance, the third coin (off the scale) is fake.",
+    "fun_fact_ar": "إذا لم تتعادلا، فالأخف على الكفة الأعلى. إذا تعادلتا، فالعملة الثالثة (خارج الميزان) هي المزيفة."
+  },
+  {
+    "id": "bb_log_h_074",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "A class of 25 children must each be put in one of 4 reading groups. What is the smallest number of children that we can guarantee will be in some single group?",
+    "question_ar": "صف من ٢٥ طفلًا يُوزَّعون في ٤ مجموعات قراءة. ما أقل عدد من الأطفال نضمن أنه يجتمع في مجموعة واحدة؟",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "options_ar": [
+      "٧",
+      "٦",
+      "٨",
+      "٥"
+    ],
+    "correct_answer": "7",
+    "correct_answer_ar": "٧",
+    "fun_fact": "If every group had ≤ 6, max = 24. But there are 25, so at least one group has 7.",
+    "fun_fact_ar": "لو كان في كل مجموعة ٦ كحد أقصى لكان المجموع ٢٤. لكن هناك ٢٥، فمجموعة واحدة على الأقل فيها ٧."
+  },
+  {
+    "id": "bb_log_h_075",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Three siblings sit in a row. Sara is on Lina's left. Mona is on Lina's right. The eldest sits on the right end. Who is the eldest?",
+    "question_ar": "ثلاثة إخوة يجلسون في صف. سارة على يسار لينا. منى على يمين لينا. الأكبر يجلس في الطرف الأيمن. من الأكبر؟",
+    "options": [
+      "Mona",
+      "Sara",
+      "Lina",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "منى",
+      "سارة",
+      "لينا",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Mona",
+    "correct_answer_ar": "منى",
+    "fun_fact": "Order left-to-right: Sara — Lina — Mona. Right end is Mona — the eldest.",
+    "fun_fact_ar": "الترتيب من اليسار لليمين: سارة — لينا — منى. الطرف الأيمن منى — هي الأكبر."
+  },
+  {
+    "id": "bb_log_h_076",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "A student is on the team if and only if they passed the tryout. Lina did not pass the tryout. Is Lina on the team?",
+    "question_ar": "الطالب في الفريق إذا — وفقط إذا — اجتاز اختبار القبول. لينا لم تجتز اختبار القبول. هل لينا في الفريق؟",
+    "options": [
+      "No",
+      "Yes",
+      "Maybe",
+      "Sometimes"
+    ],
+    "options_ar": [
+      "لا",
+      "نعم",
+      "ربما",
+      "أحيانًا"
+    ],
+    "correct_answer": "No",
+    "correct_answer_ar": "لا",
+    "fun_fact": "Biconditional: team ↔ passed tryout. Didn't pass -> not on team.",
+    "fun_fact_ar": "تكافؤ: الفريق ↔ اجتياز الاختبار. لم تجتز <- ليست في الفريق."
+  },
+  {
+    "id": "bb_log_h_077",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Three friends — Khalid, Yusuf, Omar — each have a different favorite shape (circle, square, triangle) and color (red, blue, green). The square-lover wears red. Khalid wears blue. Yusuf likes the triangle. Who likes the square?",
+    "question_ar": "ثلاثة أصدقاء — خالد، يوسف، عمر — لكل منهم شكل مفضل (دائرة، مربع، مثلث) ولون (أحمر، أزرق، أخضر). محب المربع يلبس الأحمر. خالد يلبس الأزرق. يوسف يحب المثلث. من يحب المربع؟",
+    "options": [
+      "Omar",
+      "Khalid",
+      "Yusuf",
+      "Can't tell"
+    ],
+    "options_ar": [
+      "عمر",
+      "خالد",
+      "يوسف",
+      "لا يمكن المعرفة"
+    ],
+    "correct_answer": "Omar",
+    "correct_answer_ar": "عمر",
+    "fun_fact": "Khalid wears blue, so he's not the square-lover. Yusuf likes the triangle. So Omar likes the square (and wears red).",
+    "fun_fact_ar": "خالد يلبس الأزرق فليس محب المربع. يوسف يحب المثلث. فعمر يحب المربع (ويلبس الأحمر)."
+  },
+  {
+    "id": "bb_log_h_078",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Today is February 28 in a non-leap year. What is tomorrow's date?",
+    "question_ar": "اليوم ٢٨ فبراير في سنة غير كبيسة. ما تاريخ الغد؟",
+    "options": [
+      "March 1",
+      "February 29",
+      "March 2",
+      "February 28"
+    ],
+    "options_ar": [
+      "١ مارس",
+      "٢٩ فبراير",
+      "٢ مارس",
+      "٢٨ فبراير"
+    ],
+    "correct_answer": "March 1",
+    "correct_answer_ar": "١ مارس",
+    "fun_fact": "Non-leap February has only 28 days, so the next day is March 1.",
+    "fun_fact_ar": "فبراير في السنة غير الكبيسة فيه ٢٨ يومًا فقط، فاليوم التالي ١ مارس."
+  },
+  {
+    "id": "bb_log_h_079",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Sara picks one card from a deck. She says: \"It's an even number.\" She is a truth-teller. The card has number 7. Is what she said consistent with reality?",
+    "question_ar": "تسحب سارة ورقة من الرزمة. تقول: \"إنه عدد زوجي\". هي صادقة دائمًا. الورقة عليها العدد ٧. هل قولها يتفق مع الواقع؟",
+    "options": [
+      "No",
+      "Yes",
+      "Sometimes",
+      "Always"
+    ],
+    "options_ar": [
+      "لا",
+      "نعم",
+      "أحيانًا",
+      "دائمًا"
+    ],
+    "correct_answer": "No",
+    "correct_answer_ar": "لا",
+    "fun_fact": "7 is odd, not even — so the statement contradicts reality. (A real truth-teller wouldn't have said it.)",
+    "fun_fact_ar": "٧ فردي وليس زوجيًا — فالعبارة تخالف الواقع. (الصادق الحقيقي لا يقولها.)"
+  },
+  {
+    "id": "bb_log_h_080",
+    "category": "Logic",
+    "category_ar": "منطق",
+    "difficulty": 3,
+    "question": "Four students wrote tests. Their scores are 80, 85, 90, and 95 (one each). Mona scored higher than Sara. Sara scored higher than Lina. Yusuf scored 85. Who scored 95?",
+    "question_ar": "أربعة طلاب أدوا اختبارات. درجاتهم ٨٠ و ٨٥ و ٩٠ و ٩٥ (لكل طالب درجة واحدة). منى أعلى من سارة. سارة أعلى من لينا. يوسف حصل على ٨٥. من حصل على ٩٥؟",
+    "options": [
+      "Mona",
+      "Sara",
+      "Lina",
+      "Yusuf"
+    ],
+    "options_ar": [
+      "منى",
+      "سارة",
+      "لينا",
+      "يوسف"
+    ],
+    "correct_answer": "Mona",
+    "correct_answer_ar": "منى",
+    "fun_fact": "Yusuf has 85, so the others share 80, 90, 95. Mona > Sara > Lina, so Lina=80, Sara=90, Mona=95.",
+    "fun_fact_ar": "يوسف ٨٥، فالباقون يقتسمون ٨٠ و ٩٠ و ٩٥. منى > سارة > لينا، إذن لينا ٨٠ وسارة ٩٠ ومنى ٩٥."
+  }
+]

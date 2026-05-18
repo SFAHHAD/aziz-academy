@@ -1,0 +1,88 @@
+[
+  {
+    "id": "lz_water_cycle",
+    "title": "The Water Cycle",
+    "title_ar": "دورة الماء",
+    "passage": "Water is always moving. The sun heats the sea. The water turns into tiny drops in the air. The drops form clouds. When the clouds get heavy, rain falls back down. Rivers carry the water back to the sea. This loop never stops.",
+    "passage_ar": "الماء يتحرك دائمًا. تسخن الشمس البحر، فيتحول الماء إلى قطرات صغيرة في الهواء. تتجمع القطرات وتكوّن الغيوم. عندما تثقل الغيوم، يسقط المطر. الأنهار تحمل الماء عائدة إلى البحر. هذه الدورة لا تتوقف.",
+    "category": "Sciences",
+    "questions": [
+      {
+        "q": "What heats the sea?",
+        "q_ar": "ما الذي يسخن البحر؟",
+        "options": ["The moon", "The sun", "The wind", "The clouds"],
+        "options_ar": ["القمر", "الشمس", "الريح", "الغيوم"],
+        "correct": "The sun",
+        "correct_ar": "الشمس"
+      },
+      {
+        "q": "What carries water back to the sea?",
+        "q_ar": "ما الذي يحمل الماء إلى البحر؟",
+        "options": ["Cars", "Birds", "Rivers", "Roads"],
+        "options_ar": ["السيارات", "الطيور", "الأنهار", "الطرق"],
+        "correct": "Rivers",
+        "correct_ar": "الأنهار"
+      },
+      {
+        "q": "When do clouds drop rain?",
+        "q_ar": "متى تنزل الغيوم المطر؟",
+        "options": ["When they get light", "When they get heavy", "Never", "Only at night"],
+        "options_ar": ["عندما تصبح خفيفة", "عندما تثقل", "أبدًا", "فقط في الليل"],
+        "correct": "When they get heavy",
+        "correct_ar": "عندما تثقل"
+      }
+    ]
+  },
+  {
+    "id": "lz_honey_bees",
+    "title": "How Bees Make Honey",
+    "title_ar": "كيف يصنع النحل العسل",
+    "passage": "Bees fly from flower to flower. They drink a sweet juice called nectar with their long tongues. They take the nectar back to the hive. Inside the hive, the bees turn the nectar into honey. They store the honey in tiny rooms made of wax. Honey is food for the bees, and humans love it too.",
+    "passage_ar": "ينتقل النحل من زهرة إلى زهرة. يشرب الرحيق الحلو من الزهور بلسانه الطويل، ثم يعود به إلى الخلية. داخل الخلية يحوّل النحل الرحيق إلى عسل، ويخزّنه في غرف صغيرة من الشمع. العسل غذاء للنحل، ويحبه البشر أيضًا.",
+    "category": "Sciences",
+    "questions": [
+      {
+        "q": "What do bees drink from flowers?",
+        "q_ar": "ماذا يشرب النحل من الزهور؟",
+        "options": ["Water", "Milk", "Nectar", "Juice"],
+        "options_ar": ["الماء", "الحليب", "الرحيق", "العصير"],
+        "correct": "Nectar",
+        "correct_ar": "الرحيق"
+      },
+      {
+        "q": "What are the storage rooms in a hive made of?",
+        "q_ar": "مم تُصنع غرف التخزين في الخلية؟",
+        "options": ["Wood", "Wax", "Stone", "Plastic"],
+        "options_ar": ["الخشب", "الشمع", "الحجر", "البلاستيك"],
+        "correct": "Wax",
+        "correct_ar": "الشمع"
+      }
+    ]
+  },
+  {
+    "id": "lz_moon_phases",
+    "title": "Why the Moon Changes Shape",
+    "title_ar": "لماذا يتغير شكل القمر",
+    "passage": "The moon does not shine on its own. The sun shines on the moon, and we see the lit half. As the moon goes around Earth each month, we see different parts of the lit half. Sometimes we see all of it (full moon), and sometimes only a thin curve (crescent). It looks different each night, but the moon itself never changes shape.",
+    "passage_ar": "القمر لا يضيء بنفسه. الشمس هي التي تضيء عليه، فنرى نصفه المضاء. وبينما يدور القمر حول الأرض كل شهر، نرى أجزاءً مختلفة من نصفه المضاء. أحيانًا نراه كاملًا (البدر) وأحيانًا قوسًا رفيعًا (الهلال). يبدو مختلفًا كل ليلة، لكنه في الحقيقة لا يتغير.",
+    "category": "Sciences",
+    "questions": [
+      {
+        "q": "Where does the moon's light come from?",
+        "q_ar": "من أين يأتي ضوء القمر؟",
+        "options": ["The moon makes it", "Stars", "The sun", "Earth"],
+        "options_ar": ["القمر يصنعه", "النجوم", "الشمس", "الأرض"],
+        "correct": "The sun",
+        "correct_ar": "الشمس"
+      },
+      {
+        "q": "How long does it take for the moon to go around Earth?",
+        "q_ar": "كم يستغرق القمر ليدور حول الأرض؟",
+        "options": ["A day", "A week", "A month", "A year"],
+        "options_ar": ["يوم", "أسبوع", "شهر", "سنة"],
+        "correct": "A month",
+        "correct_ar": "شهر"
+      }
+    ]
+  }
+]

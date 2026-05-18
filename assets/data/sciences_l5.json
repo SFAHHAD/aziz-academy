@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "sci_l5_001",
+    "question": "Mitosis produces two identical body cells, but meiosis produces what?",
+    "question_ar": "ينتج الانقسام المتساوي خليتين متطابقتين من خلايا الجسم، أمّا الانقسام المنصف فينتج ماذا؟",
+    "options": [
+      "Four genetically different sex cells",
+      "Two identical body cells",
+      "One giant cell",
+      "Three nerve cells"
+    ],
+    "options_ar": [
+      "أربع خلايا جنسية مختلفة وراثيًا",
+      "خليتان متطابقتان من خلايا الجسم",
+      "خلية عملاقة واحدة",
+      "ثلاث خلايا عصبية"
+    ],
+    "correct_answer": "Four genetically different sex cells",
+    "correct_answer_ar": "أربع خلايا جنسية مختلفة وراثيًا",
+    "difficulty": 4,
+    "fun_fact": "Meiosis cuts the chromosome number in half so that when two sex cells join, the baby ends up with the right total again.",
+    "fun_fact_ar": "يقلّل الانقسام المنصف عدد الكروموسومات إلى النصف، حتى إذا اندمجت خليتان جنسيتان عاد المجموع الصحيح للجنين.",
+    "category": "Biology — Cell Division",
+    "category_ar": "أحياء — انقسام الخلية"
+  },
+  {
+    "id": "sci_l5_002",
+    "question": "How many divisions happen in meiosis compared to mitosis?",
+    "question_ar": "كم عدد الانقسامات التي تحدث في الانقسام المنصف مقارنةً بالانقسام المتساوي؟",
+    "options": [
+      "Two divisions instead of one",
+      "Same number, just one",
+      "Three divisions",
+      "No division at all"
+    ],
+    "options_ar": [
+      "انقسامان بدلًا من واحد",
+      "العدد نفسه، انقسام واحد",
+      "ثلاثة انقسامات",
+      "لا يوجد انقسام أصلًا"
+    ],
+    "correct_answer": "Two divisions instead of one",
+    "correct_answer_ar": "انقسامان بدلًا من واحد",
+    "difficulty": 4,
+    "fun_fact": "The two rounds of meiosis are called meiosis I and meiosis II, and they help shuffle the genes you inherit.",
+    "fun_fact_ar": "تُسمى جولتا الانقسام المنصف بالانقسام المنصف الأول والثاني، وتساعدان على خلط الجينات التي ترثها.",
+    "category": "Biology — Cell Division",
+    "category_ar": "أحياء — انقسام الخلية"
+  },
+  {
+    "id": "sci_l5_003",
+    "question": "In a Punnett square, if both parents are heterozygous (Bb x Bb), what fraction of children are predicted to show the recessive trait (bb)?",
+    "question_ar": "في مربع بانيت، إذا كان الأبوان غير متشابهَي الجينات (Bb × Bb)، فما النسبة المتوقعة لظهور الصفة المتنحية (bb) في الأبناء؟",
+    "options": [
+      "One out of four",
+      "All of them",
+      "Half of them",
+      "None of them"
+    ],
+    "options_ar": [
+      "واحد من أربعة",
+      "جميعهم",
+      "نصفهم",
+      "لا أحد منهم"
+    ],
+    "correct_answer": "One out of four",
+    "correct_answer_ar": "واحد من أربعة",
+    "difficulty": 4,
+    "fun_fact": "Gregor Mendel figured out these patterns by counting thousands of pea plants in a quiet monastery garden.",
+    "fun_fact_ar": "اكتشف غريغور مندل هذه الأنماط بعدّ آلاف نباتات البازلاء في حديقة دير هادئة.",
+    "category": "Biology — Genetics",
+    "category_ar": "أحياء — وراثة"
+  },
+  {
+    "id": "sci_l5_004",
+    "question": "If a child receives one dominant and one recessive allele, which trait shows up?",
+    "question_ar": "إذا استلم الطفل أليلًا سائدًا وآخر متنحيًا، فأيُّ صفة ستظهر؟",
+    "options": [
+      "The dominant trait",
+      "The recessive trait",
+      "Both at once",
+      "Neither one"
+    ],
+    "options_ar": [
+      "الصفة السائدة",
+      "الصفة المتنحية",
+      "الاثنتان معًا",
+      "لا واحدة منهما"
+    ],
+    "correct_answer": "The dominant trait",
+    "correct_answer_ar": "الصفة السائدة",
+    "difficulty": 4,
+    "fun_fact": "The recessive allele is still hidden in the DNA and can show up in grandchildren — that's why traits sometimes skip a generation.",
+    "fun_fact_ar": "يظل الأليل المتنحي مخبّأً في الحمض النووي، وقد يظهر عند الأحفاد، ولهذا تتجاوز بعض الصفات جيلًا أحيانًا.",
+    "category": "Biology — Genetics",
+    "category_ar": "أحياء — وراثة"
+  },
+  {
+    "id": "sci_l5_005",
+    "question": "What is the correct order of information flow in a cell, often called the central dogma?",
+    "question_ar": "ما الترتيب الصحيح لتدفق المعلومات داخل الخلية، والذي يُسمى المبدأ المركزي؟",
+    "options": [
+      "DNA -> RNA -> Protein",
+      "Protein -> RNA -> DNA",
+      "RNA -> DNA -> Protein",
+      "DNA -> Protein -> RNA"
+    ],
+    "options_ar": [
+      "DNA -> RNA -> بروتين",
+      "بروتين -> RNA -> DNA",
+      "RNA -> DNA -> بروتين",
+      "DNA -> بروتين -> RNA"
+    ],
+    "correct_answer": "DNA -> RNA -> Protein",
+    "correct_answer_ar": "DNA -> RNA -> بروتين",
+    "difficulty": 4,
+    "fun_fact": "Copying DNA into RNA is called transcription, and reading the RNA to build protein is called translation.",
+    "fun_fact_ar": "تُسمى عملية نسخ DNA إلى RNA بالنسخ، وقراءة RNA لبناء البروتين تُسمى الترجمة.",
+    "category": "Biology — Molecular Biology",
+    "category_ar": "أحياء — بيولوجيا جزيئية"
+  },
+  {
+    "id": "sci_l5_006",
+    "question": "In RNA, which base replaces the thymine (T) found in DNA?",
+    "question_ar": "في RNA، أيُّ قاعدة تحلّ محل الثايمين (T) الموجود في DNA؟",
+    "options": [
+      "Uracil (U)",
+      "Adenine (A)",
+      "Cytosine (C)",
+      "Guanine (G)"
+    ],
+    "options_ar": [
+      "يوراسيل (U)",
+      "أدينين (A)",
+      "سيتوزين (C)",
+      "جوانين (G)"
+    ],
+    "correct_answer": "Uracil (U)",
+    "correct_answer_ar": "يوراسيل (U)",
+    "difficulty": 4,
+    "fun_fact": "Each set of three RNA letters, called a codon, is the recipe for one amino acid in a protein.",
+    "fun_fact_ar": "كل ثلاثة أحرف متتالية في RNA تُسمى كودون، وهي وصفة حمض أميني واحد في البروتين.",
+    "category": "Biology — Molecular Biology",
+    "category_ar": "أحياء — بيولوجيا جزيئية"
+  },
+  {
+    "id": "sci_l5_007",
+    "question": "Enzymes work mainly by lowering what during a reaction?",
+    "question_ar": "تعمل الإنزيمات أساسًا عن طريق خفض ماذا أثناء التفاعل؟",
+    "options": [
+      "The activation energy needed",
+      "The number of atoms",
+      "The temperature of space",
+      "The mass of the cell"
+    ],
+    "options_ar": [
+      "طاقة التنشيط اللازمة",
+      "عدد الذرات",
+      "حرارة الفضاء",
+      "كتلة الخلية"
+    ],
+    "correct_answer": "The activation energy needed",
+    "correct_answer_ar": "طاقة التنشيط اللازمة",
+    "difficulty": 4,
+    "fun_fact": "An enzyme can be reused thousands of times because it is not used up in the reaction it speeds up.",
+    "fun_fact_ar": "يمكن إعادة استخدام الإنزيم آلاف المرات لأنه لا يُستهلك في التفاعل الذي يسرّعه.",
+    "category": "Biology — Enzymes",
+    "category_ar": "أحياء — إنزيمات"
+  },
+  {
+    "id": "sci_l5_008",
+    "question": "What usually happens to an enzyme if the temperature gets way too high?",
+    "question_ar": "ماذا يحدث عادةً للإنزيم إذا ارتفعت درجة الحرارة كثيرًا جدًا؟",
+    "options": [
+      "It denatures and stops working",
+      "It becomes faster forever",
+      "It turns into DNA",
+      "It freezes solid"
+    ],
+    "options_ar": [
+      "يتفكك ويتوقف عن العمل",
+      "يصبح أسرع للأبد",
+      "يتحوّل إلى DNA",
+      "يتجمد كالصخر"
+    ],
+    "correct_answer": "It denatures and stops working",
+    "correct_answer_ar": "يتفكك ويتوقف عن العمل",
+    "difficulty": 4,
+    "fun_fact": "Ibn Sina (Avicenna) wrote about how heat changes substances inside the body almost a thousand years before modern enzyme science.",
+    "fun_fact_ar": "كتب ابن سينا عن تأثير الحرارة في تغيير المواد داخل الجسم قبل علم الإنزيمات الحديث بنحو ألف عام.",
+    "category": "Biology — Enzymes",
+    "category_ar": "أحياء — إنزيمات"
+  },
+  {
+    "id": "sci_l5_009",
+    "question": "Which white blood cells make antibodies that lock onto germs?",
+    "question_ar": "أيُّ خلايا الدم البيضاء تصنع الأجسام المضادة التي تلتصق بالجراثيم؟",
+    "options": [
+      "B lymphocytes",
+      "Red blood cells",
+      "Platelets",
+      "Skin cells"
+    ],
+    "options_ar": [
+      "الخلايا اللمفية البائية",
+      "كريات الدم الحمراء",
+      "الصفائح الدموية",
+      "خلايا الجلد"
+    ],
+    "correct_answer": "B lymphocytes",
+    "correct_answer_ar": "الخلايا اللمفية البائية",
+    "difficulty": 4,
+    "fun_fact": "An antibody fits a germ marker like a glove fits a hand — that is why it is so specific.",
+    "fun_fact_ar": "يلتصق الجسم المضاد بعلامة الجرثومة كما يلبس القفاز اليد، ولهذا يكون دقيقًا جدًا.",
+    "category": "Biology — Immune System",
+    "category_ar": "أحياء — جهاز المناعة"
+  },
+  {
+    "id": "sci_l5_010",
+    "question": "A vaccine works mainly by doing what?",
+    "question_ar": "يعمل اللقاح أساسًا من خلال ماذا؟",
+    "options": [
+      "Training the immune system using a safe sample",
+      "Killing every cell in the body",
+      "Replacing all the blood",
+      "Stopping the heart for a moment"
+    ],
+    "options_ar": [
+      "تدريب جهاز المناعة باستخدام عيّنة آمنة",
+      "قتل كل خلية في الجسم",
+      "استبدال الدم كله",
+      "إيقاف القلب للحظة"
+    ],
+    "correct_answer": "Training the immune system using a safe sample",
+    "correct_answer_ar": "تدريب جهاز المناعة باستخدام عيّنة آمنة",
+    "difficulty": 4,
+    "fun_fact": "After a vaccine, the body keeps memory cells ready, so the real germ gets crushed faster next time.",
+    "fun_fact_ar": "بعد اللقاح يحتفظ الجسم بخلايا ذاكرة جاهزة، فيُسحق الجرثوم الحقيقي بسرعة أكبر في المرة القادمة.",
+    "category": "Biology — Immune System",
+    "category_ar": "أحياء — جهاز المناعة"
+  },
+  {
+    "id": "sci_l5_011",
+    "question": "In an energy pyramid, roughly what fraction of energy passes from one level to the next?",
+    "question_ar": "في هرم الطاقة، تقريبًا ما النسبة التي تنتقل من مستوى إلى المستوى الذي يليه؟",
+    "options": [
+      "About one tenth",
+      "All of it",
+      "About nine tenths",
+      "Exactly half"
+    ],
+    "options_ar": [
+      "نحو العُشر",
+      "كلها",
+      "نحو تسعة أعشار",
+      "النصف بالضبط"
+    ],
+    "correct_answer": "About one tenth",
+    "correct_answer_ar": "نحو العُشر",
+    "difficulty": 4,
+    "fun_fact": "Most of the energy is lost as heat, which is why food chains rarely have more than four or five levels.",
+    "fun_fact_ar": "تُفقد معظم الطاقة على شكل حرارة، ولهذا نادرًا ما تتجاوز السلاسل الغذائية أربعة أو خمسة مستويات.",
+    "category": "Biology — Ecology",
+    "category_ar": "أحياء — بيئة"
+  },
+  {
+    "id": "sci_l5_012",
+    "question": "Which group sits at the base of almost every energy pyramid on Earth?",
+    "question_ar": "أيُّ مجموعة تقع في قاعدة كل هرم طاقة تقريبًا على الأرض؟",
+    "options": [
+      "Producers like green plants",
+      "Top predators like sharks",
+      "Scavengers like vultures",
+      "Decomposers only"
+    ],
+    "options_ar": [
+      "المنتجات مثل النباتات الخضراء",
+      "المفترسات العليا مثل أسماك القرش",
+      "الكواسر مثل النسور",
+      "المحلِّلات فقط"
+    ],
+    "correct_answer": "Producers like green plants",
+    "correct_answer_ar": "المنتجات مثل النباتات الخضراء",
+    "difficulty": 4,
+    "fun_fact": "Plants and algae capture sunlight and turn it into chemical energy that the rest of the food web depends on.",
+    "fun_fact_ar": "تلتقط النباتات والطحالب ضوء الشمس وتحوّله إلى طاقة كيميائية تعتمد عليها بقية الشبكة الغذائية.",
+    "category": "Biology — Ecology",
+    "category_ar": "أحياء — بيئة"
+  },
+  {
+    "id": "sci_l5_013",
+    "question": "The light-dependent reactions of photosynthesis happen in which part of the chloroplast?",
+    "question_ar": "تفاعلات البناء الضوئي المعتمدة على الضوء تحدث في أيِّ جزء من البلاستيدة الخضراء؟",
+    "options": [
+      "The thylakoid membranes",
+      "The cell wall",
+      "The nucleus",
+      "The ribosome"
+    ],
+    "options_ar": [
+      "أغشية الثايلاكويد",
+      "الجدار الخلوي",
+      "النواة",
+      "الريبوسوم"
+    ],
+    "correct_answer": "The thylakoid membranes",
+    "correct_answer_ar": "أغشية الثايلاكويد",
+    "difficulty": 4,
+    "fun_fact": "Thylakoids are stacked like green pancakes inside the chloroplast, called grana.",
+    "fun_fact_ar": "تتراكم الثايلاكويدات داخل البلاستيدة الخضراء كرقائق خضراء، وتُسمى الجرانا.",
+    "category": "Biology — Photosynthesis",
+    "category_ar": "أحياء — البناء الضوئي"
+  },
+  {
+    "id": "sci_l5_014",
+    "question": "What is the main goal of the Calvin cycle (the light-independent stage)?",
+    "question_ar": "ما الهدف الرئيسي من دورة كالفن (المرحلة غير المعتمدة على الضوء)؟",
+    "options": [
+      "To build sugars from carbon dioxide",
+      "To split water using sunlight",
+      "To make oxygen gas",
+      "To absorb red light"
+    ],
+    "options_ar": [
+      "بناء السكريات من ثاني أكسيد الكربون",
+      "تفكيك الماء باستخدام الضوء",
+      "إنتاج غاز الأكسجين",
+      "امتصاص الضوء الأحمر"
+    ],
+    "correct_answer": "To build sugars from carbon dioxide",
+    "correct_answer_ar": "بناء السكريات من ثاني أكسيد الكربون",
+    "difficulty": 4,
+    "fun_fact": "The Calvin cycle does not need light directly, but it uses energy molecules made earlier from sunlight.",
+    "fun_fact_ar": "لا تحتاج دورة كالفن إلى الضوء مباشرة، لكنها تستخدم جزيئات طاقة صُنعت سابقًا من ضوء الشمس.",
+    "category": "Biology — Photosynthesis",
+    "category_ar": "أحياء — البناء الضوئي"
+  },
+  {
+    "id": "sci_l5_015",
+    "question": "Which stage of cellular respiration produces the most ATP energy?",
+    "question_ar": "أيُّ مرحلة من مراحل التنفس الخلوي تنتج أكبر كمية من طاقة ATP؟",
+    "options": [
+      "Oxidative phosphorylation in the electron transport chain",
+      "Glycolysis in the cytoplasm",
+      "Fermentation",
+      "The Krebs cycle alone"
+    ],
+    "options_ar": [
+      "الفسفرة التأكسدية في سلسلة نقل الإلكترون",
+      "التحلل السكري في السيتوبلازم",
+      "التخمر",
+      "دورة كريبس وحدها"
+    ],
+    "correct_answer": "Oxidative phosphorylation in the electron transport chain",
+    "correct_answer_ar": "الفسفرة التأكسدية في سلسلة نقل الإلكترون",
+    "difficulty": 4,
+    "fun_fact": "The mitochondria are sometimes called the powerhouse of the cell because most ATP is made there.",
+    "fun_fact_ar": "تُسمى الميتوكوندريا أحيانًا محطة الطاقة في الخلية لأن معظم ATP يُصنع فيها.",
+    "category": "Biology — Cellular Respiration",
+    "category_ar": "أحياء — التنفس الخلوي"
+  },
+  {
+    "id": "sci_l5_016",
+    "question": "In the absence of oxygen, human muscle cells can switch to which process?",
+    "question_ar": "عند غياب الأكسجين، إلى أيِّ عملية يمكن أن تتحوّل خلايا العضلات البشرية؟",
+    "options": [
+      "Lactic acid fermentation",
+      "Photosynthesis",
+      "Mitosis",
+      "Filtration"
+    ],
+    "options_ar": [
+      "تخمر حمض اللاكتيك",
+      "البناء الضوئي",
+      "الانقسام المتساوي",
+      "الترشيح"
+    ],
+    "correct_answer": "Lactic acid fermentation",
+    "correct_answer_ar": "تخمر حمض اللاكتيك",
+    "difficulty": 4,
+    "fun_fact": "That burning feeling after a hard sprint is partly from lactic acid building up in your muscles.",
+    "fun_fact_ar": "إحساس الحرقة بعد ركض سريع يأتي جزئيًا من تراكم حمض اللاكتيك في عضلاتك.",
+    "category": "Biology — Cellular Respiration",
+    "category_ar": "أحياء — التنفس الخلوي"
+  },
+  {
+    "id": "sci_l5_017",
+    "question": "Which equation is correctly balanced?",
+    "question_ar": "أيُّ معادلة موزونة بشكل صحيح؟",
+    "options": [
+      "N2 + 3H2 -> 2NH3",
+      "N2 + H2 -> NH3",
+      "N + H2 -> NH3",
+      "N2 + 2H2 -> 3NH3"
+    ],
+    "options_ar": [
+      "N2 + 3H2 -> 2NH3",
+      "N2 + H2 -> NH3",
+      "N + H2 -> NH3",
+      "N2 + 2H2 -> 3NH3"
+    ],
+    "correct_answer": "N2 + 3H2 -> 2NH3",
+    "correct_answer_ar": "N2 + 3H2 -> 2NH3",
+    "difficulty": 4,
+    "fun_fact": "This is the Haber-Bosch reaction; it makes ammonia for fertilizer and feeds about half the people on Earth.",
+    "fun_fact_ar": "هذا تفاعل هابر-بوش؛ ينتج الأمونيا المستخدمة في الأسمدة، ويغذي نحو نصف سكان الأرض.",
+    "category": "Chemistry — Stoichiometry",
+    "category_ar": "كيمياء — حسابات تفاعلات"
+  },
+  {
+    "id": "sci_l5_018",
+    "question": "One mole of any substance contains how many particles?",
+    "question_ar": "يحتوي مول واحد من أيِّ مادة على عدد من الجسيمات يساوي ماذا؟",
+    "options": [
+      "Avogadro's number of particles",
+      "One thousand particles",
+      "One million particles",
+      "Exactly one particle"
+    ],
+    "options_ar": [
+      "عدد أفوجادرو من الجسيمات",
+      "ألف جسيم",
+      "مليون جسيم",
+      "جسيم واحد بالضبط"
+    ],
+    "correct_answer": "Avogadro's number of particles",
+    "correct_answer_ar": "عدد أفوجادرو من الجسيمات",
+    "difficulty": 4,
+    "fun_fact": "Avogadro's number is about six followed by twenty-three zeros — a truly enormous count.",
+    "fun_fact_ar": "عدد أفوجادرو يعادل تقريبًا ستة متبوعة بثلاثة وعشرين صفرًا، وهو عدد ضخم جدًا.",
+    "category": "Chemistry — Mole Concept",
+    "category_ar": "كيمياء — مفهوم المول"
+  },
+  {
+    "id": "sci_l5_019",
+    "question": "On the pH scale, a solution with pH equal to seven is best described as what?",
+    "question_ar": "على مقياس الأس الهيدروجيني، المحلول الذي قيمته تساوي سبعة يُوصف بأنه ماذا؟",
+    "options": [
+      "Neutral",
+      "Strongly acidic",
+      "Strongly basic",
+      "Radioactive"
+    ],
+    "options_ar": [
+      "متعادل",
+      "حمضي قوي",
+      "قاعدي قوي",
+      "مشعّ"
+    ],
+    "correct_answer": "Neutral",
+    "correct_answer_ar": "متعادل",
+    "difficulty": 4,
+    "fun_fact": "Pure water sits right at the middle of the pH scale, while lemon juice and bleach sit far apart on either side.",
+    "fun_fact_ar": "الماء النقي يقع في منتصف مقياس الأس الهيدروجيني، بينما يقع عصير الليمون والمبيّض على طرفين متباعدين.",
+    "category": "Chemistry — Acids and Bases",
+    "category_ar": "كيمياء — أحماض وقواعد"
+  },
+  {
+    "id": "sci_l5_020",
+    "question": "What ion does an acid release into water that defines it as an acid?",
+    "question_ar": "ما الأيون الذي يطلقه الحمض في الماء فيجعله حمضًا؟",
+    "options": [
+      "Hydrogen ion (H+)",
+      "Hydroxide ion (OH-)",
+      "Sodium ion (Na+)",
+      "Chloride ion (Cl-)"
+    ],
+    "options_ar": [
+      "أيون الهيدروجين (H+)",
+      "أيون الهيدروكسيد (OH-)",
+      "أيون الصوديوم (Na+)",
+      "أيون الكلوريد (Cl-)"
+    ],
+    "correct_answer": "Hydrogen ion (H+)",
+    "correct_answer_ar": "أيون الهيدروجين (H+)",
+    "difficulty": 4,
+    "fun_fact": "Jabir ibn Hayyan, an early chemist of the Islamic Golden Age, wrote about acids like nitric acid more than a thousand years ago.",
+    "fun_fact_ar": "كتب جابر بن حيّان، وهو من أوائل الكيميائيين في العصر الذهبي الإسلامي، عن أحماض مثل حمض النيتريك قبل أكثر من ألف عام.",
+    "category": "Chemistry — Acids and Bases",
+    "category_ar": "كيمياء — أحماض وقواعد"
+  },
+  {
+    "id": "sci_l5_021",
+    "question": "Across a period (left to right) on the periodic table, electronegativity usually does what?",
+    "question_ar": "عبر دورة من اليسار إلى اليمين في الجدول الدوري، ماذا يحدث للسالبية الكهربية عادةً؟",
+    "options": [
+      "It increases",
+      "It decreases",
+      "It stays the same",
+      "It drops to zero"
+    ],
+    "options_ar": [
+      "تزداد",
+      "تقل",
+      "تبقى ثابتة",
+      "تنخفض إلى الصفر"
+    ],
+    "correct_answer": "It increases",
+    "correct_answer_ar": "تزداد",
+    "difficulty": 4,
+    "fun_fact": "Fluorine sits in the top right of the table and is the most electronegative element of all.",
+    "fun_fact_ar": "يقع الفلور في أعلى يمين الجدول، وهو العنصر الأعلى سالبية كهربية على الإطلاق.",
+    "category": "Chemistry — Periodic Trends",
+    "category_ar": "كيمياء — اتجاهات الجدول الدوري"
+  },
+  {
+    "id": "sci_l5_022",
+    "question": "Across a period, atomic radius usually does what?",
+    "question_ar": "عبر دورة في الجدول الدوري، ماذا يحدث لنصف القطر الذري عادةً؟",
+    "options": [
+      "It decreases",
+      "It increases",
+      "It doubles",
+      "It becomes infinite"
+    ],
+    "options_ar": [
+      "يقل",
+      "يزداد",
+      "يتضاعف",
+      "يصبح لانهائيًا"
+    ],
+    "correct_answer": "It decreases",
+    "correct_answer_ar": "يقل",
+    "difficulty": 4,
+    "fun_fact": "More protons in the nucleus pull the electrons closer, shrinking the atom even though it has more particles.",
+    "fun_fact_ar": "زيادة البروتونات في النواة تشدّ الإلكترونات نحو الداخل فيقلّ حجم الذرة رغم زيادة جسيماتها.",
+    "category": "Chemistry — Periodic Trends",
+    "category_ar": "كيمياء — اتجاهات الجدول الدوري"
+  },
+  {
+    "id": "sci_l5_023",
+    "question": "Which type of bond holds metals together with a sea of shared electrons?",
+    "question_ar": "أيُّ نوع من الروابط يربط الفلزات معًا عبر بحر من الإلكترونات المشتركة؟",
+    "options": [
+      "Metallic bond",
+      "Ionic bond",
+      "Hydrogen bond",
+      "Peptide bond"
+    ],
+    "options_ar": [
+      "رابطة فلزية",
+      "رابطة أيونية",
+      "رابطة هيدروجينية",
+      "رابطة ببتيدية"
+    ],
+    "correct_answer": "Metallic bond",
+    "correct_answer_ar": "رابطة فلزية",
+    "difficulty": 4,
+    "fun_fact": "The free-moving electrons in metals are why copper wires conduct electricity so well.",
+    "fun_fact_ar": "حركة الإلكترونات الحرة في الفلزات هي السبب في توصيل أسلاك النحاس للكهرباء بكفاءة.",
+    "category": "Chemistry — Bonding",
+    "category_ar": "كيمياء — الروابط الكيميائية"
+  },
+  {
+    "id": "sci_l5_024",
+    "question": "Two non-metals usually form which type of bond between them?",
+    "question_ar": "عادةً ما يكوّن لافلزّان رابطة من أيِّ نوع بينهما؟",
+    "options": [
+      "Covalent bond",
+      "Ionic bond",
+      "Metallic bond",
+      "Magnetic bond"
+    ],
+    "options_ar": [
+      "رابطة تساهمية",
+      "رابطة أيونية",
+      "رابطة فلزية",
+      "رابطة مغناطيسية"
+    ],
+    "correct_answer": "Covalent bond",
+    "correct_answer_ar": "رابطة تساهمية",
+    "difficulty": 4,
+    "fun_fact": "Water (H2O) is held together by covalent bonds between hydrogen and oxygen.",
+    "fun_fact_ar": "تتماسك جزيئات الماء (H2O) بفضل الروابط التساهمية بين الهيدروجين والأكسجين.",
+    "category": "Chemistry — Bonding",
+    "category_ar": "كيمياء — الروابط الكيميائية"
+  },
+  {
+    "id": "sci_l5_025",
+    "question": "When a solid changes directly into a gas without becoming liquid, this is called what?",
+    "question_ar": "عندما يتحوّل الجسم الصلب مباشرة إلى غاز دون أن يصبح سائلًا، تُسمى هذه العملية ماذا؟",
+    "options": [
+      "Sublimation",
+      "Condensation",
+      "Freezing",
+      "Boiling"
+    ],
+    "options_ar": [
+      "تسامي",
+      "تكاثف",
+      "تجمّد",
+      "غليان"
+    ],
+    "correct_answer": "Sublimation",
+    "correct_answer_ar": "تسامي",
+    "difficulty": 4,
+    "fun_fact": "Dry ice (frozen carbon dioxide) sublimes at room temperature, making that spooky fog you see at shows.",
+    "fun_fact_ar": "الثلج الجاف (ثاني أكسيد الكربون المتجمد) يتسامى في درجة حرارة الغرفة، مكوّنًا الضباب الذي نراه في العروض.",
+    "category": "Chemistry — States of Matter",
+    "category_ar": "كيمياء — حالات المادة"
+  },
+  {
+    "id": "sci_l5_026",
+    "question": "When two compounds swap partners, like AB + CD -> AD + CB, the reaction is called what?",
+    "question_ar": "عندما يتبادل مركبان شريكَيهما، مثل AB + CD -> AD + CB، يُسمى التفاعل ماذا؟",
+    "options": [
+      "Double-displacement reaction",
+      "Synthesis reaction",
+      "Decomposition reaction",
+      "Combustion reaction"
+    ],
+    "options_ar": [
+      "تفاعل إحلال مزدوج",
+      "تفاعل اتحاد",
+      "تفاعل تفكك",
+      "تفاعل احتراق"
+    ],
+    "correct_answer": "Double-displacement reaction",
+    "correct_answer_ar": "تفاعل إحلال مزدوج",
+    "difficulty": 4,
+    "fun_fact": "Mixing baking soda with vinegar is a fizzy double-displacement reaction that releases carbon dioxide bubbles.",
+    "fun_fact_ar": "خلط صودا الخبز مع الخل تفاعل إحلال مزدوج فوّار يطلق فقاعات ثاني أكسيد الكربون.",
+    "category": "Chemistry — Reaction Types",
+    "category_ar": "كيمياء — أنواع التفاعلات"
+  },
+  {
+    "id": "sci_l5_027",
+    "question": "A reaction that releases energy as heat is called what?",
+    "question_ar": "التفاعل الذي يطلق طاقة على شكل حرارة يُسمى ماذا؟",
+    "options": [
+      "Exothermic reaction",
+      "Endothermic reaction",
+      "Nuclear reaction",
+      "Reversible reaction"
+    ],
+    "options_ar": [
+      "تفاعل طارد للحرارة",
+      "تفاعل ماص للحرارة",
+      "تفاعل نووي",
+      "تفاعل عكوس"
+    ],
+    "correct_answer": "Exothermic reaction",
+    "correct_answer_ar": "تفاعل طارد للحرارة",
+    "difficulty": 4,
+    "fun_fact": "Burning fuel in a car engine is an exothermic reaction; the released heat helps push the pistons.",
+    "fun_fact_ar": "احتراق الوقود في محرك السيارة تفاعل طارد للحرارة؛ والحرارة المنطلقة تساعد على دفع المكابس.",
+    "category": "Chemistry — Reaction Types",
+    "category_ar": "كيمياء — أنواع التفاعلات"
+  },
+  {
+    "id": "sci_l5_028",
+    "question": "Which color does universal indicator paper turn in a strongly basic solution?",
+    "question_ar": "إلى أيِّ لون تتحوّل ورقة الكاشف العام في محلول قاعدي قوي؟",
+    "options": [
+      "Dark purple",
+      "Bright red",
+      "Yellow",
+      "Colorless"
+    ],
+    "options_ar": [
+      "بنفسجي داكن",
+      "أحمر فاقع",
+      "أصفر",
+      "بلا لون"
+    ],
+    "correct_answer": "Dark purple",
+    "correct_answer_ar": "بنفسجي داكن",
+    "difficulty": 4,
+    "fun_fact": "The same paper turns red in strong acids and green near neutral, like a tiny rainbow on your bench.",
+    "fun_fact_ar": "نفس الورقة تتحوّل إلى الأحمر في الأحماض القوية وإلى الأخضر قرب التعادل، كقوس قزح صغير على طاولتك.",
+    "category": "Chemistry — Lab Skills",
+    "category_ar": "كيمياء — مهارات معملية"
+  },
+  {
+    "id": "sci_l5_029",
+    "question": "Newton's first law says an object at rest will do what unless a force acts on it?",
+    "question_ar": "ينص قانون نيوتن الأول على أنّ الجسم الساكن يبقى على أيِّ حال ما لم تؤثر عليه قوة؟",
+    "options": [
+      "Stay at rest",
+      "Speed up by itself",
+      "Change direction on its own",
+      "Vanish into the air"
+    ],
+    "options_ar": [
+      "يبقى ساكنًا",
+      "يتسارع وحده",
+      "يغيّر اتجاهه وحده",
+      "يختفي في الهواء"
+    ],
+    "correct_answer": "Stay at rest",
+    "correct_answer_ar": "يبقى ساكنًا",
+    "difficulty": 4,
+    "fun_fact": "This idea is also called the law of inertia, and a moving object follows the same rule — it keeps moving in a straight line.",
+    "fun_fact_ar": "تُسمى هذه الفكرة أيضًا قانون القصور الذاتي، والجسم المتحرك يخضع لنفس القاعدة فيستمر في خط مستقيم.",
+    "category": "Physics — Newton's Laws",
+    "category_ar": "فيزياء — قوانين نيوتن"
+  },
+  {
+    "id": "sci_l5_030",
+    "question": "Newton's second law links force, mass, and acceleration in which formula?",
+    "question_ar": "يربط قانون نيوتن الثاني بين القوة والكتلة والتسارع في أيِّ معادلة؟",
+    "options": [
+      "F = m × a",
+      "F = m / a",
+      "F = m + a",
+      "F = a / m"
+    ],
+    "options_ar": [
+      "F = m × a",
+      "F = m / a",
+      "F = m + a",
+      "F = a / m"
+    ],
+    "correct_answer": "F = m × a",
+    "correct_answer_ar": "F = m × a",
+    "difficulty": 4,
+    "fun_fact": "Push a heavier shopping cart and you need more force to get the same acceleration — that is this law in action.",
+    "fun_fact_ar": "دفع عربة تسوّق أثقل يحتاج قوة أكبر للحصول على نفس التسارع، وهذا هو القانون في الحياة.",
+    "category": "Physics — Newton's Laws",
+    "category_ar": "فيزياء — قوانين نيوتن"
+  },
+  {
+    "id": "sci_l5_031",
+    "question": "When you jump off a small boat onto a dock, the boat slides backward. Which law explains this?",
+    "question_ar": "عندما تقفز من قارب صغير إلى الرصيف، يتحرك القارب إلى الخلف. أيُّ قانون يفسّر ذلك؟",
+    "options": [
+      "Newton's third law of action and reaction",
+      "The law of conservation of mass",
+      "Boyle's law",
+      "Ohm's law"
+    ],
+    "options_ar": [
+      "قانون نيوتن الثالث: الفعل وردّ الفعل",
+      "قانون حفظ الكتلة",
+      "قانون بويل",
+      "قانون أوم"
+    ],
+    "correct_answer": "Newton's third law of action and reaction",
+    "correct_answer_ar": "قانون نيوتن الثالث: الفعل وردّ الفعل",
+    "difficulty": 4,
+    "fun_fact": "Rockets work the same way; pushing hot gas down causes the rocket to push up.",
+    "fun_fact_ar": "الصواريخ تعمل بالطريقة نفسها؛ دفع الغاز الحار إلى الأسفل يدفع الصاروخ إلى الأعلى.",
+    "category": "Physics — Newton's Laws",
+    "category_ar": "فيزياء — قوانين نيوتن"
+  },
+  {
+    "id": "sci_l5_032",
+    "question": "Which formula gives the kinetic energy of a moving object?",
+    "question_ar": "أيُّ معادلة تعطي الطاقة الحركية لجسم متحرك؟",
+    "options": [
+      "KE = ½ × m × v²",
+      "KE = m × g × h",
+      "KE = m + v",
+      "KE = v / m"
+    ],
+    "options_ar": [
+      "KE = ½ × m × v²",
+      "KE = m × g × h",
+      "KE = m + v",
+      "KE = v / m"
+    ],
+    "correct_answer": "KE = ½ × m × v²",
+    "correct_answer_ar": "KE = ½ × m × v²",
+    "difficulty": 4,
+    "fun_fact": "Doubling the speed of a car makes its kinetic energy four times bigger — that is why high-speed crashes are so dangerous.",
+    "fun_fact_ar": "مضاعفة سرعة السيارة تجعل طاقتها الحركية أكبر بأربع مرات، ولهذا تكون الحوادث في السرعات العالية شديدة الخطورة.",
+    "category": "Physics — Energy",
+    "category_ar": "فيزياء — طاقة"
+  },
+  {
+    "id": "sci_l5_033",
+    "question": "Which formula gives the gravitational potential energy near Earth's surface?",
+    "question_ar": "أيُّ معادلة تعطي طاقة الوضع الناتجة عن الجاذبية قرب سطح الأرض؟",
+    "options": [
+      "PE = m × g × h",
+      "PE = ½ × m × v²",
+      "PE = F × t",
+      "PE = q × V"
+    ],
+    "options_ar": [
+      "PE = m × g × h",
+      "PE = ½ × m × v²",
+      "PE = F × t",
+      "PE = q × V"
+    ],
+    "correct_answer": "PE = m × g × h",
+    "correct_answer_ar": "PE = m × g × h",
+    "difficulty": 4,
+    "fun_fact": "A book on a high shelf has more potential energy than the same book on a low shelf, just because of its height.",
+    "fun_fact_ar": "كتاب على رف مرتفع يمتلك طاقة وضع أكبر من نفس الكتاب على رف منخفض، فقط بسبب الارتفاع.",
+    "category": "Physics — Energy",
+    "category_ar": "فيزياء — طاقة"
+  },
+  {
+    "id": "sci_l5_034",
+    "question": "When a roller coaster goes down a hill, what mostly happens to its energy?",
+    "question_ar": "عندما تنزل القطارات الأفعوانية من تلٍّ، ماذا يحدث لطاقتها بشكل رئيسي؟",
+    "options": [
+      "Potential energy turns into kinetic energy",
+      "All energy disappears",
+      "Kinetic energy turns into potential energy",
+      "It becomes pure light"
+    ],
+    "options_ar": [
+      "تتحوّل طاقة الوضع إلى طاقة حركية",
+      "تختفي الطاقة كلها",
+      "تتحوّل الطاقة الحركية إلى طاقة وضع",
+      "تتحوّل إلى ضوء صرف"
+    ],
+    "correct_answer": "Potential energy turns into kinetic energy",
+    "correct_answer_ar": "تتحوّل طاقة الوضع إلى طاقة حركية",
+    "difficulty": 4,
+    "fun_fact": "Some energy also turns into heat and sound from friction, which is why coasters slow down a little each lap.",
+    "fun_fact_ar": "تتحوّل بعض الطاقة أيضًا إلى حرارة وصوت بسبب الاحتكاك، ولهذا تبطئ الأفعوانية قليلًا في كل دورة.",
+    "category": "Physics — Energy",
+    "category_ar": "فيزياء — طاقة"
+  },
+  {
+    "id": "sci_l5_035",
+    "question": "Ohm's law for a simple circuit is best written as which formula?",
+    "question_ar": "قانون أوم لدائرة بسيطة يُكتب بأفضل صورة في أيِّ معادلة؟",
+    "options": [
+      "V = I × R",
+      "V = I + R",
+      "V = I / R",
+      "V = R / I"
+    ],
+    "options_ar": [
+      "V = I × R",
+      "V = I + R",
+      "V = I / R",
+      "V = R / I"
+    ],
+    "correct_answer": "V = I × R",
+    "correct_answer_ar": "V = I × R",
+    "difficulty": 4,
+    "fun_fact": "If you raise the voltage but keep the resistance the same, the current must rise too — like more water through the same pipe.",
+    "fun_fact_ar": "إذا رفعت الجهد وأبقيت المقاومة ثابتة، فلا بد أن يزداد التيار، مثل مرور ماء أكثر في الأنبوب نفسه.",
+    "category": "Physics — Electricity",
+    "category_ar": "فيزياء — كهرباء"
+  },
+  {
+    "id": "sci_l5_036",
+    "question": "In a series circuit with two bulbs, what happens to the second bulb if the first one burns out?",
+    "question_ar": "في دائرة على التوالي تحتوي على مصباحين، ماذا يحدث للمصباح الثاني إذا احترق الأول؟",
+    "options": [
+      "It also goes off because the circuit is broken",
+      "It glows much brighter",
+      "Nothing changes at all",
+      "It flashes on and off forever"
+    ],
+    "options_ar": [
+      "ينطفئ هو أيضًا لأنّ الدائرة انقطعت",
+      "يضيء بشدة أكبر",
+      "لا يتغير شيء على الإطلاق",
+      "يومض للأبد"
+    ],
+    "correct_answer": "It also goes off because the circuit is broken",
+    "correct_answer_ar": "ينطفئ هو أيضًا لأنّ الدائرة انقطعت",
+    "difficulty": 4,
+    "fun_fact": "Old holiday lights were often wired in series, so one dead bulb could darken the whole string.",
+    "fun_fact_ar": "كانت أضواء الأعياد قديمًا تُوصل على التوالي، فيكفي مصباح واحد محترق لإطفاء السلسلة كلها.",
+    "category": "Physics — Electricity",
+    "category_ar": "فيزياء — كهرباء"
+  },
+  {
+    "id": "sci_l5_037",
+    "question": "Faraday's law of induction says a changing magnetic field through a coil creates what?",
+    "question_ar": "ينص قانون فاراداي للحث على أنّ تغيّر المجال المغناطيسي عبر ملفٍّ ينتج ماذا؟",
+    "options": [
+      "An induced electric voltage",
+      "A new magnet from nothing",
+      "A sound wave",
+      "A nuclear reaction"
+    ],
+    "options_ar": [
+      "جهدًا كهربيًا محثوثًا",
+      "مغناطيسًا جديدًا من العدم",
+      "موجة صوتية",
+      "تفاعلًا نوويًا"
+    ],
+    "correct_answer": "An induced electric voltage",
+    "correct_answer_ar": "جهدًا كهربيًا محثوثًا",
+    "difficulty": 4,
+    "fun_fact": "Power plants use this idea: spinning magnets near coils generate the electricity that lights up your home.",
+    "fun_fact_ar": "تستخدم محطات توليد الكهرباء هذه الفكرة؛ فدوران المغناطيس قرب الملفات يولّد الكهرباء التي تضيء بيتك.",
+    "category": "Physics — Electromagnetism",
+    "category_ar": "فيزياء — كهرومغناطيسية"
+  },
+  {
+    "id": "sci_l5_038",
+    "question": "Lenz's law tells us the induced current always flows in a direction that does what?",
+    "question_ar": "يخبرنا قانون لنز أنّ التيار المحثوث يسري دائمًا في اتجاه يحقق ماذا؟",
+    "options": [
+      "Opposes the change in magnetic flux",
+      "Boosts the change in magnetic flux",
+      "Equals the change exactly",
+      "Flows in any random direction"
+    ],
+    "options_ar": [
+      "يعارض التغيّر في التدفق المغناطيسي",
+      "يعزّز التغيّر في التدفق المغناطيسي",
+      "يساوي التغيّر تمامًا",
+      "يسري في اتجاه عشوائي"
+    ],
+    "correct_answer": "Opposes the change in magnetic flux",
+    "correct_answer_ar": "يعارض التغيّر في التدفق المغناطيسي",
+    "difficulty": 4,
+    "fun_fact": "Lenz's law is really energy conservation in disguise; the universe does not give you free energy.",
+    "fun_fact_ar": "قانون لنز هو في الحقيقة قانون حفظ الطاقة بثوب آخر؛ فالكون لا يمنحك طاقة مجانية.",
+    "category": "Physics — Electromagnetism",
+    "category_ar": "فيزياء — كهرومغناطيسية"
+  },
+  {
+    "id": "sci_l5_039",
+    "question": "How are the frequency and wavelength of a wave related when its speed is constant?",
+    "question_ar": "ما العلاقة بين تردّد الموجة وطولها الموجي عند ثبات سرعتها؟",
+    "options": [
+      "They are inversely related",
+      "They are equal",
+      "They add up to the speed",
+      "They are always zero"
+    ],
+    "options_ar": [
+      "علاقة عكسية",
+      "متساويان",
+      "مجموعهما يساوي السرعة",
+      "كلاهما صفر دائمًا"
+    ],
+    "correct_answer": "They are inversely related",
+    "correct_answer_ar": "علاقة عكسية",
+    "difficulty": 4,
+    "fun_fact": "The wave equation is v = f × lambda; if frequency doubles, wavelength is cut in half at the same speed.",
+    "fun_fact_ar": "معادلة الموجة هي v = f × lambda؛ فإذا تضاعف التردد فإنّ الطول الموجي ينقسم إلى النصف عند نفس السرعة.",
+    "category": "Physics — Waves",
+    "category_ar": "فيزياء — موجات"
+  },
+  {
+    "id": "sci_l5_040",
+    "question": "Which property of a sound wave most directly tells us how loud it is?",
+    "question_ar": "أيُّ خاصية في الموجة الصوتية تخبرنا بشكل مباشر بمدى ارتفاع الصوت؟",
+    "options": [
+      "The amplitude",
+      "The frequency",
+      "The wavelength",
+      "The phase"
+    ],
+    "options_ar": [
+      "السعة",
+      "التردد",
+      "الطول الموجي",
+      "الطور"
+    ],
+    "correct_answer": "The amplitude",
+    "correct_answer_ar": "السعة",
+    "difficulty": 4,
+    "fun_fact": "A whisper and a shout can have the same pitch, but the shout has a much bigger amplitude.",
+    "fun_fact_ar": "قد تكون الهمسة والصياح بنفس الطبقة، لكنّ سعة الصياح أكبر بكثير.",
+    "category": "Physics — Waves",
+    "category_ar": "فيزياء — موجات"
+  },
+  {
+    "id": "sci_l5_041",
+    "question": "Which Muslim scholar is famous for his pioneering Book of Optics that explained how vision and light really work?",
+    "question_ar": "أيُّ عالم مسلم اشتُهر بكتابه الرائد في علم البصريات الذي فسّر كيف تعمل الرؤية والضوء حقًا؟",
+    "options": [
+      "Ibn al-Haytham",
+      "Ibn Battuta",
+      "Ibn Khaldun",
+      "Al-Idrisi"
+    ],
+    "options_ar": [
+      "ابن الهيثم",
+      "ابن بطوطة",
+      "ابن خلدون",
+      "الإدريسي"
+    ],
+    "correct_answer": "Ibn al-Haytham",
+    "correct_answer_ar": "ابن الهيثم",
+    "difficulty": 4,
+    "fun_fact": "Ibn al-Haytham showed that we see because light enters the eye, not because the eye sends out beams.",
+    "fun_fact_ar": "أثبت ابن الهيثم أنّنا نرى لأنّ الضوء يدخل العين، وليس لأنّ العين تُرسل أشعة.",
+    "category": "Physics — Optics",
+    "category_ar": "فيزياء — بصريات"
+  },
+  {
+    "id": "sci_l5_042",
+    "question": "When the Sun warms your face from far away, the heat travels mainly by which method?",
+    "question_ar": "عندما تدفئ الشمس وجهك من بعيد، تنتقل الحرارة أساسًا بأيِّ طريقة؟",
+    "options": [
+      "Radiation",
+      "Conduction",
+      "Convection",
+      "Friction"
+    ],
+    "options_ar": [
+      "إشعاع",
+      "توصيل",
+      "حمل",
+      "احتكاك"
+    ],
+    "correct_answer": "Radiation",
+    "correct_answer_ar": "إشعاع",
+    "difficulty": 4,
+    "fun_fact": "Radiation can travel through empty space, which is how sunlight crosses the vacuum between the Sun and Earth.",
+    "fun_fact_ar": "ينتقل الإشعاع عبر الفراغ، ولهذا يعبر ضوء الشمس الفضاء الفارغ بين الشمس والأرض.",
+    "category": "Physics — Heat Transfer",
+    "category_ar": "فيزياء — انتقال الحرارة"
+  },
+  {
+    "id": "sci_l5_043",
+    "question": "When you heat a pot of soup on a stove, the warm soup rises and cool soup sinks. This movement is called what?",
+    "question_ar": "عندما تسخّن قِدرَ شوربة على الموقد، يصعد الشوربة الحار وينزل البارد. ماذا تُسمى هذه الحركة؟",
+    "options": [
+      "Convection",
+      "Conduction",
+      "Radiation",
+      "Reflection"
+    ],
+    "options_ar": [
+      "حمل",
+      "توصيل",
+      "إشعاع",
+      "انعكاس"
+    ],
+    "correct_answer": "Convection",
+    "correct_answer_ar": "حمل",
+    "difficulty": 4,
+    "fun_fact": "The same convection drives weather: warm air rises, cool air sinks, and that is how winds and clouds form.",
+    "fun_fact_ar": "يقود الحملُ الطقسَ أيضًا؛ يصعد الهواء الدافئ وينزل البارد، وهكذا تتشكّل الرياح والغيوم.",
+    "category": "Physics — Heat Transfer",
+    "category_ar": "فيزياء — انتقال الحرارة"
+  },
+  {
+    "id": "sci_l5_044",
+    "question": "Where two plates slide past each other sideways, the boundary is called what?",
+    "question_ar": "حيث تنزلق صفيحتان جانبيًا بجوار بعضهما، يُسمى الحد ماذا؟",
+    "options": [
+      "Transform boundary",
+      "Convergent boundary",
+      "Divergent boundary",
+      "Subduction zone"
+    ],
+    "options_ar": [
+      "حد تحويلي",
+      "حد متقارب",
+      "حد متباعد",
+      "منطقة طمر"
+    ],
+    "correct_answer": "Transform boundary",
+    "correct_answer_ar": "حد تحويلي",
+    "difficulty": 4,
+    "fun_fact": "The famous San Andreas Fault in California is a transform boundary, and it causes many earthquakes.",
+    "fun_fact_ar": "صدع سان أندرياس الشهير في كاليفورنيا حدٌّ تحويلي، ويتسبّب في كثير من الزلازل.",
+    "category": "Earth Science — Plate Tectonics",
+    "category_ar": "علوم الأرض — الصفائح التكتونية"
+  },
+  {
+    "id": "sci_l5_045",
+    "question": "When an oceanic plate dives under a continental plate, this happens at which type of boundary?",
+    "question_ar": "عندما تغوص صفيحة محيطية تحت صفيحة قارية، يحدث ذلك عند أيِّ نوع من الحدود؟",
+    "options": [
+      "Convergent boundary with subduction",
+      "Divergent boundary with rifting",
+      "Transform boundary",
+      "Mid-ocean ridge"
+    ],
+    "options_ar": [
+      "حد متقارب مع طمر",
+      "حد متباعد مع تصدّع",
+      "حد تحويلي",
+      "حيد وسط محيطي"
+    ],
+    "correct_answer": "Convergent boundary with subduction",
+    "correct_answer_ar": "حد متقارب مع طمر",
+    "difficulty": 4,
+    "fun_fact": "Subduction can build huge mountain ranges and trigger powerful volcanoes, like those around the Pacific Ring of Fire.",
+    "fun_fact_ar": "قد يبني الطمر سلاسل جبلية ضخمة ويفجّر براكين قوية، مثل تلك المحيطة بحلقة النار في المحيط الهادئ.",
+    "category": "Earth Science — Plate Tectonics",
+    "category_ar": "علوم الأرض — الصفائح التكتونية"
+  },
+  {
+    "id": "sci_l5_046",
+    "question": "Heat and pressure deep underground change one rock type into which other type?",
+    "question_ar": "تحوّل الحرارة والضغط في أعماق الأرض نوعًا من الصخور إلى أيِّ نوع آخر؟",
+    "options": [
+      "Metamorphic rock",
+      "Sedimentary rock",
+      "Igneous rock",
+      "Lunar rock"
+    ],
+    "options_ar": [
+      "صخر متحوّل",
+      "صخر رسوبي",
+      "صخر ناري",
+      "صخر قمري"
+    ],
+    "correct_answer": "Metamorphic rock",
+    "correct_answer_ar": "صخر متحوّل",
+    "difficulty": 4,
+    "fun_fact": "Marble is a beautiful metamorphic rock that started out as ordinary limestone before deep-Earth pressure squeezed it.",
+    "fun_fact_ar": "الرخام صخر متحوّل جميل بدأ حياته صخرًا جيريًا عاديًا قبل أن يضغطه باطن الأرض.",
+    "category": "Earth Science — Rock Cycle",
+    "category_ar": "علوم الأرض — دورة الصخور"
+  },
+  {
+    "id": "sci_l5_047",
+    "question": "When magma cools and hardens, what type of rock forms?",
+    "question_ar": "عندما يبرد الصهير ويتصلّب، أيُّ نوع من الصخور يتكوّن؟",
+    "options": [
+      "Igneous rock",
+      "Sedimentary rock",
+      "Metamorphic rock",
+      "Coral rock"
+    ],
+    "options_ar": [
+      "صخر ناري",
+      "صخر رسوبي",
+      "صخر متحوّل",
+      "صخر مرجاني"
+    ],
+    "correct_answer": "Igneous rock",
+    "correct_answer_ar": "صخر ناري",
+    "difficulty": 4,
+    "fun_fact": "Granite cooled slowly deep underground, while basalt cooled fast on the surface — both are igneous, just different speeds.",
+    "fun_fact_ar": "تبرّد الجرانيت ببطء في أعماق الأرض، أمّا البازلت فتبرّد بسرعة على السطح؛ كلاهما ناري لكن بسرعتي تبريد مختلفتين.",
+    "category": "Earth Science — Rock Cycle",
+    "category_ar": "علوم الأرض — دورة الصخور"
+  },
+  {
+    "id": "sci_l5_048",
+    "question": "Which best describes the difference between weather and climate?",
+    "question_ar": "أيُّ وصف يعبّر بأفضل صورة عن الفرق بين الطقس والمناخ؟",
+    "options": [
+      "Weather is short-term, climate is the long-term pattern",
+      "Weather and climate mean exactly the same thing",
+      "Climate is short-term, weather is decades-long",
+      "Climate is for cities only"
+    ],
+    "options_ar": [
+      "الطقس قصير المدى، والمناخ هو النمط طويل المدى",
+      "الطقس والمناخ يعنيان الشيء نفسه تمامًا",
+      "المناخ قصير المدى، والطقس يمتد لعقود",
+      "المناخ خاص بالمدن فقط"
+    ],
+    "correct_answer": "Weather is short-term, climate is the long-term pattern",
+    "correct_answer_ar": "الطقس قصير المدى، والمناخ هو النمط طويل المدى",
+    "difficulty": 4,
+    "fun_fact": "Scientists usually need at least thirty years of weather data before they call something a climate trend.",
+    "fun_fact_ar": "يحتاج العلماء عادةً إلى بيانات طقس لا تقل عن ثلاثين عامًا قبل أن يصفوا ظاهرة بأنها اتجاه مناخي.",
+    "category": "Earth Science — Climate vs Weather",
+    "category_ar": "علوم الأرض — مناخ مقابل طقس"
+  },
+  {
+    "id": "sci_l5_049",
+    "question": "Which gas is the main human-released greenhouse gas warming the climate today?",
+    "question_ar": "أيُّ غاز هو غاز الدفيئة الرئيسي الذي يطلقه الإنسان ويسخّن المناخ اليوم؟",
+    "options": [
+      "Carbon dioxide (CO2)",
+      "Pure oxygen (O2)",
+      "Helium (He)",
+      "Argon (Ar)"
+    ],
+    "options_ar": [
+      "ثاني أكسيد الكربون (CO2)",
+      "أكسجين نقي (O2)",
+      "هيليوم (He)",
+      "أرجون (Ar)"
+    ],
+    "correct_answer": "Carbon dioxide (CO2)",
+    "correct_answer_ar": "ثاني أكسيد الكربون (CO2)",
+    "difficulty": 4,
+    "fun_fact": "Burning oil, gas, and coal releases carbon that was locked underground for millions of years.",
+    "fun_fact_ar": "حرق النفط والغاز والفحم يطلق كربونًا كان محبوسًا تحت الأرض ملايين السنين.",
+    "category": "Earth Science — Climate Drivers",
+    "category_ar": "علوم الأرض — محرّكات المناخ"
+  },
+  {
+    "id": "sci_l5_050",
+    "question": "Which planet in our solar system has the strongest gravity at its surface?",
+    "question_ar": "أيُّ كوكب في نظامنا الشمسي يمتلك أقوى جاذبية عند سطحه؟",
+    "options": [
+      "Jupiter",
+      "Earth",
+      "Mars",
+      "Mercury"
+    ],
+    "options_ar": [
+      "المشتري",
+      "الأرض",
+      "المريخ",
+      "عطارد"
+    ],
+    "correct_answer": "Jupiter",
+    "correct_answer_ar": "المشتري",
+    "difficulty": 4,
+    "fun_fact": "Jupiter is so massive that all the other planets together would still not match its weight.",
+    "fun_fact_ar": "المشتري ضخم جدًا حتى أنّ مجموع كتل بقية الكواكب مجتمعة لا يبلغ كتلته.",
+    "category": "Space Science — Solar System",
+    "category_ar": "علوم الفضاء — النظام الشمسي"
+  },
+  {
+    "id": "sci_l5_051",
+    "question": "A light-year is a unit that measures what?",
+    "question_ar": "السنة الضوئية وحدة تقيس ماذا؟",
+    "options": [
+      "Distance light travels in one year",
+      "Time it takes for a year to pass",
+      "Mass of the Sun",
+      "Brightness of a star"
+    ],
+    "options_ar": [
+      "المسافة التي يقطعها الضوء في سنة واحدة",
+      "الزمن الذي يمر فيه عام",
+      "كتلة الشمس",
+      "لمعان النجم"
+    ],
+    "correct_answer": "Distance light travels in one year",
+    "correct_answer_ar": "المسافة التي يقطعها الضوء في سنة واحدة",
+    "difficulty": 4,
+    "fun_fact": "Light from our nearest star, Proxima Centauri, takes about four years to reach us.",
+    "fun_fact_ar": "ضوء أقرب نجم إلينا، بروكسيما قنطورس، يستغرق نحو أربع سنوات ليصل إلينا.",
+    "category": "Space Science — Distances",
+    "category_ar": "علوم الفضاء — مسافات"
+  },
+  {
+    "id": "sci_l5_052",
+    "question": "A very massive star usually ends its life with a violent explosion called what?",
+    "question_ar": "النجم الضخم جدًا ينهي حياته عادةً بانفجار عنيف يُسمى ماذا؟",
+    "options": [
+      "Supernova",
+      "Sunrise",
+      "Eclipse",
+      "Comet"
+    ],
+    "options_ar": [
+      "مستعر أعظم",
+      "شروق الشمس",
+      "كسوف",
+      "مذنّب"
+    ],
+    "correct_answer": "Supernova",
+    "correct_answer_ar": "مستعر أعظم",
+    "difficulty": 4,
+    "fun_fact": "A supernova can briefly outshine an entire galaxy and seed space with the heavy elements that build planets.",
+    "fun_fact_ar": "قد يفوق سطوع المستعر الأعظم لمعان مجرة كاملة لفترة قصيرة، وينثر العناصر الثقيلة التي تبني الكواكب.",
+    "category": "Space Science — Stellar Life Cycle",
+    "category_ar": "علوم الفضاء — دورة حياة النجوم"
+  },
+  {
+    "id": "sci_l5_053",
+    "question": "Our Sun is currently in which stage of its life?",
+    "question_ar": "في أيِّ مرحلة من حياتها تمر شمسنا حاليًا؟",
+    "options": [
+      "Main sequence star",
+      "Red giant",
+      "White dwarf",
+      "Black hole"
+    ],
+    "options_ar": [
+      "نجم في النسق الأساسي",
+      "عملاق أحمر",
+      "قزم أبيض",
+      "ثقب أسود"
+    ],
+    "correct_answer": "Main sequence star",
+    "correct_answer_ar": "نجم في النسق الأساسي",
+    "difficulty": 4,
+    "fun_fact": "The Sun has been a steady main sequence star for about four and a half billion years and has roughly that long left.",
+    "fun_fact_ar": "ظلّت الشمس نجمًا مستقرًا في النسق الأساسي نحو أربعة مليارات ونصف مليار سنة، ويتبقى لها قرابة هذا العمر.",
+    "category": "Space Science — Stellar Life Cycle",
+    "category_ar": "علوم الفضاء — دورة حياة النجوم"
+  },
+  {
+    "id": "sci_l5_054",
+    "question": "What keeps the planets in their nearly steady orbits around the Sun?",
+    "question_ar": "ما الذي يبقي الكواكب في مداراتها الثابتة تقريبًا حول الشمس؟",
+    "options": [
+      "The Sun's gravitational pull",
+      "Strong winds in space",
+      "Magnetic ropes from each planet",
+      "Heat from sunlight only"
+    ],
+    "options_ar": [
+      "جاذبية الشمس",
+      "رياح قوية في الفضاء",
+      "حبال مغناطيسية من كل كوكب",
+      "حرارة ضوء الشمس فقط"
+    ],
+    "correct_answer": "The Sun's gravitational pull",
+    "correct_answer_ar": "جاذبية الشمس",
+    "difficulty": 4,
+    "fun_fact": "Each planet is actually falling toward the Sun, but it also moves sideways fast enough to keep missing it — that is an orbit.",
+    "fun_fact_ar": "كل كوكب يسقط فعلًا نحو الشمس، لكنه يتحرك جانبيًا بسرعة كافية فيظل يخطئها، وهذا هو المدار.",
+    "category": "Space Science — Gravity and Orbits",
+    "category_ar": "علوم الفضاء — جاذبية ومدارات"
+  },
+  {
+    "id": "sci_l5_055",
+    "question": "Which layer of Earth's atmosphere contains the protective ozone layer?",
+    "question_ar": "أيُّ طبقة من الغلاف الجوي للأرض تحتوي على طبقة الأوزون الواقية؟",
+    "options": [
+      "Stratosphere",
+      "Troposphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "options_ar": [
+      "الستراتوسفير",
+      "التروبوسفير",
+      "الميزوسفير",
+      "الثيرموسفير"
+    ],
+    "correct_answer": "Stratosphere",
+    "correct_answer_ar": "الستراتوسفير",
+    "difficulty": 4,
+    "fun_fact": "The ozone layer absorbs most of the Sun's harmful ultraviolet rays before they ever reach the surface.",
+    "fun_fact_ar": "تمتص طبقة الأوزون معظم أشعة الشمس فوق البنفسجية الضارة قبل أن تصل إلى السطح.",
+    "category": "Earth Science — Atmosphere",
+    "category_ar": "علوم الأرض — الغلاف الجوي"
+  },
+  {
+    "id": "sci_l5_056",
+    "question": "Which Muslim scholar is the namesake of the word \"algorithm\" used in modern science and computing?",
+    "question_ar": "أيُّ عالم مسلم سُمِّيت كلمة \"خوارزمية\" المستخدمة في العلوم والحوسبة الحديثة باسمه؟",
+    "options": [
+      "Al-Khwarizmi",
+      "Ibn Sina",
+      "Al-Biruni",
+      "Ibn Rushd"
+    ],
+    "options_ar": [
+      "الخوارزمي",
+      "ابن سينا",
+      "البيروني",
+      "ابن رشد"
+    ],
+    "correct_answer": "Al-Khwarizmi",
+    "correct_answer_ar": "الخوارزمي",
+    "difficulty": 4,
+    "fun_fact": "Al-Khwarizmi's books on algebra also gave us the word \"algebra\" itself, from the Arabic word al-jabr.",
+    "fun_fact_ar": "كتب الخوارزمي في الجبر أعطتنا أيضًا كلمة \"الجبر\" نفسها، وهي من الكلمة العربية الجبر.",
+    "category": "Chemistry — History of Algorithms",
+    "category_ar": "كيمياء — تاريخ الخوارزميات"
+  },
+  {
+    "id": "sci_l5_057",
+    "question": "Which scientist's medical encyclopedia, The Canon of Medicine, was used in European universities for centuries?",
+    "question_ar": "أيُّ عالم استُخدمت موسوعته الطبية، القانون في الطب، في الجامعات الأوروبية قرونًا طويلة؟",
+    "options": [
+      "Ibn Sina (Avicenna)",
+      "Al-Khwarizmi",
+      "Al-Razi",
+      "Ibn al-Nafis"
+    ],
+    "options_ar": [
+      "ابن سينا",
+      "الخوارزمي",
+      "الرازي",
+      "ابن النفيس"
+    ],
+    "correct_answer": "Ibn Sina (Avicenna)",
+    "correct_answer_ar": "ابن سينا",
+    "difficulty": 4,
+    "fun_fact": "Ibn Sina described how some illnesses spread between people and stressed careful observation of patients.",
+    "fun_fact_ar": "وصف ابن سينا كيف تنتقل بعض الأمراض بين الناس، وأكّد على ضرورة الملاحظة الدقيقة للمرضى.",
+    "category": "Biology — Human Body",
+    "category_ar": "أحياء — جسم الإنسان"
+  },
+  {
+    "id": "sci_l5_058",
+    "question": "Einstein's famous equation E = mc² connects energy and mass and tells us what?",
+    "question_ar": "معادلة آينشتاين الشهيرة E = mc² تربط الطاقة بالكتلة وتخبرنا ماذا؟",
+    "options": [
+      "A small mass can become a huge amount of energy",
+      "Energy and mass have nothing to do with each other",
+      "Mass always equals its energy directly",
+      "Light has no speed at all"
+    ],
+    "options_ar": [
+      "كتلة صغيرة يمكن أن تتحوّل إلى طاقة هائلة",
+      "الطاقة والكتلة لا علاقة بينهما",
+      "الكتلة تساوي طاقتها مباشرة دائمًا",
+      "الضوء بلا سرعة على الإطلاق"
+    ],
+    "correct_answer": "A small mass can become a huge amount of energy",
+    "correct_answer_ar": "كتلة صغيرة يمكن أن تتحوّل إلى طاقة هائلة",
+    "difficulty": 4,
+    "fun_fact": "The Sun shines because it converts a tiny bit of its mass into energy every second, exactly as E = mc² predicts.",
+    "fun_fact_ar": "تشرق الشمس لأنها تحوّل جزءًا صغيرًا من كتلتها إلى طاقة كل ثانية، تمامًا كما تتنبأ المعادلة E = mc².",
+    "category": "Physics — Modern Physics",
+    "category_ar": "فيزياء — فيزياء حديثة"
+  },
+  {
+    "id": "sci_l5_059",
+    "question": "When methane burns completely in plenty of oxygen, the main products are which two compounds?",
+    "question_ar": "عندما يحترق الميثان احتراقًا تامًا في وفرة من الأكسجين، فإنّ الناتجين الرئيسيين هما أيُّ مركبين؟",
+    "options": [
+      "Carbon dioxide (CO2) and water (H2O)",
+      "Carbon monoxide and hydrogen",
+      "Pure carbon and pure oxygen",
+      "Salt and sugar"
+    ],
+    "options_ar": [
+      "ثاني أكسيد الكربون (CO2) والماء (H2O)",
+      "أول أكسيد الكربون والهيدروجين",
+      "كربون نقي وأكسجين نقي",
+      "ملح وسكر"
+    ],
+    "correct_answer": "Carbon dioxide (CO2) and water (H2O)",
+    "correct_answer_ar": "ثاني أكسيد الكربون (CO2) والماء (H2O)",
+    "difficulty": 4,
+    "fun_fact": "Methane is the main gas in natural gas used to cook and heat homes around the world.",
+    "fun_fact_ar": "الميثان هو الغاز الرئيسي في الغاز الطبيعي المستخدم في الطهي وتدفئة المنازل حول العالم.",
+    "category": "Chemistry — Combustion",
+    "category_ar": "كيمياء — احتراق"
+  },
+  {
+    "id": "sci_l5_060",
+    "question": "A mutation is best described as what?",
+    "question_ar": "ما الوصف الأنسب للطفرة؟",
+    "options": [
+      "A change in the DNA sequence",
+      "A new organ growing overnight",
+      "A type of immune cell",
+      "A planet's orbit changing"
+    ],
+    "options_ar": [
+      "تغيّر في تسلسل الحمض النووي",
+      "عضو جديد ينمو بين ليلة وضحاها",
+      "نوع من خلايا المناعة",
+      "تغيّر مدار كوكب"
+    ],
+    "correct_answer": "A change in the DNA sequence",
+    "correct_answer_ar": "تغيّر في تسلسل الحمض النووي",
+    "difficulty": 4,
+    "fun_fact": "Most mutations have no effect, some are harmful, and a few rare ones drive evolution by giving an advantage.",
+    "fun_fact_ar": "معظم الطفرات لا تأثير لها، وبعضها ضار، وقليل منها نادرًا ما يقود التطور بمنحه ميزة.",
+    "category": "Biology — Genetics",
+    "category_ar": "أحياء — وراثة"
+  }
+]

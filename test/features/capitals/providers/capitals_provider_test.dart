@@ -38,7 +38,8 @@ class _FakeCapitalsRepository implements CapitalsRepository {
   ];
 
   @override
-  Future<List<QuizQuestion>> loadQuestions() async => List.of(_questions);
+  Future<List<QuizQuestion>> loadQuestions({bool arabic = true}) async =>
+      List.of(_questions);
 }
 
 // ---------------------------------------------------------------------------

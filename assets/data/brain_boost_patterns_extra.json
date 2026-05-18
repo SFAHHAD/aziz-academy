@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "bb_pat_e_031",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What number comes next?  0, 6, 12, 18, ?",
+    "question_ar": "ما العدد التالي؟  ٠، ٦، ١٢، ١٨، ؟",
+    "options": [
+      "24",
+      "22",
+      "26",
+      "30"
+    ],
+    "options_ar": [
+      "٢٤",
+      "٢٢",
+      "٢٦",
+      "٣٠"
+    ],
+    "correct_answer": "24",
+    "correct_answer_ar": "٢٤",
+    "fun_fact": "Each number adds 6 — counting in sixes.",
+    "fun_fact_ar": "كل عدد يزيد بمقدار ٦ — العدّ بالستات."
+  },
+  {
+    "id": "bb_pat_e_032",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What number comes next?  1, 8, 15, 22, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٨، ١٥، ٢٢، ؟",
+    "options": [
+      "29",
+      "28",
+      "30",
+      "27"
+    ],
+    "options_ar": [
+      "٢٩",
+      "٢٨",
+      "٣٠",
+      "٢٧"
+    ],
+    "correct_answer": "29",
+    "correct_answer_ar": "٢٩",
+    "fun_fact": "Each number adds 7 — the gap stays the same.",
+    "fun_fact_ar": "كل عدد يزيد بمقدار ٧ — الفجوة ثابتة."
+  },
+  {
+    "id": "bb_pat_e_033",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What month comes next?  January, February, March, April, ?",
+    "question_ar": "ما الشهر التالي؟  يناير، فبراير، مارس، أبريل، ؟",
+    "options": [
+      "May",
+      "June",
+      "July",
+      "March"
+    ],
+    "options_ar": [
+      "مايو",
+      "يونيو",
+      "يوليو",
+      "مارس"
+    ],
+    "correct_answer": "May",
+    "correct_answer_ar": "مايو",
+    "fun_fact": "These are the months of the year in order.",
+    "fun_fact_ar": "هذه أشهر السنة بالترتيب."
+  },
+  {
+    "id": "bb_pat_e_034",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What shape comes next?  Circle, Square, Triangle, Circle, Square, ?",
+    "question_ar": "ما الشكل التالي؟  دائرة، مربع، مثلث، دائرة، مربع، ؟",
+    "options": [
+      "Triangle",
+      "Circle",
+      "Square",
+      "Star"
+    ],
+    "options_ar": [
+      "مثلث",
+      "دائرة",
+      "مربع",
+      "نجمة"
+    ],
+    "correct_answer": "Triangle",
+    "correct_answer_ar": "مثلث",
+    "fun_fact": "Three shapes repeat in the same order each time.",
+    "fun_fact_ar": "ثلاثة أشكال تتكرر بنفس الترتيب كل مرة."
+  },
+  {
+    "id": "bb_pat_e_035",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What number comes next?  24, 20, 16, 12, ?",
+    "question_ar": "ما العدد التالي؟  ٢٤، ٢٠، ١٦، ١٢، ؟",
+    "options": [
+      "8",
+      "10",
+      "6",
+      "14"
+    ],
+    "options_ar": [
+      "٨",
+      "١٠",
+      "٦",
+      "١٤"
+    ],
+    "correct_answer": "8",
+    "correct_answer_ar": "٨",
+    "fun_fact": "Each number takes away 4 — counting backward by fours.",
+    "fun_fact_ar": "كل عدد ينقص بمقدار ٤ — العدّ التنازلي بالأربعات."
+  },
+  {
+    "id": "bb_pat_e_036",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What number comes next?  30, 27, 24, 21, ?",
+    "question_ar": "ما العدد التالي؟  ٣٠، ٢٧، ٢٤، ٢١، ؟",
+    "options": [
+      "18",
+      "19",
+      "17",
+      "20"
+    ],
+    "options_ar": [
+      "١٨",
+      "١٩",
+      "١٧",
+      "٢٠"
+    ],
+    "correct_answer": "18",
+    "correct_answer_ar": "١٨",
+    "fun_fact": "Each number takes away 3 — counting backward by threes.",
+    "fun_fact_ar": "كل عدد ينقص بمقدار ٣ — العدّ التنازلي بالثلاثات."
+  },
+  {
+    "id": "bb_pat_e_037",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What number comes next?  40, 35, 30, 25, ?",
+    "question_ar": "ما العدد التالي؟  ٤٠، ٣٥، ٣٠، ٢٥، ؟",
+    "options": [
+      "20",
+      "22",
+      "15",
+      "24"
+    ],
+    "options_ar": [
+      "٢٠",
+      "٢٢",
+      "١٥",
+      "٢٤"
+    ],
+    "correct_answer": "20",
+    "correct_answer_ar": "٢٠",
+    "fun_fact": "Each number takes away 5 — counting backward by fives.",
+    "fun_fact_ar": "كل عدد ينقص بمقدار ٥ — العدّ التنازلي بالخمسات."
+  },
+  {
+    "id": "bb_pat_e_038",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What number comes next?  30, 29, 28, 27, ?",
+    "question_ar": "ما العدد التالي؟  ٣٠، ٢٩، ٢٨، ٢٧، ؟",
+    "options": [
+      "26",
+      "25",
+      "28",
+      "24"
+    ],
+    "options_ar": [
+      "٢٦",
+      "٢٥",
+      "٢٨",
+      "٢٤"
+    ],
+    "correct_answer": "26",
+    "correct_answer_ar": "٢٦",
+    "fun_fact": "Each number takes away 1 — counting backward.",
+    "fun_fact_ar": "كل عدد ينقص بمقدار ١ — العدّ التنازلي."
+  },
+  {
+    "id": "bb_pat_e_039",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What number comes next?  1, 2, 3, 1, 2, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٢، ٣، ١، ٢، ؟",
+    "options": [
+      "3",
+      "4",
+      "1",
+      "5"
+    ],
+    "options_ar": [
+      "٣",
+      "٤",
+      "١",
+      "٥"
+    ],
+    "correct_answer": "3",
+    "correct_answer_ar": "٣",
+    "fun_fact": "The numbers 1, 2, 3 keep repeating in order.",
+    "fun_fact_ar": "الأعداد ١ و٢ و٣ تتكرر بالترتيب."
+  },
+  {
+    "id": "bb_pat_e_040",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What letter comes next?  F, G, H, I, ?",
+    "question_ar": "ما الحرف التالي؟  و، ز، ح، ط، ؟",
+    "options": [
+      "J",
+      "K",
+      "H",
+      "L"
+    ],
+    "options_ar": [
+      "ي",
+      "ك",
+      "ح",
+      "ل"
+    ],
+    "correct_answer": "J",
+    "correct_answer_ar": "ي",
+    "fun_fact": "Each letter is the next one in the alphabet.",
+    "fun_fact_ar": "كل حرف هو التالي في الأبجدية."
+  },
+  {
+    "id": "bb_pat_e_041",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What letter comes next?  J, K, L, M, ?",
+    "question_ar": "ما الحرف التالي؟  ي، ك، ل، م، ؟",
+    "options": [
+      "N",
+      "O",
+      "P",
+      "L"
+    ],
+    "options_ar": [
+      "ن",
+      "س",
+      "ع",
+      "ل"
+    ],
+    "correct_answer": "N",
+    "correct_answer_ar": "ن",
+    "fun_fact": "Each letter is the next one in the alphabet.",
+    "fun_fact_ar": "كل حرف هو التالي في الأبجدية."
+  },
+  {
+    "id": "bb_pat_e_042",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What letter comes next?  P, Q, R, S, ?",
+    "question_ar": "ما الحرف التالي؟  ع، ف، ص، ق، ؟",
+    "options": [
+      "T",
+      "U",
+      "V",
+      "Q"
+    ],
+    "options_ar": [
+      "ر",
+      "ش",
+      "ت",
+      "ف"
+    ],
+    "correct_answer": "T",
+    "correct_answer_ar": "ر",
+    "fun_fact": "Each letter is the next one in the alphabet.",
+    "fun_fact_ar": "كل حرف هو التالي في الأبجدية."
+  },
+  {
+    "id": "bb_pat_e_043",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What comes next?  Cat, Dog, Cat, Dog, ?",
+    "question_ar": "ما التالي؟  قطة، كلب، قطة، كلب، ؟",
+    "options": [
+      "Cat",
+      "Dog",
+      "Bird",
+      "Fish"
+    ],
+    "options_ar": [
+      "قطة",
+      "كلب",
+      "طائر",
+      "سمكة"
+    ],
+    "correct_answer": "Cat",
+    "correct_answer_ar": "قطة",
+    "fun_fact": "The pattern alternates between cat and dog.",
+    "fun_fact_ar": "النمط يتبادل بين القطة والكلب."
+  },
+  {
+    "id": "bb_pat_e_044",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What comes next?  Sun, Cloud, Sun, Cloud, ?",
+    "question_ar": "ما التالي؟  شمس، سحابة، شمس، سحابة، ؟",
+    "options": [
+      "Sun",
+      "Cloud",
+      "Rain",
+      "Moon"
+    ],
+    "options_ar": [
+      "شمس",
+      "سحابة",
+      "مطر",
+      "قمر"
+    ],
+    "correct_answer": "Sun",
+    "correct_answer_ar": "شمس",
+    "fun_fact": "The pattern alternates between sun and cloud.",
+    "fun_fact_ar": "النمط يتبادل بين الشمس والسحابة."
+  },
+  {
+    "id": "bb_pat_e_045",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What comes next?  Up, Down, Up, Down, ?",
+    "question_ar": "ما التالي؟  فوق، تحت، فوق، تحت، ؟",
+    "options": [
+      "Up",
+      "Down",
+      "Left",
+      "Right"
+    ],
+    "options_ar": [
+      "فوق",
+      "تحت",
+      "يسار",
+      "يمين"
+    ],
+    "correct_answer": "Up",
+    "correct_answer_ar": "فوق",
+    "fun_fact": "The pattern flips between up and down.",
+    "fun_fact_ar": "النمط يتبادل بين فوق وتحت."
+  },
+  {
+    "id": "bb_pat_e_046",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What comes next?  Hot, Cold, Hot, Cold, ?",
+    "question_ar": "ما التالي؟  حار، بارد، حار، بارد، ؟",
+    "options": [
+      "Hot",
+      "Cold",
+      "Warm",
+      "Cool"
+    ],
+    "options_ar": [
+      "حار",
+      "بارد",
+      "دافئ",
+      "منعش"
+    ],
+    "correct_answer": "Hot",
+    "correct_answer_ar": "حار",
+    "fun_fact": "The pattern switches between hot and cold each time.",
+    "fun_fact_ar": "النمط يتبدل بين الحار والبارد كل مرة."
+  },
+  {
+    "id": "bb_pat_e_047",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What day comes next?  Monday, Tuesday, Wednesday, Thursday, ?",
+    "question_ar": "ما اليوم التالي؟  الإثنين، الثلاثاء، الأربعاء، الخميس، ؟",
+    "options": [
+      "Friday",
+      "Saturday",
+      "Sunday",
+      "Thursday"
+    ],
+    "options_ar": [
+      "الجمعة",
+      "السبت",
+      "الأحد",
+      "الخميس"
+    ],
+    "correct_answer": "Friday",
+    "correct_answer_ar": "الجمعة",
+    "fun_fact": "These are the days of the week in order.",
+    "fun_fact_ar": "هذه أيام الأسبوع بالترتيب."
+  },
+  {
+    "id": "bb_pat_e_048",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What number comes next?  1, 2, 1, 2, 1, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٢، ١، ٢، ١، ؟",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "0"
+    ],
+    "options_ar": [
+      "٢",
+      "١",
+      "٣",
+      "٠"
+    ],
+    "correct_answer": "2",
+    "correct_answer_ar": "٢",
+    "fun_fact": "The numbers 1 and 2 take turns over and over.",
+    "fun_fact_ar": "العددان ١ و٢ يتبادلان مرارًا."
+  },
+  {
+    "id": "bb_pat_e_049",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What comes next?  Yes, No, Yes, No, ?",
+    "question_ar": "ما التالي؟  نعم، لا، نعم، لا، ؟",
+    "options": [
+      "Yes",
+      "No",
+      "Maybe",
+      "Sure"
+    ],
+    "options_ar": [
+      "نعم",
+      "لا",
+      "ربما",
+      "أكيد"
+    ],
+    "correct_answer": "Yes",
+    "correct_answer_ar": "نعم",
+    "fun_fact": "The pattern flips between yes and no each time.",
+    "fun_fact_ar": "النمط يتبادل بين نعم ولا كل مرة."
+  },
+  {
+    "id": "bb_pat_e_050",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 1,
+    "question": "What letter comes next?  A, B, C, D, A, B, C, ?",
+    "question_ar": "ما الحرف التالي؟  أ، ب، ج، د، أ، ب، ج، ؟",
+    "options": [
+      "D",
+      "A",
+      "E",
+      "B"
+    ],
+    "options_ar": [
+      "د",
+      "أ",
+      "هـ",
+      "ب"
+    ],
+    "correct_answer": "D",
+    "correct_answer_ar": "د",
+    "fun_fact": "Four letters keep repeating — A, B, C, D over and over.",
+    "fun_fact_ar": "أربعة حروف تتكرر — أ ب ج د مرارًا."
+  },
+  {
+    "id": "bb_pat_m_031",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  1, 3, 6, 8, 11, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٣، ٦، ٨، ١١، ؟",
+    "options": [
+      "13",
+      "14",
+      "12",
+      "15"
+    ],
+    "options_ar": [
+      "١٣",
+      "١٤",
+      "١٢",
+      "١٥"
+    ],
+    "correct_answer": "13",
+    "correct_answer_ar": "١٣",
+    "fun_fact": "The pattern adds 2, then 3, then 2, then 3 — switching each step.",
+    "fun_fact_ar": "النمط يضيف ٢ ثم ٣ ثم ٢ ثم ٣ — يتبدل في كل خطوة."
+  },
+  {
+    "id": "bb_pat_m_032",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  2, 3, 7, 8, 12, ?",
+    "question_ar": "ما العدد التالي؟  ٢، ٣، ٧، ٨، ١٢، ؟",
+    "options": [
+      "13",
+      "16",
+      "14",
+      "17"
+    ],
+    "options_ar": [
+      "١٣",
+      "١٦",
+      "١٤",
+      "١٧"
+    ],
+    "correct_answer": "13",
+    "correct_answer_ar": "١٣",
+    "fun_fact": "Add 1, then add 4, and repeat — the gap keeps switching.",
+    "fun_fact_ar": "نضيف ١ ثم نضيف ٤ ونكرر — الفجوة تتبدل."
+  },
+  {
+    "id": "bb_pat_m_033",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  5, 8, 13, 16, 21, ?",
+    "question_ar": "ما العدد التالي؟  ٥، ٨، ١٣، ١٦، ٢١، ؟",
+    "options": [
+      "24",
+      "25",
+      "26",
+      "23"
+    ],
+    "options_ar": [
+      "٢٤",
+      "٢٥",
+      "٢٦",
+      "٢٣"
+    ],
+    "correct_answer": "24",
+    "correct_answer_ar": "٢٤",
+    "fun_fact": "Add 3, then add 5 — the pattern alternates between two jumps.",
+    "fun_fact_ar": "نضيف ٣ ثم ٥ — النمط يتبدل بين قفزتين."
+  },
+  {
+    "id": "bb_pat_m_034",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  2, 3, 5, 9, 17, ?",
+    "question_ar": "ما العدد التالي؟  ٢، ٣، ٥، ٩، ١٧، ؟",
+    "options": [
+      "33",
+      "34",
+      "25",
+      "32"
+    ],
+    "options_ar": [
+      "٣٣",
+      "٣٤",
+      "٢٥",
+      "٣٢"
+    ],
+    "correct_answer": "33",
+    "correct_answer_ar": "٣٣",
+    "fun_fact": "Each number doubles and then takes 1 away.",
+    "fun_fact_ar": "كل عدد يتضاعف ثم نطرح ١."
+  },
+  {
+    "id": "bb_pat_m_035",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  80, 40, 20, 10, ?",
+    "question_ar": "ما العدد التالي؟  ٨٠، ٤٠، ٢٠، ١٠، ؟",
+    "options": [
+      "5",
+      "6",
+      "8",
+      "4"
+    ],
+    "options_ar": [
+      "٥",
+      "٦",
+      "٨",
+      "٤"
+    ],
+    "correct_answer": "5",
+    "correct_answer_ar": "٥",
+    "fun_fact": "Each number is half of the one before it.",
+    "fun_fact_ar": "كل عدد هو نصف العدد الذي قبله."
+  },
+  {
+    "id": "bb_pat_m_036",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  15, 21, 28, 36, ?",
+    "question_ar": "ما العدد التالي؟  ١٥، ٢١، ٢٨، ٣٦، ؟",
+    "options": [
+      "45",
+      "44",
+      "46",
+      "48"
+    ],
+    "options_ar": [
+      "٤٥",
+      "٤٤",
+      "٤٦",
+      "٤٨"
+    ],
+    "correct_answer": "45",
+    "correct_answer_ar": "٤٥",
+    "fun_fact": "The gap grows by 1 each time — triangular numbers.",
+    "fun_fact_ar": "تكبر الفجوة بمقدار ١ في كل مرة — الأعداد المثلثية."
+  },
+  {
+    "id": "bb_pat_m_037",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  1, 2, 3, 6, 7, 14, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٢، ٣، ٦، ٧، ١٤، ؟",
+    "options": [
+      "15",
+      "28",
+      "16",
+      "21"
+    ],
+    "options_ar": [
+      "١٥",
+      "٢٨",
+      "١٦",
+      "٢١"
+    ],
+    "correct_answer": "15",
+    "correct_answer_ar": "١٥",
+    "fun_fact": "Add 1, then double, and repeat — two rules taking turns.",
+    "fun_fact_ar": "نضيف ١ ثم نضاعف ونكرر — قاعدتان تتبادلان."
+  },
+  {
+    "id": "bb_pat_m_038",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  50, 49, 47, 44, 40, ?",
+    "question_ar": "ما العدد التالي؟  ٥٠، ٤٩، ٤٧، ٤٤، ٤٠، ؟",
+    "options": [
+      "35",
+      "34",
+      "36",
+      "38"
+    ],
+    "options_ar": [
+      "٣٥",
+      "٣٤",
+      "٣٦",
+      "٣٨"
+    ],
+    "correct_answer": "35",
+    "correct_answer_ar": "٣٥",
+    "fun_fact": "We subtract 1, then 2, then 3, then 4 — the gap keeps growing.",
+    "fun_fact_ar": "نطرح ١ ثم ٢ ثم ٣ ثم ٤ — الفجوة تكبر."
+  },
+  {
+    "id": "bb_pat_m_039",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  3, 5, 4, 6, 5, 7, ?",
+    "question_ar": "ما العدد التالي؟  ٣، ٥، ٤، ٦، ٥، ٧، ؟",
+    "options": [
+      "6",
+      "8",
+      "5",
+      "9"
+    ],
+    "options_ar": [
+      "٦",
+      "٨",
+      "٥",
+      "٩"
+    ],
+    "correct_answer": "6",
+    "correct_answer_ar": "٦",
+    "fun_fact": "Add 2, then take 1 away — repeat both steps.",
+    "fun_fact_ar": "نضيف ٢ ثم نطرح ١ — نكرر الخطوتين."
+  },
+  {
+    "id": "bb_pat_m_040",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number is missing?  7, 14, ?, 28, 35",
+    "question_ar": "ما العدد الناقص؟  ٧، ١٤، ؟، ٢٨، ٣٥",
+    "options": [
+      "21",
+      "20",
+      "22",
+      "24"
+    ],
+    "options_ar": [
+      "٢١",
+      "٢٠",
+      "٢٢",
+      "٢٤"
+    ],
+    "correct_answer": "21",
+    "correct_answer_ar": "٢١",
+    "fun_fact": "Counting by sevens — the missing number is between 14 and 28.",
+    "fun_fact_ar": "العدّ بالسبعات — العدد الناقص بين ١٤ و٢٨."
+  },
+  {
+    "id": "bb_pat_m_041",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number is missing?  6, 12, 24, ?, 96",
+    "question_ar": "ما العدد الناقص؟  ٦، ١٢، ٢٤، ؟، ٩٦",
+    "options": [
+      "48",
+      "36",
+      "50",
+      "72"
+    ],
+    "options_ar": [
+      "٤٨",
+      "٣٦",
+      "٥٠",
+      "٧٢"
+    ],
+    "correct_answer": "48",
+    "correct_answer_ar": "٤٨",
+    "fun_fact": "Each number doubles — twice 24 is 48.",
+    "fun_fact_ar": "كل عدد يتضاعف — ضِعف ٢٤ هو ٤٨."
+  },
+  {
+    "id": "bb_pat_m_042",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What letter comes next?  G, I, K, M, ?",
+    "question_ar": "ما الحرف التالي؟  ز، ط، ك، م، ؟",
+    "options": [
+      "O",
+      "N",
+      "P",
+      "Q"
+    ],
+    "options_ar": [
+      "س",
+      "ن",
+      "ع",
+      "ف"
+    ],
+    "correct_answer": "O",
+    "correct_answer_ar": "س",
+    "fun_fact": "Skip one letter each time — every other letter of the alphabet.",
+    "fun_fact_ar": "نتجاوز حرفًا كل مرة — كل حرف ثانٍ من الأبجدية."
+  },
+  {
+    "id": "bb_pat_m_043",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What letter comes next?  Y, W, U, S, ?",
+    "question_ar": "ما الحرف التالي؟  ذ، ث، ش، ق، ؟",
+    "options": [
+      "Q",
+      "R",
+      "P",
+      "T"
+    ],
+    "options_ar": [
+      "ف",
+      "ص",
+      "ع",
+      "ر"
+    ],
+    "correct_answer": "Q",
+    "correct_answer_ar": "ف",
+    "fun_fact": "Skip one letter each time — going backward through the alphabet.",
+    "fun_fact_ar": "نتجاوز حرفًا كل مرة — نسير للخلف في الأبجدية."
+  },
+  {
+    "id": "bb_pat_m_044",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What shape comes next?  Circle, Triangle, Star, Circle, Triangle, ?",
+    "question_ar": "ما الشكل التالي؟  دائرة، مثلث، نجمة، دائرة، مثلث، ؟",
+    "options": [
+      "Star",
+      "Circle",
+      "Triangle",
+      "Square"
+    ],
+    "options_ar": [
+      "نجمة",
+      "دائرة",
+      "مثلث",
+      "مربع"
+    ],
+    "correct_answer": "Star",
+    "correct_answer_ar": "نجمة",
+    "fun_fact": "Three shapes repeat in the same order — circle, triangle, star.",
+    "fun_fact_ar": "ثلاثة أشكال تتكرر بنفس الترتيب — دائرة ومثلث ونجمة."
+  },
+  {
+    "id": "bb_pat_m_045",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  100, 120, 140, 160, ?",
+    "question_ar": "ما العدد التالي؟  ١٠٠، ١٢٠، ١٤٠، ١٦٠، ؟",
+    "options": [
+      "180",
+      "170",
+      "200",
+      "175"
+    ],
+    "options_ar": [
+      "١٨٠",
+      "١٧٠",
+      "٢٠٠",
+      "١٧٥"
+    ],
+    "correct_answer": "180",
+    "correct_answer_ar": "١٨٠",
+    "fun_fact": "Each number adds 20 — counting in twenties.",
+    "fun_fact_ar": "كل عدد يزيد بمقدار ٢٠ — العدّ بالعشرينات."
+  },
+  {
+    "id": "bb_pat_m_046",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  144, 121, 100, 81, ?",
+    "question_ar": "ما العدد التالي؟  ١٤٤، ١٢١، ١٠٠، ٨١، ؟",
+    "options": [
+      "64",
+      "60",
+      "72",
+      "49"
+    ],
+    "options_ar": [
+      "٦٤",
+      "٦٠",
+      "٧٢",
+      "٤٩"
+    ],
+    "correct_answer": "64",
+    "correct_answer_ar": "٦٤",
+    "fun_fact": "These are square numbers going down — 12, 11, 10, 9, then 8 squared.",
+    "fun_fact_ar": "هذه أعداد مربعة تنازليًا — ١٢ و١١ و١٠ و٩ ثم ٨ تربيع."
+  },
+  {
+    "id": "bb_pat_m_047",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  2, 3, 5, 8, 12, ?",
+    "question_ar": "ما العدد التالي؟  ٢، ٣، ٥، ٨، ١٢، ؟",
+    "options": [
+      "17",
+      "16",
+      "18",
+      "20"
+    ],
+    "options_ar": [
+      "١٧",
+      "١٦",
+      "١٨",
+      "٢٠"
+    ],
+    "correct_answer": "17",
+    "correct_answer_ar": "١٧",
+    "fun_fact": "The gap grows by 1 each time — add 1, then 2, then 3, then 4, then 5.",
+    "fun_fact_ar": "تكبر الفجوة بمقدار ١ كل مرة — نضيف ١ ثم ٢ ثم ٣ ثم ٤ ثم ٥."
+  },
+  {
+    "id": "bb_pat_m_048",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  2, 4, 7, 14, 17, 34, ?",
+    "question_ar": "ما العدد التالي؟  ٢، ٤، ٧، ١٤، ١٧، ٣٤، ؟",
+    "options": [
+      "37",
+      "68",
+      "38",
+      "36"
+    ],
+    "options_ar": [
+      "٣٧",
+      "٦٨",
+      "٣٨",
+      "٣٦"
+    ],
+    "correct_answer": "37",
+    "correct_answer_ar": "٣٧",
+    "fun_fact": "Double, then add 3, and repeat — two rules take turns.",
+    "fun_fact_ar": "نضاعف ثم نضيف ٣ ونكرر — قاعدتان تتبادلان."
+  },
+  {
+    "id": "bb_pat_m_049",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number comes next?  12, 24, 36, 48, ?",
+    "question_ar": "ما العدد التالي؟  ١٢، ٢٤، ٣٦، ٤٨، ؟",
+    "options": [
+      "60",
+      "56",
+      "64",
+      "50"
+    ],
+    "options_ar": [
+      "٦٠",
+      "٥٦",
+      "٦٤",
+      "٥٠"
+    ],
+    "correct_answer": "60",
+    "correct_answer_ar": "٦٠",
+    "fun_fact": "Each number adds 12 — counting in dozens.",
+    "fun_fact_ar": "كل عدد يزيد بمقدار ١٢ — العدّ بالاثنتي عشرة."
+  },
+  {
+    "id": "bb_pat_m_050",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 2,
+    "question": "What number is missing?  5, 10, 16, ?, 31, 40",
+    "question_ar": "ما العدد الناقص؟  ٥، ١٠، ١٦، ؟، ٣١، ٤٠",
+    "options": [
+      "23",
+      "22",
+      "24",
+      "25"
+    ],
+    "options_ar": [
+      "٢٣",
+      "٢٢",
+      "٢٤",
+      "٢٥"
+    ],
+    "correct_answer": "23",
+    "correct_answer_ar": "٢٣",
+    "fun_fact": "The gap grows by 1 each step — add 5, 6, 7, then 8.",
+    "fun_fact_ar": "تكبر الفجوة بمقدار ١ كل خطوة — نضيف ٥ ثم ٦ ثم ٧ ثم ٨."
+  },
+  {
+    "id": "bb_pat_h_031",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  2, 1, 3, 4, 7, 11, ?",
+    "question_ar": "ما العدد التالي؟  ٢، ١، ٣، ٤، ٧، ١١، ؟",
+    "options": [
+      "18",
+      "17",
+      "19",
+      "22"
+    ],
+    "options_ar": [
+      "١٨",
+      "١٧",
+      "١٩",
+      "٢٢"
+    ],
+    "correct_answer": "18",
+    "correct_answer_ar": "١٨",
+    "fun_fact": "Each number is the sum of the two before it — these are the Lucas numbers.",
+    "fun_fact_ar": "كل عدد هو مجموع العددين قبله — هذه أعداد لوكاس."
+  },
+  {
+    "id": "bb_pat_h_032",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 1, 2, 6, 24, ?",
+    "question_ar": "ما العدد التالي؟  ١، ١، ٢، ٦، ٢٤، ؟",
+    "options": [
+      "120",
+      "96",
+      "48",
+      "100"
+    ],
+    "options_ar": [
+      "١٢٠",
+      "٩٦",
+      "٤٨",
+      "١٠٠"
+    ],
+    "correct_answer": "120",
+    "correct_answer_ar": "١٢٠",
+    "fun_fact": "Multiply by 1, then 2, then 3, then 4, then 5 — these are factorials.",
+    "fun_fact_ar": "نضرب في ١ ثم ٢ ثم ٣ ثم ٤ ثم ٥ — هذه أعداد المضروب."
+  },
+  {
+    "id": "bb_pat_h_033",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  11, 13, 17, 19, 23, ?",
+    "question_ar": "ما العدد التالي؟  ١١، ١٣، ١٧، ١٩، ٢٣، ؟",
+    "options": [
+      "29",
+      "27",
+      "25",
+      "31"
+    ],
+    "options_ar": [
+      "٢٩",
+      "٢٧",
+      "٢٥",
+      "٣١"
+    ],
+    "correct_answer": "29",
+    "correct_answer_ar": "٢٩",
+    "fun_fact": "These are prime numbers in order — 29 is the next prime after 23.",
+    "fun_fact_ar": "هذه أعداد أولية بالترتيب — ٢٩ هو الأولي التالي بعد ٢٣."
+  },
+  {
+    "id": "bb_pat_h_034",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  0, 3, 8, 15, 24, ?",
+    "question_ar": "ما العدد التالي؟  ٠، ٣، ٨، ١٥، ٢٤، ؟",
+    "options": [
+      "35",
+      "33",
+      "36",
+      "34"
+    ],
+    "options_ar": [
+      "٣٥",
+      "٣٣",
+      "٣٦",
+      "٣٤"
+    ],
+    "correct_answer": "35",
+    "correct_answer_ar": "٣٥",
+    "fun_fact": "Each number is a square minus 1 — 1, 4, 9, 16, 25, 36 take away 1.",
+    "fun_fact_ar": "كل عدد هو مربع مطروح منه ١ — ١ و٤ و٩ و١٦ و٢٥ و٣٦ ناقص ١."
+  },
+  {
+    "id": "bb_pat_h_035",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  200, 100, 50, 25, ?",
+    "question_ar": "ما العدد التالي؟  ٢٠٠، ١٠٠، ٥٠، ٢٥، ؟",
+    "options": [
+      "12.5",
+      "13",
+      "10",
+      "20"
+    ],
+    "options_ar": [
+      "١٢٫٥",
+      "١٣",
+      "١٠",
+      "٢٠"
+    ],
+    "correct_answer": "12.5",
+    "correct_answer_ar": "١٢٫٥",
+    "fun_fact": "Each number is half of the one before — halving keeps shrinking it.",
+    "fun_fact_ar": "كل عدد هو نصف ما قبله — التنصيف يصغّره باستمرار."
+  },
+  {
+    "id": "bb_pat_h_036",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 4, 16, 64, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٤، ١٦، ٦٤، ؟",
+    "options": [
+      "256",
+      "128",
+      "196",
+      "144"
+    ],
+    "options_ar": [
+      "٢٥٦",
+      "١٢٨",
+      "١٩٦",
+      "١٤٤"
+    ],
+    "correct_answer": "256",
+    "correct_answer_ar": "٢٥٦",
+    "fun_fact": "Each number is multiplied by 4 — these are powers of four.",
+    "fun_fact_ar": "كل عدد يضرب في ٤ — هذه قوى الأربعة."
+  },
+  {
+    "id": "bb_pat_h_037",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  0, 7, 26, 63, 124, ?",
+    "question_ar": "ما العدد التالي؟  ٠، ٧، ٢٦، ٦٣، ١٢٤، ؟",
+    "options": [
+      "215",
+      "216",
+      "200",
+      "224"
+    ],
+    "options_ar": [
+      "٢١٥",
+      "٢١٦",
+      "٢٠٠",
+      "٢٢٤"
+    ],
+    "correct_answer": "215",
+    "correct_answer_ar": "٢١٥",
+    "fun_fact": "Each number is a cube minus 1 — 1, 8, 27, 64, 125, 216 take away 1.",
+    "fun_fact_ar": "كل عدد هو مكعب مطروح منه ١ — ١ و٨ و٢٧ و٦٤ و١٢٥ و٢١٦ ناقص ١."
+  },
+  {
+    "id": "bb_pat_h_038",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  100, 95, 85, 80, 70, ?",
+    "question_ar": "ما العدد التالي؟  ١٠٠، ٩٥، ٨٥، ٨٠، ٧٠، ؟",
+    "options": [
+      "65",
+      "60",
+      "64",
+      "75"
+    ],
+    "options_ar": [
+      "٦٥",
+      "٦٠",
+      "٦٤",
+      "٧٥"
+    ],
+    "correct_answer": "65",
+    "correct_answer_ar": "٦٥",
+    "fun_fact": "Take away 5, then take away 10 — keep alternating both jumps.",
+    "fun_fact_ar": "نطرح ٥ ثم نطرح ١٠ — نكرر الخطوتين بالتناوب."
+  },
+  {
+    "id": "bb_pat_h_039",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  3, 8, 15, 24, 35, ?",
+    "question_ar": "ما العدد التالي؟  ٣، ٨، ١٥، ٢٤، ٣٥، ؟",
+    "options": [
+      "48",
+      "46",
+      "49",
+      "50"
+    ],
+    "options_ar": [
+      "٤٨",
+      "٤٦",
+      "٤٩",
+      "٥٠"
+    ],
+    "correct_answer": "48",
+    "correct_answer_ar": "٤٨",
+    "fun_fact": "Multiply each whole number by itself plus 2 — like 1*3, 2*4, 3*5.",
+    "fun_fact_ar": "نضرب كل عدد صحيح في نفسه زائد ٢ — مثل ١×٣ و٢×٤ و٣×٥."
+  },
+  {
+    "id": "bb_pat_h_040",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  7, 12, 19, 28, 39, ?",
+    "question_ar": "ما العدد التالي؟  ٧، ١٢، ١٩، ٢٨، ٣٩، ؟",
+    "options": [
+      "52",
+      "50",
+      "51",
+      "53"
+    ],
+    "options_ar": [
+      "٥٢",
+      "٥٠",
+      "٥١",
+      "٥٣"
+    ],
+    "correct_answer": "52",
+    "correct_answer_ar": "٥٢",
+    "fun_fact": "The gap grows by 2 each step — odd numbers added in order.",
+    "fun_fact_ar": "تكبر الفجوة بمقدار ٢ كل خطوة — نضيف الأعداد الفردية بالترتيب."
+  },
+  {
+    "id": "bb_pat_h_041",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 2, 5, 14, 41, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٢، ٥، ١٤، ٤١، ؟",
+    "options": [
+      "122",
+      "123",
+      "120",
+      "100"
+    ],
+    "options_ar": [
+      "١٢٢",
+      "١٢٣",
+      "١٢٠",
+      "١٠٠"
+    ],
+    "correct_answer": "122",
+    "correct_answer_ar": "١٢٢",
+    "fun_fact": "Multiply by 3 then take 1 away — repeat that rule each step.",
+    "fun_fact_ar": "نضرب في ٣ ثم نطرح ١ — نكرر القاعدة كل خطوة."
+  },
+  {
+    "id": "bb_pat_h_042",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 1, 1, 2, 2, 3, 4, 5, ?",
+    "question_ar": "ما العدد التالي؟  ١، ١، ١، ٢، ٢، ٣، ٤، ٥، ؟",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "options_ar": [
+      "٧",
+      "٦",
+      "٨",
+      "٩"
+    ],
+    "correct_answer": "7",
+    "correct_answer_ar": "٧",
+    "fun_fact": "Each number is the sum of the two from earlier in the sequence — Padovan numbers.",
+    "fun_fact_ar": "كل عدد هو مجموع عددين أقدم في المتتالية — أعداد بادوفان."
+  },
+  {
+    "id": "bb_pat_h_043",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 1, 2, 4, 8, 16, ?",
+    "question_ar": "ما العدد التالي؟  ١، ١، ٢، ٤، ٨، ١٦، ؟",
+    "options": [
+      "32",
+      "24",
+      "30",
+      "34"
+    ],
+    "options_ar": [
+      "٣٢",
+      "٢٤",
+      "٣٠",
+      "٣٤"
+    ],
+    "correct_answer": "32",
+    "correct_answer_ar": "٣٢",
+    "fun_fact": "Each number is the sum of all the numbers before it.",
+    "fun_fact_ar": "كل عدد هو مجموع كل الأعداد التي قبله."
+  },
+  {
+    "id": "bb_pat_h_044",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  3, 7, 13, 21, 31, ?",
+    "question_ar": "ما العدد التالي؟  ٣، ٧، ١٣، ٢١، ٣١، ؟",
+    "options": [
+      "43",
+      "41",
+      "45",
+      "42"
+    ],
+    "options_ar": [
+      "٤٣",
+      "٤١",
+      "٤٥",
+      "٤٢"
+    ],
+    "correct_answer": "43",
+    "correct_answer_ar": "٤٣",
+    "fun_fact": "The gap grows by 2 each step — add 4, then 6, then 8, then 10, then 12.",
+    "fun_fact_ar": "تكبر الفجوة بمقدار ٢ كل خطوة — نضيف ٤ ثم ٦ ثم ٨ ثم ١٠ ثم ١٢."
+  },
+  {
+    "id": "bb_pat_h_045",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 10, 2, 20, 3, 30, 4, ?",
+    "question_ar": "ما العدد التالي؟  ١، ١٠، ٢، ٢٠، ٣، ٣٠، ٤، ؟",
+    "options": [
+      "40",
+      "5",
+      "50",
+      "14"
+    ],
+    "options_ar": [
+      "٤٠",
+      "٥",
+      "٥٠",
+      "١٤"
+    ],
+    "correct_answer": "40",
+    "correct_answer_ar": "٤٠",
+    "fun_fact": "Two sequences are mixed — counting up and counting by tens take turns.",
+    "fun_fact_ar": "متتاليتان متشابكتان — العدّ للأمام والعدّ بالعشرات يتبادلان."
+  },
+  {
+    "id": "bb_pat_h_046",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 5, 12, 22, 35, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٥، ١٢، ٢٢، ٣٥، ؟",
+    "options": [
+      "51",
+      "49",
+      "50",
+      "52"
+    ],
+    "options_ar": [
+      "٥١",
+      "٤٩",
+      "٥٠",
+      "٥٢"
+    ],
+    "correct_answer": "51",
+    "correct_answer_ar": "٥١",
+    "fun_fact": "The gap grows by 3 each step — add 4, 7, 10, 13, 16 — pentagonal numbers.",
+    "fun_fact_ar": "تكبر الفجوة بمقدار ٣ كل خطوة — نضيف ٤ ثم ٧ ثم ١٠ ثم ١٣ ثم ١٦ — الأعداد الخماسية."
+  },
+  {
+    "id": "bb_pat_h_047",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 6, 15, 28, 45, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٦، ١٥، ٢٨، ٤٥، ؟",
+    "options": [
+      "66",
+      "64",
+      "70",
+      "60"
+    ],
+    "options_ar": [
+      "٦٦",
+      "٦٤",
+      "٧٠",
+      "٦٠"
+    ],
+    "correct_answer": "66",
+    "correct_answer_ar": "٦٦",
+    "fun_fact": "The gap grows by 4 each step — these are hexagonal numbers.",
+    "fun_fact_ar": "تكبر الفجوة بمقدار ٤ كل خطوة — هذه الأعداد السداسية."
+  },
+  {
+    "id": "bb_pat_h_048",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  81, 27, 9, 3, ?",
+    "question_ar": "ما العدد التالي؟  ٨١، ٢٧، ٩، ٣، ؟",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "6"
+    ],
+    "options_ar": [
+      "١",
+      "٠",
+      "٢",
+      "٦"
+    ],
+    "correct_answer": "1",
+    "correct_answer_ar": "١",
+    "fun_fact": "Each number is divided by 3 — going down the powers of three.",
+    "fun_fact_ar": "كل عدد يقسم على ٣ — نعود في قوى الثلاثة."
+  },
+  {
+    "id": "bb_pat_h_049",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  1, 4, 10, 19, 31, ?",
+    "question_ar": "ما العدد التالي؟  ١، ٤، ١٠، ١٩، ٣١، ؟",
+    "options": [
+      "46",
+      "43",
+      "47",
+      "48"
+    ],
+    "options_ar": [
+      "٤٦",
+      "٤٣",
+      "٤٧",
+      "٤٨"
+    ],
+    "correct_answer": "46",
+    "correct_answer_ar": "٤٦",
+    "fun_fact": "The gap grows by 3 each step — add 3, then 6, then 9, then 12, then 15.",
+    "fun_fact_ar": "تكبر الفجوة بمقدار ٣ كل خطوة — نضيف ٣ ثم ٦ ثم ٩ ثم ١٢ ثم ١٥."
+  },
+  {
+    "id": "bb_pat_h_050",
+    "category": "Patterns",
+    "category_ar": "الأنماط",
+    "difficulty": 3,
+    "question": "What number comes next?  2, 3, 5, 8, 13, 21, ?",
+    "question_ar": "ما العدد التالي؟  ٢، ٣، ٥، ٨، ١٣، ٢١، ؟",
+    "options": [
+      "34",
+      "33",
+      "35",
+      "32"
+    ],
+    "options_ar": [
+      "٣٤",
+      "٣٣",
+      "٣٥",
+      "٣٢"
+    ],
+    "correct_answer": "34",
+    "correct_answer_ar": "٣٤",
+    "fun_fact": "Each number is the sum of the two before it — like Fibonacci, starting from 2 and 3.",
+    "fun_fact_ar": "كل عدد هو مجموع العددين قبله — مثل فيبوناتشي، بدءًا من ٢ و٣."
+  }
+]

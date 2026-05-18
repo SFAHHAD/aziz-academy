@@ -44,13 +44,10 @@ class ReviewSessionState {
   bool get isEmpty => items.isEmpty;
   bool get isComplete =>
       status == ReviewStatus.complete || currentIndex >= totalItems;
-  double get progress =>
-      totalItems == 0 ? 0 : currentIndex / totalItems;
+  double get progress => totalItems == 0 ? 0 : currentIndex / totalItems;
 
   ReviewItem? get currentItem =>
-      !isComplete && currentIndex < items.length
-          ? items[currentIndex]
-          : null;
+      !isComplete && currentIndex < items.length ? items[currentIndex] : null;
 
   ReviewSessionState copyWith({
     int? currentIndex,
@@ -66,8 +63,9 @@ class ReviewSessionState {
       correctCount: correctCount ?? this.correctCount,
       masteredCount: masteredCount ?? this.masteredCount,
       status: status ?? this.status,
-      lastAnswerCorrect:
-          clearLastAnswer ? null : (lastAnswerCorrect ?? this.lastAnswerCorrect),
+      lastAnswerCorrect: clearLastAnswer
+          ? null
+          : (lastAnswerCorrect ?? this.lastAnswerCorrect),
     );
   }
 }
@@ -78,9 +76,9 @@ class ReviewSessionState {
 
 final reviewModeProvider =
     AsyncNotifierProvider<ReviewModeNotifier, ReviewSessionState>(
-  ReviewModeNotifier.new,
-  name: 'reviewModeProvider',
-);
+      ReviewModeNotifier.new,
+      name: 'reviewModeProvider',
+    );
 
 class ReviewModeNotifier extends AsyncNotifier<ReviewSessionState> {
   @override
@@ -91,7 +89,8 @@ class ReviewModeNotifier extends AsyncNotifier<ReviewSessionState> {
     }
 
     // Sort: due items first, then by missCount descending (highest priority first).
-    final sorted = [...queue]..sort((a, b) {
+    final sorted = [...queue]
+      ..sort((a, b) {
         final aDue = a.isDueForReview ? 1 : 0;
         final bDue = b.isDueForReview ? 1 : 0;
         if (aDue != bDue) return bDue - aDue;
@@ -159,12 +158,14 @@ class ReviewModeNotifier extends AsyncNotifier<ReviewSessionState> {
     final newIndex = s.currentIndex + 1;
     final isDone = newIndex >= s.totalItems;
 
-    state = AsyncData(s.copyWith(
-      currentIndex: newIndex,
-      correctCount: correct ? s.correctCount + 1 : s.correctCount,
-      status: isDone ? ReviewStatus.complete : ReviewStatus.inProgress,
-      lastAnswerCorrect: correct,
-    ));
+    state = AsyncData(
+      s.copyWith(
+        currentIndex: newIndex,
+        correctCount: correct ? s.correctCount + 1 : s.correctCount,
+        status: isDone ? ReviewStatus.complete : ReviewStatus.inProgress,
+        lastAnswerCorrect: correct,
+      ),
+    );
 
     return correct;
   }
@@ -177,9 +178,7 @@ class ReviewModeNotifier extends AsyncNotifier<ReviewSessionState> {
       // Track mastered count in local state
       final s = state.value;
       if (s != null) {
-        state = AsyncData(
-          s.copyWith(masteredCount: s.masteredCount + 1),
-        );
+        state = AsyncData(s.copyWith(masteredCount: s.masteredCount + 1));
       }
     } else {
       await notifier.recordWrong(

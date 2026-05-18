@@ -4,7 +4,7 @@ import 'package:file_picker/file_picker.dart' show PlatformFile;
 import 'package:share_plus/share_plus.dart';
 
 Future<void> shareBackupText(String text, String subject) =>
-    Share.share(text, subject: subject);
+    SharePlus.instance.share(ShareParams(text: text, subject: subject));
 
 Future<List<int>?> readPickedFileBytes(PlatformFile f) async {
   if (f.bytes != null) return f.bytes;

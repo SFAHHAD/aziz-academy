@@ -1,22 +1,25 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:aziz_academy/core/agents/event_bus.dart';
 import 'package:aziz_academy/core/models/quiz_session_state.dart';
 import 'package:aziz_academy/core/models/recap_module.dart';
 import 'package:aziz_academy/core/providers/app_settings_provider.dart';
+import 'package:aziz_academy/core/providers/locale_provider.dart';
 import 'package:aziz_academy/core/providers/recap_arm_provider.dart';
 import 'package:aziz_academy/features/maps/data/maps_repository.dart';
 
 final mapsQuizProvider =
     AsyncNotifierProvider<MapsQuizNotifier, QuizSessionState>(
-  MapsQuizNotifier.new,
-  name: 'mapsQuizProvider',
-);
+      MapsQuizNotifier.new,
+      name: 'mapsQuizProvider',
+    );
 
 class MapsQuizNotifier extends AsyncNotifier<QuizSessionState> {
   static const _repo = MapsRepository();
 
   @override
   Future<QuizSessionState> build() async {
-    var questions = await _repo.loadQuestions();
+    final isArabic = ref.watch(localeProvider).value?.languageCode == 'ar';
+    var questions = await _repo.loadQuestions(arabic: isArabic);
 
     final arm = ref.read(recapArmProvider);
     if (arm != null &&
@@ -40,14 +43,25 @@ class MapsQuizNotifier extends AsyncNotifier<QuizSessionState> {
       );
     }
 
-    return QuizSessionState(
+    final out = QuizSessionState(
       questions: questions,
       currentIndex: 0,
       score: 0,
       livesRemaining: 3,
       status: QuizStatus.inProgress,
     );
+    EventBus.instance.emit(
+      LearningEvent(
+        type: LearningEventType.sessionStarted,
+        module: 'maps',
+        timestamp: DateTime.now(),
+      ),
+    );
+    _lastQuestionStartedAt = DateTime.now();
+    return out;
   }
+
+  DateTime? _lastQuestionStartedAt;
 
   void submitAnswer(String answer) {
     if (!state.hasValue) return;
@@ -69,11 +83,42 @@ class MapsQuizNotifier extends AsyncNotifier<QuizSessionState> {
       newStatus = QuizStatus.complete;
     }
 
-    state = AsyncData(currentState.copyWith(
-      score: newScore,
-      livesRemaining: newLives,
-      status: newStatus,
-    ));
+    final lat = _lastQuestionStartedAt == null
+        ? 0
+        : DateTime.now().difference(_lastQuestionStartedAt!).inMilliseconds;
+    if (q != null) {
+      EventBus.instance.emit(
+        LearningEvent(
+          type: LearningEventType.questionAnswered,
+          module: 'maps',
+          timestamp: DateTime.now(),
+          questionId: q.id,
+          category: q.category,
+          correct: isCorrect,
+          latencyMs: lat,
+        ),
+      );
+    }
+
+    if (newStatus == QuizStatus.complete &&
+        currentState.status != QuizStatus.complete) {
+      EventBus.instance.emit(
+        LearningEvent(
+          type: LearningEventType.sessionEnded,
+          module: 'maps',
+          timestamp: DateTime.now(),
+          score: newScore,
+        ),
+      );
+    }
+
+    state = AsyncData(
+      currentState.copyWith(
+        score: newScore,
+        livesRemaining: newLives,
+        status: newStatus,
+      ),
+    );
   }
 
   void nextQuestion() {
@@ -81,9 +126,10 @@ class MapsQuizNotifier extends AsyncNotifier<QuizSessionState> {
     final currentState = state.value!;
     if (currentState.status == QuizStatus.complete) return;
 
-    state = AsyncData(currentState.copyWith(
-      currentIndex: currentState.currentIndex + 1,
-    ));
+    _lastQuestionStartedAt = DateTime.now();
+    state = AsyncData(
+      currentState.copyWith(currentIndex: currentState.currentIndex + 1),
+    );
   }
 
   void reset() {
