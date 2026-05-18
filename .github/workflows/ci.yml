@@ -1,4 +1,4 @@
-name: CI
+﻿name: CI
 
 on:
   pull_request:
@@ -32,6 +32,8 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          # Pin to match local Flutter exactly.
+          flutter-version: "3.41.4"
           cache: true
       - run: flutter pub get
       - run: flutter analyze
