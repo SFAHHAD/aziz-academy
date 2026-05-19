@@ -1,6 +1,6 @@
 # Aziz Academy — Privacy & Data Protection
 
-_Last reviewed: 2026-05-02_
+_Last reviewed: 2026-05-18_
 
 Aziz Academy is built for children aged 6–12. We follow the strictest
 applicable child-data regimes wherever the app is offered:
@@ -31,11 +31,34 @@ identifiers leave the device. There are no third-party tracking SDKs.
 
 ### Network calls
 
-The web build is a static asset bundle hosted on Vercel's CDN. The app does
-not call out to any backend at runtime. Web Vitals / hosting logs are limited
-to anonymous request metadata (IP truncation, no cookies set by us).
+The web build is a static asset bundle hosted on Vercel's CDN. Runtime
+backend calls (added 2026-05-18):
 
-There is **no advertising SDK, no analytics SDK, no crash reporter**.
+| Endpoint | Purpose | PII? |
+|----------|---------|------|
+| Supabase Auth (`pwdhwhpnwrlzrerrdqvg.supabase.co`) | Parent account sign-in / sign-up | Email or phone (parent only) |
+| Supabase Postgres | Parent-account progress sync, Q-Bank drafts (admin) | Hashed user id, opaque profile blob |
+| Vercel Web Analytics (`/_vercel/insights`) | Aggregate page-view counts | None (no cookies, no fingerprinting, no PII) |
+| EveryAyah CDN | Quran recitation audio | None (referrer only) |
+| OpenStreetMap tile server | Map quiz tiles | None (IP visible to OSM per their policy) |
+
+**Children never trigger sign-up or sign-in.** Auth is a parent-only flow.
+Per `docs/AUTH_AND_GATE.md`, a parent can sign in via:
+
+| Provider | Identifier passed to Supabase | Stored |
+|----------|------------------------------|--------|
+| Email + password | email address | hashed password (Supabase) |
+| Google (OAuth) | google account id, primary email | google sub id |
+| Apple (Sign in with Apple) | apple user id (private relay supported) | apple sub id |
+| Phone (SMS OTP) | E.164 phone number | E.164 phone |
+
+The child's profile contains only an age band (e.g. "7-9") and an optional
+display name set by the parent. No email, phone, school, address, or device
+identifier is stored about the child.
+
+There is **no third-party advertising SDK, no behavioral tracking, no crash
+reporter** on kid-facing screens. (For Phase-4 ads on web parent screens
+only, see `PROJECT_PLAN.md` §4 — kid screens stay ad-free forever.)
 
 ## Data retention & erasure
 

@@ -21,6 +21,9 @@ import 'package:share_plus/share_plus.dart';
 
 import 'package:aziz_academy/features/admin/admin_assets.dart';
 import 'package:aziz_academy/features/admin/admin_audit.dart';
+import 'package:aziz_academy/features/admin/sections/qbank_crud_section.dart';
+import 'package:aziz_academy/features/admin/sections/feature_flags_admin_section.dart';
+import 'package:aziz_academy/features/admin/sections/admin_polish_extras.dart';
 import 'package:aziz_academy/features/admin/admin_error_log.dart';
 import 'package:aziz_academy/features/admin/admin_feedback.dart';
 import 'package:aziz_academy/features/admin/admin_lint.dart';
@@ -317,6 +320,7 @@ enum _Section {
   feedback,
   audit,
   qBank,
+  qBankCrud,        // NEW 2026-05-18: add/edit/delete questions (Supabase)
   lint,
   translate,
   catalog,
@@ -327,6 +331,7 @@ enum _Section {
   storage,
   errors,
   flags,
+  cloudFlags,       // NEW 2026-05-18: global section enable/disable (Supabase)
   tools,
 }
 
@@ -400,7 +405,11 @@ extension _SectionX on _Section {
       case _Section.errors:
         return 'Errors';
       case _Section.flags:
-        return 'Feature flags';
+        return 'Activity hide list (local)';
+      case _Section.qBankCrud:
+        return 'Q-Bank — Edit content';
+      case _Section.cloudFlags:
+        return 'Feature flags (global)';
       case _Section.tools:
         return 'Tools';
     }
@@ -440,7 +449,12 @@ extension _SectionX on _Section {
         return Icons.error_outline_rounded;
       case _Section.flags:
         return Icons.toggle_on_outlined;
-      case _Section.tools:
+            case _Section.qBankCrud:
+        return Icons.edit_note_rounded;
+      case _Section.cloudFlags:
+        return Icons.toggle_on_rounded;
+
+case _Section.tools:
         return Icons.build_rounded;
     }
   }
@@ -976,8 +990,12 @@ class _SectionRouter extends StatelessWidget {
         return const _StorageSection();
       case _Section.errors:
         return const _ErrorsSection();
+      case _Section.qBankCrud:
+        return const QBankCrudSection();
       case _Section.flags:
         return const _FlagsSection();
+      case _Section.cloudFlags:
+        return const FeatureFlagsAdminSection();
       case _Section.tools:
         return const _ToolsSection();
     }

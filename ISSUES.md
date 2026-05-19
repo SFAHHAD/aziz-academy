@@ -180,3 +180,131 @@ Each of 1-5 is a 1-evening change. After them, the most visible "issues" should 
 - **TTS voice quality issues** — need to listen.
 
 **Recommended path:** run the app on a real device (or emulator) with `flutter run --verbose` and reproduce each issue while watching the console. Paste any red text here and I can pinpoint it.
+
+
+---
+
+## 🌐 Live-site findings (Chrome MCP smoke test — 2026-05-18)
+
+The earlier sections were static analysis. These were found by driving the
+production site at aziz-academy.com with the Claude-in-Chrome MCP and
+inspecting console + network + DOM state.
+
+### I15 — P0 — Map quiz unusable in production (CSP blocks OSM tiles)
+
+**Symptom:** the Maps quiz screen renders a blank gray rectangle with just
+the answer pin — users cannot see what country is being asked about, so
+the quiz is unanswerable.
+
+**Root cause:** `vercel.json`s `Content-Security-Policy` header omitted
+`tile.openstreetmap.org` from both `img-src` and `connect-src`. The
+browser blocks every tile fetch before it leaves the page. Console
+showed 20+ `DioException [connection error]` per page load from
+`flutter_map_cache`s dio XHR fetches.
+
+**Verified by:** running `fetch('https://tile.openstreetmap.org/3/4/3.png')`
+and `new Image().src = ...` inside the live page — both threw
+`TypeError: Failed to fetch` / `onerror` respectively, while the same
+URLs work fine in a fresh tab without CSP.
+
+**Fix applied:** patched `vercel.json` — added `https://tile.openstreetmap.org`
+and `https://*.tile.openstreetmap.org` to both `img-src` and `connect-src`.
+JSON validated. Ships in the next Vercel deploy.
+
+### I16 — P0 — All audio playback broken in production (COOP/COEP isolation)
+
+**Symptom:** every `🔊` button in the live app does nothing. Hadith
+recitations, Azkar, Dua, 99 Names, Quran verses — all of them. No error
+visible to the user, just silence. Console showed
+`Islamic audio play error (hadith/hdt_001): TimeoutException after 0:00:30`.
+
+**Root cause:** `vercel.json` set the COOP/COEP/CORP triplet for cross-origin
+isolation:
+- `Cross-Origin-Opener-Policy: same-origin`
+- `Cross-Origin-Embedder-Policy: credentialless`
+- `Cross-Origin-Resource-Policy: same-origin`
+
+This triplet is required only for SharedArrayBuffer / WASM threading.
+The current Flutter build uses CanvasKit-JS (`canvaskit.js`), not the
+WASM-threading build, so the isolation is pure cost. Empirically it
+caused `<audio>` elements to stall indefinitely — even for same-origin
+MP3s. `fetch()` on the same URL returns the full 1.55 MB MP3 in one
+call (verified), but `<audio>` never receives a single byte.
+
+**Verified by:** running `new Audio("/assets/assets/audio/hadith/hdt_001.mp3")`
+inside the live page. After 25 seconds: `networkState = 2 (loading)`,
+`readyState = 0 (nothing)`, only `loadstart` and `stalled` events fired.
+The exact same test against `https://everyayah.com/data/Alafasy_128kbps/001001.mp3`
+behaved identically — confirming the bug is in the loading context, not
+the asset.
+
+**Fix applied:** removed COOP/COEP/CORP from `vercel.json`. If/when the
+project switches to a Flutter WASM-threading build, re-add them.
+
+### I17 — P2 — Flutter cant find Noto fonts for some rendered chars
+
+**Symptom:** console emits
+`Could not find a set of Noto fonts to display all missing characters.`
+on every page load.
+
+**Root cause:** `assets/fonts/` bundles Cairo, Amiri, NotoColorEmoji, but
+some rendered UI strings (likely Material Icons fallback chars, or
+non-Arabic / non-Latin glyphs in some content) fall outside this set.
+Browser fetches https://fonts.gstatic.com/s/notosanssymbols*.woff2
+as fallback, but Flutter still warns.
+
+**Suggested fix:** either widen `audit_font_coverage.py` to also check
+the rendered UI strings (currently checks JSON content only), or add
+`NotoSansSymbols` / `NotoSans` to the bundled font set.
+
+### I18 — P1 — Production Tajweed Basics screen confirmed broken (matches F2)
+
+**Status:** ISSUES.md predicted this; the live smoke test confirmed it.
+The screen renders the bilingual "Failed to load content" fallback. Our
+`pubspec.yaml` patch (committed to the PR branch) resolves it; pending
+Vercel redeploy after PR merge.
+
+### I19 — P2 — Cold start to interactive splash takes ~15 s
+
+**Symptom:** from `navigate to aziz-academy.com` to the splash showing
+its tagline + CTA, ~15 seconds elapse. The Aziz character circles for
+~4-5 s before the title text appears.
+
+**Root cause:** 123 MB web bundle (already documented as I12). 60+
+network requests fire just to render the home screen — main.dart.js
+parts, JSON quiz packs (some fetched eagerly that shouldnt be), emoji
+PNGs, fonts.gstatic.com fallback Noto fonts.
+
+**Suggested fix:** I12 (move audio to CDN) gets ~60 MB off the bundle.
+After that, audit which JSON packs are loaded eagerly vs deferred — the
+Brain Boost / Sciences / Hadith / Capitals JSON all fetched on home
+load, when only the current screen needs them.
+
+### ✅ Smoke-tested screens that work correctly
+
+- **Home screen** — banners, level card, daily challenge tiles, search,
+  category filters, activity grid all render. Bilingual UI correct.
+- **Capitals quiz** — full flow works: difficulty selection → flag-and-
+  question → 4 options → answer feedback → fun fact → next question.
+  No audio (consistent with I2).
+- **Hadith memorization list** — 25 hadiths render with bilingual + 
+  transliteration + Speak/Favorite buttons. (Speak buttons visible
+  because real audio is bundled, but pressing them triggers I16.)
+- **Quran short surahs list** — 10 surah tabs, verses render with
+  transliteration, play buttons. Same I16 audio bug applies.
+- **Maps intro screen** — renders correctly (the missing `map_bg.png`
+  asset is hidden by the existing `errorBuilder` fallback; our patch
+  in the PR just removes the dead reference).
+
+
+### I20 — RETRACTED — was a screenshot timing artifact
+
+Originally captured as "Daily Challenge renders on top of 99 Names".
+On second look 4 seconds later the Daily Challenge had rendered cleanly
+with no overlap — the first capture caught the route-transition crossfade
+mid-frame. Left here so the false-positive is documented; not a bug.
+
+If you do see screen overlap in practice (not just in screenshots), the
+likely cause would be in `lib/features/daily_challenge/presentation/daily_challenge_screen.dart` Scaffold backgroundColor.
+The current code uses `AppColors.background` which is opaque, so it should
+be fine.
