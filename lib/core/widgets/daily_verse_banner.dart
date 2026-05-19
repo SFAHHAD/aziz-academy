@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:aziz_academy/core/router/app_router.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/services/quran_recitation_service.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
@@ -163,7 +164,14 @@ class _DailyVerseBannerState extends ConsumerState<DailyVerseBanner> {
                     verseNumber: v.verseNumber,
                   );
                 } catch (_) {
-                  await ref.read(ttsServiceProvider).speakArabic(v.ar);
+                  // Real Quran audio failed (offline/CDN hiccup). Only fall
+                  // back to TTS if the parent has explicitly re-enabled AI
+                  // voices — otherwise be silent rather than emit robotic
+                  // synthetic recitation of a Qur'an verse.
+                  final s = ref.read(appSettingsProvider).value;
+                  if (s?.ttsEnabled ?? false) {
+                    await ref.read(ttsServiceProvider).speakArabic(v.ar);
+                  }
                 }
               },
               icon: const Icon(Icons.volume_up_rounded, size: 20),
