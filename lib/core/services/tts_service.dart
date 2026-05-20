@@ -381,7 +381,11 @@ class TtsService {
       await _tts.setLanguage(v?['locale'] ?? 'ar-SA');
       if (v != null) {
         try {
-          await _tts.setVoice({'name': v['name']!, 'locale': v['locale']!});
+          final name = v['name'];
+          final locale = v['locale'];
+          if (name is String && locale is String) {
+            await _tts.setVoice({'name': name, 'locale': locale});
+          }
         } catch (_) {}
       }
       // Slower + slightly lower pitch reads as more reverent and less
@@ -394,7 +398,11 @@ class TtsService {
       await _tts.setLanguage(v?['locale'] ?? 'en-US');
       if (v != null) {
         try {
-          await _tts.setVoice({'name': v['name']!, 'locale': v['locale']!});
+          final name = v['name'];
+          final locale = v['locale'];
+          if (name is String && locale is String) {
+            await _tts.setVoice({'name': name, 'locale': locale});
+          }
         } catch (_) {}
       }
       // Slightly slower than default + warmer pitch — kids understand

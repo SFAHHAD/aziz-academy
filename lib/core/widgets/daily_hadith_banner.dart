@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:aziz_academy/core/router/app_router.dart';
+import 'package:aziz_academy/core/providers/app_settings_provider.dart';
 import 'package:aziz_academy/core/services/tts_service.dart';
 import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
@@ -139,13 +140,17 @@ class _DailyHadithBannerState extends ConsumerState<DailyHadithBanner> {
               ),
             ),
             const SizedBox(width: 6),
-            IconButton(
-              onPressed: () =>
-                  ref.read(ttsServiceProvider).speakArabic(p.ar),
-              icon: const Icon(Icons.volume_up_rounded, size: 20),
-              color: AppColors.textDark,
-              tooltip: isAr ? 'استمع' : 'Listen',
-            ),
+            // v1.1.96 "real audio only": only show the speak button when the
+            // parent has explicitly re-enabled AI voices. Otherwise the icon
+            // looks interactive but does nothing — confusing for kids.
+            if (ref.watch(appSettingsProvider).value?.ttsEnabled ?? false)
+              IconButton(
+                onPressed: () =>
+                    ref.read(ttsServiceProvider).speakArabic(p.ar),
+                icon: const Icon(Icons.volume_up_rounded, size: 20),
+                color: AppColors.textDark,
+                tooltip: isAr ? 'استمع' : 'Listen',
+              ),
           ],
         ),
       ),

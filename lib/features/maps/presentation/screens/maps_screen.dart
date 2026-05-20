@@ -106,17 +106,9 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
   Widget _buildIntro(BuildContext context, QuizSessionState state) {
     return Stack(
       children: [
-        Positioned.fill(
-          child: Opacity(
-            opacity: 0.05,
-            child: Image.asset(
-              'assets/images/map_bg.png', // Fallback or global bg
-              fit: BoxFit.cover,
-              excludeFromSemantics: true,
-              errorBuilder: (context, error, stackTrace) => const SizedBox(),
-            ),
-          ),
-        ),
+        // Background image removed 2026-05-18 - map_bg.png was never authored
+        // and the errorBuilder fallback rendered nothing anyway. If we ever
+        // ship a real decorative asset, restore the Image.asset here.
         SafeArea(
           child: Center(
             child: ConstrainedBox(

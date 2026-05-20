@@ -29,6 +29,8 @@ class AppSettings {
     this.lightMode = false,
     this.audioQuiz = false,
     this.adaptiveDifficulty = true,
+    this.adsOnParentScreens = false,
+    this.parentAgeConfirmed = false,
   });
 
   final bool soundEnabled;
@@ -48,6 +50,13 @@ class AppSettings {
   final bool lightMode;
   final bool audioQuiz;
   final bool adaptiveDifficulty;
+  /// Admin-gated ad slot toggle. Even when true, AdsService still
+  /// requires platform=web + zone=parent + parentAgeConfirmed.
+  final bool adsOnParentScreens;
+  /// Set by the parental gate when the adult-only flow has been
+  /// verified on this device. Required for any parent-only feature
+  /// that touches money (Plus), data sharing, or ads.
+  final bool parentAgeConfirmed;
 
   AppSettings copyWith({
     bool? soundEnabled,
@@ -67,6 +76,8 @@ class AppSettings {
     bool? lightMode,
     bool? audioQuiz,
     bool? adaptiveDifficulty,
+    bool? adsOnParentScreens,
+    bool? parentAgeConfirmed,
   }) {
     return AppSettings(
       soundEnabled: soundEnabled ?? this.soundEnabled,
@@ -90,6 +101,8 @@ class AppSettings {
       lightMode: lightMode ?? this.lightMode,
       audioQuiz: audioQuiz ?? this.audioQuiz,
       adaptiveDifficulty: adaptiveDifficulty ?? this.adaptiveDifficulty,
+      adsOnParentScreens: adsOnParentScreens ?? this.adsOnParentScreens,
+      parentAgeConfirmed: parentAgeConfirmed ?? this.parentAgeConfirmed,
     );
   }
 }
@@ -153,6 +166,8 @@ class AppSettingsNotifier extends AsyncNotifier<AppSettings> {
         'lm': s.lightMode,
         'aq': s.audioQuiz,
         'adp': s.adaptiveDifficulty,
+        'adsP': s.adsOnParentScreens,
+        'pac': s.parentAgeConfirmed,
       }),
     );
   }
@@ -179,6 +194,8 @@ class AppSettingsNotifier extends AsyncNotifier<AppSettings> {
         lightMode: m['lm'] as bool? ?? false,
         audioQuiz: m['aq'] as bool? ?? false,
         adaptiveDifficulty: m['adp'] as bool? ?? true,
+        adsOnParentScreens: m['adsP'] as bool? ?? false,
+        parentAgeConfirmed: m['pac'] as bool? ?? false,
       );
     } catch (_) {
       return const AppSettings();
@@ -207,9 +224,21 @@ class AppSettingsNotifier extends AsyncNotifier<AppSettings> {
         'lm': s.lightMode,
         'aq': s.audioQuiz,
         'adp': s.adaptiveDifficulty,
+        'adsP': s.adsOnParentScreens,
+        'pac': s.parentAgeConfirmed,
       }),
     );
     state = AsyncData(s);
+  }
+
+  Future<void> setAdsOnParentScreens(bool v) async {
+    final cur = state.value ?? const AppSettings();
+    await _persist(cur.copyWith(adsOnParentScreens: v));
+  }
+
+  Future<void> setParentAgeConfirmed(bool v) async {
+    final cur = state.value ?? const AppSettings();
+    await _persist(cur.copyWith(parentAgeConfirmed: v));
   }
 
   Future<void> setSoundEnabled(bool v) async {

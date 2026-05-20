@@ -240,7 +240,7 @@ class _Worksheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 720,
+      constraints: const BoxConstraints(maxWidth: 720),
       padding: const EdgeInsets.all(28),
       color: Colors.white,
       child: Column(

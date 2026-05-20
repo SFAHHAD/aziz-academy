@@ -104,6 +104,91 @@ class AuthService {
     }
   }
 
+  // ---------------------------------------------------------------------------
+  // OAuth — Google, Apple
+  //
+  // Both rely on the Supabase project having the matching provider enabled in
+  // Authentication → Providers. Google needs an OAuth client ID/secret from
+  // Google Cloud Console; Apple needs a Sign-in-with-Apple service id + key.
+  // The redirect URL Supabase generates must be allow-listed in each provider.
+  //
+  // On web: opens the provider in a new tab / redirect; flutter web returns to
+  // the app once the OAuth round-trip completes via the same-origin callback.
+  // On mobile: launches the system browser and returns via the configured deep
+  // link scheme (see android/app/src/main/AndroidManifest.xml +
+  // ios/Runner/Info.plist for the scheme registration).
+  // ---------------------------------------------------------------------------
+
+  Future<AuthResult> signInWithGoogle({String? redirectTo}) async {
+    if (!supabaseReady) return const AuthResult.fail('backend_unavailable');
+    try {
+      await _client.auth.signInWithOAuth(
+        OAuthProvider.google,
+        redirectTo: redirectTo,
+      );
+      return const AuthResult.ok();
+    } on AuthException catch (e) {
+      return AuthResult.fail(_mapAuthError(e));
+    } catch (_) {
+      return const AuthResult.fail('oauth_failed');
+    }
+  }
+
+  Future<AuthResult> signInWithApple({String? redirectTo}) async {
+    if (!supabaseReady) return const AuthResult.fail('backend_unavailable');
+    try {
+      await _client.auth.signInWithOAuth(
+        OAuthProvider.apple,
+        redirectTo: redirectTo,
+      );
+      return const AuthResult.ok();
+    } on AuthException catch (e) {
+      return AuthResult.fail(_mapAuthError(e));
+    } catch (_) {
+      return const AuthResult.fail('oauth_failed');
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Phone OTP
+  //
+  // [signInWithPhoneStart] sends an SMS containing a one-time code. The UI
+  // then collects the code and calls [signInWithPhoneVerify] to complete the
+  // sign-in. Supabase project must have a phone provider configured (Twilio,
+  // MessageBird, Vonage). Phone numbers must include the country code (+965…).
+  // ---------------------------------------------------------------------------
+
+  Future<AuthResult> signInWithPhoneStart(String phoneE164) async {
+    if (!supabaseReady) return const AuthResult.fail('backend_unavailable');
+    try {
+      await _client.auth.signInWithOtp(phone: phoneE164.trim());
+      return const AuthResult.ok();
+    } on AuthException catch (e) {
+      return AuthResult.fail(_mapAuthError(e));
+    } catch (_) {
+      return const AuthResult.fail('phone_send_failed');
+    }
+  }
+
+  Future<AuthResult> signInWithPhoneVerify({
+    required String phoneE164,
+    required String otpCode,
+  }) async {
+    if (!supabaseReady) return const AuthResult.fail('backend_unavailable');
+    try {
+      await _client.auth.verifyOTP(
+        type: OtpType.sms,
+        phone: phoneE164.trim(),
+        token: otpCode.trim(),
+      );
+      return const AuthResult.ok();
+    } on AuthException catch (e) {
+      return AuthResult.fail(_mapAuthError(e));
+    } catch (_) {
+      return const AuthResult.fail('phone_verify_failed');
+    }
+  }
+
   /// Maps a Supabase [AuthException] to a stable UI message key.
   String _mapAuthError(AuthException e) {
     final msg = e.message.toLowerCase();
@@ -131,3 +216,10 @@ bool isValidEmail(String email) {
 
 /// Minimum password rule, surfaced in the UI before submit.
 bool isAcceptablePassword(String password) => password.length >= 8;
+
+
+/// Cheap E.164 phone check (+ followed by 8–15 digits). Replace with a proper
+/// libphonenumber check before launch in markets where users mistype freely.
+bool isValidPhoneE164(String phone) {
+  return RegExp(r'^\+\d{8,15}\$').hasMatch(phone.trim());
+}

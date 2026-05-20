@@ -25,6 +25,8 @@ void main() {
       AppRoutes.flags,
       AppRoutes.sciences,
       AppRoutes.math,
+      AppRoutes.survival,
+      AppRoutes.boss,
     ]));
   });
 

@@ -12,7 +12,11 @@ class DailyMissionData {
 }
 
 DailyMissionData dailyMissionFor(DateTime now) {
-  final day = DateTime(now.year, now.month, now.day);
+  // Use UTC so the daily bucket is identical for every user regardless of
+  // their device timezone. Without this, two users in different timezones
+  // could see different "today's mission" on the same calendar date, and
+  // tests would fail on UTC CI runners but pass on local UTC+N machines.
+  final day = DateTime.utc(now.year, now.month, now.day);
   final bucket = day.millisecondsSinceEpoch ~/ 86400000;
   final v = bucket % 7;
   final route = switch (v) {
