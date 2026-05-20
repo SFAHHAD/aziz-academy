@@ -64,28 +64,28 @@ class _Body extends ConsumerStatefulWidget {
 
 class _BodyState extends ConsumerState<_Body> {
   // Optimistic local override so the UI feels instant.
-  final Map<String, bool> _override = {};
+  final Map<String, FeatureTier> _override = {};
 
-  bool _isOn(FeatureFlag f) => _override[f.key] ?? f.enabled;
+  FeatureTier _currentTier(FeatureFlag f) => _override[f.key] ?? f.tier;
 
-  Future<void> _toggle(FeatureFlag f, bool v) async {
-    setState(() => _override[f.key] = v);
+  Future<void> _setTier(FeatureFlag f, FeatureTier t) async {
+    setState(() => _override[f.key] = t);
     final ok = await ref
         .read(featureFlagsServiceProvider)
-        .setEnabled(key: f.key, enabled: v);
+        .setTier(key: f.key, tier: t);
     if (!mounted) return;
     if (!ok) {
       setState(() => _override.remove(f.key));
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text('Could not toggle ${f.key}'),
+        content: Text('Could not update ${f.key}'),
         backgroundColor: Colors.red.shade700,
       ));
       return;
     }
     ref.invalidate(allFeatureFlagsProvider);
-    ref.invalidate(enabledFeatureKeysProvider);
+    ref.invalidate(visibleFeatureKeysProvider);
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text('${f.labelEn} → ${v ? "ON" : "OFF"}'),
+      content: Text('${f.labelEn} → ${t.name.toUpperCase()}'),
       duration: const Duration(milliseconds: 1500),
     ));
   }
@@ -109,7 +109,7 @@ class _BodyState extends ConsumerState<_Body> {
     return RefreshIndicator(
       onRefresh: () async {
         ref.invalidate(allFeatureFlagsProvider);
-        ref.invalidate(enabledFeatureKeysProvider);
+        ref.invalidate(visibleFeatureKeysProvider);
       },
       child: ListView(
         padding: const EdgeInsets.all(16),
@@ -152,9 +152,7 @@ class _BodyState extends ConsumerState<_Body> {
               child: Column(
                 children: [
                   for (final f in grouped[cat]!) ...[
-                    SwitchListTile(
-                      value: _isOn(f),
-                      onChanged: (v) => _toggle(f, v),
+                    ListTile(
                       title: Text(f.labelEn),
                       subtitle: Row(
                         children: [
@@ -177,6 +175,27 @@ class _BodyState extends ConsumerState<_Body> {
                             ),
                           ),
                         ],
+                      ),
+                      trailing: SegmentedButton<FeatureTier>(
+                        segments: const [
+                          ButtonSegment(
+                            value: FeatureTier.off,
+                            label: Text('Off'),
+                          ),
+                          ButtonSegment(
+                            value: FeatureTier.free,
+                            label: Text('Free'),
+                          ),
+                          ButtonSegment(
+                            value: FeatureTier.pro,
+                            label: Text('Pro'),
+                          ),
+                        ],
+                        selected: {_currentTier(f)},
+                        onSelectionChanged: (set) {
+                          if (set.isNotEmpty) _setTier(f, set.first);
+                        },
+                        showSelectedIcon: false,
                       ),
                     ),
                     if (f != grouped[cat]!.last) const Divider(height: 1),

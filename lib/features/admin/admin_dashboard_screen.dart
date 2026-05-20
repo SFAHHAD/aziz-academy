@@ -23,7 +23,6 @@ import 'package:aziz_academy/features/admin/admin_assets.dart';
 import 'package:aziz_academy/features/admin/admin_audit.dart';
 import 'package:aziz_academy/features/admin/sections/qbank_crud_section.dart';
 import 'package:aziz_academy/features/admin/sections/feature_flags_admin_section.dart';
-import 'package:aziz_academy/features/admin/sections/admin_polish_extras.dart';
 import 'package:aziz_academy/features/admin/admin_error_log.dart';
 import 'package:aziz_academy/features/admin/admin_feedback.dart';
 import 'package:aziz_academy/features/admin/admin_lint.dart';
@@ -470,6 +469,7 @@ case _Section.tools:
       case _Section.errors:
         return 'MONITORING';
       case _Section.qBank:
+      case _Section.qBankCrud:
       case _Section.lint:
       case _Section.translate:
       case _Section.catalog:
@@ -481,6 +481,7 @@ case _Section.tools:
       case _Section.privacy:
       case _Section.storage:
       case _Section.flags:
+      case _Section.cloudFlags:
         return 'SYSTEM';
       case _Section.tools:
         return 'TOOLS';

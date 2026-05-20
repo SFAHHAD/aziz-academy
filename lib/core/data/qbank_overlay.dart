@@ -37,13 +37,6 @@ import 'package:aziz_academy/core/services/qbank_remote_service.dart';
 // items appended. Stable for quizzes that depend on consistent ordering.
 // =============================================================================
 
-class _OverlayResult {
-  const _OverlayResult(this.items, this.draftCount, this.overrideCount);
-  final List<Map<String, dynamic>> items;
-  final int draftCount;
-  final int overrideCount;
-}
-
 Future<List<Map<String, dynamic>>> loadPoolWithOverlay({
   required Ref ref,
   required String poolId,
@@ -69,14 +62,12 @@ Future<List<Map<String, dynamic>>> loadPoolWithOverlay({
   }
 
   final List<Map<String, dynamic>> out = [];
-  int overrideCount = 0;
   for (final item in bundled) {
     final id = item['id'];
     if (id is String) {
       final draft = draftsMap['$poolId::$id'];
       if (draft != null) {
         out.add(Map<String, dynamic>.from(draft.payload));
-        overrideCount++;
         continue;
       }
     }
@@ -84,13 +75,11 @@ Future<List<Map<String, dynamic>>> loadPoolWithOverlay({
   }
 
   // Append draft-only items (drafts whose id is not in the bundled pool).
-  int newCount = 0;
   for (final entry in draftsMap.entries) {
     if (!entry.key.startsWith('$poolId::')) continue;
     final draftId = entry.value.id;
     if (!byId.containsKey(draftId)) {
       out.add(Map<String, dynamic>.from(entry.value.payload));
-      newCount++;
     }
   }
 

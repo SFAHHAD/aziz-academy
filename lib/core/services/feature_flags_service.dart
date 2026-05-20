@@ -87,11 +87,12 @@ class FeatureFlagsService {
       final rows = await _client
           .from('feature_flags_visible')
           .select('key, tier');
-      return {
-        for (final r in rows as List)
-          (Map<String, dynamic>.from(r as Map))['key'] as String:
-              _parseTier((Map<String, dynamic>.from(r as Map))['tier'] as String?),
-      };
+      final result = <String, FeatureTier>{};
+      for (final r in rows as List) {
+        final m = Map<String, dynamic>.from(r as Map);
+        result[m['key'] as String] = _parseTier(m['tier'] as String?);
+      }
+      return result;
     } catch (e) {
       debugPrint('feature_flags fetchVisibleKeys failed: $e');
       return const {};
