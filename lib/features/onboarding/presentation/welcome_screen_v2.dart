@@ -61,7 +61,7 @@ class WelcomeScreenV2 extends ConsumerWidget {
                               'assets/images/aziz_character.png',
                               width: wide ? 180 : 144,
                               height: wide ? 180 : 144,
-                              errorBuilder: (_, __, ___) => Icon(
+                              errorBuilder: (context, error, stack) => Icon(
                                 Icons.account_circle,
                                 size: wide ? 180 : 144,
                                 color: AppColors.accent,

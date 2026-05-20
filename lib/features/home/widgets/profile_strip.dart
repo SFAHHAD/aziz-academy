@@ -182,7 +182,7 @@ class _Avatar extends StatelessWidget {
                 width: size,
                 height: size,
                 fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) =>
+                errorBuilder: (context, error, stack) =>
                     _initialLabel(initial, size, Colors.white),
               ),
             )

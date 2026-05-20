@@ -41,12 +41,17 @@ class ThisWeekSummaryCard extends ConsumerWidget {
     // Identify strongest + shakiest table (if data exists).
     int? strongestTable;
     int? shakiestTable;
-    if (mult.tables.isNotEmpty) {
-      final sorted = mult.tables.entries.toList()
-        ..sort((a, b) => (a.value.correct / a.value.total)
-            .compareTo(b.value.correct / b.value.total));
-      shakiestTable = sorted.first.key;
-      strongestTable = sorted.last.key;
+    // Only rank tables that have at least one attempt — dividing by a zero
+    // `total` would yield NaN and sort inconsistently (picking the wrong
+    // strongest/shakiest table to show the parent).
+    final ranked = mult.tables.entries
+        .where((e) => e.value.total > 0)
+        .toList()
+      ..sort((a, b) => (a.value.correct / a.value.total)
+          .compareTo(b.value.correct / b.value.total));
+    if (ranked.isNotEmpty) {
+      shakiestTable = ranked.first.key;
+      strongestTable = ranked.last.key;
     }
     final shaky = mult.shakyTables();
 

@@ -101,7 +101,7 @@ class _AuditTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final when = entry.at.toLocal();
-    final pad = (int x) => x.toString().padLeft(2, '0');
+    String pad(int x) => x.toString().padLeft(2, '0');
     final stamp = '${when.year}-${pad(when.month)}-${pad(when.day)} '
         '${pad(when.hour)}:${pad(when.minute)}';
     return ListTile(
@@ -248,7 +248,11 @@ class _BulkPublishButtonState extends ConsumerState<BulkPublishButton> {
         status: QBankDraftStatus.published,
         payload: d.payload,
       );
-      if (res.ok) done++; else fail++;
+      if (res.ok) {
+        done++;
+      } else {
+        fail++;
+      }
     }
     if (!mounted) return;
     setState(() => _busy = false);

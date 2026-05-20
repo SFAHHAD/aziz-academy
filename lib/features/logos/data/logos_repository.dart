@@ -32,7 +32,13 @@ class LogoEntry {
   final int difficulty;
 
   factory LogoEntry.fromJson(Map<String, dynamic> json) {
-    final hex = (json['brand_color'] as String).replaceFirst('#', 'FF');
+    // Tolerate a missing or malformed brand_color — fall back to a neutral
+    // grey rather than throwing and breaking the whole logo pool load.
+    final rawColor = json['brand_color'] as String?;
+    final hex = (rawColor == null || rawColor.isEmpty)
+        ? 'FF888888'
+        : rawColor.replaceFirst('#', 'FF');
+    final brandColorValue = int.tryParse(hex, radix: 16) ?? 0xFF888888;
     final logoUrl =
         json['logo_asset'] as String? ?? (json['logo_url'] as String?) ?? '';
     final optionsAr = json['options_ar'] != null
@@ -44,7 +50,7 @@ class LogoEntry {
       brand: json['brand'] as String,
       brandAr: json['brand_ar'] as String? ?? json['brand'] as String,
       logoUrl: logoUrl,
-      brandColor: Color(int.parse(hex, radix: 16)),
+      brandColor: Color(brandColorValue),
       options: List<String>.from(json['options'] as List),
       optionsAr: optionsAr,
       correctAnswer: json['correct_answer'] as String,

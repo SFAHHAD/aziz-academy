@@ -132,7 +132,7 @@ class _CrudUi extends ConsumerWidget {
                 child: ListView.separated(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   itemCount: filtered.length,
-                  separatorBuilder: (_, __) => const Divider(height: 1),
+                  separatorBuilder: (context, index) => const Divider(height: 1),
                   itemBuilder: (_, i) => _DraftRow(
                     draft: filtered[i],
                     onEdit: () => _openEditor(
@@ -298,10 +298,12 @@ class _PoolPickerState extends State<_PoolPicker> {
               .replaceFirst(RegExp(r'\.json$'), ''))
           .toList()
         ..sort();
-      if (mounted) setState(() {
-        _poolIds = ids;
-        _loading = false;
-      });
+      if (mounted) {
+        setState(() {
+          _poolIds = ids;
+          _loading = false;
+        });
+      }
     } catch (_) {
       if (mounted) setState(() => _loading = false);
     }
@@ -315,7 +317,7 @@ class _PoolPickerState extends State<_PoolPicker> {
       );
     }
     return DropdownButtonFormField<String?>(
-      value: widget.current,
+      initialValue: widget.current,
       decoration: const InputDecoration(
         labelText: 'Pool',
         isDense: true,
@@ -477,8 +479,12 @@ class _QuestionEditorDialogState extends ConsumerState<_QuestionEditorDialog> {
     _id.dispose();
     _qEn.dispose();
     _qAr.dispose();
-    for (final c in _opts) c.dispose();
-    for (final c in _optsAr) c.dispose();
+    for (final c in _opts) {
+      c.dispose();
+    }
+    for (final c in _optsAr) {
+      c.dispose();
+    }
     _funEn.dispose();
     _funAr.dispose();
     super.dispose();

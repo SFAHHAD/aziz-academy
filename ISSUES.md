@@ -308,3 +308,64 @@ If you do see screen overlap in practice (not just in screenshots), the
 likely cause would be in `lib/features/daily_challenge/presentation/daily_challenge_screen.dart` Scaffold backgroundColor.
 The current code uses `AppColors.background` which is opaque, so it should
 be fine.
+
+
+---
+
+## 🔍 Deep static audit pass — 2026-05-20 (post-v2-redesign)
+
+A second full static sweep after the v2 redesign shipped. Checked every
+provider deserializer, async/context gap, AsyncValue null-deref, list
+bounds, division-by-zero, and hardcoded width across `lib/`. The codebase
+proved unusually well-guarded — almost every risky pattern already had a
+try/catch, `if (!context.mounted) return`, `isEmpty` guard, or `total == 0`
+guard. Three genuine bugs found and **all fixed this pass**:
+
+### I21 — P1 — `achievement_provider._load()` could crash app-wide on stale prefs (FIXED)
+
+`lib/core/providers/achievement_provider.dart` — `_load()` did
+`jsonDecode(...) as List` + `.cast<String>()` on two persisted keys with
+no try/catch. This was the one provider that broke the codebase's
+otherwise-universal "wrap decode in try/catch" rule. A malformed
+`continents_tapped` / `unlocked_badges` snapshot (from an older app
+version) would throw and the achievements provider — watched on home,
+stats, and the trophy room — would fail to build everywhere.
+
+**Fix:** added `_safeStringList()` helper that returns `[]` on any decode
+failure; both reads now route through it. Mirrors the pattern in
+`family_profiles_provider` / `mood_provider`.
+
+### I22 — P2 — NaN sort in parent weekly-summary "shakiest table" (FIXED)
+
+`lib/features/parent/presentation/widgets/this_week_summary_card.dart` —
+the sort comparator divided `correct / total` with no `total > 0` guard.
+A persisted table entry with `total == 0` produced `0/0 = NaN`, sorting
+inconsistently and potentially showing the parent the wrong
+strongest/shakiest multiplication table.
+
+**Fix:** filter `.where((e) => e.value.total > 0)` before sorting.
+
+### I23 — P2 — unguarded brand-color hex parse in logos pool (FIXED)
+
+`lib/features/logos/data/logos_repository.dart` — `LogoEntry.fromJson`
+force-cast `json['brand_color'] as String` and `int.parse(hex, radix:16)`.
+A logo entry with a missing or malformed `brand_color` would throw and
+break the whole logo pool load.
+
+**Fix:** null-safe read with neutral-grey fallback (`0xFF888888`) and
+`int.tryParse` instead of `int.parse`.
+
+### Also cleaned: the 12 analyzer info-warnings
+
+`unnecessary_underscores`, `curly_braces_in_flow_control_structures`,
+`prefer_function_declarations_over_variables`, and the deprecated
+`DropdownButtonFormField.value` → `initialValue` — all resolved across
+`profile_strip.dart`, `welcome_screen_v2.dart`, `admin_polish_extras.dart`,
+and `qbank_crud_section.dart`. `flutter analyze` should now be clean.
+
+### Verified clean (no action needed)
+
+Async/context gaps, `.value!`/`requireValue` on async providers, list
+`.first`/`.last`/`.single` bounds, division-by-zero in quiz/parent
+screens, and hardcoded widths in user-facing screens — all already
+properly guarded. No new layout-overflow bugs in non-admin screens.

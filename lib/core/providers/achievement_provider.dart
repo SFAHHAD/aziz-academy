@@ -491,15 +491,25 @@ class AchievementNotifier extends AsyncNotifier<AchievementState> {
   // Load
   // ---------------------------------------------------------------------------
 
-  AchievementState _load() {
-    final continentsList =
-        jsonDecode(_prefs!.getString(_Keys.continentsTapped) ?? '[]') as List;
-    final badgesList =
-        jsonDecode(_prefs!.getString(_Keys.unlockedBadges) ?? '[]') as List;
+  /// Decode a persisted JSON string-array, tolerating stale/malformed data
+  /// from older app versions. Returns an empty list on any failure rather
+  /// than throwing — a corrupt snapshot must never blank the achievements
+  /// provider (which is watched on home, stats, and the trophy room).
+  List<String> _safeStringList(String? raw) {
+    if (raw == null || raw.isEmpty) return const [];
+    try {
+      final decoded = jsonDecode(raw);
+      if (decoded is! List) return const [];
+      return decoded.whereType<String>().toList();
+    } catch (_) {
+      return const [];
+    }
+  }
 
-    final continents = continentsList.cast<String>().toSet();
-    final badges = badgesList
-        .cast<String>()
+  AchievementState _load() {
+    final continents =
+        _safeStringList(_prefs!.getString(_Keys.continentsTapped)).toSet();
+    final badges = _safeStringList(_prefs!.getString(_Keys.unlockedBadges))
         .map(
           (n) => BadgeId.values.firstWhere(
             (b) => b.name == n,
