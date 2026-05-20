@@ -5,6 +5,8 @@ import 'package:aziz_academy/core/theme/app_colors.dart';
 import 'package:aziz_academy/core/theme/app_text_styles.dart';
 import 'package:aziz_academy/features/home/splash_screen.dart';
 import 'package:aziz_academy/features/home/home_screen.dart';
+import 'package:aziz_academy/features/home/presentation/home_screen_v2.dart';
+import 'package:aziz_academy/features/onboarding/presentation/welcome_screen_v2.dart';
 import 'package:aziz_academy/features/achievements/presentation/screens/trophy_room_screen.dart';
 import 'package:aziz_academy/features/achievements/presentation/screens/certificate_screen.dart';
 import 'package:aziz_academy/features/maps/presentation/screens/maps_screen.dart'
@@ -319,6 +321,23 @@ import 'package:aziz_academy/features/admin/admin_v2_screen.dart'
     deferred as admin_v2;
 import 'package:aziz_academy/features/admin/admin_traffic.dart';
 
+/// Build-time flag for the redesigned welcome + home screens.
+///
+/// Defaults to `false` so existing users see the legacy screens until you
+/// are ready to flip the redesign live. Flip this to `true` in a single
+/// commit (or behind a remote feature flag) when you've verified the
+/// v2 surfaces locally:
+///
+///   const _kUseV2Screens = true;
+///
+/// Touched routes when the flag is on:
+///   - AppRoutes.welcome -> WelcomeScreenV2
+///   - AppRoutes.home    -> HomeScreenV2
+///
+/// Everything else is unchanged. The legacy widgets remain importable so
+/// you can revert the flag instantly if anything regresses.
+const bool _kUseV2Screens = true;
+
 abstract final class AppRoutes {
   static const splash = '/';
   static const home = '/home';
@@ -561,7 +580,8 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.home,
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) =>
+          _kUseV2Screens ? const HomeScreenV2() : const HomeScreen(),
     ),
     GoRoute(
       path: AppRoutes.maps,
@@ -1563,7 +1583,8 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.welcome,
-      builder: (context, state) => const WelcomeScreen(),
+      builder: (context, state) =>
+          _kUseV2Screens ? const WelcomeScreenV2() : const WelcomeScreen(),
     ),
     GoRoute(
       path: AppRoutes.weeklyDigest,

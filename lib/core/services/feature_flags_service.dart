@@ -2,39 +2,54 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'package:aziz_academy/core/providers/premium_provider.dart';
 import 'package:aziz_academy/core/services/supabase_bootstrap.dart';
 
 // =============================================================================
-// Feature flag service
+// Feature flag service (v2 — tier-aware)
 //
-// One source of truth for "is this section currently enabled in production?"
-// Read by everything that renders a section tile or routes to one; written
-// only by the admin via the dashboard.
+// Source of truth for "which sections does this user see?" Combines:
+//   - feature_flags.tier — admin-controlled (off / free / pro)
+//   - premiumProvider     — is THIS user a Plus subscriber?
 //
-// Behaviour when Supabase is unavailable: all flags default to ON. We never
-// hide a section because of a transient backend failure — that would be worse
-// than briefly showing a broken section. The admin should leave critical
-// sections enabled and only flip new/experimental ones.
+// Behaviour:
+//   tier=off  → hidden for everyone (kill switch)
+//   tier=free → visible to everyone
+//   tier=pro  → visible to Plus subscribers; others see upsell
+//
+// Fail-open default: if Supabase is down, all sections render. We never
+// hide content because of a transient backend issue.
 // =============================================================================
+
+enum FeatureTier { off, free, pro }
+
+FeatureTier _parseTier(String? s) {
+  switch (s) {
+    case 'off':  return FeatureTier.off;
+    case 'free': return FeatureTier.free;
+    case 'pro':  return FeatureTier.pro;
+    default:     return FeatureTier.free;
+  }
+}
 
 class FeatureFlag {
   const FeatureFlag({
     required this.key,
-    required this.enabled,
+    required this.tier,
     required this.labelEn,
     required this.labelAr,
     required this.category,
   });
 
   final String key;
-  final bool enabled;
+  final FeatureTier tier;
   final String labelEn;
   final String labelAr;
   final String category;
 
   factory FeatureFlag.fromRow(Map<String, dynamic> row) => FeatureFlag(
         key: row['key'] as String,
-        enabled: row['enabled'] as bool? ?? true,
+        tier: _parseTier(row['tier'] as String?),
         labelEn: (row['label_en'] as String?) ?? '',
         labelAr: (row['label_ar'] as String?) ?? '',
         category: (row['category'] as String?) ?? 'feature',
@@ -52,7 +67,7 @@ class FeatureFlagsService {
     try {
       final rows = await _client
           .from('feature_flags')
-          .select('key, enabled, label_en, label_ar, category')
+          .select('key, tier, label_en, label_ar, category')
           .order('category')
           .order('key');
       return [
@@ -65,31 +80,35 @@ class FeatureFlagsService {
     }
   }
 
-  /// Pull only the enabled keys (app boot — minimal payload).
-  Future<Set<String>> fetchEnabledKeys() async {
+  /// Visible flags only (off ones excluded). What the app caches at boot.
+  Future<Map<String, FeatureTier>> fetchVisibleKeys() async {
     if (!supabaseReady) return const {};
     try {
-      final rows = await _client.from('feature_flags_enabled').select('key');
+      final rows = await _client
+          .from('feature_flags_visible')
+          .select('key, tier');
       return {
         for (final r in rows as List)
-          (Map<String, dynamic>.from(r as Map))['key'] as String
+          (Map<String, dynamic>.from(r as Map))['key'] as String:
+              _parseTier((Map<String, dynamic>.from(r as Map))['tier'] as String?),
       };
     } catch (e) {
-      debugPrint('feature_flags fetchEnabledKeys failed: $e');
+      debugPrint('feature_flags fetchVisibleKeys failed: $e');
       return const {};
     }
   }
 
-  Future<bool> setEnabled({required String key, required bool enabled}) async {
+  /// Set a flag's tier. Used by the admin UI.
+  Future<bool> setTier({required String key, required FeatureTier tier}) async {
     if (!supabaseReady) return false;
     try {
       await _client
           .from('feature_flags')
-          .update({'enabled': enabled})
+          .update({'tier': tier.name})
           .eq('key', key);
       return true;
     } catch (e) {
-      debugPrint('feature_flags setEnabled failed: $e');
+      debugPrint('feature_flags setTier failed: $e');
       return false;
     }
   }
@@ -108,19 +127,43 @@ final allFeatureFlagsProvider = FutureProvider<List<FeatureFlag>>((ref) async {
   return ref.watch(featureFlagsServiceProvider).fetchAll();
 });
 
-/// The set of enabled keys, cached for the session. App boot warms this;
-/// admin toggles invalidate it.
-final enabledFeatureKeysProvider = FutureProvider<Set<String>>((ref) async {
-  return ref.watch(featureFlagsServiceProvider).fetchEnabledKeys();
+/// {key: tier} of all NON-OFF flags. App reads this at boot + on refresh.
+final visibleFeatureKeysProvider = FutureProvider<Map<String, FeatureTier>>((ref) async {
+  return ref.watch(featureFlagsServiceProvider).fetchVisibleKeys();
 });
 
-/// Convenience reader. Defaults to TRUE so a transient Supabase outage
-/// never hides core sections. The admin should leave critical sections
-/// enabled and use this primarily to gate experimental / risky features.
-bool featureEnabled(WidgetRef ref, String key) {
-  final asyncSet = ref.watch(enabledFeatureKeysProvider);
-  return asyncSet.maybeWhen(
-    data: (s) => s.contains(key) || s.isEmpty,
-    orElse: () => true,
+/// What the user actually sees for a given key:
+///   - returns `null`        → hidden (off, or not in DB)
+///   - returns `pro_locked`  → exists as Pro, user is not Plus — show upsell
+///   - returns `unlocked`    → render normally
+enum FeatureVisibility { hidden, proLocked, unlocked }
+
+FeatureVisibility featureVisibility(WidgetRef ref, String key) {
+  final tiersAsync = ref.watch(visibleFeatureKeysProvider);
+  final premiumAsync = ref.watch(premiumProvider);
+
+  // Default: when we don't know, render. Don't hide content on transient errors.
+  final tiers = tiersAsync.maybeWhen(
+    data: (m) => m,
+    orElse: () => const <String, FeatureTier>{},
   );
+
+  // If feature_flags hasn't been wired yet (empty map), assume everything is unlocked.
+  if (tiers.isEmpty) return FeatureVisibility.unlocked;
+
+  final tier = tiers[key];
+  if (tier == null) return FeatureVisibility.hidden;
+  if (tier == FeatureTier.free) return FeatureVisibility.unlocked;
+
+  // tier == pro: check premium
+  final isPremium = premiumAsync.maybeWhen(
+    data: (p) => p.isPremium,
+    orElse: () => false,
+  );
+  return isPremium ? FeatureVisibility.unlocked : FeatureVisibility.proLocked;
+}
+
+/// Convenience reader for screens that just want a yes/no on visibility.
+bool featureEnabled(WidgetRef ref, String key) {
+  return featureVisibility(ref, key) == FeatureVisibility.unlocked;
 }
