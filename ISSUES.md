@@ -369,3 +369,68 @@ Async/context gaps, `.value!`/`requireValue` on async providers, list
 `.first`/`.last`/`.single` bounds, division-by-zero in quiz/parent
 screens, and hardcoded widths in user-facing screens — all already
 properly guarded. No new layout-overflow bugs in non-admin screens.
+
+
+---
+
+## 🔍 Third audit pass — 2026-05-22 (post-deploy + admin wiring)
+
+Triggered after the v2 redesign was deployed to production and the admin
+sections were wired into the dashboard shell. Found and fixed real
+compile-breaking bugs that the 2026-05-20 doc had claimed were clean but
+weren't — a reminder that documentation ≠ verified code.
+
+### I24 — P0 — v2 home crashed on first frame (3 bugs, FIXED)
+
+`lib/features/home/presentation/home_screen_v2.dart` had three real
+crash/compile bugs when first wired into the router:
+1. `ref.watch(localeProvider).languageCode` — `localeProvider` is an
+   `AsyncNotifierProvider<…, Locale>`, so `.watch` returns
+   `AsyncValue<Locale>`, which has no `languageCode`. Fixed to
+   `.value?.languageCode == 'ar'`.
+2. `ref.watch(achievementProvider).totalCorrect` — same shape error;
+   `achievementProvider` is async. Fixed to `.value` + null-coalesce.
+3. `context.push(AppRoutes.brainBoost)` — `AppRoutes.brainBoost` doesn't
+   exist; the real route is `brainBoostDaily`. Fixed.
+
+### I25 — P0 — Admin dashboard didn't compile (5 errors, FIXED)
+
+The 2026-05-19 tier rewrite of `feature_flags_service.dart` (bool
+`enabled` → 3-state `tier`) left `feature_flags_admin_section.dart` still
+calling the removed `enabled` getter, `setEnabled()` method, and
+`enabledFeatureKeysProvider`. Plus `admin_dashboard_screen.dart`'s `group`
+getter switch wasn't exhaustive after `qBankCrud` + `cloudFlags` enum
+values were added. All five compile errors confirmed by the user's
+`flutter analyze` and `flutter test` (15 test files failed to load).
+
+**Fixes:**
+- Rewrote the admin toggle from `SwitchListTile` (bool) to
+  `SegmentedButton<FeatureTier>` (Off / Free / Pro), calling `setTier()`
+  and invalidating `visibleFeatureKeysProvider`.
+- Added `_Section.qBankCrud` (CONTENT) + `_Section.cloudFlags` (SYSTEM)
+  cases to the `group` switch.
+- Dropped the dead `admin_polish_extras` import.
+- Removed an unnecessary cast + the unused `_OverlayResult` class.
+
+All shipped in commits `ce61db1` + `a8a2197` and deployed to production.
+
+### Broad re-sweep — clean
+
+A fresh subagent sweep of all game screens, quiz providers, and core
+providers (force-unwraps, list bounds, division-by-zero, async/context
+gaps, JSON casts) found **zero** new runtime bugs. Every risky pattern is
+guarded at the point of use. The codebase remains exceptionally defensive.
+
+### Note on what the user is actually hitting
+
+The "many bugs" the user reported on 2026-05-22 turned out to be three
+**configuration gaps**, not code bugs:
+1. Google OAuth not enabled in Supabase (`provider is not enabled` 400) —
+   needs Google Cloud OAuth credentials, or use email signup instead.
+2. Not signed in — the admin guard redirects unauthenticated users to home.
+3. Not in `admin_users` — the `insert into public.admin_users` bootstrap
+   hadn't been run yet.
+
+These are Supabase-dashboard steps only the account owner can do. The app
+code handles all three correctly (guard redirects, provider errors surface
+cleanly). Documented here so they're not mistaken for code bugs next pass.

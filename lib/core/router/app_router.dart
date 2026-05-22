@@ -476,6 +476,7 @@ abstract final class AppRoutes {
   static const favorites = '/favorites';
   static const editProfile = '/edit-profile';
   static const profileCard = '/profile';
+  static const browse = '/browse';
   static const account = '/account';
   static const premium = '/plus';
   static const familyProfiles = '/family';
@@ -582,6 +583,13 @@ final appRouter = GoRouter(
       path: AppRoutes.home,
       builder: (context, state) =>
           _kUseV2Screens ? const HomeScreenV2() : const HomeScreen(),
+    ),
+    // Full activity grid (legacy home), optionally pre-filtered to a category.
+    // The v2 home's hero cards deep-link here: /browse?cat=learn|games|islamic|tools|all
+    GoRoute(
+      path: AppRoutes.browse,
+      builder: (context, state) =>
+          HomeScreen(initialCategory: state.uri.queryParameters['cat']),
     ),
     GoRoute(
       path: AppRoutes.maps,

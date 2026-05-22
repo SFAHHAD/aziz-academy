@@ -57,7 +57,12 @@ import 'package:aziz_academy/core/widgets/kid_emoji.dart';
 // =============================================================================
 
 class HomeScreen extends ConsumerStatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, this.initialCategory});
+
+  /// Optional category key the screen should pre-select on open. Used by the
+  /// v2 home's hero cards to deep-link straight into a filtered grid.
+  /// One of: 'learn' | 'games' | 'islamic' | 'tools' | 'all' | null.
+  final String? initialCategory;
 
   @override
   ConsumerState<HomeScreen> createState() => _HomeScreenState();
@@ -69,14 +74,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   late final Animation<double> _fadeIn;
   late final TextEditingController _searchCtrl;
   String _query = '';
-  _Tab _tab = _Tab.featured;
+  late _Tab _tab = _tabForCategoryKey(widget.initialCategory);
 
   @override
   void initState() {
     super.initState();
     _fadeCtrl = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 600),
+      // Snappier entrance — 600ms felt sluggish on first paint. 280ms reads
+      // as instant-but-smooth, matching the v2 surfaces (MEDIA_PIPELINE §4).
+      duration: const Duration(milliseconds: 280),
     )..forward();
     _fadeIn = CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeOut);
     _searchCtrl = TextEditingController();
@@ -854,6 +861,26 @@ class _SearchBar extends StatelessWidget {
 // =============================================================================
 
 enum _Tab { featured, learn, games, islamic, tools }
+
+/// Maps a v2 hero-card category key to the legacy home tab. Used to deep-link
+/// from the v2 home's 5 hero cards into the right pre-filtered grid.
+/// 'brain' folds into Games (brain games live there); 'all'/null → Featured.
+_Tab _tabForCategoryKey(String? key) {
+  switch (key) {
+    case 'learn':
+      return _Tab.learn;
+    case 'games':
+    case 'play':
+    case 'brain':
+      return _Tab.games;
+    case 'islamic':
+      return _Tab.islamic;
+    case 'tools':
+      return _Tab.tools;
+    default:
+      return _Tab.featured;
+  }
+}
 
 /// Categories that fold into the single "Games" tab. Keeps the home shelf
 /// uncluttered: kids see one section for everything playable, instead of

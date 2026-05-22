@@ -188,9 +188,8 @@ class HomeScreenV2 extends ConsumerWidget {
   }
 
   void _openCategory(BuildContext context, String key) {
-    // For now: route directly to the legacy home for category browsing
-    // until the dedicated CategoryPage ships. The category key will hint
-    // the home screen which chip to pre-select.
-    context.push('${AppRoutes.home}?category=$key');
+    // Deep-link into the full activity grid (legacy home), pre-filtered to
+    // the tapped category. /browse renders HomeScreen with initialCategory.
+    context.push('${AppRoutes.browse}?cat=$key');
   }
 }
