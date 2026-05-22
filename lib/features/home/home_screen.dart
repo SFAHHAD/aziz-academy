@@ -74,11 +74,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   late final Animation<double> _fadeIn;
   late final TextEditingController _searchCtrl;
   String _query = '';
-  late _Tab _tab = _tabForCategoryKey(widget.initialCategory);
+  _Tab _tab = _Tab.featured;
 
   @override
   void initState() {
     super.initState();
+    // Pre-select the tab when deep-linked from a v2 hero card (/browse?cat=…).
+    // Done here rather than in a field initializer because `widget` isn't
+    // available in instance-field initializers.
+    _tab = _tabForCategoryKey(widget.initialCategory);
     _fadeCtrl = AnimationController(
       vsync: this,
       // Snappier entrance — 600ms felt sluggish on first paint. 280ms reads
