@@ -1,10 +1,16 @@
 # Deploy Flutter web to GitHub Pages (static hosting).
 # Enable: Repo → Settings → Pages → Source: GitHub Actions.
+#
+# Production hosting is Vercel (aziz-academy.com), deployed via
+# scripts/deploy_web.ps1. This GitHub Pages workflow is OPTIONAL and only
+# runs on manual dispatch — it used to auto-run on every push and fail
+# (Pages source isn't configured), spamming failure emails. If you ever
+# want a GitHub Pages mirror, enable Pages in repo Settings → Pages →
+# Source: GitHub Actions, then trigger this workflow manually from the
+# Actions tab.
 name: Deploy GitHub Pages
 
 on:
-  push:
-    branches: [master, main]
   workflow_dispatch:
 
 permissions:
