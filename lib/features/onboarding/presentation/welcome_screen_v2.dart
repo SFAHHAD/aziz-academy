@@ -94,39 +94,59 @@ class WelcomeScreenV2 extends ConsumerWidget {
                         ),
                       ),
                       const SizedBox(height: 32),
-                      // Primary CTAs
+                      // Primary CTAs — only show providers configured on the
+                      // backend (see AuthProviders), so users never land on the
+                      // raw "provider is not enabled" page.
+                      if (AuthProviders.google) ...[
+                        _ProviderButton(
+                          label: isAr
+                              ? 'المتابعة باستخدام Google'
+                              : 'Continue with Google',
+                          icon: Icons.g_translate,
+                          bg: Colors.white,
+                          fg: const Color(0xFF1F1F1F),
+                          onTap: () => _signInWith(
+                            context, ref,
+                            (s) => s.signInWithGoogle(),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                      ],
+                      if (AuthProviders.apple) ...[
+                        _ProviderButton(
+                          label: isAr
+                              ? 'المتابعة باستخدام Apple'
+                              : 'Continue with Apple',
+                          icon: Icons.apple,
+                          bg: Colors.black,
+                          fg: Colors.white,
+                          onTap: () => _signInWith(
+                            context, ref,
+                            (s) => s.signInWithApple(),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                      ],
+                      if (AuthProviders.phone) ...[
+                        _ProviderButton(
+                          label: isAr
+                              ? 'المتابعة بالهاتف'
+                              : 'Continue with Phone',
+                          icon: Icons.phone_iphone,
+                          bg: AppColors.primary,
+                          fg: Colors.white,
+                          onTap: () => MultiProviderAuthSheet.show(context),
+                        ),
+                        const SizedBox(height: 10),
+                      ],
+                      // Email — always available, promoted to a primary CTA.
                       _ProviderButton(
                         label: isAr
-                            ? 'المتابعة باستخدام Google'
-                            : 'Continue with Google',
-                        icon: Icons.g_translate,
-                        bg: Colors.white,
-                        fg: const Color(0xFF1F1F1F),
-                        onTap: () => _signInWith(
-                          context, ref,
-                          (s) => s.signInWithGoogle(),
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      _ProviderButton(
-                        label: isAr
-                            ? 'المتابعة باستخدام Apple'
-                            : 'Continue with Apple',
-                        icon: Icons.apple,
-                        bg: Colors.black,
-                        fg: Colors.white,
-                        onTap: () => _signInWith(
-                          context, ref,
-                          (s) => s.signInWithApple(),
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      _ProviderButton(
-                        label:
-                            isAr ? 'المتابعة بالهاتف' : 'Continue with Phone',
-                        icon: Icons.phone_iphone,
+                            ? 'المتابعة بالبريد الإلكتروني'
+                            : 'Continue with Email',
+                        icon: Icons.alternate_email,
                         bg: AppColors.primary,
-                        fg: Colors.white,
+                        fg: const Color(0xFF06223F),
                         onTap: () => MultiProviderAuthSheet.show(context),
                       ),
                       const SizedBox(height: 18),
@@ -147,25 +167,13 @@ class WelcomeScreenV2 extends ConsumerWidget {
                                 color: Colors.white.withValues(alpha: 0.16))),
                       ]),
                       const SizedBox(height: 12),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          TextButton.icon(
-                            onPressed: () =>
-                                MultiProviderAuthSheet.show(context),
-                            icon: const Icon(Icons.alternate_email, size: 18),
-                            label: Text(isAr
-                                ? 'البريد الإلكتروني'
-                                : 'Use email'),
-                          ),
-                          TextButton.icon(
-                            onPressed: () => _continueAsGuest(context),
-                            icon: const Icon(Icons.bedtime_outlined, size: 18),
-                            label: Text(isAr
-                                ? 'المتابعة كزائر'
-                                : 'Continue as guest'),
-                          ),
-                        ],
+                      Center(
+                        child: TextButton.icon(
+                          onPressed: () => _continueAsGuest(context),
+                          icon: const Icon(Icons.bedtime_outlined, size: 18),
+                          label: Text(
+                              isAr ? 'المتابعة كزائر' : 'Continue as guest'),
+                        ),
                       ),
                       const SizedBox(height: 28),
                       Padding(

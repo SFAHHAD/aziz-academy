@@ -37,11 +37,26 @@ class ProfileStrip extends ConsumerWidget {
         : (xpInLevel / xpToNextLevel).clamp(0.0, 1.0);
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.04),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.06)),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Colors.white.withValues(alpha: 0.08),
+            Colors.white.withValues(alpha: 0.03),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.10)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.25),
+            blurRadius: 16,
+            spreadRadius: -8,
+            offset: const Offset(0, 8),
+          ),
+        ],
       ),
       child: Row(
         children: [
@@ -90,14 +105,35 @@ class ProfileStrip extends ConsumerWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 6),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(4),
-                  child: LinearProgressIndicator(
-                    value: progress,
-                    minHeight: 6,
-                    backgroundColor: Colors.white.withValues(alpha: 0.08),
-                    valueColor: AlwaysStoppedAnimation(AppColors.accent),
+                const SizedBox(height: 7),
+                // Gradient XP bar (cyan→teal shimmer).
+                LayoutBuilder(
+                  builder: (context, c) => Stack(
+                    children: [
+                      Container(
+                        height: 7,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.10),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                      ),
+                      Container(
+                        height: 7,
+                        width: c.maxWidth * progress,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [AppColors.primary, AppColors.secondary],
+                          ),
+                          borderRadius: BorderRadius.circular(4),
+                          boxShadow: [
+                            BoxShadow(
+                              color: AppColors.primary.withValues(alpha: 0.45),
+                              blurRadius: 6,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -114,12 +150,19 @@ class ProfileStrip extends ConsumerWidget {
           const SizedBox(width: 8),
           // Streak chip
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 8),
             decoration: BoxDecoration(
-              color: Colors.deepOrange.withValues(alpha: 0.18),
-              borderRadius: BorderRadius.circular(12),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  const Color(0xFFFF8A3D).withValues(alpha: 0.30),
+                  const Color(0xFFFF5722).withValues(alpha: 0.16),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(14),
               border: Border.all(
-                  color: Colors.deepOrange.withValues(alpha: 0.35)),
+                  color: const Color(0xFFFF8A3D).withValues(alpha: 0.45)),
             ),
             child: Column(
               children: [

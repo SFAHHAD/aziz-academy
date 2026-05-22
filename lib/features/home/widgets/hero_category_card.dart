@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:aziz_academy/core/theme/app_colors.dart';
+// =============================================================================
+// Hero category card — one of the 5 tiles on the v2 home grid.
+//
+// Each tile is a solid, vibrant gradient (lit from the top-left, deepened
+// toward the bottom-right) sitting on a soft *coloured* drop shadow so it
+// reads as a physical card floating above the navy background — not a flat,
+// outlined box. The emoji lives in a frosted rounded chip for consistency.
+// =============================================================================
 
 class HeroCategoryCard extends StatelessWidget {
   const HeroCategoryCard({
@@ -20,69 +27,103 @@ class HeroCategoryCard extends StatelessWidget {
   final VoidCallback onTap;
   final bool isPro;
 
+  static Color _lighten(Color c, double amount) =>
+      Color.lerp(c, Colors.white, amount) ?? c;
+  static Color _darken(Color c, double amount) =>
+      Color.lerp(c, Colors.black, amount) ?? c;
+
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(16),
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(14, 14, 14, 12),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              color.withValues(alpha: 0.32),
-              color.withValues(alpha: 0.12),
+    final top = _lighten(color, 0.14);
+    final bottom = _darken(color, 0.24);
+
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(20),
+        child: Ink(
+          padding: const EdgeInsets.fromLTRB(13, 13, 13, 13),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [top, bottom],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.18)),
+            boxShadow: [
+              BoxShadow(
+                color: color.withValues(alpha: 0.42),
+                blurRadius: 18,
+                spreadRadius: -6,
+                offset: const Offset(0, 9),
+              ),
             ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: color.withValues(alpha: 0.45)),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(emoji, style: const TextStyle(fontSize: 28)),
-                if (isPro)
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Frosted icon chip
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    width: 42,
+                    height: 42,
+                    alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: AppColors.accent,
-                      borderRadius: BorderRadius.circular(4),
+                      color: Colors.white.withValues(alpha: 0.24),
+                      borderRadius: BorderRadius.circular(13),
+                      border: Border.all(
+                          color: Colors.white.withValues(alpha: 0.22)),
                     ),
-                    child: const Text(
-                      'PRO',
-                      style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
+                    child: Text(emoji, style: const TextStyle(fontSize: 22)),
                   ),
-              ],
-            ),
-            const Spacer(),
-            Text(
-              label,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
+                  if (isPro)
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 7, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: Text(
+                        'PRO',
+                        style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.5,
+                          color: _darken(color, 0.28),
+                        ),
+                      ),
+                    ),
+                ],
               ),
-            ),
-            const SizedBox(height: 2),
-            Text(
-              subtitle,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontSize: 11,
-                color: Colors.white.withValues(alpha: 0.7),
+              const Spacer(),
+              Text(
+                label,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                  height: 1.1,
+                ),
               ),
-            ),
-          ],
+              const SizedBox(height: 3),
+              Text(
+                subtitle,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white.withValues(alpha: 0.88),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

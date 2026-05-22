@@ -104,7 +104,7 @@ class HomeScreenV2 extends ConsumerWidget {
                         subtitle: isAr
                             ? 'علوم، رياضيات، عواصم'
                             : 'Sciences · Math · Capitals',
-                        color: const Color(0xFF42A5F5),
+                        color: const Color(0xFF3B82F6),
                         onTap: () => _openCategory(context, 'learn'),
                       ),
                       HeroCategoryCard(
@@ -113,7 +113,7 @@ class HomeScreenV2 extends ConsumerWidget {
                         subtitle: isAr
                             ? '٨٠+ لعبة ذهنية'
                             : '80+ brain games',
-                        color: const Color(0xFFEC407A),
+                        color: const Color(0xFFEC4899),
                         onTap: () => _openCategory(context, 'games'),
                       ),
                       HeroCategoryCard(
@@ -122,7 +122,7 @@ class HomeScreenV2 extends ConsumerWidget {
                         subtitle: isAr
                             ? 'قرآن، حديث، أذكار'
                             : 'Quran · Hadith · Athkar',
-                        color: const Color(0xFF66BB6A),
+                        color: const Color(0xFF10B981),
                         onTap: () => _openCategory(context, 'islamic'),
                       ),
                       HeroCategoryCard(
@@ -131,7 +131,7 @@ class HomeScreenV2 extends ConsumerWidget {
                         subtitle: isAr
                             ? 'منطق وأنماط'
                             : 'Logic & patterns',
-                        color: const Color(0xFFAB47BC),
+                        color: const Color(0xFF8B5CF6),
                         onTap: () => _openCategory(context, 'brain'),
                         isPro: true,
                       ),
@@ -141,40 +141,51 @@ class HomeScreenV2 extends ConsumerWidget {
                         subtitle: isAr
                             ? 'كل الأنشطة'
                             : 'All activities',
-                        color: const Color(0xFFFFB300),
+                        color: const Color(0xFFF59E0B),
                         onTap: () => _openCategory(context, 'all'),
                       ),
                     ],
                   ),
                   const SizedBox(height: 18),
                   // Search shortcut
-                  GestureDetector(
-                    onTap: () => _openCategory(context, 'all'),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 14),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.06),
-                        borderRadius: BorderRadius.circular(14),
-                        border: Border.all(
-                            color: Colors.white.withValues(alpha: 0.10)),
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.search,
-                              color: Colors.white.withValues(alpha: 0.55),
-                              size: 20),
-                          const SizedBox(width: 10),
-                          Text(
-                            isAr
-                                ? 'ابحث عن نشاط…'
-                                : 'Search activities…',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white.withValues(alpha: 0.55),
+                  Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () => _openCategory(context, 'all'),
+                      borderRadius: BorderRadius.circular(16),
+                      child: Ink(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.07),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                              color: Colors.white.withValues(alpha: 0.12)),
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 34,
+                              height: 34,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: AppColors.primary.withValues(alpha: 0.18),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Icon(Icons.search_rounded,
+                                  color: AppColors.primary, size: 20),
                             ),
-                          ),
-                        ],
+                            const SizedBox(width: 12),
+                            Text(
+                              isAr ? 'ابحث عن نشاط…' : 'Search activities…',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white.withValues(alpha: 0.62),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

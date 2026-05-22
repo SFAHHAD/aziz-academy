@@ -237,42 +237,55 @@ class _MultiProviderAuthSheetState
     );
   }
 
-  List<Widget> _buildPicker(BuildContext context) => [
-        const Text(
-          'Welcome — pick a sign-in method',
-          style: TextStyle(
-            fontSize: 18, fontWeight: FontWeight.bold,
-          ),
-        ),
-        const SizedBox(height: 4),
-        const Text(
-          'Parent accounts only. Your kids tap a profile — they don\'t sign in.',
-          style: TextStyle(fontSize: 12, color: Colors.white60),
-        ),
-        const SizedBox(height: 18),
-        _BigButton(
-          label: 'Continue with Google',
-          icon: Icons.g_translate,
-          color: const Color(0xFFFFFFFF),
-          fg: const Color(0xFF1F1F1F),
-          onTap: _busy ? null : _onGoogle,
-        ),
-        const SizedBox(height: 10),
-        _BigButton(
-          label: 'Continue with Apple',
-          icon: Icons.apple,
-          color: const Color(0xFF000000),
-          fg: const Color(0xFFFFFFFF),
-          onTap: _busy ? null : _onApple,
-        ),
-        const SizedBox(height: 10),
-        _BigButton(
-          label: 'Continue with Phone',
-          icon: Icons.phone_iphone,
-          color: const Color(0xFF1B2A6B),
-          fg: const Color(0xFFFFFFFF),
-          onTap: _busy ? null : () => setState(() => _mode = _Mode.phone),
-        ),
+  List<Widget> _buildPicker(BuildContext context) {
+    // Only offer providers that are actually configured on the backend —
+    // see AuthProviders. This prevents the raw "provider is not enabled" page.
+    final oauth = <Widget>[];
+    if (AuthProviders.google) {
+      oauth.add(_BigButton(
+        label: 'Continue with Google',
+        icon: Icons.g_translate,
+        color: const Color(0xFFFFFFFF),
+        fg: const Color(0xFF1F1F1F),
+        onTap: _busy ? null : _onGoogle,
+      ));
+    }
+    if (AuthProviders.apple) {
+      if (oauth.isNotEmpty) oauth.add(const SizedBox(height: 10));
+      oauth.add(_BigButton(
+        label: 'Continue with Apple',
+        icon: Icons.apple,
+        color: const Color(0xFF000000),
+        fg: const Color(0xFFFFFFFF),
+        onTap: _busy ? null : _onApple,
+      ));
+    }
+    if (AuthProviders.phone) {
+      if (oauth.isNotEmpty) oauth.add(const SizedBox(height: 10));
+      oauth.add(_BigButton(
+        label: 'Continue with Phone',
+        icon: Icons.phone_iphone,
+        color: const Color(0xFF1B2A6B),
+        fg: const Color(0xFFFFFFFF),
+        onTap: _busy ? null : () => setState(() => _mode = _Mode.phone),
+      ));
+    }
+
+    final hasOauth = oauth.isNotEmpty;
+
+    return [
+      const Text(
+        'Welcome — pick a sign-in method',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 4),
+      const Text(
+        'Parent accounts only. Your kids tap a profile — they don\'t sign in.',
+        style: TextStyle(fontSize: 12, color: Colors.white60),
+      ),
+      const SizedBox(height: 18),
+      ...oauth,
+      if (hasOauth) ...[
         const SizedBox(height: 14),
         Row(children: const [
           Expanded(child: Divider()),
@@ -284,11 +297,22 @@ class _MultiProviderAuthSheetState
         ]),
         const SizedBox(height: 6),
         TextButton.icon(
-          onPressed: _busy ? null : () => setState(() => _mode = _Mode.email),
+          onPressed:
+              _busy ? null : () => setState(() => _mode = _Mode.email),
           icon: const Icon(Icons.alternate_email, size: 18),
           label: const Text('Use email and password'),
         ),
-      ];
+      ] else
+        // Email is the only configured method — make it the primary action.
+        _BigButton(
+          label: 'Continue with Email',
+          icon: Icons.alternate_email,
+          color: AppColors.primary,
+          fg: const Color(0xFF06223F),
+          onTap: _busy ? null : () => setState(() => _mode = _Mode.email),
+        ),
+    ];
+  }
 
   List<Widget> _buildEmail(BuildContext context) => [
         Row(children: [

@@ -3,6 +3,37 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'package:aziz_academy/core/services/supabase_bootstrap.dart';
 
+// =============================================================================
+// Which sign-in providers the UI is allowed to OFFER.
+//
+// On Flutter web, signInWithOAuth performs a full redirect to Supabase's
+// authorize endpoint. If the provider isn't enabled on the Supabase dashboard,
+// the user lands on a raw JSON 400 page
+// (`"Unsupported provider: provider is not enabled"`) — there is no exception
+// to catch, so the only clean fix is to NOT show the button until the backend
+// is configured.
+//
+// Flip a flag to `true` only AFTER enabling that provider in
+// Supabase → Authentication → Providers, then rebuild + redeploy.
+// Email always works out of the box; phone needs an SMS provider configured.
+// =============================================================================
+class AuthProviders {
+  const AuthProviders._();
+
+  /// Google OAuth — enable in Supabase, add Google Cloud OAuth client, then
+  /// set this to true.
+  static const bool google = false;
+
+  /// Apple OAuth — needs an Apple Developer Services ID + key first.
+  static const bool apple = false;
+
+  /// Phone / SMS OTP — needs a Supabase SMS provider (e.g. Twilio) configured.
+  static const bool phone = false;
+
+  /// Email + password works with no extra setup.
+  static const bool email = true;
+}
+
 /// Result of an auth attempt — a flat, UI-friendly outcome so screens
 /// never have to catch Supabase exceptions themselves.
 class AuthResult {
