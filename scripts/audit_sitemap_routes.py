@@ -72,6 +72,10 @@ SKIP_EXACT: set[str] = {
     # Premium upgrade screen — reached from the account area, not a
     # public landing page.
     "/plus",
+    # Internal deep-link target for the v2 home's hero cards
+    # (/browse?cat=…). Renders the same activity grid as the home, just
+    # pre-filtered — no unique content, so it stays out of the sitemap.
+    "/browse",
 }
 
 
